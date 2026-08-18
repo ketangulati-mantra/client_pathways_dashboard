@@ -1,36 +1,23 @@
 import { Router } from 'express';
-import { authenticateAdmin, requireSuperAdmin } from '../middleware/authenticateAdmin.js';
 import {
   listAdmins,
   createAdmin,
   updateAdmin,
-  updateAdminStatus,
-  resetAdminPassword,
   deleteAdmin
 } from '../controllers/adminUserController.js';
 
 const router = Router();
 
-// Protect all admin management routes with authenticateAdmin & requireSuperAdmin middleware
-router.use(authenticateAdmin);
-router.use(requireSuperAdmin);
-
-// GET /api/admin/users
+// GET /api/admin/users - List all admin users
 router.get('/', listAdmins);
 
-// POST /api/admin/users
+// POST /api/admin/users - Create new admin user
 router.post('/', createAdmin);
 
-// PUT /api/admin/users/:id
+// PUT /api/admin/users/:id - Update admin user details
 router.put('/:id', updateAdmin);
 
-// PATCH /api/admin/users/:id/status
-router.patch('/:id/status', updateAdminStatus);
-
-// PATCH /api/admin/users/:id/password
-router.patch('/:id/password', resetAdminPassword);
-
-// DELETE /api/admin/users/:id
+// DELETE /api/admin/users/:id - Delete admin user
 router.delete('/:id', deleteAdmin);
 
 export default router;

@@ -513,7 +513,7 @@ export default function SubmissionsTable() {
   const fetchAvailableUsers = async () => {
     try {
       setIsLoadingAvailableUsers(true);
-      const apiBase = MANTRA_CONFIG.apiBaseUrl !== undefined && MANTRA_CONFIG.apiBaseUrl !== null ? MANTRA_CONFIG.apiBaseUrl : (import.meta.env.PROD ? '' : 'http://localhost:5000');
+      const apiBase = MANTRA_CONFIG.apiBaseUrl !== undefined && MANTRA_CONFIG.apiBaseUrl !== null ? MANTRA_CONFIG.apiBaseUrl : (import.meta.env.PROD ? '' : 'http://localhost:5001');
       
       let res = await fetch(`${apiBase}/api/users/non-reviewers`);
       let json = await res.json().catch(() => null);
@@ -744,7 +744,7 @@ export default function SubmissionsTable() {
     try {
       const apiBase = MANTRA_CONFIG.apiBaseUrl !== undefined && MANTRA_CONFIG.apiBaseUrl !== null 
         ? MANTRA_CONFIG.apiBaseUrl 
-        : (import.meta.env.PROD ? '' : 'http://localhost:5000');
+        : (import.meta.env.PROD ? '' : 'http://localhost:5001');
 
       const res = await fetch(`${apiBase}/api/activity-submissions/${submissionId}/claim`, {
         method: 'POST',

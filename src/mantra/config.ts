@@ -18,7 +18,7 @@ const getDynamicApiBase = () => {
   const isLocalDev = (hostname === 'localhost' || hostname === '127.0.0.1') && (port === '5173' || port === '3000');
 
   if (isLocalDev) {
-    return 'http://localhost:5000';
+    return 'http://localhost:5001';
   }
 
   if (cachedSubpathPrefix !== null) {

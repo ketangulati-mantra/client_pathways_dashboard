@@ -29,7 +29,7 @@ function getApiBase(): string {
 
   // In local Vite dev environment, fallback to backend port 5000 if not proxied
   if ((hostname === 'localhost' || hostname === '127.0.0.1') && port === '5173') {
-    return 'http://localhost:5000/api';
+    return 'http://localhost:5001/api';
   }
 
   const pathname = window.location.pathname;

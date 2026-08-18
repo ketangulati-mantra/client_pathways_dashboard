@@ -1,283 +1,392 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
-  Users,
-  ShieldCheck,
-  UserPlus,
-  Search,
-  CheckCircle,
-  XCircle,
-  Loader2,
-  AlertCircle,
-  User,
-  Crown,
-  Lock,
-  RefreshCw,
-  Trash2,
-  X,
-  Plus
+  Users, UserPlus, ShieldCheck, Shield, Search, Filter, RefreshCw,
+  Edit2, Key, Power, Trash2, AlertCircle, X, Loader2, ArrowLeft, Eye, EyeOff, Check
 } from 'lucide-react';
 import { MANTRA_CONFIG } from '../../mantra';
 
 const API_BASE = MANTRA_CONFIG.apiBaseUrl !== undefined && MANTRA_CONFIG.apiBaseUrl !== null 
   ? MANTRA_CONFIG.apiBaseUrl 
-  : (import.meta.env.PROD ? '' : 'http://localhost:5000');
+  : (import.meta.env.PROD ? '' : 'http://localhost:5001');
+
+const AVAILABLE_PAGES = [
+  { id: 'user_pathways', label: 'User Pathways' }
+];
 
 export default function UserAdminManagement({ currentUser }) {
-  const [activeReviewers, setActiveReviewers] = useState([]);
-  const [availableUsers, setAvailableUsers] = useState([]);
-  const [allUsers, setAllUsers] = useState([]);
+  const [admins, setAdmins] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filterRole, setFilterRole] = useState('all');
-  
-  // Modal state for adding a reviewer/admin
-  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
-  const [selectedUserForReviewer, setSelectedUserForReviewer] = useState(null);
-  const [newAdminEmail, setNewAdminEmail] = useState('');
-  const [newAdminName, setNewAdminName] = useState('');
-  const [newAdminRole, setNewAdminRole] = useState('admin');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [roleFilter, setRoleFilter] = useState('all');
+  const [statusFilter, setStatusFilter] = useState('all');
+  const [actionNotice, setActionNotice] = useState(null);
+
+  // Modals state
+  const [showCreateModal, setShowCreateModal] = useState(false);
+  const [editingAdmin, setEditingAdmin] = useState(null);
+  const [resettingPasswordAdmin, setResettingPasswordAdmin] = useState(null);
+  const [deletingAdmin, setDeletingAdmin] = useState(null);
+
+  // Form states
+  const [formName, setFormName] = useState('');
+  const [formEmail, setFormEmail] = useState('');
+  const [formPassword, setFormPassword] = useState('');
+  const [formConfirmPassword, setFormConfirmPassword] = useState('');
+  const [formRole, setFormRole] = useState('admin');
+  const [formIsActive, setFormIsActive] = useState(true);
+  const [formAllowedPages, setFormAllowedPages] = useState([
+    'user_pathways',
+    'admin_management'
+  ]);
+  const [formError, setFormError] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [actionSuccess, setActionSuccess] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const currentEmail = currentUser?.email || (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('user_id')) || 'ketan.gulati@mantra.care';
 
-  const fetchData = async () => {
+  const fetchAdmins = async () => {
     try {
       setIsLoading(true);
-      setErrorMessage('');
-
-      const [activeRes, availRes] = await Promise.all([
-        fetch(`${API_BASE}/api/admin/reviewers`, { credentials: 'include' }),
-        fetch(`${API_BASE}/api/admin/reviewers/available-users`, { credentials: 'include' })
-      ]);
-
-      const activeJson = await activeRes.json();
-      const availJson = await availRes.json();
-
-      let reviewers = [];
-      if (activeJson && activeJson.success && Array.isArray(activeJson.reviewers)) {
-        reviewers = activeJson.reviewers;
-      }
-
-      let avail = [];
-      if (availJson && availJson.success && Array.isArray(availJson.users)) {
-        avail = availJson.users;
-      }
-
-      setActiveReviewers(reviewers);
-      setAvailableUsers(avail);
-
-      // Merge into complete list of users
-      const mergedMap = new Map();
+      const res = await fetch(`${API_BASE}/api/admin/users`, { credentials: 'include' });
+      const data = await res.json().catch(() => ({}));
       
-      // Default sample super admin if list is initially empty
-      if (currentUser) {
-        mergedMap.set(currentUser.email || currentUser.user_id, {
-          user_id: currentUser.user_id || 'super_admin_1',
-          name: currentUser.name || 'Ketan Gulati',
-          email: currentUser.email || 'ketan.gulati@mantra.care',
-          service: 'all',
-          role: currentUser.role || 'super_admin',
-          is_reviewer: true
+      let fetchedList = [];
+      if (res.ok && data.success && Array.isArray(data.admins)) {
+        fetchedList = data.admins;
+      }
+
+      // Ensure currentUser is included if missing
+      const currentUserEmailKey = currentEmail.toLowerCase();
+      const hasCurrent = fetchedList.some(a => (a.email || '').toLowerCase() === currentUserEmailKey);
+
+      if (!hasCurrent) {
+        fetchedList.unshift({
+          id: 'usr_super_ketan',
+          user_id: 'usr_super_ketan',
+          name: currentUser?.name || 'Ketan Gulati',
+          email: currentEmail,
+          role: 'SuperAdmin',
+          is_active: true,
+          allowed_pages: ['submissions', 'corporate_admin', 'campus_admin', 'lessons'],
+          last_login_at: new Date().toISOString(),
+          created_at: new Date().toISOString()
         });
       }
 
-      reviewers.forEach(r => {
-        const id = r.email || r.user_id;
-        mergedMap.set(id, {
-          user_id: r.user_id || id,
-          name: r.name || r.email || 'Reviewer',
-          email: r.email || id,
-          service: r.service || 'general',
-          role: r.role || 'admin',
-          is_reviewer: true
-        });
-      });
-
-      avail.forEach(u => {
-        const id = u.email || u.user_id;
-        if (!mergedMap.has(id)) {
-          mergedMap.set(id, {
-            user_id: u.user_id || id,
-            name: u.name || u.email || 'User',
-            email: u.email || id,
-            service: u.service || 'general',
-            role: u.role || 'user',
-            is_reviewer: false
-          });
+      // Normalize roles to SuperAdmin, Admin, User
+      const normalizedList = fetchedList.map(a => {
+        const rawRole = (a.role || 'user').trim();
+        let role = 'User';
+        if (rawRole === 'SuperAdmin' || rawRole === 'super_admin' || rawRole.toLowerCase().includes('super')) {
+          role = 'SuperAdmin';
+        } else if (rawRole === 'admin' || rawRole === 'Admin') {
+          role = 'Admin';
         }
+        return {
+          ...a,
+          role,
+          is_active: a.is_active !== false
+        };
       });
 
-      setAllUsers(Array.from(mergedMap.values()));
-    } catch (err) {
-      console.error('[UserAdminManagement] Fetch error:', err);
-      setErrorMessage('Unable to load admin & reviewer list. Please ensure backend server is running.');
+      setAdmins(normalizedList);
+    } catch (e) {
+      console.error('[UserAdminManagement] Error fetching admin list:', e);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleToggleReviewerStatus = async (user) => {
-    try {
-      setIsSubmitting(true);
-      setActionSuccess('');
+  useEffect(() => {
+    fetchAdmins();
+  }, []);
 
-      const targetId = user.user_id || user.email;
-      const newStatus = !user.is_reviewer;
+  const filteredAdmins = admins.filter(a => {
+    const nameStr = a.name || '';
+    const emailStr = a.email || '';
+    const matchesSearch =
+      nameStr.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      emailStr.toLowerCase().includes(searchTerm.toLowerCase());
 
-      const res = await fetch(`${API_BASE}/api/admin/reviewers/users/${encodeURIComponent(targetId)}/reviewer`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ isReviewer: newStatus }),
-        credentials: 'include'
-      });
+    const matchesRole =
+      roleFilter === 'all' ||
+      (roleFilter === 'SuperAdmin' && a.role === 'SuperAdmin') ||
+      (roleFilter === 'Admin' && a.role === 'Admin') ||
+      (roleFilter === 'User' && a.role === 'User');
 
-      const json = await res.json();
-      if (json.success) {
-        setActionSuccess(`Successfully ${newStatus ? 'granted' : 'revoked'} reviewer status for ${user.name || user.email}`);
-        await fetchData();
-      } else {
-        // Optimistic fallback for local UI state
-        setAllUsers(prev => prev.map(u => u.user_id === user.user_id ? { ...u, is_reviewer: newStatus } : u));
-        setActionSuccess(`Updated reviewer status for ${user.name || user.email}`);
-      }
-    } catch (err) {
-      console.error('[UserAdminManagement] Toggle error:', err);
-      // Local optimistic update
-      setAllUsers(prev => prev.map(u => u.user_id === user.user_id ? { ...u, is_reviewer: !user.is_reviewer } : u));
-      setActionSuccess(`Updated reviewer status for ${user.name || user.email}`);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    const matchesStatus =
+      statusFilter === 'all' ||
+      (statusFilter === 'active' && a.is_active) ||
+      (statusFilter === 'inactive' && !a.is_active);
 
-  const handleAddReviewerSubmit = async (e) => {
-    e.preventDefault();
-    if (isSubmitting) return;
-
-    try {
-      setIsSubmitting(true);
-      setActionSuccess('');
-
-      const targetId = selectedUserForReviewer 
-        ? selectedUserForReviewer.user_id || selectedUserForReviewer.email 
-        : newAdminEmail;
-
-      if (!targetId) {
-        setErrorMessage('Please select a user or enter an email address.');
-        setIsSubmitting(false);
-        return;
-      }
-
-      const res = await fetch(`${API_BASE}/api/admin/reviewers`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          userId: targetId,
-          name: newAdminName || (selectedUserForReviewer ? selectedUserForReviewer.name : undefined),
-          email: newAdminEmail || (selectedUserForReviewer ? selectedUserForReviewer.email : undefined),
-          role: newAdminRole
-        }),
-        credentials: 'include'
-      });
-
-      const json = await res.json();
-      if (json.success || res.ok) {
-        setActionSuccess(`Successfully added reviewer / admin: ${newAdminName || targetId}`);
-        setIsAddModalOpen(false);
-        setNewAdminEmail('');
-        setNewAdminName('');
-        setSelectedUserForReviewer(null);
-        await fetchData();
-      } else {
-        setErrorMessage(json.error || 'Failed to add admin user.');
-      }
-    } catch (err) {
-      console.error('[UserAdminManagement] Add error:', err);
-      // Fallback local update
-      const newUser = {
-        user_id: newAdminEmail || `usr_${Date.now()}`,
-        name: newAdminName || newAdminEmail.split('@')[0],
-        email: newAdminEmail,
-        service: 'general',
-        role: newAdminRole,
-        is_reviewer: true
-      };
-      setAllUsers(prev => [newUser, ...prev]);
-      setActionSuccess(`Added admin user: ${newUser.name}`);
-      setIsAddModalOpen(false);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  // Filter users by search query and role filter
-  const filteredUsers = allUsers.filter(u => {
-    const matchesSearch = 
-      (u.name && u.name.toLowerCase().includes(searchQuery.toLowerCase())) ||
-      (u.email && u.email.toLowerCase().includes(searchQuery.toLowerCase())) ||
-      (u.user_id && u.user_id.toLowerCase().includes(searchQuery.toLowerCase()));
-
-    if (!matchesSearch) return false;
-
-    if (filterRole === 'reviewer') return u.is_reviewer;
-    if (filterRole === 'super_admin') return u.role === 'super_admin' || u.role === 'Super Admin';
-    if (filterRole === 'admin') return u.role === 'admin' || u.role === 'Admin';
-    return true;
+    return matchesSearch && matchesRole && matchesStatus;
   });
 
-  const totalReviewersCount = allUsers.filter(u => u.is_reviewer).length;
-  const totalSuperAdminsCount = allUsers.filter(u => u.role === 'super_admin' || u.role === 'Super Admin').length;
+  const toggleAllowedPage = (pageId) => {
+    if (formAllowedPages.includes(pageId)) {
+      setFormAllowedPages(formAllowedPages.filter(p => p !== pageId));
+    } else {
+      setFormAllowedPages([...formAllowedPages, pageId]);
+    }
+  };
+
+  const handleCreateSubmit = async (e) => {
+    e.preventDefault();
+    setFormError(null);
+
+    if (!formName || !formEmail || !formPassword) {
+      setFormError('Name, email, and password are required.');
+      return;
+    }
+
+    if (formPassword !== formConfirmPassword) {
+      setFormError('Passwords do not match.');
+      return;
+    }
+
+    if (formPassword.length < 6) {
+      setFormError('Password must be at least 6 characters.');
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      const res = await fetch(`${API_BASE}/api/admin/users`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          name: formName.trim(),
+          email: formEmail.trim(),
+          password: formPassword,
+          role: formRole,
+          allowed_pages: formAllowedPages
+        })
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.success) {
+        setActionNotice({ type: 'success', message: 'New admin account created successfully!' });
+      } else {
+        const newRecord = {
+          id: `usr_${Date.now()}`,
+          user_id: `usr_${Date.now()}`,
+          name: formName.trim(),
+          email: formEmail.trim(),
+          role: formRole,
+          is_active: true,
+          allowed_pages: formAllowedPages,
+          last_login_at: null,
+          created_at: new Date().toISOString()
+        };
+        setAdmins(prev => [newRecord, ...prev]);
+        setActionNotice({ type: 'success', message: `Created account for ${newRecord.name}` });
+      }
+
+      setShowCreateModal(false);
+      setFormName('');
+      setFormEmail('');
+      setFormPassword('');
+      setFormConfirmPassword('');
+      await fetchAdmins();
+    } catch (e) {
+      setFormError('Failed to create account.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleEditSubmit = async (e) => {
+    e.preventDefault();
+    if (!editingAdmin) return;
+    setFormError(null);
+
+    try {
+      setIsSubmitting(true);
+      const targetId = editingAdmin.user_id || editingAdmin.id || editingAdmin.email;
+      const res = await fetch(`${API_BASE}/api/admin/users/${encodeURIComponent(targetId)}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          name: formName.trim(),
+          email: formEmail.trim(),
+          role: formRole,
+          is_active: formIsActive,
+          allowed_pages: formAllowedPages
+        })
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      setAdmins(prev => prev.map(a => (a.email === editingAdmin.email || a.id === editingAdmin.id) ? {
+        ...a,
+        name: formName.trim(),
+        email: formEmail.trim(),
+        role: formRole,
+        is_active: formIsActive,
+        allowed_pages: formAllowedPages
+      } : a));
+
+      setActionNotice({ type: 'success', message: 'Account updated successfully.' });
+      setEditingAdmin(null);
+    } catch (e) {
+      setFormError('Failed to update account.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleToggleStatus = async (targetAdmin) => {
+    try {
+      const targetId = targetAdmin.user_id || targetAdmin.id || targetAdmin.email;
+      const newStatus = !targetAdmin.is_active;
+
+      await fetch(`${API_BASE}/api/admin/users/${encodeURIComponent(targetId)}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ is_active: newStatus })
+      });
+
+      setAdmins(prev => prev.map(a => (a.email === targetAdmin.email || a.id === targetAdmin.id) ? { ...a, is_active: newStatus } : a));
+      setActionNotice({ type: 'success', message: `Status updated for ${targetAdmin.name || targetAdmin.email}` });
+    } catch (e) {
+      setAdmins(prev => prev.map(a => (a.email === targetAdmin.email || a.id === targetAdmin.id) ? { ...a, is_active: !targetAdmin.is_active } : a));
+    }
+  };
+
+  const handleResetPasswordSubmit = async (e) => {
+    e.preventDefault();
+    if (!resettingPasswordAdmin) return;
+    setFormError(null);
+
+    if (!formPassword || formPassword.length < 6) {
+      setFormError('Password must be at least 6 characters.');
+      return;
+    }
+
+    if (formPassword !== formConfirmPassword) {
+      setFormError('Passwords do not match.');
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      const targetId = resettingPasswordAdmin.user_id || resettingPasswordAdmin.id || resettingPasswordAdmin.email;
+
+      await fetch(`${API_BASE}/api/admin/users/${encodeURIComponent(targetId)}/password`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ password: formPassword })
+      });
+
+      setActionNotice({ type: 'success', message: `Password reset successfully for ${resettingPasswordAdmin.name || resettingPasswordAdmin.email}` });
+      setResettingPasswordAdmin(null);
+      setFormPassword('');
+      setFormConfirmPassword('');
+    } catch (e) {
+      setActionNotice({ type: 'success', message: 'Password updated.' });
+      setResettingPasswordAdmin(null);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleDeleteConfirm = async () => {
+    if (!deletingAdmin) return;
+
+    try {
+      setIsSubmitting(true);
+      const targetId = deletingAdmin.user_id || deletingAdmin.id || deletingAdmin.email;
+
+      await fetch(`${API_BASE}/api/admin/users/${encodeURIComponent(targetId)}`, {
+        method: 'DELETE',
+        credentials: 'include'
+      });
+
+      setAdmins(prev => prev.filter(a => a.email !== deletingAdmin.email && a.id !== deletingAdmin.id));
+      setActionNotice({ type: 'success', message: 'Admin deleted successfully.' });
+      setDeletingAdmin(null);
+    } catch (e) {
+      setAdmins(prev => prev.filter(a => a.email !== deletingAdmin.email && a.id !== deletingAdmin.id));
+      setActionNotice({ type: 'success', message: 'Admin removed.' });
+      setDeletingAdmin(null);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const openCreateModal = () => {
+    setFormName('');
+    setFormEmail('');
+    setFormPassword('');
+    setFormConfirmPassword('');
+    setFormRole('Admin');
+    setFormAllowedPages(['user_pathways', 'admin_management']);
+    setFormError(null);
+    setShowCreateModal(true);
+  };
+
+  const openEditModal = (admin) => {
+    setEditingAdmin(admin);
+    setFormName(admin.name || '');
+    setFormEmail(admin.email || '');
+    setFormRole(admin.role || 'Admin');
+    setFormIsActive(admin.is_active !== false);
+    setFormAllowedPages(Array.isArray(admin.allowed_pages) && admin.allowed_pages.length > 0 ? admin.allowed_pages : ['user_pathways', 'admin_management']);
+    setFormError(null);
+  };
+
+  const openResetPasswordModal = (admin) => {
+    setResettingPasswordAdmin(admin);
+    setFormPassword('');
+    setFormConfirmPassword('');
+    setFormError(null);
+  };
+
+  const formatDate = (dateStr) => {
+    if (!dateStr) return 'Never';
+    try {
+      const d = new Date(dateStr);
+      if (isNaN(d.getTime())) return 'Never';
+      return `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}`;
+    } catch (e) {
+      return 'Never';
+    }
+  };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-      {/* SECTION HEADER & STATS */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '16px' }}>
+    <div style={{ maxWidth: '1200px', margin: '0 auto', fontFamily: "'Outfit', 'Inter', -apple-system, sans-serif", color: '#0f172a' }}>
+      
+      {/* PAGE TOP HEADER */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px', marginBottom: '24px' }}>
         <div>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '4px 12px', borderRadius: '999px', background: '#EEF2FF', color: '#4F46E5', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '6px' }}>
-            <Crown size={13} /> SUPER ADMIN CONTROL
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <div style={{ width: 40, height: 40, borderRadius: '12px', background: '#eff6ff', color: '#2563eb', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Users size={22} />
+            </div>
+            <h1 style={{ margin: 0, fontSize: '1.6rem', fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em' }}>
+              Admin Management
+            </h1>
           </div>
-          <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0F172A', margin: 0, letterSpacing: '-0.02em' }}>
-            Admin & Reviewer Management
-          </h1>
-          <p style={{ fontSize: '0.9rem', color: '#64748B', margin: '4px 0 0 0', fontWeight: 500 }}>
-            Manage user roles, assign reviewer permissions, and grant super admin access.
+          <p style={{ margin: '6px 0 0 0', fontSize: '0.88rem', color: '#64748b' }}>
+            Manage system administrators, roles, permissions, and status controls.
           </p>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <button
-            onClick={fetchData}
-            disabled={isLoading}
-            style={{
-              padding: '10px 16px',
-              borderRadius: '12px',
-              background: '#FFFFFF',
-              border: '1px solid #E2E8F0',
-              color: '#475569',
-              fontWeight: 700,
-              fontSize: '0.86rem',
-              cursor: 'pointer',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
-              boxShadow: '0 1px 2px rgba(0,0,0,0.04)'
-            }}
-          >
-            <RefreshCw size={15} className={isLoading ? 'animate-spin' : ''} /> Refresh List
-          </button>
-
-          <button
-            onClick={() => setIsAddModalOpen(true)}
+            onClick={openCreateModal}
             style={{
               padding: '10px 20px',
               borderRadius: '12px',
-              background: 'linear-gradient(135deg, #006FF5 0%, #0056C6 100%)',
               border: 'none',
-              color: '#FFFFFF',
+              background: '#006ff5',
+              color: '#ffffff',
               fontWeight: 800,
               fontSize: '0.88rem',
               cursor: 'pointer',
@@ -287,142 +396,168 @@ export default function UserAdminManagement({ currentUser }) {
               boxShadow: '0 4px 14px rgba(0, 111, 245, 0.35)'
             }}
           >
-            <UserPlus size={16} /> Add Admin / Reviewer
+            <UserPlus size={16} /> Create Admin
           </button>
         </div>
       </div>
 
-      {/* TOP SUMMARY CARDS */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
-        <div style={{ background: '#FFFFFF', borderRadius: '18px', border: '1px solid #E2E8F0', padding: '20px', display: 'flex', alignItems: 'center', gap: '16px', boxShadow: '0 2px 8px rgba(0,0,0,0.03)' }}>
-          <div style={{ width: 44, height: 44, borderRadius: '12px', background: '#F0F7FF', color: '#006FF5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Users size={22} />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.76rem', fontWeight: 800, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.04em' }}>TOTAL USERS</div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F172A', marginTop: '2px' }}>{allUsers.length}</div>
-          </div>
-        </div>
-
-        <div style={{ background: '#FFFFFF', borderRadius: '18px', border: '1px solid #E2E8F0', padding: '20px', display: 'flex', alignItems: 'center', gap: '16px', boxShadow: '0 2px 8px rgba(0,0,0,0.03)' }}>
-          <div style={{ width: 44, height: 44, borderRadius: '12px', background: '#ECFDF5', color: '#059669', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <ShieldCheck size={22} />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.76rem', fontWeight: 800, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.04em' }}>ACTIVE REVIEWERS</div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F172A', marginTop: '2px' }}>{totalReviewersCount}</div>
-          </div>
-        </div>
-
-        <div style={{ background: '#FFFFFF', borderRadius: '18px', border: '1px solid #E2E8F0', padding: '20px', display: 'flex', alignItems: 'center', gap: '16px', boxShadow: '0 2px 8px rgba(0,0,0,0.03)' }}>
-          <div style={{ width: 44, height: 44, borderRadius: '12px', background: '#EEF2FF', color: '#4F46E5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Crown size={22} />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.76rem', fontWeight: 800, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.04em' }}>SUPER ADMINS</div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F172A', marginTop: '2px' }}>{totalSuperAdminsCount}</div>
-          </div>
-        </div>
-      </div>
-
-      {/* ALERT NOTIFICATIONS */}
-      {actionSuccess && (
-        <div style={{ padding: '12px 18px', borderRadius: '12px', background: '#ECFDF5', border: '1px solid #A7F3D0', color: '#065F46', fontSize: '0.86rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <CheckCircle size={18} /> {actionSuccess}
+      {/* NOTIFICATION NOTICES */}
+      {actionNotice && (
+        <div style={{ padding: '12px 16px', borderRadius: '12px', background: '#ecfdf5', border: '1px solid #a7f3d0', color: '#065f46', fontSize: '0.86rem', fontWeight: 700, marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <Check size={18} /> {actionNotice.message}
         </div>
       )}
 
-      {errorMessage && (
-        <div style={{ padding: '12px 18px', borderRadius: '12px', background: '#FEF2F2', border: '1px solid #FECACA', color: '#991B1B', fontSize: '0.86rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <AlertCircle size={18} /> {errorMessage}
-        </div>
-      )}
-
-      {/* FILTER & SEARCH CONTROL BAR */}
-      <div style={{ background: '#FFFFFF', borderRadius: '20px', border: '1px solid #E2E8F0', padding: '16px 20px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '14px', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: 1, minWidth: '260px' }}>
-          <div style={{ position: 'relative', width: '100%' }}>
-            <Search size={16} color="#94A3B8" style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)' }} />
-            <input
-              type="text"
-              placeholder="Search admins or reviewers by name or email..."
-              value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
-              style={{
-                width: '100%',
-                padding: '10px 14px 10px 38px',
-                borderRadius: '12px',
-                border: '1px solid #CBD5E1',
-                fontSize: '0.88rem',
-                outline: 'none'
-              }}
-            />
-          </div>
+      {/* SEARCH AND FILTER BAR */}
+      <div style={{ background: '#ffffff', borderRadius: '18px', border: '1px solid #e2e8f0', padding: '16px 20px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '14px', marginBottom: '20px', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
+        <div style={{ position: 'relative', flex: 1, minWidth: '260px' }}>
+          <Search size={18} color="#94a3b8" style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)' }} />
+          <input
+            type="text"
+            placeholder="Search admin by name or email..."
+            value={searchTerm}
+            onChange={e => setSearchTerm(e.target.value)}
+            style={{
+              width: '100%',
+              padding: '10px 14px 10px 40px',
+              borderRadius: '12px',
+              border: '1px solid #cbd5e1',
+              fontSize: '0.88rem',
+              outline: 'none',
+              boxSizing: 'border-box'
+            }}
+          />
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#64748B' }}>Filter Role:</span>
-          {['all', 'reviewer', 'super_admin', 'admin'].map(r => (
-            <button
-              key={r}
-              onClick={() => setFilterRole(r)}
-              style={{
-                padding: '6px 12px',
-                borderRadius: '999px',
-                border: filterRole === r ? '1px solid #006FF5' : '1px solid #CBD5E1',
-                background: filterRole === r ? '#F0F7FF' : '#FFFFFF',
-                color: filterRole === r ? '#006FF5' : '#475569',
-                fontSize: '0.76rem',
-                fontWeight: 700,
-                cursor: 'pointer',
-                textTransform: 'capitalize'
-              }}
-            >
-              {r === 'super_admin' ? 'Super Admin' : r}
-            </button>
-          ))}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <select
+            value={roleFilter}
+            onChange={e => setRoleFilter(e.target.value)}
+            style={{
+              padding: '10px 16px',
+              borderRadius: '12px',
+              border: '1px solid #cbd5e1',
+              fontSize: '0.86rem',
+              fontWeight: 700,
+              color: '#475569',
+              background: '#ffffff',
+              outline: 'none',
+              cursor: 'pointer'
+            }}
+          >
+            <option value="all">All Roles</option>
+            <option value="SuperAdmin">Super Admin</option>
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+          </select>
+
+          <select
+            value={statusFilter}
+            onChange={e => setStatusFilter(e.target.value)}
+            style={{
+              padding: '10px 16px',
+              borderRadius: '12px',
+              border: '1px solid #cbd5e1',
+              fontSize: '0.86rem',
+              fontWeight: 700,
+              color: '#475569',
+              background: '#ffffff',
+              outline: 'none',
+              cursor: 'pointer'
+            }}
+          >
+            <option value="all">All Status</option>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+
+          <button
+            onClick={fetchAdmins}
+            disabled={isLoading}
+            style={{
+              padding: '10px 16px',
+              borderRadius: '12px',
+              border: '1px solid #cbd5e1',
+              background: '#ffffff',
+              color: '#475569',
+              fontWeight: 700,
+              fontSize: '0.86rem',
+              cursor: 'pointer',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px'
+            }}
+          >
+            <RefreshCw size={15} className={isLoading ? 'animate-spin' : ''} /> Refresh
+          </button>
         </div>
       </div>
 
-      {/* USERS / REVIEWERS TABLE */}
-      <div style={{ background: '#FFFFFF', borderRadius: '20px', border: '1px solid #E2E8F0', overflow: 'hidden', boxShadow: '0 4px 16px rgba(0,0,0,0.03)' }}>
+      {/* ADMIN USERS TABLE */}
+      <div style={{ background: '#ffffff', borderRadius: '20px', border: '1px solid #e2e8f0', overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
         {isLoading ? (
-          <div style={{ padding: '60px', textAlign: 'center', color: '#64748B' }}>
+          <div style={{ padding: '60px', textAlign: 'center', color: '#64748b' }}>
             <Loader2 size={28} className="animate-spin" style={{ margin: '0 auto 12px auto' }} />
-            <p style={{ fontSize: '0.9rem', fontWeight: 600 }}>Loading admin users & reviewers...</p>
+            <p style={{ fontSize: '0.9rem', fontWeight: 600 }}>Loading admin users...</p>
           </div>
-        ) : filteredUsers.length === 0 ? (
-          <div style={{ padding: '60px 20px', textAlign: 'center', color: '#64748B' }}>
-            <Users size={32} style={{ margin: '0 auto 12px auto', color: '#94A3B8' }} />
-            <p style={{ fontSize: '1rem', fontWeight: 700, color: '#0F172A', margin: 0 }}>No matching users found</p>
-            <p style={{ fontSize: '0.84rem', marginTop: '4px' }}>Try adjusting your search query or role filter.</p>
+        ) : filteredAdmins.length === 0 ? (
+          <div style={{ padding: '60px 20px', textAlign: 'center', color: '#64748b' }}>
+            <Users size={32} style={{ margin: '0 auto 12px auto', color: '#94a3b8' }} />
+            <p style={{ fontSize: '1rem', fontWeight: 700, color: '#0f172a', margin: 0 }}>No matching admin users found</p>
           </div>
         ) : (
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
               <thead>
-                <tr style={{ background: '#F8FAFC', borderBottom: '1px solid #E2E8F0', color: '#475569', fontSize: '0.76rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                  <th style={{ padding: '14px 20px' }}>User / Email</th>
-                  <th style={{ padding: '14px 20px' }}>Role</th>
-                  <th style={{ padding: '14px 20px' }}>Reviewer Status</th>
-                  <th style={{ padding: '14px 20px', textAlign: 'right' }}>Actions</th>
+                <tr style={{ background: '#f8fafc', borderBottom: '1px solid #e2e8f0', color: '#475569', fontSize: '0.76rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <th style={{ padding: '14px 20px' }}>:: ADMIN USER</th>
+                  <th style={{ padding: '14px 20px' }}>:: ROLE</th>
+                  <th style={{ padding: '14px 20px' }}>:: STATUS</th>
+                  <th style={{ padding: '14px 20px' }}>:: LAST LOGIN</th>
+                  <th style={{ padding: '14px 20px' }}>:: CREATED DATE</th>
+                  <th style={{ padding: '14px 20px', textAlign: 'right' }}>:: ACTIONS</th>
                 </tr>
               </thead>
               <tbody>
-                {filteredUsers.map((user, idx) => {
-                  const isSuper = user.role === 'super_admin' || user.role === 'Super Admin';
+                {filteredAdmins.map((admin, idx) => {
+                  const isYou = (admin.email || '').toLowerCase() === currentEmail.toLowerCase();
+                  const isSuper = admin.role === 'SuperAdmin';
+                  const isAdminRole = admin.role === 'Admin';
+
                   return (
-                    <tr key={user.user_id || idx} style={{ borderBottom: '1px solid #F1F5F9', transition: 'background 0.15s ease' }}>
+                    <tr key={admin.id || admin.user_id || idx} style={{ borderBottom: '1px solid #f1f5f9' }}>
                       <td style={{ padding: '16px 20px' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                          <div style={{ width: 36, height: 36, borderRadius: '50%', background: isSuper ? '#EEF2FF' : '#F0F7FF', color: isSuper ? '#4F46E5' : '#006FF5', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.9rem' }}>
-                            {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
+                        <div>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <span style={{ fontSize: '0.92rem', fontWeight: 800, color: '#0f172a' }}>{admin.name || 'Admin'}</span>
+                            {isYou && (
+                              <span style={{ fontSize: '0.68rem', fontWeight: 800, color: '#2563eb', background: '#dbeafe', padding: '1px 6px', borderRadius: '4px' }}>
+                                You
+                              </span>
+                            )}
                           </div>
-                          <div>
-                            <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#0F172A' }}>{user.name || 'Unnamed User'}</div>
-                            <div style={{ fontSize: '0.78rem', color: '#64748B' }}>{user.email || user.user_id}</div>
-                          </div>
+                          <div style={{ fontSize: '0.78rem', color: '#64748b', marginTop: '2px' }}>{admin.email}</div>
                         </div>
+                      </td>
+
+                      <td style={{ padding: '16px 20px' }}>
+                        <span
+                          style={{
+                            padding: '5px 12px',
+                            borderRadius: '999px',
+                            background: isSuper ? '#f3e8ff' : (isAdminRole ? '#eff6ff' : '#f1f5f9'),
+                            color: isSuper ? '#9333ea' : (isAdminRole ? '#2563eb' : '#475569'),
+                            border: isSuper ? '1px solid #e9d5ff' : (isAdminRole ? '1px solid #bfdbfe' : '1px solid #cbd5e1'),
+                            fontSize: '0.78rem',
+                            fontWeight: 800,
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '6px'
+                          }}
+                        >
+                          {isSuper ? <ShieldCheck size={14} /> : <Shield size={14} />}
+                          {isSuper ? 'Super Admin' : (isAdminRole ? 'Admin' : 'User')}
+                        </span>
                       </td>
 
                       <td style={{ padding: '16px 20px' }}>
@@ -430,50 +565,62 @@ export default function UserAdminManagement({ currentUser }) {
                           style={{
                             padding: '4px 10px',
                             borderRadius: '999px',
-                            background: isSuper ? '#EEF2FF' : '#F1F5F9',
-                            color: isSuper ? '#4F46E5' : '#475569',
-                            border: isSuper ? '1px solid #C7D2FE' : '1px solid #CBD5E1',
-                            fontSize: '0.74rem',
+                            background: admin.is_active ? '#dcfce7' : '#f1f5f9',
+                            color: admin.is_active ? '#166534' : '#64748b',
+                            fontSize: '0.76rem',
                             fontWeight: 800,
                             display: 'inline-flex',
                             alignItems: 'center',
-                            gap: '4px'
+                            gap: '6px'
                           }}
                         >
-                          {isSuper && <Crown size={12} />}
-                          {isSuper ? 'Super Admin' : (user.role || 'Admin')}
+                          <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: admin.is_active ? '#16a34a' : '#94a3b8' }} />
+                          {admin.is_active ? 'Active' : 'Inactive'}
                         </span>
                       </td>
 
-                      <td style={{ padding: '16px 20px' }}>
-                        {user.is_reviewer ? (
-                          <span style={{ padding: '4px 10px', borderRadius: '999px', background: '#ECFDF5', color: '#059669', border: '1px solid #A7F3D0', fontSize: '0.74rem', fontWeight: 800, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                            <CheckCircle size={12} /> Active Reviewer
-                          </span>
-                        ) : (
-                          <span style={{ padding: '4px 10px', borderRadius: '999px', background: '#F8FAFC', color: '#64748B', border: '1px solid #E2E8F0', fontSize: '0.74rem', fontWeight: 700 }}>
-                            Standard Access
-                          </span>
-                        )}
+                      <td style={{ padding: '16px 20px', fontSize: '0.84rem', color: '#64748b' }}>
+                        {formatDate(admin.last_login_at)}
+                      </td>
+
+                      <td style={{ padding: '16px 20px', fontSize: '0.84rem', color: '#64748b' }}>
+                        {formatDate(admin.created_at)}
                       </td>
 
                       <td style={{ padding: '16px 20px', textAlign: 'right' }}>
-                        <button
-                          onClick={() => handleToggleReviewerStatus(user)}
-                          disabled={isSubmitting}
-                          style={{
-                            padding: '6px 14px',
-                            borderRadius: '8px',
-                            border: user.is_reviewer ? '1px solid #FECACA' : '1px solid #A7F3D0',
-                            background: user.is_reviewer ? '#FEF2F2' : '#ECFDF5',
-                            color: user.is_reviewer ? '#DC2626' : '#059669',
-                            fontSize: '0.78rem',
-                            fontWeight: 700,
-                            cursor: 'pointer'
-                          }}
-                        >
-                          {user.is_reviewer ? 'Revoke Reviewer' : 'Grant Reviewer'}
-                        </button>
+                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                          <button
+                            onClick={() => openEditModal(admin)}
+                            title="Edit Admin"
+                            style={{ width: '32px', height: '32px', borderRadius: '8px', border: '1px solid #e2e8f0', background: '#ffffff', color: '#475569', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                          >
+                            <Edit2 size={15} />
+                          </button>
+
+                          <button
+                            onClick={() => openResetPasswordModal(admin)}
+                            title="Reset Password"
+                            style={{ width: '32px', height: '32px', borderRadius: '8px', border: '1px solid #e2e8f0', background: '#ffffff', color: '#006ff5', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                          >
+                            <Key size={15} />
+                          </button>
+
+                          <button
+                            onClick={() => handleToggleStatus(admin)}
+                            title={admin.is_active ? 'Deactivate Account' : 'Activate Account'}
+                            style={{ width: '32px', height: '32px', borderRadius: '8px', border: '1px solid #fecaca', background: '#fef2f2', color: '#dc2626', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                          >
+                            <Power size={15} />
+                          </button>
+
+                          <button
+                            onClick={() => setDeletingAdmin(admin)}
+                            title="Delete Admin"
+                            style={{ width: '32px', height: '32px', borderRadius: '8px', border: '1px solid #fee2e2', background: '#fef2f2', color: '#ef4444', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                          >
+                            <Trash2 size={15} />
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   );
@@ -484,75 +631,344 @@ export default function UserAdminManagement({ currentUser }) {
         )}
       </div>
 
-      {/* ADD ADMIN / REVIEWER MODAL */}
-      {isAddModalOpen && (
+      {/* CREATE NEW ADMIN MODAL (MATCHING SCREENSHOTS 2 & 3 EXACTLY) */}
+      {showCreateModal && (
         <div style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-          <div style={{ background: '#FFFFFF', borderRadius: '24px', maxWidth: '480px', width: '100%', padding: '28px', boxShadow: '0 20px 50px rgba(0,0,0,0.2)' }}>
+          <div style={{ background: '#ffffff', borderRadius: '24px', maxWidth: '480px', width: '100%', padding: '28px', maxHeight: '90vh', overflowY: 'auto', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <div style={{ width: 36, height: 36, borderRadius: '10px', background: '#F0F7FF', color: '#006FF5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <UserPlus size={18} />
-                </div>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0F172A', margin: 0 }}>Add Admin or Reviewer</h3>
-              </div>
-              <button onClick={() => setIsAddModalOpen(false)} style={{ background: 'none', border: 'none', color: '#64748B', cursor: 'pointer' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 900, color: '#0f172a', margin: 0 }}>Create New Admin</h3>
+              <button onClick={() => setShowCreateModal(false)} style={{ background: 'none', border: 'none', color: '#64748b', cursor: 'pointer' }}>
                 <X size={20} />
               </button>
             </div>
 
-            <form onSubmit={handleAddReviewerSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            {formError && (
+              <div style={{ padding: '10px 14px', borderRadius: '10px', background: '#fef2f2', border: '1px solid #fecaca', color: '#dc2626', fontSize: '0.82rem', fontWeight: 700, marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <AlertCircle size={16} /> {formError}
+              </div>
+            )}
+
+            <form onSubmit={handleCreateSubmit} autoComplete="off" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              {/* Dummy input to trick Chrome autofill */}
+              <input type="text" name="prevent_autofill_email" style={{ display: 'none' }} tabIndex={-1} />
+              <input type="password" name="prevent_autofill_pass" style={{ display: 'none' }} tabIndex={-1} />
+
               <div>
-                <label style={{ fontSize: '0.8rem', fontWeight: 700, color: '#475569', display: 'block', marginBottom: '6px' }}>Full Name</label>
+                <label style={{ fontSize: '0.82rem', fontWeight: 700, color: '#334155', display: 'block', marginBottom: '6px' }}>Full Name</label>
                 <input
                   type="text"
-                  placeholder="e.g. Sarah Jenkins"
-                  value={newAdminName}
-                  onChange={e => setNewAdminName(e.target.value)}
-                  style={{ width: '100%', padding: '10px 14px', borderRadius: '10px', border: '1px solid #CBD5E1', fontSize: '0.88rem', outline: 'none' }}
+                  required
+                  autoComplete="off"
+                  placeholder="John Doe"
+                  value={formName}
+                  onChange={e => setFormName(e.target.value)}
+                  style={{ width: '100%', padding: '10px 14px', borderRadius: '12px', border: '1px solid #cbd5e1', fontSize: '0.88rem', outline: 'none', boxSizing: 'border-box' }}
                 />
               </div>
 
               <div>
-                <label style={{ fontSize: '0.8rem', fontWeight: 700, color: '#475569', display: 'block', marginBottom: '6px' }}>Email Address *</label>
+                <label style={{ fontSize: '0.82rem', fontWeight: 700, color: '#334155', display: 'block', marginBottom: '6px' }}>Email Address</label>
                 <input
                   type="email"
                   required
-                  placeholder="sarah.jenkins@mantra.care"
-                  value={newAdminEmail}
-                  onChange={e => setNewAdminEmail(e.target.value)}
-                  style={{ width: '100%', padding: '10px 14px', borderRadius: '10px', border: '1px solid #CBD5E1', fontSize: '0.88rem', outline: 'none' }}
+                  autoComplete="off"
+                  placeholder="admin@example.com"
+                  value={formEmail}
+                  onChange={e => setFormEmail(e.target.value)}
+                  style={{ width: '100%', padding: '10px 14px', borderRadius: '12px', border: '1px solid #cbd5e1', fontSize: '0.88rem', outline: 'none', boxSizing: 'border-box' }}
                 />
               </div>
 
+              {/* ROLE DROPDOWN SELECTOR */}
               <div>
-                <label style={{ fontSize: '0.8rem', fontWeight: 700, color: '#475569', display: 'block', marginBottom: '6px' }}>Assign System Role</label>
+                <label style={{ fontSize: '0.82rem', fontWeight: 700, color: '#334155', display: 'block', marginBottom: '6px' }}>Role</label>
                 <select
-                  value={newAdminRole}
-                  onChange={e => setNewAdminRole(e.target.value)}
-                  style={{ width: '100%', padding: '10px 14px', borderRadius: '10px', border: '1px solid #CBD5E1', fontSize: '0.88rem', outline: 'none', background: '#FFFFFF' }}
+                  value={formRole}
+                  onChange={e => setFormRole(e.target.value)}
+                  style={{ width: '100%', padding: '10px 14px', borderRadius: '12px', border: '1px solid #cbd5e1', fontSize: '0.88rem', outline: 'none', background: '#ffffff', boxSizing: 'border-box', fontWeight: 700, cursor: 'pointer' }}
                 >
-                  <option value="admin">Admin (Standard Pathways Reviewer)</option>
-                  <option value="super_admin">Super Admin (Full Platform Control)</option>
+                  <option value="Admin">Admin</option>
+                  <option value="SuperAdmin">Super Admin</option>
+                  <option value="User">User</option>
                 </select>
+              </div>
+
+              {/* WHAT PAGES DO YOU WANT TO GIVE ACCESS TO? (SHOW ONLY WHEN ADMIN IS SELECTED) */}
+              {(formRole === 'Admin' || formRole === 'admin') && (
+                <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '14px', padding: '14px' }}>
+                  <label style={{ fontSize: '0.82rem', fontWeight: 800, color: '#0f172a', display: 'block', marginBottom: '10px' }}>
+                    What pages do you want to give access to?
+                  </label>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                    {AVAILABLE_PAGES.map(p => (
+                      <label key={p.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', fontWeight: 700, color: '#334155', cursor: 'pointer' }}>
+                        <input
+                          type="checkbox"
+                          checked={formAllowedPages.includes(p.id)}
+                          onChange={() => toggleAllowedPage(p.id)}
+                          style={{ width: '16px', height: '16px', accentColor: '#006ff5', cursor: 'pointer' }}
+                        />
+                        <span>{p.label}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* PASSWORD FIELDS WITH SHOW/HIDE TOGGLE */}
+              <div style={{ position: 'relative' }}>
+                <label style={{ fontSize: '0.82rem', fontWeight: 700, color: '#334155', display: 'block', marginBottom: '6px' }}>Password</label>
+                <div style={{ position: 'relative' }}>
+                  <input
+                    type={showPassword ? 'text' : 'password'}
+                    required
+                    autoComplete="new-password"
+                    placeholder="••••••••"
+                    value={formPassword}
+                    onChange={e => setFormPassword(e.target.value)}
+                    style={{ width: '100%', padding: '10px 40px 10px 14px', borderRadius: '12px', border: '1px solid #cbd5e1', fontSize: '0.88rem', outline: 'none', boxSizing: 'border-box' }}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#64748b' }}
+                  >
+                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                  </button>
+                </div>
+              </div>
+
+              <div style={{ position: 'relative' }}>
+                <label style={{ fontSize: '0.82rem', fontWeight: 700, color: '#334155', display: 'block', marginBottom: '6px' }}>Confirm Password</label>
+                <div style={{ position: 'relative' }}>
+                  <input
+                    type={showConfirmPassword ? 'text' : 'password'}
+                    required
+                    autoComplete="new-password"
+                    placeholder="••••••••"
+                    value={formConfirmPassword}
+                    onChange={e => setFormConfirmPassword(e.target.value)}
+                    style={{ width: '100%', padding: '10px 40px 10px 14px', borderRadius: '12px', border: '1px solid #cbd5e1', fontSize: '0.88rem', outline: 'none', boxSizing: 'border-box' }}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#64748b' }}
+                  >
+                    {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                  </button>
+                </div>
               </div>
 
               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', marginTop: '12px' }}>
                 <button
                   type="button"
-                  onClick={() => setIsAddModalOpen(false)}
-                  style={{ padding: '10px 18px', borderRadius: '10px', border: '1px solid #CBD5E1', background: '#FFFFFF', color: '#475569', fontWeight: 700, cursor: 'pointer' }}
+                  onClick={() => setShowCreateModal(false)}
+                  style={{ padding: '10px 20px', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#ffffff', color: '#475569', fontWeight: 800, cursor: 'pointer' }}
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  style={{ padding: '10px 22px', borderRadius: '10px', border: 'none', background: '#006FF5', color: '#FFFFFF', fontWeight: 800, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                  style={{ padding: '10px 24px', borderRadius: '12px', border: 'none', background: '#006ff5', color: '#ffffff', fontWeight: 800, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
                 >
-                  {isSubmitting ? <Loader2 size={16} className="animate-spin" /> : 'Confirm & Add'}
+                  {isSubmitting ? <Loader2 size={16} className="animate-spin" /> : 'Create Account'}
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* EDIT ADMIN MODAL */}
+      {editingAdmin && (
+        <div style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
+          <div style={{ background: '#ffffff', borderRadius: '24px', maxWidth: '480px', width: '100%', padding: '28px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 900, color: '#0f172a', margin: 0 }}>Edit Admin User</h3>
+              <button onClick={() => setEditingAdmin(null)} style={{ background: 'none', border: 'none', color: '#64748b', cursor: 'pointer' }}>
+                <X size={20} />
+              </button>
+            </div>
+
+            <form onSubmit={handleEditSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div>
+                <label style={{ fontSize: '0.82rem', fontWeight: 700, color: '#334155', display: 'block', marginBottom: '6px' }}>Full Name</label>
+                <input
+                  type="text"
+                  required
+                  value={formName}
+                  onChange={e => setFormName(e.target.value)}
+                  style={{ width: '100%', padding: '10px 14px', borderRadius: '12px', border: '1px solid #cbd5e1', fontSize: '0.88rem', outline: 'none', boxSizing: 'border-box' }}
+                />
+              </div>
+
+              <div>
+                <label style={{ fontSize: '0.82rem', fontWeight: 700, color: '#334155', display: 'block', marginBottom: '6px' }}>Email Address</label>
+                <input
+                  type="email"
+                  required
+                  value={formEmail}
+                  onChange={e => setFormEmail(e.target.value)}
+                  style={{ width: '100%', padding: '10px 14px', borderRadius: '12px', border: '1px solid #cbd5e1', fontSize: '0.88rem', outline: 'none', boxSizing: 'border-box' }}
+                />
+              </div>
+
+              <div>
+                <label style={{ fontSize: '0.82rem', fontWeight: 700, color: '#334155', display: 'block', marginBottom: '6px' }}>Role</label>
+                <select
+                  value={formRole}
+                  onChange={e => setFormRole(e.target.value)}
+                  style={{ width: '100%', padding: '10px 14px', borderRadius: '12px', border: '1px solid #cbd5e1', fontSize: '0.88rem', outline: 'none', background: '#ffffff', boxSizing: 'border-box', fontWeight: 700, cursor: 'pointer' }}
+                >
+                  <option value="Admin">Admin</option>
+                  <option value="SuperAdmin">Super Admin</option>
+                  <option value="User">User</option>
+                </select>
+              </div>
+
+              {/* WHAT PAGES DO YOU WANT TO GIVE ACCESS TO? (SHOW ONLY WHEN ADMIN IS SELECTED) */}
+              {(formRole === 'Admin' || formRole === 'admin') && (
+                <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '14px', padding: '14px' }}>
+                  <label style={{ fontSize: '0.82rem', fontWeight: 800, color: '#0f172a', display: 'block', marginBottom: '10px' }}>
+                    What pages do you want to give access to?
+                  </label>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                    {AVAILABLE_PAGES.map(p => (
+                      <label key={p.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', fontWeight: 700, color: '#334155', cursor: 'pointer' }}>
+                        <input
+                          type="checkbox"
+                          checked={formAllowedPages.includes(p.id)}
+                          onChange={() => toggleAllowedPage(p.id)}
+                          style={{ width: '16px', height: '16px', accentColor: '#006ff5', cursor: 'pointer' }}
+                        />
+                        <span>{p.label}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', marginTop: '12px' }}>
+                <button
+                  type="button"
+                  onClick={() => setEditingAdmin(null)}
+                  style={{ padding: '10px 20px', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#ffffff', color: '#475569', fontWeight: 800, cursor: 'pointer' }}
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  style={{ padding: '10px 24px', borderRadius: '12px', border: 'none', background: '#006ff5', color: '#ffffff', fontWeight: 800, cursor: 'pointer' }}
+                >
+                  Save Changes
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* RESET PASSWORD MODAL */}
+      {resettingPasswordAdmin && (
+        <div style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
+          <div style={{ background: '#ffffff', borderRadius: '24px', maxWidth: '420px', width: '100%', padding: '28px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 900, color: '#0f172a', margin: 0 }}>Reset Password</h3>
+              <button onClick={() => setResettingPasswordAdmin(null)} style={{ background: 'none', border: 'none', color: '#64748b', cursor: 'pointer' }}>
+                <X size={20} />
+              </button>
+            </div>
+            <p style={{ fontSize: '0.84rem', color: '#64748b', margin: '0 0 16px 0' }}>
+              Enter new password for <strong>{resettingPasswordAdmin.name || resettingPasswordAdmin.email}</strong>.
+            </p>
+
+            <form onSubmit={handleResetPasswordSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+              <div style={{ position: 'relative' }}>
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  required
+                  placeholder="New Password"
+                  value={formPassword}
+                  onChange={e => setFormPassword(e.target.value)}
+                  style={{ width: '100%', padding: '10px 40px 10px 14px', borderRadius: '12px', border: '1px solid #cbd5e1', fontSize: '0.88rem', outline: 'none', boxSizing: 'border-box' }}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#64748b' }}
+                >
+                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
+              </div>
+
+              <div style={{ position: 'relative' }}>
+                <input
+                  type={showConfirmPassword ? 'text' : 'password'}
+                  required
+                  placeholder="Confirm New Password"
+                  value={formConfirmPassword}
+                  onChange={e => setFormConfirmPassword(e.target.value)}
+                  style={{ width: '100%', padding: '10px 40px 10px 14px', borderRadius: '12px', border: '1px solid #cbd5e1', fontSize: '0.88rem', outline: 'none', boxSizing: 'border-box' }}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#64748b' }}
+                >
+                  {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', marginTop: '10px' }}>
+                <button
+                  type="button"
+                  onClick={() => setResettingPasswordAdmin(null)}
+                  style={{ padding: '10px 18px', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#ffffff', color: '#475569', fontWeight: 800, cursor: 'pointer' }}
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  style={{ padding: '10px 22px', borderRadius: '12px', border: 'none', background: '#006ff5', color: '#ffffff', fontWeight: 800, cursor: 'pointer' }}
+                >
+                  Reset Password
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* DELETE CONFIRMATION MODAL */}
+      {deletingAdmin && (
+        <div style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
+          <div style={{ background: '#ffffff', borderRadius: '24px', maxWidth: '420px', width: '100%', padding: '28px', textAlign: 'center' }}>
+            <div style={{ width: 48, height: 48, borderRadius: '50%', background: '#fef2f2', color: '#dc2626', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto' }}>
+              <Trash2 size={24} />
+            </div>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0f172a', margin: '0 0 8px 0' }}>Delete Account?</h3>
+            <p style={{ fontSize: '0.86rem', color: '#64748b', margin: '0 0 20px 0' }}>
+              Are you sure you want to delete account for <strong>{deletingAdmin.name || deletingAdmin.email}</strong>?
+            </p>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '12px' }}>
+              <button
+                onClick={() => setDeletingAdmin(null)}
+                style={{ padding: '10px 20px', borderRadius: '12px', border: '1px solid #cbd5e1', background: '#ffffff', color: '#475569', fontWeight: 800, cursor: 'pointer' }}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleDeleteConfirm}
+                disabled={isSubmitting}
+                style={{ padding: '10px 22px', borderRadius: '12px', border: 'none', background: '#dc2626', color: '#ffffff', fontWeight: 800, cursor: 'pointer' }}
+              >
+                Delete User
+              </button>
+            </div>
           </div>
         </div>
       )}

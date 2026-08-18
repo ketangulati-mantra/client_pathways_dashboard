@@ -19,22 +19,10 @@ CREATE TABLE IF NOT EXISTS users (
     service VARCHAR(50),
     role VARCHAR(50) DEFAULT 'user',
     is_reviewer BOOLEAN DEFAULT FALSE,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
-
--- 3. Generic Activity Submissions Table
-CREATE TABLE IF NOT EXISTS activity_submissions (
-    id BIGSERIAL PRIMARY KEY,
-    user_id VARCHAR(255) NOT NULL,
-    service VARCHAR(50),
-    lesson_id VARCHAR(100) NOT NULL,
-    activity_title VARCHAR(255) NOT NULL,
-    submission_type VARCHAR(100) NOT NULL,
-    form_data JSONB DEFAULT '{}'::jsonb,
-    submission_data JSONB DEFAULT '{}'::jsonb,
-    status VARCHAR(50) DEFAULT 'pending',
-    review_notes TEXT,
+    password_hash TEXT,
+    is_active BOOLEAN DEFAULT TRUE,
+    allowed_pages JSONB DEFAULT '["lessons", "users"]'::jsonb,
+    last_login_at TIMESTAMP WITH TIME ZONE,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );

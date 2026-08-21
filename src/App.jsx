@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import './App.css';
 import { getCurrentService, getAvailableActivities, preserveQueryParams, handleExit } from './mantra';
 import { resolveLessonView } from './views/viewResolver';
@@ -162,7 +162,7 @@ function App() {
 
   // Render view based on route path and service context
   const renderView = () => {
-    const onBackCallback = () => handleExit();
+    const onBackCallback = () => { if (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) { navigate('/admin/pathways'); return; } handleExit(); };
 
     // 1. Home Screen / Admin Dashboard Base Routes
     if (currentPath === '/admin/login') {

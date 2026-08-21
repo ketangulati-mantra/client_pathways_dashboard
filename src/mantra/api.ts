@@ -5,7 +5,7 @@ import { getCurrentService } from './services';
 /**
  * Returns URL parameters required by the pathway webhook.
  */
-const getWebhookContext = () => {
+export const getWebhookContext = () => {
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
 
   return {
@@ -360,4 +360,16 @@ export const fetchSubmissionActivities = async () => {
  */
 export const getLesson = (lessonId: string) => {
   return activities.find(a => a.lessonId === lessonId) || null;
+};
+
+
+/**
+ * Triggers pathway completion webhook.
+ */
+export const triggerCompletionWebhook = async (
+  lessonId: string,
+  lessonTitle: string,
+  rewardPoints: number = 0
+): Promise<boolean> => {
+  return await completeLesson(lessonId);
 };

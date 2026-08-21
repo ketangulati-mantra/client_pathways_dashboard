@@ -1,7 +1,9 @@
-import React from 'react';
+﻿import React from 'react';
 import LessonTemplate from './LessonTemplate';
 import DeveloperLessonsPage from './DeveloperLessonsPage';
 import IntroductionLessonPage from './IntroductionLessonPage';
+import GettingStartedActivity from './GettingStartedActivity';
+import FirstTherapySessionActivity from './FirstTherapySessionActivity';
 import AdminLoginPage from './AdminLoginPage';
 import { ProtectedRoute } from '../auth/ProtectedRoute';
 
@@ -12,6 +14,11 @@ import { ProtectedRoute } from '../auth/ProtectedRoute';
 const ROUTE_VIEW_REGISTRY = {
   '/': { default: (props) => <ProtectedRoute><DeveloperLessonsPage {...props} /></ProtectedRoute> },
   '/user_pathways': { default: (props) => <ProtectedRoute><DeveloperLessonsPage {...props} /></ProtectedRoute> },
+  '/task/getting-started': { default: GettingStartedActivity },
+  '/task/getting_started': { default: GettingStartedActivity },
+  '/task/first-therapy-session': { default: FirstTherapySessionActivity },
+  '/task/first_therapy_session': { default: FirstTherapySessionActivity },
+  '/task/activity-02': { default: FirstTherapySessionActivity },
   '/task/introduction': { default: IntroductionLessonPage },
   '/admin/login': { default: AdminLoginPage },
   '/admin/dashboard': { default: (props) => <ProtectedRoute><DeveloperLessonsPage {...props} /></ProtectedRoute> },
@@ -46,12 +53,20 @@ export function resolveLessonView({ currentPath, currentService, onBack, activit
     
     return (
       normalizedPath === actRoute ||
-      normalizedPath === `/task/${actLessonId}` ||
-      normalizedPath === `/task/${actRoute.replace(/^\/task\//, '')}`
+      normalizedPath === /task/ ||
+      normalizedPath === /task/
     );
   });
 
   if (matchingActivity) {
+    if (matchingActivity.lessonId === 'getting-started') {
+      return <GettingStartedActivity onBack={onBack} service={currentService} />;
+    }
+
+    if (matchingActivity.lessonId === 'first-therapy-session' || matchingActivity.lessonId === 'first_therapy_session') {
+      return <FirstTherapySessionActivity onBack={onBack} service={currentService} />;
+    }
+
     return (
       <LessonTemplate
         onBack={onBack}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import { Search, BookOpen, Menu, Clock, ArrowRight, Filter, X, ChevronRight, LogOut, ShieldCheck, CheckCircle2, UserCheck, Crown, User } from 'lucide-react';
 import UserAdminManagement from '../components/admin/UserAdminManagement';
 import { activities as mantraActivities, getCurrentService, setServiceContext, preserveQueryParams, SUPPORTED_SERVICES, normalizeService } from '../mantra';
@@ -8,6 +8,14 @@ const MANTRA_LOGO_URL = 'https://res.cloudinary.com/hxbamdqf/image/upload/v17846
 const API_BASE = import.meta.env.PROD ? '' : 'http://localhost:5001';
 
 export default function DeveloperLessonsPage({ onNavigate }) {
+  const launchPathway = (act) => {
+    if (!act) return;
+    const targetRoute = act.route || `/task/${act.lessonId}`;
+    const cleanRoute = targetRoute.startsWith('/') ? targetRoute : '/' + targetRoute;
+    const fullUrl = `${window.location.origin}${window.location.pathname}#${cleanRoute}`;
+    window.open(fullUrl, '_blank');
+  };
+
   const { admin: currentAdmin, logout } = useAuth();
   const [dbUser, setDbUser] = useState(null);
 
@@ -52,11 +60,10 @@ export default function DeveloperLessonsPage({ onNavigate }) {
   const getInitialTab = () => {
     if (typeof window !== 'undefined') {
       const hash = (window.location.hash || '').toLowerCase();
-      if (hash.includes('users') || hash.includes('management')) return 'users';
-      if (hash.includes('lessons') || hash.includes('pathways')) return 'lessons';
-
+      if (hash.includes('users') || hash.includes('management') || hash.includes('admin/users')) return 'users';
+      if (hash.includes('lessons') || hash.includes('pathways') || hash.includes('admin/pathways') || hash === '#/' || hash === '' || hash === '#/admin' || hash === '#/admin/dashboard') return 'lessons';
       const savedTab = sessionStorage.getItem('mantra_active_tab');
-      if (savedTab) return savedTab;
+      if (savedTab && !hash.includes('pathways') && !hash.includes('admin')) return savedTab;
     }
     return 'lessons';
   };
@@ -77,8 +84,11 @@ export default function DeveloperLessonsPage({ onNavigate }) {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = (window.location.hash || '').toLowerCase();
-      if (hash.includes('users') || hash.includes('management') || hash.includes('admin')) setActiveTab('users');
-      else if (hash.includes('lessons') || hash.includes('pathways')) setActiveTab('lessons');
+      if (hash.includes('users') || hash.includes('management') || hash.includes('admin/users')) {
+        setActiveTab('users');
+      } else {
+        setActiveTab('lessons');
+      }
     };
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);

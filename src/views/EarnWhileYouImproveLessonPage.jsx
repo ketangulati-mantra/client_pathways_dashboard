@@ -151,10 +151,12 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
       <header
         style={{
           height: '52px',
-          padding: '0 16px',
+          padding: '0 20px',
           display: 'flex',
           alignItems: 'center',
-          gap: '12px',
+          justifyContent: 'space-between',
+          position: 'sticky',
+          top: 0,
           borderBottom: '1px solid rgba(226, 232, 240, 0.8)',
           background: 'rgba(248, 250, 252, 0.92)',
           backdropFilter: 'blur(10px)',
@@ -171,15 +173,14 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
             gap: '5px',
             background: '#ffffff',
             border: '1px solid #e2e8f0',
-            padding: '5px 11px',
+            padding: '6px 14px',
             borderRadius: '9999px',
             fontSize: '0.82rem',
             fontWeight: 600,
             color: '#334155',
             cursor: 'pointer',
             boxShadow: '0 1px 2px rgba(15, 23, 42, 0.04)',
-            transition: 'all 0.15s ease',
-            flexShrink: 0
+            transition: 'all 0.15s ease'
           }}
           onMouseOver={(e) => (e.currentTarget.style.borderColor = '#cbd5e1')}
           onMouseOut={(e) => (e.currentTarget.style.borderColor = '#e2e8f0')}
@@ -189,39 +190,35 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
           <span>Back</span>
         </button>
 
-        <h1
+        <span
           style={{
-            fontSize: 'clamp(0.84rem, 3.6vw, 0.94rem)',
-            fontWeight: 700,
-            color: '#0f172a',
-            letterSpacing: '-0.01em',
-            margin: 0,
-            whiteSpace: 'nowrap',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis'
+            fontSize: '0.84rem',
+            fontWeight: 600,
+            color: '#64748b'
           }}
         >
-          {LESSON_TITLE}
-        </h1>
+          Rewards Guide
+        </span>
       </header>
 
-      {/* Main Guided Scrollable Canvas */}
+      {/* Main Guided Scrollable Canvas with Spacious App Container */}
       <main
         style={{
           flex: 1,
           overflowY: 'auto',
-          padding: '24px 18px 56px',
+          padding: 'clamp(20px, 3.5vw, 36px) clamp(16px, 4vw, 36px) 64px',
           boxSizing: 'border-box',
           WebkitOverflowScrolling: 'touch'
         }}
       >
         <div
           style={{
-            maxWidth: '540px',
+            maxWidth: '880px',
+            width: '100%',
             margin: '0 auto',
             display: 'flex',
             flexDirection: 'column',
-            gap: '32px'
+            gap: '36px'
           }}
         >
           {/* =================================================================
@@ -337,16 +334,16 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
               background: '#ffffff',
               borderRadius: '20px',
               border: '1.5px solid #e2e8f0',
-              padding: '22px 20px',
+              padding: 'clamp(20px, 3vw, 28px)',
               boxShadow: '0 4px 16px rgba(15, 23, 42, 0.03)',
               display: 'flex',
               flexDirection: 'column',
-              gap: '18px'
+              gap: '20px'
             }}
           >
             <h3
               style={{
-                fontSize: '1.08rem',
+                fontSize: '1.12rem',
                 fontWeight: 800,
                 color: '#0f172a',
                 margin: 0,
@@ -356,54 +353,59 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
               How it works
             </h3>
 
-            {/* 3 Connected Steps */}
-            <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', paddingLeft: '4px' }}>
-              {HOW_IT_WORKS_STEPS.map((step, idx) => {
-                const isLast = idx === HOW_IT_WORKS_STEPS.length - 1;
+            {/* Responsive Connected Steps (Horizontal on Desktop, Vertical on Mobile) */}
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                gap: '16px'
+              }}
+            >
+              {HOW_IT_WORKS_STEPS.map((step) => {
                 const Icon = step.icon;
                 return (
                   <div
                     key={step.num}
                     style={{
+                      background: '#f8fafc',
+                      borderRadius: '16px',
+                      border: '1px solid #e2e8f0',
+                      padding: '16px 18px',
                       display: 'flex',
-                      gap: '14px',
-                      position: 'relative',
-                      paddingBottom: isLast ? '0px' : '22px'
+                      flexDirection: 'column',
+                      gap: '10px'
                     }}
                   >
-                    {/* Node & Connecting Line */}
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                       <div
                         style={{
-                          width: '34px',
-                          height: '34px',
+                          width: '36px',
+                          height: '36px',
                           borderRadius: '10px',
                           background: step.bg,
                           color: step.color,
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          border: `1px solid ${step.color}25`,
-                          zIndex: 2
+                          border: `1px solid ${step.color}25`
                         }}
                       >
                         <Icon size={18} strokeWidth={2.2} />
                       </div>
 
-                      {!isLast && (
-                        <div
-                          style={{
-                            width: '2px',
-                            flex: 1,
-                            background: '#e2e8f0',
-                            margin: '4px 0'
-                          }}
-                        />
-                      )}
+                      <span
+                        style={{
+                          fontSize: '0.74rem',
+                          fontWeight: 800,
+                          color: '#94a3b8',
+                          letterSpacing: '0.04em'
+                        }}
+                      >
+                        STEP {step.num}
+                      </span>
                     </div>
 
-                    {/* Step Text */}
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', paddingTop: '3px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                       <span style={{ fontSize: '0.94rem', fontWeight: 800, color: '#0f172a' }}>
                         {step.title}
                       </span>
@@ -413,7 +415,7 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
                           margin: 0,
                           fontSize: '0.86rem',
                           color: '#475569',
-                          lineHeight: 1.45
+                          lineHeight: 1.5
                         }}
                       >
                         {step.desc}
@@ -441,7 +443,7 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
               <h3
                 style={{
-                  fontSize: '1.08rem',
+                  fontSize: '1.12rem',
                   fontWeight: 800,
                   color: '#0f172a',
                   margin: 0,
@@ -450,17 +452,17 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
               >
                 Use your points across Mantra
               </h3>
-              <p style={{ margin: 0, fontSize: '0.86rem', color: '#64748b', lineHeight: 1.5 }}>
+              <p style={{ margin: 0, fontSize: '0.88rem', color: '#64748b', lineHeight: 1.5 }}>
                 Turn your progress into savings on the support that works for you:
               </p>
             </div>
 
-            {/* 2-Column Responsive Service Grid */}
+            {/* Responsive Service Grid: 3-column on Desktop / Tablet, 2-column on Mobile */}
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(2, 1fr)',
-                gap: '10px'
+                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                gap: '12px'
               }}
             >
               {MANTRA_SERVICES.map((srv) => {
@@ -472,18 +474,19 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
                       background: '#ffffff',
                       borderRadius: '16px',
                       border: '1px solid #e2e8f0',
-                      padding: '14px 12px',
+                      padding: '16px 14px',
                       display: 'flex',
-                      flexDirection: 'column',
-                      gap: '8px',
-                      boxShadow: '0 1px 3px rgba(15, 23, 42, 0.02)'
+                      alignItems: 'center',
+                      gap: '12px',
+                      boxShadow: '0 1px 3px rgba(15, 23, 42, 0.02)',
+                      transition: 'all 0.15s ease'
                     }}
                   >
                     <div
                       style={{
-                        width: '32px',
-                        height: '32px',
-                        borderRadius: '8px',
+                        width: '36px',
+                        height: '36px',
+                        borderRadius: '10px',
                         background: srv.bg,
                         color: srv.color,
                         display: 'flex',
@@ -492,14 +495,14 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
                         flexShrink: 0
                       }}
                     >
-                      <Icon size={17} strokeWidth={2.2} />
+                      <Icon size={18} strokeWidth={2.2} />
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                      <span style={{ fontSize: '0.88rem', fontWeight: 800, color: '#0f172a' }}>
+                      <span style={{ fontSize: '0.9rem', fontWeight: 800, color: '#0f172a' }}>
                         {srv.name}
                       </span>
-                      <span style={{ fontSize: '0.74rem', color: '#64748b', lineHeight: 1.35 }}>
+                      <span style={{ fontSize: '0.76rem', color: '#64748b', lineHeight: 1.35 }}>
                         {srv.desc}
                       </span>
                     </div>

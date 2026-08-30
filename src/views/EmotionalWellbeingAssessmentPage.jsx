@@ -33,20 +33,22 @@ export default function EmotionalWellbeingAssessmentPage({ onBack }) {
       background: 'radial-gradient(ellipse at top, #f0f7ff 0%, #f8fafc 60%, #ffffff 100%)',
       fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif'
     }}>
-      {/* Compact Top Navigation Header - Seamless on all screen sizes without truncation */}
+      {/* Compact Sticky Header */}
       <header style={{
-        height: '54px',
-        padding: '0 16px',
+        height: '52px',
+        padding: '0 20px',
         display: 'flex',
         alignItems: 'center',
-        gap: '12px',
+        justifyContent: 'space-between',
+        position: 'sticky',
+        top: 0,
         borderBottom: '1px solid rgba(226, 232, 240, 0.8)',
         background: 'rgba(255, 255, 255, 0.88)',
         backdropFilter: 'blur(10px)',
         flexShrink: 0,
         zIndex: 10
       }}>
-        {/* Back Button */}
+        {/* Back Button on Left */}
         <button
           type="button"
           onClick={handleBackClick}
@@ -56,15 +58,14 @@ export default function EmotionalWellbeingAssessmentPage({ onBack }) {
             gap: '5px',
             background: '#ffffff',
             border: '1px solid #e2e8f0',
-            padding: '5px 10px',
+            padding: '6px 14px',
             borderRadius: '9999px',
             fontSize: '0.82rem',
             fontWeight: 600,
             color: '#334155',
             cursor: 'pointer',
             boxShadow: '0 1px 2px rgba(15, 23, 42, 0.04)',
-            transition: 'all 0.15s ease',
-            flexShrink: 0
+            transition: 'all 0.15s ease'
           }}
           onMouseOver={(e) => (e.currentTarget.style.borderColor = '#cbd5e1')}
           onMouseOut={(e) => (e.currentTarget.style.borderColor = '#e2e8f0')}
@@ -74,18 +75,14 @@ export default function EmotionalWellbeingAssessmentPage({ onBack }) {
           <span>Back</span>
         </button>
 
-        {/* Full Title - Perfectly visible on one line with no ellipsis or wrapping */}
-        <h1 style={{
-          fontSize: 'clamp(0.8rem, 3.6vw, 0.94rem)',
-          fontWeight: 700,
-          color: '#0f172a',
-          letterSpacing: '-0.01em',
-          margin: 0,
-          whiteSpace: 'nowrap',
-          lineHeight: 1.2
+        {/* Section Label on Right */}
+        <span style={{
+          fontSize: '0.84rem',
+          fontWeight: 600,
+          color: '#64748b'
         }}>
-          Emotional Well-Being Assessment
-        </h1>
+          Assessment
+        </span>
       </header>
 
       {/* Main Assessment Container (100% focused, distraction-free) */}

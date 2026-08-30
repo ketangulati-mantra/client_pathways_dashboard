@@ -413,12 +413,13 @@ export function AssessmentReport({ report, onComplete }) {
   return (
     <div
       style={{
-        maxWidth: '680px',
+        maxWidth: '860px',
+        width: '100%',
         margin: '0 auto',
         display: 'flex',
         flexDirection: 'column',
-        gap: '20px',
-        padding: '6px 4px 44px',
+        gap: '24px',
+        padding: 'clamp(16px, 3vw, 32px) 0 48px',
         boxSizing: 'border-box'
       }}
     >

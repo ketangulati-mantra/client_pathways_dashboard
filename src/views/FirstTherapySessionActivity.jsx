@@ -385,58 +385,72 @@ export default function FirstTherapySessionActivity({ onBack }) {
       fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif'
     }}>
       {/* Sticky Top Header */}
-      <header style={{
-        position: 'sticky',
-        top: 0,
-        zIndex: 50,
-        background: 'rgba(248, 250, 252, 0.95)',
-        backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid #e2e8f0',
-        padding: '12px 20px'
-      }}>
-        <div style={{
-          maxWidth: '920px',
-          margin: '0 auto',
+      <header
+        style={{
+          height: '52px',
+          padding: '0 20px',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between'
-        }}>
-          <button
-            onClick={onBack || handleExit}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              background: '#ffffff',
-              border: '1px solid #e2e8f0',
-              padding: '8px 16px',
-              borderRadius: '9999px',
-              fontSize: '0.86rem',
-              fontWeight: 600,
-              color: '#334155',
-              cursor: 'pointer',
-              boxShadow: '0 1px 3px rgba(15, 23, 42, 0.04)'
-            }}
-          >
-            <ArrowLeft size={16} />
-            <span>Back</span>
-          </button>
+          justifyContent: 'space-between',
+          position: 'sticky',
+          top: 0,
+          zIndex: 50,
+          background: 'rgba(248, 250, 252, 0.92)',
+          backdropFilter: 'blur(10px)',
+          borderBottom: '1px solid rgba(226, 232, 240, 0.8)',
+          flexShrink: 0
+        }}
+      >
+        <button
+          type="button"
+          onClick={onBack || handleExit}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '5px',
+            background: '#ffffff',
+            border: '1px solid #e2e8f0',
+            padding: '6px 14px',
+            borderRadius: '9999px',
+            fontSize: '0.82rem',
+            fontWeight: 600,
+            color: '#334155',
+            cursor: 'pointer',
+            boxShadow: '0 1px 2px rgba(15, 23, 42, 0.04)',
+            transition: 'all 0.15s ease'
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.borderColor = '#cbd5e1')}
+          onMouseOut={(e) => (e.currentTarget.style.borderColor = '#e2e8f0')}
+          aria-label="Go back"
+        >
+          <ArrowLeft size={14} />
+          <span>Back</span>
+        </button>
 
-          <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#64748b' }}>
-            Booking Guide
-          </span>
-        </div>
+        <span
+          style={{
+            fontSize: '0.84rem',
+            fontWeight: 600,
+            color: '#64748b'
+          }}
+        >
+          Booking Guide
+        </span>
       </header>
 
-      {/* Main Narrative Container (4-5 Compact Sections Max) */}
-      <main style={{
-        maxWidth: '860px',
-        margin: '0 auto',
-        padding: '36px 20px 80px',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '48px'
-      }}>
+      {/* Main Narrative Container spanning full page width with 32-40px margins */}
+      <main
+        style={{
+          width: '100%',
+          maxWidth: '1020px',
+          margin: '0 auto',
+          padding: 'clamp(20px, 3.5vw, 36px) clamp(16px, 4vw, 36px) 80px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '40px',
+          boxSizing: 'border-box'
+        }}
+      >
 
         {/* SECTION 1: HERO */}
         <section id="hero" style={{

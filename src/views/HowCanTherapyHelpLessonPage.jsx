@@ -211,10 +211,12 @@ export default function HowCanTherapyHelpLessonPage({ onBack }) {
       <header
         style={{
           height: '52px',
-          padding: '0 16px',
+          padding: '0 20px',
           display: 'flex',
           alignItems: 'center',
-          gap: '12px',
+          justifyContent: 'space-between',
+          position: 'sticky',
+          top: 0,
           borderBottom: '1px solid rgba(226, 232, 240, 0.7)',
           background: 'rgba(248, 250, 252, 0.92)',
           backdropFilter: 'blur(10px)',
@@ -231,15 +233,14 @@ export default function HowCanTherapyHelpLessonPage({ onBack }) {
             gap: '5px',
             background: '#ffffff',
             border: '1px solid #e2e8f0',
-            padding: '5px 11px',
+            padding: '6px 14px',
             borderRadius: '9999px',
             fontSize: '0.82rem',
             fontWeight: 600,
             color: '#334155',
             cursor: 'pointer',
             boxShadow: '0 1px 2px rgba(15, 23, 42, 0.04)',
-            transition: 'all 0.15s ease',
-            flexShrink: 0
+            transition: 'all 0.15s ease'
           }}
           onMouseOver={(e) => (e.currentTarget.style.borderColor = '#cbd5e1')}
           onMouseOut={(e) => (e.currentTarget.style.borderColor = '#e2e8f0')}
@@ -249,33 +250,31 @@ export default function HowCanTherapyHelpLessonPage({ onBack }) {
           <span>Back</span>
         </button>
 
-        <h1
+        <span
           style={{
-            fontSize: 'clamp(0.86rem, 3.8vw, 0.95rem)',
-            fontWeight: 700,
-            color: '#0f172a',
-            letterSpacing: '-0.01em',
-            margin: 0,
-            whiteSpace: 'nowrap'
+            fontSize: '0.84rem',
+            fontWeight: 600,
+            color: '#64748b'
           }}
         >
-          {LESSON_TITLE}
-        </h1>
+          Therapy Guide
+        </span>
       </header>
 
-      {/* Main Guided Scrollable Canvas with Calm Vertical Rhythm */}
+      {/* Main Guided Scrollable Canvas with Spacious App Container */}
       <main
         style={{
           flex: 1,
           overflowY: 'auto',
-          padding: '24px 18px 56px',
+          padding: 'clamp(20px, 3.5vw, 36px) clamp(16px, 4vw, 36px) 64px',
           boxSizing: 'border-box',
           WebkitOverflowScrolling: 'touch'
         }}
       >
         <div
           style={{
-            maxWidth: '520px',
+            maxWidth: '860px',
+            width: '100%',
             margin: '0 auto',
             display: 'flex',
             flexDirection: 'column',
@@ -684,16 +683,23 @@ export default function HowCanTherapyHelpLessonPage({ onBack }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.12 }}
             style={{
+              background: '#ffffff',
+              borderRadius: '20px',
+              border: '1.5px solid #e2e8f0',
+              padding: 'clamp(20px, 3vw, 24px)',
               display: 'flex',
-              flexDirection: 'column',
-              gap: '12px'
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '16px',
+              flexWrap: 'wrap',
+              boxShadow: '0 2px 10px rgba(15, 23, 42, 0.02)'
             }}
           >
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              <span style={{ fontSize: '0.92rem', fontWeight: 800, color: '#0f172a' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', maxWidth: '480px' }}>
+              <span style={{ fontSize: '1.02rem', fontWeight: 800, color: '#0f172a' }}>
                 Ready to explore support?
               </span>
-              <span style={{ fontSize: '0.82rem', color: '#64748b' }}>
+              <span style={{ fontSize: '0.86rem', color: '#64748b', lineHeight: 1.5 }}>
                 Talk with a qualified therapist when you feel ready.
               </span>
             </div>
@@ -706,12 +712,12 @@ export default function HowCanTherapyHelpLessonPage({ onBack }) {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '6px',
-                  padding: '9px 18px',
+                  padding: '10px 20px',
                   borderRadius: '9999px',
                   border: 'none',
                   background: '#0284c7',
                   color: '#ffffff',
-                  fontSize: '0.84rem',
+                  fontSize: '0.86rem',
                   fontWeight: 700,
                   cursor: 'pointer',
                   boxShadow: '0 2px 8px rgba(2, 132, 199, 0.2)',
@@ -719,7 +725,7 @@ export default function HowCanTherapyHelpLessonPage({ onBack }) {
                 }}
               >
                 <span>Explore Therapy Options</span>
-                <ArrowRight size={13} />
+                <ArrowRight size={14} />
               </button>
 
               <button
@@ -729,10 +735,10 @@ export default function HowCanTherapyHelpLessonPage({ onBack }) {
                   background: 'transparent',
                   border: 'none',
                   color: '#64748b',
-                  fontSize: '0.82rem',
+                  fontSize: '0.84rem',
                   fontWeight: 600,
                   cursor: 'pointer',
-                  padding: '6px 8px'
+                  padding: '8px 10px'
                 }}
               >
                 Maybe later
@@ -751,10 +757,10 @@ export default function HowCanTherapyHelpLessonPage({ onBack }) {
               textAlign: 'center',
               gap: '12px',
               borderTop: '1px solid #e2e8f0',
-              paddingTop: '28px'
+              paddingTop: '32px'
             }}
           >
-            <span style={{ fontSize: '0.82rem', color: '#64748b' }}>
+            <span style={{ fontSize: '0.86rem', color: '#64748b' }}>
               That’s the basics. Take things at your own pace.
             </span>
 

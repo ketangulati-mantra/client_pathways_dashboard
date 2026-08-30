@@ -35,6 +35,8 @@ const getDynamicApiBase = () => {
 
   const p = window.location.pathname;
   const knownPrefixes = [
+    '/client_tasks',
+    '/client-tasks',
     '/provider_pathways_dashboard_v3',
     '/provider_pathways_dashboard_v2',
     '/provider_dashboard_v1',

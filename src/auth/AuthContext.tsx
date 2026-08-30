@@ -35,6 +35,8 @@ function getApiBase(): string {
   const pathname = window.location.pathname;
 
   const prefixes = [
+    '/client_tasks',
+    '/client-tasks',
     '/provider_pathways_dashboard_v3',
     '/provider_pathways_dashboard_v2',
     '/provider_dashboard_v1',

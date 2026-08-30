@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { getCurrentService, getAvailableActivities, preserveQueryParams, handleExit } from './mantra';
 import { resolveLessonView } from './views/viewResolver';
@@ -72,6 +72,8 @@ function App() {
       '/app/content/provider_pathways',
       '/provider_activity/app/content',
       '/app/content',
+      '/client_tasks',
+      '/client-tasks',
       '/provider_pathways_dashboard_v3',
       '/provider_pathways_dashboard_v2',
       '/provider_dashboard_v1',

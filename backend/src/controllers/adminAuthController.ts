@@ -26,7 +26,7 @@ export async function login(req: AuthRequest, res: Response) {
     if (!email || !password || typeof email !== 'string' || typeof password !== 'string') {
       return res.status(400).json({
         success: false,
-        error: 'Email and password are required.'
+        error: 'Please enter your email and password.'
       });
     }
 
@@ -52,7 +52,7 @@ export async function login(req: AuthRequest, res: Response) {
       if ((admin as any).is_active === false) {
         return res.status(403).json({
           success: false,
-          error: 'Your account has been disabled. Please contact system administrator.'
+          error: 'Your account has been deactivated. Please contact support.'
         });
       }
 
@@ -62,7 +62,7 @@ export async function login(req: AuthRequest, res: Response) {
         if (!isValid) {
           return res.status(401).json({
             success: false,
-            error: 'Invalid email or password.'
+            error: 'Incorrect email or password. Please try again.'
           });
         }
       }
@@ -96,10 +96,10 @@ export async function login(req: AuthRequest, res: Response) {
       admin: payload
     });
   } catch (err: any) {
-    console.error('❌ Login Error:', err);
+    console.error('❌ Server Login Error:', err);
     return res.status(500).json({
       success: false,
-      error: err?.message || 'An unexpected error occurred during authentication.'
+      error: 'Unable to sign in at the moment. Please try again shortly.'
     });
   }
 }
@@ -113,7 +113,7 @@ export async function logout(req: AuthRequest, res: Response) {
     });
     return res.json({ success: true, message: 'Logged out successfully.' });
   } catch (err) {
-    return res.status(500).json({ success: false, error: 'Failed to logout.' });
+    return res.status(500).json({ success: false, error: 'Unable to log out at the moment.' });
   }
 }
 

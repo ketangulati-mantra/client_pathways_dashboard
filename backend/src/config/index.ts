@@ -12,7 +12,7 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') });
 const isProd = process.env.NODE_ENV === 'production';
 const targetPort = process.env.PORT ? parseInt(process.env.PORT, 10) : 80;
 
-const DEFAULT_DB_URL = 'postgresql://neondb_owner:npg_p3UDOg6fsydB@ep-still-wave-azxe0y0q.c-3.ap-southeast-1.aws.neon.tech/neondb?sslmode=require';
+const DEFAULT_DB_URL = 'postgresql://neondb_owner:npg_p3UDOg6fsydB@ep-tiny-sky-azc069ex-pooler.c-3.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require';
 
 export const config = {
   port: targetPort,

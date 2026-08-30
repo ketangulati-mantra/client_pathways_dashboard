@@ -57,9 +57,7 @@ export function handleExit() {
   if (window.ReactNativeWebView) {
     window.ReactNativeWebView.postMessage(
       JSON.stringify({
-        action: 'navigate',
-        screen: 'Tasks',
-        params: { page: '/tasks' }
+        action: 'exit'
       })
     );
     return;
@@ -69,24 +67,22 @@ export function handleExit() {
   if (window.parent !== window) {
     window.parent.postMessage(
       {
-        action: 'navigate',
-        page: '/tasks',
-        params: { page: '/tasks' }
+        action: 'exit'
       },
       'https://web.mantracare.com'
     );
     return;
   }
 
-  // 3. Localhost dev environment fallback -> http://localhost:5173/#/admin/pathways
+  // Localhost dev environment fallback
   if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     window.location.hash = '#/admin/pathways';
     window.dispatchEvent(new HashChangeEvent('hashchange'));
     return;
   }
 
-  // 4. Standalone browser fallback
-  window.location.href = 'https://web.mantracare.com';
+  // 3. Standalone browser
+  window.location.href = 'https://web.mantracare.com/tasks';
 }
 
 /**

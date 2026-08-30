@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { completeLesson, getCurrentUserId, goToDashboard, navigateToNativeScreen } from '../mantra';
+import { completeLesson, goToDashboard } from '../mantra';
 import { useToast } from '../components';
 
 /**
@@ -21,8 +21,7 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
 
   const { showToast } = useToast();
   const isInitialMount = useRef(true);
-  const userId = getCurrentUserId();
-  const storageKey = `lesson_progress_${userId}_${lessonId}`;
+  const storageKey = `lesson_progress_${lessonId}`;
 
   const [completedSteps, setCompletedSteps] = useState(() => {
     try {
@@ -47,7 +46,7 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
     if (isInitialMount.current) {
       isInitialMount.current = false;
       if (completedSteps.celebrationShown) {
-        showToast("Welcome back! This activity has already been completed. You can review the lesson whenever you'd like.", "success", 4000);
+        showToast("🎉 Welcome back! This activity has already been completed. You can review the lesson whenever you'd like.", "success", 4000);
       }
     }
   }, [completedSteps.celebrationShown, showToast]);
@@ -106,7 +105,11 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
   const handleQuizComplete = () => {
     if (completedSteps.celebrationShown) {
       showToast("You've already completed this activity.", "success", 3000);
-      setTimeout(() => { goToDashboard(); }, 1800);
+      if (onBack) {
+        setTimeout(() => {
+          goToDashboard();
+        }, 1800);
+      }
       return;
     }
     setCompletedSteps((prev) => ({ ...prev, quizDone: true }));
@@ -123,7 +126,11 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
   const handleActionComplete = () => {
     if (completedSteps.celebrationShown) {
       showToast("You've already completed this activity.", "success", 3000);
-      setTimeout(() => { goToDashboard(); }, 1800);
+      if (onBack) {
+        setTimeout(() => {
+          goToDashboard();
+        }, 1800);
+      }
       return;
     }
     setCompletedSteps((prev) => ({ ...prev, actionDone: true }));
@@ -146,6 +153,7 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
   }; */
 
   const handleCloseCelebration = async () => {
+
     setShowCelebrate(false);
 
     setCompletedSteps((prev) => ({
@@ -155,20 +163,10 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
 
     await completeLesson(lessonId);
 
-    navigateToNativeScreen('Home');
     if (onBack) {
-      onBack();
-    } else {
       goToDashboard();
     }
   };
-
-  const isCompleted = 
-    completedSteps.celebrationShown === true || 
-    completedSteps.actionDone === true || 
-    (hasQuiz && completedSteps.quizDone) || 
-    (hasVideo && !hasQuiz && !hasAction && completedSteps.videoWatched) || 
-    lessonProgress === 100;
 
   return {
     videoWatched: completedSteps.videoWatched,
@@ -176,7 +174,6 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
     checklistDone: completedSteps.checklistDone,
     scenarioAttempted: completedSteps.scenarioAttempted,
     actionDone: completedSteps.actionDone,
-    isCompleted,
     lessonProgress,
     showCelebrate,
     handleVideoComplete,

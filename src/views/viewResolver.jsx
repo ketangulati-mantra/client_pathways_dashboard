@@ -1,9 +1,12 @@
-﻿import React from 'react';
+import React from 'react';
 import LessonTemplate from './LessonTemplate';
 import DeveloperLessonsPage from './DeveloperLessonsPage';
 import IntroductionLessonPage from './IntroductionLessonPage';
 import GettingStartedActivity from './GettingStartedActivity';
 import FirstTherapySessionActivity from './FirstTherapySessionActivity';
+import EmotionalWellbeingAssessmentPage from './EmotionalWellbeingAssessmentPage';
+import HowCanTherapyHelpLessonPage from './HowCanTherapyHelpLessonPage';
+import EarnWhileYouImproveLessonPage from './EarnWhileYouImproveLessonPage';
 import AdminLoginPage from './AdminLoginPage';
 import { ProtectedRoute } from '../auth/ProtectedRoute';
 
@@ -19,6 +22,18 @@ const ROUTE_VIEW_REGISTRY = {
   '/task/first-therapy-session': { default: FirstTherapySessionActivity },
   '/task/first_therapy_session': { default: FirstTherapySessionActivity },
   '/task/activity-02': { default: FirstTherapySessionActivity },
+  '/task/emotional-wellbeing-assessment': { default: EmotionalWellbeingAssessmentPage },
+  '/task/emotional_wellbeing_assessment': { default: EmotionalWellbeingAssessmentPage },
+  '/emotional-wellbeing-assessment': { default: EmotionalWellbeingAssessmentPage },
+  '/task/how-can-therapy-help': { default: HowCanTherapyHelpLessonPage },
+  '/task/how_can_therapy_help': { default: HowCanTherapyHelpLessonPage },
+  '/how-can-therapy-help': { default: HowCanTherapyHelpLessonPage },
+  '/task/earn-while-you-improve-your-wellbeing': { default: EarnWhileYouImproveLessonPage },
+  '/task/earn_while_you_improve_your_wellbeing': { default: EarnWhileYouImproveLessonPage },
+  '/earn-while-you-improve-your-wellbeing': { default: EarnWhileYouImproveLessonPage },
+  '/task/earn-while-you-improve': { default: EarnWhileYouImproveLessonPage },
+  '/task/earn_while_you_improve': { default: EarnWhileYouImproveLessonPage },
+  '/earn-while-you-improve': { default: EarnWhileYouImproveLessonPage },
   '/task/introduction': { default: IntroductionLessonPage },
   '/admin/login': { default: AdminLoginPage },
   '/admin/dashboard': { default: (props) => <ProtectedRoute><DeveloperLessonsPage {...props} /></ProtectedRoute> },
@@ -53,8 +68,8 @@ export function resolveLessonView({ currentPath, currentService, onBack, activit
     
     return (
       normalizedPath === actRoute ||
-      normalizedPath === /task/ ||
-      normalizedPath === /task/
+      normalizedPath === `/task/${actLessonId}` ||
+      normalizedPath === `/${actLessonId}`
     );
   });
 
@@ -65,6 +80,14 @@ export function resolveLessonView({ currentPath, currentService, onBack, activit
 
     if (matchingActivity.lessonId === 'first-therapy-session' || matchingActivity.lessonId === 'first_therapy_session') {
       return <FirstTherapySessionActivity onBack={onBack} service={currentService} />;
+    }
+
+    if (matchingActivity.lessonId === 'emotional-wellbeing-assessment' || matchingActivity.lessonId === 'emotional_wellbeing_assessment') {
+      return <EmotionalWellbeingAssessmentPage onBack={onBack} service={currentService} />;
+    }
+
+    if (matchingActivity.lessonId === 'how-can-therapy-help' || matchingActivity.lessonId === 'how_can_therapy_help') {
+      return <HowCanTherapyHelpLessonPage onBack={onBack} service={currentService} />;
     }
 
     return (

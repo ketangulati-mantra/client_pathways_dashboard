@@ -702,16 +702,21 @@ export default function FirstTherapySessionActivity({ onBack }) {
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '6px',
+            justifyContent: 'center',
+            gap: '8px',
             background: '#f0fdf4',
             border: '1px solid #bbf7d0',
             borderRadius: '9999px',
-            padding: '4px 14px',
+            padding: '6px 14px',
             fontSize: '0.82rem',
-            fontWeight: 700,
-            color: '#15803d'
+            fontWeight: 600,
+            color: '#15803d',
+            maxWidth: '100%',
+            boxSizing: 'border-box',
+            lineHeight: 1.4,
+            textAlign: 'center'
           }}>
-            <RefreshCw size={13} />
+            <RefreshCw size={14} style={{ flexShrink: 0 }} />
             <span>Not the right fit? You can switch therapists and continue your journey.</span>
           </div>
 

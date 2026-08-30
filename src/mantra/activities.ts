@@ -34,6 +34,36 @@ export const activities: Activity[] = [
     route: '/task/first-therapy-session',
     services: ['*'],
     description: 'Learn how to choose a therapist, book a convenient time, and join your session.'
+  },
+  {
+    lessonId: 'emotional-wellbeing-assessment',
+    activityId: 'emotional-wellbeing-assessment',
+    title: 'Emotional Well-Being Assessment',
+    rewardPoints: 100,
+    estimatedDuration: '3 min',
+    route: '/task/emotional-wellbeing-assessment',
+    services: ['*'],
+    description: 'Check in on your current emotional state across anxiety, depression, and stress in 9 simple questions.'
+  },
+  {
+    lessonId: 'how-can-therapy-help',
+    activityId: 'how-can-therapy-help',
+    title: 'How Can Therapy Help?',
+    rewardPoints: 25,
+    estimatedDuration: '2-3 min',
+    route: '/task/how-can-therapy-help',
+    services: ['*'],
+    description: 'Learn what therapy actually helps with, what happens in a session, and how to get started.'
+  },
+  {
+    lessonId: 'earn-while-you-improve-your-wellbeing',
+    activityId: 'earn-while-you-improve-your-wellbeing',
+    title: 'Earn While You Improve Your Wellbeing',
+    rewardPoints: 50,
+    estimatedDuration: '2 min',
+    route: '/task/earn-while-you-improve-your-wellbeing',
+    services: ['*'],
+    description: 'Learn how your guided pathway supports your daily wellbeing habits and recognizes consistency.'
   }
 ];
 

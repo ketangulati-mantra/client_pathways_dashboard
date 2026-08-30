@@ -31,6 +31,7 @@ app.use(cookieParser());
 // API Routes & Health Checks
 const apiPrefixes = [
   '/api',
+  '/client_tasks/api',
   '/user_pathways/api',
   '/provider_pathways/api',
   '/provider_activity/api'
@@ -56,6 +57,8 @@ app.use(express.static(distPath));
 app.use('/assets', express.static(path.join(distPath, 'assets')));
 
 const subpaths = [
+  '/client_tasks',
+  '/client-tasks',
   '/app/content/provider_pathways',
   '/provider_activity/app/content',
   '/app/content',

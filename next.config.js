@@ -1,8 +1,8 @@
-/** @type {import('next').NextConfig} */
+﻿/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "standalone",
-  basePath: "/provider_activity",
-  assetPrefix: "/provider_activity",
-}
+  basePath: "/client-tasks",
+  assetPrefix: "/client-tasks",
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

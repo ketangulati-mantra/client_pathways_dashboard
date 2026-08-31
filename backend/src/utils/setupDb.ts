@@ -1,313 +1,51 @@
 import { sql } from '../db/client.js';
+import { streakService } from '../services/streakService.js';
 
 export async function setupDb() {
-  console.log('⚡ Running Neon DB migrations/schema setup...');
+  console.log('⚡ Running Neon DB Schema Verification & Cleanup...');
 
   try {
-    await sql`
-      CREATE OR REPLACE FUNCTION update_updated_at_column()
-      RETURNS TRIGGER AS $$
-      BEGIN
-         NEW.updated_at = CURRENT_TIMESTAMP;
-         RETURN NEW;
-      END;
-      $$ language 'plpgsql';
-    `;
+    // 1. Drop Deprecated / Irrelevant Legacy Tables
+    const deprecatedTables = [
+      'campus_ambassadors',
+      'campus_programs',
+      'campus_ambassador_applications',
+      'campus_program_applications',
+      'ambassador_profiles',
+      'ambassador_proofs',
+      'corporate_partners',
+      'corporate_partner_applications',
+      'corporate_learning',
+      'corporate_learning_progress',
+      'program_learning',
+      'program_learning_progress',
+      'program_missions',
+      'program_certificates',
+      'program_notifications',
+      'admins',
+      'certificate_logs',
+      'credit_ledger',
+      'lesson_completions'
+    ];
 
+    for (const tableName of deprecatedTables) {
+      try {
+        await sql.query(`DROP TABLE IF EXISTS "${tableName}" CASCADE;`);
+      } catch (err) {
+        // Table might not exist or already dropped
+      }
+    }
+
+    // 2. Verified Active Tables for the Platform
+
+    // Table 1: users
     await sql`
       CREATE TABLE IF NOT EXISTS users (
         user_id VARCHAR(255) PRIMARY KEY,
         name VARCHAR(255),
         email VARCHAR(255),
-        service VARCHAR(50),
-        promotion_toolkit_data JSONB DEFAULT '{}'::jsonb,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-      );
-    `;
-
-    await sql`
-      ALTER TABLE users 
-      ADD COLUMN IF NOT EXISTS promotion_toolkit_data JSONB DEFAULT '{}'::jsonb,
-      ADD COLUMN IF NOT EXISTS allowed_pages JSONB DEFAULT '["submissions", "corporate_admin", "campus_admin", "lessons"]'::jsonb;
-    `;
-
-    await sql`
-      CREATE TABLE IF NOT EXISTS lesson_completions (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) NOT NULL,
-        service VARCHAR(50) NOT NULL,
-        lesson_id VARCHAR(100) NOT NULL,
-        reward_points INT DEFAULT 0,
-        completed_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        CONSTRAINT unique_user_lesson UNIQUE (user_id, lesson_id)
-      );
-    `;
-
-    await sql`
-      CREATE TABLE IF NOT EXISTS user_progress (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) NOT NULL,
-        lesson_id VARCHAR(100) NOT NULL,
-        progress_percent INT DEFAULT 0,
-        video_watched BOOLEAN DEFAULT FALSE,
-        quiz_done BOOLEAN DEFAULT FALSE,
-        checklist_done BOOLEAN DEFAULT FALSE,
-        scenario_attempted BOOLEAN DEFAULT FALSE,
-        action_done BOOLEAN DEFAULT FALSE,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        CONSTRAINT unique_user_progress UNIQUE (user_id, lesson_id)
-      );
-    `;
-
-    await sql`
-      CREATE TABLE IF NOT EXISTS campus_ambassador_applications (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) NOT NULL,
-        college_name VARCHAR(255),
-        status VARCHAR(50) DEFAULT 'interested',
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-      );
-    `;
-
-    await sql`
-      CREATE TABLE IF NOT EXISTS certificate_logs (
-        id BIGSERIAL PRIMARY KEY,
-        certificate_id VARCHAR(100) UNIQUE NOT NULL,
-        user_id VARCHAR(255) NOT NULL,
-        user_name VARCHAR(255) NOT NULL,
-        pathway_name VARCHAR(255) NOT NULL,
-        certificate_url TEXT,
-        metadata JSONB DEFAULT '{}'::jsonb,
-        issued_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-      );
-    `;
-
-    await sql`
-      CREATE TABLE IF NOT EXISTS activity_submissions (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) NOT NULL,
-        service VARCHAR(50),
-        lesson_id VARCHAR(100) NOT NULL,
-        activity_title VARCHAR(255) NOT NULL,
-        submission_type VARCHAR(100) NOT NULL,
-        form_data JSONB DEFAULT '{}'::jsonb,
-        submission_data JSONB DEFAULT '{}'::jsonb,
-        status VARCHAR(50) DEFAULT 'pending',
-        reviewed_by VARCHAR(255) DEFAULT 'Unassigned',
-        review_notes TEXT,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-      );
-    `;
-
-    await sql`
-      ALTER TABLE activity_submissions 
-      ADD COLUMN IF NOT EXISTS reviewed_by VARCHAR(255) DEFAULT 'Unassigned';
-    `;
-
-    await sql`
-      ALTER TABLE activity_submissions 
-      DROP CONSTRAINT IF EXISTS activity_submissions_status_check;
-    `;
-
-    // 8. Ambassador Profiles Table
-    await sql`
-      CREATE TABLE IF NOT EXISTS ambassador_profiles (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) UNIQUE NOT NULL,
-        current_stage VARCHAR(50) DEFAULT 'NOT_JOINED',
-        current_step INT DEFAULT 0,
-        approval_status VARCHAR(50) DEFAULT 'none',
-        credits INT DEFAULT 0,
-        level INT DEFAULT 1,
-        referral_code VARCHAR(50) UNIQUE,
-        college_name VARCHAR(255),
-        joined_date TIMESTAMP WITH TIME ZONE,
-        status VARCHAR(50) DEFAULT 'active',
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-      );
-    `;
-
-    // 9. Program Learning Progress Table
-    await sql`
-      CREATE TABLE IF NOT EXISTS program_learning_progress (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) NOT NULL,
-        program_id VARCHAR(100) DEFAULT 'campus_awareness',
-        module_id VARCHAR(100) NOT NULL,
-        completion_status VARCHAR(50) DEFAULT 'in_progress',
-        completed_at TIMESTAMP WITH TIME ZONE,
-        quiz_data JSONB DEFAULT '{}'::jsonb,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        CONSTRAINT unique_user_program_module UNIQUE (user_id, program_id, module_id)
-      );
-    `;
-
-    // 10. Credit Ledger Table
-    await sql`
-      CREATE TABLE IF NOT EXISTS credit_ledger (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) NOT NULL,
-        program_id VARCHAR(100) DEFAULT 'campus_awareness',
-        amount INT NOT NULL,
-        type VARCHAR(50) NOT NULL,
-        description TEXT,
-        reference_id VARCHAR(100),
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-      );
-    `;
-
-    // 11. Program Missions Table
-    await sql`
-      CREATE TABLE IF NOT EXISTS program_missions (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) NOT NULL,
-        program_id VARCHAR(100) DEFAULT 'campus_awareness',
-        mission_key VARCHAR(100) NOT NULL,
-        status VARCHAR(50) DEFAULT 'assigned',
-        started_at TIMESTAMP WITH TIME ZONE,
-        completed_at TIMESTAMP WITH TIME ZONE,
-        proof_data JSONB DEFAULT '{}'::jsonb,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        CONSTRAINT unique_user_program_mission UNIQUE (user_id, program_id, mission_key)
-      );
-    `;
-
-    // 12. Program Notifications Table
-    await sql`
-      CREATE TABLE IF NOT EXISTS program_notifications (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) NOT NULL,
-        title VARCHAR(255) NOT NULL,
-        message TEXT NOT NULL,
-        read_status BOOLEAN DEFAULT FALSE,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-      );
-    `;
-
-    // 13. Program Certificates Table
-    await sql`
-      CREATE TABLE IF NOT EXISTS program_certificates (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) NOT NULL,
-        program_id VARCHAR(100) DEFAULT 'campus_awareness',
-        certificate_code VARCHAR(100) UNIQUE NOT NULL,
-        certificate_url TEXT,
-        issued_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-      );
-    `;
-
-    // 14. Campus Program Applications Table
-    await sql`
-      CREATE TABLE IF NOT EXISTS campus_program_applications (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) NOT NULL,
-        program_id VARCHAR(100) DEFAULT 'campus_awareness',
-        full_name VARCHAR(255),
-        email VARCHAR(255),
-        country_code VARCHAR(20) DEFAULT '+1',
-        phone VARCHAR(50),
-        college VARCHAR(255) NOT NULL,
-        course VARCHAR(255) NOT NULL,
-        year VARCHAR(50) NOT NULL,
-        city VARCHAR(255) NOT NULL,
-        motivation TEXT NOT NULL,
-        availability VARCHAR(100) NOT NULL,
-        linkedin_url TEXT,
-        instagram_url TEXT,
-        previous_experience TEXT,
-        terms_accepted BOOLEAN DEFAULT TRUE,
-        community_guidelines_accepted BOOLEAN DEFAULT TRUE,
-        application_status VARCHAR(50) DEFAULT 'submitted',
-        submitted_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        reviewed_at TIMESTAMP WITH TIME ZONE,
-        reviewed_by VARCHAR(255),
-        admin_notes TEXT,
-        CONSTRAINT unique_user_program_app UNIQUE (user_id, program_id)
-      );
-    `;
-
-    // Ensure country_code column exists if table was previously created
-    await sql`
-      ALTER TABLE campus_program_applications 
-      ADD COLUMN IF NOT EXISTS country_code VARCHAR(20) DEFAULT '+1';
-    `;
-
-    // 15. Corporate Growth Partner Applications Table
-    await sql`
-      CREATE TABLE IF NOT EXISTS corporate_partner_applications (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) NOT NULL,
-        full_name VARCHAR(255),
-        email VARCHAR(255),
-        country_code VARCHAR(20) DEFAULT '+1',
-        phone VARCHAR(50),
-        city VARCHAR(255) NOT NULL,
-        company_connections TEXT,
-        industries TEXT,
-        linkedin_url TEXT,
-        previous_experience TEXT,
-        motivation TEXT NOT NULL,
-        availability VARCHAR(100) NOT NULL,
-        terms_accepted BOOLEAN DEFAULT TRUE,
-        application_status VARCHAR(50) DEFAULT 'submitted',
-        review_status VARCHAR(50) DEFAULT 'pending',
-        version INT DEFAULT 1,
-        submitted_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        reviewed_at TIMESTAMP WITH TIME ZONE,
-        reviewed_by VARCHAR(255) DEFAULT 'Unassigned',
-        admin_notes TEXT,
-        audit_history JSONB DEFAULT '[]'::jsonb,
-        CONSTRAINT unique_user_corporate_app UNIQUE (user_id)
-      );
-    `;
-
-    // 16. Corporate Learning Progress Table
-    await sql`
-      CREATE TABLE IF NOT EXISTS corporate_learning_progress (
-        id BIGSERIAL PRIMARY KEY,
-        user_id VARCHAR(255) NOT NULL,
-        program_id VARCHAR(100) DEFAULT 'corporate_growth_partner',
-        current_module_id VARCHAR(100) DEFAULT 'corp_mod_1',
-        completed_module_ids JSONB DEFAULT '[]'::jsonb,
-        progress_percent INT DEFAULT 0,
-        time_spent_seconds INT DEFAULT 0,
-        last_accessed_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-        CONSTRAINT unique_user_corporate_learning UNIQUE (user_id, program_id)
-      );
-    `;
-
-    // 17. Admins Table for Secure Admin Authentication with PostgreSQL ENUM
-    await sql`
-      DO $$ 
-      BEGIN 
-        IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'admin_role_type') THEN 
-          CREATE TYPE admin_role_type AS ENUM ('admin', 'super_admin'); 
-        END IF; 
-      END $$;
-    `;
-
-    await sql`
-      CREATE TABLE IF NOT EXISTS admins (
-        id BIGSERIAL PRIMARY KEY,
-        name VARCHAR(255) NOT NULL,
-        email VARCHAR(255) UNIQUE NOT NULL,
-        password_hash VARCHAR(255) NOT NULL,
-        role admin_role_type DEFAULT 'admin',
+        service VARCHAR(50) DEFAULT 'therapy',
+        role VARCHAR(50) DEFAULT 'user',
         is_active BOOLEAN DEFAULT TRUE,
         last_login_at TIMESTAMP WITH TIME ZONE,
         created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
@@ -315,41 +53,127 @@ export async function setupDb() {
       );
     `;
 
-    // Migration helper: If role column is currently VARCHAR, convert it safely to ENUM type
+    // Table 2: user_activities (Universal activity logger for Daily Check-In, Therapy, Lessons, etc.)
     await sql`
-      DO $$
-      BEGIN
-        IF EXISTS (
-          SELECT 1 FROM information_schema.columns 
-          WHERE table_name = 'admins' AND column_name = 'role' AND data_type LIKE '%char%'
-        ) THEN
-          UPDATE admins SET role = 'super_admin' WHERE role IN ('Super Admin', 'super_admin');
-          UPDATE admins SET role = 'admin' WHERE role NOT IN ('super_admin') OR role IS NULL;
+      CREATE TABLE IF NOT EXISTS user_activities (
+        id BIGSERIAL PRIMARY KEY,
+        user_id VARCHAR(255) NOT NULL,
+        activity_id VARCHAR(255),
+        activity_type VARCHAR(100) NOT NULL,
+        lesson_id VARCHAR(255),
+        service VARCHAR(100) DEFAULT 'therapy',
+        emotion_zone VARCHAR(100),
+        primary_emotion VARCHAR(100),
+        additional_emotions JSONB DEFAULT '[]'::jsonb,
+        intensity INT,
+        contexts JSONB DEFAULT '[]'::jsonb,
+        reflection TEXT,
+        result_summary JSONB DEFAULT '{}'::jsonb,
+        recommendation JSONB DEFAULT '{}'::jsonb,
+        reward_points INT DEFAULT 0,
+        metadata JSONB DEFAULT '{}'::jsonb,
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+      );
+    `;
+    await sql`CREATE INDEX IF NOT EXISTS idx_user_activities_user_id ON user_activities(user_id);`;
+    await sql`CREATE INDEX IF NOT EXISTS idx_user_activities_activity_id ON user_activities(activity_id);`;
+    await sql`CREATE INDEX IF NOT EXISTS idx_user_activities_type ON user_activities(activity_type);`;
+    await sql`CREATE INDEX IF NOT EXISTS idx_user_activities_created_at ON user_activities(created_at DESC);`;
 
-          ALTER TABLE admins ALTER COLUMN role DROP DEFAULT;
-          ALTER TABLE admins ALTER COLUMN role TYPE admin_role_type USING role::admin_role_type;
-          ALTER TABLE admins ALTER COLUMN role SET DEFAULT 'admin'::admin_role_type;
-        ELSE
-          UPDATE admins SET role = 'super_admin'::admin_role_type WHERE role::text IN ('Super Admin', 'super_admin');
-          UPDATE admins SET role = 'admin'::admin_role_type WHERE role::text NOT IN ('super_admin') OR role IS NULL;
-        END IF;
-      END $$;
+    // Table 3: daily_check_in_days (Dedicated daily completion tracking with UNIQUE (user_id, check_in_date))
+    await sql`
+      CREATE TABLE IF NOT EXISTS daily_check_in_days (
+        id BIGSERIAL PRIMARY KEY,
+        user_id VARCHAR(255) NOT NULL,
+        check_in_date DATE NOT NULL,
+        completed_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        timezone VARCHAR(100) DEFAULT 'UTC',
+        activity_id VARCHAR(255) DEFAULT 'daily-check-in',
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        CONSTRAINT unique_user_check_in_day UNIQUE (user_id, check_in_date)
+      );
+    `;
+    await sql`CREATE INDEX IF NOT EXISTS idx_daily_check_in_days_user_date ON daily_check_in_days(user_id, check_in_date DESC);`;
+
+    // Table 4: streak_milestone_achievements (Track one-time milestone unlocks)
+    await sql`
+      CREATE TABLE IF NOT EXISTS streak_milestone_achievements (
+        id BIGSERIAL PRIMARY KEY,
+        user_id VARCHAR(255) NOT NULL,
+        milestone INT NOT NULL,
+        achieved_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        streak_day_id BIGINT REFERENCES daily_check_in_days(id) ON DELETE SET NULL,
+        CONSTRAINT unique_user_milestone UNIQUE (user_id, milestone)
+      );
+    `;
+    await sql`CREATE INDEX IF NOT EXISTS idx_streak_milestones_user ON streak_milestone_achievements(user_id);`;
+
+    // Table 5: user_streaks (Cache table for fast aggregate queries)
+    await sql`
+      CREATE TABLE IF NOT EXISTS user_streaks (
+        user_id VARCHAR(255) PRIMARY KEY,
+        current_streak INT DEFAULT 0,
+        longest_streak INT DEFAULT 0,
+        last_check_in_date DATE,
+        total_check_in_days INT DEFAULT 0,
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+      );
     `;
 
-    // Seed default Super Admin if no admins exist
-    const existingAdmins = await sql`SELECT id FROM admins LIMIT 1`;
-    if (existingAdmins.length === 0) {
-      await sql`
-        INSERT INTO admins (name, email, password_hash, role, is_active)
-        VALUES ('Super Admin', 'admin@example.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'super_admin'::admin_role_type, TRUE)
-        ON CONFLICT (email) DO NOTHING;
-      `;
-      console.log('🔑 Default Super Admin seeded: admin@example.com / Admin@123');
-    }
+    // Table 6: user_progress
+    await sql`
+      CREATE TABLE IF NOT EXISTS user_progress (
+        id BIGSERIAL PRIMARY KEY,
+        user_id VARCHAR(255) NOT NULL,
+        lesson_id VARCHAR(255) NOT NULL,
+        current_step INT DEFAULT 0,
+        total_steps INT DEFAULT 0,
+        action_done VARCHAR(255),
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        CONSTRAINT unique_user_lesson_progress UNIQUE (user_id, lesson_id)
+      );
+    `;
+    await sql`CREATE INDEX IF NOT EXISTS idx_user_progress_user_id ON user_progress(user_id);`;
 
-    console.log('✅ Neon DB migrations completed successfully!');
+    // Table 7: activity_submissions
+    await sql`
+      CREATE TABLE IF NOT EXISTS activity_submissions (
+        id BIGSERIAL PRIMARY KEY,
+        user_id VARCHAR(255) NOT NULL,
+        lesson_id VARCHAR(255) NOT NULL,
+        service VARCHAR(100) DEFAULT 'therapy',
+        form_data JSONB DEFAULT '{}'::jsonb,
+        files JSONB DEFAULT '[]'::jsonb,
+        status VARCHAR(50) DEFAULT 'completed',
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+      );
+    `;
+    await sql`CREATE INDEX IF NOT EXISTS idx_activity_submissions_user_id ON activity_submissions(user_id);`;
+
+    // Table 8: assessment_results
+    await sql`
+      CREATE TABLE IF NOT EXISTS assessment_results (
+        id BIGSERIAL PRIMARY KEY,
+        user_id VARCHAR(255) NOT NULL,
+        assessment_type VARCHAR(100) NOT NULL,
+        score INT NOT NULL,
+        category VARCHAR(100),
+        answers JSONB DEFAULT '[]'::jsonb,
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+      );
+    `;
+    await sql`CREATE INDEX IF NOT EXISTS idx_assessment_results_user_id ON assessment_results(user_id);`;
+
+    // 3. Run safe migration backfill for existing historical records
+    await streakService.backfillStreaksFromHistory().catch((err) => {
+      console.warn('⚠️ Non-critical warning in streak backfill:', err);
+    });
+
+    console.log('✅ Neon DB verified cleanly with streak & milestone architecture.');
   } catch (error) {
-    console.error('❌ Error setting up DB tables:', error);
+    console.error('❌ Error in setupDb:', error);
     throw error;
   }
 }

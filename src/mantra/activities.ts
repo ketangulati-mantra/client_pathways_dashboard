@@ -64,6 +64,16 @@ export const activities: Activity[] = [
     route: '/task/earn-while-you-improve-your-wellbeing',
     services: ['*'],
     description: 'Learn how your guided pathway supports your daily wellbeing habits and recognizes consistency.'
+  },
+  {
+    lessonId: 'daily-check-in',
+    activityId: 'daily-check-in',
+    title: 'Daily Check-In',
+    rewardPoints: 25,
+    estimatedDuration: '1 min',
+    route: '/task/daily-check-in',
+    services: ['*'],
+    description: 'A 30-60 second pause to explore your emotional state and discover personalized next steps.'
   }
 ];
 

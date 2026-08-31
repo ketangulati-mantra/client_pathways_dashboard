@@ -7,6 +7,7 @@ import FirstTherapySessionActivity from './FirstTherapySessionActivity';
 import EmotionalWellbeingAssessmentPage from './EmotionalWellbeingAssessmentPage';
 import HowCanTherapyHelpLessonPage from './HowCanTherapyHelpLessonPage';
 import EarnWhileYouImproveLessonPage from './EarnWhileYouImproveLessonPage';
+import DailyCheckInPage from './DailyCheckInPage';
 import AdminLoginPage from './AdminLoginPage';
 import { ProtectedRoute } from '../auth/ProtectedRoute';
 
@@ -34,6 +35,16 @@ const ROUTE_VIEW_REGISTRY = {
   '/task/earn-while-you-improve': { default: EarnWhileYouImproveLessonPage },
   '/task/earn_while_you_improve': { default: EarnWhileYouImproveLessonPage },
   '/earn-while-you-improve': { default: EarnWhileYouImproveLessonPage },
+  '/task/daily-check-in': { default: DailyCheckInPage },
+  '/task/daily_check_in': { default: DailyCheckInPage },
+  '/daily-check-in': { default: DailyCheckInPage },
+  '/daily_check_in': { default: DailyCheckInPage },
+  '/task/check-in': { default: DailyCheckInPage },
+  '/task/check_in': { default: DailyCheckInPage },
+  '/check-in': { default: DailyCheckInPage },
+  '/task/mood-check-in': { default: DailyCheckInPage },
+  '/task/mood_check_in': { default: DailyCheckInPage },
+  '/mood-check-in': { default: DailyCheckInPage },
   '/task/introduction': { default: IntroductionLessonPage },
   '/admin/login': { default: AdminLoginPage },
   '/admin/dashboard': { default: (props) => <ProtectedRoute><DeveloperLessonsPage {...props} /></ProtectedRoute> },
@@ -88,6 +99,10 @@ export function resolveLessonView({ currentPath, currentService, onBack, activit
 
     if (matchingActivity.lessonId === 'how-can-therapy-help' || matchingActivity.lessonId === 'how_can_therapy_help') {
       return <HowCanTherapyHelpLessonPage onBack={onBack} service={currentService} />;
+    }
+
+    if (matchingActivity.lessonId === 'daily-check-in' || matchingActivity.lessonId === 'daily_check_in' || matchingActivity.lessonId === 'check-in') {
+      return <DailyCheckInPage onBack={onBack} service={currentService} />;
     }
 
     return (

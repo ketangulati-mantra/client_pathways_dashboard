@@ -1,4 +1,5 @@
 import { sql } from '../db/index.js';
+import { streakService } from './streakService.js';
 
 export const activityService = {
   async ensureActivityTable() {
@@ -74,6 +75,34 @@ export const activityService = {
     } = input;
 
     const finalActivityId = activityId || lessonId || 'daily-check-in';
+    const checkInId = metadata?.checkInId;
+
+    // Idempotency: If checkInId is present, check for existing entry
+    if (checkInId) {
+      const existing = await sql`
+        SELECT * FROM user_activities
+        WHERE user_id = ${userId} AND metadata->>'checkInId' = ${checkInId}
+        LIMIT 1;
+      `;
+      if (existing && existing.length > 0) {
+        const updated = await sql`
+          UPDATE user_activities SET
+            emotion_zone = ${emotionZone || null},
+            primary_emotion = ${primaryEmotion || null},
+            additional_emotions = ${JSON.stringify(additionalEmotions)}::jsonb,
+            intensity = ${intensity !== undefined ? Number(intensity) : null},
+            contexts = ${JSON.stringify(contexts)}::jsonb,
+            reflection = ${reflection || null},
+            result_summary = ${JSON.stringify(resultSummary)}::jsonb,
+            recommendation = ${JSON.stringify(recommendation)}::jsonb,
+            metadata = ${JSON.stringify(metadata)}::jsonb,
+            updated_at = CURRENT_TIMESTAMP
+          WHERE id = ${existing[0].id}
+          RETURNING *;
+        `;
+        return updated[0];
+      }
+    }
 
     const result = await sql`
       INSERT INTO user_activities (
@@ -150,11 +179,30 @@ export const activityService = {
 
     const results = await sql`
       SELECT * FROM user_activities 
-      WHERE user_id = ${userId} AND (activity_id = 'daily-check-in' OR activity_type = 'daily_check_in')
+      WHERE user_id = ${userId} 
+        AND (activity_id = 'daily-check-in' OR activity_type = 'daily_check_in')
+        AND created_at::date = CURRENT_DATE
       ORDER BY created_at DESC
       LIMIT 1;
     `;
     return results[0] || null;
+  },
+
+  async deleteTodayCheckIn(userId: string) {
+    await this.ensureActivityTable();
+
+    const deleted = await sql`
+      DELETE FROM user_activities 
+      WHERE user_id = ${userId} 
+        AND (activity_id = 'daily-check-in' OR activity_type = 'daily_check_in')
+        AND created_at::date = CURRENT_DATE
+      RETURNING *;
+    `;
+
+    // Recalculate streak after deletion
+    await streakService.computeUserStreak(userId, 'UTC');
+
+    return deleted;
   },
 
   async completeActivity(input: {

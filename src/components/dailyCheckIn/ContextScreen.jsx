@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { CONTEXT_GROUPS } from './taxonomy';
 import { ArrowRight } from 'lucide-react';
+import {
+  getEmotionContextConfig,
+  ACTIVITY_OPTIONS,
+  SOCIAL_OPTIONS,
+  LOCATION_OPTIONS
+} from './emotionContextConfig';
 
 export default function ContextScreen({
   primaryEmotion,
@@ -9,28 +14,43 @@ export default function ContextScreen({
   initialContexts = [],
   onConfirm
 }) {
-  const [selected, setSelected] = useState(initialContexts || []);
+  const emotionName = primaryEmotion?.name || 'this';
+  const config = useMemo(() => getEmotionContextConfig(primaryEmotion, zone?.id), [primaryEmotion, zone]);
 
-  React.useEffect(() => {
-    setSelected(initialContexts || []);
-  }, [primaryEmotion?.id, initialContexts]);
+  // Track selection state by dimension
+  const [contributingSelected, setContributingSelected] = useState([]);
+  const [deeperSelected, setDeeperSelected] = useState([]);
+  const [activitiesSelected, setActivitiesSelected] = useState([]);
+  const [socialSelected, setSocialSelected] = useState([]);
+  const [locationSelected, setLocationSelected] = useState([]);
 
-  // Dynamic emotional accent tokens for header & primary CTA
+  // Initialize from initialContexts if passed as an array
+  useEffect(() => {
+    if (Array.isArray(initialContexts) && initialContexts.length > 0) {
+      // Restore matches into appropriate buckets
+      setContributingSelected(initialContexts.filter((item) => config.contributingOptions.includes(item)));
+      setDeeperSelected(initialContexts.filter((item) => config.deeperOptions.includes(item)));
+      setActivitiesSelected(initialContexts.filter((item) => ACTIVITY_OPTIONS.includes(item)));
+      setSocialSelected(initialContexts.filter((item) => SOCIAL_OPTIONS.includes(item)));
+      setLocationSelected(initialContexts.filter((item) => LOCATION_OPTIONS.includes(item)));
+    }
+  }, [primaryEmotion?.id, config]);
+
+  // Dynamic emotional accent tokens
   const accentColor = zone?.accent || '#f87171';
   const activeBg = zone?.activeBg || `linear-gradient(135deg, ${accentColor} 0%, #b91c1c 100%)`;
   const glowColor = zone?.glowColor || 'rgba(239, 68, 68, 0.65)';
-  const emotionWord = primaryEmotion?.name?.toLowerCase() || 'this';
 
-  // Calming Sky Cyan / Frost Blue selection style (meditative, universal contrast)
+  // Calming Sky Cyan selection style for selected chips
   const cyanSelectedBg = 'linear-gradient(135deg, #38bdf8 0%, #0284c7 100%)';
   const cyanSelectedBorder = '1.5px solid rgba(255, 255, 255, 0.55)';
   const cyanSelectedShadow = '0 4px 16px rgba(56, 189, 248, 0.35), 0 2px 6px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.35)';
 
-  const handleToggle = (item) => {
-    if (selected.includes(item)) {
-      setSelected(selected.filter((i) => i !== item));
+  const toggleItem = (item, list, setList) => {
+    if (list.includes(item)) {
+      setList(list.filter((i) => i !== item));
     } else {
-      setSelected([...selected, item]);
+      setList([...list, item]);
     }
 
     if (typeof window !== 'undefined' && window.navigator && window.navigator.vibrate) {
@@ -41,7 +61,25 @@ export default function ContextScreen({
   };
 
   const handleContinue = () => {
-    onConfirm(selected);
+    const allSelectedTags = [
+      ...contributingSelected,
+      ...deeperSelected,
+      ...activitiesSelected,
+      ...socialSelected,
+      ...locationSelected
+    ];
+
+    const structuredContext = {
+      emotion_category: config.category,
+      contributing_factors: contributingSelected,
+      deeper_context: deeperSelected,
+      activities: activitiesSelected,
+      social_context: socialSelected,
+      locations: locationSelected,
+      all_tags: allSelectedTags
+    };
+
+    onConfirm(allSelectedTags, structuredContext);
   };
 
   return (
@@ -60,7 +98,7 @@ export default function ContextScreen({
         paddingTop: '4px'
       }}
     >
-      {/* 1. Primary Reflective Question & Reassuring Guidance */}
+      {/* 1. Emotion-Aware Primary Question Header */}
       <div
         style={{
           textAlign: 'left',
@@ -81,11 +119,7 @@ export default function ContextScreen({
             margin: 0
           }}
         >
-          What was happening when you felt{' '}
-          <span style={{ color: accentColor, fontStyle: 'italic', fontWeight: 600 }}>
-            {emotionWord}
-          </span>
-          ?
+          {config.primaryQuestion(emotionName)}
         </h1>
         <p
           style={{
@@ -97,33 +131,78 @@ export default function ContextScreen({
             fontWeight: 500
           }}
         >
-          Choose anything that feels relevant, or continue when you're ready.
+          {config.primarySubtitle}
         </p>
       </div>
 
-      {/* 2. Focused Context Dimensions (Calming Sky Cyan Selection) */}
+      {/* 2. Structured Context Dimensions */}
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: 'clamp(22px, 4.2vh, 30px)',
+          gap: 'clamp(20px, 3.8vh, 28px)',
           width: '100%',
           maxWidth: '540px',
           padding: '4px 6px clamp(120px, 18vh, 150px)',
           boxSizing: 'border-box'
         }}
       >
-        {CONTEXT_GROUPS.map((groupObj) => (
-          <div
-            key={groupObj.group}
+        {/* Dimension 1: Emotion-Specific Contributing Factors */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%' }}>
+          <span
             style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '10px',
-              width: '100%'
+              fontSize: '0.72rem',
+              fontWeight: 700,
+              color: '#94a3b8',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              paddingLeft: '2px'
             }}
           >
-            {/* Subtle Navigation Landmark Label */}
+            Contributing Factors
+          </span>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px clamp(8px, 2vw, 10px)', width: '100%' }}>
+            {config.contributingOptions.map((item) => {
+              const isSelected = contributingSelected.includes(item);
+              return (
+                <motion.button
+                  key={item}
+                  type="button"
+                  onClick={() => toggleItem(item, contributingSelected, setContributingSelected)}
+                  whileTap={{ scale: 0.96 }}
+                  aria-pressed={isSelected}
+                  style={{
+                    height: '38px',
+                    minHeight: '38px',
+                    borderRadius: '12px',
+                    padding: '0 15px',
+                    background: isSelected ? cyanSelectedBg : 'rgba(255, 255, 255, 0.08)',
+                    border: isSelected ? cyanSelectedBorder : '1.5px solid rgba(255, 255, 255, 0.14)',
+                    boxShadow: isSelected ? cyanSelectedShadow : '0 1px 3px rgba(0, 0, 0, 0.3)',
+                    color: isSelected ? '#ffffff' : 'rgba(255, 255, 255, 0.72)',
+                    fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
+                    fontSize: '0.88rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    outline: 'none',
+                    userSelect: 'none',
+                    transition: 'all 0.15s ease'
+                  }}
+                >
+                  <span>{item}</span>
+                </motion.button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Dimension 2: Emotion-Specific Deeper Context */}
+        {config.deeperQuestion && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%' }}>
             <span
               style={{
                 fontSize: '0.72rem',
@@ -134,43 +213,27 @@ export default function ContextScreen({
                 paddingLeft: '2px'
               }}
             >
-              {groupObj.group}
+              {config.deeperQuestion}
             </span>
 
-            {/* Layout-Stable Chips (Calm Sky Cyan Glow) */}
-            <div
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '8px clamp(8px, 2vw, 10px)',
-                width: '100%'
-              }}
-            >
-              {groupObj.items.map((item) => {
-                const isSelected = selected.includes(item);
-
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px clamp(8px, 2vw, 10px)', width: '100%' }}>
+              {config.deeperOptions.map((item) => {
+                const isSelected = deeperSelected.includes(item);
                 return (
                   <motion.button
                     key={item}
                     type="button"
-                    onClick={() => handleToggle(item)}
+                    onClick={() => toggleItem(item, deeperSelected, setDeeperSelected)}
                     whileTap={{ scale: 0.96 }}
-                    transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                     aria-pressed={isSelected}
                     style={{
                       height: '38px',
                       minHeight: '38px',
                       borderRadius: '12px',
                       padding: '0 15px',
-                      background: isSelected
-                        ? cyanSelectedBg
-                        : 'rgba(255, 255, 255, 0.08)',
-                      border: isSelected
-                        ? cyanSelectedBorder
-                        : '1.5px solid rgba(255, 255, 255, 0.14)',
-                      boxShadow: isSelected
-                        ? cyanSelectedShadow
-                        : '0 1px 3px rgba(0, 0, 0, 0.3)',
+                      background: isSelected ? cyanSelectedBg : 'rgba(255, 255, 255, 0.08)',
+                      border: isSelected ? cyanSelectedBorder : '1.5px solid rgba(255, 255, 255, 0.14)',
+                      boxShadow: isSelected ? cyanSelectedShadow : '0 1px 3px rgba(0, 0, 0, 0.3)',
                       color: isSelected ? '#ffffff' : 'rgba(255, 255, 255, 0.72)',
                       fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
                       fontSize: '0.88rem',
@@ -180,9 +243,8 @@ export default function ContextScreen({
                       alignItems: 'center',
                       justifyContent: 'center',
                       outline: 'none',
-                      boxSizing: 'border-box',
                       userSelect: 'none',
-                      transition: 'background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease'
+                      transition: 'all 0.15s ease'
                     }}
                   >
                     <span>{item}</span>
@@ -191,10 +253,169 @@ export default function ContextScreen({
               })}
             </div>
           </div>
-        ))}
+        )}
+
+        {/* Dimension 3: What were you doing? */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%' }}>
+          <span
+            style={{
+              fontSize: '0.72rem',
+              fontWeight: 700,
+              color: '#94a3b8',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              paddingLeft: '2px'
+            }}
+          >
+            What were you doing?
+          </span>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px clamp(8px, 2vw, 10px)', width: '100%' }}>
+            {ACTIVITY_OPTIONS.map((item) => {
+              const isSelected = activitiesSelected.includes(item);
+              return (
+                <motion.button
+                  key={item}
+                  type="button"
+                  onClick={() => toggleItem(item, activitiesSelected, setActivitiesSelected)}
+                  whileTap={{ scale: 0.96 }}
+                  aria-pressed={isSelected}
+                  style={{
+                    height: '38px',
+                    minHeight: '38px',
+                    borderRadius: '12px',
+                    padding: '0 15px',
+                    background: isSelected ? cyanSelectedBg : 'rgba(255, 255, 255, 0.08)',
+                    border: isSelected ? cyanSelectedBorder : '1.5px solid rgba(255, 255, 255, 0.14)',
+                    boxShadow: isSelected ? cyanSelectedShadow : '0 1px 3px rgba(0, 0, 0, 0.3)',
+                    color: isSelected ? '#ffffff' : 'rgba(255, 255, 255, 0.72)',
+                    fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
+                    fontSize: '0.88rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    outline: 'none',
+                    userSelect: 'none',
+                    transition: 'all 0.15s ease'
+                  }}
+                >
+                  <span>{item}</span>
+                </motion.button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Dimension 4: Who were you with? */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%' }}>
+          <span
+            style={{
+              fontSize: '0.72rem',
+              fontWeight: 700,
+              color: '#94a3b8',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              paddingLeft: '2px'
+            }}
+          >
+            Who were you with?
+          </span>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px clamp(8px, 2vw, 10px)', width: '100%' }}>
+            {SOCIAL_OPTIONS.map((item) => {
+              const isSelected = socialSelected.includes(item);
+              return (
+                <motion.button
+                  key={item}
+                  type="button"
+                  onClick={() => toggleItem(item, socialSelected, setSocialSelected)}
+                  whileTap={{ scale: 0.96 }}
+                  aria-pressed={isSelected}
+                  style={{
+                    height: '38px',
+                    minHeight: '38px',
+                    borderRadius: '12px',
+                    padding: '0 15px',
+                    background: isSelected ? cyanSelectedBg : 'rgba(255, 255, 255, 0.08)',
+                    border: isSelected ? cyanSelectedBorder : '1.5px solid rgba(255, 255, 255, 0.14)',
+                    boxShadow: isSelected ? cyanSelectedShadow : '0 1px 3px rgba(0, 0, 0, 0.3)',
+                    color: isSelected ? '#ffffff' : 'rgba(255, 255, 255, 0.72)',
+                    fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
+                    fontSize: '0.88rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    outline: 'none',
+                    userSelect: 'none',
+                    transition: 'all 0.15s ease'
+                  }}
+                >
+                  <span>{item}</span>
+                </motion.button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Dimension 5: Where were you? */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%' }}>
+          <span
+            style={{
+              fontSize: '0.72rem',
+              fontWeight: 700,
+              color: '#94a3b8',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              paddingLeft: '2px'
+            }}
+          >
+            Where were you?
+          </span>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px clamp(8px, 2vw, 10px)', width: '100%' }}>
+            {LOCATION_OPTIONS.map((item) => {
+              const isSelected = locationSelected.includes(item);
+              return (
+                <motion.button
+                  key={item}
+                  type="button"
+                  onClick={() => toggleItem(item, locationSelected, setLocationSelected)}
+                  whileTap={{ scale: 0.96 }}
+                  aria-pressed={isSelected}
+                  style={{
+                    height: '38px',
+                    minHeight: '38px',
+                    borderRadius: '12px',
+                    padding: '0 15px',
+                    background: isSelected ? cyanSelectedBg : 'rgba(255, 255, 255, 0.08)',
+                    border: isSelected ? cyanSelectedBorder : '1.5px solid rgba(255, 255, 255, 0.14)',
+                    boxShadow: isSelected ? cyanSelectedShadow : '0 1px 3px rgba(0, 0, 0, 0.3)',
+                    color: isSelected ? '#ffffff' : 'rgba(255, 255, 255, 0.72)',
+                    fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
+                    fontSize: '0.88rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    outline: 'none',
+                    userSelect: 'none',
+                    transition: 'all 0.15s ease'
+                  }}
+                >
+                  <span>{item}</span>
+                </motion.button>
+              );
+            })}
+          </div>
+        </div>
       </div>
 
-      {/* 3. Refined Sticky Continue Dock with Ambient Blur Fade */}
+      {/* 3. Sticky Continue Dock */}
       <div
         style={{
           position: 'fixed',

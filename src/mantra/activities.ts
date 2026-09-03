@@ -74,6 +74,16 @@ export const activities: Activity[] = [
     route: '/task/daily-check-in',
     services: ['*'],
     description: 'A 30-60 second pause to explore your emotional state and discover personalized next steps.'
+  },
+  {
+    lessonId: 'journal',
+    activityId: 'journal',
+    title: 'Journal & Reflections',
+    rewardPoints: 20,
+    estimatedDuration: '3 min',
+    route: '/task/journal',
+    services: ['*'],
+    description: 'Deepen self-awareness with connected daily reflections and free-form journaling.'
   }
 ];
 

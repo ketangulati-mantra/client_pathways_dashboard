@@ -12,6 +12,8 @@ import certificateRoutes from './routes/certificateRoutes.js';
 import adminAuthRoutes from './routes/adminAuthRoutes.js';
 import adminUserRoutes from './routes/adminUserRoutes.js';
 import reviewerRoutes from './routes/reviewerRoutes.js';
+import journalRoutes from './routes/journalRoutes.js';
+import storyRoutes from './routes/storyRoutes.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -47,6 +49,8 @@ apiPrefixes.forEach((prefix) => {
   app.use(`${prefix}/admin/reviewers`, reviewerRoutes);
   app.use(`${prefix}/users`, userRoutes);
   app.use(`${prefix}/activities`, activityRoutes);
+  app.use(`${prefix}/journal`, journalRoutes);
+  app.use(`${prefix}/story`, storyRoutes);
 });
 
 // Serve Frontend Static Assets in Production (supporting root and subpaths)

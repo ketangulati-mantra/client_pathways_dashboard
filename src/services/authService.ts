@@ -1,6 +1,6 @@
 /**
  * User ID Extraction & Session Service
- * Extracts user ID from URL params (uid, user_id, userId, token, upa_id), cookies, or localStorage/sessionStorage.
+ * Extracts user ID and user Name from URL params, cookies, or localStorage/sessionStorage.
  * Defaults to sample user ID '234306' on localhost / local development.
  */
 
@@ -50,7 +50,6 @@ export function extractAndInitializeUserId(): string {
     // 2. On Localhost, enforce the requested sample user ID 234306
     if (isLocalhost) {
       const existing = getCookie('user_id') || localStorage.getItem('user_id');
-      // If the existing cookie was an email or invalid, reset to 234306
       if (!existing || existing.includes('@') || isNaN(Number(existing))) {
         setCookie('user_id', DEFAULT_SAMPLE_USER_ID);
         localStorage.setItem('user_id', DEFAULT_SAMPLE_USER_ID);
@@ -86,4 +85,60 @@ export function extractAndInitializeUserId(): string {
 
 export function getActiveUserId(): string {
   return extractAndInitializeUserId();
+}
+
+/**
+ * Dynamically extracts the active user's first name from URL params, localStorage, or cookies.
+ */
+export function getActiveUserName(): string | null {
+  if (typeof window === 'undefined') return null;
+
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const hashQuery = window.location.hash.includes('?')
+      ? new URLSearchParams(window.location.hash.split('?')[1])
+      : null;
+
+    // 1. Check URL parameters
+    const urlName =
+      urlParams.get('name') ||
+      urlParams.get('userName') ||
+      urlParams.get('user_name') ||
+      urlParams.get('first_name') ||
+      (hashQuery ? (hashQuery.get('name') || hashQuery.get('userName') || hashQuery.get('user_name') || hashQuery.get('first_name')) : null);
+
+    if (urlName && urlName.trim()) {
+      const cleanName = urlName.trim().split(' ')[0];
+      localStorage.setItem('user_name', cleanName);
+      return cleanName;
+    }
+
+    // 2. Check stored name in localStorage / cookies
+    const storedName =
+      localStorage.getItem('user_name') ||
+      localStorage.getItem('userName') ||
+      localStorage.getItem('name') ||
+      getCookie('user_name') ||
+      getCookie('name');
+
+    if (storedName && storedName.trim()) {
+      return storedName.trim().split(' ')[0];
+    }
+
+    // 3. Check parsed profile object in localStorage
+    const storedProfile = localStorage.getItem('user') || localStorage.getItem('user_profile') || localStorage.getItem('profile');
+    if (storedProfile) {
+      try {
+        const parsed = JSON.parse(storedProfile);
+        const nameFromProfile = parsed.name || parsed.firstName || parsed.first_name || parsed.userName;
+        if (nameFromProfile && typeof nameFromProfile === 'string') {
+          return nameFromProfile.trim().split(' ')[0];
+        }
+      } catch {}
+    }
+  } catch (e) {
+    console.warn('[AuthService] Error extracting user name:', e);
+  }
+
+  return null;
 }

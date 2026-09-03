@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowLeft } from 'lucide-react';
 import DailyCheckInHeader from '../components/dailyCheckIn/DailyCheckInHeader';
 import DailyCheckInHomeScreen from '../components/dailyCheckIn/DailyCheckInHomeScreen';
 import EmotionMapScreen from '../components/dailyCheckIn/EmotionMapScreen';
@@ -13,6 +14,7 @@ import MilestoneCelebrationModal from '../components/dailyCheckIn/MilestoneCeleb
 import ShareableMilestoneModal from '../components/dailyCheckIn/ShareableMilestoneModal';
 import { generatePersonalizedNextStep } from '../components/dailyCheckIn/recommendationEngine';
 import { logDailyCheckInToDB } from '../services/activityLogger';
+import { invalidateCheckInState } from '../services/dailyCheckInService';
 import { getActiveUserId } from '../services/authService';
 
 /**
@@ -34,7 +36,7 @@ function createFreshCheckInSession() {
   };
 }
 
-export default function DailyCheckInPage() {
+export default function DailyCheckInPage({ onBack: propOnBack } = {}) {
   const [isHome, setIsHome] = useState(true);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
@@ -105,6 +107,18 @@ export default function DailyCheckInPage() {
     }
   }, [currentStepIndex]);
 
+  const handleNavigateBack = useCallback(() => {
+    if (typeof window !== 'undefined' && window.history.length > 1) {
+      window.history.back();
+      return;
+    }
+    if (propOnBack) {
+      propOnBack();
+    } else if (typeof window !== 'undefined') {
+      window.location.hash = '#/';
+    }
+  }, [propOnBack]);
+
   // =========================================================================
   // State Transition Handlers (Dependency-Aware Invalidation)
   // =========================================================================
@@ -161,84 +175,92 @@ export default function DailyCheckInPage() {
   }, []);
 
   // Rule 4: Setting Context (Step 3 -> Step 4)
-  const handleConfirmContext = useCallback((ctxList) => {
+  const handleConfirmContext = useCallback((ctxList, structuredContext) => {
     setSession((prev) => ({
       ...prev,
       contexts: ctxList || [],
+      structuredContext: structuredContext || null,
       hasPersisted: false
     }));
     setCurrentStepIndex(4);
   }, []);
 
+  const inFlightCheckInIdRef = React.useRef(null);
+
   // Rule 5: Submitting Reflection -> Atomic Idempotent DB Persistence (Step 4 -> Step 5)
   const handleConfirmReflection = useCallback(async (note) => {
     const reflectionText = note || '';
 
-    setSession((prev) => {
-      const updated = {
-        ...prev,
-        reflection: reflectionText
-      };
+    // Prevent duplicate submissions for the same check-in session ID
+    if (inFlightCheckInIdRef.current === session.checkInId) {
+      setCurrentStepIndex(5);
+      return;
+    }
+    inFlightCheckInIdRef.current = session.checkInId;
 
-      // Generate dynamic personalized recommendation
-      const res = generatePersonalizedNextStep({
-        primaryEmotion: updated.primaryEmotion,
-        additionalEmotions: updated.additionalEmotions,
-        intensity: updated.intensity,
-        contexts: updated.contexts,
-        reflection: reflectionText,
-        zone: updated.selectedZone
-      });
-      setPersonalizedResponse(res);
+    const updatedSession = {
+      ...session,
+      reflection: reflectionText,
+      isSubmitting: true
+    };
+    setSession(updatedSession);
 
-      // Atomic DB logging if not already persisted or in-flight
-      if (!prev.hasPersisted && !prev.isSubmitting) {
-        const currentUserId = getActiveUserId();
-        logDailyCheckInToDB({
-          userId: currentUserId,
-          emotionZone: updated.selectedZone?.id,
-          primaryEmotion: updated.primaryEmotion?.name,
-          additionalEmotions: (updated.additionalEmotions || []).map((e) => e.name),
-          intensity: updated.intensity,
-          contexts: updated.contexts,
-          reflection: reflectionText,
-          resultSummary: res.summary,
-          recommendation: res.recommendation,
-          rewardPoints: 10,
-          metadata: {
-            checkInId: updated.checkInId,
-            zoneTitle: updated.selectedZone?.name,
-            openingHeadline: res.openingHeadline,
-            supportingMessage: res.supportingMessage
-          }
-        })
-          .then((logRes) => {
-            setSession((s) => ({
-              ...s,
-              hasPersisted: true,
-              isSubmitting: false,
-              completedAt: new Date().toISOString()
-            }));
-            if (logRes?.data?.streak) {
-              setLatestStreakData(logRes.data.streak);
-              if (logRes.data.streak.newMilestoneAchieved) {
-                setPendingMilestone(logRes.data.streak.newMilestoneAchieved);
-              }
-            }
-          })
-          .catch((err) => {
-            console.warn('[DailyCheckIn] Failed to persist check-in:', err);
-            setSession((s) => ({ ...s, isSubmitting: false }));
-          });
-
-        return { ...updated, isSubmitting: true };
-      }
-
-      return updated;
+    // Generate dynamic personalized recommendation
+    const res = generatePersonalizedNextStep({
+      primaryEmotion: updatedSession.primaryEmotion,
+      additionalEmotions: updatedSession.additionalEmotions,
+      intensity: updatedSession.intensity,
+      contexts: updatedSession.contexts,
+      reflection: reflectionText,
+      zone: updatedSession.selectedZone
     });
-
+    setPersonalizedResponse(res);
     setCurrentStepIndex(5);
-  }, []);
+
+    try {
+      const currentUserId = getActiveUserId();
+      const logRes = await logDailyCheckInToDB({
+        userId: currentUserId,
+        emotionZone: updatedSession.selectedZone?.id,
+        primaryEmotion: updatedSession.primaryEmotion?.name,
+        additionalEmotions: (updatedSession.additionalEmotions || []).map((e) => e.name),
+        intensity: updatedSession.intensity,
+        contexts: updatedSession.contexts,
+        reflection: reflectionText,
+        resultSummary: res.summary,
+        recommendation: res.recommendation,
+        rewardPoints: 10,
+        metadata: {
+          checkInId: updatedSession.checkInId,
+          zoneTitle: updatedSession.selectedZone?.name,
+          openingHeadline: res.openingHeadline,
+          supportingMessage: res.supportingMessage,
+          structured_context: updatedSession.structuredContext || null
+        }
+      });
+
+      if (logRes?.success && logRes?.data) {
+        setSession((s) => ({
+          ...s,
+          hasPersisted: true,
+          isSubmitting: false,
+          completedAt: new Date().toISOString()
+        }));
+        if (logRes.data.streak) {
+          setLatestStreakData(logRes.data.streak);
+          if (logRes.data.streak.newMilestoneAchieved) {
+            setPendingMilestone(logRes.data.streak.newMilestoneAchieved);
+          }
+        }
+        invalidateCheckInState(currentUserId);
+      } else {
+        setSession((s) => ({ ...s, isSubmitting: false }));
+      }
+    } catch (err) {
+      console.warn('[DailyCheckIn] Failed to persist check-in:', err);
+      setSession((s) => ({ ...s, isSubmitting: false }));
+    }
+  }, [session]);
 
   // Step 5 -> Step 6: Done for now
   const handleDoneForNow = useCallback(() => {
@@ -305,8 +327,49 @@ export default function DailyCheckInPage() {
         }}
       />
 
-      {/* 1. Header with subtle segmented progress */}
-      {!isHome ? (
+      {/* 1. Header with subtle segmented progress or Home Back Navigation */}
+      {isHome ? (
+        <header
+          style={{
+            height: '56px',
+            padding: '0 16px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'flex-start',
+            position: 'sticky',
+            top: 0,
+            background: 'rgba(13, 27, 42, 0.75)',
+            backdropFilter: 'blur(20px)',
+            zIndex: 30,
+            boxSizing: 'border-box'
+          }}
+        >
+          <motion.button
+            type="button"
+            onClick={handleNavigateBack}
+            whileTap={{ scale: 0.92 }}
+            whileHover={{ scale: 1.05 }}
+            style={{
+              width: '38px',
+              height: '38px',
+              borderRadius: '50%',
+              background: 'rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(255, 255, 255, 0.18)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#ffffff',
+              cursor: 'pointer',
+              boxShadow: '0 2px 6px rgba(0, 0, 0, 0.2)',
+              outline: 'none',
+              transition: 'all 0.15s ease'
+            }}
+            aria-label="Go back"
+          >
+            <ArrowLeft size={18} strokeWidth={2.2} />
+          </motion.button>
+        </header>
+      ) : (
         <DailyCheckInHeader
           currentStepIndex={currentStepIndex}
           totalSteps={6}
@@ -314,7 +377,7 @@ export default function DailyCheckInPage() {
           onClose={handleClose}
           canGoBack={true}
         />
-      ) : null}
+      )}
 
       {/* 2. Scrollable Canvas with Centered Container */}
       <main

@@ -378,38 +378,100 @@ export default function SpecificEmotionScreen({
         )}
       </div>
 
+      {/* Responsive Styles */}
+      <style>{`
+        .emotion-selection-dock {
+          position: fixed;
+          bottom: clamp(14px, 2.5vh, 24px);
+          left: 14px;
+          right: 14px;
+          max-width: 480px;
+          margin: 0 auto;
+          background: rgba(13, 27, 42, 0.96);
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          box-shadow: 0 20px 48px -6px rgba(0, 0, 0, 0.8), 0 0 24px ${zoneGlow};
+          backdrop-filter: blur(24px);
+          -webkit-backdrop-filter: blur(24px);
+          border-radius: 20px;
+          padding: 14px 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          z-index: 50;
+          box-sizing: border-box;
+        }
+
+        .emotion-dock-info {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          text-align: left;
+          width: 100%;
+        }
+
+        .emotion-dock-title-row {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .emotion-dock-def {
+          font-size: 0.86rem;
+          color: rgba(255, 255, 255, 0.88);
+          line-height: 1.4;
+          font-weight: 450;
+        }
+
+        .emotion-dock-btn {
+          width: 100%;
+          border: none;
+          border-radius: 14px;
+          padding: 12px 20px;
+          color: #ffffff;
+          font-family: "Plus Jakarta Sans", Inter, -apple-system, sans-serif;
+          font-size: 0.94rem;
+          font-weight: 700;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          box-shadow: 0 6px 20px -2px ${zoneGlow};
+        }
+
+        @media (min-width: 580px) {
+          .emotion-selection-dock {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            gap: 18px;
+          }
+          .emotion-dock-info {
+            flex: 1;
+            min-width: 0;
+          }
+          .emotion-dock-btn {
+            width: auto;
+            flex-shrink: 0;
+            padding: 12px 22px;
+          }
+        }
+      `}</style>
+
       {/* 3. Floating Dark Glass Bottom Information Dock (Only appears when selected) */}
       <AnimatePresence>
         {selectedEmotion && (
           <motion.div
+            className="emotion-selection-dock"
             initial={{ y: 70, opacity: 0, scale: 0.96 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 70, opacity: 0, scale: 0.96 }}
             transition={{ type: 'spring', stiffness: 420, damping: 30 }}
-            style={{
-              position: 'fixed',
-              bottom: 'clamp(16px, 3vh, 26px)',
-              left: '16px',
-              right: '16px',
-              maxWidth: '540px',
-              margin: '0 auto',
-              background: 'rgba(10, 15, 29, 0.96)',
-              border: `1.5px solid rgba(255, 255, 255, 0.25)`,
-              boxShadow: `0 24px 54px -8px rgba(0, 0, 0, 0.85), 0 0 26px ${zoneGlow}55`,
-              backdropFilter: 'blur(28px)',
-              borderRadius: '22px',
-              padding: '16px 20px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '16px',
-              zIndex: 40,
-              boxSizing: 'border-box'
-            }}
           >
             {/* Emotion Name & Contextual Definition */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', flex: 1, minWidth: 0 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div className="emotion-dock-info">
+              <div className="emotion-dock-title-row">
                 <span
                   style={{
                     fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
@@ -434,17 +496,10 @@ export default function SpecificEmotionScreen({
 
               <motion.span
                 key={selectedEmotion.id}
+                className="emotion-dock-def"
                 initial={{ opacity: 0, y: 3 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2 }}
-                style={{
-                  fontSize: '0.88rem',
-                  color: '#ffffff',
-                  opacity: 0.92,
-                  lineHeight: 1.35,
-                  whiteSpace: 'normal',
-                  fontWeight: 500
-                }}
               >
                 {selectedEmotion.def || selectedEmotion.nuance}
               </motion.span>
@@ -453,25 +508,13 @@ export default function SpecificEmotionScreen({
             {/* Tactile Continue CTA */}
             <motion.button
               type="button"
+              className="emotion-dock-btn"
               onClick={handleContinue}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.94 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 350, damping: 20 }}
               style={{
-                background: zoneActiveBg,
-                border: 'none',
-                borderRadius: '14px',
-                padding: '11px 18px',
-                color: '#ffffff',
-                fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
-                fontSize: '0.9rem',
-                fontWeight: 700,
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '6px',
-                flexShrink: 0,
-                boxShadow: `0 4px 18px ${zoneGlow}`
+                background: zoneActiveBg
               }}
             >
               <span>Continue</span>

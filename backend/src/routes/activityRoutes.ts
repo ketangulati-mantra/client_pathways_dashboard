@@ -14,6 +14,9 @@ router.get('/streak/:userId', activityController.getUserStreak);
 // Fetch user activities & history by userId and optional activityId
 router.get('/history/:userId', activityController.getUserActivities);
 router.get('/history/:userId/:activityId', activityController.getUserActivities);
+// Centralized Canonical Check-in State & Mutations
+router.get('/check-in-state/:userId', activityController.getCheckInState);
+router.delete('/check-in/:userId/:id?', activityController.deleteCheckIn);
 router.get('/latest-check-in/:userId', activityController.getLatestCheckIn);
 
 // Completions & progress

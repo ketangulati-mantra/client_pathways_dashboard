@@ -8,6 +8,7 @@ import EmotionalWellbeingAssessmentPage from './EmotionalWellbeingAssessmentPage
 import HowCanTherapyHelpLessonPage from './HowCanTherapyHelpLessonPage';
 import EarnWhileYouImproveLessonPage from './EarnWhileYouImproveLessonPage';
 import DailyCheckInPage from './DailyCheckInPage';
+import JournalPage from './JournalPage';
 import AdminLoginPage from './AdminLoginPage';
 import { ProtectedRoute } from '../auth/ProtectedRoute';
 
@@ -45,6 +46,10 @@ const ROUTE_VIEW_REGISTRY = {
   '/task/mood-check-in': { default: DailyCheckInPage },
   '/task/mood_check_in': { default: DailyCheckInPage },
   '/mood-check-in': { default: DailyCheckInPage },
+  '/task/journal': { default: JournalPage },
+  '/task/journal-home': { default: JournalPage },
+  '/task/journal_home': { default: JournalPage },
+  '/journal': { default: JournalPage },
   '/task/introduction': { default: IntroductionLessonPage },
   '/admin/login': { default: AdminLoginPage },
   '/admin/dashboard': { default: (props) => <ProtectedRoute><DeveloperLessonsPage {...props} /></ProtectedRoute> },

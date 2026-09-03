@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { Plus, Check, Flame, ChevronDown, ChevronUp } from 'lucide-react';
-import { getUserActivityHistory, getUserStreak } from '../../services/activityLogger';
+import { useCheckInState } from '../../hooks/useCheckInState';
+import { getUserActivityHistory } from '../../services/activityLogger';
 import { getActiveUserId } from '../../services/authService';
 import WeeklyStreakTracker from './WeeklyStreakTracker';
 
@@ -39,58 +40,158 @@ function getIntensityText(intensity) {
   return 'Feeling strongly';
 }
 
-export default function DailyCheckInHomeScreen({ onStartCheckIn, latestStreak }) {
+/**
+ * Calm, polished skeleton for the streak card to prevent layout shifts.
+ */
+function StreakCardSkeleton() {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '14px',
+        width: '100%'
+      }}
+    >
+      {/* Header Row Skeleton */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <div
+            style={{
+              width: '28px',
+              height: '28px',
+              borderRadius: '8px',
+              background: 'rgba(251, 191, 36, 0.15)',
+              animation: 'streakShimmer 2s ease-in-out infinite'
+            }}
+          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <div
+              style={{
+                width: '100px',
+                height: '14px',
+                borderRadius: '6px',
+                background: 'rgba(255, 255, 255, 0.12)',
+                animation: 'streakShimmer 2s ease-in-out infinite'
+              }}
+            />
+            <div
+              style={{
+                width: '150px',
+                height: '10px',
+                borderRadius: '4px',
+                background: 'rgba(255, 255, 255, 0.06)',
+                animation: 'streakShimmer 2s ease-in-out infinite'
+              }}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* 7 Weekday Circles Placeholder */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '6px 4px' }}>
+        {[...Array(7)].map((_, i) => (
+          <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
+            <div
+              style={{
+                width: '12px',
+                height: '10px',
+                borderRadius: '3px',
+                background: 'rgba(255, 255, 255, 0.08)'
+              }}
+            />
+            <div
+              style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '50%',
+                background: 'rgba(255, 255, 255, 0.04)',
+                border: '1px solid rgba(255, 255, 255, 0.06)',
+                animation: 'streakShimmer 2s ease-in-out infinite',
+                animationDelay: `${i * 120}ms`
+              }}
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Progress Bar Placeholder */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div style={{ width: '80px', height: '10px', borderRadius: '4px', background: 'rgba(255, 255, 255, 0.08)' }} />
+          <div style={{ width: '45px', height: '10px', borderRadius: '4px', background: 'rgba(251, 191, 36, 0.15)' }} />
+        </div>
+        <div
+          style={{
+            width: '100%',
+            height: '6px',
+            borderRadius: '9999px',
+            background: 'rgba(255, 255, 255, 0.06)',
+            overflow: 'hidden'
+          }}
+        >
+          <div
+            style={{
+              width: '40%',
+              height: '100%',
+              background: 'linear-gradient(90deg, rgba(251, 191, 36, 0.2) 0%, rgba(249, 115, 22, 0.3) 100%)',
+              animation: 'streakShimmer 2s ease-in-out infinite'
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function DailyCheckInHomeScreen({ onStartCheckIn }) {
   const shouldReduceMotion = useReducedMotion();
+  const userId = getActiveUserId();
+
   const [isTapped, setIsTapped] = useState(false);
   const [recentCheckIns, setRecentCheckIns] = useState([]);
   const [showAllCheckIns, setShowAllCheckIns] = useState(false);
   const [isLoadingHistory, setIsLoadingHistory] = useState(true);
-  const [streakData, setStreakData] = useState(latestStreak || null);
-  const [isLoadingStreak, setIsLoadingStreak] = useState(!latestStreak);
 
-  const userId = getActiveUserId();
+  // Centralized Canonical Check-In State from Database
+  const {
+    streak: streakData,
+    isLoading: isLoadingStreak,
+    todayCheckIns,
+    hasCheckedInToday
+  } = useCheckInState(userId);
 
   useEffect(() => {
     let isMounted = true;
 
-    async function loadData() {
-      // 1. Load History
+    async function loadHistory() {
       try {
         const history = await getUserActivityHistory('daily-check-in', userId);
         if (isMounted) {
-          if (Array.isArray(history) && history.length > 0) {
-            setRecentCheckIns(history);
-          } else {
-            setRecentCheckIns([]);
-          }
+          setRecentCheckIns(Array.isArray(history) ? history : []);
         }
       } catch (err) {
         console.warn('Failed to load check-ins for user:', err);
       } finally {
         if (isMounted) setIsLoadingHistory(false);
       }
-
-      // 2. Load Streak (if not already provided via latestStreak)
-      if (!latestStreak) {
-        try {
-          const streak = await getUserStreak(userId);
-          if (isMounted && streak) {
-            setStreakData(streak);
-          }
-        } catch (err) {
-          console.warn('Failed to load streak for user:', err);
-        } finally {
-          if (isMounted) setIsLoadingStreak(false);
-        }
-      }
     }
 
-    loadData();
+    loadHistory();
+
+    const handleInvalidate = () => {
+      loadHistory();
+    };
+
+    window.addEventListener('check-in-state-invalidated', handleInvalidate);
+    window.addEventListener('focus', handleInvalidate);
 
     return () => {
       isMounted = false;
+      window.removeEventListener('check-in-state-invalidated', handleInvalidate);
+      window.removeEventListener('focus', handleInvalidate);
     };
-  }, [userId, latestStreak]);
+  }, [userId]);
 
   const handleOrbClick = () => {
     if (isTapped) return;
@@ -107,9 +208,9 @@ export default function DailyCheckInHomeScreen({ onStartCheckIn, latestStreak })
     }, shouldReduceMotion ? 200 : 450);
   };
 
-  // Streak metrics & copy
-  const currentStreak = streakData?.currentStreak || 0;
-  const completedToday = streakData?.completedToday || false;
+  // Streak metrics & copy from canonical state
+  const currentStreak = streakData?.current ?? streakData?.currentStreak ?? 0;
+  const completedToday = Boolean(streakData?.completedToday);
   const daysUntilNext = streakData?.daysUntilNextMilestone ?? (currentStreak < 3 ? 3 - currentStreak : 4);
   const nextMilestone = streakData?.nextMilestone || (currentStreak < 3 ? 3 : 7);
 
@@ -130,123 +231,160 @@ export default function DailyCheckInHomeScreen({ onStartCheckIn, latestStreak })
       ? `1 more day to reach your ${nextMilestone}-day milestone!`
       : `${daysUntilNext} more days to reach your ${nextMilestone}-day milestone`;
 
-  // Track how many entries were logged TODAY for the active user
-  const todayDateString = new Date().toDateString();
-  const todayEntriesCount = recentCheckIns.filter((item) => {
-    if (!item.created_at) return false;
-    return new Date(item.created_at).toDateString() === todayDateString;
-  }).length;
+  // Canonical count of entries logged TODAY
+  const todayEntriesCount = todayCheckIns && todayCheckIns.length > 0
+    ? todayCheckIns.length
+    : recentCheckIns.filter((item) => {
+        if (!item.created_at) return false;
+        return new Date(item.created_at).toDateString() === new Date().toDateString();
+      }).length;
 
   // Show only latest 3 by default, expand on toggle
-  const displayedCheckIns = showAllCheckIns ? recentCheckIns : recentCheckIns.slice(0, 3);
+  const visibleCheckIns = showAllCheckIns ? recentCheckIns : recentCheckIns.slice(0, 3);
+  const hasMoreCheckIns = recentCheckIns.length > 3;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.98 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.96 }}
-      transition={{ duration: 0.3 }}
+    <div
       style={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        textAlign: 'center',
+        padding: '12px 16px 40px',
         width: '100%',
-        padding: '16px 16px 48px',
+        maxWidth: '440px',
+        margin: '0 auto',
         boxSizing: 'border-box',
-        gap: 'clamp(24px, 4.2vh, 36px)',
-        color: '#f8fafc',
-        position: 'relative'
+        gap: '24px'
       }}
     >
-      {/* 1. Main Hero: Warm Editorial Serif Heading */}
+      <style>{`
+        @keyframes streakShimmer {
+          0%, 100% { opacity: 0.45; }
+          50% { opacity: 0.85; }
+        }
+      `}</style>
+
+      {/* Hero Interactive Orb Area */}
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          textAlign: 'center',
-          gap: 'clamp(20px, 3.8vh, 30px)',
-          width: '100%',
-          maxWidth: '440px',
-          marginTop: '6px',
-          position: 'relative',
-          zIndex: 5
+          gap: '20px',
+          width: '100%'
         }}
       >
-        <h1
-          style={{
-            fontFamily: 'Newsreader, "Playfair Display", Georgia, serif',
-            fontSize: 'clamp(1.95rem, 6.8vw, 2.55rem)',
-            fontWeight: 500,
-            letterSpacing: '-0.025em',
-            lineHeight: 1.18,
-            color: '#f8fafc',
-            margin: 0
-          }}
-        >
-          How are you feeling right now?
-        </h1>
+        {/* Headings */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+          <h1
+            style={{
+              fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
+              fontSize: 'clamp(1.5rem, 5vw, 1.85rem)',
+              fontWeight: 800,
+              letterSpacing: '-0.025em',
+              color: '#ffffff',
+              margin: 0
+            }}
+          >
+            How are you feeling right now?
+          </h1>
+          <p
+            style={{
+              fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
+              fontSize: 'clamp(0.88rem, 3vw, 0.96rem)',
+              color: '#94a3b8',
+              margin: 0,
+              lineHeight: 1.45
+            }}
+          >
+            Take a moment to check in with yourself.
+          </p>
+        </div>
 
-        {/* 2. Softly Illuminated Dimensional Navy Check-In Sphere */}
+        {/* Tactile Glowing Mood Orb */}
         <div
           style={{
             position: 'relative',
-            width: 'clamp(195px, 52vw, 235px)',
-            height: 'clamp(195px, 52vw, 235px)',
+            width: '170px',
+            height: '170px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            margin: '0 auto'
+            margin: '8px 0'
           }}
         >
-          {/* Layer 1: Atmospheric Outer Light Source */}
-          <div
-            style={{
-              position: 'absolute',
-              width: '165%',
-              height: '165%',
-              borderRadius: '50%',
-              background: 'radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.24) 0%, rgba(14, 165, 233, 0.12) 38%, rgba(2, 132, 199, 0.04) 62%, transparent 80%)',
-              filter: 'blur(34px)',
-              pointerEvents: 'none',
-              zIndex: 0
-            }}
-          />
-
-          {/* Layer 2: Ambient Cyan/Teal Underglow Ring */}
-          <div
-            style={{
-              position: 'absolute',
-              width: '115%',
-              height: '115%',
-              borderRadius: '50%',
-              background: 'radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.32) 0%, rgba(45, 212, 191, 0.16) 50%, transparent 74%)',
-              filter: 'blur(16px)',
-              pointerEvents: 'none',
-              zIndex: 1
-            }}
-          />
-
-          {/* Layer 3: Gentle Orbiting Highlight Ring */}
+          {/* Layer 1: Ambient Backdrop Glow */}
           <motion.div
             animate={
               shouldReduceMotion
                 ? {}
                 : {
-                    rotate: [0, 360],
-                    opacity: [0.55, 0.85, 0.55]
+                    scale: [1, 1.12, 1],
+                    opacity: [0.35, 0.55, 0.35]
                   }
             }
             transition={{
-              rotate: { duration: 18, repeat: Infinity, ease: 'linear' },
-              opacity: { duration: 5, repeat: Infinity, ease: 'easeInOut' }
+              duration: 3.8,
+              repeat: Infinity,
+              ease: 'easeInOut'
             }}
             style={{
               position: 'absolute',
-              inset: '-4px',
+              width: '190px',
+              height: '190px',
+              borderRadius: '50%',
+              background: 'radial-gradient(circle, rgba(56, 189, 248, 0.45) 0%, rgba(45, 212, 191, 0.22) 50%, transparent 75%)',
+              filter: 'blur(16px)',
+              pointerEvents: 'none',
+              zIndex: 0
+            }}
+          />
+
+          {/* Layer 2: Outer Pulsing Energy Ring */}
+          <motion.div
+            animate={
+              shouldReduceMotion
+                ? {}
+                : {
+                    rotate: 360,
+                    scale: [1, 1.04, 1]
+                  }
+            }
+            transition={{
+              rotate: { duration: 22, repeat: Infinity, ease: 'linear' },
+              scale: { duration: 4.2, repeat: Infinity, ease: 'easeInOut' }
+            }}
+            style={{
+              position: 'absolute',
+              inset: '-8px',
+              borderRadius: '50%',
+              border: '1.5px dashed rgba(56, 189, 248, 0.3)',
+              pointerEvents: 'none',
+              zIndex: 1
+            }}
+          />
+
+          {/* Layer 3: Rotating Gradient Aura Ring */}
+          <motion.div
+            animate={
+              shouldReduceMotion
+                ? {}
+                : {
+                    rotate: -360
+                  }
+            }
+            transition={{
+              duration: 16,
+              repeat: Infinity,
+              ease: 'linear'
+            }}
+            style={{
+              position: 'absolute',
+              inset: '-2px',
               borderRadius: '50%',
               border: '1.5px solid transparent',
-              borderTopColor: 'rgba(56, 189, 248, 0.75)',
+              borderTopColor: 'rgba(56, 189, 248, 0.65)',
               borderRightColor: 'rgba(45, 212, 191, 0.35)',
               filter: 'drop-shadow(0 0 8px rgba(56, 189, 248, 0.55))',
               pointerEvents: 'none',
@@ -355,11 +493,12 @@ export default function DailyCheckInHomeScreen({ onStartCheckIn, latestStreak })
         </div>
       </div>
 
-      {/* 2. Exciting & Rewarding Streak Section (Warm Fire & Milestone Achievement) */}
+      {/* 2. Streak Section (Reserved Dimensions with Zero-Shift Skeleton & Instant Caching) */}
       <div
         style={{
           width: '100%',
           maxWidth: '380px',
+          minHeight: '172px',
           background: 'linear-gradient(180deg, rgba(245, 158, 11, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
           border: '1px solid rgba(245, 158, 11, 0.18)',
           borderRadius: '22px',
@@ -367,6 +506,7 @@ export default function DailyCheckInHomeScreen({ onStartCheckIn, latestStreak })
           boxSizing: 'border-box',
           display: 'flex',
           flexDirection: 'column',
+          justifyContent: 'center',
           gap: '14px',
           position: 'relative',
           zIndex: 5,
@@ -374,311 +514,281 @@ export default function DailyCheckInHomeScreen({ onStartCheckIn, latestStreak })
           boxShadow: '0 10px 30px -8px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(251, 191, 36, 0.1)'
         }}
       >
-        {/* Header Row: Flame Icon + Streak Count + Checked in badge */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '28px',
-                height: '28px',
-                borderRadius: '8px',
-                background: 'linear-gradient(135deg, #fde047 0%, #f97316 60%, #ea580c 100%)',
-                boxShadow: '0 2px 10px rgba(249, 115, 22, 0.5)'
-              }}
-            >
-              <Flame size={18} fill="#ffffff" strokeWidth={1.5} color="#ffffff" />
-            </div>
-
-            <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
-              <span
-                style={{
-                  fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
-                  fontSize: '1rem',
-                  fontWeight: 800,
-                  color: '#ffffff',
-                  letterSpacing: '-0.01em'
-                }}
-              >
-                {streakTitle}
-              </span>
-              <span style={{ fontSize: '0.76rem', color: '#cbd5e1' }}>
-                {streakSubtitle}
-              </span>
-            </div>
-          </div>
-
-          {completedToday && (
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '4px',
-                background: 'rgba(34, 197, 94, 0.14)',
-                border: '1px solid rgba(34, 197, 94, 0.35)',
-                padding: '3px 8px',
-                borderRadius: '9999px',
-                color: '#4ade80',
-                fontSize: '0.72rem',
-                fontWeight: 700,
-                flexShrink: 0
-              }}
-            >
-              <Check size={11} strokeWidth={3} />
-              <span>Done</span>
-            </div>
-          )}
-        </div>
-
-        {/* Weekly Day Circles (M T W T F S S) */}
-        <WeeklyStreakTracker currentStreak={currentStreak} completedToday={completedToday} />
-
-        {/* Milestone Progress Bar */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.76rem' }}>
-            <span style={{ color: '#94a3b8', fontWeight: 600 }}>Next Milestone</span>
-            <span style={{ color: '#fbbf24', fontWeight: 700 }}>
-              {progressCurrent} / {progressTarget} days
-            </span>
-          </div>
-
-          {/* Progress Track */}
-          <div
-            style={{
-              width: '100%',
-              height: '6px',
-              background: 'rgba(255, 255, 255, 0.08)',
-              borderRadius: '9999px',
-              overflow: 'hidden',
-              position: 'relative'
-            }}
-          >
-            <motion.div
-              initial={shouldReduceMotion ? { width: `${progressPercent}%` } : { width: 0 }}
-              animate={{ width: `${progressPercent}%` }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              style={{
-                height: '100%',
-                background: 'linear-gradient(90deg, #f59e0b 0%, #f97316 50%, #fbbf24 100%)',
-                borderRadius: '9999px',
-                boxShadow: '0 0 8px rgba(245, 158, 11, 0.6)'
-              }}
-            />
-          </div>
-
-          <span style={{ fontSize: '0.74rem', color: '#94a3b8', textAlign: 'center', marginTop: '2px' }}>
-            {milestoneSubtitle}
-          </span>
-        </div>
-      </div>
-
-      {/* 3. Your Recent Check-Ins with Today's Count & 3-Item Collapse */}
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '12px',
-          width: '100%',
-          maxWidth: '380px',
-          position: 'relative',
-          zIndex: 5
-        }}
-      >
-        {/* Section Header with "Today you logged X entries" Badge */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            padding: '0 2px'
-          }}
-        >
-          <span
-            style={{
-              fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
-              fontSize: '0.84rem',
-              fontWeight: 700,
-              color: '#94a3b8',
-              letterSpacing: '0.02em'
-            }}
-          >
-            Your recent check-ins
-          </span>
-
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px',
-              background: 'rgba(56, 189, 248, 0.1)',
-              border: '1px solid rgba(56, 189, 248, 0.25)',
-              padding: '3px 10px',
-              borderRadius: '9999px',
-              color: '#38bdf8',
-              fontSize: '0.72rem',
-              fontWeight: 700
-            }}
-          >
-            <span
-              style={{
-                width: '6px',
-                height: '6px',
-                borderRadius: '50%',
-                background: '#38bdf8',
-                boxShadow: '0 0 6px #38bdf8'
-              }}
-            />
-            <span>
-              {todayEntriesCount === 0
-                ? 'No entries today'
-                : todayEntriesCount === 1
-                ? '1 entry logged today'
-                : `${todayEntriesCount} entries logged today`}
-            </span>
-          </div>
-        </div>
-
-        {/* Live Journal Cards from Neon DB */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-          {isLoadingHistory ? (
-            <div
-              style={{
-                background: 'rgba(255, 255, 255, 0.02)',
-                borderRadius: '16px',
-                padding: '16px',
-                textAlign: 'center',
-                color: '#94a3b8',
-                fontSize: '0.84rem'
-              }}
-            >
-              Loading your entries...
-            </div>
-          ) : recentCheckIns.length > 0 ? (
-            <>
-              {displayedCheckIns.map((item) => {
-                const dotColor = ZONE_COLORS[item.emotion_zone] || '#38bdf8';
-                const emotionName = item.primary_emotion || 'Check-In';
-                const timeString = formatCheckInTime(item.created_at);
-                const intensityText = getIntensityText(item.intensity);
-
-                return (
-                  <motion.div
-                    key={item.id}
-                    whileHover={{ y: -1 }}
-                    style={{
-                      background: 'rgba(255, 255, 255, 0.03)',
-                      border: '1px solid rgba(255, 255, 255, 0.07)',
-                      borderRadius: '16px',
-                      padding: '14px 16px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '14px',
-                      backdropFilter: 'blur(12px)',
-                      boxSizing: 'border-box'
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: '12px',
-                        height: '12px',
-                        borderRadius: '50%',
-                        background: dotColor,
-                        boxShadow: `0 0 10px ${dotColor}`,
-                        flexShrink: 0
-                      }}
-                    />
-
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', textAlign: 'left', flex: 1 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <span
-                          style={{
-                            fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
-                            fontSize: '0.94rem',
-                            fontWeight: 800,
-                            color: '#f8fafc',
-                            letterSpacing: '-0.01em'
-                          }}
-                        >
-                          {emotionName}
-                        </span>
-                        {item.intensity ? (
-                          <span style={{ fontSize: '0.74rem', color: dotColor, fontWeight: 700 }}>
-                            {item.intensity}/5
-                          </span>
-                        ) : null}
-                      </div>
-
-                      <span style={{ fontSize: '0.78rem', color: '#94a3b8' }}>
-                        {intensityText} · {timeString}
-                      </span>
-
-                      {item.reflection && (
-                        <span style={{ fontSize: '0.76rem', color: '#cbd5e1', fontStyle: 'italic', marginTop: '2px', opacity: 0.9 }}>
-                          "{item.reflection.length > 55 ? item.reflection.substring(0, 55) + '…' : item.reflection}"
-                        </span>
-                      )}
-                    </div>
-                  </motion.div>
-                );
-              })}
-
-              {/* View More / Show Less Button if > 3 entries */}
-              {recentCheckIns.length > 3 && (
-                <button
-                  type="button"
-                  onClick={() => setShowAllCheckIns((prev) => !prev)}
+        {isLoadingStreak && !streakData ? (
+          <StreakCardSkeleton />
+        ) : (
+          <>
+            {/* Header Row: Flame Icon + Streak Count + Checked in badge */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <div
                   style={{
-                    width: '100%',
-                    background: 'rgba(255, 255, 255, 0.035)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    borderRadius: '14px',
-                    padding: '10px 16px',
-                    color: '#cbd5e1',
-                    fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
-                    fontSize: '0.82rem',
-                    fontWeight: 600,
-                    cursor: 'pointer',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    gap: '6px',
-                    outline: 'none',
-                    transition: 'all 0.2s ease',
-                    marginTop: '2px'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.07)';
-                    e.currentTarget.style.color = '#ffffff';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.035)';
-                    e.currentTarget.style.color = '#cbd5e1';
+                    width: '28px',
+                    height: '28px',
+                    borderRadius: '8px',
+                    background: 'linear-gradient(135deg, #fde047 0%, #f97316 60%, #ea580c 100%)',
+                    boxShadow: '0 2px 10px rgba(249, 115, 22, 0.5)'
                   }}
                 >
-                  <span>{showAllCheckIns ? 'Show less' : `View more (${recentCheckIns.length - 3} more)`}</span>
-                  {showAllCheckIns ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-                </button>
+                  <Flame size={18} fill="#ffffff" strokeWidth={1.5} color="#ffffff" />
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
+                  <span
+                    style={{
+                      fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
+                      fontSize: '1rem',
+                      fontWeight: 800,
+                      color: '#ffffff',
+                      letterSpacing: '-0.01em'
+                    }}
+                  >
+                    {streakTitle}
+                  </span>
+                  <span style={{ fontSize: '0.76rem', color: '#cbd5e1' }}>
+                    {streakSubtitle}
+                  </span>
+                </div>
+              </div>
+
+              {completedToday && (
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                    background: 'rgba(34, 197, 94, 0.14)',
+                    border: '1px solid rgba(34, 197, 94, 0.35)',
+                    padding: '3px 8px',
+                    borderRadius: '9999px',
+                    color: '#4ade80',
+                    fontSize: '0.72rem',
+                    fontWeight: 700,
+                    flexShrink: 0
+                  }}
+                >
+                  <Check size={11} strokeWidth={3} />
+                  <span>Done</span>
+                </div>
               )}
-            </>
-          ) : (
-            <div
-              style={{
-                background: 'rgba(255, 255, 255, 0.03)',
-                border: '1px dashed rgba(255, 255, 255, 0.12)',
-                borderRadius: '16px',
-                padding: '18px',
-                textAlign: 'center',
-                color: '#94a3b8',
-                fontSize: '0.86rem'
-              }}
-            >
-              No check-ins yet today. Tap the orb above to log your first check-in!
             </div>
-          )}
-        </div>
+
+            {/* Weekly Day Circles (M T W T F S S) */}
+            <WeeklyStreakTracker currentStreak={currentStreak} completedToday={completedToday} />
+
+            {/* Milestone Progress Bar */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.76rem' }}>
+                <span style={{ color: '#94a3b8', fontWeight: 600 }}>Next Milestone</span>
+                <span style={{ color: '#fbbf24', fontWeight: 700 }}>
+                  {progressCurrent} / {progressTarget} days
+                </span>
+              </div>
+
+              {/* Progress Track */}
+              <div
+                style={{
+                  width: '100%',
+                  height: '6px',
+                  background: 'rgba(255, 255, 255, 0.08)',
+                  borderRadius: '9999px',
+                  overflow: 'hidden',
+                  position: 'relative'
+                }}
+              >
+                <motion.div
+                  initial={shouldReduceMotion ? { width: `${progressPercent}%` } : { width: 0 }}
+                  animate={{ width: `${progressPercent}%` }}
+                  transition={{ duration: 0.6, ease: 'easeOut' }}
+                  style={{
+                    height: '100%',
+                    background: 'linear-gradient(90deg, #fbbf24 0%, #f97316 60%, #ef4444 100%)',
+                    borderRadius: '9999px',
+                    boxShadow: '0 0 10px rgba(249, 115, 22, 0.6)'
+                  }}
+                />
+              </div>
+
+              <span style={{ fontSize: '0.72rem', color: '#94a3b8', textAlign: 'left', marginTop: '2px' }}>
+                {milestoneSubtitle}
+              </span>
+            </div>
+          </>
+        )}
       </div>
-    </motion.div>
+
+      {/* 3. Recent Check-Ins History Section */}
+      <div
+        style={{
+          width: '100%',
+          maxWidth: '380px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '12px',
+          textAlign: 'left'
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <span
+            style={{
+              fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
+              fontSize: '0.86rem',
+              fontWeight: 700,
+              color: '#e2e8f0',
+              letterSpacing: '0.01em'
+            }}
+          >
+            Today's Check-Ins
+          </span>
+          <span style={{ fontSize: '0.76rem', color: '#94a3b8', fontWeight: 600 }}>
+            {todayEntriesCount} logged today
+          </span>
+        </div>
+
+        {/* List of Recent Check-in cards */}
+        {recentCheckIns.length > 0 ? (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {visibleCheckIns.map((item, index) => {
+              const zoneColor = ZONE_COLORS[item.emotion_zone] || '#38bdf8';
+              const intensityText = getIntensityText(item.intensity);
+              const emotionName = item.primary_emotion || 'Emotion';
+
+              return (
+                <motion.div
+                  key={item.id || index}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.25, delay: index * 0.04 }}
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.03)',
+                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                    borderRadius: '16px',
+                    padding: '12px 14px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '6px'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <span
+                        style={{
+                          width: '8px',
+                          height: '8px',
+                          borderRadius: '50%',
+                          backgroundColor: zoneColor,
+                          boxShadow: `0 0 8px ${zoneColor}`
+                        }}
+                      />
+                      <span
+                        style={{
+                          fontFamily: '"Plus Jakarta Sans", Inter, -apple-system, sans-serif',
+                          fontSize: '0.92rem',
+                          fontWeight: 700,
+                          color: '#ffffff'
+                        }}
+                      >
+                        {emotionName}
+                      </span>
+                    </div>
+
+                    <span style={{ fontSize: '0.74rem', color: '#94a3b8' }}>
+                      {formatCheckInTime(item.created_at)}
+                    </span>
+                  </div>
+
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                    <span
+                      style={{
+                        fontSize: '0.74rem',
+                        color: '#cbd5e1',
+                        background: 'rgba(255, 255, 255, 0.05)',
+                        padding: '2px 8px',
+                        borderRadius: '9999px'
+                      }}
+                    >
+                      {intensityText} ({item.intensity}/5)
+                    </span>
+
+                    {item.contexts && item.contexts.length > 0 && (
+                      <span
+                        style={{
+                          fontSize: '0.74rem',
+                          color: '#94a3b8',
+                          background: 'rgba(255, 255, 255, 0.04)',
+                          padding: '2px 8px',
+                          borderRadius: '9999px'
+                        }}
+                      >
+                        {item.contexts.join(', ')}
+                      </span>
+                    )}
+                  </div>
+
+                  {item.reflection && item.reflection.trim() !== '' && (
+                    <p
+                      style={{
+                        fontSize: '0.8rem',
+                        color: '#94a3b8',
+                        margin: '2px 0 0',
+                        fontStyle: 'italic',
+                        lineHeight: 1.4,
+                        display: '-webkit-box',
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden'
+                      }}
+                    >
+                      "{item.reflection}"
+                    </p>
+                  )}
+                </motion.div>
+              );
+            })}
+
+            {hasMoreCheckIns && (
+              <button
+                type="button"
+                onClick={() => setShowAllCheckIns(!showAllCheckIns)}
+                style={{
+                  background: 'transparent',
+                  border: 'none',
+                  color: '#38bdf8',
+                  fontSize: '0.82rem',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  padding: '6px 0',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '4px',
+                  outline: 'none'
+                }}
+              >
+                <span>{showAllCheckIns ? 'Show less' : `Show all ${recentCheckIns.length} check-ins`}</span>
+                {showAllCheckIns ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+              </button>
+            )}
+          </div>
+        ) : !isLoadingHistory ? (
+          <div
+            style={{
+              padding: '16px',
+              borderRadius: '16px',
+              background: 'rgba(255, 255, 255, 0.02)',
+              border: '1px dashed rgba(255, 255, 255, 0.08)',
+              textAlign: 'center',
+              color: '#64748b',
+              fontSize: '0.82rem'
+            }}
+          >
+            No check-ins logged yet today. Tap the orb above to check in.
+          </div>
+        ) : null}
+      </div>
+    </div>
   );
 }

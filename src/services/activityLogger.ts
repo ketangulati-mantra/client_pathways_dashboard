@@ -1,4 +1,5 @@
 import { getActiveUserId } from './authService';
+import { invalidateCheckInState } from './dailyCheckInService';
 
 export interface ActivityLogPayload {
   userId?: string;
@@ -59,11 +60,10 @@ function getUserClientTimezone(): string {
 
 function getApiUrl(endpoint: string): string {
   if (typeof window !== 'undefined') {
-    const isLocalhost = 
-      window.location.hostname === 'localhost' || 
+    const isLocalhost =
+      window.location.hostname === 'localhost' ||
       window.location.hostname === '127.0.0.1';
-    
-    // When running on frontend dev port (5173), direct fallback or proxied endpoint
+
     if (isLocalhost && window.location.port === '5173') {
       return `http://localhost:5001${endpoint}`;
     }
@@ -72,23 +72,42 @@ function getApiUrl(endpoint: string): string {
 }
 
 /**
- * Persists any user activity (including Daily Check-In) to the database mapped with userId and activityId.
+ * Invalidation helper to notify active views of check-in changes
+ */
+export function invalidateDailyCheckInCache(userId?: string): void {
+  if (typeof window === 'undefined') return;
+  const targetUserId = userId || getActiveUserId();
+  invalidateCheckInState(targetUserId);
+}
+
+/**
+ * Subscribes to global real-time daily check-in updates across all components.
+ */
+export function subscribeToDailyCheckInUpdates(callback: (detail: any) => void) {
+  if (typeof window === 'undefined') return () => {};
+  const handler = (e: any) => callback(e.detail);
+  window.addEventListener('daily-check-in-updated', handler);
+  return () => window.removeEventListener('daily-check-in-updated', handler);
+}
+
+/**
+ * Core logging method to persist user activities, awards points, and recalculates streaks.
  */
 export async function logUserActivityToDB(data: ActivityLogPayload) {
   const userId = data.userId || getActiveUserId();
-  const activityId = data.activityId || data.lessonId || PLATFORM_ACTIVITIES.DAILY_CHECK_IN;
+  const activityId = data.activityId || PLATFORM_ACTIVITIES.DAILY_CHECK_IN;
   const timezone = data.timezone || getUserClientTimezone();
 
   const payload = {
     userId,
     activityId,
     activityType: data.activityType || 'daily_check_in',
-    lessonId: data.lessonId || activityId,
-    service: data.service || 'therapy',
-    emotionZone: data.emotionZone,
-    primaryEmotion: data.primaryEmotion,
+    lessonId: data.lessonId || null,
+    service: data.service || 'mental_wellness',
+    emotionZone: data.emotionZone || null,
+    primaryEmotion: data.primaryEmotion || null,
     additionalEmotions: data.additionalEmotions || [],
-    intensity: data.intensity,
+    intensity: data.intensity || 3,
     contexts: data.contexts || [],
     reflection: data.reflection || '',
     resultSummary: data.resultSummary || {},
@@ -110,20 +129,37 @@ export async function logUserActivityToDB(data: ActivityLogPayload) {
       body: JSON.stringify(payload)
     });
 
-    const json = await res.json().catch(() => null);
+    let json = await res.json().catch(() => null);
     if (!res.ok || json?.success === false) {
-      // Fallback to relative /api if direct localhost failed
       const fallbackRes = await fetch('/api/activities/check-in', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-timezone': timezone },
         body: JSON.stringify(payload)
       });
-      const fallbackJson = await fallbackRes.json().catch(() => null);
-      return { success: fallbackRes.ok, data: fallbackJson?.data };
+      json = await fallbackRes.json().catch(() => null);
+      if (!fallbackRes.ok) {
+        return { success: false, data: null };
+      }
     }
 
-    console.log(`[ActivityLogger] Activity (${activityId}) logged to DB for user:`, userId, json?.data);
-    return { success: true, data: json?.data };
+    const responseData = json?.data;
+
+    // Broadcast global check-in update event across all views
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(
+        new CustomEvent('daily-check-in-updated', {
+          detail: {
+            userId,
+            streak: responseData?.streak,
+            checkIn: responseData
+          }
+        })
+      );
+      invalidateCheckInState(userId);
+    }
+
+    console.log(`[ActivityLogger] Activity (${activityId}) logged to DB:`, responseData);
+    return { success: true, data: responseData };
 
   } catch (error) {
     try {
@@ -133,7 +169,19 @@ export async function logUserActivityToDB(data: ActivityLogPayload) {
         body: JSON.stringify(payload)
       });
       const fallbackJson = await fallbackRes.json().catch(() => null);
-      return { success: fallbackRes.ok, data: fallbackJson?.data };
+      if (fallbackRes.ok && fallbackJson?.data) {
+        const responseData = fallbackJson.data;
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(
+            new CustomEvent('daily-check-in-updated', {
+              detail: { userId, streak: responseData?.streak, checkIn: responseData }
+            })
+          );
+          invalidateCheckInState(userId);
+        }
+        return { success: true, data: responseData };
+      }
+      return { success: false, error };
     } catch (err2) {
       console.error(`[ActivityLogger] Network error logging activity (${activityId}) to DB:`, error);
       return { success: false, error };
@@ -166,14 +214,21 @@ export async function getUserStreak(userId?: string): Promise<StreakSummary | nu
       headers: { 'x-timezone': timezone }
     });
     const json = await res.json().catch(() => null);
-    if (json?.data) return json.data;
+    if (json?.data) {
+      setCachedUserStreak(targetUserId, json.data);
+      return json.data;
+    }
 
     // Fallback to relative URL
     const fallbackRes = await fetch(`/api/activities/streak/${targetUserId}?timezone=${encodeURIComponent(timezone)}`, {
       headers: { 'x-timezone': timezone }
     });
     const fallbackJson = await fallbackRes.json().catch(() => null);
-    return fallbackJson?.data || null;
+    if (fallbackJson?.data) {
+      setCachedUserStreak(targetUserId, fallbackJson.data);
+      return fallbackJson.data;
+    }
+    return null;
   } catch (error) {
     console.error('[ActivityLogger] Error fetching user streak:', error);
     return null;
@@ -212,7 +267,7 @@ export async function getUserActivityHistory(activityId?: string, userId?: strin
 }
 
 /**
- * Fetches the latest check-in for the active user.
+ * Fetches the latest check-in for the active user (fast single indexed lookup).
  */
 export async function getLatestUserCheckIn(userId?: string) {
   const targetUserId = userId || getActiveUserId();
@@ -221,12 +276,21 @@ export async function getLatestUserCheckIn(userId?: string) {
   try {
     const res = await fetch(url);
     const json = await res.json().catch(() => null);
-    if (json?.data) return json.data;
+    if (json && 'data' in json) {
+      setCachedLatestCheckIn(targetUserId, json.data);
+      return json.data;
+    }
 
     const fallbackRes = await fetch(`/api/activities/latest-check-in/${targetUserId}`);
     const fallbackJson = await fallbackRes.json().catch(() => null);
-    return fallbackJson?.data || null;
+    if (fallbackJson && 'data' in fallbackJson) {
+      setCachedLatestCheckIn(targetUserId, fallbackJson.data);
+      return fallbackJson.data;
+    }
+    setCachedLatestCheckIn(targetUserId, null);
+    return null;
   } catch (error) {
+    setCachedLatestCheckIn(targetUserId, null);
     return null;
   }
 }

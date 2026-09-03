@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { activityService } from '../services/activityService.js';
 import { streakService } from '../services/streakService.js';
+import { dailyCheckInService } from '../services/dailyCheckInService.js';
 
 export const activityController = {
   // Log any user activity or daily check-in with activityId and calculate streaks
@@ -41,7 +42,39 @@ export const activityController = {
       const finalActivityId = activityId || lessonId || 'daily-check-in';
       const finalActivityType = activityType || 'daily_check_in';
 
-      // 1. Log the full activity entry in user_activities
+      // 1. If this is a Daily Check-In, route through the centralized dailyCheckInService
+      if (finalActivityId === 'daily-check-in' || finalActivityType === 'daily_check_in') {
+        const result = await dailyCheckInService.createCheckIn({
+          userId: String(extractedUserId),
+          activityId: finalActivityId,
+          activityType: finalActivityType,
+          lessonId: lessonId || finalActivityId,
+          service: service || 'mental_wellness',
+          emotionZone,
+          primaryEmotion: primaryEmotion || 'Calm',
+          additionalEmotions: Array.isArray(additionalEmotions) ? additionalEmotions : [],
+          intensity: intensity !== undefined ? Number(intensity) : 3,
+          contexts: Array.isArray(contexts) ? contexts : [],
+          reflection: reflection || '',
+          resultSummary: resultSummary || {},
+          recommendation: recommendation || {},
+          rewardPoints: rewardPoints !== undefined ? Number(rewardPoints) : 10,
+          metadata: metadata || {},
+          timezone: String(timezone)
+        });
+
+        return res.status(200).json({
+          success: true,
+          message: 'Daily check-in logged successfully',
+          data: {
+            ...result.checkIn,
+            streak: result.state.streak,
+            newMilestoneAchieved: result.newMilestoneAchieved
+          }
+        });
+      }
+
+      // 2. Generic activity logging
       const activity = await activityService.logActivity({
         userId: String(extractedUserId),
         activityId: finalActivityId,
@@ -60,24 +93,13 @@ export const activityController = {
         metadata
       });
 
-      // 2. If this is a completed Daily Check-In, record and calculate streak in user timezone
-      let streakSummary = null;
-      if (finalActivityId === 'daily-check-in' || finalActivityType === 'daily_check_in') {
-        streakSummary = await streakService.recordDailyCheckInCompletion(
-          String(extractedUserId),
-          String(timezone)
-        );
-      }
-
       return res.status(200).json({
         success: true,
         message: 'Activity logged successfully',
-        data: {
-          ...activity,
-          streak: streakSummary
-        }
+        data: activity
       });
     } catch (error) {
+      console.error('[activityController.logActivity] Error:', error);
       next(error);
     }
   },
@@ -207,6 +229,37 @@ export const activityController = {
 
       const progress = await activityService.getUserProgress(String(userId), String(lessonId));
       return res.status(200).json({ success: true, data: progress });
+    } catch (error) {
+      next(error);
+    }
+  },
+
+  // Centralized Canonical Check-In State (Side-effect-free)
+  async getCheckInState(req: Request, res: Response, next: NextFunction) {
+    try {
+      const userId = req.params.userId || req.query.userId || req.cookies?.user_id || '234306';
+      const timezone = req.query.timezone || req.headers['x-timezone'] || 'UTC';
+
+      const state = await dailyCheckInService.getCheckInState(String(userId), String(timezone));
+      return res.status(200).json({ success: true, data: state });
+    } catch (error) {
+      next(error);
+    }
+  },
+
+  // Delete Check-In (single check-in ID or all of today)
+  async deleteCheckIn(req: Request, res: Response, next: NextFunction) {
+    try {
+      const userId = req.params.userId || req.query.userId || req.body.userId || req.cookies?.user_id || '234306';
+      const checkInId = req.params.id || req.body.id || req.body.checkInId;
+      const timezone = req.query.timezone || req.headers['x-timezone'] || req.body.timezone || 'UTC';
+
+      const result = await dailyCheckInService.deleteCheckIn(String(userId), checkInId ? String(checkInId) : undefined, String(timezone));
+      return res.status(200).json({
+        success: true,
+        message: 'Check-in deleted and streak recalculated successfully',
+        data: result
+      });
     } catch (error) {
       next(error);
     }

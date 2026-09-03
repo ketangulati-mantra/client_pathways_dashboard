@@ -97,12 +97,13 @@ export const streakService = {
     // 2. Recalculate streak metrics from all unique historical check-in dates
     const summary = await this.computeUserStreak(userId, timezone);
 
-    // 3. Check for newly achieved milestones
+    // 3. Check for newly achieved milestones (evaluating from highest to lowest)
     let newlyAchieved: { milestone: number; achievedAt: string } | null = null;
 
     if (summary.currentStreak > 0) {
-      // Find eligible milestones that the current streak meets or exceeds
-      const eligibleMilestones = STREAK_MILESTONES.filter((m) => summary.currentStreak >= m);
+      const eligibleMilestones = [...STREAK_MILESTONES]
+        .filter((m) => summary.currentStreak >= m)
+        .reverse();
 
       for (const milestone of eligibleMilestones) {
         // Attempt atomic insert with unique constraint protection
@@ -113,13 +114,12 @@ export const streakService = {
           RETURNING milestone, achieved_at;
         `;
 
-        if (achievementRows && achievementRows.length > 0) {
+        if (achievementRows && achievementRows.length > 0 && !newlyAchieved) {
           newlyAchieved = {
             milestone: Number(achievementRows[0].milestone),
             achievedAt: String(achievementRows[0].achieved_at)
           };
           console.log(`🎉 [StreakService] User ${userId} newly achieved ${milestone}-day streak milestone!`);
-          break; // Report the highest new milestone unlocked in this session
         }
       }
     }
@@ -164,19 +164,36 @@ export const streakService = {
 
     const todayLocalDate = getLocalCalendarDate(new Date(), timezone);
     const yesterdayLocalDate = getPreviousDayDate(todayLocalDate);
+    const safeTimezone = timezone || 'UTC';
 
-    // Fetch all unique completed dates for this user ordered descending
+    // Directly query actual distinct calendar dates from user_activities (source of truth)
     const dateRows = await sql`
-      SELECT TO_CHAR(check_in_date, 'YYYY-MM-DD') AS check_in_date
-      FROM daily_check_in_days
+      SELECT DISTINCT TO_CHAR(created_at AT TIME ZONE ${safeTimezone}, 'YYYY-MM-DD') AS check_in_date
+      FROM user_activities
       WHERE user_id = ${userId}
+        AND (activity_id = 'daily-check-in' OR activity_type = 'daily_check_in')
       ORDER BY check_in_date DESC;
     `;
 
     const completedDates: string[] = dateRows.map((r: any) => String(r.check_in_date));
     const totalCheckInDays = completedDates.length;
 
+    // Sync daily_check_in_days table with user_activities
     if (totalCheckInDays === 0) {
+      await sql`DELETE FROM daily_check_in_days WHERE user_id = ${userId};`;
+      await sql`DELETE FROM streak_milestone_achievements WHERE user_id = ${userId};`;
+      await sql`
+        INSERT INTO user_streaks (user_id, current_streak, longest_streak, last_check_in_date, total_check_in_days, updated_at)
+        VALUES (${userId}, 0, 0, null, 0, CURRENT_TIMESTAMP)
+        ON CONFLICT (user_id)
+        DO UPDATE SET
+          current_streak = 0,
+          longest_streak = 0,
+          last_check_in_date = null,
+          total_check_in_days = 0,
+          updated_at = CURRENT_TIMESTAMP;
+      `;
+
       const milestoneProg = calculateMilestoneProgress(0);
       return {
         currentStreak: 0,
@@ -190,6 +207,13 @@ export const streakService = {
         newMilestoneAchieved: null
       };
     }
+
+    // Clean up any deleted dates from daily_check_in_days
+    await sql`
+      DELETE FROM daily_check_in_days
+      WHERE user_id = ${userId}
+        AND NOT (TO_CHAR(check_in_date, 'YYYY-MM-DD') = ANY(${completedDates}));
+    `;
 
     const lastCompletedDate = completedDates[0];
     const completedToday = lastCompletedDate === todayLocalDate;
@@ -238,6 +262,32 @@ export const streakService = {
 
     // 3. Milestone Progress
     const milestoneProg = calculateMilestoneProgress(currentStreak);
+
+    // 4. Update user_streaks table cache
+    await sql`
+      INSERT INTO user_streaks (
+        user_id,
+        current_streak,
+        longest_streak,
+        last_check_in_date,
+        total_check_in_days,
+        updated_at
+      ) VALUES (
+        ${userId},
+        ${currentStreak},
+        ${longestStreak},
+        ${lastCompletedDate}::date,
+        ${totalCheckInDays},
+        CURRENT_TIMESTAMP
+      )
+      ON CONFLICT (user_id)
+      DO UPDATE SET
+        current_streak = EXCLUDED.current_streak,
+        longest_streak = EXCLUDED.longest_streak,
+        last_check_in_date = EXCLUDED.last_check_in_date,
+        total_check_in_days = EXCLUDED.total_check_in_days,
+        updated_at = CURRENT_TIMESTAMP;
+    `;
 
     return {
       currentStreak,

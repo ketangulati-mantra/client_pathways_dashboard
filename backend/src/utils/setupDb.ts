@@ -166,12 +166,99 @@ export async function setupDb() {
     `;
     await sql`CREATE INDEX IF NOT EXISTS idx_assessment_results_user_id ON assessment_results(user_id);`;
 
+    // Table 9: story_states (Tracks persistent story state, current narrative cycle, open threads)
+    await sql`
+      CREATE TABLE IF NOT EXISTS story_states (
+        user_id VARCHAR(255) PRIMARY KEY,
+        status VARCHAR(50) NOT NULL DEFAULT 'not_started',
+        current_chapter_number INT NOT NULL DEFAULT 0,
+        current_cycle_id VARCHAR(100),
+        current_cycle_name VARCHAR(255),
+        world_theme VARCHAR(100),
+        open_threads JSONB NOT NULL DEFAULT '[]'::jsonb,
+        narrative_facts JSONB NOT NULL DEFAULT '{"characters":[],"locations":[],"symbols":[]}'::jsonb,
+        recent_pacing JSONB NOT NULL DEFAULT '[]'::jsonb,
+        recent_ending_styles JSONB NOT NULL DEFAULT '[]'::jsonb,
+        cycle_progress JSONB NOT NULL DEFAULT '{"stage":"beginning","chapter_in_cycle":1}'::jsonb,
+        next_cycle_preview JSONB DEFAULT NULL,
+        is_generating BOOLEAN NOT NULL DEFAULT FALSE,
+        generation_started_at TIMESTAMP WITH TIME ZONE,
+        last_unlocked_at TIMESTAMP WITH TIME ZONE,
+        last_chapter_date DATE DEFAULT NULL,
+        timezone VARCHAR(100) DEFAULT 'UTC',
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+      );
+    `;
+    await sql`CREATE INDEX IF NOT EXISTS idx_story_states_user_id ON story_states(user_id);`;
+
+    // Table 10: story_chapters (Append-only chronicle of generated story chapters)
+    await sql`
+      CREATE TABLE IF NOT EXISTS story_chapters (
+        id BIGSERIAL PRIMARY KEY,
+        user_id VARCHAR(255) NOT NULL,
+        chapter_number INT NOT NULL,
+        story_day_date DATE NOT NULL DEFAULT CURRENT_DATE,
+        cycle_id VARCHAR(100),
+        title VARCHAR(255) NOT NULL,
+        content TEXT NOT NULL,
+        narrative_summary TEXT NOT NULL,
+        source_inputs JSONB DEFAULT '[]'::jsonb,
+        metadata JSONB DEFAULT '{}'::jsonb,
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        CONSTRAINT unique_user_chapter UNIQUE (user_id, chapter_number),
+        CONSTRAINT unique_user_story_day UNIQUE (user_id, story_day_date)
+      );
+    `;
+    // Safe column migrations for existing databases
+    try {
+      await sql`ALTER TABLE story_states ADD COLUMN IF NOT EXISTS status VARCHAR(50) NOT NULL DEFAULT 'not_started';`;
+      await sql`ALTER TABLE story_states ADD COLUMN IF NOT EXISTS generation_started_at TIMESTAMP WITH TIME ZONE;`;
+      await sql`ALTER TABLE story_states ADD COLUMN IF NOT EXISTS last_chapter_date DATE DEFAULT NULL;`;
+      await sql`ALTER TABLE story_states ADD COLUMN IF NOT EXISTS timezone VARCHAR(100) DEFAULT 'UTC';`;
+      await sql`ALTER TABLE story_states ALTER COLUMN current_cycle_id DROP NOT NULL;`;
+      await sql`ALTER TABLE story_states ALTER COLUMN current_cycle_name DROP NOT NULL;`;
+      await sql`ALTER TABLE story_states ALTER COLUMN world_theme DROP NOT NULL;`;
+      await sql`ALTER TABLE story_states ADD COLUMN IF NOT EXISTS narrative_facts JSONB NOT NULL DEFAULT '{"characters":[],"locations":[],"symbols":[]}'::jsonb;`;
+      await sql`ALTER TABLE story_states ADD COLUMN IF NOT EXISTS recent_pacing JSONB NOT NULL DEFAULT '[]'::jsonb;`;
+      await sql`ALTER TABLE story_states ADD COLUMN IF NOT EXISTS recent_ending_styles JSONB NOT NULL DEFAULT '[]'::jsonb;`;
+      await sql`ALTER TABLE story_states ADD COLUMN IF NOT EXISTS cycle_progress JSONB NOT NULL DEFAULT '{"stage":"beginning","chapter_in_cycle":1}'::jsonb;`;
+      await sql`ALTER TABLE story_states ADD COLUMN IF NOT EXISTS next_cycle_preview JSONB DEFAULT NULL;`;
+      await sql`ALTER TABLE story_chapters ADD COLUMN IF NOT EXISTS story_day_date DATE DEFAULT CURRENT_DATE;`;
+      await sql`ALTER TABLE story_chapters ADD COLUMN IF NOT EXISTS source_inputs JSONB DEFAULT '[]'::jsonb;`;
+      await sql`ALTER TABLE story_chapters ALTER COLUMN cycle_id DROP NOT NULL;`;
+      await sql`UPDATE story_chapters SET story_day_date = created_at::date WHERE story_day_date IS NULL;`;
+      
+      // Deduplicate any older development rows before enforcing unique constraint if needed
+      await sql`
+        DELETE FROM story_chapters a USING story_chapters b
+        WHERE a.id < b.id 
+          AND a.user_id = b.user_id 
+          AND a.story_day_date = b.story_day_date;
+      `;
+    } catch (e) {
+      console.warn('⚠️ Column migration notice:', e);
+    }
+
+    try {
+      await sql`ALTER TABLE story_chapters ADD CONSTRAINT unique_user_story_day UNIQUE (user_id, story_day_date);`;
+    } catch (e: any) {
+      if (e.code !== '42710' && !e.message?.includes('already exists')) {
+        console.warn('⚠️ Constraint creation error:', e);
+      }
+    }
+
+    await sql`CREATE INDEX IF NOT EXISTS idx_story_chapters_user_id ON story_chapters(user_id);`;
+    await sql`CREATE INDEX IF NOT EXISTS idx_story_chapters_user_chapter ON story_chapters(user_id, chapter_number DESC);`;
+    await sql`CREATE INDEX IF NOT EXISTS idx_story_chapters_user_day ON story_chapters(user_id, story_day_date DESC);`;
+    await sql`CREATE INDEX IF NOT EXISTS idx_story_chapters_created_at ON story_chapters(created_at DESC);`;
+
     // 3. Run safe migration backfill for existing historical records
     await streakService.backfillStreaksFromHistory().catch((err) => {
       console.warn('⚠️ Non-critical warning in streak backfill:', err);
     });
 
-    console.log('✅ Neon DB verified cleanly with streak & milestone architecture.');
+    console.log('✅ Neon DB verified cleanly with streak, milestone, and story architecture.');
   } catch (error) {
     console.error('❌ Error in setupDb:', error);
     throw error;

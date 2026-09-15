@@ -234,6 +234,61 @@ export function createOptimisticActiveDashboard(userId: string, challengeId: str
   };
 }
 
+export const FALLBACK_CHALLENGES: Challenge[] = [
+  {
+    id: 'mantra_21',
+    slug: 'mantra-21',
+    name: 'Mantra 21',
+    tagline: '21 days to show up for your mind.',
+    description: 'A universal 21-day mental wellness challenge built around small, consistent actions, micro-habits, and self-discovery.',
+    durationDays: 21,
+    coverImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80',
+    category: 'Mental Wellness',
+    status: 'active',
+    dailyTimeMinutes: 10,
+    keyMilestones: [
+      { day: 1, title: 'First Step', reward: 'Starter Badge' },
+      { day: 7, title: 'Consistency Checkpoint', reward: '7-Day Streak Badge' },
+      { day: 14, title: 'Halfway Momentum', reward: 'Momentum Finisher' },
+      { day: 21, title: 'Finisher Circle', reward: 'Mantra 21 Finisher Medal' }
+    ]
+  },
+  {
+    id: 'morning_calm_7',
+    slug: 'morning-calm-7',
+    name: '7-Day Morning Calm',
+    tagline: 'Start your mornings with grounded clarity.',
+    description: '7 days of 5-minute morning anchors, breathwork micro-steps, and intentional focus before your day begins.',
+    durationDays: 7,
+    coverImage: 'https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?w=800&auto=format&fit=crop&q=80',
+    category: 'Daily Grounding',
+    status: 'active',
+    dailyTimeMinutes: 5,
+    keyMilestones: [
+      { day: 1, title: 'Morning Spark', reward: 'Early Riser' },
+      { day: 4, title: 'Rhythm Builder', reward: 'Grounded State' },
+      { day: 7, title: '7-Day Anchor', reward: 'Morning Master' }
+    ]
+  },
+  {
+    id: 'sleep_reset_14',
+    slug: 'sleep-reset-14',
+    name: '14-Day Sleep & Unwind',
+    tagline: 'Build an effortless bedtime routine.',
+    description: 'Unwind your mind, release racing thoughts, and establish restful evening habits that last beyond two weeks.',
+    durationDays: 14,
+    coverImage: 'https://images.unsplash.com/photo-1511295742362-92c96b124e52?w=800&auto=format&fit=crop&q=80',
+    category: 'Rest & Recovery',
+    status: 'active',
+    dailyTimeMinutes: 8,
+    keyMilestones: [
+      { day: 1, title: 'Unwind Onset', reward: 'Evening Pause' },
+      { day: 7, title: 'Deep Rest', reward: 'Sleep Restorer' },
+      { day: 14, title: '14-Day Reset', reward: 'Sleep Champion' }
+    ]
+  }
+];
+
 /**
  * Fetch Aggregated Challenge Dashboard with instantaneous cache + stale-while-revalidate
  */
@@ -265,8 +320,12 @@ export async function fetchChallengeHubDashboard(
     const json = await res.json().catch(() => null);
 
     if (json?.data) {
-      dashboardCache.set(cacheKey, { timestamp: Date.now(), data: json.data });
-      return json.data;
+      const data = json.data;
+      if (data.state === 'no_active_challenge' && (!data.availableChallenges || data.availableChallenges.length === 0)) {
+        data.availableChallenges = FALLBACK_CHALLENGES;
+      }
+      dashboardCache.set(cacheKey, { timestamp: Date.now(), data });
+      return data;
     }
 
     // If local storage has enrollment, return optimistic active state rather than blank catalogue
@@ -279,10 +338,12 @@ export async function fetchChallengeHubDashboard(
       }
     }
 
-    return {
+    const fallback: ChallengeDashboardPayload = {
       state: 'no_active_challenge',
-      availableChallenges: []
+      availableChallenges: FALLBACK_CHALLENGES
     };
+    dashboardCache.set(cacheKey, { timestamp: Date.now(), data: fallback });
+    return fallback;
   } catch (err) {
     console.warn('[ChallengeService] Quick fetch fallback:', err);
     // Offline / timeout fallback from localStorage
@@ -294,7 +355,7 @@ export async function fetchChallengeHubDashboard(
     }
     return {
       state: 'no_active_challenge',
-      availableChallenges: []
+      availableChallenges: FALLBACK_CHALLENGES
     };
   }
 }
@@ -314,9 +375,12 @@ export async function getAvailableChallenges(): Promise<Challenge[]> {
       json = await fallbackRes.json().catch(() => null);
     }
 
-    return json?.data || [];
+    if (json?.data && Array.isArray(json.data) && json.data.length > 0) {
+      return json.data;
+    }
+    return FALLBACK_CHALLENGES;
   } catch (err) {
-    return [];
+    return FALLBACK_CHALLENGES;
   }
 }
 
@@ -335,9 +399,15 @@ export async function getChallengeDetails(slugOrId: string): Promise<Challenge |
       json = await fallbackRes.json().catch(() => null);
     }
 
-    return json?.data || null;
+    if (json?.data) {
+      return json.data;
+    }
+
+    const found = FALLBACK_CHALLENGES.find((c) => c.id === slugOrId || c.slug === slugOrId);
+    return found || null;
   } catch (err) {
-    return null;
+    const found = FALLBACK_CHALLENGES.find((c) => c.id === slugOrId || c.slug === slugOrId);
+    return found || null;
   }
 }
 

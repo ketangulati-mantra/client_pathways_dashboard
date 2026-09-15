@@ -3,11 +3,20 @@ import {
   Users, UserPlus, ShieldCheck, Shield, Search, Filter, RefreshCw,
   Edit2, Key, Power, Trash2, AlertCircle, X, Loader2, ArrowLeft, Eye, EyeOff, Check
 } from 'lucide-react';
-import { MANTRA_CONFIG } from '../../mantra';
 
-const API_BASE = MANTRA_CONFIG.apiBaseUrl !== undefined && MANTRA_CONFIG.apiBaseUrl !== null 
-  ? MANTRA_CONFIG.apiBaseUrl 
-  : (import.meta.env.PROD ? '' : 'http://localhost:5001');
+function getApiBaseUrl() {
+  if (typeof window !== 'undefined') {
+    const isLocalhost =
+      window.location.hostname === 'localhost' ||
+      window.location.hostname === '127.0.0.1';
+    if (isLocalhost && window.location.port === '5173') {
+      return 'http://localhost:5001';
+    }
+  }
+  return '';
+}
+
+const API_BASE = getApiBaseUrl();
 
 const AVAILABLE_PAGES = [
   { id: 'user_pathways', label: 'User Pathways' }
@@ -52,72 +61,71 @@ export default function UserAdminManagement({ currentUser }) {
       const data = await res.json().catch(() => ({}));
       
       let fetchedList = [];
-      // Always ensure at least the primary superadmin is populated if fetchedList is empty
-      if (fetchedList.length === 0) {
-        fetchedList = [
-          {
-            id: 'usr_super_ketan',
-            user_id: 'usr_super_ketan',
-            name: currentUser?.name || 'Ketan Gulati',
-            email: currentEmail,
-            role: 'SuperAdmin',
-            is_active: true,
-            allowed_pages: ['user_pathways', 'admin_management'],
-            last_login_at: new Date().toISOString(),
-            created_at: new Date().toISOString()
-          },
-          {
-            id: 'usr_admin_team',
-            user_id: 'usr_admin_team',
-            name: 'Operations Team',
-            email: 'admin@mantra.care',
-            role: 'Admin',
-            is_active: true,
-            allowed_pages: ['user_pathways'],
-            last_login_at: new Date().toISOString(),
-            created_at: new Date().toISOString()
-          }
-        ];
-      } else {
-        // Ensure currentUser is included if missing
-        const currentUserEmailKey = currentEmail.toLowerCase();
-        const hasCurrent = fetchedList.some(a => (a.email || '').toLowerCase() === currentUserEmailKey);
-
-        if (!hasCurrent) {
-          fetchedList.unshift({
-            id: 'usr_super_ketan',
-            user_id: 'usr_super_ketan',
-            name: currentUser?.name || 'Ketan Gulati',
-            email: currentEmail,
-            role: 'SuperAdmin',
-            is_active: true,
-            allowed_pages: ['user_pathways', 'admin_management'],
-            last_login_at: new Date().toISOString(),
-            created_at: new Date().toISOString()
-          });
-        }
+      if (res.ok && data.success && Array.isArray(data.admins)) {
+        fetchedList = data.admins;
+      } else if (res.ok && Array.isArray(data.users)) {
+        fetchedList = data.users;
+      } else if (Array.isArray(data)) {
+        fetchedList = data;
       }
 
-      // Normalize roles to SuperAdmin, Admin, User
-      const normalizedList = fetchedList.map(a => {
-        const rawRole = (a.role || 'user').trim();
-        let role = 'User';
-        if (rawRole === 'SuperAdmin' || rawRole === 'super_admin' || rawRole.toLowerCase().includes('super')) {
-          role = 'SuperAdmin';
-        } else if (rawRole === 'admin' || rawRole === 'Admin') {
-          role = 'Admin';
-        }
-        return {
-          ...a,
-          role,
-          is_active: a.is_active !== false
-        };
-      });
+      // If database returned records, use them directly
+      if (fetchedList.length > 0) {
+        // Normalize roles and active statuses
+        const normalizedList = fetchedList.map(a => {
+          const rawRole = (a.role || 'user').trim();
+          let role = 'User';
+          if (rawRole === 'SuperAdmin' || rawRole === 'super_admin' || rawRole.toLowerCase().includes('super')) {
+            role = 'SuperAdmin';
+          } else if (rawRole === 'admin' || rawRole === 'Admin') {
+            role = 'Admin';
+          }
+          return {
+            id: a.user_id || a.id || `usr_${Math.random()}`,
+            user_id: a.user_id || a.id,
+            name: a.name || a.email?.split('@')[0] || 'Admin User',
+            email: a.email || '',
+            role,
+            is_active: a.is_active !== false,
+            allowed_pages: Array.isArray(a.allowed_pages) ? a.allowed_pages : ['user_pathways'],
+            last_login_at: a.last_login_at,
+            created_at: a.created_at || new Date().toISOString()
+          };
+        });
 
-      setAdmins(normalizedList);
+        setAdmins(normalizedList);
+        return;
+      }
+
+      // Fallback only if database has 0 rows
+      const fallbackList = [
+        {
+          id: 'usr_super_ketan',
+          user_id: 'usr_super_ketan',
+          name: currentUser?.name || 'Ketan Gulati',
+          email: currentEmail,
+          role: 'SuperAdmin',
+          is_active: true,
+          allowed_pages: ['user_pathways', 'admin_management'],
+          last_login_at: new Date().toISOString(),
+          created_at: new Date().toISOString()
+        },
+        {
+          id: 'usr_1788079136790',
+          user_id: 'usr_1788079136790',
+          name: 'Himanshu Jain',
+          email: 'himanshujain1987@gmail.com',
+          role: 'Admin',
+          is_active: true,
+          allowed_pages: ['user_pathways'],
+          last_login_at: new Date().toISOString(),
+          created_at: new Date().toISOString()
+        }
+      ];
+
+      setAdmins(fallbackList);
     } catch (e) {
       console.error('[UserAdminManagement] Error fetching admin list:', e);
-      // Fallback on network/fetch error
       setAdmins([
         {
           id: 'usr_super_ketan',
@@ -131,10 +139,10 @@ export default function UserAdminManagement({ currentUser }) {
           created_at: new Date().toISOString()
         },
         {
-          id: 'usr_admin_team',
-          user_id: 'usr_admin_team',
-          name: 'Operations Team',
-          email: 'admin@mantra.care',
+          id: 'usr_1788079136790',
+          user_id: 'usr_1788079136790',
+          name: 'Himanshu Jain',
+          email: 'himanshujain1987@gmail.com',
           role: 'Admin',
           is_active: true,
           allowed_pages: ['user_pathways'],

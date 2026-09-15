@@ -13,7 +13,7 @@ import CompletionScreen from '../components/dailyCheckIn/CompletionScreen';
 import MilestoneCelebrationModal from '../components/dailyCheckIn/MilestoneCelebrationModal';
 import ShareableMilestoneModal from '../components/dailyCheckIn/ShareableMilestoneModal';
 import { generatePersonalizedNextStep } from '../components/dailyCheckIn/recommendationEngine';
-import { logDailyCheckInToDB } from '../services/activityLogger';
+import { logDailyCheckInToDB, getUserActivityHistory } from '../services/activityLogger';
 import { invalidateCheckInState } from '../services/dailyCheckInService';
 import { getActiveUserId } from '../services/authService';
 
@@ -198,6 +198,14 @@ export default function DailyCheckInPage({ onBack: propOnBack } = {}) {
     }
     inFlightCheckInIdRef.current = session.checkInId;
 
+    const currentUserId = getActiveUserId();
+    let history = [];
+    try {
+      history = await getUserActivityHistory('daily-check-in', currentUserId);
+    } catch (e) {
+      console.warn('[DailyCheckIn] Could not fetch recent history for routing:', e);
+    }
+
     const updatedSession = {
       ...session,
       reflection: reflectionText,
@@ -205,20 +213,20 @@ export default function DailyCheckInPage({ onBack: propOnBack } = {}) {
     };
     setSession(updatedSession);
 
-    // Generate dynamic personalized recommendation
+    // Generate dynamic personalized recommendation and 3-route decision
     const res = generatePersonalizedNextStep({
       primaryEmotion: updatedSession.primaryEmotion,
       additionalEmotions: updatedSession.additionalEmotions,
       intensity: updatedSession.intensity,
       contexts: updatedSession.contexts,
       reflection: reflectionText,
-      zone: updatedSession.selectedZone
+      zone: updatedSession.selectedZone,
+      recentHistory: history
     });
     setPersonalizedResponse(res);
     setCurrentStepIndex(5);
 
     try {
-      const currentUserId = getActiveUserId();
       const logRes = await logDailyCheckInToDB({
         userId: currentUserId,
         emotionZone: updatedSession.selectedZone?.id,
@@ -235,7 +243,8 @@ export default function DailyCheckInPage({ onBack: propOnBack } = {}) {
           zoneTitle: updatedSession.selectedZone?.name,
           openingHeadline: res.openingHeadline,
           supportingMessage: res.supportingMessage,
-          structured_context: updatedSession.structuredContext || null
+          structured_context: updatedSession.structuredContext || null,
+          routeDecision: res.routeDecision || null
         }
       });
 
@@ -265,6 +274,13 @@ export default function DailyCheckInPage({ onBack: propOnBack } = {}) {
   // Step 5 -> Step 6: Done for now
   const handleDoneForNow = useCallback(() => {
     setCurrentStepIndex(6);
+  }, []);
+
+  // Step 5: Navigate to Personalized Focus Assessment (Route C)
+  const handleNavigateToAssessment = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      window.location.hash = '#/task/personalized-focus-assessment';
+    }
   }, []);
 
   // Step 5: Start recommended activity
@@ -469,6 +485,7 @@ export default function DailyCheckInPage({ onBack: propOnBack } = {}) {
                 response={personalizedResponse}
                 onStartRecommendation={handleStartRecommendation}
                 onDoneForNow={handleDoneForNow}
+                onNavigateToAssessment={handleNavigateToAssessment}
               />
             )}
 

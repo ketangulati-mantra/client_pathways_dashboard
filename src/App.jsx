@@ -5,6 +5,7 @@ import { resolveLessonView } from './views/viewResolver';
 import DeveloperLessonsPage from './views/DeveloperLessonsPage';
 import IntroductionLessonPage from './views/IntroductionLessonPage';
 import AdminLoginPage from './views/AdminLoginPage';
+import DailyCheckInPage from './views/DailyCheckInPage';
 import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
         return cleanTask.split('?')[0];
       }
 
-      // Priority 1: Check window.location.hash for SPA client routes e.g. #/admin/dashboard, #/admin, #/task/introduction
+      // Priority 1: Check window.location.hash for SPA client routes e.g. #/admin/dashboard, #/admin, #/task/daily-check-in
       if (window.location.hash) {
         const rawHash = window.location.hash.replace(/^#\/?/, '');
         if (rawHash) {
@@ -96,117 +97,88 @@ function App() {
       }
     }
 
-    if (p && !p.startsWith('/task/') && !p.startsWith('/admin') && p !== '/' && p !== '/provider_activity') {
-      return `/task${p.startsWith('/') ? p : '/' + p}`;
+    // Default root path opens Daily Check-In for standard users
+    if (!p || p === '/' || p === '') {
+      return '/task/daily-check-in';
     }
 
-    return p || '/';
+    return p;
   };
 
   const [currentPath, setCurrentPath] = useState(getPath());
+  const [currentService, setCurrentService] = useState('therapy');
+  const [activities, setActivities] = useState([]);
 
-  // Current service context extracted once at startup via URL parameter (e.g. ?service=therapy)
-  const currentService = getCurrentService();
-
-  // Clean up legacy 'source=' query parameter to standard 'service=' on startup
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.location.search.includes('source=')) {
-      const params = new URLSearchParams(window.location.search);
-      const sourceVal = params.get('source');
-      if (sourceVal && !params.has('service')) {
-        params.set('service', sourceVal);
-      }
-      params.delete('source');
-      const cleanSearch = params.toString();
-      const newUrl = window.location.pathname + (cleanSearch ? `?${cleanSearch}` : '') + window.location.hash;
-      window.history.replaceState(null, '', newUrl);
-    }
-  }, []);
+    // 1. Service Context Detection
+    const service = getCurrentService();
+    setCurrentService(service);
 
-  // Custom router state listener
-  useEffect(() => {
-    const handleLocationChange = () => {
+    // 2. Load Activities Catalog
+    const acts = getAvailableActivities();
+    setActivities(acts);
+
+    // 3. Listen to browser history changes
+    const handlePopState = () => {
       setCurrentPath(getPath());
     };
-    window.addEventListener('popstate', handleLocationChange);
-    window.addEventListener('hashchange', handleLocationChange);
+
+    window.addEventListener('popstate', handlePopState);
+    window.addEventListener('hashchange', handlePopState);
+
     return () => {
-      window.removeEventListener('popstate', handleLocationChange);
-      window.removeEventListener('hashchange', handleLocationChange);
+      window.removeEventListener('popstate', handlePopState);
+      window.removeEventListener('hashchange', handlePopState);
     };
   }, []);
 
-  const navigate = (path) => {
-    const p = window.location.pathname;
-    const subpathMatch = p.match(/^(\/[^\/]+)/);
-    const currentSubpath = (subpathMatch && subpathMatch[1] && !subpathMatch[1].startsWith('/task')) ? subpathMatch[1] : '';
-    const activeBase = envBase || currentSubpath;
-    const fullPath = path === '/' ? (activeBase || '/') : ((activeBase + path).replace('//', '/'));
-    const targetUrl = preserveQueryParams(fullPath);
-    
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('mantra_last_path', path);
-      if (path && path !== '/' && !path.startsWith('/admin')) {
-        window.location.hash = `#${path}`;
-      } else {
-        window.history.replaceState(null, '', targetUrl);
-      }
-    } else {
-      window.history.replaceState(null, '', targetUrl);
+  const navigate = (newPath) => {
+    let finalPath = newPath;
+    if (newPath === '/' || !newPath) {
+      finalPath = '/task/daily-check-in';
     }
-    
-    setCurrentPath(path);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.history.pushState({}, '', finalPath);
+    setCurrentPath(finalPath);
+    window.scrollTo(0, 0);
   };
 
-  // Get activities filtered for the current service context
-  const availableActivities = getAvailableActivities(currentService);
+  const handleBack = () => {
+    handleExit();
+  };
 
-  // Render view based on route path and service context
   const renderView = () => {
-    const onBackCallback = () => { if (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) { navigate('/admin/pathways'); return; } handleExit(); };
-
-    // 1. Home Screen / Admin Dashboard Base Routes
+    // Explicit Admin/Developer routes
     if (currentPath === '/admin/login') {
-      return <AdminLoginPage />;
+      return <AdminLoginPage onNavigate={navigate} />;
     }
-
     if (
-      currentPath === '/' || 
-      currentPath === '/provider_activity' || 
-      currentPath === '/admin' || 
-      currentPath === '/admin/dashboard' || 
-      currentPath === '/admin/users' || 
-      currentPath === '/admin/pathways' || 
-      currentPath === '/dev'
+      currentPath.startsWith('/admin') ||
+      currentPath === '/dev' ||
+      currentPath === '/developer'
     ) {
       return <DeveloperLessonsPage onNavigate={navigate} />;
     }
 
-    // 2. Try to resolve specific activity/lesson view
-    const resolvedView = resolveLessonView({
+    // Resolve lesson or task view
+    const view = resolveLessonView({
       currentPath,
       currentService,
-      onBack: onBackCallback,
-      activities: availableActivities
+      onBack: handleBack,
+      onNavigate: navigate,
+      activities
     });
 
-    if (resolvedView) {
-      return resolvedView;
+    if (view) {
+      return view;
     }
 
-    // 3. OCD Service Context Fallback -> OcdCertificatePage
-    if (currentService === 'ocd' || currentService === 'ocdmantra' || currentService === 'ocd_mantra') {
-      return <OcdCertificatePage onBack={onBackCallback} />;
-    }
-
-    // 4. Default Fallback -> DeveloperLessonsPage (Home Screen / Admin Dashboard)
-    return <DeveloperLessonsPage onNavigate={navigate} />;
+    // Fallback if path didn't resolve to a specific activity: render Daily Check-In
+    return <DailyCheckInPage onBack={handleBack} service={currentService} />;
   };
 
   return (
     <ErrorBoundary>
-      <div className="App" style={{ minHeight: '100vh', background: 'var(--bg-app)' }}>
+      <div className="app-container">
         {renderView()}
       </div>
     </ErrorBoundary>

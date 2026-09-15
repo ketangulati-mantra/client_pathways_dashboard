@@ -1,0 +1,418 @@
+/* ==========================================================================
+   MOBILE APP LESSON SPECIFIC STYLES (COMPACTED & FACTUALLY ACCURATE)
+   ========================================================================== */
+
+.mobile-app-lesson-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-app);
+}
+
+.lesson-wrapper {
+  flex: 1;
+  padding: 20px 24px 60px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 1. Hero Section */
+.app-hero-section {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 24px;
+  align-items: center;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 20px 28px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .app-hero-section {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .lesson-wrapper {
+    padding: 16px 12px 40px !important;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 83, 135, 0.12);
+}
+
+.hero-title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-pretitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--color-primary-light);
+}
+
+.hero-main-title {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+.hero-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.hero-badges-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-app);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.hero-badge-item.points {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: var(--color-accent-orange);
+}
+
+/* Abstract Phone Graphic */
+.abstract-phone-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.abstract-phone-container {
+  width: 120px;
+  height: 230px;
+  border: 3.5px solid var(--text-muted);
+  border-radius: 20px;
+  position: relative;
+  background: linear-gradient(185deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Notch line */
+.abstract-phone-container::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  width: 40px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: var(--text-muted);
+}
+
+.phone-brand-logo {
+  width: 65px;
+  opacity: 0.85;
+}
+
+.glow-backdrop {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 159, 227, 0.1) 0%, rgba(0, 83, 135, 0) 70%);
+  z-index: 0;
+}
+
+/* 2. Benefit Cards */
+.section-header {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-primary-light);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.benefit-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(var(--color-primary-rgb), 0.2);
+}
+
+.benefit-icon-wrapper {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background-color: var(--secondary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.benefit-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* 3. Product Overview Steps (Informational timeline cards) */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step-card-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: left;
+}
+
+.step-left-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.step-number-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--secondary-light);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-title-text h4 {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1px;
+}
+
+.step-title-text p {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+
+/* 4. Review Callout */
+.review-callout-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: left;
+}
+
+.review-left-col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-star-icon {
+  color: #f59e0b;
+  flex-shrink: 0;
+}
+
+.review-text-block h4 {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.review-text-block p {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin: 2px 0 0 0;
+}
+
+/* 5. Custom Download Section Card at the end */
+.accurate-download-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.accurate-download-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.accurate-download-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  max-width: 480px;
+  margin: 0;
+}
+
+.accurate-store-badges-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.official-badge-link {
+  display: inline-block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border-radius: 6px;
+}
+
+.official-badge-link:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.official-badge-link img {
+  height: 38px;
+  display: block;
+}
+
+/* SVG logo designs */
+.svg-badge-btn {
+  background-color: #000;
+  color: #fff;
+  border-radius: 6px;
+  border: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  text-decoration: none;
+  height: 40px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.svg-badge-btn:hover {
+  transform: scale(1.02);
+  background-color: #111;
+}
+
+.svg-badge-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.1;
+}
+
+.svg-badge-text span:first-child {
+  font-size: 0.55rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.svg-badge-text span:last-child {
+  font-size: 0.78rem;
+  font-weight: 700;
+}

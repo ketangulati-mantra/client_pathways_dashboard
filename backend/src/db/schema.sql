@@ -107,3 +107,85 @@ CREATE TABLE IF NOT EXISTS user_streaks (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
+
+-- 8. Challenges Catalogue
+CREATE TABLE IF NOT EXISTS challenges (
+    id VARCHAR(100) PRIMARY KEY,
+    slug VARCHAR(100) UNIQUE NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    tagline VARCHAR(255),
+    description TEXT,
+    duration_days INT NOT NULL DEFAULT 21,
+    cover_image VARCHAR(500),
+    category VARCHAR(100) DEFAULT 'Mental Wellness',
+    status VARCHAR(50) DEFAULT 'active',
+    daily_time_minutes INT DEFAULT 10,
+    key_milestones JSONB DEFAULT '[]'::jsonb,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 9. Challenge Enrollments (Canonical challenge participation tracking)
+CREATE TABLE IF NOT EXISTS challenge_enrollments (
+    id BIGSERIAL PRIMARY KEY,
+    user_id VARCHAR(255) NOT NULL,
+    challenge_id VARCHAR(100) NOT NULL DEFAULT 'mantra_21',
+    status VARCHAR(50) NOT NULL DEFAULT 'active',
+    enrolled_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    current_day INT NOT NULL DEFAULT 1,
+    completed_days INT NOT NULL DEFAULT 0,
+    current_streak INT NOT NULL DEFAULT 0,
+    longest_streak INT NOT NULL DEFAULT 0,
+    last_activity_at TIMESTAMP WITH TIME ZONE,
+    completed_at TIMESTAMP WITH TIME ZONE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT unique_user_challenge UNIQUE (user_id, challenge_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_challenge_enrollments_user_id ON challenge_enrollments(user_id);
+CREATE INDEX IF NOT EXISTS idx_challenge_enrollments_challenge_id ON challenge_enrollments(challenge_id);
+CREATE INDEX IF NOT EXISTS idx_challenge_enrollments_status ON challenge_enrollments(status);
+
+-- 10. Challenge Activity Completions (Verifiable per-day task completion)
+CREATE TABLE IF NOT EXISTS challenge_activity_completions (
+    id BIGSERIAL PRIMARY KEY,
+    enrollment_id BIGINT NOT NULL,
+    user_id VARCHAR(255) NOT NULL,
+    challenge_id VARCHAR(100) NOT NULL DEFAULT 'mantra_21',
+    challenge_day INT NOT NULL,
+    activity_id VARCHAR(255) NOT NULL,
+    completed_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    metadata JSONB DEFAULT '{}'::jsonb,
+    CONSTRAINT unique_user_challenge_day UNIQUE (user_id, challenge_id, challenge_day)
+);
+
+CREATE INDEX IF NOT EXISTS idx_challenge_completions_user ON challenge_activity_completions(user_id, challenge_id);
+
+-- 11. Challenge Leaderboard Snapshots (Computed daily, zero runtime overhead)
+CREATE TABLE IF NOT EXISTS challenge_leaderboard_snapshots (
+    id BIGSERIAL PRIMARY KEY,
+    challenge_id VARCHAR(100) NOT NULL DEFAULT 'mantra_21',
+    snapshot_date DATE NOT NULL DEFAULT CURRENT_DATE,
+    total_participants INT DEFAULT 0,
+    generated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT unique_challenge_snapshot_date UNIQUE (challenge_id, snapshot_date)
+);
+
+-- 12. Challenge Leaderboard Entries
+CREATE TABLE IF NOT EXISTS challenge_leaderboard_entries (
+    id BIGSERIAL PRIMARY KEY,
+    snapshot_id BIGINT NOT NULL,
+    user_id VARCHAR(255) NOT NULL,
+    user_display_name VARCHAR(255),
+    rank INT NOT NULL,
+    score INT NOT NULL DEFAULT 0,
+    streak INT NOT NULL DEFAULT 0,
+    completed_days INT NOT NULL DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_leaderboard_entries_snapshot_rank ON challenge_leaderboard_entries(snapshot_id, rank);
+CREATE INDEX IF NOT EXISTS idx_leaderboard_entries_user ON challenge_leaderboard_entries(user_id);
+
+

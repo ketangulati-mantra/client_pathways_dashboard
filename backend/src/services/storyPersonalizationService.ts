@@ -18,6 +18,11 @@ export interface DailyEmotionalArc {
   turningPoint: string;
   resultingState: string;
   keywords: string[];
+  userPhrases?: string[];
+  userMentionedPeople?: string[];
+  userMentionedActivities?: string[];
+  userMentionedStruggles?: string[];
+  userMentionedRelief?: string[];
 }
 
 export interface PersonalTruths {
@@ -92,78 +97,122 @@ const MOTIF_FAMILIES = {
 export const storyPersonalizationService = {
   /**
    * Extracts a single coherent daily arc from all available check-ins and journal entries.
+   * Pulls the user's ACTUAL words, situations, people, activities, and concerns
+   * to build the arc. Never invents facts the user didn't provide.
    */
   extractDailyArc(context: StoryContext): DailyEmotionalArc {
-    const text = (context.recentContext.reflectionsSummary || '').toLowerCase();
+    const rawText = (context.recentContext.reflectionsSummary || '');
+    const text = rawText.toLowerCase();
     const emotions = (context.recentContext.emotions || []).map((e) => e.emotion.toLowerCase());
+    const situations = context.recentContext.situations || [];
 
+    // Extract user's actual keywords present in their reflections
     const keywords: string[] = [];
-    ['study', 'exam', 'deadline', 'work', 'meeting', 'friend', 'talk', 'family', 'alone', 'quiet', 'tea', 'walk', 'rain', 'sleep', 'tired'].forEach((k) => {
-      if (text.includes(k)) keywords.push(k);
+    const KEYWORD_POOL = [
+      'study', 'exam', 'deadline', 'work', 'meeting', 'friend', 'friends',
+      'talk', 'family', 'alone', 'quiet', 'tea', 'walk', 'rain', 'sleep',
+      'tired', 'overwhelmed', 'scared', 'control', 'break', 'rest',
+      'partner', 'mom', 'dad', 'sister', 'brother', 'boss', 'class',
+      'project', 'presentation', 'interview', 'money', 'home', 'morning',
+      'evening', 'night', 'coffee', 'phone', 'gym', 'run', 'cook',
+      'read', 'music', 'breathe', 'cry', 'laugh', 'angry', 'frustrated',
+      'happy', 'grateful', 'anxious', 'stress', 'pressure', 'balance',
+      'boundaries', 'decision', 'change', 'letting go', 'moving on',
+      'stuck', 'progress', 'proud', 'lost', 'confused', 'hopeful'
+    ];
+    KEYWORD_POOL.forEach((k) => { if (text.includes(k)) keywords.push(k); });
+
+    // Extract short user phrases (2-4 word fragments from their actual text)
+    const userPhrases: string[] = [];
+    const sentences = rawText.split(/[.!?]+/).map(s => s.trim()).filter(s => s.length > 10 && s.length < 120);
+    sentences.forEach((s) => {
+      // Take the most emotionally loaded fragment from each sentence
+      const cleaned = s.replace(/^(I |i |My |my |Today |today |This |this )/i, '').trim();
+      if (cleaned.length > 8 && cleaned.length < 80) {
+        userPhrases.push(cleaned);
+      }
     });
 
-    // Arc 1: Study pressure + friend relief
-    if ((text.includes('study') || text.includes('exam')) && (text.includes('friend') || text.includes('walk') || text.includes('lighter'))) {
-      return {
-        startingTension: 'You had spent hours staring at your notes, feeling the clock ticking against you.',
-        realWorldContext: 'studying under heavy pressure with a growing pile of unfinished material',
-        turningPoint: 'Stepping away and being with someone who cared made the heavy weight disappear.',
-        resultingState: 'relieved and reminded that you are more than your workload',
-        keywords
-      };
+    // Build SPECIFIC tension from user's actual signals
+    const userMentionedPeople: string[] = [];
+    ['friend', 'friends', 'partner', 'mom', 'dad', 'family', 'sister', 'brother', 'boss', 'colleague'].forEach((p) => {
+      if (text.includes(p)) userMentionedPeople.push(p);
+    });
+
+    const userMentionedActivities: string[] = [];
+    ['studying', 'study', 'working', 'work', 'meeting', 'class', 'cooking', 'walking', 'running', 'reading', 'gym', 'presentation', 'interview'].forEach((a) => {
+      if (text.includes(a)) userMentionedActivities.push(a);
+    });
+
+    const userMentionedStruggles: string[] = [];
+    ['overwhelmed', 'scared', 'anxious', 'stressed', 'tired', 'exhausted', 'pressure', 'control', 'stuck', 'lost', 'confused', 'frustrated', 'angry', 'lonely', 'behind'].forEach((s) => {
+      if (text.includes(s)) userMentionedStruggles.push(s);
+    });
+
+    const userMentionedRelief: string[] = [];
+    ['lighter', 'better', 'relieved', 'calm', 'peaceful', 'grateful', 'happy', 'hopeful', 'proud', 'break', 'rest', 'quiet', 'tea', 'walk', 'breathe'].forEach((r) => {
+      if (text.includes(r)) userMentionedRelief.push(r);
+    });
+
+    // Build the arc from REAL signals, not canned prose
+    // Starting tension: What the user actually said was hard
+    let startingTension = '';
+    if (userMentionedStruggles.length > 0 && userMentionedActivities.length > 0) {
+      startingTension = `The ${userMentionedActivities[0]} had been weighing on you. You felt ${userMentionedStruggles.join(' and ')}, and the day hadn't given you much room to catch your breath.`;
+    } else if (userMentionedStruggles.length > 0) {
+      startingTension = `You had been feeling ${userMentionedStruggles.join(' and ')} lately, and today it sat heavier than usual.`;
+    } else if (userMentionedActivities.length > 0) {
+      startingTension = `The ${userMentionedActivities[0]} took up most of your day, leaving you with little space for anything else.`;
+    } else if (userPhrases.length > 0) {
+      startingTension = `Something had been sitting with you today. ${userPhrases[0].charAt(0).toUpperCase() + userPhrases[0].slice(1)}.`;
+    } else {
+      startingTension = 'The day had asked a lot of you, even if it was hard to name exactly why.';
     }
 
-    // Arc 2: Work overload + evening solitude
-    if ((text.includes('work') || text.includes('meeting') || text.includes('office') || text.includes('laptop')) && (text.includes('alone') || text.includes('quiet') || text.includes('home') || text.includes('sleep'))) {
-      return {
-        startingTension: 'You had spent the day answering demands, rushing from one task to the next.',
-        realWorldContext: 'navigating back-to-back work demands and mental overload',
-        turningPoint: 'Finally shutting the door and sitting down in silence gave you your thoughts back.',
-        resultingState: 'calm and grateful to finally have space where nobody asks for anything',
-        keywords
-      };
+    // Real world context: What specifically happened
+    let realWorldContext = '';
+    const contextParts: string[] = [];
+    if (userMentionedActivities.length > 0) contextParts.push(userMentionedActivities.join(' and '));
+    if (userMentionedStruggles.length > 0) contextParts.push(`feeling ${userMentionedStruggles[0]}`);
+    if (userMentionedPeople.length > 0) contextParts.push(`time with ${userMentionedPeople.join(' and ')}`);
+    if (situations.length > 0) contextParts.push(situations.join(', '));
+    realWorldContext = contextParts.length > 0 ? contextParts.join(', ') : 'getting through a full day';
+
+    // Turning point: What actually helped (from user data)
+    let turningPoint = '';
+    if (userMentionedPeople.length > 0 && userMentionedRelief.length > 0) {
+      turningPoint = `Being with ${userMentionedPeople[0]} made things feel ${userMentionedRelief[0]}.`;
+    } else if (userMentionedRelief.length > 0) {
+      turningPoint = `Taking a moment to ${userMentionedRelief[0]} shifted something inside you.`;
+    } else if (userPhrases.length > 1) {
+      turningPoint = `${userPhrases[userPhrases.length - 1].charAt(0).toUpperCase() + userPhrases[userPhrases.length - 1].slice(1)}.`;
+    } else {
+      turningPoint = 'Stopping to notice how you actually felt was the first honest thing you did for yourself today.';
     }
 
-    // Arc 3: Communication tension + honest connection
-    if (text.includes('talk') || text.includes('bridge') || text.includes('unspoken') || text.includes('conversation')) {
-      return {
-        startingTension: 'There was a distance between you and someone close, with words left unsaid.',
-        realWorldContext: 'feeling the weight of difficult conversations and emotional distance',
-        turningPoint: 'Choosing to speak honestly and listen without defending yourself opened the way.',
-        resultingState: 'grounded in a clearer, more honest connection',
-        keywords
-      };
+    // Resulting state: How the user ended up (from emotions)
+    let resultingState = '';
+    const positiveEmotions = emotions.filter(e => ['calm', 'peaceful', 'relieved', 'content', 'happy', 'grateful', 'grounded', 'hopeful'].includes(e));
+    const heavyEmotions = emotions.filter(e => ['overwhelmed', 'anxious', 'stressed', 'frustrated', 'angry', 'exhausted', 'sad', 'lonely', 'tired'].includes(e));
+    if (positiveEmotions.length > 0) {
+      resultingState = positiveEmotions.join(' and ');
+    } else if (heavyEmotions.length > 0) {
+      resultingState = `still carrying some ${heavyEmotions[0]}, but aware of it now`;
+    } else {
+      resultingState = 'quiet and present';
     }
 
-    // Arc 4: Loneliness / Solitude + longing for connection
-    if (text.includes('lonely') || text.includes('alone') || text.includes('solitary') || text.includes('rain')) {
-      return {
-        startingTension: 'The room was quiet, and you felt the weight of being on your own today.',
-        realWorldContext: 'navigating a solitary evening while wishing for deeper understanding',
-        turningPoint: 'Looking out into the evening, you realized that being alone can also be a gentle rest.',
-        resultingState: 'peaceful with yourself while keeping your heart open',
-        keywords
-      };
-    }
-
-    // Arc 5: Gratitude and simple morning comforts
-    if (text.includes('tea') || text.includes('coffee') || text.includes('porch') || text.includes('sun') || emotions.includes('calm') || emotions.includes('grateful')) {
-      return {
-        startingTension: 'The world outside was ready to rush, but you chose not to get pulled in.',
-        realWorldContext: 'pausing to enjoy a quiet moment with a hot cup of tea',
-        turningPoint: 'Taking a slow breath in the morning sun made everything feel manageable.',
-        resultingState: 'grounded in simple, everyday comfort',
-        keywords
-      };
-    }
-
-    // Default general arc
     return {
-      startingTension: 'You carried the subtle weight of recent obligations as the day began.',
-      realWorldContext: 'taking steady steps through a busy week',
-      turningPoint: 'Pausing to check in with yourself created room to breathe.',
-      resultingState: 'centered and ready for what comes next',
-      keywords
+      startingTension,
+      realWorldContext,
+      turningPoint,
+      resultingState,
+      keywords,
+      userPhrases,
+      userMentionedPeople,
+      userMentionedActivities,
+      userMentionedStruggles,
+      userMentionedRelief
     };
   },
 

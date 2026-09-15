@@ -1,84 +1,64 @@
-﻿const fs = require('fs');
-const path = require('path');
+const fs = require('fs');
 
-const files = [
-  'TherapyInternProgramLessonPage.jsx',
-  'MarketYourselfLessonPage.jsx',
-  'ShareLinkedinLessonPage.jsx',
-  'ShowAchievementsLessonPage.jsx'
-];
+// 1. Update activities.ts
+let activities = fs.readFileSync('src/mantra/activities.ts', 'utf8');
+activities = activities.replace(/'\/task\//g, "'/");
+activities = activities.replace(/service:\s*'Therapist'/g, "service: 'Therapy'");
+fs.writeFileSync('src/mantra/activities.ts', activities);
 
-const dir = 'c:/Users/Mantra/Desktop/Provider Pathways/src/views';
+// 2. Update App.jsx
+let app = fs.readFileSync('src/App.jsx', 'utf8');
 
-files.forEach(f => {
-  const filepath = path.join(dir, f);
-  let content = fs.readFileSync(filepath, 'utf8');
-  
-  if (!content.includes('isValidEmail')) {
-    content = content.replace(
-      "import { completeLesson",
-      "import { isValidEmail, isValidIndianPhone } from '../mantra/validation';\nimport { completeLesson"
-    );
-  }
-  
-  if (!content.includes('useToast')) {
-    content = content.replace(
-      "import { Header, CompletionScreen, Button } from '../components';",
-      "import { Header, CompletionScreen, Button, useToast } from '../components';"
-    );
-  }
+// Replace import DeveloperLessonsPage with ClientDashboard
+app = app.replace(
+  /import DeveloperLessonsPage from '\.\/views\/DeveloperLessonsPage';/g,
+  "import ClientDashboard from './views/ClientDashboard';"
+);
 
-  const componentName = f.replace('.jsx', '');
-  const searchStr = `export default function ${componentName}({ onBack }) {`;
-  const insertStr = `\n  const { showToast } = useToast();
-  const emailRef = useRef(null);
-  const phoneRef = useRef(null);
+// Replace /dev fallback with ClientDashboard for root
+app = app.replace(
+  /if \(currentPath === '\/dev'\) \{[\s\S]*?<DeveloperLessonsPage[\s\S]*?\/>\s*\);\s*\}/,
+  `if (currentPath === '/') {\n      return (\n        <ClientDashboard\n          tasks={dashboardTasks}\n          onNavigate={navigate}\n        />\n      );\n    }`
+);
 
-  const validateEmail = () => {
-    if (!emailRef.current) return true;
-    if (!isValidEmail(emailRef.current.value)) {
-      showToast('Please enter a valid email address.', 'warning');
-      emailRef.current.focus();
-      return false;
-    }
-    return true;
-  };
+// Remove the Mantra Provider Academy Root / fallback completely
+app = app.replace(
+  /\/\/ Default Bare-bones Branded Fallback for Root \/ and other paths[\s\S]*?return \([\s\S]*?<div className="academy-layout">/,
+  `// Default Fallback\n    return (\n      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', background: 'var(--bg-app)' }}>\n        <p>Page not found</p>\n        <button onClick={() => navigate('/')} style={{ marginLeft: '10px', padding: '8px 16px', background: 'var(--color-primary)', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer' }}>Go Home</button>\n      </div>\n    );\n  };\n\n  return (\n    <div className="academy-layout">`
+);
 
-  const validatePhone = () => {
-    if (!phoneRef.current) return true;
-    if (!isValidIndianPhone(phoneRef.current.value)) {
-      showToast('Please enter a valid mobile number.', 'warning');
-      phoneRef.current.focus();
-      return false;
-    }
-    return true;
-  };
-`;
-  if (!content.includes('validateEmail')) {
-    content = content.replace(searchStr, searchStr + insertStr);
-  }
+// Change /task/ routes in App.jsx
+app = app.replace(/currentPath === '\/task\//g, "currentPath === '/");
+app = app.replace(/currentPath\.startsWith\('\/task\/'\)/g, "currentPath !== '/'"); // currentPath !== '/' because everything else not matched is checked here. Actually just let it be a fallback.
+// Better: the dynamic route loader:
+// if (currentPath.startsWith('/task/')) { ... }
+// We can change it to:
+// const activeLesson = activities.find(t => t.route === currentPath);
+// if (activeLesson) { return <LessonTemplate ... /> }
+app = app.replace(
+  /if \(currentPath\.startsWith\('\/task\/'\)\) \{[\s\S]*?const activeLesson = activities\.find\(t => t\.route === currentPath\);[\s\S]*?if \(activeLesson\) \{/,
+  "const activeLesson = activities.find(t => t.route === currentPath);\n\n      if (activeLesson) {"
+);
+// Now we need to remove the closing bracket of the removed if block. 
+// A safer way is to just do exactly this:
+app = app.replace(
+  /if \(currentPath\.startsWith\('\/task\/'\)\) \{\s*const activeLesson = activities\.find\(t => t\.route === currentPath\);\s*if \(activeLesson\) \{\s*return \(\s*<LessonTemplate\s*lesson=\{activeLesson\}\s*onBack=\{\(\) => navigate\('\/dev'\)\}\s*\/>\s*\);\s*\}\s*\}/,
+  `const activeLesson = activities.find(t => t.route === currentPath);
+    if (activeLesson) {
+      return (
+        <LessonTemplate
+          lesson={activeLesson}
+          onBack={() => navigate('/')}
+        />
+      );
+    }`
+);
 
-  content = content.replace(
-    /<input type="email" placeholder="Email Address"/g,
-    '<input type="email" ref={emailRef} onBlur={validateEmail} placeholder="Email Address"'
-  );
-  
-  content = content.replace(
-    /<input type="tel" placeholder="Phone Number"/g,
-    '<input type="tel" ref={phoneRef} onBlur={validatePhone} placeholder="Phone Number"'
-  );
+// Change all onBack navigate
+app = app.replace(/onBack=\{.*?navigate\('\/dev'\).*?\}/g, "onBack={() => navigate('/')}");
 
-  const submitStr = 'const handleSubmit = (e) => {\n    e.preventDefault();';
-  const submitInsert = `\n    if (!validateEmail()) return;\n    if (phoneRef.current && !validatePhone()) return;`;
-  
-  if (content.includes(submitStr) && !content.includes('!validateEmail()')) {
-    content = content.replace(submitStr, submitStr + submitInsert);
-  }
-  
-  if (!content.includes('useRef')) {
-    content = content.replace('useState, useEffect', 'useState, useEffect, useRef');
-  }
+// Change dashboard category mapping in App.jsx
+app = app.replace(/activity\.service \|\| 'Therapist'/g, "activity.service || 'Therapy'");
 
-  fs.writeFileSync(filepath, content, 'utf8');
-  console.log('Processed', f);
-});
+fs.writeFileSync('src/App.jsx', app);
+console.log("Updates completed");

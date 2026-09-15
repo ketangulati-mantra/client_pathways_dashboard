@@ -25,4 +25,11 @@ router.get('/completions/:userId', activityController.getUserCompletions);
 router.post('/progress', activityController.saveProgress);
 router.get('/progress/:userId/:lessonId', activityController.getProgress);
 
+// Personalization signals & Aggregated Focus
+router.post('/signals', activityController.recordPersonalizationSignal);
+router.get('/signals/:userId', activityController.getUserPersonalizationSignals);
+router.get('/signals/:userId/:pathwayId', activityController.getUserPersonalizationSignals);
+router.get('/focus/:userId', activityController.getAggregatedPersonalizationFocus);
+router.get('/focus/:userId/:pathwayId', activityController.getAggregatedPersonalizationFocus);
+
 export default router;

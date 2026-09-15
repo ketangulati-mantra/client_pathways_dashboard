@@ -37,6 +37,32 @@ export default function JournalPage({ onBack }) {
     refetch: refetchCheckInState
   } = useCheckInState(userId);
 
+  // Seeded prompt detection from Emotion Wheel or other discovery handoffs
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const promptParam = params.get('prompt') || params.get('seed');
+      if (promptParam) {
+        setEditorInitialPrompt(decodeURIComponent(promptParam));
+        setEditorEntryType('free_write');
+        setViewState('editor');
+      } else {
+        try {
+          const rawLastWheel = localStorage.getItem('mantra_last_emotion_wheel');
+          if (rawLastWheel) {
+            const wheelData = JSON.parse(rawLastWheel);
+            // If completed within the last 5 minutes, offer pre-seeded context
+            const isRecent = (Date.now() - new Date(wheelData.timestamp).getTime()) < 5 * 60 * 1000;
+            if (isRecent && wheelData.primaryEmotion && !editorInitialPrompt) {
+              const seedText = `You recently explored feeling ${wheelData.primaryEmotion} (Intensity ${wheelData.intensity}/5). What feels most important to acknowledge or write about right now?`;
+              setEditorInitialPrompt(seedText);
+            }
+          }
+        } catch (e) {}
+      }
+    }
+  }, []);
+
   // 1. Navigation Handlers
   const handleBeginWritingFromIntro = () => {
     setViewState('setup');

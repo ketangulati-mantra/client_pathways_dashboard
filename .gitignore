@@ -1,4 +1,8 @@
-.env*
+# Environment variables
+.env
+.env.*
+!.env.example
+backend/.env
 
 # Logs
 logs

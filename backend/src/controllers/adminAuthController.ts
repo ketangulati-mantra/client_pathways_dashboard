@@ -26,20 +26,19 @@ export async function login(req: AuthRequest, res: Response) {
     if (!email || !password || typeof email !== 'string' || typeof password !== 'string') {
       return res.status(400).json({
         success: false,
-        error: 'Please enter your email and password.'
+        error: 'Email and password are required.'
       });
     }
 
-    const normalizedEmail = email.trim().toLowerCase();
-    let admin = await findAdminByEmail(normalizedEmail);
+    let admin = await findAdminByEmail(email);
 
     // Auto-create user record if logging in for the first time
     if (!admin) {
       const hashed = await hashPassword(password);
-      const isSuper = normalizedEmail.includes('admin') || normalizedEmail.includes('ketan');
+      const isSuper = email.toLowerCase().includes('admin') || email.toLowerCase().includes('ketan');
       const created = await createAdminRecord({
-        name: normalizedEmail.split('@')[0],
-        email: normalizedEmail,
+        name: email.split('@')[0],
+        email: email,
         password_hash: hashed,
         role: isSuper ? 'super_admin' : 'user',
         allowed_pages: ['lessons', 'users']
@@ -52,34 +51,27 @@ export async function login(req: AuthRequest, res: Response) {
       if ((admin as any).is_active === false) {
         return res.status(403).json({
           success: false,
-          error: 'Your account has been deactivated. Please contact support.'
+          error: 'Your account has been disabled. Please contact system administrator.'
         });
       }
 
       if (admin.password_hash) {
-        const isMaster = (normalizedEmail === 'ketan.gulati@mantra.care' || normalizedEmail === 'test@test.com' || normalizedEmail === 'himanshujain1987@gmail.com') && (password === 'Admin@123' || password === 'mantra123');
-        const isValid = isMaster || (await verifyPassword(password, admin.password_hash));
+        const isValid = await verifyPassword(password, admin.password_hash);
         if (!isValid) {
           return res.status(401).json({
             success: false,
-            error: 'Incorrect email or password. Please try again.'
+            error: 'Invalid email or password.'
           });
         }
       }
     }
 
-    // Update last login timestamp in DB (non-blocking)
-    try {
-      if (admin.id || admin.user_id) {
-        await updateAdminLastLogin(admin.user_id || admin.id);
-      }
-    } catch (loginTimeErr) {
-      console.warn('[AdminAuth] Could not update last login time:', loginTimeErr);
-    }
+    // Update last login timestamp in DB
+    await updateAdminLastLogin(admin.id);
 
     const payload: AdminJwtPayload = {
       id: String(admin.user_id || admin.id) as any,
-      name: admin.name || normalizedEmail.split('@')[0],
+      name: admin.name || email.split('@')[0],
       email: admin.email,
       role: admin.role || 'user',
       is_active: (admin as any).is_active !== false,
@@ -96,10 +88,10 @@ export async function login(req: AuthRequest, res: Response) {
       admin: payload
     });
   } catch (err: any) {
-    console.error('? Server Login Error:', err);
+    console.error('❌ Login Error:', err);
     return res.status(500).json({
       success: false,
-      error: 'Unable to sign in at the moment. Please try again shortly.'
+      error: 'An unexpected error occurred during authentication.'
     });
   }
 }
@@ -113,7 +105,7 @@ export async function logout(req: AuthRequest, res: Response) {
     });
     return res.json({ success: true, message: 'Logged out successfully.' });
   } catch (err) {
-    return res.status(500).json({ success: false, error: 'Unable to log out at the moment.' });
+    return res.status(500).json({ success: false, error: 'Failed to logout.' });
   }
 }
 

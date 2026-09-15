@@ -189,7 +189,18 @@ export const activityController = {
 
   async saveProgress(req: Request, res: Response, next: NextFunction) {
     try {
-      const { upa_id, uid, userId, lesson_id, lessonId, currentStep, totalSteps, actionDone } = req.body;
+      const {
+        upa_id,
+        uid,
+        userId,
+        lesson_id,
+        lessonId,
+        currentStep,
+        totalSteps,
+        actionDone,
+        response_data,
+        responseData
+      } = req.body;
       const finalUserId = String(userId || upa_id || uid || req.cookies?.user_id || '234306');
       const finalLessonId = String(lessonId || lesson_id || '');
 
@@ -205,7 +216,8 @@ export const activityController = {
         lessonId: finalLessonId,
         currentStep: currentStep !== undefined ? Number(currentStep) : 0,
         totalSteps: totalSteps !== undefined ? Number(totalSteps) : 0,
-        actionDone: actionDone ? String(actionDone) : undefined
+        actionDone: actionDone ? String(actionDone) : undefined,
+        responseData: response_data || responseData || {}
       });
 
       return res.status(200).json({
@@ -229,6 +241,79 @@ export const activityController = {
 
       const progress = await activityService.getUserProgress(String(userId), String(lessonId));
       return res.status(200).json({ success: true, data: progress });
+    } catch (error) {
+      next(error);
+    }
+  },
+
+  async recordPersonalizationSignal(req: Request, res: Response, next: NextFunction) {
+    try {
+      const {
+        userId,
+        uid,
+        pathwayId,
+        signal,
+        strength,
+        sourceType,
+        sourceId,
+        metadata
+      } = req.body;
+      const finalUserId = String(userId || uid || req.cookies?.user_id || '234306');
+
+      if (!finalUserId || !pathwayId || !signal) {
+        return res.status(400).json({
+          success: false,
+          message: 'userId, pathwayId, and signal are required'
+        });
+      }
+
+      const savedSignal = await activityService.recordPersonalizationSignal({
+        userId: finalUserId,
+        pathwayId: String(pathwayId),
+        signal: String(signal),
+        strength: strength !== undefined ? Number(strength) : 1,
+        sourceType: sourceType ? String(sourceType) : 'activity',
+        sourceId: sourceId ? String(sourceId) : undefined,
+        metadata: metadata || {}
+      });
+
+      return res.status(200).json({
+        success: true,
+        message: 'Personalization signal recorded successfully',
+        data: savedSignal
+      });
+    } catch (error) {
+      next(error);
+    }
+  },
+
+  async getUserPersonalizationSignals(req: Request, res: Response, next: NextFunction) {
+    try {
+      const userId = req.params.userId || req.query.userId || req.cookies?.user_id || '234306';
+      const pathwayId = req.params.pathwayId || req.query.pathwayId;
+
+      const signals = await activityService.getUserPersonalizationSignals(
+        String(userId),
+        pathwayId ? String(pathwayId) : undefined
+      );
+
+      return res.status(200).json({ success: true, data: signals });
+    } catch (error) {
+      next(error);
+    }
+  },
+
+  async getAggregatedPersonalizationFocus(req: Request, res: Response, next: NextFunction) {
+    try {
+      const userId = req.params.userId || req.query.userId || req.cookies?.user_id || '234306';
+      const pathwayId = req.params.pathwayId || req.query.pathwayId || 'depression';
+
+      const focusResult = await activityService.getAggregatedPersonalizationFocus(
+        String(userId),
+        String(pathwayId)
+      );
+
+      return res.status(200).json({ success: true, data: focusResult });
     } catch (error) {
       next(error);
     }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Compass } from 'lucide-react';
 import { SPECIFIC_EMOTIONS } from './taxonomy';
 
 // Sizing tokens for the 3-tier constellation hierarchy
@@ -376,6 +376,34 @@ export default function SpecificEmotionScreen({
             )}
           </div>
         )}
+
+        {/* Gentle Handoff: Explore with Emotion Wheel if user is uncertain */}
+        <div style={{ marginTop: '20px', marginBottom: '80px', textAlign: 'center' }}>
+          <button
+            type="button"
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                window.location.hash = '#/task/emotion-wheel';
+              }
+            }}
+            style={{
+              background: 'rgba(255, 255, 255, 0.04)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '20px',
+              padding: '8px 16px',
+              color: 'rgba(255, 255, 255, 0.75)',
+              fontSize: '0.8rem',
+              fontWeight: 500,
+              cursor: 'pointer',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px'
+            }}
+          >
+            <Compass size={14} color="#38bdf8" />
+            <span>Not seeing your feeling? Explore the Emotion Wheel</span>
+          </button>
+        </div>
       </div>
 
       {/* Responsive Styles */}

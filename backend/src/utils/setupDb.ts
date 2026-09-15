@@ -121,7 +121,7 @@ export async function setupDb() {
       );
     `;
 
-    // Table 6: user_progress
+    // Table 6: user_progress (Persistent step resume & in-progress activity state)
     await sql`
       CREATE TABLE IF NOT EXISTS user_progress (
         id BIGSERIAL PRIMARY KEY,
@@ -130,11 +130,40 @@ export async function setupDb() {
         current_step INT DEFAULT 0,
         total_steps INT DEFAULT 0,
         action_done VARCHAR(255),
+        response_data JSONB DEFAULT '{}'::jsonb,
         updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
         CONSTRAINT unique_user_lesson_progress UNIQUE (user_id, lesson_id)
       );
     `;
+    try {
+      await sql`ALTER TABLE user_progress ADD COLUMN IF NOT EXISTS response_data JSONB DEFAULT '{}'::jsonb;`;
+    } catch (e) {}
     await sql`CREATE INDEX IF NOT EXISTS idx_user_progress_user_id ON user_progress(user_id);`;
+
+    // Table 6b: user_personalization_signals (Accumulated non-clinical focus and interaction signals for pathway personalization)
+    await sql`
+      CREATE TABLE IF NOT EXISTS user_personalization_signals (
+        id BIGSERIAL PRIMARY KEY,
+        user_id VARCHAR(255) NOT NULL,
+        pathway_id VARCHAR(100) NOT NULL,
+        signal VARCHAR(100) NOT NULL,
+        strength INT DEFAULT 1,
+        source_type VARCHAR(100) NOT NULL DEFAULT 'activity',
+        source_id VARCHAR(255) NOT NULL,
+        metadata JSONB DEFAULT '{}'::jsonb,
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        CONSTRAINT unique_user_pathway_source_signal UNIQUE (user_id, pathway_id, source_type, source_id, signal)
+      );
+    `;
+    try {
+      await sql`ALTER TABLE user_personalization_signals ADD COLUMN IF NOT EXISTS metadata JSONB DEFAULT '{}'::jsonb;`;
+      await sql`ALTER TABLE user_personalization_signals ADD CONSTRAINT unique_user_pathway_source_signal UNIQUE (user_id, pathway_id, source_type, source_id, signal);`;
+    } catch (e) {}
+    await sql`CREATE INDEX IF NOT EXISTS idx_user_signals_user_pathway ON user_personalization_signals(user_id, pathway_id);`;
+    await sql`CREATE INDEX IF NOT EXISTS idx_user_signals_signal ON user_personalization_signals(signal);`;
+    await sql`CREATE INDEX IF NOT EXISTS idx_user_signals_source ON user_personalization_signals(source_type, source_id);`;
+
 
     // Table 7: activity_submissions
     await sql`

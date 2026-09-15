@@ -1,11 +1,25 @@
-﻿import React, { useState, useEffect, useRef } from 'react';
-import { Search, BookOpen, Menu, Clock, ArrowRight, Filter, X, ChevronRight, LogOut, ShieldCheck, CheckCircle2, UserCheck, Crown, User } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Search, BookOpen, Menu, Clock, ArrowRight, Filter, X, ChevronRight, ChevronDown, LogOut, ShieldCheck, CheckCircle2, UserCheck, Crown, User, Check, Calendar, Compass } from 'lucide-react';
 import UserAdminManagement from '../components/admin/UserAdminManagement';
 import { activities as mantraActivities, getCurrentService, setServiceContext, preserveQueryParams, SUPPORTED_SERVICES, normalizeService } from '../mantra';
 import { useAuth } from '../auth/AuthContext';
 
 const MANTRA_LOGO_URL = 'https://res.cloudinary.com/hxbamdqf/image/upload/v1784698269/Mantra_logo_yptwwe.svg';
 const API_BASE = import.meta.env.PROD ? '' : 'http://localhost:5001';
+
+export const THERAPY_PROBLEMS = [
+  { id: 'all', label: 'All Therapy' },
+  { id: 'depression', label: 'Depression' },
+  { id: 'adhd', label: 'ADHD' },
+  { id: 'relationship_issues', label: 'Relationship Issues' },
+  { id: 'sleep', label: 'Sleep' },
+  { id: 'anxiety', label: 'Anxiety' },
+  { id: 'stress', label: 'Stress' },
+  { id: 'anger', label: 'Anger' },
+  { id: 'grief', label: 'Grief' },
+  { id: 'ptsd', label: 'PTSD' },
+  { id: 'eating_disorder', label: 'Eating Disorder' }
+];
 
 export default function DeveloperLessonsPage({ onNavigate }) {
   const launchPathway = (act) => {
@@ -55,6 +69,8 @@ export default function DeveloperLessonsPage({ onNavigate }) {
   const roleDisplay = isSuperAdmin ? 'SuperAdmin' : (rawRole.toLowerCase() === 'admin' ? 'admin' : 'user');
 
   const [selectedService, setSelectedService] = useState('all');
+  const [selectedProblem, setSelectedProblem] = useState('all');
+  const [selectedDay, setSelectedDay] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const getInitialTab = () => {
@@ -133,6 +149,8 @@ export default function DeveloperLessonsPage({ onNavigate }) {
 
   const handleServiceSelect = (svc) => {
     setSelectedService(svc);
+    setSelectedProblem('all');
+    setSelectedDay('all');
     if (svc !== 'all') {
       setServiceContext(svc);
     }
@@ -140,11 +158,13 @@ export default function DeveloperLessonsPage({ onNavigate }) {
 
   const serviceOptions = ['all', ...(SUPPORTED_SERVICES || ['therapy', 'listener', 'yoga', 'diet', 'physiotherapy', 'coaching', 'women_wellness'])];
 
+  const normSelected = normalizeService(selectedService);
+  const isTherapyActive = normSelected === 'therapy' || normSelected === 'all';
+
   const filteredActivities = (mantraActivities || []).filter(act => {
     if (!act) return false;
     const actServices = Array.isArray(act.services) ? act.services : (act.services ? [act.services] : ['*']);
 
-    const normSelected = normalizeService(selectedService);
     const matchesService =
       selectedService === 'all' ||
       normSelected === 'all' ||
@@ -152,13 +172,32 @@ export default function DeveloperLessonsPage({ onNavigate }) {
       actServices.some(s => normalizeService(s) === normSelected) ||
       (act.service && normalizeService(act.service) === normSelected);
 
+    // Filter by specific Problem/Condition tab (when inside therapy)
+    const matchesProblem =
+      selectedProblem === 'all' ||
+      !isTherapyActive ||
+      (act.problems && act.problems.includes(selectedProblem)) ||
+      (act.problem && act.problem === selectedProblem) ||
+      (act.tags && act.tags.includes(selectedProblem)) ||
+      (act.lessonId && act.lessonId.toLowerCase().includes(selectedProblem.replace('_', '-'))) ||
+      (act.title && act.title.toLowerCase().includes(selectedProblem.replace('_', ' ')));
+
+    // Filter by Day (Day 1 to Day 21)
+    const matchesDay =
+      selectedDay === 'all' ||
+      (act.day !== undefined && Number(act.day) === Number(selectedDay)) ||
+      (act.description && act.description.toLowerCase().includes(`day ${selectedDay}:`)) ||
+      (act.title && act.title.toLowerCase().includes(`day ${selectedDay}`)) ||
+      (act.lessonId && act.lessonId.toLowerCase().includes(`day_${selectedDay}`)) ||
+      (act.lessonId && act.lessonId.toLowerCase().includes(`day-${selectedDay}`));
+
     const query = searchQuery.trim().toLowerCase();
     const matchesSearch = !query ||
       act.title?.toLowerCase().includes(query) ||
       act.lessonId?.toLowerCase().includes(query) ||
       act.route?.toLowerCase().includes(query);
 
-    return matchesService && matchesSearch;
+    return matchesService && matchesProblem && matchesDay && matchesSearch;
   });
 
   const handleLogoutAction = async () => {
@@ -215,6 +254,33 @@ export default function DeveloperLessonsPage({ onNavigate }) {
             />
           </div>
         </div>
+
+        {/* Direct Challenge Hub Sanctuary Link */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <button
+            onClick={() => {
+              window.open('#/challenges', '_blank');
+            }}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '8px 16px',
+              borderRadius: '9999px',
+              background: 'linear-gradient(135deg, #0284C7, #4F46E5)',
+              color: '#FFFFFF',
+              fontSize: '12.5px',
+              fontWeight: 700,
+              border: 'none',
+              cursor: 'pointer',
+              boxShadow: '0 2px 10px rgba(2, 132, 199, 0.3)',
+              transition: 'all 0.15s ease'
+            }}
+          >
+            <Compass size={15} />
+            <span>Open Challenge Hub →</span>
+          </button>
+        </div>
       </header>
 
       {/* SIDEBAR NAVIGATION DRAWER WITH USER PROFILE & SIGN OUT AT BOTTOM */}
@@ -248,24 +314,16 @@ export default function DeveloperLessonsPage({ onNavigate }) {
               position: 'relative'
             }}
           >
-            {/* Sidebar Top Header */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '14px', borderBottom: '1px solid #E2E8F0', marginBottom: '16px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <img
-                  src={MANTRA_LOGO_URL}
-                  alt="Mantra Care"
-                  style={{ height: '24px', objectFit: 'contain' }}
-                />
-              </div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
+              <img src={MANTRA_LOGO_URL} alt="Mantra Care" style={{ height: '28px' }} />
               <button
                 onClick={() => setIsSidebarOpen(false)}
-                style={{ background: '#F1F5F9', border: 'none', borderRadius: '6px', padding: '4px', cursor: 'pointer', color: '#64748B' }}
+                style={{ background: '#F1F5F9', border: 'none', borderRadius: '6px', padding: '6px', cursor: 'pointer', color: '#64748B' }}
               >
-                <X size={16} />
+                <X size={18} />
               </button>
             </div>
 
-            {/* Navigation Menu Items */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', flex: 1 }}>
               <button
                 onClick={() => { handleTabChange('lessons'); setIsSidebarOpen(false); }}
@@ -277,7 +335,7 @@ export default function DeveloperLessonsPage({ onNavigate }) {
                   borderRadius: '10px',
                   border: 'none',
                   background: activeTab === 'lessons' ? '#006FF5' : '#F8FAFC',
-                  color: activeTab === 'lessons' ? '#FFFFFF' : '#334155',
+                  color: activeTab === 'lessons' ? '#FFFFFF' : '#0F172A',
                   fontWeight: 800,
                   fontSize: '0.88rem',
                   cursor: 'pointer'
@@ -286,6 +344,32 @@ export default function DeveloperLessonsPage({ onNavigate }) {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <BookOpen size={18} />
                   <span>User Pathways</span>
+                </div>
+                <ChevronRight size={16} opacity={0.6} />
+              </button>
+
+              <button
+                onClick={() => {
+                  setIsSidebarOpen(false);
+                  window.open('#/challenges', '_blank');
+                }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '12px 14px',
+                  borderRadius: '10px',
+                  border: '1px solid rgba(2, 132, 199, 0.2)',
+                  background: 'linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(79, 70, 229, 0.08))',
+                  color: '#0284C7',
+                  fontWeight: 800,
+                  fontSize: '0.88rem',
+                  cursor: 'pointer'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <Compass size={18} color="#0284C7" />
+                  <span>Challenge Hub (Mantra 21)</span>
                 </div>
                 <ChevronRight size={16} opacity={0.6} />
               </button>
@@ -413,113 +497,283 @@ export default function DeveloperLessonsPage({ onNavigate }) {
               </div>
             </div>
 
-            {/* Search Input Bar */}
-            <div style={{ position: 'relative', width: '100%' }}>
-              <Search size={18} color="#94A3B8" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
-              <input
-                ref={searchInputRef}
-                type="text"
-                placeholder="Search pathways by title or activity route..."
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-                style={{
-                  width: '100%',
-                  padding: '12px 16px 12px 46px',
-                  borderRadius: '14px',
-                  border: '1px solid #CBD5E1',
-                  fontSize: '0.9rem',
-                  outline: 'none',
+            {/* 2-COLUMN LAYOUT: Problem Tabs (Left) + Pathways Grid (Right) */}
+            <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
+
+              {/* LEFT PROBLEM TABS (Visible under Therapy / All Services) */}
+              {isTherapyActive && (
+                <aside style={{
+                  width: '240px',
+                  minWidth: '220px',
+                  flexShrink: 0,
                   background: '#FFFFFF',
-                  boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
-                  boxSizing: 'border-box'
-                }}
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  style={{ position: 'absolute', right: '14px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#94A3B8' }}
-                >
-                  <X size={16} />
-                </button>
-              )}
-            </div>
+                  borderRadius: '18px',
+                  border: '1px solid #E2E8F0',
+                  padding: '16px 12px',
+                  boxShadow: '0 2px 10px rgba(0,0,0,0.02)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '8px',
+                  position: 'sticky',
+                  top: '80px'
+                }}>
+                  <div style={{ padding: '0 8px 6px', fontSize: '0.76rem', fontWeight: 800, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                    Therapy Conditions
+                  </div>
 
-            {/* Pathways Grid / Empty State */}
-            {filteredActivities.length === 0 ? (
-              <div style={{ background: '#FFFFFF', borderRadius: '20px', border: '1px solid #E2E8F0', padding: '60px 20px', textAlign: 'center', color: '#64748B' }}>
-                <BookOpen size={48} color="#94A3B8" style={{ margin: '0 auto 16px auto', display: 'block' }} />
-                <h3 style={{ margin: '0 0 6px 0', fontSize: '1.2rem', fontWeight: 800, color: '#0F172A' }}>No User Pathways Found</h3>
-                <p style={{ margin: 0, fontSize: '0.88rem' }}>
-                  {searchQuery ? `No pathways matching "${searchQuery}".` : 'No active pathways available for this service category.'}
-                </p>
-              </div>
-            ) : (
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
-                {filteredActivities.map((act) => (
-                  <div
-                    key={act.lessonId || act.route}
-                    style={{
-                      background: '#FFFFFF',
-                      borderRadius: '20px',
-                      border: '1px solid #E2E8F0',
-                      padding: '24px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'space-between',
-                      boxShadow: '0 2px 10px rgba(0,0,0,0.02)',
-                      transition: 'transform 0.15s ease, boxShadow 0.15s ease'
-                    }}
-                  >
-                    <div>
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
-                        <span style={{ padding: '4px 10px', borderRadius: '999px', background: '#E0F2FE', color: '#006FF5', fontSize: '0.74rem', fontWeight: 800 }}>
-                          +{act.rewardPoints || 10} PTS
-                        </span>
-                        <span style={{ fontSize: '0.76rem', color: '#64748B', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '4px' }}>
-                          <Clock size={13} /> {act.estimatedDuration || '3 min'}
-                        </span>
-                      </div>
-
-                      <h3 style={{ margin: '0 0 8px 0', fontSize: '1.05rem', fontWeight: 800, color: '#0F172A', lineHeight: 1.3 }}>
-                        {act.title}
-                      </h3>
-
-                      {act.description && (
-                        <p style={{ margin: '0 0 16px 0', fontSize: '0.82rem', color: '#64748B', lineHeight: 1.45 }}>
-                          {act.description}
-                        </p>
-                      )}
-                    </div>
-
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F1F5F9' }}>
-                      <span style={{ fontSize: '0.74rem', color: '#94A3B8', fontWeight: 600, textTransform: 'capitalize' }}>
-                        {Array.isArray(act.services) ? act.services.join(', ') : (act.services || 'all')}
-                      </span>
-
+                  {THERAPY_PROBLEMS.map(problem => {
+                    const isSelected = selectedProblem === problem.id;
+                    return (
                       <button
-                        onClick={() => launchPathway(act)}
+                        key={problem.id}
+                        onClick={() => setSelectedProblem(problem.id)}
                         style={{
-                          padding: '8px 18px',
-                          borderRadius: '10px',
-                          border: 'none',
-                          background: '#006FF5',
-                          color: '#FFFFFF',
-                          fontWeight: 800,
-                          fontSize: '0.82rem',
-                          cursor: 'pointer',
-                          display: 'inline-flex',
+                          width: '100%',
+                          display: 'flex',
                           alignItems: 'center',
-                          gap: '6px',
-                          boxShadow: '0 2px 8px rgba(0, 111, 245, 0.25)'
+                          justifyContent: 'space-between',
+                          padding: '12px 16px',
+                          borderRadius: '12px',
+                          border: isSelected ? '1.5px solid #006FF5' : '1px solid #E2E8F0',
+                          background: isSelected ? '#EFF6FF' : '#FFFFFF',
+                          color: isSelected ? '#006FF5' : '#1E293B',
+                          fontWeight: isSelected ? 800 : 600,
+                          fontSize: '0.88rem',
+                          cursor: 'pointer',
+                          textAlign: 'left',
+                          transition: 'all 0.15s ease'
                         }}
                       >
-                        Start Pathway <ArrowRight size={14} />
+                        <span>{problem.label}</span>
+                        {isSelected && (
+                          <div style={{
+                            width: '20px',
+                            height: '20px',
+                            borderRadius: '50%',
+                            background: '#006FF5',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            color: '#FFFFFF'
+                          }}>
+                            <Check size={12} strokeWidth={3} />
+                          </div>
+                        )}
                       </button>
+                    );
+                  })}
+                </aside>
+              )}
+
+              {/* RIGHT MAIN CONTENT AREA: Search + Grid */}
+              <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                {/* Search Input Bar */}
+                <div style={{ position: 'relative', width: '100%' }}>
+                  <Search size={18} color="#94A3B8" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
+                  <input
+                    ref={searchInputRef}
+                    type="text"
+                    placeholder="Search pathways by title or activity route..."
+                    value={searchQuery}
+                    onChange={e => setSearchQuery(e.target.value)}
+                    style={{
+                      width: '100%',
+                      padding: '12px 16px 12px 46px',
+                      borderRadius: '14px',
+                      border: '1px solid #CBD5E1',
+                      fontSize: '0.9rem',
+                      outline: 'none',
+                      background: '#FFFFFF',
+                      boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
+                      boxSizing: 'border-box'
+                    }}
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery('')}
+                      style={{ position: 'absolute', right: '14px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#94A3B8' }}
+                    >
+                      <X size={16} />
+                    </button>
+                  )}
+                </div>
+
+                {/* DAY SELECTOR DROPDOWN (Day 1 to Day 21) */}
+                <div style={{
+                  background: '#FFFFFF',
+                  borderRadius: '14px',
+                  border: '1px solid #E2E8F0',
+                  padding: '10px 16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  flexWrap: 'wrap',
+                  gap: '12px',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.02)'
+                }}>
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    fontSize: '0.85rem',
+                    fontWeight: 700,
+                    color: '#334155'
+                  }}>
+                    <div style={{
+                      width: '28px',
+                      height: '28px',
+                      borderRadius: '8px',
+                      background: '#EFF6FF',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}>
+                      <Calendar size={16} color="#006FF5" />
+                    </div>
+                    <span>21-Day Pathway Schedule</span>
+                    {selectedDay !== 'all' && (
+                      <span style={{
+                        padding: '2px 8px',
+                        borderRadius: '999px',
+                        background: '#EFF6FF',
+                        color: '#006FF5',
+                        fontSize: '0.75rem',
+                        fontWeight: 700
+                      }}>
+                        Day {selectedDay} active
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Dropdown Select Menu */}
+                  <div style={{ position: 'relative', display: 'flex', alignItems: 'center', minWidth: '200px' }}>
+                    <select
+                      value={selectedDay}
+                      onChange={(e) => setSelectedDay(e.target.value)}
+                      style={{
+                        width: '100%',
+                        padding: '9px 36px 9px 14px',
+                        borderRadius: '10px',
+                        border: selectedDay === 'all' ? '1px solid #CBD5E1' : '1.5px solid #006FF5',
+                        background: selectedDay === 'all' ? '#F8FAFC' : '#EFF6FF',
+                        color: selectedDay === 'all' ? '#1E293B' : '#006FF5',
+                        fontWeight: 700,
+                        fontSize: '0.85rem',
+                        cursor: 'pointer',
+                        outline: 'none',
+                        appearance: 'none',
+                        WebkitAppearance: 'none',
+                        MozAppearance: 'none',
+                        transition: 'all 0.15s ease',
+                        boxShadow: selectedDay === 'all' ? 'none' : '0 2px 8px rgba(0, 111, 245, 0.15)'
+                      }}
+                    >
+                      <option value="all">📅 All Days (Full Plan)</option>
+                      {Array.from({ length: 21 }, (_, i) => i + 1).map((dayNum) => (
+                        <option key={dayNum} value={dayNum}>
+                          Day {dayNum} {dayNum === 1 ? '• (Current Focus)' : ''}
+                        </option>
+                      ))}
+                    </select>
+
+                    <div style={{
+                      position: 'absolute',
+                      right: '12px',
+                      pointerEvents: 'none',
+                      display: 'flex',
+                      alignItems: 'center',
+                      color: selectedDay === 'all' ? '#64748B' : '#006FF5'
+                    }}>
+                      <ChevronDown size={16} strokeWidth={2.5} />
                     </div>
                   </div>
-                ))}
+                </div>
+
+                {/* Pathways Grid / Empty State */}
+                {filteredActivities.length === 0 ? (
+                  <div style={{ background: '#FFFFFF', borderRadius: '20px', border: '1px solid #E2E8F0', padding: '60px 20px', textAlign: 'center', color: '#64748B' }}>
+                    <BookOpen size={48} color="#94A3B8" style={{ margin: '0 auto 16px auto', display: 'block' }} />
+                    <h3 style={{ margin: '0 0 6px 0', fontSize: '1.2rem', fontWeight: 800, color: '#0F172A' }}>No User Pathways Found</h3>
+                    <p style={{ margin: 0, fontSize: '0.88rem' }}>
+                      {searchQuery ? `No pathways matching "${searchQuery}".` : selectedDay !== 'all' ? `No activities scheduled yet for Day ${selectedDay}. We are releasing future days step by step!` : selectedProblem !== 'all' ? `No activities created yet for "${THERAPY_PROBLEMS.find(p => p.id === selectedProblem)?.label}". We'll build specific activities for this condition next!` : 'No active pathways available for this service category.'}
+                    </p>
+                  </div>
+                ) : (
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
+                    {filteredActivities.map((act) => (
+                      <div
+                        key={act.lessonId || act.route}
+                        style={{
+                          background: '#FFFFFF',
+                          borderRadius: '20px',
+                          border: '1px solid #E2E8F0',
+                          padding: '24px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-between',
+                          boxShadow: '0 2px 10px rgba(0,0,0,0.02)',
+                          transition: 'transform 0.15s ease, boxShadow 0.15s ease'
+                        }}
+                      >
+                        <div>
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                              <span style={{ padding: '4px 10px', borderRadius: '999px', background: '#E0F2FE', color: '#006FF5', fontSize: '0.74rem', fontWeight: 800 }}>
+                                +{act.rewardPoints || 10} PTS
+                              </span>
+                              {act.day && (
+                                <span style={{ padding: '4px 8px', borderRadius: '999px', background: '#F1F5F9', color: '#475569', fontSize: '0.74rem', fontWeight: 700 }}>
+                                  Day {act.day}
+                                </span>
+                              )}
+                            </div>
+                            <span style={{ fontSize: '0.76rem', color: '#64748B', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '4px' }}>
+                              <Clock size={13} /> {act.estimatedDuration || '3 min'}
+                            </span>
+                          </div>
+
+                          <h3 style={{ margin: '0 0 8px 0', fontSize: '1.05rem', fontWeight: 800, color: '#0F172A', lineHeight: 1.3 }}>
+                            {act.title}
+                          </h3>
+
+                          {act.description && (
+                            <p style={{ margin: '0 0 16px 0', fontSize: '0.82rem', color: '#64748B', lineHeight: 1.45 }}>
+                              {act.description}
+                            </p>
+                          )}
+                        </div>
+
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F1F5F9' }}>
+                          <span style={{ fontSize: '0.74rem', color: '#94A3B8', fontWeight: 600, textTransform: 'capitalize' }}>
+                            {Array.isArray(act.services) ? act.services.join(', ') : (act.services || 'all')}
+                          </span>
+
+                          <button
+                            onClick={() => launchPathway(act)}
+                            style={{
+                              padding: '8px 18px',
+                              borderRadius: '10px',
+                              border: 'none',
+                              background: '#006FF5',
+                              color: '#FFFFFF',
+                              fontWeight: 800,
+                              fontSize: '0.82rem',
+                              cursor: 'pointer',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '6px',
+                              boxShadow: '0 2px 8px rgba(0, 111, 245, 0.25)'
+                            }}
+                          >
+                            Start Pathway <ArrowRight size={14} />
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
+            </div>
           </div>
         )}
 

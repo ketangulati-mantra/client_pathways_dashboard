@@ -268,8 +268,9 @@ export const activityService = {
     currentStep: number;
     totalSteps: number;
     actionDone?: string;
+    responseData?: any;
   }) {
-    const { userId, lessonId, currentStep, totalSteps, actionDone } = input;
+    const { userId, lessonId, currentStep, totalSteps, actionDone, responseData = {} } = input;
 
     await sql`
       CREATE TABLE IF NOT EXISTS user_progress (
@@ -279,19 +280,28 @@ export const activityService = {
         current_step INT DEFAULT 0,
         total_steps INT DEFAULT 0,
         action_done VARCHAR(255),
+        response_data JSONB DEFAULT '{}'::jsonb,
         updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
         CONSTRAINT unique_user_lesson_progress UNIQUE (user_id, lesson_id)
       );
     `;
 
+    try {
+      await sql`ALTER TABLE user_progress ADD COLUMN IF NOT EXISTS current_step INT DEFAULT 0;`;
+      await sql`ALTER TABLE user_progress ADD COLUMN IF NOT EXISTS total_steps INT DEFAULT 0;`;
+      await sql`ALTER TABLE user_progress ADD COLUMN IF NOT EXISTS action_done VARCHAR(255);`;
+      await sql`ALTER TABLE user_progress ADD COLUMN IF NOT EXISTS response_data JSONB DEFAULT '{}'::jsonb;`;
+    } catch (e) {}
+
     const result = await sql`
-      INSERT INTO user_progress (user_id, lesson_id, current_step, total_steps, action_done, updated_at)
-      VALUES (${userId}, ${lessonId}, ${currentStep}, ${totalSteps}, ${actionDone || null}, CURRENT_TIMESTAMP)
+      INSERT INTO user_progress (user_id, lesson_id, current_step, total_steps, action_done, response_data, updated_at)
+      VALUES (${userId}, ${lessonId}, ${currentStep}, ${totalSteps}, ${actionDone || null}, ${JSON.stringify(responseData)}::jsonb, CURRENT_TIMESTAMP)
       ON CONFLICT (user_id, lesson_id)
       DO UPDATE SET
         current_step = EXCLUDED.current_step,
         total_steps = EXCLUDED.total_steps,
         action_done = EXCLUDED.action_done,
+        response_data = EXCLUDED.response_data,
         updated_at = CURRENT_TIMESTAMP
       RETURNING *;
     `;
@@ -299,9 +309,172 @@ export const activityService = {
   },
 
   async getUserProgress(userId: string, lessonId: string) {
+    try {
+      await sql`
+        CREATE TABLE IF NOT EXISTS user_progress (
+          id BIGSERIAL PRIMARY KEY,
+          user_id VARCHAR(255) NOT NULL,
+          lesson_id VARCHAR(255) NOT NULL,
+          current_step INT DEFAULT 0,
+          total_steps INT DEFAULT 0,
+          action_done VARCHAR(255),
+          response_data JSONB DEFAULT '{}'::jsonb,
+          updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+          CONSTRAINT unique_user_lesson_progress UNIQUE (user_id, lesson_id)
+        );
+      `;
+    } catch (e) {}
+
     const result = await sql`
       SELECT * FROM user_progress WHERE user_id = ${userId} AND lesson_id = ${lessonId};
     `;
     return result[0] || null;
+  },
+
+  async recordPersonalizationSignal(input: {
+    userId: string;
+    pathwayId: string;
+    signal: string;
+    strength?: number;
+    sourceType?: string;
+    sourceId?: string;
+    metadata?: any;
+  }) {
+    const {
+      userId,
+      pathwayId,
+      signal,
+      strength = 1,
+      sourceType = 'activity',
+      sourceId,
+      metadata = {}
+    } = input;
+
+    await sql`
+      CREATE TABLE IF NOT EXISTS user_personalization_signals (
+        id BIGSERIAL PRIMARY KEY,
+        user_id VARCHAR(255) NOT NULL,
+        pathway_id VARCHAR(100) NOT NULL,
+        signal VARCHAR(100) NOT NULL,
+        strength INT DEFAULT 1,
+        source_type VARCHAR(100) NOT NULL DEFAULT 'activity',
+        source_id VARCHAR(255) NOT NULL,
+        metadata JSONB DEFAULT '{}'::jsonb,
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        CONSTRAINT unique_user_pathway_source_signal UNIQUE (user_id, pathway_id, source_type, source_id, signal)
+      );
+    `;
+
+    try {
+      await sql`ALTER TABLE user_personalization_signals ADD CONSTRAINT unique_user_pathway_source_signal UNIQUE (user_id, pathway_id, source_type, source_id, signal);`;
+    } catch (e) {}
+
+    // Idempotent UPSERT: If this activity/source already generated this signal, update metadata/strength without duplicating
+    const result = await sql`
+      INSERT INTO user_personalization_signals (
+        user_id, pathway_id, signal, strength, source_type, source_id, metadata, created_at, updated_at
+      ) VALUES (
+        ${userId}, ${pathwayId}, ${signal}, ${strength}, ${sourceType}, ${sourceId}, ${JSON.stringify(metadata)}::jsonb, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
+      )
+      ON CONFLICT (user_id, pathway_id, source_type, source_id, signal)
+      DO UPDATE SET
+        strength = EXCLUDED.strength,
+        metadata = EXCLUDED.metadata,
+        updated_at = CURRENT_TIMESTAMP
+      RETURNING *;
+    `;
+    return result[0];
+  },
+
+  async getUserPersonalizationSignals(userId: string, pathwayId?: string) {
+    try {
+      await sql`
+        CREATE TABLE IF NOT EXISTS user_personalization_signals (
+          id BIGSERIAL PRIMARY KEY,
+          user_id VARCHAR(255) NOT NULL,
+          pathway_id VARCHAR(100) NOT NULL,
+          signal VARCHAR(100) NOT NULL,
+          strength INT DEFAULT 1,
+          source_type VARCHAR(100) NOT NULL DEFAULT 'activity',
+          source_id VARCHAR(255) NOT NULL,
+          metadata JSONB DEFAULT '{}'::jsonb,
+          created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+          updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+          CONSTRAINT unique_user_pathway_source_signal UNIQUE (user_id, pathway_id, source_type, source_id, signal)
+        );
+      `;
+    } catch (e) {}
+
+    if (pathwayId) {
+      return await sql`
+        SELECT * FROM user_personalization_signals
+        WHERE user_id = ${userId} AND pathway_id = ${pathwayId}
+        ORDER BY created_at DESC;
+      `;
+    }
+    return await sql`
+      SELECT * FROM user_personalization_signals
+      WHERE user_id = ${userId}
+      ORDER BY created_at DESC;
+    `;
+  },
+
+  /**
+   * Evaluates the evolving personalization profile across ALL accumulated signals
+   * (Day 1 activities + Daily Check-Ins + future lessons).
+   * current_focus is a derived calculation, never an immutable user state.
+   */
+  async getAggregatedPersonalizationFocus(userId: string, pathwayId: string = 'depression') {
+    const signals = await this.getUserPersonalizationSignals(userId, pathwayId);
+    
+    const aggregatedScores: Record<string, number> = {
+      energy_and_getting_started: 0,
+      thoughts_and_mental_overload: 0,
+      functioning_and_tasks: 0,
+      interest_and_enjoyment: 0,
+      connection_and_support: 0,
+      identity_and_self_connection: 0,
+      routine_and_sleep: 0
+    };
+
+    for (const row of signals) {
+      const sig = String(row.signal);
+      const str = Number(row.strength) || 1;
+      if (aggregatedScores[sig] !== undefined) {
+        aggregatedScores[sig] += str;
+      } else {
+        aggregatedScores[sig] = str;
+      }
+    }
+
+    const priorityOrder = [
+      'energy_and_getting_started',
+      'thoughts_and_mental_overload',
+      'functioning_and_tasks',
+      'interest_and_enjoyment',
+      'connection_and_support',
+      'identity_and_self_connection',
+      'routine_and_sleep'
+    ];
+
+    let currentFocus = 'energy_and_getting_started';
+    let maxScore = -1;
+
+    for (const key of priorityOrder) {
+      if (aggregatedScores[key] > maxScore && aggregatedScores[key] > 0) {
+        maxScore = aggregatedScores[key];
+        currentFocus = key;
+      }
+    }
+
+    return {
+      userId,
+      pathwayId,
+      current_focus: currentFocus,
+      aggregated_scores: aggregatedScores,
+      total_signals_count: signals.length,
+      signals
+    };
   }
 };

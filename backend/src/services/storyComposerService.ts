@@ -556,37 +556,100 @@ export const storyComposerService = {
     const location = world.locations[(targetChapterNumber - 1) % world.locations.length] || world.locations[0];
     const companion = world.companion;
 
-    // 7. Beat 1: Scene & Opening Situation (~80 words)
+    // 7. Beat 1: Scene & Opening — Grounded in user's actual day (~80 words)
     const openingObj = selectNonRepeating(world.openings, memory.recentOpenings, rng, (o) => o.id);
     const sensoryAnchor = truths.sensory_anchors[0] || 'the cool evening air after rain';
-    const p1 = `${openingObj.text} You stepped into ${location} and stopped for a moment, taking in ${sensoryAnchor}. The place had a simple, steady quiet about it that made you naturally slow your pace. After the kind of day you’d had, having a few minutes to yourself was exactly what you needed.`;
+    const userActivity = (dailyArc.userMentionedActivities || [])[0];
+    const userStruggle = (dailyArc.userMentionedStruggles || [])[0];
+    let p1Opening = `${openingObj.text} You stepped into ${location} and stopped for a moment, taking in ${sensoryAnchor}.`;
+    if (userActivity && userStruggle) {
+      p1Opening += ` After all the ${userActivity} today, after feeling ${userStruggle}, having a few minutes to yourself was exactly what you needed.`;
+    } else if (userActivity) {
+      p1Opening += ` The ${userActivity} was still on your mind, but here, it felt further away.`;
+    } else {
+      p1Opening += ` The place had a quiet about it that made you slow your pace.`;
+    }
+    const p1 = p1Opening;
 
-    // 8. Beat 2: The Real Emotional Tension (~90 words)
+    // 8. Beat 2: The Real Emotional Tension — User's actual struggle (~90 words)
     const tenseScene = context.emotionalDirection.status === 'difficult' ? world.sceneDescriptions.tense : world.sceneDescriptions.neutral;
-    const p2 = `${dailyArc.startingTension} In your hands, you were still holding ${activeMotif.motif}. ${tenseScene} It was easy to notice how much energy you had spent trying to manage everything, keep everyone happy, and push through without stopping to rest.`;
+    const userStruggles = dailyArc.userMentionedStruggles || [];
+    const userActivities = dailyArc.userMentionedActivities || [];
+    let p2Body = dailyArc.startingTension;
+    p2Body += ` In your hands, you were still holding ${activeMotif.motif}. ${tenseScene}`;
+    if (userStruggles.length > 1) {
+      p2Body += ` The ${userStruggles[0]} from the ${userActivities[0] || 'day'} had tangled together with feeling ${userStruggles.slice(1).join(' and ')}, and your body carried all of it.`;
+    } else if (userStruggles.length === 1) {
+      p2Body += ` You could feel the ${userStruggles[0]} sitting right behind your ribs, the kind that doesn't go away just because you want it to.`;
+    } else {
+      p2Body += ` Even without a clear name for it, something in you needed to stop.`;
+    }
+    const p2 = p2Body;
 
-    // 8b. Beat 2b: Exploration & Physical Grounding (~100 words)
-    const p2b = `You walked slowly through the space, looking at the familiar details of ${location}. There were no urgent notifications here, no clocks pushing you to hurry, and no one waiting for you to solve a problem. You placed your pack down on the solid wood bench and ran your hand along the smooth grain of the table. Simply being in a room where nothing was required of you felt like an unexpected gift.`;
+    // 8b. Beat 2b: Physical Grounding — Specific to the user's world (~100 words)
+    const userPeople = dailyArc.userMentionedPeople || [];
+    let p2bBody = `You walked slowly through ${location}, looking at the familiar details around you.`;
+    if (userActivities.length > 0) {
+      p2bBody += ` No ${userActivities[0]} to get back to. No one waiting for you to finish something.`;
+    } else {
+      p2bBody += ` Nothing here needed you to respond or decide.`;
+    }
+    p2bBody += ` You placed your pack down on the solid wood bench and ran your hand along the smooth grain of the table.`;
+    if (userPeople.length > 0) {
+      p2bBody += ` You thought about ${userPeople[0]} for a moment — not to solve anything, just to notice how that felt.`;
+    }
+    const p2b = p2bBody;
 
-    // 9. Beat 3: The Interaction / Action (~100 words)
+    // 9. Beat 3: The Interaction — Companion responds to user's actual situation (~100 words)
     const action = selectNonRepeating(world.actions, [], rng);
     const companionDialogue = selectNonRepeating(companion.dialogue, [], rng);
-    const p3 = `${companion.name}, ${companion.role}, walked over with a calm, friendly nod. They didn't ask you to explain why you looked tired or tell you to hurry up. Instead, they looked at what you were carrying and said: ${companionDialogue} Hearing those words in plain, simple English made something tight inside you release. ${action}`;
+    let p3Body = `${companion.name}, ${companion.role}, walked over with a calm nod. `;
+    if (userStruggles.length > 0 && userActivities.length > 0) {
+      p3Body += `They looked at you the way someone does when they can tell you've been carrying the ${userActivities[0]} and the ${userStruggles[0]} at the same time. `;
+    } else if (userStruggles.length > 0) {
+      p3Body += `They seemed to notice the ${userStruggles[0]} on your face without needing you to explain it. `;
+    } else {
+      p3Body += `They didn't ask you to explain anything. `;
+    }
+    p3Body += `They said: ${companionDialogue} `;
+    if (userPeople.length > 0) {
+      p3Body += `It reminded you of the way ${userPeople[0]} talks to you sometimes — direct, no performance. `;
+    }
+    p3Body += action;
+    const p3 = p3Body;
 
-    // 10. Beat 4: The Relief & Internal Shift (~110 words)
+    // 10. Beat 4: The Relief — Mirrors user's actual turning point (~110 words)
     const consequence = selectNonRepeating(world.consequences, [], rng);
     const relaxedScene = world.sceneDescriptions.relaxed;
     let motifEvolution = '';
     if (activeMotif.stage === 'transforming' || activeMotif.stage === 'resolved') {
-      motifEvolution = `The ${activeMotif.motif} felt lighter in your hands now, a clear reminder that you don't have to carry yesterday’s worries into tomorrow.`;
+      motifEvolution = `The ${activeMotif.motif} felt lighter in your hands now.`;
     } else {
-      motifEvolution = `Looking down at ${activeMotif.motif}, you felt a genuine sense of relief.`;
+      motifEvolution = `You looked down at ${activeMotif.motif} and felt something ease.`;
     }
-    const p4 = `${consequence} ${relaxedScene} ${motifEvolution} ${dailyArc.turningPoint} You realized with quiet certainty that taking care of yourself isn’t something you have to earn—it’s just something you have to choose.`;
+    let p4Body = `${consequence} ${relaxedScene} ${motifEvolution} `;
+    p4Body += dailyArc.turningPoint;
+    const userRelief = dailyArc.userMentionedRelief || [];
+    if (userRelief.length > 0) {
+      p4Body += ` Your body started to feel ${userRelief[0]}, and you let it.`;
+    }
+    const p4 = p4Body;
 
-    // 10b. Beat 4b: Grounded Realization & Growth (~90 words)
-    const growthTruth = truths.growth_truths[0] || 'You are learning to give yourself the same patience you give to others.';
-    const p4b = `Sitting in the quiet, you thought about how easy it is to forget your own limits when the days get busy. But today proved that stepping back doesn't mean falling behind. ${growthTruth} With every slow breath, you felt more settled in your own skin, knowing that showing up for yourself is always the right choice.`;
+    // 10b. Beat 4b: Grounded Realization — FROM user's growth signals, no preaching (~90 words)
+    const growthTruth = truths.growth_truths[0];
+    let p4bBody = '';
+    if (growthTruth) {
+      p4bBody = `Sitting in the quiet, you thought about something you've been noticing in yourself lately: ${growthTruth.charAt(0).toLowerCase() + growthTruth.slice(1)}`;
+      if (!growthTruth.endsWith('.')) p4bBody += '.';
+    } else {
+      p4bBody = 'Sitting in the quiet, you let the stillness do its work without trying to turn it into a lesson.';
+    }
+    if (userActivities.length > 0 && userRelief.length > 0) {
+      p4bBody += ` The ${userActivities[0]} would still be there tomorrow, but right now you were ${userRelief[0]}, and that was enough.`;
+    } else if (userStruggles.length > 0) {
+      p4bBody += ` The ${userStruggles[0]} hadn't vanished, but sitting here, it felt more like something you could hold than something holding you.`;
+    }
+    const p4b = p4bBody;
 
     // 11. Beat 5: Thread Progression (~80 words)
     const activeThreads: StoryThread[] = (currentState.open_threads || []).map((t) => ({ ...t }));
@@ -597,13 +660,13 @@ export const storyComposerService = {
       const primaryThread = activeThreads[0];
       if (primaryThread.status === 'introduced') {
         primaryThread.status = 'developing';
-        threadText = `The question about ${primaryThread.text.toLowerCase().replace(/\.$/, '')} was still in the back of your mind, but it didn’t feel urgent anymore.`;
+        threadText = `The question about ${primaryThread.text.toLowerCase().replace(/\.$/, '')} was still in the back of your mind, but it didn't feel urgent anymore.`;
       } else if (primaryThread.status === 'developing') {
         primaryThread.status = 'escalating';
-        threadText = `You noticed how the path you took today connected with ${primaryThread.text.toLowerCase().replace(/\.$/, '')}, bringing things a little closer into focus.`;
+        threadText = `You noticed how today connected with ${primaryThread.text.toLowerCase().replace(/\.$/, '')}, bringing things a little closer into focus.`;
       } else {
         primaryThread.status = 'resolved';
-        threadText = `With a calm breath, the matter of ${primaryThread.text.toLowerCase().replace(/\.$/, '')} finally felt settled and complete.`;
+        threadText = `With a calm breath, the matter of ${primaryThread.text.toLowerCase().replace(/\.$/, '')} finally felt settled.`;
       }
       newOrUpdatedThreads = activeThreads;
     } else {
@@ -619,7 +682,7 @@ export const storyComposerService = {
       ];
       threadText = `Before leaving the room, you noticed ${newThreadText.toLowerCase()}, waiting quietly for another day.`;
     }
-    const p5 = `${threadText} It felt good knowing you didn't have to figure everything out right this second. Tomorrow would have its own time.`;
+    const p5 = threadText;
 
     // 12. Beat 6: Specific Organic Suspense Hook (~90 words)
     const SUSPENSE_CATEGORIES: SuspenseMechanism[] = [
@@ -632,7 +695,13 @@ export const storyComposerService = {
     ];
     const chosenSuspenseType = selectNonRepeating(SUSPENSE_CATEGORIES, memory.recentSuspenseTypes, rng);
     const hookText = world.suspenseHooks[chosenSuspenseType] || world.suspenseHooks.new_possibility;
-    const p6 = `${hookText} You took one final breath of the evening air, feeling rested and ready for bed. Whatever tomorrow brings, you know you can meet it one step at a time.`;
+    let p6Body = hookText;
+    if (userActivities.length > 0) {
+      p6Body += ` Tomorrow, the ${userActivities[0]} would be waiting. But tonight, you had done something for yourself.`;
+    } else {
+      p6Body += ` You took a final breath of the evening air. Whatever tomorrow brings, it could wait until then.`;
+    }
+    const p6 = p6Body;
 
     // 13. Assemble Full Content (~550–800 words)
     const fullContent = `${p1}\n\n${p2}\n\n${p2b}\n\n${p3}\n\n${p4}\n\n${p4b}\n\n${p5}\n\n${p6}`;
@@ -658,7 +727,14 @@ export const storyComposerService = {
     const chosenTitleBase = selectNonRepeating(TITLE_PATTERNS, memory.recentTitles, rng);
     const title = `Chapter ${targetChapterNumber}: ${chosenTitleBase}`;
 
-    const narrativeSummary = `You spent time in ${location}, talked with ${companion.name}, and took a conscious step to set down the day's stress and rest.`;
+    let narrativeSummary = `You spent time in ${location} with ${companion.name}`;
+    if (userActivities.length > 0) {
+      narrativeSummary += `, after a day of ${userActivities[0]}`;
+    }
+    if (userRelief.length > 0) {
+      narrativeSummary += `, and found yourself feeling ${userRelief[0]}`;
+    }
+    narrativeSummary += '.';
     const nextCyclePreview = storyCycleService.deriveNextCyclePreview(worldKey, cycleProgress.chapter_in_cycle);
 
     // 15. Narrative Facts

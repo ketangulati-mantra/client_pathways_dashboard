@@ -2,13 +2,21 @@ import { MANTRA_CONFIG } from './config';
 import { activities } from './activities';
 import { AssessmentWebhookPayload } from '../utils/assessmentEngine';
 
+export const LOCALHOST_DEV_UID = 'e68792e6ec42acc875be58cbc1bd936c:0c0137f3fd9e92dac3a8f388e8a7d6ee';
+
 /**
- * Returns user ID from query params or session storage.
+ * Returns user ID from query params, session storage, or default localhost dev UID.
  */
 export const getCurrentUserId = (): string => {
   if (typeof window === 'undefined') return '';
   const params = new URLSearchParams(window.location.search);
-  return params.get('uid') || params.get('user_id') || sessionStorage.getItem('user_id') || '';
+  const uid = params.get('uid') || params.get('user_id') || sessionStorage.getItem('user_id');
+  if (uid) return uid;
+
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    return LOCALHOST_DEV_UID;
+  }
+  return '';
 };
 
 /**
@@ -19,10 +27,15 @@ const getWebhookContext = () => {
     return { upaId: null, uid: null };
   }
   const params = new URLSearchParams(window.location.search);
+  let uid = params.get('uid');
+
+  if (!uid && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+    uid = LOCALHOST_DEV_UID;
+  }
 
   return {
     upaId: params.get('upa_id'),
-    uid: params.get('uid')
+    uid
   };
 };
 
@@ -200,3 +213,180 @@ export const triggerCompletionWebhook = async (
 ): Promise<boolean> => {
   return await completeLesson(lessonId);
 };
+
+export interface AssignPathwayPayload {
+  intent: 'assign_pathway';
+  uid: string;
+  pathway_id: number;
+  service_id: number;
+}
+
+/**
+ * Assigns a specific problem pathway to the user via the assign_pathway webhook.
+ * Payload:
+ * {
+ *   "intent": "assign_pathway",
+ *   "uid": "<encrypted user ID>",
+ *   "pathway_id": <number>,
+ *   "service_id": 1
+ * }
+ */
+export const assignPathway = async (
+  pathwayId: number,
+  serviceId: number = 1,
+  overrideUid?: string
+): Promise<{ success: boolean; data?: any; error?: string }> => {
+  const { uid: urlUid } = getWebhookContext();
+  const activeUid = overrideUid || urlUid || getCurrentUserId();
+
+  if (!activeUid) {
+    console.warn('[Mantra API] Missing uid for assign_pathway.');
+    if (MANTRA_CONFIG.devMode && typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+      console.log('[Mantra API Dev] Localhost dev bypass for missing uid in assign_pathway:', { pathwayId, serviceId });
+      return { success: true };
+    }
+    return { success: false, error: 'Missing user identification (uid).' };
+  }
+
+  const payload: AssignPathwayPayload = {
+    intent: 'assign_pathway',
+    uid: activeUid,
+    pathway_id: pathwayId,
+    service_id: serviceId
+  };
+
+  try {
+    const response = await fetch(MANTRA_CONFIG.webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const result = await response.json().catch(() => null);
+
+    if (!response.ok || (result && result.success === false)) {
+      const errMsg = result?.message || result?.error || 'Pathway assignment failed.';
+      console.error('[Mantra API] assign_pathway webhook failed:', errMsg);
+      return { success: false, error: errMsg };
+    }
+
+    if (MANTRA_CONFIG.devMode) {
+      console.log('[Mantra API] assign_pathway webhook succeeded:', result);
+    }
+
+    return { success: true, data: result };
+  } catch (error: any) {
+    console.error('[Mantra API] assign_pathway network error:', error);
+    if (MANTRA_CONFIG.devMode && typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+      console.warn('[Mantra API Dev] Localhost fallback for assign_pathway network error:', error);
+      return { success: true };
+    }
+    return { success: false, error: error?.message || 'Network connection failed.' };
+  }
+};
+
+export interface AssignActivityPayload {
+  intent: 'assign_activity';
+  uid: string;
+  pathway_id: number;
+  activity_id: number;
+  service_id: number;
+}
+
+export interface AssignActivityOptions {
+  pathwayId: number;
+  activityId: number;
+  serviceId?: number;
+  overrideUid?: string;
+}
+
+/**
+ * Assigns a specific activity within a pathway to the user via the assign_activity webhook.
+ * Payload:
+ * {
+ *   "intent": "assign_activity",
+ *   "uid": "<encrypted user ID>",
+ *   "pathway_id": <number>,
+ *   "activity_id": <number>,
+ *   "service_id": 1
+ * }
+ */
+export const assignActivity = async (
+  options: AssignActivityOptions | number,
+  activityIdParam?: number,
+  serviceIdParam: number = 1,
+  overrideUidParam?: string
+): Promise<{ success: boolean; data?: any; error?: string }> => {
+  let pathwayId: number;
+  let activityId: number;
+  let serviceId: number = 1;
+  let overrideUid: string | undefined;
+
+  if (typeof options === 'object' && options !== null) {
+    pathwayId = options.pathwayId;
+    activityId = options.activityId;
+    serviceId = options.serviceId !== undefined ? options.serviceId : 1;
+    overrideUid = options.overrideUid;
+  } else {
+    pathwayId = options;
+    activityId = activityIdParam!;
+    serviceId = serviceIdParam !== undefined ? serviceIdParam : 1;
+    overrideUid = overrideUidParam;
+  }
+
+  const { uid: urlUid } = getWebhookContext();
+  const activeUid = overrideUid || urlUid || getCurrentUserId();
+
+  if (!activeUid) {
+    console.warn('[Mantra API] Missing uid for assign_activity.');
+    if (MANTRA_CONFIG.devMode && typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+      console.log('[Mantra API Dev] Localhost dev bypass for missing uid in assign_activity:', { pathwayId, activityId, serviceId });
+      return { success: true };
+    }
+    return { success: false, error: 'Missing user identification (uid).' };
+  }
+
+  const payload: AssignActivityPayload = {
+    intent: 'assign_activity',
+    uid: activeUid,
+    pathway_id: pathwayId,
+    activity_id: activityId,
+    service_id: serviceId
+  };
+
+  try {
+    const response = await fetch(MANTRA_CONFIG.webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const result = await response.json().catch(() => null);
+
+    if (!response.ok || (result && result.success === false)) {
+      const errMsg = result?.message || result?.error || 'Activity assignment failed.';
+      console.error('[Mantra API] assign_activity webhook failed:', errMsg);
+      return { success: false, error: errMsg };
+    }
+
+    if (MANTRA_CONFIG.devMode) {
+      console.log('[Mantra API] assign_activity webhook succeeded:', result);
+    }
+
+    return { success: true, data: result };
+  } catch (error: any) {
+    console.error('[Mantra API] assign_activity network error:', error);
+    if (MANTRA_CONFIG.devMode && typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+      console.warn('[Mantra API Dev] Localhost fallback for assign_activity network error:', error);
+      return { success: true };
+    }
+    return { success: false, error: error?.message || 'Network connection failed.' };
+  }
+};
+
+
+

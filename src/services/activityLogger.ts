@@ -47,7 +47,8 @@ export const PLATFORM_ACTIVITIES = {
   EMOTIONAL_WELLBEING_ASSESSMENT: 'emotional-wellbeing-assessment',
   HOW_CAN_THERAPY_HELP: 'how-can-therapy-help',
   GETTING_STARTED: 'getting-started',
-  EARN_WHILE_YOU_IMPROVE: 'earn-while-you-improve-your-wellbeing'
+  EARN_WHILE_YOU_IMPROVE: 'earn-while-you-improve-your-wellbeing',
+  EMOTION_WHEEL: 'emotion-wheel'
 } as const;
 
 function getUserClientTimezone(): string {
@@ -277,20 +278,175 @@ export async function getLatestUserCheckIn(userId?: string) {
     const res = await fetch(url);
     const json = await res.json().catch(() => null);
     if (json && 'data' in json) {
-      setCachedLatestCheckIn(targetUserId, json.data);
       return json.data;
     }
 
     const fallbackRes = await fetch(`/api/activities/latest-check-in/${targetUserId}`);
     const fallbackJson = await fallbackRes.json().catch(() => null);
     if (fallbackJson && 'data' in fallbackJson) {
-      setCachedLatestCheckIn(targetUserId, fallbackJson.data);
       return fallbackJson.data;
     }
-    setCachedLatestCheckIn(targetUserId, null);
     return null;
   } catch (error) {
-    setCachedLatestCheckIn(targetUserId, null);
     return null;
   }
 }
+
+/**
+ * Saves step-by-step progress with response_data for re-entry/resume behavior.
+ */
+export async function saveUserLessonProgress(input: {
+  userId?: string;
+  lessonId: string;
+  currentStep: number;
+  totalSteps: number;
+  actionDone?: string;
+  responseData?: any;
+}) {
+  const userId = input.userId || getActiveUserId();
+  const payload = {
+    userId,
+    lessonId: input.lessonId,
+    currentStep: input.currentStep,
+    totalSteps: input.totalSteps,
+    actionDone: input.actionDone,
+    responseData: input.responseData || {}
+  };
+
+  const url = getApiUrl('/api/activities/progress');
+
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const json = await res.json().catch(() => null);
+    if (json?.success) return { success: true, data: json.data };
+
+    const fallbackRes = await fetch('/api/activities/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const fallbackJson = await fallbackRes.json().catch(() => null);
+    return fallbackJson || { success: false };
+  } catch (e) {
+    try {
+      const fallbackRes = await fetch('/api/activities/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      return await fallbackRes.json();
+    } catch (err2) {
+      console.warn('[ActivityLogger] saveUserLessonProgress non-blocking error:', e);
+      return { success: false };
+    }
+  }
+}
+
+/**
+ * Retrieves persisted progress and response state for re-entry.
+ */
+export async function getUserLessonProgress(lessonId: string, userId?: string) {
+  const targetUserId = userId || getActiveUserId();
+  const url = getApiUrl(`/api/activities/progress/${targetUserId}/${encodeURIComponent(lessonId)}`);
+
+  try {
+    const res = await fetch(url);
+    const json = await res.json().catch(() => null);
+    if (json?.data) return json.data;
+
+    const fallbackRes = await fetch(`/api/activities/progress/${targetUserId}/${encodeURIComponent(lessonId)}`);
+    const fallbackJson = await fallbackRes.json().catch(() => null);
+    return fallbackJson?.data || null;
+  } catch (e) {
+    try {
+      const fallbackRes = await fetch(`/api/activities/progress/${targetUserId}/${encodeURIComponent(lessonId)}`);
+      const fallbackJson = await fallbackRes.json().catch(() => null);
+      return fallbackJson?.data || null;
+    } catch (err2) {
+      console.warn('[ActivityLogger] getUserLessonProgress error:', e);
+      return null;
+    }
+  }
+}
+
+/**
+ * Persists a derived non-clinical personalization signal with source traceability.
+ * Idempotently deduplicated by (user_id, pathway_id, source_type, source_id, signal).
+ */
+export async function recordUserPersonalizationSignal(input: {
+  userId?: string;
+  pathwayId: string;
+  signal: string;
+  strength?: number;
+  sourceType?: string;
+  sourceId: string;
+  metadata?: any;
+}) {
+  const userId = input.userId || getActiveUserId();
+  const payload = {
+    userId,
+    pathwayId: input.pathwayId,
+    signal: input.signal,
+    strength: input.strength || 1,
+    sourceType: input.sourceType || 'activity',
+    sourceId: String(input.sourceId || 'activity_default'),
+    metadata: input.metadata || {}
+  };
+
+  const url = getApiUrl('/api/activities/signals');
+
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const json = await res.json().catch(() => null);
+    if (json?.success) return { success: true, data: json.data };
+
+    const fallbackRes = await fetch('/api/activities/signals', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    return await fallbackRes.json().catch(() => ({ success: false }));
+  } catch (e) {
+    try {
+      const fallbackRes = await fetch('/api/activities/signals', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      return await fallbackRes.json();
+    } catch (err2) {
+      console.warn('[ActivityLogger] recordUserPersonalizationSignal non-blocking warning:', e);
+      return { success: false };
+    }
+  }
+}
+
+/**
+ * Retrieves the live aggregated personalization profile computed across all accumulated signals.
+ */
+export async function getAggregatedPersonalizationFocus(pathwayId: string = 'depression', userId?: string) {
+  const targetUserId = userId || getActiveUserId();
+  const url = getApiUrl(`/api/activities/focus/${targetUserId}/${encodeURIComponent(pathwayId)}`);
+
+  try {
+    const res = await fetch(url);
+    const json = await res.json().catch(() => null);
+    if (json?.data) return json.data;
+
+    const fallbackRes = await fetch(`/api/activities/focus/${targetUserId}/${encodeURIComponent(pathwayId)}`);
+    const fallbackJson = await fallbackRes.json().catch(() => null);
+    return fallbackJson?.data || null;
+  } catch (e) {
+    return null;
+  }
+}
+
+

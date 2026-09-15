@@ -348,32 +348,6 @@ export default function DeveloperLessonsPage({ onNavigate }) {
                 <ChevronRight size={16} opacity={0.6} />
               </button>
 
-              <button
-                onClick={() => {
-                  setIsSidebarOpen(false);
-                  window.open('#/challenges', '_blank');
-                }}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  padding: '12px 14px',
-                  borderRadius: '10px',
-                  border: '1px solid rgba(2, 132, 199, 0.2)',
-                  background: 'linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(79, 70, 229, 0.08))',
-                  color: '#0284C7',
-                  fontWeight: 800,
-                  fontSize: '0.88rem',
-                  cursor: 'pointer'
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <Compass size={18} color="#0284C7" />
-                  <span>Challenge Hub (Mantra 21)</span>
-                </div>
-                <ChevronRight size={16} opacity={0.6} />
-              </button>
-
               {isSuperAdmin && (
                 <button
                   onClick={() => { handleTabChange('users'); setIsSidebarOpen(false); }}

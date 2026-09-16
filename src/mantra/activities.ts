@@ -109,6 +109,19 @@ export const activities: Activity[] = [
     description: 'Identify and understand what you are feeling right now through an interactive emotion wheel.'
   },
   {
+    lessonId: 'mantra21_myths_we_tell_ourselves',
+    activityId: 'mantra21_myths_we_tell_ourselves',
+    title: 'Myths We Tell Ourselves',
+    rewardPoints: 25,
+    estimatedDuration: '3 min',
+    route: '/task/myths-we-tell-ourselves',
+    services: ['therapy'],
+    problem: 'depression',
+    problems: ['depression'],
+    day: 1,
+    description: 'Day 1: 5 common beliefs about mental health. Let’s question them.'
+  },
+  {
     lessonId: 'depression_what_is_depression',
     activityId: 'depression_what_is_depression',
     title: 'What Is Depression?',

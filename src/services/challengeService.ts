@@ -187,6 +187,14 @@ export function createOptimisticActiveDashboard(userId: string, challengeId: str
     ],
     suggestions: [
       {
+        id: 'myths_we_tell_ourselves',
+        title: 'Myths We Tell Ourselves',
+        description: '5 common beliefs about mental health. Let’s question them.',
+        tag: 'MINDSET',
+        estimatedMinutes: 3,
+        actionRoute: '/task/myths-we-tell-ourselves'
+      },
+      {
         id: 'support_circle',
         title: 'Your Support Circle',
         description: 'Identify the people you can lean on when things feel heavy.',

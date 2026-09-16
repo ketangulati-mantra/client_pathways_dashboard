@@ -20,6 +20,7 @@ import Mantra21RevealExperience from './Mantra21RevealExperience';
 import Mantra21JoinLandingPage from './Mantra21JoinLandingPage';
 import ChallengeHubPage from './ChallengeHubPage';
 import Mantra21DailyActivityView from './Mantra21DailyActivityView';
+import MythsWeTellOurselvesActivity from './MythsWeTellOurselvesActivity';
 import AdminLoginPage from './AdminLoginPage';
 import { ProtectedRoute } from '../auth/ProtectedRoute';
 
@@ -30,6 +31,11 @@ import { ProtectedRoute } from '../auth/ProtectedRoute';
 const ROUTE_VIEW_REGISTRY = {
   '/': { default: (props) => <ProtectedRoute><DeveloperLessonsPage {...props} /></ProtectedRoute> },
   '/user_pathways': { default: (props) => <ProtectedRoute><DeveloperLessonsPage {...props} /></ProtectedRoute> },
+  '/task/myths-we-tell-ourselves': { default: MythsWeTellOurselvesActivity },
+  '/task/myths_we_tell_ourselves': { default: MythsWeTellOurselvesActivity },
+  '/myths-we-tell-ourselves': { default: MythsWeTellOurselvesActivity },
+  '/task/mantra21-myths-we-tell-ourselves': { default: MythsWeTellOurselvesActivity },
+  '/task/mantra21_myths_we_tell_ourselves': { default: MythsWeTellOurselvesActivity },
   '/task/mantra-21-daily': { default: (props) => <Mantra21DailyActivityView dayNumber={1} {...props} /> },
   '/task/mantra21-daily': { default: (props) => <Mantra21DailyActivityView dayNumber={1} {...props} /> },
   '/task/challenge-practice': { default: (props) => <Mantra21DailyActivityView dayNumber={1} {...props} /> },
@@ -181,6 +187,10 @@ export function resolveLessonView({ currentPath, currentService, onBack, onNavig
 
     if (matchingActivity.lessonId === 'daily-check-in' || matchingActivity.lessonId === 'daily_check_in' || matchingActivity.lessonId === 'check-in') {
       return <DailyCheckInPage onBack={onBack} onNavigate={onNavigate} service={currentService} />;
+    }
+
+    if (matchingActivity.lessonId === 'mantra21_myths_we_tell_ourselves' || matchingActivity.lessonId === 'myths-we-tell-ourselves') {
+      return <MythsWeTellOurselvesActivity onBack={onBack} onNavigate={onNavigate} service={currentService} />;
     }
 
     if (matchingActivity.lessonId === 'depression_what_is_depression') {

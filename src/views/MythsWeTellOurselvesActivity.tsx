@@ -7,12 +7,7 @@ import {
   Sparkles,
   CheckCircle2,
   HelpCircle,
-  Lightbulb,
-  ShieldCheck,
-  ChevronRight,
-  Compass,
-  Smile,
-  RefreshCw
+  Lightbulb
 } from 'lucide-react';
 import {
   logUserActivityToDB,
@@ -22,9 +17,6 @@ import {
 } from '../services/activityLogger';
 import { completeLesson } from '../mantra/api';
 import { getActiveUserId } from '../services/authService';
-
-export const THERAPY_MANTRA_LOGO_URL =
-  'https://res.cloudinary.com/hxbamdqf/image/upload/v1786010770/MantraCareLogo_jjuy1c.png';
 
 export interface MythItem {
   id: string;
@@ -99,7 +91,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
   // 0: Opening Screen, 1..5: Myth 1..5, 6: Completion Screen
   const [currentScreen, setCurrentScreen] = useState<number>(0);
   
-  // Interaction state per myth: mythId -> { choice: 'MYTH' | 'REALITY', timestamp: number }
+  // Interaction state per myth: mythId -> 'MYTH' | 'REALITY'
   const [userAnswers, setUserAnswers] = useState<Record<string, 'MYTH' | 'REALITY'>>({});
   // Is explanation revealed for current myth
   const [revealed, setRevealed] = useState<boolean>(false);
@@ -179,11 +171,11 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
 
     // Record non-clinical signal tag
     recordUserPersonalizationSignal({
-      pathwayId: 'mantra_21',
+      pathwayId: 'standalone_psychoeducation',
       signal: myth.signalTag,
       sourceType: 'micro_activity',
       sourceId: myth.id,
-      metadata: { selectedAnswer: choice, day: 1 }
+      metadata: { selectedAnswer: choice }
     }).catch(() => {});
 
     saveProgressState(currentScreen, updated);
@@ -221,7 +213,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
         service,
         emotionZone: 'mind',
         primaryEmotion: 'insight',
-        reflection: 'Questioned 5 common mental health myths on Day 1',
+        reflection: 'Questioned 5 common mental health myths',
         resultSummary: {
           completedMyths: 5,
           userAnswers,
@@ -231,8 +223,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
         metadata: {
           activity_started: new Date(startTimeRef.current).toISOString(),
           activity_completed: new Date().toISOString(),
-          completion_time_ms: completionTimeMs,
-          day: 1
+          completion_time_ms: completionTimeMs
         }
       });
 
@@ -241,7 +232,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
         await completeLesson('mantra21_day_01');
       } catch (e) {}
 
-      // 3. Mark Day 1 complete in localStorage
+      // 3. Mark completion in localStorage
       if (typeof window !== 'undefined') {
         localStorage.setItem(`mantra21_day_1_completed_${userId}`, 'true');
         localStorage.setItem(`mantra21_myths_completed_${userId}`, 'true');
@@ -249,7 +240,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
 
       setCompleted(true);
 
-      // Return user to Day 1 / Dashboard
+      // Return user to previous flow / dashboard
       setTimeout(() => {
         if (onNavigate) {
           onNavigate('/challenges');
@@ -278,10 +269,14 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
       style={{
         minHeight: '100vh',
         width: '100%',
-        backgroundColor: '#FAFAF9', // Soft light warm neutral
-        backgroundImage: 'radial-gradient(circle at 10% 20%, rgba(224, 242, 254, 0.45) 0%, rgba(250, 250, 249, 0.95) 90%)',
+        backgroundColor: '#F8FAFC',
+        backgroundImage: `
+          radial-gradient(ellipse 70% 50% at 50% -10%, rgba(224, 242, 254, 0.75) 0%, rgba(248, 250, 252, 0) 100%),
+          radial-gradient(ellipse 60% 40% at 85% 65%, rgba(238, 242, 255, 0.65) 0%, rgba(248, 250, 252, 0) 100%),
+          radial-gradient(ellipse 50% 50% at 15% 85%, rgba(240, 249, 255, 0.7) 0%, rgba(248, 250, 252, 0) 100%)
+        `,
         color: '#0F172A',
-        fontFamily: "'Outfit', 'Inter', -apple-system, sans-serif",
+        fontFamily: "'Plus Jakarta Sans', 'Outfit', 'Inter', -apple-system, sans-serif",
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -290,17 +285,17 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
         position: 'relative'
       }}
     >
-      {/* AMBIENT BACKGROUND GLOWS */}
+      {/* ATMOSPHERIC BACKGROUND BLOBS */}
       <div
         style={{
           position: 'fixed',
-          top: '-10%',
+          top: '-15%',
           right: '-10%',
-          width: '450px',
-          height: '450px',
+          width: '560px',
+          height: '560px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(56, 189, 248, 0) 70%)',
-          filter: 'blur(40px)',
+          background: 'radial-gradient(circle, rgba(186, 230, 253, 0.4) 0%, rgba(186, 230, 253, 0) 70%)',
+          filter: 'blur(60px)',
           pointerEvents: 'none',
           zIndex: 0
         }}
@@ -308,29 +303,29 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
       <div
         style={{
           position: 'fixed',
-          bottom: '-10%',
+          bottom: '-15%',
           left: '-10%',
-          width: '400px',
-          height: '400px',
+          width: '500px',
+          height: '500px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(129, 140, 248, 0.08) 0%, rgba(129, 140, 248, 0) 70%)',
-          filter: 'blur(40px)',
+          background: 'radial-gradient(circle, rgba(199, 210, 254, 0.35) 0%, rgba(199, 210, 254, 0) 70%)',
+          filter: 'blur(60px)',
           pointerEvents: 'none',
           zIndex: 0
         }}
       />
 
-      {/* TOP HEADER */}
+      {/* MINIMALIST HEADER - NO LOGOS, NO MANTRA 21 */}
       <header
         style={{
           width: '100%',
-          maxWidth: '760px',
+          maxWidth: '840px',
           height: '64px',
-          padding: '0 20px',
+          padding: '0 24px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          zIndex: 10,
+          zIndex: 20,
           boxSizing: 'border-box'
         }}
       >
@@ -351,65 +346,68 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
             border: 'none',
             display: 'flex',
             alignItems: 'center',
-            gap: '6px',
+            gap: '8px',
             color: '#64748B',
-            fontSize: '0.88rem',
+            fontSize: '0.9rem',
             fontWeight: 600,
             cursor: 'pointer',
-            padding: '8px 10px',
-            borderRadius: '10px',
-            transition: 'background 0.2s'
+            padding: '8px 12px',
+            borderRadius: '12px',
+            transition: 'all 0.15s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = '#0F172A';
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = '#64748B';
+            e.currentTarget.style.backgroundColor = 'transparent';
           }}
         >
-          <ArrowLeft size={18} />
+          <ArrowLeft size={17} />
           <span>{currentScreen > 0 && currentScreen < 6 ? 'Back' : 'Exit'}</span>
         </button>
-
-        {/* LOGO */}
-        <img
-          src={THERAPY_MANTRA_LOGO_URL}
-          alt="TherapyMantra"
-          style={{ height: '28px', objectFit: 'contain' }}
-        />
 
         {/* PROGRESS PILL */}
         {currentScreen >= 1 && currentScreen <= 5 ? (
           <div
             style={{
-              fontSize: '0.82rem',
+              fontSize: '0.84rem',
               fontWeight: 700,
-              letterSpacing: '0.04em',
+              letterSpacing: '0.06em',
               color: '#0284C7',
-              backgroundColor: '#E0F2FE',
-              padding: '4px 12px',
+              backgroundColor: 'rgba(255, 255, 255, 0.85)',
+              padding: '5px 14px',
               borderRadius: '999px',
-              border: '1px solid #BAE6FD'
+              border: '1px solid rgba(186, 230, 253, 0.8)',
+              boxShadow: '0 2px 8px rgba(2, 132, 199, 0.06)',
+              backdropFilter: 'blur(8px)'
             }}
           >
             {currentMyth?.numberStr} / 05
           </div>
         ) : (
-          <div style={{ width: '60px' }} />
+          <div style={{ width: '48px' }} />
         )}
       </header>
 
-      {/* PROGRESS BAR (Only on interactive screens) */}
+      {/* TOP PROGRESS BAR */}
       {currentScreen >= 1 && currentScreen <= 5 && (
         <div
           style={{
             width: '100%',
-            maxWidth: '760px',
-            padding: '0 20px',
+            maxWidth: '840px',
+            padding: '0 24px',
             boxSizing: 'border-box',
-            marginBottom: '12px',
-            zIndex: 10
+            marginBottom: '8px',
+            zIndex: 20
           }}
         >
           <div
             style={{
               width: '100%',
-              height: '4px',
-              backgroundColor: '#E2E8F0',
+              height: '3px',
+              backgroundColor: 'rgba(226, 232, 240, 0.7)',
               borderRadius: '999px',
               overflow: 'hidden'
             }}
@@ -417,10 +415,10 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
             <motion.div
               initial={{ width: `${((currentScreen - 1) / 5) * 100}%` }}
               animate={{ width: `${(currentScreen / 5) * 100}%` }}
-              transition={{ duration: 0.4, ease: 'easeOut' }}
+              transition={{ duration: 0.35, ease: 'easeOut' }}
               style={{
                 height: '100%',
-                backgroundColor: '#0284C7',
+                background: 'linear-gradient(90deg, #38BDF8 0%, #0284C7 100%)',
                 borderRadius: '999px'
               }}
             />
@@ -428,39 +426,39 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
         </div>
       )}
 
-      {/* MAIN CONTAINER */}
+      {/* MAIN OPEN CANVAS */}
       <main
         style={{
           flex: 1,
           width: '100%',
-          maxWidth: '720px',
+          maxWidth: '800px',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: '16px 20px 32px 20px',
+          padding: '24px 24px 48px 24px',
           boxSizing: 'border-box',
-          zIndex: 5
+          zIndex: 10
         }}
       >
         <AnimatePresence mode="wait">
           {/* ========================================================== */}
-          {/* SCREEN 0: OPENING SCREEN                                  */}
+          {/* SCREEN 0: EDITORIAL OPENING SCREEN                         */}
           {/* ========================================================== */}
           {currentScreen === 0 && (
             <motion.div
-              key="opening_screen"
+              key="editorial_opening"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
-              transition={{ duration: 0.35, ease: 'easeOut' }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               style={{
                 width: '100%',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 textAlign: 'center',
-                padding: '24px 0'
+                padding: '20px 0'
               }}
             >
               {/* EYEBROW */}
@@ -469,75 +467,58 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '6px',
-                  backgroundColor: '#F0F9FF',
-                  border: '1px solid #BAE6FD',
-                  color: '#0369A1',
-                  fontSize: '0.78rem',
+                  color: '#0284C7',
+                  fontSize: '0.8rem',
                   fontWeight: 800,
-                  letterSpacing: '0.08em',
-                  padding: '6px 14px',
-                  borderRadius: '999px',
+                  letterSpacing: '0.12em',
                   textTransform: 'uppercase',
                   marginBottom: '20px'
                 }}
               >
-                <Sparkles size={14} color="#0284C7" />
-                <span>MANTRA 21 · DAY 1</span>
+                <span>5 MINUTE RESET</span>
               </div>
 
-              {/* TITLE */}
+              {/* HERO TITLE */}
               <h1
                 style={{
-                  fontSize: 'clamp(2rem, 5vw, 2.75rem)',
+                  fontSize: 'clamp(2.4rem, 6.5vw, 3.8rem)',
                   fontWeight: 900,
-                  lineHeight: 1.15,
-                  letterSpacing: '-0.03em',
+                  lineHeight: 1.08,
+                  letterSpacing: '-0.035em',
                   color: '#0F172A',
-                  margin: '0 0 14px 0',
-                  maxWidth: '560px'
+                  margin: '0 0 16px 0',
+                  maxWidth: '680px'
                 }}
               >
-                MYTHS WE TELL OURSELVES
+                MYTHS WE TELL<br />OURSELVES
               </h1>
 
               {/* SUBTITLE */}
               <p
                 style={{
-                  fontSize: 'clamp(1.05rem, 2.8vw, 1.25rem)',
+                  fontSize: 'clamp(1.1rem, 3vw, 1.35rem)',
                   fontWeight: 500,
                   color: '#0284C7',
-                  margin: '0 0 20px 0',
-                  maxWidth: '520px',
+                  margin: '0 0 24px 0',
+                  maxWidth: '560px',
                   lineHeight: 1.45
                 }}
               >
-                “5 common beliefs about mental health. Let’s question them.”
+                “5 common beliefs about mental health.<br />Let’s question them.”
               </p>
 
-              {/* SUPPORTING COPY */}
-              <div
+              {/* SUPPORTING TEXT - DIRECTLY ON CANVAS */}
+              <p
                 style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.85)',
-                  border: '1px solid #E2E8F0',
-                  backdropFilter: 'blur(8px)',
-                  borderRadius: '16px',
-                  padding: '18px 24px',
-                  maxWidth: '480px',
-                  margin: '0 0 28px 0',
-                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.03)'
+                  fontSize: 'clamp(0.96rem, 2.4vw, 1.08rem)',
+                  color: '#475569',
+                  lineHeight: 1.65,
+                  maxWidth: '520px',
+                  margin: '0 0 32px 0'
                 }}
               >
-                <p
-                  style={{
-                    fontSize: '0.94rem',
-                    color: '#475569',
-                    lineHeight: 1.6,
-                    margin: 0
-                  }}
-                >
-                  We pick up ideas about mental health from family, friends, social media, movies — and sometimes from ourselves.
-                </p>
-              </div>
+                We pick up ideas about mental health from family, friends, social media, movies — and sometimes from ourselves.
+              </p>
 
               {/* BADGE */}
               <div
@@ -546,10 +527,10 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                   alignItems: 'center',
                   gap: '6px',
                   color: '#64748B',
-                  fontSize: '0.82rem',
+                  fontSize: '0.84rem',
                   fontWeight: 700,
-                  letterSpacing: '0.04em',
-                  marginBottom: '32px'
+                  letterSpacing: '0.06em',
+                  marginBottom: '36px'
                 }}
               >
                 <Clock size={15} />
@@ -558,17 +539,17 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
 
               {/* PRIMARY CTA */}
               <motion.button
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.025, translateY: -1 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={handleStart}
                 style={{
                   width: '100%',
-                  maxWidth: '340px',
-                  height: '54px',
+                  maxWidth: '320px',
+                  height: '56px',
                   backgroundColor: '#0284C7',
                   color: '#FFFFFF',
                   border: 'none',
-                  borderRadius: '14px',
+                  borderRadius: '16px',
                   fontSize: '1.05rem',
                   fontWeight: 800,
                   letterSpacing: '0.04em',
@@ -577,9 +558,9 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: '10px',
-                  boxShadow: '0 8px 24px rgba(2, 132, 199, 0.28)',
+                  boxShadow: '0 10px 28px rgba(2, 132, 199, 0.28)',
                   transition: 'background 0.2s',
-                  marginBottom: '14px'
+                  marginBottom: '16px'
                 }}
               >
                 <span>START</span>
@@ -589,10 +570,10 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
               {/* REASSURANCE */}
               <p
                 style={{
-                  fontSize: '0.84rem',
+                  fontSize: '0.85rem',
                   color: '#94A3B8',
                   margin: 0,
-                  maxWidth: '360px',
+                  maxWidth: '380px',
                   lineHeight: 1.45
                 }}
               >
@@ -602,311 +583,317 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
           )}
 
           {/* ========================================================== */}
-          {/* SCREEN 1..5: MYTH STATEMENT & REVEAL                       */}
+          {/* SCREEN 1..5: OPEN-CANVAS MYTH QUESTION                     */}
           {/* ========================================================== */}
           {currentScreen >= 1 && currentScreen <= 5 && currentMyth && (
             <motion.div
-              key={`myth_${currentMyth.id}`}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.35, ease: 'easeOut' }}
+              key={`open_myth_${currentMyth.id}`}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               style={{
                 width: '100%',
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center'
+                alignItems: 'center',
+                textAlign: 'center',
+                padding: '12px 0'
               }}
             >
-              {/* HERO STATEMENT CARD */}
+              {/* SMALL EYEBROW */}
               <div
                 style={{
-                  width: '100%',
-                  backgroundColor: '#FFFFFF',
-                  borderRadius: '24px',
-                  border: '1px solid #E2E8F0',
-                  boxShadow: '0 8px 30px rgba(15, 23, 42, 0.04)',
-                  padding: 'clamp(24px, 5vw, 36px)',
-                  boxSizing: 'border-box',
-                  textAlign: 'center',
-                  marginBottom: '20px',
-                  position: 'relative'
+                  fontSize: '0.82rem',
+                  fontWeight: 800,
+                  letterSpacing: '0.12em',
+                  color: '#0284C7',
+                  textTransform: 'uppercase',
+                  marginBottom: '20px'
                 }}
               >
-                {/* MYTH NUMBER EYEBROW */}
+                MYTH {currentMyth.numberStr} / 05
+              </div>
+
+              {/* LARGE EDITORIAL STATEMENT - VISUAL HERO */}
+              <h2
+                style={{
+                  fontSize: 'clamp(1.75rem, 5vw, 2.75rem)',
+                  fontWeight: 900,
+                  lineHeight: 1.22,
+                  color: '#0F172A',
+                  letterSpacing: '-0.03em',
+                  margin: '0 0 28px 0',
+                  maxWidth: '720px'
+                }}
+              >
+                {currentMyth.statement}
+              </h2>
+
+              {/* QUESTION & SELECTION (BEFORE REVEAL) */}
+              {!revealed ? (
                 <div
                   style={{
-                    fontSize: '0.78rem',
-                    fontWeight: 800,
-                    letterSpacing: '0.08em',
-                    color: '#64748B',
-                    textTransform: 'uppercase',
-                    marginBottom: '16px'
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center'
                   }}
                 >
-                  MYTH {currentMyth.numberStr} / 05
-                </div>
-
-                {/* STATEMENT - HERO OF SCREEN */}
-                <h2
-                  style={{
-                    fontSize: 'clamp(1.45rem, 4vw, 2.1rem)',
-                    fontWeight: 800,
-                    lineHeight: 1.3,
-                    color: '#0F172A',
-                    letterSpacing: '-0.025em',
-                    margin: '0 0 20px 0'
-                  }}
-                >
-                  {currentMyth.statement}
-                </h2>
-
-                {/* QUESTION */}
-                {!revealed && (
                   <p
                     style={{
-                      fontSize: '0.96rem',
-                      fontWeight: 600,
-                      color: '#0284C7',
+                      fontSize: '0.84rem',
+                      fontWeight: 800,
+                      letterSpacing: '0.08em',
+                      color: '#64748B',
+                      textTransform: 'uppercase',
                       margin: '0 0 24px 0'
                     }}
                   >
-                    What do you think?
+                    WHAT DO YOU THINK?
                   </p>
-                )}
 
-                {/* TWO LARGE CHOICES: MYTH vs REALITY */}
-                {!revealed ? (
+                  {/* TWO LARGE TACTILE BUTTONS */}
                   <div
                     style={{
                       display: 'grid',
                       gridTemplateColumns: '1fr 1fr',
-                      gap: '14px',
+                      gap: '16px',
                       width: '100%',
-                      maxWidth: '440px',
-                      margin: '0 auto'
+                      maxWidth: '460px'
                     }}
                   >
                     <motion.button
-                      whileHover={{ scale: 1.02 }}
+                      whileHover={{ scale: 1.025, translateY: -2 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => handleSelectChoice('MYTH')}
                       style={{
-                        height: '56px',
-                        backgroundColor: '#F8FAFC',
-                        border: '2px solid #E2E8F0',
-                        borderRadius: '16px',
+                        height: '64px',
+                        backgroundColor: '#FFFFFF',
+                        border: '1.5px solid rgba(226, 232, 240, 0.9)',
+                        borderRadius: '18px',
                         color: '#0F172A',
-                        fontSize: '1rem',
+                        fontSize: '1.05rem',
                         fontWeight: 800,
                         letterSpacing: '0.06em',
                         cursor: 'pointer',
-                        transition: 'all 0.18s ease',
-                        boxShadow: '0 2px 8px rgba(0,0,0,0.02)'
+                        transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+                        boxShadow: '0 4px 16px rgba(15, 23, 42, 0.04)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.borderColor = '#0284C7';
                         e.currentTarget.style.backgroundColor = '#F0F9FF';
                         e.currentTarget.style.color = '#0284C7';
+                        e.currentTarget.style.boxShadow = '0 8px 24px rgba(2, 132, 199, 0.12)';
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.borderColor = '#E2E8F0';
-                        e.currentTarget.style.backgroundColor = '#F8FAFC';
+                        e.currentTarget.style.borderColor = 'rgba(226, 232, 240, 0.9)';
+                        e.currentTarget.style.backgroundColor = '#FFFFFF';
                         e.currentTarget.style.color = '#0F172A';
+                        e.currentTarget.style.boxShadow = '0 4px 16px rgba(15, 23, 42, 0.04)';
                       }}
                     >
                       MYTH
                     </motion.button>
 
                     <motion.button
-                      whileHover={{ scale: 1.02 }}
+                      whileHover={{ scale: 1.025, translateY: -2 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => handleSelectChoice('REALITY')}
                       style={{
-                        height: '56px',
-                        backgroundColor: '#F8FAFC',
-                        border: '2px solid #E2E8F0',
-                        borderRadius: '16px',
+                        height: '64px',
+                        backgroundColor: '#FFFFFF',
+                        border: '1.5px solid rgba(226, 232, 240, 0.9)',
+                        borderRadius: '18px',
                         color: '#0F172A',
-                        fontSize: '1rem',
+                        fontSize: '1.05rem',
                         fontWeight: 800,
                         letterSpacing: '0.06em',
                         cursor: 'pointer',
-                        transition: 'all 0.18s ease',
-                        boxShadow: '0 2px 8px rgba(0,0,0,0.02)'
+                        transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+                        boxShadow: '0 4px 16px rgba(15, 23, 42, 0.04)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.borderColor = '#0284C7';
                         e.currentTarget.style.backgroundColor = '#F0F9FF';
                         e.currentTarget.style.color = '#0284C7';
+                        e.currentTarget.style.boxShadow = '0 8px 24px rgba(2, 132, 199, 0.12)';
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.borderColor = '#E2E8F0';
-                        e.currentTarget.style.backgroundColor = '#F8FAFC';
+                        e.currentTarget.style.borderColor = 'rgba(226, 232, 240, 0.9)';
+                        e.currentTarget.style.backgroundColor = '#FFFFFF';
                         e.currentTarget.style.color = '#0F172A';
+                        e.currentTarget.style.boxShadow = '0 4px 16px rgba(15, 23, 42, 0.04)';
                       }}
                     >
                       REALITY
                     </motion.button>
                   </div>
-                ) : null}
+                </div>
+              ) : (
+                /* EXPLANATION REVEAL - SEAMLESS CANVAS FLOW */
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                  style={{
+                    width: '100%',
+                    maxWidth: '580px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center'
+                  }}
+                >
+                  {/* REVEAL BADGE */}
+                  <div
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      backgroundColor: 'rgba(224, 242, 254, 0.8)',
+                      border: '1px solid rgba(186, 230, 253, 0.9)',
+                      color: '#0369A1',
+                      fontSize: '0.8rem',
+                      fontWeight: 900,
+                      letterSpacing: '0.1em',
+                      padding: '6px 18px',
+                      borderRadius: '999px',
+                      textTransform: 'uppercase',
+                      marginBottom: '24px'
+                    }}
+                  >
+                    <Sparkles size={14} color="#0284C7" />
+                    <span>IT’S A MYTH</span>
+                  </div>
 
-                {/* EXPLANATION REVEAL STATE */}
-                <AnimatePresence>
-                  {revealed && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0, y: 12 }}
-                      animate={{ opacity: 1, height: 'auto', y: 0 }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.35, ease: 'easeOut' }}
+                  {/* WHY? SECTION */}
+                  <div
+                    style={{
+                      width: '100%',
+                      textAlign: 'left',
+                      backgroundColor: 'rgba(255, 255, 255, 0.85)',
+                      border: '1px solid rgba(226, 232, 240, 0.85)',
+                      borderRadius: '20px',
+                      padding: '20px 24px',
+                      marginBottom: '14px',
+                      boxShadow: '0 4px 20px rgba(15, 23, 42, 0.03)',
+                      backdropFilter: 'blur(10px)',
+                      boxSizing: 'border-box'
+                    }}
+                  >
+                    <div
                       style={{
-                        textAlign: 'left',
-                        paddingTop: '8px'
+                        fontSize: '0.78rem',
+                        fontWeight: 900,
+                        letterSpacing: '0.1em',
+                        color: '#0284C7',
+                        textTransform: 'uppercase',
+                        marginBottom: '8px'
                       }}
                     >
-                      {/* REVEAL BADGE: IT'S A MYTH */}
-                      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-                        <div
-                          style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '6px',
-                            backgroundColor: '#E0F2FE',
-                            border: '1px solid #BAE6FD',
-                            color: '#0369A1',
-                            fontSize: '0.8rem',
-                            fontWeight: 900,
-                            letterSpacing: '0.08em',
-                            padding: '6px 16px',
-                            borderRadius: '999px',
-                            textTransform: 'uppercase'
-                          }}
-                        >
-                          <Sparkles size={14} color="#0284C7" />
-                          <span>IT’S A MYTH</span>
-                        </div>
-                      </div>
+                      WHY?
+                    </div>
+                    <p
+                      style={{
+                        fontSize: 'clamp(0.96rem, 2vw, 1.04rem)',
+                        lineHeight: 1.6,
+                        color: '#334155',
+                        margin: 0
+                      }}
+                    >
+                      {currentMyth.why}
+                    </p>
+                  </div>
 
-                      {/* WHY? SECTION */}
-                      <div
-                        style={{
-                          backgroundColor: '#F8FAFC',
-                          border: '1px solid #E2E8F0',
-                          borderRadius: '16px',
-                          padding: '18px 20px',
-                          marginBottom: '14px'
-                        }}
-                      >
-                        <div
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '8px',
-                            fontSize: '0.76rem',
-                            fontWeight: 900,
-                            letterSpacing: '0.08em',
-                            color: '#0284C7',
-                            textTransform: 'uppercase',
-                            marginBottom: '6px'
-                          }}
-                        >
-                          <HelpCircle size={15} />
-                          <span>WHY?</span>
-                        </div>
-                        <p
-                          style={{
-                            fontSize: '0.95rem',
-                            lineHeight: 1.55,
-                            color: '#334155',
-                            margin: 0
-                          }}
-                        >
-                          {currentMyth.why}
-                        </p>
-                      </div>
+                  {/* TRY THIS SECTION */}
+                  <div
+                    style={{
+                      width: '100%',
+                      textAlign: 'left',
+                      backgroundColor: 'rgba(240, 253, 244, 0.85)',
+                      border: '1px solid rgba(187, 247, 208, 0.85)',
+                      borderRadius: '20px',
+                      padding: '20px 24px',
+                      marginBottom: '28px',
+                      boxShadow: '0 4px 20px rgba(22, 163, 74, 0.03)',
+                      backdropFilter: 'blur(10px)',
+                      boxSizing: 'border-box'
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: '0.78rem',
+                        fontWeight: 900,
+                        letterSpacing: '0.1em',
+                        color: '#16A34A',
+                        textTransform: 'uppercase',
+                        marginBottom: '8px'
+                      }}
+                    >
+                      TRY THIS
+                    </div>
+                    <p
+                      style={{
+                        fontSize: 'clamp(0.96rem, 2vw, 1.04rem)',
+                        lineHeight: 1.6,
+                        color: '#166534',
+                        fontWeight: 500,
+                        margin: 0
+                      }}
+                    >
+                      {currentMyth.tryThis}
+                    </p>
+                  </div>
 
-                      {/* TRY THIS SECTION */}
-                      <div
-                        style={{
-                          backgroundColor: '#F0FDF4',
-                          border: '1px solid #BBF7D0',
-                          borderRadius: '16px',
-                          padding: '18px 20px',
-                          marginBottom: '24px'
-                        }}
-                      >
-                        <div
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '8px',
-                            fontSize: '0.76rem',
-                            fontWeight: 900,
-                            letterSpacing: '0.08em',
-                            color: '#16A34A',
-                            textTransform: 'uppercase',
-                            marginBottom: '6px'
-                          }}
-                        >
-                          <Lightbulb size={15} />
-                          <span>TRY THIS</span>
-                        </div>
-                        <p
-                          style={{
-                            fontSize: '0.95rem',
-                            lineHeight: 1.55,
-                            color: '#166534',
-                            fontWeight: 500,
-                            margin: 0
-                          }}
-                        >
-                          {currentMyth.tryThis}
-                        </p>
-                      </div>
-
-                      {/* GOT IT CTA */}
-                      <motion.button
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        onClick={handleNext}
-                        style={{
-                          width: '100%',
-                          height: '52px',
-                          backgroundColor: '#0284C7',
-                          color: '#FFFFFF',
-                          border: 'none',
-                          borderRadius: '14px',
-                          fontSize: '1rem',
-                          fontWeight: 800,
-                          letterSpacing: '0.04em',
-                          cursor: 'pointer',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: '8px',
-                          boxShadow: '0 6px 20px rgba(2, 132, 199, 0.25)'
-                        }}
-                      >
-                        <span>{currentScreen === 5 ? 'SEE SUMMARY' : 'GOT IT'}</span>
-                        <ArrowRight size={18} />
-                      </motion.button>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                  {/* GOT IT CTA */}
+                  <motion.button
+                    whileHover={{ scale: 1.025, translateY: -1 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={handleNext}
+                    style={{
+                      width: '100%',
+                      maxWidth: '300px',
+                      height: '52px',
+                      backgroundColor: '#0284C7',
+                      color: '#FFFFFF',
+                      border: 'none',
+                      borderRadius: '16px',
+                      fontSize: '1rem',
+                      fontWeight: 800,
+                      letterSpacing: '0.04em',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      boxShadow: '0 8px 24px rgba(2, 132, 199, 0.25)',
+                      transition: 'background 0.2s'
+                    }}
+                  >
+                    <span>{currentScreen === 5 ? 'SEE SUMMARY' : 'GOT IT'}</span>
+                    <ArrowRight size={18} />
+                  </motion.button>
+                </motion.div>
+              )}
             </motion.div>
           )}
 
           {/* ========================================================== */}
-          {/* SCREEN 6: COMPLETION SCREEN                                */}
+          {/* SCREEN 6: COMPLETION SCREEN - OPEN CANVAS                  */}
           {/* ========================================================== */}
           {currentScreen === 6 && (
             <motion.div
-              key="completion_screen"
-              initial={{ opacity: 0, scale: 0.96 }}
+              key="completion_open_screen"
+              initial={{ opacity: 0, scale: 0.97 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.35, ease: 'easeOut' }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               style={{
                 width: '100%',
                 display: 'flex',
@@ -916,78 +903,79 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                 padding: '16px 0'
               }}
             >
-              {/* CHECKMARK ICON */}
+              {/* CHECKMARK BADGE */}
               <div
                 style={{
-                  width: '64px',
-                  height: '64px',
+                  width: '68px',
+                  height: '68px',
                   borderRadius: '50%',
-                  backgroundColor: '#E0F2FE',
-                  border: '2px solid #BAE6FD',
+                  backgroundColor: '#FFFFFF',
+                  border: '1.5px solid rgba(186, 230, 253, 0.9)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: '#0284C7',
-                  marginBottom: '20px',
-                  boxShadow: '0 8px 24px rgba(2, 132, 199, 0.16)'
+                  marginBottom: '24px',
+                  boxShadow: '0 8px 24px rgba(2, 132, 199, 0.12)'
                 }}
               >
-                <CheckCircle2 size={34} />
+                <CheckCircle2 size={36} />
               </div>
 
               {/* COMPLETION TITLE */}
               <h1
                 style={{
-                  fontSize: 'clamp(1.8rem, 4.5vw, 2.4rem)',
+                  fontSize: 'clamp(2rem, 5.5vw, 3rem)',
                   fontWeight: 900,
-                  lineHeight: 1.15,
-                  letterSpacing: '-0.03em',
+                  lineHeight: 1.12,
+                  letterSpacing: '-0.035em',
                   color: '#0F172A',
-                  margin: '0 0 14px 0',
-                  maxWidth: '540px'
+                  margin: '0 0 16px 0',
+                  maxWidth: '600px'
                 }}
               >
-                YOU JUST QUESTIONED 5 MYTHS
+                YOU JUST QUESTIONED<br />5 MYTHS
               </h1>
 
               {/* SUPPORTING COPY */}
               <div
                 style={{
-                  maxWidth: '480px',
-                  margin: '0 0 24px 0',
+                  maxWidth: '520px',
+                  margin: '0 0 32px 0',
                   color: '#475569',
-                  fontSize: '0.96rem',
-                  lineHeight: 1.6
+                  fontSize: 'clamp(0.96rem, 2.4vw, 1.05rem)',
+                  lineHeight: 1.65
                 }}
               >
-                <p style={{ margin: '0 0 10px 0' }}>
+                <p style={{ margin: '0 0 8px 0' }}>
                   Mental health isn’t about having everything figured out.
                 </p>
-                <p style={{ margin: 0, fontWeight: 500, color: '#334155' }}>
+                <p style={{ margin: 0, fontWeight: 500, color: '#1E293B' }}>
                   Sometimes progress starts with questioning the assumptions you’ve been carrying.
                 </p>
               </div>
 
-              {/* VISUALLY PROMINENT TAKEAWAY BOX */}
+              {/* HERO TAKEAWAY */}
               <div
                 style={{
                   width: '100%',
-                  maxWidth: '480px',
-                  backgroundColor: '#FFFFFF',
-                  border: '1.5px solid #BAE6FD',
-                  borderRadius: '20px',
-                  padding: '24px 24px',
-                  boxShadow: '0 8px 28px rgba(2, 132, 199, 0.08)',
-                  marginBottom: '32px',
+                  maxWidth: '520px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                  border: '1.5px solid rgba(186, 230, 253, 0.9)',
+                  borderRadius: '24px',
+                  padding: '28px 28px',
+                  boxShadow: '0 10px 30px rgba(2, 132, 199, 0.08)',
+                  marginBottom: '36px',
                   textAlign: 'center',
-                  boxSizing: 'border-box'
+                  boxSizing: 'border-box',
+                  backdropFilter: 'blur(10px)'
                 }}
               >
                 <div
                   style={{
-                    fontSize: '0.76rem',
+                    fontSize: '0.78rem',
                     fontWeight: 900,
-                    letterSpacing: '0.08em',
+                    letterSpacing: '0.12em',
                     color: '#0284C7',
                     textTransform: 'uppercase',
                     marginBottom: '10px'
@@ -997,7 +985,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                 </div>
                 <p
                   style={{
-                    fontSize: 'clamp(1.15rem, 3vw, 1.35rem)',
+                    fontSize: 'clamp(1.2rem, 3.2vw, 1.45rem)',
                     fontWeight: 800,
                     color: '#0F172A',
                     lineHeight: 1.35,
@@ -1010,18 +998,18 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
 
               {/* PRIMARY CTA: COMPLETE ACTIVITY */}
               <motion.button
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.025, translateY: -1 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={handleCompleteActivity}
                 disabled={isSubmitting}
                 style={{
                   width: '100%',
-                  maxWidth: '340px',
-                  height: '54px',
+                  maxWidth: '320px',
+                  height: '56px',
                   backgroundColor: '#0284C7',
                   color: '#FFFFFF',
                   border: 'none',
-                  borderRadius: '14px',
+                  borderRadius: '16px',
                   fontSize: '1.05rem',
                   fontWeight: 800,
                   letterSpacing: '0.04em',
@@ -1030,7 +1018,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: '10px',
-                  boxShadow: '0 8px 24px rgba(2, 132, 199, 0.28)',
+                  boxShadow: '0 10px 28px rgba(2, 132, 199, 0.28)',
                   opacity: isSubmitting ? 0.75 : 1
                 }}
               >

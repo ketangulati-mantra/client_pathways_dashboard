@@ -1,0 +1,17 @@
+{
+  "header_back": "Tillbaka",
+  "header_title": "Daglig incheckning",
+  "streak_title": "Dagsstreak",
+  "home_welcome": "Hur mår du just nu?",
+  "home_subtitle": "Ta ett medvetet ögonblick för att stämma in på ditt känslomässiga landskap och kroppsliga tillstånd.",
+  "btn_start_checkin": "Starta incheckning",
+  "history_title": "Dina senaste incheckningar",
+  "step_emotion_title": "Välj ditt nuvarande känslotillstånd",
+  "step_intensity_title": "Hur stark är den här känslan?",
+  "step_context_title": "Vad bidrar till hur du känner?",
+  "step_reflection_title": "Reflektera och notera",
+  "step_response_title": "Personlig insikt",
+  "btn_continue": "Fortsätt",
+  "btn_finish": "Fullständig incheckning",
+  "btn_exit": "Fortsätt med min plan"
+}

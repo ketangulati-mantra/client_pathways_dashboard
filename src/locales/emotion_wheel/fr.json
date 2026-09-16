@@ -1,0 +1,14 @@
+{
+  "header_back": "Retour",
+  "header_title": "Roue des émotions",
+  "prompt_level1": "Qu’est-ce que tu ressens en ce moment ?",
+  "prompt_level2": "Explorer {{family}}",
+  "prompt_level3": "Soyons plus précis",
+  "prompt_intensity": "Quelle est l’intensité de cette émotion ?",
+  "prompt_context": "Qu’est-ce qui a déclenché ce sentiment ?",
+  "prompt_needs": "De quoi as-tu besoin maintenant ?",
+  "snapshot_title": "Votre instantané émotionnel",
+  "btn_explore": "En savoir plus",
+  "btn_complete": "Activité complète",
+  "btn_share": "Partager un instantané"
+}

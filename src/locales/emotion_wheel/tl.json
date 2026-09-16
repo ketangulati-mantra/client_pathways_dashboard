@@ -1,0 +1,14 @@
+{
+  "header_back": "Bumalik",
+  "header_title": "gulong ng emosyon",
+  "prompt_level1": "Ano ang nararamdaman mo ngayon?",
+  "prompt_level2": "Paggalugad sa {{family}}",
+  "prompt_level3": "Maging mas tiyak tayo",
+  "prompt_intensity": "Gaano kalakas ang emosyon na ito?",
+  "prompt_context": "Ano ang nagpasimula ng pakiramdam na ito?",
+  "prompt_needs": "Ano ang kailangan mo ngayon?",
+  "snapshot_title": "Ang Iyong Emosyonal na Larawan",
+  "btn_explore": "Tuklasin Pa",
+  "btn_complete": "Kumpletuhin ang Aktibidad",
+  "btn_share": "Ibahagi ang Snapshot"
+}

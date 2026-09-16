@@ -1,0 +1,81 @@
+{
+  "header_back": "Kembali",
+  "header_title": "Memulai",
+  "hero_title_prefix": "Rencana untuk kesejahteraan Anda,",
+  "hero_highlight": "dibangun di sekitarmu.",
+  "hero_subtitle": "Dapatkan rencana yang dipersonalisasi dengan aktivitas terpandu, alat praktis, dan dukungan untuk membantu Anda membuat kemajuan, satu langkah demi satu langkah.",
+  "how_it_works_title": "Semua yang Anda butuhkan untuk merawat kesejahteraan Anda.",
+  "how_it_works_subtitle": "Rencana personal Anda menggabungkan aktivitas, alat, pelacakan kemajuan, dan dukungan profesional dalam satu tempat.",
+  "flow_steps": {
+    "plan": "Rencana Anda",
+    "activities": "Kegiatan",
+    "tools": "Alat",
+    "progress": "Kemajuan",
+    "support": "Dukungan"
+  },
+  "video_section_title": "Lihat cara kerja Mantra",
+  "video_section_subtitle": "Lakukan tur singkat aplikasi dan lihat di mana rencana, aktivitas, serta alat kesejahteraan Anda cocok dalam perjalanan Anda.",
+  "adapts_title": "Rencana Anda menyesuaikan diri dengan Anda",
+  "adapts_subtitle": "Pilih apa yang ingin Anda kerjakan, seperti kecemasan, stres, suasana hati rendah, ADHD, OCD, atau lainnya. Mantra kemudian memberikan Anda aktivitas dan sumber daya yang dipandu sesuai dengan fokus Anda.",
+  "focus_areas": {
+    "anxiety": "Kecemasan",
+    "stress": "Tegangan",
+    "low_mood": "suasana hati rendah",
+    "adhd": "ADHD",
+    "ocd": "OCD",
+    "more": "Selengkapnya"
+  },
+  "focus_taglines": {
+    "anxiety": "Lonjakan sistem saraf yang membumi dan meredakan lingkaran pikiran cemas",
+    "stress": "Meredakan ketegangan kerja kronis dan pencegahan kelelahan",
+    "low_mood": "Memutus siklus lesu dengan aktivasi perilaku yang lembut",
+    "adhd": "Mengelola gesekan fungsi eksekutif dan kewalahan fokus",
+    "ocd": "Latihan pencegahan respons dan fleksibilitas kognitif",
+    "more": "Kualitas tidur, harga diri, hubungan, dan pertumbuhan kebiasaan"
+  },
+  "phases_labels": {
+    "phase": "Fase 0{{num}} • {{step}}",
+    "understand": "Memahami",
+    "practice": "Praktik",
+    "reflect": "Refleksikan",
+    "progress": "Kemajuan"
+  },
+  "activities_title": "Kegiatan kecil. Kemajuan nyata.",
+  "activities_subtitle": "Rencana Anda memberikan aktivitas yang membantu Anda belajar, merenung, berlatih, dan melacak, sehingga Anda bisa mengambil langkah kecil menuju perasaan lebih baik.",
+  "activity_types": {
+    "learn": "Pelajari",
+    "reflect": "Refleksikan",
+    "practice": "Praktik",
+    "track": "Lintasan"
+  },
+  "tools_title": "Alat saat Anda membutuhkannya",
+  "tools_subtitle": "Jelajahi meditasi, jurnal, mindfulness, asesmen, pelacak, dukungan AI, dan lainnya kapan pun Anda membutuhkannya.",
+  "tools_list": {
+    "meditation": "Meditasi",
+    "journaling": "Jurnal",
+    "mindfulness": "kesadaran penuh",
+    "assessments": "Penilaian",
+    "trackers": "Pelacak",
+    "ai_support": "Dukungan AI",
+    "self_care": "Perawatan Diri"
+  },
+  "points_title": "Setiap langkah sangat berarti",
+  "points_subtitle": "Selesaikan aktivitas dan tindakan bermakna untuk mendapatkan poin.",
+  "points_steps": {
+    "complete_title": "Selesai",
+    "complete_desc": "Menyelesaikan aktivitas",
+    "earn_title": "Dapatkan Poin",
+    "earn_desc": "+10 poin hadiah",
+    "redeem_title": "Tukarkan Hadiah",
+    "redeem_desc": "Layanan yang memenuhi syarat"
+  },
+  "points_footer": "Poin dapat digunakan untuk layanan kesehatan yang memenuhi syarat yang tersedia melalui Mantra.",
+  "support_title": "Butuh dukungan lebih?",
+  "support_subtitle": "Kamu tidak sendirian.",
+  "support_desc": "Jelajahi dukungan profesional dari terapis yang berkualifikasi dan layanan kesehatan lainnya kapan pun Anda membutuhkan bantuan tambahan.",
+  "support_btn": "Jelajahi dukungan profesional",
+  "cta_title": "Kamu siap untuk memulai.",
+  "cta_subtitle": "Buka rencana pribadi Anda, selesaikan aktivitas pertama, dan ambil langkah berikutnya menuju kesejahteraan yang lebih baik.",
+  "cta_btn_start": "Mulai Perjalanan Saya",
+  "cta_btn_starting": "Mulai..."
+}

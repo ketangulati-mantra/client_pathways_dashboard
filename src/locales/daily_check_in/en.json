@@ -1,0 +1,17 @@
+{
+  "header_back": "Back",
+  "header_title": "Daily Check-In",
+  "streak_title": "Day Streak",
+  "home_welcome": "How are you feeling right now?",
+  "home_subtitle": "Take a mindful moment to tune into your emotional landscape and body state.",
+  "btn_start_checkin": "Start Check-In",
+  "history_title": "Your Recent Check-Ins",
+  "step_emotion_title": "Select your current emotional state",
+  "step_intensity_title": "How strong is this feeling?",
+  "step_context_title": "What's contributing to how you feel?",
+  "step_reflection_title": "Reflect & Note",
+  "step_response_title": "Personalized Insight",
+  "btn_continue": "Continue",
+  "btn_finish": "Complete Check-In",
+  "btn_exit": "Continue to My Plan"
+}

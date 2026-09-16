@@ -1,0 +1,43 @@
+{
+  "header_back": "Achteruit",
+  "header_title": "Hoe je een sessie boekt",
+  "hero_title_prefix": "Neem contact op met de juiste therapeut,",
+  "hero_highlight": "Op je eigen tempo.",
+  "hero_subtitle": "Het boeken van je sessie via Mantra is eenvoudig en vertrouwelijk. Zie hoe eenvoudig het is om je plan te kiezen, je behoeften te delen, te matchen met een zorgverlener en te beginnen met zorg.",
+  "interactive_title": "Hoe boekingen werkt",
+  "interactive_subtitle": "Stapsgewijze interactieve walkthrough van het boekingsproces.",
+  "steps": {
+    "s1_title": "Kies een plan",
+    "s1_desc": "Begin met een proefperiode of kies een meermaandenplan.",
+    "s2_title": "Deel je voorkeuren",
+    "s2_desc": "Vertel Mantra je doelen, uitdagingen en voorkeuren van therapeuten.",
+    "s3_title": "Word gekoppeld of kies je therapeut",
+    "s3_desc": "Laat AI je direct matchen of blader door en nodig een provider uit.",
+    "s4_title": "Praat met je therapeut",
+    "s4_desc": "Stuur je therapeut een bericht in de app om je comfortabel te voelen voordat je een afspraak maakt.",
+    "s5_title": "Kies een tijd en boek",
+    "s5_desc": "Kies een geschikte datum en tijd in de agenda van je therapeut.",
+    "s6_title": "Word lid via de chat",
+    "s6_desc": "Open de beveiligde videosessielink die direct in je chat wordt gedeeld."
+  },
+  "ui_preview": {
+    "discount": "50% korting op Eerste sessie",
+    "intro_trial": "Intro-proces",
+    "select_focus": "Kies je focusgebieden:",
+    "ai_match": "AI-wedstrijd",
+    "ai_match_sub": "Auto-aanbevelingen",
+    "browse_team": "Bladerteam",
+    "browse_team_sub": "Handmatig plukken",
+    "therapist_msg": "Hallo! Ik kijk ernaar uit je te steunen.",
+    "therapist_reply": "Hallo Dr. Miller! Ik heb vrijdag net geboekt.",
+    "calendar_title": "Selecteer sessietijd",
+    "join_btn": "Doe mee aan videosessie",
+    "secure_room": "100% versleuteld en vertrouwelijk"
+  },
+  "video_title": "Bekijk de volledige boekingsgids",
+  "video_subtitle": "Stapsgewijze visuele demonstratie van het volledige in-app boekingsproces.",
+  "faq_title": "Veelgestelde vragen",
+  "cta_title": "Klaar om de volgende stap te zetten?",
+  "cta_subtitle": "Ontdek onze erkende therapeuten en boek je eerste sessie wanneer je er klaar voor bent.",
+  "cta_btn": "Ontdek therapieplannen"
+}

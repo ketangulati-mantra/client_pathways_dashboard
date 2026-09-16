@@ -1,0 +1,17 @@
+{
+  "header_back": "Zpět",
+  "header_title": "Denní kontrola",
+  "streak_title": "Denní série",
+  "home_welcome": "Jak se teď cítíš?",
+  "home_subtitle": "Věnujte si chvíli všímavého naladění na své emocionální prostředí a stav těla.",
+  "btn_start_checkin": "Začněte check-in",
+  "history_title": "Vaše nedávné kontroly",
+  "step_emotion_title": "Vyberte si svůj aktuální emocionální stav",
+  "step_intensity_title": "Jak silný je ten pocit?",
+  "step_context_title": "Co přispívá k tomu, jak se cítíš?",
+  "step_reflection_title": "Reflektujte a poznámky",
+  "step_response_title": "Personalizovaný pohled",
+  "btn_continue": "Pokračovat",
+  "btn_finish": "Kompletní kontrola",
+  "btn_exit": "Pokračujte podle mého plánu"
+}

@@ -1,0 +1,81 @@
+{
+  "header_back": "Hátra",
+  "header_title": "Kezdés",
+  "hero_title_prefix": "Egy terv a jólétedre,",
+  "hero_highlight": "Köréd épült.",
+  "hero_subtitle": "Készíts személyre szabott tervet vezetett tevékenységekkel, gyakorlati eszközökkel és támogatással, amelyek segítenek lépésről lépésre haladni.",
+  "how_it_works_title": "Minden, amire szükséged van a jólétedhez.",
+  "how_it_works_subtitle": "A személyre szabott terved egy helyen egyesíti a tevékenységeket, eszközöket, előrehaladás nyomon követését és szakmai támogatást.",
+  "flow_steps": {
+    "plan": "A te terved",
+    "activities": "Tevékenységek",
+    "tools": "Eszközök",
+    "progress": "Előrehaladás",
+    "support": "Támogatás"
+  },
+  "video_section_title": "Nézd meg, hogyan működik a Mantra",
+  "video_section_subtitle": "Nézd meg gyorsan az alkalmazást, és nézd meg, hol illeszkednek a terved, tevékenységeid és jóléti eszközeid.",
+  "adapts_title": "A terved alkalmazkodik hozzád",
+  "adapts_subtitle": "Válaszd ki, min szeretnél dolgozni, például szorongás, stressz, alacsony hangulat, ADHD, OCD vagy még sok más. A Mantra ezután irányított tevékenységeket és forrásokat ad, amelyek a fókuszodhoz igazítottak.",
+  "focus_areas": {
+    "anxiety": "Szorongás",
+    "stress": "Stressz",
+    "low_mood": "Alacsony hangulat",
+    "adhd": "ADHD",
+    "ocd": "OCD",
+    "more": "További"
+  },
+  "focus_taglines": {
+    "anxiety": "Idegrendszeri hullámok megnyugtatása és a szorongó gondolathurkok enyhítése",
+    "stress": "A krónikus munkanapi feszültség enyhítése és a kiégés megelőzése",
+    "low_mood": "A letargia ciklusok megtörése gyengéd viselkedési aktivációval",
+    "adhd": "Az executive funkciók súrlódásának és fókuszának kezelése",
+    "ocd": "Válaszmegelőzés és kognitív rugalmassági gyakorlatok",
+    "more": "Alvás minősége, önbecsülés, kapcsolatok és szokások fejlődése"
+  },
+  "phases_labels": {
+    "phase": "Phase 0{{num}} • {{step}}",
+    "understand": "Értsd meg",
+    "practice": "Gyakorlat",
+    "reflect": "Reflektálj",
+    "progress": "Előrehaladás"
+  },
+  "activities_title": "Kis tevékenységek. Valódi előrelépés.",
+  "activities_subtitle": "A terved olyan tevékenységeket ad, amelyek segítenek tanulni, elmélkedni, gyakorolni és nyomon követni, hogy apró lépéseket tehetsz a jobb érzés felé.",
+  "activity_types": {
+    "learn": "Tanulj",
+    "reflect": "Reflektálj",
+    "practice": "Gyakorlat",
+    "track": "Pálya"
+  },
+  "tools_title": "Eszközök, amikor szükséged van rájuk",
+  "tools_subtitle": "Fedezd fel a meditációt, naplóírást, tudatosságot, értékeléseket, nyomkövetőket, AI támogatást és még sok mást, amikor szükséged van rá.",
+  "tools_list": {
+    "meditation": "Meditáció",
+    "journaling": "Naplóírás",
+    "mindfulness": "Tudatosság",
+    "assessments": "Értékelések",
+    "trackers": "Nyomkövetők",
+    "ai_support": "MI támogatás",
+    "self_care": "Önellátás"
+  },
+  "points_title": "Minden lépés számít",
+  "points_subtitle": "Teljesítsd a tevékenységeket és a jelentős tevékenységeket, hogy pontokat szerezz.",
+  "points_steps": {
+    "complete_title": "Teljes",
+    "complete_desc": "Befejező tevékenységek",
+    "earn_title": "Pontok gyűjtése",
+    "earn_desc": "+10 pontos jutalom",
+    "redeem_title": "Redeem Rewards",
+    "redeem_desc": "Jogosult szolgáltatások"
+  },
+  "points_footer": "Pontokat a Mantrán keresztül elérhető jogosult wellness szolgáltatásokra lehet felhasználni.",
+  "support_title": "Több támogatásra van szüksége?",
+  "support_subtitle": "Nem vagy egyedül.",
+  "support_desc": "Fedezze fel a szakmai támogatást képzett terapeutától és más wellness szolgáltatásoktól, amikor további segítségre van szüksége.",
+  "support_btn": "Fedezze fel a szakmai támogatást",
+  "cta_title": "Készen állsz a kezdésre.",
+  "cta_subtitle": "Nyisd meg személyre szabott tervedet, fejezd be az első tevékenységedet, és tedd meg a következő lépést a jobb jólét felé.",
+  "cta_btn_start": "Kezdjük el az utamat",
+  "cta_btn_starting": "Kezdés..."
+}

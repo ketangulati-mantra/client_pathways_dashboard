@@ -9,6 +9,7 @@ import {
   HelpCircle,
   Lightbulb
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import {
   logUserActivityToDB,
   saveUserLessonProgress,
@@ -16,6 +17,7 @@ import {
   recordUserPersonalizationSignal
 } from '../services/activityLogger';
 import { completeLesson } from '../mantra/api';
+import { handleExit } from '../mantra/navigation';
 import { getActiveUserId } from '../services/authService';
 
 export interface MythItem {
@@ -34,7 +36,7 @@ export const MYTHS_DATA: MythItem[] = [
     numberStr: '01',
     statement: '“I need to feel motivated before I can start doing things.”',
     answer: 'MYTH',
-    why: 'Motivation doesn’t always come first. Sometimes taking a small action can help create momentum, even when you don’t feel like doing much.',
+    why: 'Motivation does not always come first. Sometimes taking a small action can help create momentum, even when you do not feel like doing much.',
     tryThis: 'Instead of waiting to feel ready, choose the smallest possible version of something you need to do.',
     signalTag: 'motivation_action_momentum'
   },
@@ -43,7 +45,7 @@ export const MYTHS_DATA: MythItem[] = [
     numberStr: '02',
     statement: '“Taking care of myself is selfish when other people need me.”',
     answer: 'MYTH',
-    why: 'Looking after your own basic needs isn’t selfish. Rest, boundaries, enjoyable activities and asking for support can all be part of taking care of yourself.',
+    why: 'Looking after your own basic needs is not selfish. Rest, boundaries, enjoyable activities and asking for support can all be part of taking care of yourself.',
     tryThis: 'Think of self-care as maintenance, not a reward you have to earn.',
     signalTag: 'self_care_maintenance_boundaries'
   },
@@ -52,8 +54,8 @@ export const MYTHS_DATA: MythItem[] = [
     numberStr: '03',
     statement: '“If I can’t explain what’s wrong, I shouldn’t ask for help.”',
     answer: 'MYTH',
-    why: 'You don’t need a perfect explanation before reaching out. Sometimes saying ‘I haven’t been feeling like myself lately’ is enough to start a conversation.',
-    tryThis: 'You can ask for support before you fully understand what you’re experiencing.',
+    why: 'You do not need a perfect explanation before reaching out. Sometimes saying \'I haven’t been feeling like myself lately\' is enough to start a conversation.',
+    tryThis: 'You can ask for support before you fully understand what you are experiencing.',
     signalTag: 'help_seeking_unfiltered'
   },
   {
@@ -61,7 +63,7 @@ export const MYTHS_DATA: MythItem[] = [
     numberStr: '04',
     statement: '“Having a bad day means I’m losing all the progress I’ve made.”',
     answer: 'MYTH',
-    why: 'Progress isn’t usually a straight line. Difficult days can happen even while you’re building helpful habits and learning new ways of coping.',
+    why: 'Progress is not usually a straight line. Difficult days can happen even while you are building helpful habits and learning new ways of coping.',
     tryThis: 'Look at how you respond over time, rather than expecting every day to go perfectly.',
     signalTag: 'nonlinear_progress_resilience'
   },
@@ -70,8 +72,8 @@ export const MYTHS_DATA: MythItem[] = [
     numberStr: '05',
     statement: '“Therapy is only for people with a serious mental health problem.”',
     answer: 'MYTH',
-    why: 'People seek therapy for many reasons — including persistent distress, relationship difficulties, life changes, stress, and wanting help understanding patterns in their lives.',
-    tryThis: 'You don’t have to wait until things feel overwhelming to consider professional support.',
+    why: 'People seek therapy for many reasons, including persistent distress, relationship difficulties, life changes, stress, and wanting help understanding patterns in their lives.',
+    tryThis: 'You do not have to wait until things feel overwhelming to consider professional support.',
     signalTag: 'therapy_readiness_normalization'
   }
 ];
@@ -87,6 +89,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
   onNavigate,
   service = 'therapy'
 }) => {
+  const { t } = useTranslation('myths_we_tell_ourselves');
   // Navigation & Flow State
   // 0: Opening Screen, 1..5: Myth 1..5, 6: Completion Screen
   const [currentScreen, setCurrentScreen] = useState<number>(0);
@@ -247,7 +250,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
         } else if (onBack) {
           onBack();
         } else {
-          window.location.hash = '#/challenges';
+          handleExit();
         }
       }, 700);
     } catch (err) {
@@ -256,6 +259,8 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
         onNavigate('/challenges');
       } else if (onBack) {
         onBack();
+      } else {
+        handleExit();
       }
     } finally {
       setIsSubmitting(false);
@@ -267,7 +272,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
   return (
     <div
       style={{
-        minHeight: '100vh',
+        minHeight: '100dvh',
         width: '100%',
         backgroundColor: '#F8FAFC',
         backgroundImage: `
@@ -291,8 +296,8 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
           position: 'fixed',
           top: '-15%',
           right: '-10%',
-          width: '560px',
-          height: '560px',
+          width: 'clamp(300px, 45vw, 560px)',
+          height: 'clamp(300px, 45vw, 560px)',
           borderRadius: '50%',
           background: 'radial-gradient(circle, rgba(186, 230, 253, 0.4) 0%, rgba(186, 230, 253, 0) 70%)',
           filter: 'blur(60px)',
@@ -305,8 +310,8 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
           position: 'fixed',
           bottom: '-15%',
           left: '-10%',
-          width: '500px',
-          height: '500px',
+          width: 'clamp(280px, 40vw, 500px)',
+          height: 'clamp(280px, 40vw, 500px)',
           borderRadius: '50%',
           background: 'radial-gradient(circle, rgba(199, 210, 254, 0.35) 0%, rgba(199, 210, 254, 0) 70%)',
           filter: 'blur(60px)',
@@ -315,13 +320,13 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
         }}
       />
 
-      {/* MINIMALIST HEADER - NO LOGOS, NO MANTRA 21 */}
+      {/* MINIMALIST HEADER */}
       <header
         style={{
           width: '100%',
           maxWidth: '840px',
-          height: '64px',
-          padding: '0 24px',
+          height: '56px',
+          padding: '0 16px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -338,7 +343,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
             } else if (onNavigate) {
               onNavigate('/challenges');
             } else {
-              window.history.back();
+              handleExit();
             }
           }}
           style={{
@@ -346,13 +351,13 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
             border: 'none',
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
+            gap: '6px',
             color: '#64748B',
-            fontSize: '0.9rem',
+            fontSize: '0.86rem',
             fontWeight: 600,
             cursor: 'pointer',
-            padding: '8px 12px',
-            borderRadius: '12px',
+            padding: '6px 10px',
+            borderRadius: '10px',
             transition: 'all 0.15s ease'
           }}
           onMouseEnter={(e) => {
@@ -364,7 +369,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
             e.currentTarget.style.backgroundColor = 'transparent';
           }}
         >
-          <ArrowLeft size={17} />
+          <ArrowLeft size={16} />
           <span>{currentScreen > 0 && currentScreen < 6 ? 'Back' : 'Exit'}</span>
         </button>
 
@@ -372,12 +377,12 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
         {currentScreen >= 1 && currentScreen <= 5 ? (
           <div
             style={{
-              fontSize: '0.84rem',
+              fontSize: '0.8rem',
               fontWeight: 700,
-              letterSpacing: '0.06em',
+              letterSpacing: '0.04em',
               color: '#0284C7',
               backgroundColor: 'rgba(255, 255, 255, 0.85)',
-              padding: '5px 14px',
+              padding: '4px 12px',
               borderRadius: '999px',
               border: '1px solid rgba(186, 230, 253, 0.8)',
               boxShadow: '0 2px 8px rgba(2, 132, 199, 0.06)',
@@ -397,9 +402,9 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
           style={{
             width: '100%',
             maxWidth: '840px',
-            padding: '0 24px',
+            padding: '0 16px',
             boxSizing: 'border-box',
-            marginBottom: '8px',
+            marginBottom: '6px',
             zIndex: 20
           }}
         >
@@ -436,7 +441,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: '24px 24px 48px 24px',
+          padding: '16px 16px 36px 16px',
           boxSizing: 'border-box',
           zIndex: 10
         }}
@@ -458,7 +463,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                 flexDirection: 'column',
                 alignItems: 'center',
                 textAlign: 'center',
-                padding: '20px 0'
+                padding: '12px 0 24px 0'
               }}
             >
               {/* EYEBROW */}
@@ -468,56 +473,56 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                   alignItems: 'center',
                   gap: '6px',
                   color: '#0284C7',
-                  fontSize: '0.8rem',
+                  fontSize: '0.76rem',
                   fontWeight: 800,
-                  letterSpacing: '0.12em',
+                  letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  marginBottom: '20px'
+                  marginBottom: '14px'
                 }}
               >
-                <span>5 MINUTE RESET</span>
+                <span>{t('eyebrow', { defaultValue: '5 MINUTE RESET' })}</span>
               </div>
 
               {/* HERO TITLE */}
               <h1
                 style={{
-                  fontSize: 'clamp(2.4rem, 6.5vw, 3.8rem)',
+                  fontSize: 'clamp(2.1rem, 7vw, 3.6rem)',
                   fontWeight: 900,
-                  lineHeight: 1.08,
+                  lineHeight: 1.1,
                   letterSpacing: '-0.035em',
                   color: '#0F172A',
-                  margin: '0 0 16px 0',
+                  margin: '0 0 14px 0',
                   maxWidth: '680px'
                 }}
               >
-                MYTHS WE TELL<br />OURSELVES
+                {t('title', { defaultValue: 'MYTHS WE TELL OURSELVES' })}
               </h1>
 
               {/* SUBTITLE */}
               <p
                 style={{
-                  fontSize: 'clamp(1.1rem, 3vw, 1.35rem)',
+                  fontSize: 'clamp(1rem, 3.2vw, 1.3rem)',
                   fontWeight: 500,
                   color: '#0284C7',
-                  margin: '0 0 24px 0',
-                  maxWidth: '560px',
-                  lineHeight: 1.45
+                  margin: '0 0 18px 0',
+                  maxWidth: '540px',
+                  lineHeight: 1.4
                 }}
               >
-                “5 common beliefs about mental health.<br />Let’s question them.”
+                {t('subtitle', { defaultValue: '“5 common beliefs about mental health. Let’s question them.”' })}
               </p>
 
-              {/* SUPPORTING TEXT - DIRECTLY ON CANVAS */}
+              {/* SUPPORTING TEXT */}
               <p
                 style={{
-                  fontSize: 'clamp(0.96rem, 2.4vw, 1.08rem)',
+                  fontSize: 'clamp(0.92rem, 2.6vw, 1.05rem)',
                   color: '#475569',
-                  lineHeight: 1.65,
-                  maxWidth: '520px',
-                  margin: '0 0 32px 0'
+                  lineHeight: 1.6,
+                  maxWidth: '500px',
+                  margin: '0 0 24px 0'
                 }}
               >
-                We pick up ideas about mental health from family, friends, social media, movies — and sometimes from ourselves.
+                {t('supporting', { defaultValue: 'We pick up ideas about mental health from family, friends, social media, movies, and sometimes from ourselves.' })}
               </p>
 
               {/* BADGE */}
@@ -527,14 +532,14 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                   alignItems: 'center',
                   gap: '6px',
                   color: '#64748B',
-                  fontSize: '0.84rem',
+                  fontSize: '0.8rem',
                   fontWeight: 700,
-                  letterSpacing: '0.06em',
-                  marginBottom: '36px'
+                  letterSpacing: '0.04em',
+                  marginBottom: '28px'
                 }}
               >
-                <Clock size={15} />
-                <span>3 MIN · 5 MYTHS</span>
+                <Clock size={14} />
+                <span>{t('duration', { defaultValue: '3 MIN · 5 MYTHS' })}</span>
               </div>
 
               {/* PRIMARY CTA */}
@@ -544,40 +549,40 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                 onClick={handleStart}
                 style={{
                   width: '100%',
-                  maxWidth: '320px',
-                  height: '56px',
+                  maxWidth: '300px',
+                  height: '52px',
                   backgroundColor: '#0284C7',
                   color: '#FFFFFF',
                   border: 'none',
-                  borderRadius: '16px',
-                  fontSize: '1.05rem',
+                  borderRadius: '14px',
+                  fontSize: '1rem',
                   fontWeight: 800,
                   letterSpacing: '0.04em',
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  gap: '10px',
-                  boxShadow: '0 10px 28px rgba(2, 132, 199, 0.28)',
+                  gap: '8px',
+                  boxShadow: '0 8px 24px rgba(2, 132, 199, 0.28)',
                   transition: 'background 0.2s',
-                  marginBottom: '16px'
+                  marginBottom: '14px'
                 }}
               >
-                <span>START</span>
-                <ArrowRight size={18} />
+                <span>{t('btn_start', { defaultValue: 'START' })}</span>
+                <ArrowRight size={17} />
               </motion.button>
 
               {/* REASSURANCE */}
               <p
                 style={{
-                  fontSize: '0.85rem',
+                  fontSize: '0.82rem',
                   color: '#94A3B8',
                   margin: 0,
-                  maxWidth: '380px',
+                  maxWidth: '360px',
                   lineHeight: 1.45
                 }}
               >
-                “This isn’t a test. Just a chance to look at a few ideas differently.”
+                {t('reassurance', { defaultValue: '“This isn’t a test. Just a chance to look at a few ideas differently.”' })}
               </p>
             </motion.div>
           )}
@@ -598,32 +603,32 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                 flexDirection: 'column',
                 alignItems: 'center',
                 textAlign: 'center',
-                padding: '12px 0'
+                padding: '8px 0'
               }}
             >
               {/* SMALL EYEBROW */}
               <div
                 style={{
-                  fontSize: '0.82rem',
+                  fontSize: '0.78rem',
                   fontWeight: 800,
-                  letterSpacing: '0.12em',
+                  letterSpacing: '0.1em',
                   color: '#0284C7',
                   textTransform: 'uppercase',
-                  marginBottom: '20px'
+                  marginBottom: '14px'
                 }}
               >
                 MYTH {currentMyth.numberStr} / 05
               </div>
 
-              {/* LARGE EDITORIAL STATEMENT - VISUAL HERO */}
+              {/* LARGE EDITORIAL STATEMENT */}
               <h2
                 style={{
-                  fontSize: 'clamp(1.75rem, 5vw, 2.75rem)',
+                  fontSize: 'clamp(1.5rem, 5.5vw, 2.6rem)',
                   fontWeight: 900,
                   lineHeight: 1.22,
                   color: '#0F172A',
                   letterSpacing: '-0.03em',
-                  margin: '0 0 28px 0',
+                  margin: '0 0 24px 0',
                   maxWidth: '720px'
                 }}
               >
@@ -642,12 +647,12 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                 >
                   <p
                     style={{
-                      fontSize: '0.84rem',
+                      fontSize: '0.78rem',
                       fontWeight: 800,
                       letterSpacing: '0.08em',
                       color: '#64748B',
                       textTransform: 'uppercase',
-                      margin: '0 0 24px 0'
+                      margin: '0 0 18px 0'
                     }}
                   >
                     WHAT DO YOU THINK?
@@ -657,28 +662,28 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                   <div
                     style={{
                       display: 'grid',
-                      gridTemplateColumns: '1fr 1fr',
-                      gap: '16px',
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(135px, 1fr))',
+                      gap: '12px',
                       width: '100%',
-                      maxWidth: '460px'
+                      maxWidth: '420px'
                     }}
                   >
                     <motion.button
-                      whileHover={{ scale: 1.025, translateY: -2 }}
+                      whileHover={{ scale: 1.02, translateY: -1 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => handleSelectChoice('MYTH')}
                       style={{
-                        height: '64px',
+                        height: '56px',
                         backgroundColor: '#FFFFFF',
                         border: '1.5px solid rgba(226, 232, 240, 0.9)',
-                        borderRadius: '18px',
+                        borderRadius: '16px',
                         color: '#0F172A',
-                        fontSize: '1.05rem',
+                        fontSize: '1rem',
                         fontWeight: 800,
                         letterSpacing: '0.06em',
                         cursor: 'pointer',
                         transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
-                        boxShadow: '0 4px 16px rgba(15, 23, 42, 0.04)',
+                        boxShadow: '0 3px 12px rgba(15, 23, 42, 0.04)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -687,34 +692,32 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                         e.currentTarget.style.borderColor = '#0284C7';
                         e.currentTarget.style.backgroundColor = '#F0F9FF';
                         e.currentTarget.style.color = '#0284C7';
-                        e.currentTarget.style.boxShadow = '0 8px 24px rgba(2, 132, 199, 0.12)';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.borderColor = 'rgba(226, 232, 240, 0.9)';
                         e.currentTarget.style.backgroundColor = '#FFFFFF';
                         e.currentTarget.style.color = '#0F172A';
-                        e.currentTarget.style.boxShadow = '0 4px 16px rgba(15, 23, 42, 0.04)';
                       }}
                     >
                       MYTH
                     </motion.button>
 
                     <motion.button
-                      whileHover={{ scale: 1.025, translateY: -2 }}
+                      whileHover={{ scale: 1.02, translateY: -1 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => handleSelectChoice('REALITY')}
                       style={{
-                        height: '64px',
+                        height: '56px',
                         backgroundColor: '#FFFFFF',
                         border: '1.5px solid rgba(226, 232, 240, 0.9)',
-                        borderRadius: '18px',
+                        borderRadius: '16px',
                         color: '#0F172A',
-                        fontSize: '1.05rem',
+                        fontSize: '1rem',
                         fontWeight: 800,
                         letterSpacing: '0.06em',
                         cursor: 'pointer',
                         transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
-                        boxShadow: '0 4px 16px rgba(15, 23, 42, 0.04)',
+                        boxShadow: '0 3px 12px rgba(15, 23, 42, 0.04)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -723,13 +726,11 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                         e.currentTarget.style.borderColor = '#0284C7';
                         e.currentTarget.style.backgroundColor = '#F0F9FF';
                         e.currentTarget.style.color = '#0284C7';
-                        e.currentTarget.style.boxShadow = '0 8px 24px rgba(2, 132, 199, 0.12)';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.borderColor = 'rgba(226, 232, 240, 0.9)';
                         e.currentTarget.style.backgroundColor = '#FFFFFF';
                         e.currentTarget.style.color = '#0F172A';
-                        e.currentTarget.style.boxShadow = '0 4px 16px rgba(15, 23, 42, 0.04)';
                       }}
                     >
                       REALITY
@@ -737,14 +738,14 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                   </div>
                 </div>
               ) : (
-                /* EXPLANATION REVEAL - SEAMLESS CANVAS FLOW */
+                /* EXPLANATION REVEAL */
                 <motion.div
-                  initial={{ opacity: 0, y: 16 }}
+                  initial={{ opacity: 0, y: 14 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                   style={{
                     width: '100%',
-                    maxWidth: '580px',
+                    maxWidth: '560px',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center'
@@ -756,19 +757,19 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: '6px',
-                      backgroundColor: 'rgba(224, 242, 254, 0.8)',
+                      backgroundColor: 'rgba(224, 242, 254, 0.85)',
                       border: '1px solid rgba(186, 230, 253, 0.9)',
                       color: '#0369A1',
-                      fontSize: '0.8rem',
+                      fontSize: '0.78rem',
                       fontWeight: 900,
-                      letterSpacing: '0.1em',
-                      padding: '6px 18px',
+                      letterSpacing: '0.08em',
+                      padding: '5px 16px',
                       borderRadius: '999px',
                       textTransform: 'uppercase',
-                      marginBottom: '24px'
+                      marginBottom: '18px'
                     }}
                   >
-                    <Sparkles size={14} color="#0284C7" />
+                    <Sparkles size={13} color="#0284C7" />
                     <span>IT’S A MYTH</span>
                   </div>
 
@@ -777,32 +778,32 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                     style={{
                       width: '100%',
                       textAlign: 'left',
-                      backgroundColor: 'rgba(255, 255, 255, 0.85)',
+                      backgroundColor: 'rgba(255, 255, 255, 0.9)',
                       border: '1px solid rgba(226, 232, 240, 0.85)',
-                      borderRadius: '20px',
-                      padding: '20px 24px',
-                      marginBottom: '14px',
-                      boxShadow: '0 4px 20px rgba(15, 23, 42, 0.03)',
+                      borderRadius: '18px',
+                      padding: '16px 18px',
+                      marginBottom: '12px',
+                      boxShadow: '0 4px 16px rgba(15, 23, 42, 0.03)',
                       backdropFilter: 'blur(10px)',
                       boxSizing: 'border-box'
                     }}
                   >
                     <div
                       style={{
-                        fontSize: '0.78rem',
+                        fontSize: '0.74rem',
                         fontWeight: 900,
-                        letterSpacing: '0.1em',
+                        letterSpacing: '0.08em',
                         color: '#0284C7',
                         textTransform: 'uppercase',
-                        marginBottom: '8px'
+                        marginBottom: '6px'
                       }}
                     >
                       WHY?
                     </div>
                     <p
                       style={{
-                        fontSize: 'clamp(0.96rem, 2vw, 1.04rem)',
-                        lineHeight: 1.6,
+                        fontSize: 'clamp(0.92rem, 2.2vw, 1rem)',
+                        lineHeight: 1.55,
                         color: '#334155',
                         margin: 0
                       }}
@@ -816,32 +817,32 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                     style={{
                       width: '100%',
                       textAlign: 'left',
-                      backgroundColor: 'rgba(240, 253, 244, 0.85)',
+                      backgroundColor: 'rgba(240, 253, 244, 0.9)',
                       border: '1px solid rgba(187, 247, 208, 0.85)',
-                      borderRadius: '20px',
-                      padding: '20px 24px',
-                      marginBottom: '28px',
-                      boxShadow: '0 4px 20px rgba(22, 163, 74, 0.03)',
+                      borderRadius: '18px',
+                      padding: '16px 18px',
+                      marginBottom: '22px',
+                      boxShadow: '0 4px 16px rgba(22, 163, 74, 0.03)',
                       backdropFilter: 'blur(10px)',
                       boxSizing: 'border-box'
                     }}
                   >
                     <div
                       style={{
-                        fontSize: '0.78rem',
+                        fontSize: '0.74rem',
                         fontWeight: 900,
-                        letterSpacing: '0.1em',
+                        letterSpacing: '0.08em',
                         color: '#16A34A',
                         textTransform: 'uppercase',
-                        marginBottom: '8px'
+                        marginBottom: '6px'
                       }}
                     >
                       TRY THIS
                     </div>
                     <p
                       style={{
-                        fontSize: 'clamp(0.96rem, 2vw, 1.04rem)',
-                        lineHeight: 1.6,
+                        fontSize: 'clamp(0.92rem, 2.2vw, 1rem)',
+                        lineHeight: 1.55,
                         color: '#166534',
                         fontWeight: 500,
                         margin: 0
@@ -853,18 +854,18 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
 
                   {/* GOT IT CTA */}
                   <motion.button
-                    whileHover={{ scale: 1.025, translateY: -1 }}
+                    whileHover={{ scale: 1.02, translateY: -1 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={handleNext}
                     style={{
                       width: '100%',
-                      maxWidth: '300px',
-                      height: '52px',
+                      maxWidth: '280px',
+                      height: '48px',
                       backgroundColor: '#0284C7',
                       color: '#FFFFFF',
                       border: 'none',
-                      borderRadius: '16px',
-                      fontSize: '1rem',
+                      borderRadius: '14px',
+                      fontSize: '0.96rem',
                       fontWeight: 800,
                       letterSpacing: '0.04em',
                       cursor: 'pointer',
@@ -872,12 +873,12 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                       alignItems: 'center',
                       justifyContent: 'center',
                       gap: '8px',
-                      boxShadow: '0 8px 24px rgba(2, 132, 199, 0.25)',
+                      boxShadow: '0 6px 20px rgba(2, 132, 199, 0.25)',
                       transition: 'background 0.2s'
                     }}
                   >
                     <span>{currentScreen === 5 ? 'SEE SUMMARY' : 'GOT IT'}</span>
-                    <ArrowRight size={18} />
+                    <ArrowRight size={16} />
                   </motion.button>
                 </motion.div>
               )}
@@ -900,14 +901,14 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                 flexDirection: 'column',
                 alignItems: 'center',
                 textAlign: 'center',
-                padding: '16px 0'
+                padding: '12px 0 24px 0'
               }}
             >
               {/* CHECKMARK BADGE */}
               <div
                 style={{
-                  width: '68px',
-                  height: '68px',
+                  width: '60px',
+                  height: '60px',
                   borderRadius: '50%',
                   backgroundColor: '#FFFFFF',
                   border: '1.5px solid rgba(186, 230, 253, 0.9)',
@@ -915,23 +916,23 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: '#0284C7',
-                  marginBottom: '24px',
-                  boxShadow: '0 8px 24px rgba(2, 132, 199, 0.12)'
+                  marginBottom: '18px',
+                  boxShadow: '0 6px 20px rgba(2, 132, 199, 0.12)'
                 }}
               >
-                <CheckCircle2 size={36} />
+                <CheckCircle2 size={32} />
               </div>
 
               {/* COMPLETION TITLE */}
               <h1
                 style={{
-                  fontSize: 'clamp(2rem, 5.5vw, 3rem)',
+                  fontSize: 'clamp(1.8rem, 6vw, 2.8rem)',
                   fontWeight: 900,
                   lineHeight: 1.12,
                   letterSpacing: '-0.035em',
                   color: '#0F172A',
-                  margin: '0 0 16px 0',
-                  maxWidth: '600px'
+                  margin: '0 0 14px 0',
+                  maxWidth: '580px'
                 }}
               >
                 YOU JUST QUESTIONED<br />5 MYTHS
@@ -940,18 +941,18 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
               {/* SUPPORTING COPY */}
               <div
                 style={{
-                  maxWidth: '520px',
-                  margin: '0 0 32px 0',
+                  maxWidth: '480px',
+                  margin: '0 0 24px 0',
                   color: '#475569',
-                  fontSize: 'clamp(0.96rem, 2.4vw, 1.05rem)',
-                  lineHeight: 1.65
+                  fontSize: 'clamp(0.92rem, 2.4vw, 1.02rem)',
+                  lineHeight: 1.6
                 }}
               >
-                <p style={{ margin: '0 0 8px 0' }}>
-                  Mental health isn’t about having everything figured out.
+                <p style={{ margin: '0 0 6px 0' }}>
+                  Mental health is not about having everything figured out.
                 </p>
                 <p style={{ margin: 0, fontWeight: 500, color: '#1E293B' }}>
-                  Sometimes progress starts with questioning the assumptions you’ve been carrying.
+                  Sometimes progress starts with questioning the assumptions you have been carrying.
                 </p>
               </div>
 
@@ -959,13 +960,13 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
               <div
                 style={{
                   width: '100%',
-                  maxWidth: '520px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                  maxWidth: '480px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.92)',
                   border: '1.5px solid rgba(186, 230, 253, 0.9)',
-                  borderRadius: '24px',
-                  padding: '28px 28px',
-                  boxShadow: '0 10px 30px rgba(2, 132, 199, 0.08)',
-                  marginBottom: '36px',
+                  borderRadius: '20px',
+                  padding: '22px 20px',
+                  boxShadow: '0 8px 24px rgba(2, 132, 199, 0.08)',
+                  marginBottom: '28px',
                   textAlign: 'center',
                   boxSizing: 'border-box',
                   backdropFilter: 'blur(10px)'
@@ -973,19 +974,19 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
               >
                 <div
                   style={{
-                    fontSize: '0.78rem',
+                    fontSize: '0.74rem',
                     fontWeight: 900,
-                    letterSpacing: '0.12em',
+                    letterSpacing: '0.1em',
                     color: '#0284C7',
                     textTransform: 'uppercase',
-                    marginBottom: '10px'
+                    marginBottom: '8px'
                   }}
                 >
                   ONE THING TO REMEMBER
                 </div>
                 <p
                   style={{
-                    fontSize: 'clamp(1.2rem, 3.2vw, 1.45rem)',
+                    fontSize: 'clamp(1.1rem, 3.5vw, 1.35rem)',
                     fontWeight: 800,
                     color: '#0F172A',
                     lineHeight: 1.35,
@@ -1004,21 +1005,21 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                 disabled={isSubmitting}
                 style={{
                   width: '100%',
-                  maxWidth: '320px',
-                  height: '56px',
+                  maxWidth: '300px',
+                  height: '52px',
                   backgroundColor: '#0284C7',
                   color: '#FFFFFF',
                   border: 'none',
-                  borderRadius: '16px',
-                  fontSize: '1.05rem',
+                  borderRadius: '14px',
+                  fontSize: '1rem',
                   fontWeight: 800,
                   letterSpacing: '0.04em',
                   cursor: isSubmitting ? 'not-allowed' : 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  gap: '10px',
-                  boxShadow: '0 10px 28px rgba(2, 132, 199, 0.28)',
+                  gap: '8px',
+                  boxShadow: '0 8px 24px rgba(2, 132, 199, 0.28)',
                   opacity: isSubmitting ? 0.75 : 1
                 }}
               >
@@ -1027,7 +1028,7 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
                 ) : (
                   <>
                     <span>COMPLETE ACTIVITY</span>
-                    <CheckCircle2 size={18} />
+                    <CheckCircle2 size={16} />
                   </>
                 )}
               </motion.button>

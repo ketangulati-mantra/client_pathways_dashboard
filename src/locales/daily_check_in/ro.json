@@ -1,0 +1,17 @@
+{
+  "header_back": "Înapoi",
+  "header_title": "Verificare zilnică",
+  "streak_title": "Serie de zile",
+  "home_welcome": "Cum te simți acum?",
+  "home_subtitle": "Acordă-ți un moment de conștientizare pentru a te conecta la peisajul tău emoțional și la starea ta corporală.",
+  "btn_start_checkin": "Începeți check-in-ul",
+  "history_title": "Verificările tale recente",
+  "step_emotion_title": "Selectează-ți starea emoțională actuală",
+  "step_intensity_title": "Cât de puternică este această senzație?",
+  "step_context_title": "Ce contribuie la modul în care te simți?",
+  "step_reflection_title": "Reflect & Note",
+  "step_response_title": "Perspective personalizate",
+  "btn_continue": "Continuă",
+  "btn_finish": "Check-in complet",
+  "btn_exit": "Continuă cu planul meu"
+}

@@ -1,0 +1,60 @@
+{
+  "back": "Voltar",
+  "assessment_title": "Avaliação do Bem-Estar Emocional",
+  "instruction": "Quanto isso se aplicou a você na última semana?",
+  "question_counter": "Pergunta {{current}} de {{total}}",
+  "options": {
+    "not_at_all": "De jeito nenhum",
+    "sometimes": "Às vezes",
+    "often": "Frequentemente",
+    "almost_always": "Quase sempre"
+  },
+  "questions": {
+    "q1": "Eu estava quase entrando em pânico",
+    "q2": "Senti meu coração bater rápido mesmo sem ter feito nenhum esforço físico",
+    "q3": "Eu estava com medo sem motivo",
+    "q4": "Sentia que não tinha nada para esperar",
+    "q5": "Me senti desanimada e triste",
+    "q6": "Eu não conseguia me entusiasmar com nada",
+    "q7": "Achei difícil descontrair",
+    "q8": "Me peguei ficando agitado",
+    "q9": "Achei difícil relaxar"
+  },
+  "categories": {
+    "anxiety": "Ansiedade",
+    "anxiety_desc": "Mede ansiedade situacional, tensão física e sentimentos de nervosismo.",
+    "depression": "Depressão",
+    "depression_desc": "Mede baixa energia, falta de sentimentos positivos e dificuldade em se sentir entusiasmado.",
+    "stress": "Estresse",
+    "stress_desc": "Mede dificuldade para relaxar, inquietação e tensão emocional."
+  },
+  "levels": {
+    "mild": "Suave",
+    "moderate": "Moderado",
+    "severe": "Severo",
+    "extremely_severe": "Extremamente severo"
+  },
+  "messages": {
+    "anxiety_mild": "Suas respostas sugerem ansiedade leve ou situacional. O estresse diário às vezes pode parecer elevado, mas atenção plena e respiração suaves podem manter você com os pés no chão.",
+    "anxiety_moderate": "Suas respostas sugerem ansiedade moderada. Você pode estar experimentando tensões físicas ou mentais ocasionais que afetam sua calma.",
+    "anxiety_severe": "Suas respostas indicam ansiedade elevada que pode estar interferindo na sua paz de espírito diária.",
+    "anxiety_extremely_severe": "Suas respostas indicam um alto nível de ansiedade e angústia no momento. Entrar em contato com um profissional pode proporcionar segurança e alívio.",
+    "depression_mild": "Suas respostas sugerem um humor baixo de leve a leve. Cuidado pessoal gentil e manter a conexão com rotinas de apoio ajuda.",
+    "depression_moderate": "Suas respostas sugerem um humor moderadamente baixo ou pouco entusiasmo. Conversar com um terapeuta pode fornecer orientações valiosas.",
+    "depression_severe": "Suas respostas sugerem que você está carregando um peso emocional perceptível agora.",
+    "depression_extremely_severe": "Suas respostas sugerem um alto nível de peso emocional. Orientação profissional pode ajudar você a navegar por isso com segurança.",
+    "stress_mild": "Suas respostas indicam um nível gerenciável de estresse diário.",
+    "stress_moderate": "Suas respostas sugerem estresse moderado e dificuldade para relaxar. Pequenas pausas intencionais podem ajudar a restaurar o equilíbrio.",
+    "stress_severe": "Suas respostas sugerem altos níveis de estresse que podem afetar seu sono e energia.",
+    "stress_extremely_severe": "Suas respostas sugerem um nível intenso de estresse agora. Deixar um profissional te ajudar a entender isso pode trazer alívio."
+  },
+  "report": {
+    "title": "Seu Retrato Emocional",
+    "desc": "Aqui está uma visão geral de como você tem se sentido em diferentes indicadores emocionais importantes.",
+    "talk_prompt": "Quer alguém para conversar?",
+    "talk_sub": "Suporte profissional está disponível sempre que você precisar.",
+    "btn_view_plans": "Veja Planos de Terapia",
+    "btn_finish": "Avaliação Completa",
+    "btn_back": "Voltar"
+  }
+}

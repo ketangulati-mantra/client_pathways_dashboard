@@ -1,0 +1,17 @@
+{
+  "header_back": "返回",
+  "header_title": "每日检查",
+  "streak_title": "日间连胜",
+  "home_welcome": "你现在感觉怎么样？",
+  "home_subtitle": "花点正念的时间，调频到你的情绪景观和身体状态。",
+  "btn_start_checkin": "开始签到。",
+  "history_title": "你最近的签到记录",
+  "step_emotion_title": "选择你当前的情绪状态",
+  "step_intensity_title": "这种感觉有多强烈？",
+  "step_context_title": "是什么影响了你的感受？",
+  "step_reflection_title": "反思与注释",
+  "step_response_title": "个性化洞察",
+  "btn_continue": "继续",
+  "btn_finish": "完整签到。",
+  "btn_exit": "继续我的计划"
+}

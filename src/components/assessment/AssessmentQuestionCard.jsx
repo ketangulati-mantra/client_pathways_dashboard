@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function AssessmentQuestionCard({
   question,
@@ -14,6 +15,7 @@ export function AssessmentQuestionCard({
   totalQuestions = 9,
   isSubmitting = false
 }) {
+  const { t } = useTranslation('emotional_assessment');
   const [selectedScore, setSelectedScore] = useState(selectedResponse?.score);
   const [isAdvancing, setIsAdvancing] = useState(false);
 
@@ -39,6 +41,23 @@ export function AssessmentQuestionCard({
   const stepNumber = currentStepIndex + 1;
   const progressPercentage = Math.min(100, Math.max(0, (stepNumber / totalQuestions) * 100));
 
+  const getOptionLabel = (score, fallback) => {
+    switch (score) {
+      case 1:
+        return t('options.not_at_all', { defaultValue: fallback });
+      case 2:
+        return t('options.sometimes', { defaultValue: fallback });
+      case 3:
+        return t('options.often', { defaultValue: fallback });
+      case 4:
+        return t('options.almost_always', { defaultValue: fallback });
+      default:
+        return fallback;
+    }
+  };
+
+  const translatedQuestionText = t(`questions.${question.id}`, { defaultValue: question.text });
+
   return (
     <div
       style={{
@@ -63,7 +82,7 @@ export function AssessmentQuestionCard({
             textTransform: 'uppercase',
             color: '#64748b'
           }}>
-            Question {stepNumber} of {totalQuestions}
+            {t('question_counter', { current: stepNumber, total: totalQuestions, defaultValue: `Question ${stepNumber} of ${totalQuestions}` })}
           </span>
           <span style={{
             fontSize: '0.86rem',
@@ -87,7 +106,7 @@ export function AssessmentQuestionCard({
             style={{
               height: '100%',
               background: '#2563eb',
-              borderRadius: '999px',
+              borderRadius: '9999px',
               width: `${progressPercentage}%`,
               transition: 'width 0.35s cubic-bezier(0.4, 0, 0.2, 1)'
             }}
@@ -118,7 +137,7 @@ export function AssessmentQuestionCard({
               color: '#64748b',
               fontWeight: 500
             }}>
-              How much has this applied to you over the past week?
+              {t('instruction', { defaultValue: 'How much has this applied to you over the past week?' })}
             </span>
             <h2 style={{
               fontSize: 'clamp(1.35rem, 5vw, 1.85rem)',
@@ -128,7 +147,7 @@ export function AssessmentQuestionCard({
               letterSpacing: '-0.02em',
               margin: 0
             }}>
-              {question.text}
+              {translatedQuestionText}
             </h2>
           </div>
 
@@ -141,6 +160,7 @@ export function AssessmentQuestionCard({
           }}>
             {question.options.map((opt) => {
               const isSelected = selectedScore === opt.score;
+              const label = getOptionLabel(opt.score, opt.label);
               return (
                 <button
                   key={opt.score}
@@ -195,7 +215,7 @@ export function AssessmentQuestionCard({
                       color: isSelected ? '#1e40af' : '#1e293b',
                       lineHeight: 1.4
                     }}>
-                      {opt.label}
+                      {label}
                     </span>
                   </div>
 
@@ -204,7 +224,7 @@ export function AssessmentQuestionCard({
                     color: isSelected ? '#2563eb' : '#94a3b8',
                     fontWeight: 700
                   }}>
-                    {isSelected ? 'Selected' : ''}
+                    {isSelected ? (t('options.selected', { defaultValue: 'Selected' })) : ''}
                   </span>
                 </button>
               );
@@ -245,7 +265,7 @@ export function AssessmentQuestionCard({
               onMouseOut={(e) => (e.currentTarget.style.color = '#64748b')}
             >
               <ArrowLeft size={16} />
-              <span>Previous question</span>
+              <span>{t('btn_prev', { defaultValue: 'Previous question' })}</span>
             </button>
           )}
         </div>
@@ -283,7 +303,7 @@ export function AssessmentQuestionCard({
               }
             }}
           >
-            <span>{isSubmitting ? 'Submitting...' : 'View My Results'}</span>
+            <span>{isSubmitting ? t('btn_submitting', { defaultValue: 'Submitting...' }) : t('btn_view_results', { defaultValue: 'View My Results' })}</span>
             {!isSubmitting && <ArrowRight size={16} />}
           </button>
         )}

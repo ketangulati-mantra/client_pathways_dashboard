@@ -1,0 +1,14 @@
+{
+  "header_back": "शर्त लगाना",
+  "header_title": "इमोशन व्हील",
+  "prompt_level1": "आप अभी क्या महसूस कर रहे हैं?",
+  "prompt_level2": "{{परिवार}} की खोज",
+  "prompt_level3": "आइए अधिक विशिष्ट हो जाएं",
+  "prompt_intensity": "यह भावना कितनी तीव्र है?",
+  "prompt_context": "इस भावना को किसने जगाया?",
+  "prompt_needs": "अभी आपको क्या चाहिए?",
+  "snapshot_title": "आपका भावनात्मक स्नैपशॉट",
+  "btn_explore": "और ज्यादा खोजें",
+  "btn_complete": "पूरी गतिविधि",
+  "btn_share": "स्नैपशॉट साझा करें"
+}

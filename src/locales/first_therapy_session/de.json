@@ -1,0 +1,43 @@
+{
+  "header_back": "Zurück",
+  "header_title": "Wie man eine Sitzung bucht",
+  "hero_title_prefix": "Vernetze dich mit dem richtigen Therapeuten,",
+  "hero_highlight": "In deinem eigenen Tempo.",
+  "hero_subtitle": "Die Buchung Ihrer Sitzung bei Mantra ist einfach und vertraulich. Sehen Sie, wie einfach es ist, Ihren Tarif auszuwählen, Ihre Bedürfnisse mitzuteilen, mit einem Anbieter zu matchen und mit der Behandlung zu beginnen.",
+  "interactive_title": "Wie die Buchung funktioniert",
+  "interactive_subtitle": "Schritt-für-Schritt-interaktiver Ablauf des Buchungsprozesses.",
+  "steps": {
+    "s1_title": "Wählen Sie einen Plan",
+    "s1_desc": "Beginnen Sie mit einer Probesitzung oder wählen Sie einen mehrmonatigen Plan.",
+    "s2_title": "Teilen Sie Ihre Präferenzen mit",
+    "s2_desc": "Erzähle Mantra deine Ziele, Herausforderungen und Therapeutenpräferenzen.",
+    "s3_title": "Lass dich zuordnen oder wähle deinen Therapeuten",
+    "s3_desc": "Lassen Sie KI Sie sofort zuordnen oder stöbern und laden Sie einen Anbieter ein.",
+    "s4_title": "Sprich mit deinem Therapeuten",
+    "s4_desc": "Schreib deinem Therapeuten in der App eine Nachricht, um dich vor dem Termin wohlzufühlen.",
+    "s5_title": "Such dir eine Zeit und Buch aus",
+    "s5_desc": "Wählen Sie ein passendes Datum und eine passende Uhrzeit im Kalender Ihres Therapeuten aus.",
+    "s6_title": "Beitritt aus dem Chat",
+    "s6_desc": "Öffne den sicheren Link zur Videositzung, der direkt in deinem Chat geteilt wird."
+  },
+  "ui_preview": {
+    "discount": "50 % Rabatt auf die erste Sitzung",
+    "intro_trial": "Einführungsprozess",
+    "select_focus": "Wählen Sie Ihre Schwerpunkte aus:",
+    "ai_match": "KI-Match",
+    "ai_match_sub": "Auto-Empfehlungen",
+    "browse_team": "Durchstöber-Team",
+    "browse_team_sub": "Manuell auswählen",
+    "therapist_msg": "Hallo! Ich freue mich darauf, dich zu unterstützen.",
+    "therapist_reply": "Hallo Dr. Miller! Ich habe gerade am Freitag gebucht.",
+    "calendar_title": "Ausgewählte Sitzungszeit",
+    "join_btn": "Tritt an der Videositzung teil",
+    "secure_room": "100 % verschlüsselt und vertraulich"
+  },
+  "video_title": "Sehen Sie sich die vollständige Buchungsübersicht an",
+  "video_subtitle": "Schritt-für-Schritt-Visualisierung des gesamten In-App-Buchungsprozesses.",
+  "faq_title": "Häufig gestellte Fragen",
+  "cta_title": "Bereit, den nächsten Schritt zu gehen?",
+  "cta_subtitle": "Entdecken Sie unsere lizenzierten Therapeuten und buchen Sie Ihre erste Sitzung, wann immer Sie bereit sind.",
+  "cta_btn": "Erkunden Sie Therapiepläne"
+}

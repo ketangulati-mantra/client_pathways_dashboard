@@ -1,0 +1,43 @@
+{
+  "header_back": "Hátra",
+  "header_title": "Hogyan foglalj alkalmat",
+  "hero_title_prefix": "Kapcsolódj a megfelelő terapeutához,",
+  "hero_highlight": "A saját tempódban.",
+  "hero_subtitle": "A Mantrán foglalt időpontfoglalás egyszerű és bizalmas. Nézd meg, milyen könnyű kiválasztani a tervedet, megosztani az igényeidet, egyeztesd meg egy szolgáltatóval, és elkezdd az ellátást.",
+  "interactive_title": "Hogyan működik a foglalás",
+  "interactive_subtitle": "Lépésről lépésre interaktív áttekintés a foglalási folyamatról.",
+  "steps": {
+    "s1_title": "Válassz tervet",
+    "s1_desc": "Kezdj egy próbaidőszakkal, vagy válassz több hónapos tervet.",
+    "s2_title": "Oszd meg preferenciáidat",
+    "s2_desc": "Mondd el a Mantrának a céljaidat, kihívásaidat és a terapeutai preferenciáidat.",
+    "s3_title": "Találj párosítást, vagy válaszd ki a terapeutát",
+    "s3_desc": "Engedd, hogy az AI azonnal párosítson veled, vagy böngészni és hívni egy szolgáltatót.",
+    "s4_title": "Beszélgess a terapeutáddal",
+    "s4_desc": "Írj üzenetet a terapeutadnak az alkalmazásban, hogy kényelmesen érezd magad, mielőtt foglalsz.",
+    "s5_title": "Válassz időpontot és könyvet",
+    "s5_desc": "Válassz egy kényelmes dátumot és időpontot a terapeutád naptárában.",
+    "s6_title": "Csatlakozz a csevegésből",
+    "s6_desc": "Nyisd meg a biztonságos videós szekciós linket, amelyet közvetlenül a csevegésedben osztod meg."
+  },
+  "ui_preview": {
+    "discount": "50% KEDVEZMÉNY az első alkalomra",
+    "intro_trial": "Bevezető tárgyalás",
+    "select_focus": "Válaszd ki a fókuszterületeidet:",
+    "ai_match": "AI Match",
+    "ai_match_sub": "Autóajánlások",
+    "browse_team": "Böngésző csapat",
+    "browse_team_sub": "Manuálisan válassz",
+    "therapist_msg": "Helló! Alig várom, hogy támogassalak.",
+    "therapist_reply": "Szia, Dr. Miller! Most foglaltam pénteken időpontot.",
+    "calendar_title": "Válaszd az ülés idejét",
+    "join_btn": "Csatlakozz videós szekcióhoz",
+    "secure_room": "100% titkosított és bizalmas"
+  },
+  "video_title": "Nézd meg a teljes foglalási végigjátszást",
+  "video_subtitle": "Lépésről lépésre vizuális bemutatója az egész alkalmazáson belüli foglalási folyamatnak.",
+  "faq_title": "Gyakran ismételt kérdések",
+  "cta_title": "Készen állsz a következő lépésre?",
+  "cta_subtitle": "Fedezd fel engedéllyel rendelkező terapeutáinkat, és foglalj időpontot az első alkalomra, amikor készen állsz.",
+  "cta_btn": "Fedezze fel a terápiás terveket"
+}

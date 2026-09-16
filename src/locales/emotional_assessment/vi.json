@@ -1,0 +1,60 @@
+{
+  "back": "Quay lại",
+  "assessment_title": "Đánh giá sức khỏe cảm xúc",
+  "instruction": "Điều này đã ảnh hưởng đến bạn như thế nào trong tuần qua?",
+  "question_counter": "Câu hỏi {{current}} của {{total}}",
+  "options": {
+    "not_at_all": "Hoàn toàn không phải vậy",
+    "sometimes": "Đôi khi",
+    "often": "Thường xuyên",
+    "almost_always": "Hầu như luôn luôn như vậy"
+  },
+  "questions": {
+    "q1": "Tôi suýt hoảng loạn",
+    "q2": "Tôi cảm thấy tim mình đập nhanh dù không hề cố gắng gì về thể chất",
+    "q3": "Tôi sợ hãi vô cớ",
+    "q4": "Tôi cảm thấy mình chẳng có gì để mong đợi",
+    "q5": "Tôi cảm thấy chán nản và buồn bã",
+    "q6": "Tôi không thể hào hứng với bất cứ điều gì",
+    "q7": "Tôi thấy khó để thư giãn",
+    "q8": "Tôi thấy mình bắt đầu bực bội",
+    "q9": "Tôi thấy khó thư giãn"
+  },
+  "categories": {
+    "anxiety": "Lo âu",
+    "anxiety_desc": "Đo lường lo âu tình huống, căng thẳng thể chất và cảm giác lo lắng.",
+    "depression": "Trầm cảm",
+    "depression_desc": "Đo lường năng lượng thấp, thiếu cảm xúc tích cực và khó cảm thấy hứng thú.",
+    "stress": "Căng thẳng",
+    "stress_desc": "Đo lường khó thư giãn, bồn chồn và căng thẳng cảm xúc."
+  },
+  "levels": {
+    "mild": "Nhẹ",
+    "moderate": "vừa phải",
+    "severe": "Nghiêm trọng",
+    "extremely_severe": "cực kỳ nghiêm trọng"
+  },
+  "messages": {
+    "anxiety_mild": "Phản hồi của bạn gợi ý là lo lắng nhẹ hoặc do hoàn cảnh. Căng thẳng hàng ngày đôi khi có thể tăng lên, nhưng chánh niệm nhẹ nhàng và hơi thở có thể giúp bạn giữ vững tinh thần.",
+    "anxiety_moderate": "Phản ứng của bạn cho thấy lo âu vừa phải. Bạn có thể thỉnh thoảng trải qua căng thẳng thể chất hoặc tinh thần ảnh hưởng đến sự bình tĩnh của mình.",
+    "anxiety_severe": "Phản ứng của bạn cho thấy sự lo âu tăng cao, có thể đang ảnh hưởng đến sự bình yên hàng ngày của bạn.",
+    "anxiety_extremely_severe": "Phản hồi của bạn cho thấy mức độ lo âu và đau khổ cao ngay lúc này. Kết nối với chuyên gia có thể mang lại sự an toàn và giảm bớt.",
+    "depression_mild": "Phản hồi của bạn gợi ý tâm trạng thấp từ nhỏ đến nhẹ. Chăm sóc bản thân nhẹ nhàng và duy trì kết nối với các thói quen hỗ trợ rất hữu ích.",
+    "depression_moderate": "Phản hồi của bạn gợi ý tâm trạng thấp vừa phải hoặc nhiệt huyết thấp. Nói chuyện với chuyên gia trị liệu có thể cung cấp sự hướng dẫn quý giá.",
+    "depression_severe": "Những phản hồi của bạn cho thấy bạn đang mang một gánh nặng cảm xúc rõ rệt ngay lúc này.",
+    "depression_extremely_severe": "Những phản hồi của bạn cho thấy bạn đang rất nặng nề về mặt cảm xúc. Sự hướng dẫn chuyên nghiệp có thể giúp bạn vượt qua điều này một cách an toàn.",
+    "stress_mild": "Phản hồi của bạn cho thấy mức độ căng thẳng hàng ngày có thể kiểm soát được.",
+    "stress_moderate": "Câu trả lời của bạn gợi ý rằng bạn đang có căng thẳng vừa phải và khó thư giãn. Những khoảng nghỉ nhỏ có chủ ý có thể giúp lấy lại sự cân bằng.",
+    "stress_severe": "Phản hồi của bạn cho thấy mức độ căng thẳng cao có thể ảnh hưởng đến giấc ngủ và năng lượng của bạn.",
+    "stress_extremely_severe": "Những phản hồi của bạn cho thấy bạn đang rất căng thẳng lúc này. Hãy để chuyên gia giúp bạn giải tỏa điều này có thể mang lại sự nhẹ nhõm."
+  },
+  "report": {
+    "title": "Ảnh chụp cảm xúc của bạn",
+    "desc": "Dưới đây là tổng quan về cảm xúc của bạn qua các chỉ số cảm xúc quan trọng.",
+    "talk_prompt": "Muốn có ai đó để nói chuyện không?",
+    "talk_sub": "Hỗ trợ chuyên nghiệp luôn sẵn sàng hỗ trợ bất cứ khi nào bạn cần.",
+    "btn_view_plans": "Xem Kế hoạch Liệu pháp",
+    "btn_finish": "Đánh giá toàn diện",
+    "btn_back": "Quay lại"
+  }
+}

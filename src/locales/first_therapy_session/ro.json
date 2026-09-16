@@ -1,0 +1,43 @@
+{
+  "header_back": "Înapoi",
+  "header_title": "Cum să programezi o sesiune",
+  "hero_title_prefix": "Conectează-te cu terapeutul potrivit,",
+  "hero_highlight": "În ritmul tău.",
+  "hero_subtitle": "Rezervarea sesiunii pe Mantra este simplă și confidențială. Vezi cât de ușor este să-ți alegi planul, să-ți împărtășești nevoile, să te potrivești cu un furnizor și să începi îngrijirea.",
+  "interactive_title": "Cum funcționează rezervarea",
+  "interactive_subtitle": "Ghid interactiv pas cu pas al procesului de rezervare.",
+  "steps": {
+    "s1_title": "Alege un plan",
+    "s1_desc": "Începe cu o sesiune de probă sau alege un plan pe mai multe luni.",
+    "s2_title": "Împărtășește-ți preferințele",
+    "s2_desc": "Spune-i Mantrei obiectivele, provocările și preferințele terapeutului tău.",
+    "s3_title": "Fă-ți o potrivire sau alege-ți terapeutul",
+    "s3_desc": "Lasă AI-ul să te potrivească instantaneu sau răsfoiește și invită un furnizor.",
+    "s4_title": "Vorbește cu terapeutul tău",
+    "s4_desc": "Trimite-i un mesaj terapeutului tău din aplicație ca să te simți confortabil înainte de a face programarea.",
+    "s5_title": "Alege o oră și rezervă",
+    "s5_desc": "Alege o dată și o oră convenabile în calendarul terapeutului tău.",
+    "s6_title": "Alătură-te din chat",
+    "s6_desc": "Deschide linkul securizat al sesiunii video partajate direct în chat."
+  },
+  "ui_preview": {
+    "discount": "50% REDUCERE la prima ședință",
+    "intro_trial": "Proces introductiv",
+    "select_focus": "Alege-ți zonele de interes:",
+    "ai_match": "Meciul AI",
+    "ai_match_sub": "Recomandări auto",
+    "browse_team": "Echipa Browse",
+    "browse_team_sub": "Pick manual",
+    "therapist_msg": "Bună! Aștept cu nerăbdare să te susțin.",
+    "therapist_reply": "Bună, Dr. Miller! Tocmai am rezervat vineri.",
+    "calendar_title": "Timpul Select pentru Sesiune",
+    "join_btn": "Alătură-te unei sesiuni video",
+    "secure_room": "100% criptat și confidențial"
+  },
+  "video_title": "Urmărește ghidul complet de rezervare",
+  "video_subtitle": "Demonstrație vizuală pas cu pas a întregului proces de rezervare în aplicație.",
+  "faq_title": "Întrebări frecvente",
+  "cta_title": "Ești gata să faci următorul pas?",
+  "cta_subtitle": "Explorează terapeuții noștri autorizați și programează-ți prima ședință oricând ești pregătit.",
+  "cta_btn": "Explorează planurile de terapie"
+}

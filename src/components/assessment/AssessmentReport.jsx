@@ -762,7 +762,7 @@ export function AssessmentReport({ report, onComplete }) {
           </div>
           <button
             type="button"
-            onClick={() => window.open('https://web.mantracare.com/plans/all', '_blank')}
+            onClick={() => window.open('https://web.mantracare.com/plans/therapy', '_blank')}
             style={{
               display: 'inline-flex',
               alignItems: 'center',

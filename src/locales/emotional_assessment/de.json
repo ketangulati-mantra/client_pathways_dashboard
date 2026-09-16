@@ -1,0 +1,60 @@
+{
+  "back": "Zurück",
+  "assessment_title": "Bewertung des emotionalen Wohlbefindens",
+  "instruction": "Wie sehr hat das in der vergangenen Woche auf dich angewendet?",
+  "question_counter": "Frage {{current}} von {{total}}",
+  "options": {
+    "not_at_all": "Überhaupt nicht",
+    "sometimes": "Manchmal",
+    "often": "Oft",
+    "almost_always": "Fast immer"
+  },
+  "questions": {
+    "q1": "Ich war kurz davor, in Panik zu geraten",
+    "q2": "Ich spürte, wie mein Herz schnell schlug, obwohl ich keine körperliche Anstrengung unternommen hatte",
+    "q3": "Ich hatte grundlos Angst",
+    "q4": "Ich hatte das Gefühl, nichts zu haben, worauf ich mich freuen konnte",
+    "q5": "Ich fühlte mich niedergeschlagen und niedergeschlagen",
+    "q6": "Ich konnte mich für nichts begeistern",
+    "q7": "Ich fand es schwer, herunterzukommen",
+    "q8": "Ich merkte, wie ich unruhig wurde",
+    "q9": "Ich fand es schwer, mich zu entspannen"
+  },
+  "categories": {
+    "anxiety": "Angst",
+    "anxiety_desc": "Misst situative Angst, körperliche Anspannung und Gefühle von Nervosität.",
+    "depression": "Depression",
+    "depression_desc": "Misst geringe Energie, fehlende positive Gefühle und Schwierigkeiten, begeistert zu sein.",
+    "stress": "Stress",
+    "stress_desc": "Misst Schwierigkeiten beim Entspannen, Unruhe und emotionale Anspannung."
+  },
+  "levels": {
+    "mild": "Leicht",
+    "moderate": "Moderat",
+    "severe": "Schwerwiegend",
+    "extremely_severe": "Extrem schwerwiegend"
+  },
+  "messages": {
+    "anxiety_mild": "Deine Antworten deuten auf leichte oder situative Angst hin. Alltäglicher Stress kann sich manchmal erhöht anfühlen, aber sanfte Achtsamkeit und Atmung können dich erden.",
+    "anxiety_moderate": "Deine Antworten deuten auf mäßige Angst hin. Vielleicht erlebst du gelegentlich körperliche oder mentale Anspannung, die deine Ruhe beeinträchtigt.",
+    "anxiety_severe": "Deine Antworten deuten auf erhöhte Angst hin, die deine tägliche Ruhe beeinträchtigen könnte.",
+    "anxiety_extremely_severe": "Ihre Antworten deuten auf ein hohes Maß an Angst und Belastung hin. Der Kontakt zu einem Fachmann kann Sicherheit und Erleichterung bieten.",
+    "depression_mild": "Deine Antworten deuten auf eine minimale bis leichte Niedergeschlagenheit hin. Sanfte Selbstfürsorge und das Bleiben von unterstützenden Routinen sind hilfreich.",
+    "depression_moderate": "Deine Antworten deuten auf mäßige Niedergeschlagenheit oder geringe Begeisterung hin. Ein Gespräch mit einem Therapeuten kann wertvolle Orientierung bieten.",
+    "depression_severe": "Deine Antworten deuten darauf hin, dass du gerade eine spürbare emotionale Last trägst.",
+    "depression_extremely_severe": "Deine Antworten deuten auf ein hohes Maß an emotionaler Schwere hin. Professionelle Beratung kann dir helfen, das sicher zu bewältigen.",
+    "stress_mild": "Deine Antworten deuten auf ein handhabbares Maß an alltäglichem Stress hin.",
+    "stress_moderate": "Deine Antworten deuten auf mäßigen Stress und Schwierigkeiten beim Entspannen hin. Kleine, bewusste Pausen können helfen, das Gleichgewicht wiederherzustellen.",
+    "stress_severe": "Deine Antworten deuten auf hohe Stressniveaus hin, die deinen Schlaf und deine Energie beeinträchtigen könnten.",
+    "stress_extremely_severe": "Deine Antworten deuten auf ein enormes Maß an Stress hin. Einen Profi dabei helfen zu lassen, kann Erleichterung bringen."
+  },
+  "report": {
+    "title": "Dein emotionaler Schnappschuss",
+    "desc": "Hier ist ein Überblick darüber, wie Sie sich über wichtige emotionale Indikatoren hinweg gefühlt haben.",
+    "talk_prompt": "Willst du jemanden zum Reden?",
+    "talk_sub": "Professionelle Unterstützung steht Ihnen jederzeit zur Verfügung.",
+    "btn_view_plans": "Therapiepläne ansehen",
+    "btn_finish": "Vollständige Bewertung",
+    "btn_back": "Zurück"
+  }
+}

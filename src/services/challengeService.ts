@@ -196,11 +196,11 @@ export function createOptimisticActiveDashboard(userId: string, challengeId: str
       },
       {
         id: 'support_circle',
-        title: 'Your Support Circle',
-        description: 'Identify the people you can lean on when things feel heavy.',
-        tag: 'ACTIVITY',
-        estimatedMinutes: 5,
-        actionRoute: '/task/depression-where-am-i-right-now'
+        title: 'My Support Circle',
+        description: 'Identify the people you can lean on when things feel difficult.',
+        tag: 'CONNECTION',
+        estimatedMinutes: 3,
+        actionRoute: '/task/my-support-circle'
       },
       {
         id: 'find_enjoyment',

@@ -21,6 +21,7 @@ import Mantra21JoinLandingPage from './Mantra21JoinLandingPage';
 import ChallengeHubPage from './ChallengeHubPage';
 import Mantra21DailyActivityView from './Mantra21DailyActivityView';
 import MythsWeTellOurselvesActivity from './MythsWeTellOurselvesActivity';
+import MySupportCircleActivity from './MySupportCircleActivity';
 import AdminLoginPage from './AdminLoginPage';
 import { ProtectedRoute } from '../auth/ProtectedRoute';
 
@@ -31,6 +32,11 @@ import { ProtectedRoute } from '../auth/ProtectedRoute';
 const ROUTE_VIEW_REGISTRY = {
   '/': { default: (props) => <ProtectedRoute><DeveloperLessonsPage {...props} /></ProtectedRoute> },
   '/user_pathways': { default: (props) => <ProtectedRoute><DeveloperLessonsPage {...props} /></ProtectedRoute> },
+  '/task/my-support-circle': { default: MySupportCircleActivity },
+  '/task/my_support_circle': { default: MySupportCircleActivity },
+  '/my-support-circle': { default: MySupportCircleActivity },
+  '/task/support-circle': { default: MySupportCircleActivity },
+  '/task/mantra21-support-circle': { default: MySupportCircleActivity },
   '/task/myths-we-tell-ourselves': { default: MythsWeTellOurselvesActivity },
   '/task/myths_we_tell_ourselves': { default: MythsWeTellOurselvesActivity },
   '/myths-we-tell-ourselves': { default: MythsWeTellOurselvesActivity },
@@ -187,6 +193,10 @@ export function resolveLessonView({ currentPath, currentService, onBack, onNavig
 
     if (matchingActivity.lessonId === 'daily-check-in' || matchingActivity.lessonId === 'daily_check_in' || matchingActivity.lessonId === 'check-in') {
       return <DailyCheckInPage onBack={onBack} onNavigate={onNavigate} service={currentService} />;
+    }
+
+    if (matchingActivity.lessonId === 'mantra21_my_support_circle' || matchingActivity.lessonId === 'my-support-circle' || matchingActivity.lessonId === 'my_support_circle') {
+      return <MySupportCircleActivity onBack={onBack} onNavigate={onNavigate} service={currentService} />;
     }
 
     if (matchingActivity.lessonId === 'mantra21_myths_we_tell_ourselves' || matchingActivity.lessonId === 'myths-we-tell-ourselves') {

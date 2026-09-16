@@ -1,0 +1,14 @@
+{
+  "header_back": "뒤로",
+  "header_title": "감정 바퀴",
+  "prompt_level1": "지금 어떤 기분이야?",
+  "prompt_level2": "{{가족}} 탐험하기",
+  "prompt_level3": "좀 더 구체적으로 말해봅시다",
+  "prompt_intensity": "이 감정은 얼마나 강렬한가요?",
+  "prompt_context": "이 감정을 불러일으킨 원인은 무엇일까요?",
+  "prompt_needs": "지금 당장 필요한 게 뭐야?",
+  "snapshot_title": "당신의 감정 스냅샷",
+  "btn_explore": "더 알아보기",
+  "btn_complete": "전체 활동",
+  "btn_share": "공유 스냅샷"
+}

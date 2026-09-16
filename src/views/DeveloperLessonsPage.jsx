@@ -9,6 +9,7 @@ const API_BASE = import.meta.env.PROD ? '' : 'http://localhost:5001';
 
 export const THERAPY_PROBLEMS = [
   { id: 'all', label: 'All Therapy' },
+  { id: 'foundational', label: 'Foundational' },
   { id: 'depression', label: 'Depression' },
   { id: 'adhd', label: 'ADHD' },
   { id: 'relationship_issues', label: 'Relationship Issues' },
@@ -173,9 +174,17 @@ export default function DeveloperLessonsPage({ onNavigate }) {
       (act.service && normalizeService(act.service) === normSelected);
 
     // Filter by specific Problem/Condition tab (when inside therapy)
+    const isFoundational =
+      act.problem === 'foundational' ||
+      (act.problems && act.problems.includes('foundational')) ||
+      (!act.problem &&
+      (!act.problems || act.problems.length === 0) &&
+      !act.lessonId?.startsWith('depression_'));
+
     const matchesProblem =
       selectedProblem === 'all' ||
       !isTherapyActive ||
+      (selectedProblem === 'foundational' && isFoundational) ||
       (act.problems && act.problems.includes(selectedProblem)) ||
       (act.problem && act.problem === selectedProblem) ||
       (act.tags && act.tags.includes(selectedProblem)) ||

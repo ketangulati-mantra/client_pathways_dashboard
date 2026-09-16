@@ -1,0 +1,43 @@
+{
+  "header_back": "Retour",
+  "header_title": "Comment réserver une session",
+  "hero_title_prefix": "Connectez-vous avec le bon thérapeute,",
+  "hero_highlight": "À ton rythme.",
+  "hero_subtitle": "Réserver votre séance sur Mantra est simple et confidentiel. Découvrez à quel point il est facile de choisir votre forfait, de partager vos besoins, de mettre en relation avec un prestataire et de commencer les soins.",
+  "interactive_title": "Comment fonctionne la réservation",
+  "interactive_subtitle": "Pas à pas, pas à pas, interactif du processus de réservation.",
+  "steps": {
+    "s1_title": "Choisissez un forfait",
+    "s1_desc": "Commencez par une session d’essai ou choisissez un forfait sur plusieurs mois.",
+    "s2_title": "Partagez vos préférences",
+    "s2_desc": "Parlez de Mantra vos objectifs, défis et préférences de thérapeute.",
+    "s3_title": "Faites-vous correspondre ou choisissez votre thérapeute",
+    "s3_desc": "Laissez l’IA vous faire correspondre instantanément ou parcourez et invitez un prestataire.",
+    "s4_title": "Discute avec ton thérapeute",
+    "s4_desc": "Envoyez un message à votre thérapeute via l’application pour vous sentir à l’aise avant de prendre rendez-vous.",
+    "s5_title": "Choisissez un moment et réservez",
+    "s5_desc": "Choisissez une date et une heure pratiques dans le calendrier de votre thérapeute.",
+    "s6_title": "Rejoindre depuis le chat",
+    "s6_desc": "Ouvrez le lien de session vidéo sécurisée partagé directement dans votre chat."
+  },
+  "ui_preview": {
+    "discount": "50 % de réduction sur la première séance",
+    "intro_trial": "Procès d’introduction",
+    "select_focus": "Sélectionnez vos domaines d’intérêt :",
+    "ai_match": "Match IA",
+    "ai_match_sub": "Recommandations de voitures",
+    "browse_team": "Équipe de navigation",
+    "browse_team_sub": "Crochet manuel",
+    "therapist_msg": "Bonjour ! J’ai hâte de te soutenir.",
+    "therapist_reply": "Bonjour Dr Miller ! Je viens de réserver vendredi.",
+    "calendar_title": "Heure de sélection de la session",
+    "join_btn": "Rejoignez la session vidéo",
+    "secure_room": "100 % chiffré et confidentiel"
+  },
+  "video_title": "Regardez l’explication complète de la réservation",
+  "video_subtitle": "Démonstration visuelle étape par étape de l’ensemble du processus de réservation intégrée à l’application.",
+  "faq_title": "Questions fréquemment posées",
+  "cta_title": "Prêt à passer à l’étape suivante ?",
+  "cta_subtitle": "Découvrez nos thérapeutes agréés et réservez votre première séance quand vous serez prêt.",
+  "cta_btn": "Découvrez les plans de thérapie"
+}

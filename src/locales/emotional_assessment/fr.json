@@ -1,0 +1,60 @@
+{
+  "back": "Retour",
+  "assessment_title": "Évaluation du bien-être émotionnel",
+  "instruction": "Dans quelle mesure cela vous a-t-il affecté cette semaine ?",
+  "question_counter": "Question {{current}} de {{total}}",
+  "options": {
+    "not_at_all": "Pas du tout",
+    "sometimes": "Parfois",
+    "often": "Souvent",
+    "almost_always": "Presque toujours"
+  },
+  "questions": {
+    "q1": "J’étais sur le point de paniquer",
+    "q2": "J’ai senti mon cœur battre vite alors que je n’avais fait aucun effort physique",
+    "q3": "J’avais peur sans raison",
+    "q4": "J’avais l’impression de ne rien attendre avec impatience",
+    "q5": "Je me sentais abattu et déprimé",
+    "q6": "Je n’arrivais pas à devenir enthousiaste pour quoi que ce soit",
+    "q7": "J’ai eu du mal à me détendre",
+    "q8": "Je me suis surpris à m’agiter",
+    "q9": "J’ai eu du mal à me détendre"
+  },
+  "categories": {
+    "anxiety": "Anxiété",
+    "anxiety_desc": "Mesure l’anxiété situationnelle, la tension physique et les sentiments de nervosité.",
+    "depression": "Dépression",
+    "depression_desc": "Mesure le manque d’énergie, le manque de sentiments positifs et la difficulté à se sentir enthousiaste.",
+    "stress": "Stress",
+    "stress_desc": "Mesure la difficulté à se détendre, l’agitation et la tension émotionnelle."
+  },
+  "levels": {
+    "mild": "Doux",
+    "moderate": "Modéré",
+    "severe": "Sévère",
+    "extremely_severe": "Extrêmement sévère"
+  },
+  "messages": {
+    "anxiety_mild": "Vos réponses suggèrent une anxiété légère ou situationnelle. Le stress quotidien peut parfois sembler élevé, mais la pleine conscience douce et la respiration peuvent vous garder ancré.",
+    "anxiety_moderate": "Vos réponses suggèrent une anxiété modérée. Vous pouvez ressentir parfois une tension physique ou mentale qui affecte votre calme.",
+    "anxiety_severe": "Vos réponses indiquent une anxiété accrue qui pourrait nuire à votre tranquillité d’esprit quotidienne.",
+    "anxiety_extremely_severe": "Vos réponses indiquent un niveau élevé d’anxiété et de détresse en ce moment. Contacter un professionnel peut apporter sécurité et soulagement.",
+    "depression_mild": "Vos réponses suggèrent une humeur minimale à légère déprimée. Prendre soin de soi en douceur et rester connecté avec des routines de soutien est utile.",
+    "depression_moderate": "Vos réponses suggèrent une humeur modérément basse ou un faible enthousiasme. Parler avec un thérapeute peut vous apporter des conseils précieux.",
+    "depression_severe": "Vos réponses suggèrent que vous portez un poids émotionnel notable en ce moment.",
+    "depression_extremely_severe": "Vos réponses suggèrent un haut niveau de poids émotionnel. Des conseils professionnels peuvent vous aider à naviguer dans cette situation en toute sécurité.",
+    "stress_mild": "Vos réponses indiquent un niveau de stress quotidien gérable.",
+    "stress_moderate": "Vos réponses suggèrent un stress modéré et des difficultés à se détendre. De petites pauses intentionnelles peuvent aider à rétablir l’équilibre.",
+    "stress_severe": "Vos réponses suggèrent un niveau de stress élevé qui peut affecter votre sommeil et votre énergie.",
+    "stress_extremely_severe": "Vos réponses suggèrent un niveau de stress intense en ce moment. Laisser un professionnel vous aider à déconstruire cela peut vous soulager."
+  },
+  "report": {
+    "title": "Votre instantané émotionnel",
+    "desc": "Voici un aperçu de ce que vous ressentez à travers les principaux indicateurs émotionnels.",
+    "talk_prompt": "Tu veux parler à quelqu’un ?",
+    "talk_sub": "Un soutien professionnel est disponible à chaque fois que vous en avez besoin.",
+    "btn_view_plans": "Voir les plans de thérapie",
+    "btn_finish": "Évaluation complète",
+    "btn_back": "Retour"
+  }
+}

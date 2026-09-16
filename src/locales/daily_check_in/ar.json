@@ -1,0 +1,17 @@
+{
+  "header_back": "العودة",
+  "header_title": "تسجيل الدخول اليومي",
+  "streak_title": "سلسلة النهار",
+  "home_welcome": "كيف تشعر الآن؟",
+  "home_subtitle": "خذ لحظة واعية لتتابع مشاعرك وحالتك الجسدية.",
+  "btn_start_checkin": "ابدأ تسجيل الدخول",
+  "history_title": "مراجعاتك الأخيرة",
+  "step_emotion_title": "اختر حالتك العاطفية الحالية",
+  "step_intensity_title": "ما مدى قوة هذا الشعور؟",
+  "step_context_title": "ما الذي يساهم في شعورك؟",
+  "step_reflection_title": "ريفلكت & نوت",
+  "step_response_title": "رؤية شخصية",
+  "btn_continue": "تابع",
+  "btn_finish": "تسجيل كامل",
+  "btn_exit": "واصل خطتي"
+}

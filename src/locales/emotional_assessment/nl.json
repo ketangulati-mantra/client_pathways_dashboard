@@ -1,0 +1,60 @@
+{
+  "back": "Achteruit",
+  "assessment_title": "Beoordeling van emotioneel welzijn",
+  "instruction": "Hoeveel heeft dit de afgelopen week op jou toegepast?",
+  "question_counter": "Vraag {{current}} van {{total}}",
+  "options": {
+    "not_at_all": "Helemaal niet",
+    "sometimes": "Soms",
+    "often": "Vaak",
+    "almost_always": "Bijna altijd"
+  },
+  "questions": {
+    "q1": "Ik stond op het punt in paniek te raken",
+    "q2": "Ik voelde mijn hart snel kloppen, ook al had ik geen fysieke moeite gedaan",
+    "q3": "Ik was zonder reden bang",
+    "q4": "Ik had het gevoel dat ik niets had om naar uit te kijken",
+    "q5": "Ik voelde me neerslachtig en verdrietig",
+    "q6": "Ik kon nergens enthousiast over worden",
+    "q7": "Ik vond het moeilijk om tot rust te komen",
+    "q8": "Ik merkte dat ik geagiteerd raakte",
+    "q9": "Ik vond het moeilijk om te ontspannen"
+  },
+  "categories": {
+    "anxiety": "Angst",
+    "anxiety_desc": "Meet situationele angst, fysieke spanning en gevoelens van zenuwen.",
+    "depression": "Depressie",
+    "depression_desc": "Meet lage energie, gebrek aan positieve gevoelens en moeite om enthousiast te zijn.",
+    "stress": "Stress",
+    "stress_desc": "Ze meet moeite met ontspannen, rusteloosheid en emotionele spanning."
+  },
+  "levels": {
+    "mild": "Mild",
+    "moderate": "Gematigd",
+    "severe": "Ernstig",
+    "extremely_severe": "Extreem ernstig"
+  },
+  "messages": {
+    "anxiety_mild": "Je antwoorden suggereren milde of situationele angst. Dagelijkse stress kan soms verhoogd aanvoelen, maar zachte mindfulness en ademhaling kunnen je met beide benen op de grond houden.",
+    "anxiety_moderate": "Je antwoorden suggereren matige angst. Je kunt af en toe fysieke of mentale spanning ervaren die je kalmte beïnvloedt.",
+    "anxiety_severe": "Je reacties wijzen op verhoogde angst die je dagelijkse gemoedsrust kan verstoren.",
+    "anxiety_extremely_severe": "Je reacties geven nu een hoog niveau van angst en stress aan. Contact opnemen met een professional kan veiligheid en verlichting bieden.",
+    "depression_mild": "Je antwoorden suggereren een minimale tot milde somberheid. Zachte zelfzorg en verbonden blijven met ondersteunende routines is nuttig.",
+    "depression_moderate": "Je antwoorden suggereren een matige somberheid of weinig enthousiasme. Praten met een therapeut kan waardevolle begeleiding bieden.",
+    "depression_severe": "Je antwoorden suggereren dat je op dit moment een merkbaar emotioneel gewicht draagt.",
+    "depression_extremely_severe": "Je antwoorden suggereren een hoog niveau van emotionele zwaarte. Professionele begeleiding kan je helpen dit veilig te navigeren.",
+    "stress_mild": "Je antwoorden geven een beheersbaar niveau van dagelijkse stress aan.",
+    "stress_moderate": "Je antwoorden suggereren matige stress en moeite om te ontspannen. Kleine, bewuste pauzes kunnen helpen het evenwicht te herstellen.",
+    "stress_severe": "Je antwoorden suggereren hoge stressniveaus die je slaap en energie kunnen beïnvloeden.",
+    "stress_extremely_severe": "Je reacties suggereren nu een intense stress. Een professional je laten helpen dit te verwerken kan verlichting brengen."
+  },
+  "report": {
+    "title": "Jouw emotionele momentopname",
+    "desc": "Hier volgt een overzicht van hoe je je voelt over belangrijke emotionele indicatoren.",
+    "talk_prompt": "Wil je iemand om mee te praten?",
+    "talk_sub": "Professionele ondersteuning is beschikbaar wanneer u die nodig heeft.",
+    "btn_view_plans": "Bekijk therapieplannen",
+    "btn_finish": "Volledige beoordeling",
+    "btn_back": "Achteruit"
+  }
+}

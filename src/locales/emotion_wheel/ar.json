@@ -1,0 +1,14 @@
+{
+  "header_back": "العودة",
+  "header_title": "عجلة المشاعر",
+  "prompt_level1": "ماذا تشعر الآن؟",
+  "prompt_level2": "استكشاف {{عائلة}}",
+  "prompt_level3": "دعونا نكون أكثر تحديدا",
+  "prompt_intensity": "ما مدى شدة هذا الشعور؟",
+  "prompt_context": "ما الذي أثار هذا الشعور؟",
+  "prompt_needs": "ماذا تحتاج الآن؟",
+  "snapshot_title": "لمحتك العاطفية",
+  "btn_explore": "استكشف المزيد",
+  "btn_complete": "النشاط الكامل",
+  "btn_share": "مشاركة لقطة"
+}

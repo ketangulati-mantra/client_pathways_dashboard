@@ -1,0 +1,60 @@
+{
+  "back": "Înapoi",
+  "assessment_title": "Evaluarea bunăstării emoționale",
+  "instruction": "Cât de mult ți s-a aplicat asta în ultima săptămână?",
+  "question_counter": "Întrebare {{current}} a {{total}}",
+  "options": {
+    "not_at_all": "Deloc",
+    "sometimes": "Uneori",
+    "often": "Adesea",
+    "almost_always": "Aproape întotdeauna"
+  },
+  "questions": {
+    "q1": "Eram pe punctul de a intra în panică",
+    "q2": "Simțeam cum inima îmi bate tare, deși nu făcusem niciun efort fizic",
+    "q3": "Mi-a fost frică fără motiv",
+    "q4": "Simțeam că nu am nimic de așteptat cu nerăbdare",
+    "q5": "M-am simțit abătută și tristă",
+    "q6": "Nu am reușit să devin entuziasmat de nimic",
+    "q7": "Mi-a fost greu să mă relaxez",
+    "q8": "M-am trezit agitată",
+    "q9": "Mi-a fost greu să mă relaxez"
+  },
+  "categories": {
+    "anxiety": "Anxietate",
+    "anxiety_desc": "Măsoară anxietatea situațională, tensiunea fizică și sentimentele de nervozitate.",
+    "depression": "Depresie",
+    "depression_desc": "Măsoară energia scăzută, lipsa sentimentelor pozitive și dificultatea de a te simți entuziast.",
+    "stress": "Stres",
+    "stress_desc": "Măsoară dificultatea de relaxare, neliniștea și tensiunea emoțională."
+  },
+  "levels": {
+    "mild": "Blând",
+    "moderate": "Moderat",
+    "severe": "Sever",
+    "extremely_severe": "Extrem de sever"
+  },
+  "messages": {
+    "anxiety_mild": "Răspunsurile tale sugerează anxietate ușoară sau situațională. Stresul zilnic poate părea uneori crescut, dar atenția și respirația blândă te pot menține ancorat.",
+    "anxiety_moderate": "Răspunsurile tale sugerează o anxietate moderată. S-ar putea să experimentezi ocazional tensiune fizică sau mentală care îți afectează calmul.",
+    "anxiety_severe": "Răspunsurile tale indică o anxietate crescută care ar putea afecta liniștea ta zilnică.",
+    "anxiety_extremely_severe": "Răspunsurile tale indică un nivel ridicat de anxietate și suferință în acest moment. Contactarea cu un profesionist poate oferi siguranță și alinare.",
+    "depression_mild": "Răspunsurile tale sugerează o stare de spirit scăzută de la minim la ușor. Îngrijirea blândă de sine și menținerea legăturii prin rutine de susținere sunt de ajutor.",
+    "depression_moderate": "Răspunsurile tale sugerează o dispoziție moderat scăzută sau un entuziasm scăzut. Discuția cu un terapeut poate oferi îndrumare valoroasă.",
+    "depression_severe": "Răspunsurile tale sugerează că porți o povară emoțională vizibilă acum.",
+    "depression_extremely_severe": "Răspunsurile tale sugerează un nivel ridicat de greutate emoțională. Îndrumarea profesională te poate ajuta să gestionezi situația în siguranță.",
+    "stress_mild": "Răspunsurile tale indică un nivel gestionabil de stres zilnic.",
+    "stress_moderate": "Răspunsurile tale sugerează un stres moderat și dificultăți de relaxare. Pauzele mici intenționate pot ajuta la restabilirea echilibrului.",
+    "stress_severe": "Răspunsurile tale sugerează niveluri ridicate de stres care îți pot afecta somnul și energia.",
+    "stress_extremely_severe": "Răspunsurile tale sugerează un nivel intens de stres în acest moment. Să lași un profesionist să te ajute să înțelegi situația poate aduce alinare."
+  },
+  "report": {
+    "title": "Instantanea ta emoțională",
+    "desc": "Iată o prezentare generală a modului în care te-ai simțit în legătură cu indicatorii emoționali cheie.",
+    "talk_prompt": "Vrei pe cineva cu care să vorbești?",
+    "talk_sub": "Suport profesional este disponibil ori de câte ori ai nevoie.",
+    "btn_view_plans": "Vezi planurile de terapie",
+    "btn_finish": "Evaluare completă",
+    "btn_back": "Înapoi"
+  }
+}

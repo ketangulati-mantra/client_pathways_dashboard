@@ -1,0 +1,60 @@
+{
+  "back": "Indietro",
+  "assessment_title": "Valutazione del Benessere Emotivo",
+  "instruction": "Quanto ti è riparato nell'ultima settimana?",
+  "question_counter": "Domanda {{current}} di {{total}}",
+  "options": {
+    "not_at_all": "Per niente",
+    "sometimes": "A volte",
+    "often": "Spesso",
+    "almost_always": "Quasi sempre"
+  },
+  "questions": {
+    "q1": "Stavo per andare nel panico",
+    "q2": "Sentivo il cuore battere forte anche se non avevo fatto alcuno sforzo fisico",
+    "q3": "Avevo paura senza motivo",
+    "q4": "Sentivo di non avere nulla a cui aspettarmi con entusiasmo",
+    "q5": "Mi sentivo giù di morale e giù",
+    "q6": "Non riuscivo a diventare entusiasta di nulla",
+    "q7": "Ho trovato difficile rilassarmi",
+    "q8": "Mi sono ritrovato a agitarmi",
+    "q9": "Ho trovato difficile rilassarmi"
+  },
+  "categories": {
+    "anxiety": "Ansia",
+    "anxiety_desc": "Misura l'ansia situazionale, la tensione fisica e la sensazione di nervosismo.",
+    "depression": "Depressione",
+    "depression_desc": "Misura la bassa energia, la mancanza di sentimenti positivi e la difficoltà a sentirsi entusiasti.",
+    "stress": "Stress",
+    "stress_desc": "Misura la difficoltà di rilassamento, l'irrequietezza e la tensione emotiva."
+  },
+  "levels": {
+    "mild": "Lieve",
+    "moderate": "Moderato",
+    "severe": "Grave",
+    "extremely_severe": "Estremamente grave"
+  },
+  "messages": {
+    "anxiety_mild": "Le tue risposte suggeriscono un'ansia lieve o situazionale. Lo stress quotidiano a volte può sembrare elevato, ma la consapevolezza e la respirazione gentile possono mantenerti con i piedi per terra.",
+    "anxiety_moderate": "Le tue risposte suggeriscono un'ansia moderata. Potresti sperimentare occasionalmente tensioni fisiche o mentali che compromettono la tua calma.",
+    "anxiety_severe": "Le tue risposte indicano un'ansia aumentata che potrebbe interferire con la tua tranquillità quotidiana.",
+    "anxiety_extremely_severe": "Le tue risposte indicano un alto livello di ansia e disagio in questo momento. Entrare in contatto con un professionista può offrire sicurezza e sollievo.",
+    "depression_mild": "Le tue risposte suggeriscono un umore da minimo a lieve. Prendersi cura di sé con dolcezza e mantenere la connessione con routine di supporto è utile.",
+    "depression_moderate": "Le tue risposte suggeriscono un umore moderatamente basso o un entusiasmo basso. Parlare con un terapeuta può fornire una guida preziosa.",
+    "depression_severe": "Le tue risposte suggeriscono che in questo momento stai portando un peso emotivo evidente.",
+    "depression_extremely_severe": "Le tue risposte suggeriscono un alto livello di pesantezza emotiva. Una guida professionale può aiutarti a gestire questa situazione in sicurezza.",
+    "stress_mild": "Le tue risposte indicano un livello gestibile di stress quotidiano.",
+    "stress_moderate": "Le tue risposte suggeriscono uno stress moderato e difficoltà a rilassarsi. Piccole pause intenzionali possono aiutare a ristabilire l'equilibrio.",
+    "stress_severe": "Le tue risposte suggeriscono alti livelli di stress che possono influire sul tuo sonno e sulla tua energia.",
+    "stress_extremely_severe": "Le tue risposte suggeriscono un livello di stress intenso in questo momento. Lasciare che un professionista ti aiuti a capire tutto questo può portarti sollievo."
+  },
+  "report": {
+    "title": "Il tuo istantaneo emotivo",
+    "desc": "Ecco una panoramica di come ti sei sentito attraverso i principali indicatori emotivi.",
+    "talk_prompt": "Vuoi qualcuno con cui parlare?",
+    "talk_sub": "Un supporto professionale è disponibile ogni volta che ne hai bisogno.",
+    "btn_view_plans": "Visualizza i piani terapeutici",
+    "btn_finish": "Valutazione completa",
+    "btn_back": "Indietro"
+  }
+}

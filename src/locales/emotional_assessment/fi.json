@@ -1,0 +1,60 @@
+{
+  "back": "Takaisin",
+  "assessment_title": "Emotionaalisen hyvinvoinnin arviointi",
+  "instruction": "Kuinka paljon tämä on koskenut sinua viime viikon aikana?",
+  "question_counter": "Kysymys {{current}} {{total}}",
+  "options": {
+    "not_at_all": "Ei todellakaan",
+    "sometimes": "Joskus",
+    "often": "Usein",
+    "almost_always": "Melkein aina"
+  },
+  "questions": {
+    "q1": "Olin juuri paniikissa",
+    "q2": "Tunsin sydämeni lyövän nopeasti, vaikka en ollut tehnyt mitään fyysistä ponnistusta",
+    "q3": "Pelkäsin turhaan",
+    "q4": "Tuntui, ettei minulla ollut mitään odotettavaa",
+    "q5": "Tunsin oloni alakuloiseksi ja alakuloiseksi",
+    "q6": "En pystynyt innostumaan mistään",
+    "q7": "Minun oli vaikea rauhoittua",
+    "q8": "Huomasin hermostuneeni",
+    "q9": "Minun oli vaikea rentoutua"
+  },
+  "categories": {
+    "anxiety": "Ahdistus",
+    "anxiety_desc": "Mittaa tilannekohtaista ahdistusta, fyysistä jännitystä ja hermostuneisuuden tunteita.",
+    "depression": "Lama",
+    "depression_desc": "Mittaa vähäistä energiaa, positiivisten tunteiden puutetta ja vaikeuksia tuntea innostusta.",
+    "stress": "Stressi",
+    "stress_desc": "Mittaa rentoutumisvaikeuksia, levottomuutta ja tunne-elämän jännitystä."
+  },
+  "levels": {
+    "mild": "Lievä",
+    "moderate": "Maltillinen",
+    "severe": "Vakavia",
+    "extremely_severe": "Erittäin vakava"
+  },
+  "messages": {
+    "anxiety_mild": "Vastauksesi viittaavat lievään tai tilannekohtaiseen ahdistukseen. Päivittäinen stressi voi joskus tuntua kohonneelta, mutta lempeä tietoisuus ja hengitys voivat pitää sinut maanpinnalla.",
+    "anxiety_moderate": "Vastauksesi viittaavat kohtalaiseen ahdistukseen. Saatat kokea satunnaista fyysistä tai henkistä jännitystä, joka heikentää rauhallisuuttasi.",
+    "anxiety_severe": "Vastauksesi viittaavat kohonneeseen ahdistukseen, joka saattaa häiritä päivittäistä mielenrauhaasi.",
+    "anxiety_extremely_severe": "Vastauksesi osoittavat tällä hetkellä korkeaa ahdistuksen ja ahdistuksen tasoa. Ammattilaiselle yhteydenotto voi tuoda turvaa ja helpotusta.",
+    "depression_mild": "Vastauksesi viittaavat vähäiseen tai lievään matalaan mielialaan. Hellä itsestä huolehtiminen ja tukevien rutiinien ylläpitäminen ovat hyödyllisiä.",
+    "depression_moderate": "Vastauksesi viittaavat kohtalaiseen matalaan mielialaan tai vähäiseen innostukseen. Terapeutin kanssa puhuminen voi tarjota arvokasta ohjausta.",
+    "depression_severe": "Vastauksesi viittaavat siihen, että kannat tällä hetkellä selvästi tunnekuormaa.",
+    "depression_extremely_severe": "Vastauksesi viittaavat korkeaan tunnekuormaan. Ammattilainen voi auttaa sinua navigoimaan tässä turvallisesti.",
+    "stress_mild": "Vastauksesi osoittavat, että jokapäiväistä stressiä on hallittavissa.",
+    "stress_moderate": "Vastauksesi viittaavat kohtalaiseen stressiin ja vaikeuksiin rentoutumisessa. Pienet, tarkoitukselliset tauot voivat auttaa palauttamaan tasapainon.",
+    "stress_severe": "Vastauksesi viittaavat korkeisiin stressitasoihin, jotka voivat vaikuttaa uneen ja energiaasi.",
+    "stress_extremely_severe": "Vastauksesi viittaavat voimakkaaseen stressin tasoon juuri nyt. Ammattilaisen auttaminen tämän purkamisessa voi tuoda helpotusta."
+  },
+  "report": {
+    "title": "Tunteellinen tilannekuvasi",
+    "desc": "Tässä on yleiskatsaus siitä, miltä sinusta on tuntunut keskeisten tunneindikaattoreiden välillä.",
+    "talk_prompt": "Haluatko jonkun, jolle puhua?",
+    "talk_sub": "Ammattimaista tukea on saatavilla aina kun sitä tarvitset.",
+    "btn_view_plans": "Katso terapiasuunnitelmat",
+    "btn_finish": "Täydellinen arviointi",
+    "btn_back": "Takaisin"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "header_back": "Tilbage",
+  "header_title": "At komme i gang",
+  "hero_title_prefix": "En plan for dit velbefindende,",
+  "hero_highlight": "bygget omkring dig.",
+  "hero_subtitle": "Få en personlig plan med guidede aktiviteter, praktiske værktøjer og støtte, der kan hjælpe dig med at gøre fremskridt, ét skridt ad gangen.",
+  "how_it_works_title": "Alt det, du behøver for at arbejde på dit velbefindende.",
+  "how_it_works_subtitle": "Din personlige plan samler aktiviteter, værktøjer, fremskridtsopfølgning og professionel støtte ét sted.",
+  "flow_steps": {
+    "plan": "Din plan",
+    "activities": "Aktiviteter",
+    "tools": "Værktøjer",
+    "progress": "Fremskridt",
+    "support": "Støtte"
+  },
+  "video_section_title": "Se, hvordan Mantra fungerer",
+  "video_section_subtitle": "Tag en hurtig rundtur i appen og se, hvor din plan, aktiviteter og trivselsværktøjer passer ind i din rejse.",
+  "adapts_title": "Din plan tilpasser sig dig",
+  "adapts_subtitle": "Vælg det, du gerne vil arbejde med, såsom angst, stress, lavt humør, ADHD, OCD eller mere. Mantra giver dig derefter guidede aktiviteter og ressourcer, der er tilpasset dit fokus.",
+  "focus_areas": {
+    "anxiety": "Angst",
+    "stress": "Stress",
+    "low_mood": "Nedtrykt stemning",
+    "adhd": "ADHD",
+    "ocd": "OCD",
+    "more": "Mere"
+  },
+  "focus_taglines": {
+    "anxiety": "Jordforbindelsen af nervesystemets spidser og lindring af ængstelige tankeloops",
+    "stress": "Lindring af kronisk arbejdsdagsspænding og forebyggelse af udbrændthed",
+    "low_mood": "Bryde sløvhedscyklusser med blid adfærdsaktivering",
+    "adhd": "Håndtering af friktion i eksekutive funktioner og overvældende fokus",
+    "ocd": "Responsforebyggelse og øvelser i kognitiv fleksibilitet",
+    "more": "Søvnkvalitet, selvværd, relationer og vaneudvikling"
+  },
+  "phases_labels": {
+    "phase": "Fase 0{{num}} • {{step}}",
+    "understand": "Forstå",
+    "practice": "Praksis",
+    "reflect": "Reflekter",
+    "progress": "Fremskridt"
+  },
+  "activities_title": "Små aktiviteter. Rigtig fremskridt.",
+  "activities_subtitle": "Din plan giver dig aktiviteter, der hjælper dig med at lære, reflektere, øve dig og følge med, så du kan tage små skridt mod at få det bedre.",
+  "activity_types": {
+    "learn": "Lær",
+    "reflect": "Reflekter",
+    "practice": "Praksis",
+    "track": "Bane"
+  },
+  "tools_title": "Værktøj, når du har brug for dem",
+  "tools_subtitle": "Udforsk meditation, dagbogsskrivning, mindfulness, vurderinger, trackere, AI-støtte og mere, når du har brug for det.",
+  "tools_list": {
+    "meditation": "Meditation",
+    "journaling": "Dagbogsskrivning",
+    "mindfulness": "Mindfulness",
+    "assessments": "Vurderinger",
+    "trackers": "Sporere",
+    "ai_support": "AI-understøttelse",
+    "self_care": "Selvomsorg"
+  },
+  "points_title": "Hvert skridt tæller",
+  "points_subtitle": "Gennemfør aktiviteter og meningsfulde handlinger for at tjene point.",
+  "points_steps": {
+    "complete_title": "Komplet",
+    "complete_desc": "Afslutningsaktiviteter",
+    "earn_title": "Optjen point",
+    "earn_desc": "+10 point belønning",
+    "redeem_title": "Indløs belønninger",
+    "redeem_desc": "Berettigede tjenester"
+  },
+  "points_footer": "Point kan bruges til kvalificerede wellness-tjenester tilgængelige gennem Mantra.",
+  "support_title": "Brug for mere støtte?",
+  "support_subtitle": "Du er ikke alene.",
+  "support_desc": "Søg professionel støtte fra kvalificerede terapeuter og andre wellness-tjenester, når du har brug for yderligere hjælp.",
+  "support_btn": "Udforsk professionel støtte",
+  "cta_title": "Du er klar til at komme i gang.",
+  "cta_subtitle": "Åbn din personlige plan, gennemfør din første aktivitet, og tag det næste skridt mod bedre trivsel.",
+  "cta_btn_start": "Start min rejse",
+  "cta_btn_starting": "Starter..."
+}

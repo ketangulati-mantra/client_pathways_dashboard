@@ -1,0 +1,17 @@
+{
+  "header_back": "Kembali",
+  "header_title": "Check-In Harian",
+  "streak_title": "Rentetan Hari",
+  "home_welcome": "Bagaimana perasaanmu sekarang?",
+  "home_subtitle": "Luangkan waktu untuk menyelaraskan lanskap emosional dan kondisi tubuh Anda.",
+  "btn_start_checkin": "Mulai Check-In",
+  "history_title": "Check-In Terbaru Anda",
+  "step_emotion_title": "Pilih kondisi emosional Anda saat ini",
+  "step_intensity_title": "Seberapa kuat perasaan ini?",
+  "step_context_title": "Apa yang berkontribusi pada perasaanmu?",
+  "step_reflection_title": "Refleksikan & Catatan",
+  "step_response_title": "Wawasan yang Dipersonalisasi",
+  "btn_continue": "Lanjutkan",
+  "btn_finish": "Check-In Lengkap",
+  "btn_exit": "Lanjutkan ke Rencana Saya"
+}

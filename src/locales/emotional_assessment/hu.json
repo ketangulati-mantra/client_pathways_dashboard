@@ -1,0 +1,60 @@
+{
+  "back": "Hátra",
+  "assessment_title": "Érzelmi jóléti értékelés",
+  "instruction": "Mennyit érvényes ez az elmúlt héten?",
+  "question_counter": "{{current}} kérdés {{total}}",
+  "options": {
+    "not_at_all": "Egyáltalán nem",
+    "sometimes": "Néha",
+    "often": "Gyakran",
+    "almost_always": "Szinte mindig"
+  },
+  "questions": {
+    "q1": "Majdnem pánikba estem",
+    "q2": "Éreztem, hogy a szívem gyorsan ver, pedig nem tettem fizikai erőfeszítést",
+    "q3": "Ok nélkül féltem",
+    "q4": "Úgy éreztem, nincs mit várnom",
+    "q5": "Lehangoltnak és szomorúnak éreztem magam",
+    "q6": "Nem tudtam semmire lelkesedni",
+    "q7": "Nehéz volt lenyugodni",
+    "q8": "Egyre idegesebbé váltam",
+    "q9": "Nehezen tudtam ellazulni"
+  },
+  "categories": {
+    "anxiety": "Szorongás",
+    "anxiety_desc": "A helyzetfüggő szorongást, a fizikai feszültséget és az idegességérzetet méri.",
+    "depression": "Depresszió",
+    "depression_desc": "Alacsony energiát, a pozitív érzések hiányát és a lelkesedés nehézségét méri.",
+    "stress": "Stressz",
+    "stress_desc": "Méri a relaxációs nehézségeket, nyugtalanságot és érzelmi feszültséget."
+  },
+  "levels": {
+    "mild": "Enyhe",
+    "moderate": "Mérsékelt",
+    "severe": "Súlyos",
+    "extremely_severe": "Rendkívül súlyos"
+  },
+  "messages": {
+    "anxiety_mild": "A válaszaid enyhe vagy helyzetfüggő szorongásra utalnak. A mindennapi stressz néha emelkedőnek tűnhet, de a gyengéd tudatosság és légzés megtarthatja a földön.",
+    "anxiety_moderate": "A válaszaid mérsékelt szorongásra utalnak. Előfordulhat, hogy időnként fizikai vagy mentális feszültséget tapasztalsz, ami befolyásolja a nyugalmodat.",
+    "anxiety_severe": "A válaszaid megemelkedett szorongásra utalnak, ami zavarhatja a mindennapi lelki nyugalmadat.",
+    "anxiety_extremely_severe": "A válaszaid jelenleg magas szintű szorongásra és szorongásra utalnak. Egy szakemberrel való kapcsolatfelvétel biztonságot és megkönnyebbülést nyújthat.",
+    "depression_mild": "A válaszaid minimális vagy enyhe rossz hangulatot sugallnak. A gyengéd önmagunkra való gondoskodás és a támogató rutinok fenntartása hasznos.",
+    "depression_moderate": "A válaszaid mérsékelékelt rossz hangulatot vagy alacsony lelkesedést sugallnak. A terapeutával való beszélgetés értékes útmutatást nyújthat.",
+    "depression_severe": "A válaszaid azt sugallják, hogy most érezhető érzelmi súlyt hordozol.",
+    "depression_extremely_severe": "A válaszaid magas szintű érzelmi nehézséget sugallnak. A szakmai tanácsadás segíthet biztonságosan eligazodni ebben.",
+    "stress_mild": "A válaszaid azt mutatják, hogy a mindennapi stressz kezelhető szintje van.",
+    "stress_moderate": "A válaszaid mérsékelt stresszt és nehézséget mutatnak a kilazításban. A kis szándékos szünetek segíthetnek helyreállítani az egyensúlyt.",
+    "stress_severe": "A válaszaid magas stresszszintet sugallnak, ami befolyásolhatja az alvásodat és az energiádat.",
+    "stress_extremely_severe": "A válaszaid most intenzív stresszt sugallnak. Ha egy szakember segít kibontani ezt, megkönnyebbülést hozhat."
+  },
+  "report": {
+    "title": "Az érzelmi pillanatképed",
+    "desc": "Íme egy áttekintés arról, hogyan érzed magad a kulcsfontosságú érzelmi mutatók között.",
+    "talk_prompt": "Szeretnél valakivel, akivel beszélhetsz?",
+    "talk_sub": "Professzionális támogatás bármikor elérhető, amikor szükséged van rá.",
+    "btn_view_plans": "Tekintse meg a terápiás terveket",
+    "btn_finish": "Teljes értékelés",
+    "btn_back": "Hátra"
+  }
+}

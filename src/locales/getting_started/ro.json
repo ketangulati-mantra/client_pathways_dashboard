@@ -1,0 +1,81 @@
+{
+  "header_back": "Înapoi",
+  "header_title": "Începutul",
+  "hero_title_prefix": "Un plan pentru bunăstarea ta,",
+  "hero_highlight": "construită în jurul tău.",
+  "hero_subtitle": "Obține un plan personalizat cu activități ghidate, instrumente practice și sprijin pentru a te ajuta să progresezi, pas cu pas.",
+  "how_it_works_title": "Tot ce ai nevoie pentru a lucra la starea ta de bine.",
+  "how_it_works_subtitle": "Planul tău personalizat reunește activități, instrumente, monitorizarea progresului și sprijin profesional într-un singur loc.",
+  "flow_steps": {
+    "plan": "Planul tău",
+    "activities": "Activități",
+    "tools": "Unelte",
+    "progress": "Progres",
+    "support": "Sprijin"
+  },
+  "video_section_title": "Vezi cum funcționează Mantra",
+  "video_section_subtitle": "Fă un tur rapid al aplicației și vezi unde se încadrează planul, activitățile și instrumentele tale de wellness în călătoria ta.",
+  "adapts_title": "Planul tău se adaptează la tine",
+  "adapts_subtitle": "Alege la ce vrei să lucrezi, cum ar fi anxietatea, stresul, starea de spirit scăzută, ADHD, OCD sau altele. Mantra îți oferă apoi activități ghidate și resurse adaptate focusului tău.",
+  "focus_areas": {
+    "anxiety": "Anxietate",
+    "stress": "Stres",
+    "low_mood": "Starea de spirit scăzută",
+    "adhd": "ADHD",
+    "ocd": "OCD",
+    "more": "Mai mult"
+  },
+  "focus_taglines": {
+    "anxiety": "Împământarea creșterilor sistemului nervos și atenuarea buclelor de gânduri anxioase",
+    "stress": "Reducerea tensiunii cronice în timpul zilelor de lucru și prevenirea epuizării",
+    "low_mood": "Ruperea ciclurilor de letargie printr-o activare comportamentală blândă",
+    "adhd": "Gestionarea fricțiunilor funcțiilor executive și a copleșirii concentrării",
+    "ocd": "Exerciții de prevenire a răspunsului și flexibilitate cognitivă",
+    "more": "Calitatea somnului, stima de sine, relațiile și dezvoltarea obiceiurilor"
+  },
+  "phases_labels": {
+    "phase": "Faza 0{{num}} • {{step}}",
+    "understand": "Înțelege",
+    "practice": "Practică",
+    "reflect": "Reflectă",
+    "progress": "Progres"
+  },
+  "activities_title": "Activități mici. Progres real.",
+  "activities_subtitle": "Planul tău îți oferă activități care te ajută să înveți, să reflectezi, să exersezi și să urmărești ritmul, astfel încât să poți face pași mici spre a te simți mai bine.",
+  "activity_types": {
+    "learn": "Învață",
+    "reflect": "Reflectă",
+    "practice": "Practică",
+    "track": "Pistă"
+  },
+  "tools_title": "Unelte când ai nevoie",
+  "tools_subtitle": "Explorează meditația, jurnalizarea, mindfulness-ul, evaluările, tracker-ele, sprijinul AI și multe altele, ori de câte ori ai nevoie.",
+  "tools_list": {
+    "meditation": "Meditația",
+    "journaling": "Jurnalizarea",
+    "mindfulness": "Mindfulness",
+    "assessments": "Evaluări",
+    "trackers": "Trackere",
+    "ai_support": "Suport AI",
+    "self_care": "Îngrijirea de sine"
+  },
+  "points_title": "Fiecare pas contează",
+  "points_subtitle": "Finalizează activități și acțiuni semnificative pentru a câștiga puncte.",
+  "points_steps": {
+    "complete_title": "Complet",
+    "complete_desc": "Activități finale",
+    "earn_title": "Câștigă puncte",
+    "earn_desc": "Recompensă +10 puncte",
+    "redeem_title": "Răscumpără recompense",
+    "redeem_desc": "Servicii eligibile"
+  },
+  "points_footer": "Punctele pot fi folosite pentru serviciile eligibile de wellness disponibile prin Mantra.",
+  "support_title": "Ai nevoie de mai mult sprijin?",
+  "support_subtitle": "Nu ești pe cont propriu.",
+  "support_desc": "Explorează sprijin profesional din partea terapeuților calificați și a altor servicii de wellness ori de câte ori ai nevoie de ajutor suplimentar.",
+  "support_btn": "Explorează sprijinul profesional",
+  "cta_title": "Ești gata să începi.",
+  "cta_subtitle": "Deschide-ți planul personalizat, finalizează prima activitate și fă următorul pas spre o stare de bine mai bună.",
+  "cta_btn_start": "Începe călătoria mea",
+  "cta_btn_starting": "Încep..."
+}

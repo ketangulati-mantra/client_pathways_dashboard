@@ -1,0 +1,14 @@
+{
+  "header_back": "Tilbage",
+  "header_title": "Følelseshjul",
+  "prompt_level1": "Hvad føler du lige nu?",
+  "prompt_level2": "Udforskning af {{family}}",
+  "prompt_level3": "Lad os blive mere specifikke",
+  "prompt_intensity": "Hvor intens er denne følelse?",
+  "prompt_context": "Hvad udløste denne følelse?",
+  "prompt_needs": "Hvad har du brug for lige nu?",
+  "snapshot_title": "Dit følelsesmæssige øjebliksbillede",
+  "btn_explore": "Udforsk mere",
+  "btn_complete": "Fuldstændig aktivitet",
+  "btn_share": "Del Snapshot"
+}

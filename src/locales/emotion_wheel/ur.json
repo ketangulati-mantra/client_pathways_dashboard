@@ -1,0 +1,14 @@
+{
+  "header_back": "واپس",
+  "header_title": "ایموشن وہیل",
+  "prompt_level1": "آپ اس وقت کیا محسوس کر رہے ہیں؟",
+  "prompt_level2": "{{family}} کی تلاش",
+  "prompt_level3": "آئیے مزید مخصوص بات کرتے ہیں",
+  "prompt_intensity": "یہ جذبہ کتنا شدید ہے؟",
+  "prompt_context": "یہ احساس کس چیز نے پیدا کیا؟",
+  "prompt_needs": "ابھی تمہیں کیا چاہیے؟",
+  "snapshot_title": "آپ کی جذباتی جھلک",
+  "btn_explore": "مزید دریافت کریں",
+  "btn_complete": "مکمل سرگرمی",
+  "btn_share": "اسنیپ شاٹ شیئر کریں"
+}

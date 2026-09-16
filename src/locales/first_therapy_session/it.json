@@ -1,0 +1,43 @@
+{
+  "header_back": "Indietro",
+  "header_title": "Come prenotare una sessione",
+  "hero_title_prefix": "Connettiti con il terapeuta giusto,",
+  "hero_highlight": "Al tuo ritmo.",
+  "hero_subtitle": "Prenotare la tua seduta su Mantra è semplice e riservato. Scopri quanto è facile scegliere il tuo piano, condividere le tue esigenze, abbinarti a un fornitore e iniziare le cure.",
+  "interactive_title": "Come funziona la prenotazione",
+  "interactive_subtitle": "Passo dopo passo passo interattivo del processo di prenotazione.",
+  "steps": {
+    "s1_title": "Scegli un piano",
+    "s1_desc": "Inizia con una sessione di prova o scegli un piano plurimensile.",
+    "s2_title": "Condividi le tue preferenze",
+    "s2_desc": "Racconta a Mantra i tuoi obiettivi, le tue sfide e le preferenze dei terapeuti.",
+    "s3_title": "Fatti abbinare o scegli il tuo terapeuta",
+    "s3_desc": "Lascia che l'IA ti abbina istantaneamente oppure sfoglia e invita un fornitore.",
+    "s4_title": "Parla con il tuo terapeuta",
+    "s4_desc": "Manda un messaggio al tuo terapeuta dall'app per sentirti a tuo agio prima di prenotare.",
+    "s5_title": "Scegli un orario e prenota",
+    "s5_desc": "Scegli una data e un orario comodi sul calendario del tuo terapeuta.",
+    "s6_title": "Unisciti dalla chat",
+    "s6_desc": "Apri il link della sessione video sicura condiviso direttamente nella chat."
+  },
+  "ui_preview": {
+    "discount": "50% di SCONTO nella prima sessione",
+    "intro_trial": "Prova introduttiva",
+    "select_focus": "Seleziona le aree di interesse:",
+    "ai_match": "Partita AI",
+    "ai_match_sub": "Raccomandazioni auto",
+    "browse_team": "Scorre Team",
+    "browse_team_sub": "Pretta manualmente",
+    "therapist_msg": "Ciao! Non vedo l'ora di supportarti.",
+    "therapist_reply": "Ciao dottor Miller! Ho appena prenotato venerdì.",
+    "calendar_title": "Ora di selezione della sessione",
+    "join_btn": "Unisciti alla sessione video",
+    "secure_room": "100% criptato e confidenziale"
+  },
+  "video_title": "Guarda la guida completa per la prenotazione",
+  "video_subtitle": "Dimostrazione visiva passo dopo passo dell'intero processo di prenotazione in-application.",
+  "faq_title": "Domande frequenti",
+  "cta_title": "Pronto a fare il prossimo passo?",
+  "cta_subtitle": "Esplora i nostri terapeuti abilitati e prenota la tua prima seduta quando sei pronto.",
+  "cta_btn": "Esplora i piani terapeutici"
+}

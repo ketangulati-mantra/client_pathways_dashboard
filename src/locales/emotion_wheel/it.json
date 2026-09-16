@@ -1,0 +1,14 @@
+{
+  "header_back": "Indietro",
+  "header_title": "Ruota delle Emozioni",
+  "prompt_level1": "Cosa stai provando in questo momento?",
+  "prompt_level2": "Esplorare {{family}}",
+  "prompt_level3": "Diventiamo più specifici",
+  "prompt_intensity": "Quanto è intensa questa emozione?",
+  "prompt_context": "Cosa ha scatenato questa sensazione?",
+  "prompt_needs": "Di cosa hai bisogno adesso?",
+  "snapshot_title": "Il tuo istantaneo emotivo",
+  "btn_explore": "Esplora di più",
+  "btn_complete": "Attività completa",
+  "btn_share": "Condividi Snapshot"
+}

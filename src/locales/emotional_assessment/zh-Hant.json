@@ -1,0 +1,60 @@
+{
+  "back": "返回",
+  "assessment_title": "情緒健康評估",
+  "instruction": "過去一週這件事對你有多少影響？",
+  "question_counter": "{{current}} 問題 {{total}}",
+  "options": {
+    "not_at_all": "一點也不",
+    "sometimes": "有時候",
+    "often": "經常",
+    "almost_always": "幾乎總是這樣"
+  },
+  "questions": {
+    "q1": "我差點慌了",
+    "q2": "我感覺心跳加速，儘管我沒有做出任何體力",
+    "q3": "我無緣無故害怕",
+    "q4": "我覺得自己沒有什麼值得期待的",
+    "q5": "我感到沮喪和憂鬱",
+    "q6": "我無法對任何事情產生熱情",
+    "q7": "我很難放鬆下來",
+    "q8": "我發現自己開始變得焦躁不安",
+    "q9": "我發現自己很難放鬆"
+  },
+  "categories": {
+    "anxiety": "焦慮",
+    "anxiety_desc": "測量情境焦慮、身體緊張及緊張感。",
+    "depression": "憂鬱症",
+    "depression_desc": "測量能量低落、缺乏正面情緒，以及難以產生熱情。",
+    "stress": "壓力",
+    "stress_desc": "測量放鬆困難、坐立不安及情緒緊張。"
+  },
+  "levels": {
+    "mild": "溫和",
+    "moderate": "中等",
+    "severe": "嚴重",
+    "extremely_severe": "極度嚴重"
+  },
+  "messages": {
+    "anxiety_mild": "你的回答暗示你有輕微或情境性焦慮。日常壓力有時會讓人感覺升高，但溫和的正念和呼吸能讓你保持腳踏實地。",
+    "anxiety_moderate": "你的回應顯示你有中度焦慮。你可能偶爾會經歷身體或心理上的緊張，影響你的冷靜。",
+    "anxiety_severe": "你的反應顯示焦慮加劇，可能影響到你每天的心境平靜。",
+    "anxiety_extremely_severe": "你的回應顯示你目前正處於高度焦慮和痛苦狀態。與專業人士聯繫能帶來安全與緩解。",
+    "depression_mild": "你的回應顯示情緒低落是輕微到輕微的。溫和的自我照顧和維持支持性的日常習慣很有幫助。",
+    "depression_moderate": "你的回應顯示情緒中度低落或熱情不足。與治療師談談能提供寶貴的指引。",
+    "depression_severe": "你的回應顯示你現在背負著明顯的情緒負擔。",
+    "depression_extremely_severe": "你的回應顯示你情緒沉重。專業指導能幫助你安全應對。",
+    "stress_mild": "你的回應顯示日常壓力是可控的。",
+    "stress_moderate": "你的回答顯示你有適度壓力和難以放鬆。有意識的小休息可以幫助恢復平衡。",
+    "stress_severe": "你的回答顯示你壓力很大，可能影響睡眠和精力。",
+    "stress_extremely_severe": "你的回應顯示你現在正處於極大的壓力狀態。讓專業人士幫你釐清這些情緒，可能會帶來緩解。"
+  },
+  "report": {
+    "title": "你的情感快照",
+    "desc": "以下是你在主要情緒指標上的感受概述。",
+    "talk_prompt": "想找人聊聊嗎？",
+    "talk_sub": "您需要專業支援時，隨時都能獲得。",
+    "btn_view_plans": "查看治療計畫",
+    "btn_finish": "完整評估",
+    "btn_back": "返回"
+  }
+}

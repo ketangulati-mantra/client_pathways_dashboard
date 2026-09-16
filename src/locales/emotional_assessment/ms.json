@@ -1,0 +1,60 @@
+{
+  "back": "Kembali",
+  "assessment_title": "Penilaian Kesejahteraan Emosi",
+  "instruction": "Sejauh manakah perkara ini mempengaruhi anda sepanjang minggu lepas?",
+  "question_counter": "Soalan {{current}} daripada {{total}}",
+  "options": {
+    "not_at_all": "Langsung tidak",
+    "sometimes": "Kadang-kadang",
+    "often": "Sering kali",
+    "almost_always": "Hampir selalu"
+  },
+  "questions": {
+    "q1": "Saya hampir panik",
+    "q2": "Saya rasa jantung saya berdegup kencang walaupun saya tidak berusaha secara fizikal",
+    "q3": "Saya takut tanpa sebab",
+    "q4": "Saya rasa tiada apa yang boleh dinantikan",
+    "q5": "Saya berasa murung dan sedih",
+    "q6": "Saya tidak dapat bersemangat tentang apa-apa",
+    "q7": "Saya sukar untuk tenang",
+    "q8": "Saya dapati diri saya mula gelisah",
+    "q9": "Saya sukar untuk berehat"
+  },
+  "categories": {
+    "anxiety": "Kebimbangan",
+    "anxiety_desc": "Mengukur kebimbangan situasi, ketegangan fizikal, dan perasaan gugup.",
+    "depression": "Kemelesetan",
+    "depression_desc": "Mengukur tenaga rendah, kekurangan perasaan positif, dan kesukaran untuk bersemangat.",
+    "stress": "Tekanan",
+    "stress_desc": "Mengukur kesukaran untuk berehat, gelisah, dan ketegangan emosi."
+  },
+  "levels": {
+    "mild": "Ringan",
+    "moderate": "sederhana",
+    "severe": "Teruk",
+    "extremely_severe": "sangat teruk"
+  },
+  "messages": {
+    "anxiety_mild": "Jawapan anda menunjukkan kebimbangan ringan atau situasi. Tekanan harian kadang-kadang terasa tinggi, tetapi kesedaran dan pernafasan yang lembut boleh memastikan anda berpijak di bumi.",
+    "anxiety_moderate": "Jawapan anda menunjukkan kebimbangan sederhana. Anda mungkin mengalami ketegangan fizikal atau mental sekali-sekala yang menjejaskan ketenangan anda.",
+    "anxiety_severe": "Jawapan anda menunjukkan peningkatan kebimbangan yang mungkin mengganggu ketenangan harian anda.",
+    "anxiety_extremely_severe": "Respons anda menunjukkan tahap kebimbangan dan tekanan yang tinggi sekarang. Berhubung dengan profesional boleh memberikan keselamatan dan kelegaan.",
+    "depression_mild": "Jawapan anda mencadangkan mood rendah yang minimum hingga ringan. Penjagaan diri yang lembut dan kekal berhubung dengan rutin sokongan adalah membantu.",
+    "depression_moderate": "Jawapan anda menunjukkan mood sederhana rendah atau kurang semangat. Bercakap dengan ahli terapi boleh memberikan panduan yang berharga.",
+    "depression_severe": "Jawapan anda menunjukkan anda sedang memikul beban emosi yang ketara sekarang.",
+    "depression_extremely_severe": "Jawapan anda menunjukkan tahap beban emosi yang tinggi. Bimbingan profesional boleh membantu anda mengharungi perkara ini dengan selamat.",
+    "stress_mild": "Jawapan anda menunjukkan tahap tekanan harian yang boleh dikawal.",
+    "stress_moderate": "Jawapan anda menunjukkan tekanan sederhana dan kesukaran untuk melepaskan tekanan. Rehat kecil yang sengaja boleh membantu memulihkan keseimbangan.",
+    "stress_severe": "Jawapan anda menunjukkan tahap tekanan yang tinggi yang mungkin menjejaskan tidur dan tenaga anda.",
+    "stress_extremely_severe": "Jawapan anda menunjukkan tahap tekanan yang sangat tinggi sekarang. Membiarkan profesional membantu anda memahami perkara ini boleh membawa kelegaan."
+  },
+  "report": {
+    "title": "Gambaran Emosi Anda",
+    "desc": "Berikut adalah gambaran keseluruhan tentang bagaimana perasaan anda merentasi penunjuk emosi utama.",
+    "talk_prompt": "Mahu seseorang untuk berbual?",
+    "talk_sub": "Sokongan profesional tersedia bila-bila masa anda memerlukannya.",
+    "btn_view_plans": "Lihat Pelan Terapi",
+    "btn_finish": "Penilaian Lengkap",
+    "btn_back": "Kembali"
+  }
+}

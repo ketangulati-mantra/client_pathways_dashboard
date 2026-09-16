@@ -1,0 +1,43 @@
+{
+  "header_back": "Atrás",
+  "header_title": "Cómo reservar una sesión",
+  "hero_title_prefix": "Conecta con el terapeuta adecuado,",
+  "hero_highlight": "A tu propio ritmo.",
+  "hero_subtitle": "Reservar tu sesión en Mantra es sencillo y confidencial. Descubre lo fácil que es elegir tu plan, compartir tus necesidades, emparejarte con un proveedor y comenzar la atención.",
+  "interactive_title": "Cómo funciona la reserva",
+  "interactive_subtitle": "Paso a paso interactivo del proceso de reserva.",
+  "steps": {
+    "s1_title": "Elige un plan",
+    "s1_desc": "Empieza con una sesión de prueba o elige un plan de varios meses.",
+    "s2_title": "Comparte tus preferencias",
+    "s2_desc": "Cuéntale a Mantra tus objetivos, retos y preferencias de terapeuta.",
+    "s3_title": "Haz emparejamiento o elige a tu terapeuta",
+    "s3_desc": "Deja que la IA te empareje al instante o navega e invita a un proveedor.",
+    "s4_title": "Habla con tu terapeuta",
+    "s4_desc": "Envía un mensaje a tu terapeuta en la app para sentirte cómodo antes de reservar.",
+    "s5_title": "Elige una hora y reserva",
+    "s5_desc": "Selecciona una fecha y hora convenientes en el calendario de tu terapeuta.",
+    "s6_title": "Únete desde el chat",
+    "s6_desc": "Abre el enlace seguro de la sesión de vídeo compartido directamente en tu chat."
+  },
+  "ui_preview": {
+    "discount": "50% de descuento en la primera sesión",
+    "intro_trial": "Juicio introductorio",
+    "select_focus": "Selecciona tus áreas de enfoque:",
+    "ai_match": "Partida AI",
+    "ai_match_sub": "Recomendaciones de coches",
+    "browse_team": "Equipo de exploración",
+    "browse_team_sub": "Recoge manualmente",
+    "therapist_msg": "¡Hola! Estoy deseando poder apoyarte.",
+    "therapist_reply": "¡Hola, Dr. Miller! Acabo de reservar el viernes.",
+    "calendar_title": "Hora de selección de sesiones",
+    "join_btn": "Únete a la sesión de vídeo",
+    "secure_room": "100% cifrado y confidencial"
+  },
+  "video_title": "Mira la guía completa de reservas",
+  "video_subtitle": "Demostración visual paso a paso de todo el proceso de reserva dentro de la app.",
+  "faq_title": "Preguntas frecuentes",
+  "cta_title": "¿Listo para dar el siguiente paso?",
+  "cta_subtitle": "Explora a nuestros terapeutas titulados y reserva tu primera sesión cuando estés listo.",
+  "cta_btn": "Explora los planes de terapia"
+}

@@ -7,6 +7,9 @@ export default defineConfig({
   base: './',
   server: {
     port: 5173,
+    watch: {
+      ignored: ['**/src/locales/**']
+    },
     proxy: {
       '/api': {
         target: 'http://localhost:5001',

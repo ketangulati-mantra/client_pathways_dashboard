@@ -1,0 +1,14 @@
+{
+  "header_back": "Zurück",
+  "header_title": "Emotionsrad",
+  "prompt_level1": "Was fühlst du gerade?",
+  "prompt_level2": "Erkundung von {{family}}",
+  "prompt_level3": "Werden wir genauer",
+  "prompt_intensity": "Wie intensiv ist dieses Gefühl?",
+  "prompt_context": "Was hat dieses Gefühl ausgelöst?",
+  "prompt_needs": "Was brauchst du gerade?",
+  "snapshot_title": "Dein emotionaler Schnappschuss",
+  "btn_explore": "Mehr entdecken",
+  "btn_complete": "Vollständige Aktivität",
+  "btn_share": "Momentaufnahme teilen"
+}

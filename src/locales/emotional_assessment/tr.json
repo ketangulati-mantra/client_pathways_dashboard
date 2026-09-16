@@ -1,0 +1,60 @@
+{
+  "back": "Geri",
+  "assessment_title": "Duygusal İyi Durum Değerlendirmesi",
+  "instruction": "Bu durum geçen hafta size ne kadar uygulandı?",
+  "question_counter": "{{total}} sorusu {{current}}",
+  "options": {
+    "not_at_all": "Hiç de değil",
+    "sometimes": "Bazen",
+    "often": "Sık sık",
+    "almost_always": "Neredeyse her zaman"
+  },
+  "questions": {
+    "q1": "Panik yapmak üzereydim",
+    "q2": "Fiziksel çaba göstermemiş olsam da kalbimin hızlı attığını hissettim",
+    "q3": "Sebepsiz yere korktum",
+    "q4": "Bekleyecek hiçbir şeyim olmadığını hissettim",
+    "q5": "Kendimi moralim üzgün ve üzgün hissettim",
+    "q6": "Hiçbir şeye hevesli olamadım",
+    "q7": "Rahatlamakta zorlandım",
+    "q8": "Kendimi huzursuz buldum",
+    "q9": "Rahatlamakta zorlandım"
+  },
+  "categories": {
+    "anxiety": "Anksiyete",
+    "anxiety_desc": "Durumsal kaygı, fiziksel gerilim ve gerginlik duygularını ölçür.",
+    "depression": "Buhran",
+    "depression_desc": "Düşük enerji, olumlu duyguların eksikliği ve coşkulu hissetme zorluğunu ölçür.",
+    "stress": "Stres",
+    "stress_desc": "Rahatlama zorluklarını, huzursuzluğu ve duygusal gerilimi ölçür."
+  },
+  "levels": {
+    "mild": "Hafif",
+    "moderate": "Tılımlı",
+    "severe": "Şiddetli",
+    "extremely_severe": "Aşırı Şiddetli"
+  },
+  "messages": {
+    "anxiety_mild": "Tepkileriniz hafif veya durumsal kaygı olduğunu gösteriyor. Günlük stres bazen yükselmiş gibi hissettirebilir, ancak hafif farkındalık ve nefes almak sizi ayakta tutabilir.",
+    "anxiety_moderate": "Tepkileriniz orta derecede anksiyete olduğunu gösteriyor. Ara sıra sakinliğinizi etkileyen fiziksel veya zihinsel gerilim yaşıyor olabilirsiniz.",
+    "anxiety_severe": "Yanıtlarınız, günlük huzurunuzu bozabilecek artan kaygıyı gösteriyor.",
+    "anxiety_extremely_severe": "Yanıtlarınız şu anda yüksek düzeyde bir kaygı ve sıkıntı olduğunu gösteriyor. Bir profesyoneyle bağlantı kurmak güvenlik ve rahatlama sağlayabilir.",
+    "depression_mild": "Yanıtlarınız minimal ila hafif düşük ruh hali olduğunu gösteriyor. Nazik öz-bakım ve destekleyici rutinlerle bağlantıda kalmak faydalıdır.",
+    "depression_moderate": "Yanıtlarınız orta düzeyde düşük ruh hali veya düşük coşku öneriyor. Bir terapistle konuşmak değerli rehberlik sağlayabilir.",
+    "depression_severe": "Yanıtlarınız şu anda belirgin bir duygusal yük taşıdığınızı gösteriyor.",
+    "depression_extremely_severe": "Yanıtlarınız yüksek düzeyde duygusal bir ağırlık olduğunu gösteriyor. Profesyonel rehberlik bu süreci güvenli bir şekilde yönetmenize yardımcı olabilir.",
+    "stress_mild": "Yanıtlarınız günlük stresin yönetilebilir bir seviyesini gösteriyor.",
+    "stress_moderate": "Tepkileriniz orta düzeyde stres ve gevşeme zorluk göstermektedir. Küçük kasıtlı molalar dengeyi yeniden kazandırmaya yardımcı olabilir.",
+    "stress_severe": "Yanıtlarınız yüksek stres seviyelerini gösteriyor ve bu da uykunuzu ve enerjinizi etkileyebilir.",
+    "stress_extremely_severe": "Yanıtlarınız şu anda yoğun bir stres seviyesini gösteriyor. Bir uzmanın size bunu çözmesinde yardımcı olmasına izin vermek rahatlama sağlayabilir."
+  },
+  "report": {
+    "title": "Duygusal Anlık Görüntün",
+    "desc": "İşte temel duygusal göstergeler arasında nasıl hissettiğinize dair bir genel bakış.",
+    "talk_prompt": "Konuşacak biri ister misin?",
+    "talk_sub": "Profesyonel destek ihtiyacınız olduğunda mevcuttur.",
+    "btn_view_plans": "Terapi Planlarını Görüntüleyin",
+    "btn_finish": "Tam Değerlendirme",
+    "btn_back": "Geri"
+  }
+}

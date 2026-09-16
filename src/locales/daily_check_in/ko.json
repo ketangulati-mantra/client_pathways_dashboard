@@ -1,0 +1,17 @@
+{
+  "header_back": "뒤로",
+  "header_title": "일일 점검",
+  "streak_title": "데이 스트릭",
+  "home_welcome": "지금 기분이 어떠세요?",
+  "home_subtitle": "감정의 풍경과 몸의 상태를 주의 깊게 들여다보는 잠시 시간을 가지세요.",
+  "btn_start_checkin": "체크인 시작",
+  "history_title": "최근 체크인",
+  "step_emotion_title": "현재 감정 상태를 선택하세요",
+  "step_intensity_title": "이 감정이 얼마나 강한가요?",
+  "step_context_title": "당신의 기분에 영향을 주는 요인은 무엇인가요?",
+  "step_reflection_title": "반사 및 주목",
+  "step_response_title": "개인화된 인사이트",
+  "btn_continue": "계속",
+  "btn_finish": "완전 체크인",
+  "btn_exit": "내 계획대로 계속"
+}

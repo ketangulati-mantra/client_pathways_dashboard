@@ -1,0 +1,14 @@
+{
+  "header_back": "戻る",
+  "header_title": "感情の輪",
+  "prompt_level1": "今、どんな気持ちですか?",
+  "prompt_level2": "探検 {{family}}",
+  "prompt_level3": "もっと具体的に考えてみましょう",
+  "prompt_intensity": "この感情はどれほど強いのでしょうか?",
+  "prompt_context": "この感情のきっかけは何だったのでしょうか?",
+  "prompt_needs": "今、何が必要ですか?",
+  "snapshot_title": "あなたの感情のスナップショット",
+  "btn_explore": "さらに詳しく探求",
+  "btn_complete": "完全な活動",
+  "btn_share": "スナップショットを共有"
+}

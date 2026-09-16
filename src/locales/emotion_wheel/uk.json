@@ -1,0 +1,14 @@
+{
+  "header_back": "Назад",
+  "header_title": "Колесо емоцій",
+  "prompt_level1": "Що ти зараз відчуваєш?",
+  "prompt_level2": "Дослідження {{family}}",
+  "prompt_level3": "Давайте будемо конкретнішими",
+  "prompt_intensity": "Наскільки сильна ця емоція?",
+  "prompt_context": "Що викликало це відчуття?",
+  "prompt_needs": "Що тобі зараз потрібно?",
+  "snapshot_title": "Ваш емоційний знімок",
+  "btn_explore": "Дізнайтеся більше",
+  "btn_complete": "Повна діяльність",
+  "btn_share": "Поділитися знімком"
+}

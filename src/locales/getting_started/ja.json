@@ -1,0 +1,81 @@
+{
+  "header_back": "戻る",
+  "header_title": "はじめに",
+  "hero_title_prefix": "あなたの幸福のための計画、",
+  "hero_highlight": "君を中心に築かれている。",
+  "hero_subtitle": "ガイド付きのアクティビティ、実践的なツール、サポートを含む個別のプランを手に入れ、一歩ずつ進歩を助けてください。",
+  "how_it_works_title": "健康維持に必要なすべてです。",
+  "how_it_works_subtitle": "あなたのパーソナライズされたプランは、活動、ツール、進捗追跡、専門的なサポートを一か所にまとめています。",
+  "flow_steps": {
+    "plan": "あなたの計画",
+    "activities": "活動",
+    "tools": "ツール",
+    "progress": "進展",
+    "support": "支援"
+  },
+  "video_section_title": "Mantraの使い方をご覧ください",
+  "video_section_subtitle": "アプリを簡単に見て、あなたの計画や活動、ウェルビーイングツールがあなたの成長のどこに位置づけられているかを確認しましょう。",
+  "adapts_title": "あなたの計画はあなたに合わせて調整されます",
+  "adapts_subtitle": "不安、ストレス、気分の落ち込み、ADHD、OCDなど、取り組みたいことを選んでください。Mantraはあなたの焦点に合わせたガイド付きのアクティビティやリソースを提供します。",
+  "focus_areas": {
+    "anxiety": "不安",
+    "stress": "ストレス",
+    "low_mood": "気分が落ち込んでいる",
+    "adhd": "ADHD",
+    "ocd": "強迫性障害(OCD)",
+    "more": "続き"
+  },
+  "focus_taglines": {
+    "anxiety": "神経系の急激な跳ね上がりや不安な思考のループを和らげること",
+    "stress": "慢性的な勤務日の緊張緩和と燃え尽き防止",
+    "low_mood": "穏やかな行動活性化による倦怠のサイクルを断ち切る",
+    "adhd": "実行機能の管理、摩擦と集中力の圧倒",
+    "ocd": "反応予防と認知的柔軟性エクササイズ",
+    "more": "睡眠の質、自尊心、人間関係、そして習慣の成長"
+  },
+  "phases_labels": {
+    "phase": "Phase 0{{num}} • {{step}}",
+    "understand": "理解してください",
+    "practice": "実践",
+    "reflect": "リフレクト",
+    "progress": "進展"
+  },
+  "activities_title": "小さな活動。本当の進歩。",
+  "activities_subtitle": "あなたのプランには、学び、振り返り、練習し、記録できる活動が用意されており、少しずつ気分を良くするための小さな一歩を踏み出せます。",
+  "activity_types": {
+    "learn": "学びましょう",
+    "reflect": "リフレクト",
+    "practice": "実践",
+    "track": "陸上競技"
+  },
+  "tools_title": "必要なときに使う道具",
+  "tools_subtitle": "瞑想、ジャーナリング、マインドフルネス、評価、トラッカー、AIサポートなど、必要なときにはぜひ活用してください。",
+  "tools_list": {
+    "meditation": "瞑想",
+    "journaling": "ジャーナリング",
+    "mindfulness": "マインドフルネス",
+    "assessments": "評価",
+    "trackers": "トラッカー",
+    "ai_support": "AIサポート",
+    "self_care": "セルフケア"
+  },
+  "points_title": "一歩一歩が大切です",
+  "points_subtitle": "アクティビティや意味のある行動を完了してポイントを獲得しましょう。",
+  "points_steps": {
+    "complete_title": "完了",
+    "complete_desc": "活動終了",
+    "earn_title": "ポイント獲得",
+    "earn_desc": "+10ポイントの報酬",
+    "redeem_title": "リワード",
+    "redeem_desc": "対象サービス"
+  },
+  "points_footer": "ポイントはMantraを通じて利用できる適格なウェルネスサービスに充てることができます。",
+  "support_title": "もっとサポートが必要ですか?",
+  "support_subtitle": "あなたは一人じゃない。",
+  "support_desc": "追加の支援が必要なときは、資格を持つセラピストやその他のウェルネスサービスから専門的なサポートを受けてください。",
+  "support_btn": "専門的なサポートを探る",
+  "cta_title": "準備はできています。",
+  "cta_subtitle": "パーソナライズされたプランを開き、最初の活動を完了し、より良い健康への次の一歩を踏み出しましょう。",
+  "cta_btn_start": "旅を始めよう",
+  "cta_btn_starting": "始まる..."
+}

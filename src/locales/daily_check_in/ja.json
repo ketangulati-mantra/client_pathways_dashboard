@@ -1,0 +1,17 @@
+{
+  "header_back": "戻る",
+  "header_title": "日々のチェックイン",
+  "streak_title": "日連続記録",
+  "home_welcome": "今、気分はどう?",
+  "home_subtitle": "自分の感情の風景や身体の状態に意識的に向き合う瞬間を取ってみてください。",
+  "btn_start_checkin": "チェックイン開始",
+  "history_title": "最近のチェックイン",
+  "step_emotion_title": "現在の感情状態を選択してください",
+  "step_intensity_title": "この感覚はどれほど強いのでしょうか?",
+  "step_context_title": "あなたの気持ちに影響しているものは何ですか?",
+  "step_reflection_title": "リフレクト&ノート",
+  "step_response_title": "パーソナライズされた洞察",
+  "btn_continue": "続けてください",
+  "btn_finish": "完全なチェックイン",
+  "btn_exit": "計画通りに進め"
+}

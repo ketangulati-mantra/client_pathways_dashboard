@@ -1,0 +1,14 @@
+{
+  "header_back": "ย้อนกลับ",
+  "header_title": "วงล้ออารมณ์",
+  "prompt_level1": "ตอนนี้คุณรู้สึกอย่างไร?",
+  "prompt_level2": "สํารวจ {{family}}",
+  "prompt_level3": "มาเจาะจงกันให้มากขึ้น",
+  "prompt_intensity": "อารมณ์นี้รุนแรงแค่ไหน?",
+  "prompt_context": "อะไรเป็นจุดเริ่มต้นของความรู้สึกนี้?",
+  "prompt_needs": "ตอนนี้ต้องการอะไร?",
+  "snapshot_title": "ภาพรวมทางอารมณ์ของคุณ",
+  "btn_explore": "สํารวจเพิ่มเติม",
+  "btn_complete": "กิจกรรมครบ",
+  "btn_share": "แชร์ Snapshot"
+}

@@ -1,0 +1,14 @@
+{
+  "header_back": "Quay lại",
+  "header_title": "Bánh xe cảm xúc",
+  "prompt_level1": "Bạn đang cảm thấy gì lúc này?",
+  "prompt_level2": "Khám phá {{family}}",
+  "prompt_level3": "Hãy cụ thể hơn",
+  "prompt_intensity": "Cảm xúc này mãnh liệt đến mức nào?",
+  "prompt_context": "Điều gì đã khơi dậy cảm giác này?",
+  "prompt_needs": "Bạn cần gì lúc này?",
+  "snapshot_title": "Ảnh chụp cảm xúc của bạn",
+  "btn_explore": "Khám phá thêm",
+  "btn_complete": "Hoàn thành Hoạt động",
+  "btn_share": "Chia sẻ Snapshot"
+}

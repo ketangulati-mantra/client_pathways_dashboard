@@ -32,7 +32,7 @@ const SUPPORTED_LANGUAGES = [
   'ro', 'hu', 'uk', 'he', 'ms', 'ta', 'te', 'ur'
 ];
 
-async function translateText(texts, targetLang) {
+async function translateText(texts, targetLang, attempt = 1) {
   if (texts.length === 0) return [];
 
   if (USE_MOCK) {
@@ -62,6 +62,12 @@ async function translateText(texts, targetLang) {
     });
     return response.data.map(d => d.translations[0].text);
   } catch (error) {
+    if (error.response?.status === 429 && attempt <= 6) {
+      const waitTime = attempt * 3000;
+      console.warn(`[${targetLang}] Rate limited (429). Retrying in ${waitTime}ms (Attempt ${attempt}/6)...`);
+      await new Promise(r => setTimeout(r, waitTime));
+      return translateText(texts, targetLang, attempt + 1);
+    }
     console.error(`Azure Translation API Error for ${targetLang}:`, JSON.stringify(error.response?.data, null, 2) || error.message);
     throw error;
   }
@@ -117,43 +123,42 @@ async function run() {
 
   console.log(`Extracting module '${moduleName}'. Found ${enKeys.length} keys in English.`);
 
-    // Process target languages in parallel batches of 5
-    const CONCURRENCY = 5;
-    for (let lIndex = 0; lIndex < SUPPORTED_LANGUAGES.length; lIndex += CONCURRENCY) {
-      const langBatch = SUPPORTED_LANGUAGES.slice(lIndex, lIndex + CONCURRENCY);
-      await Promise.all(langBatch.map(async (lang) => {
-        const langFile = path.join(localeDir, `${lang}.json`);
-        let langData = {};
-        if (fs.existsSync(langFile)) {
+    // Process target languages sequentially to stay within rate limits safely
+    for (const lang of SUPPORTED_LANGUAGES) {
+      const langFile = path.join(localeDir, `${lang}.json`);
+      let langData = {};
+      if (fs.existsSync(langFile)) {
+        try {
           langData = flattenObj(JSON.parse(fs.readFileSync(langFile, 'utf8')));
-        }
+        } catch (e) {}
+      }
 
-        const missingKeys = enKeys.filter(k => !langData[k]);
-        if (missingKeys.length === 0) {
-          console.log(`[${lang}] Up to date.`);
-          return;
-        }
+      const missingKeys = enKeys.filter(k => !langData[k]);
+      if (missingKeys.length === 0) {
+        console.log(`[${lang}] Up to date.`);
+        continue;
+      }
 
-        console.log(`[${lang}] Translating ${missingKeys.length} missing keys...`);
-        const textsToTranslate = missingKeys.map(k => enData[k]);
-        const BATCH_SIZE = 100;
-        const translatedTexts = [];
+      console.log(`[${lang}] Translating ${missingKeys.length} missing keys...`);
+      const textsToTranslate = missingKeys.map(k => enData[k]);
+      const BATCH_SIZE = 100;
+      const translatedTexts = [];
 
-        for (let i = 0; i < textsToTranslate.length; i += BATCH_SIZE) {
-          const batch = textsToTranslate.slice(i, i + BATCH_SIZE);
-          const results = await translateText(batch, lang);
-          translatedTexts.push(...results);
-          await new Promise(r => setTimeout(r, 50));
-        }
+      for (let i = 0; i < textsToTranslate.length; i += BATCH_SIZE) {
+        const batch = textsToTranslate.slice(i, i + BATCH_SIZE);
+        const results = await translateText(batch, lang);
+        translatedTexts.push(...results);
+        await new Promise(r => setTimeout(r, 200));
+      }
 
-        missingKeys.forEach((key, index) => {
-          langData[key] = translatedTexts[index];
-        });
+      missingKeys.forEach((key, index) => {
+        langData[key] = translatedTexts[index];
+      });
 
-        const finalJson = unflattenObj(langData);
-        fs.writeFileSync(langFile, JSON.stringify(finalJson, null, 2));
-        console.log(`[${lang}] Saved ${langFile}`);
-      }));
+      const finalJson = unflattenObj(langData);
+      fs.writeFileSync(langFile, JSON.stringify(finalJson, null, 2));
+      console.log(`[${lang}] Saved ${langFile}`);
+      await new Promise(r => setTimeout(r, 150));
     }
 
   console.log("Translation complete!");

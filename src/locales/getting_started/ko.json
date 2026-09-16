@@ -1,0 +1,81 @@
+{
+  "header_back": "뒤로",
+  "header_title": "시작하기",
+  "hero_title_prefix": "당신의 안녕을 위한 계획,",
+  "hero_highlight": "너를 중심으로 만들어졌어.",
+  "hero_subtitle": "맞춤형 계획을 통해 안내된 활동, 실용적인 도구, 지원을 통해 한 걸음씩 진전을 이루세요.",
+  "how_it_works_title": "웰빙을 위해 필요한 모든 것들.",
+  "how_it_works_subtitle": "맞춤형 계획은 활동, 도구, 진행 상황 추적, 전문가 지원을 한데 모았습니다.",
+  "flow_steps": {
+    "plan": "당신의 계획",
+    "activities": "활동",
+    "tools": "도구",
+    "progress": "진행 상황",
+    "support": "지원"
+  },
+  "video_section_title": "만트라가 어떻게 작동하는지 확인해 보세요",
+  "video_section_subtitle": "앱을 간단히 둘러보고 계획, 활동, 웰빙 도구들이 여정에서 어디에 위치하는지 확인해 보세요.",
+  "adapts_title": "당신의 계획은 당신에 맞게 조정됩니다",
+  "adapts_subtitle": "불안, 스트레스, 우울한 기분, ADHD, 강박장애 등 다루고 싶은 것을 선택하세요. Mantra는 당신의 집중에 맞춘 안내 활동과 자료를 제공합니다.",
+  "focus_areas": {
+    "anxiety": "불안",
+    "stress": "스트레스",
+    "low_mood": "우울한 기분",
+    "adhd": "ADHD",
+    "ocd": "강박장애",
+    "more": "더 보기"
+  },
+  "focus_taglines": {
+    "anxiety": "신경계의 경계 급증과 불안한 생각의 반복을 완화하는 데 도움이 됩니다",
+    "stress": "만성적인 근무 시간 스트레스 완화와 번아웃 예방",
+    "low_mood": "부드러운 행동 활성화로 무기력의 주기를 끊기",
+    "adhd": "실행 기능 관리: 마찰과 과부하",
+    "ocd": "반응 예방 및 인지 유연성 운동",
+    "more": "수면의 질, 자존감, 인간관계 및 습관 성장"
+  },
+  "phases_labels": {
+    "phase": "Phase 0{{num}} • {{step}}",
+    "understand": "이해해",
+    "practice": "실무",
+    "reflect": "반성하세요",
+    "progress": "진행 상황"
+  },
+  "activities_title": "작은 활동들. 진짜 진전.",
+  "activities_subtitle": "계획은 학습, 성찰, 연습, 추적을 돕는 활동을 제공하여 작은 발걸음으로 나아질 수 있도록 도와줍니다.",
+  "activity_types": {
+    "learn": "배우기",
+    "reflect": "반성하세요",
+    "practice": "실무",
+    "track": "트랙"
+  },
+  "tools_title": "필요할 때 도구를 사용해",
+  "tools_subtitle": "명상, 일기 쓰기, 마음챙김, 평가, 추적기, AI 지원 등 필요할 때마다 다양한 방법을 탐색해 보세요.",
+  "tools_list": {
+    "meditation": "명상",
+    "journaling": "일기 쓰기",
+    "mindfulness": "마음챙김",
+    "assessments": "평가",
+    "trackers": "트래커",
+    "ai_support": "AI 지원",
+    "self_care": "자기 관리"
+  },
+  "points_title": "한 걸음 한 걸음이 중요하다",
+  "points_subtitle": "활동과 의미 있는 행동을 완료하여 포인트를 획득하세요.",
+  "points_steps": {
+    "complete_title": "완전",
+    "complete_desc": "활동 종료",
+    "earn_title": "포인트 획득",
+    "earn_desc": "+10점 보상",
+    "redeem_title": "보상 교환",
+    "redeem_desc": "자격 있는 서비스"
+  },
+  "points_footer": "포인트는 Mantra를 통해 제공되는 자격 있는 웰니스 서비스에 사용할 수 있습니다.",
+  "support_title": "더 많은 지원이 필요하신가요?",
+  "support_subtitle": "너 혼자가 아니야.",
+  "support_desc": "추가 도움이 필요할 때 자격을 갖춘 치료사나 기타 웰니스 서비스의 전문적인 지원을 찾아보세요.",
+  "support_btn": "전문 지원 탐색",
+  "cta_title": "이제 시작할 준비가 됐어.",
+  "cta_subtitle": "맞춤형 계획을 열고 첫 활동을 완료한 후 더 나은 웰빙을 향한 다음 단계를 밟으세요.",
+  "cta_btn_start": "내 여정을 시작해",
+  "cta_btn_starting": "시작..."
+}

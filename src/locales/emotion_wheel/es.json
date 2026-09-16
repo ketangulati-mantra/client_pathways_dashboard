@@ -1,0 +1,14 @@
+{
+  "header_back": "Atrás",
+  "header_title": "Rueda de Emociones",
+  "prompt_level1": "¿Qué sientes ahora mismo?",
+  "prompt_level2": "Explorando {{family}}",
+  "prompt_level3": "Seamos más específicos",
+  "prompt_intensity": "¿Qué intensidad tiene esta emoción?",
+  "prompt_context": "¿Qué despertó este sentimiento?",
+  "prompt_needs": "¿Qué necesitas ahora mismo?",
+  "snapshot_title": "Tu instantánea emocional",
+  "btn_explore": "Explorar más",
+  "btn_complete": "Actividad completa",
+  "btn_share": "Compartir instantánea"
+}

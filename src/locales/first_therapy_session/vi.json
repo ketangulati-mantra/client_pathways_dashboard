@@ -1,0 +1,43 @@
+{
+  "header_back": "Quay lại",
+  "header_title": "Cách Đặt Lịch Phiên",
+  "hero_title_prefix": "Kết nối với chuyên gia trị liệu phù hợp,",
+  "hero_highlight": "theo nhịp độ của riêng bạn.",
+  "hero_subtitle": "Việc đặt lịch trị liệu trên Mantra rất đơn giản và bảo mật. Xem việc chọn gói cước dễ dàng như thế nào, chia sẻ nhu cầu, ghép đôi với nhà cung cấp và bắt đầu chăm sóc.",
+  "interactive_title": "Cách đặt chỗ hoạt động",
+  "interactive_subtitle": "Hướng dẫn tương tác từng bước về quy trình đặt chỗ.",
+  "steps": {
+    "s1_title": "Chọn gói cước",
+    "s1_desc": "Bắt đầu với phiên dùng thử hoặc chọn gói nhiều tháng.",
+    "s2_title": "Chia sẻ sở thích của bạn",
+    "s2_desc": "Hãy nói với Mantra về mục tiêu, thách thức và sở thích của nhà trị liệu.",
+    "s3_title": "Hãy được ghép đôi hoặc chọn nhà trị liệu của bạn",
+    "s3_desc": "Hãy để AI kết nối bạn ngay lập tức hoặc duyệt và mời một nhà cung cấp.",
+    "s4_title": "Trò chuyện với nhà trị liệu của bạn",
+    "s4_desc": "Hãy nhắn tin cho chuyên gia tâm lý trong ứng dụng để làm quen trước khi đặt lịch.",
+    "s5_title": "Chọn thời gian & đặt chỗ",
+    "s5_desc": "Chọn một ngày giờ thuận tiện trên lịch của nhà trị liệu.",
+    "s6_title": "Tham gia từ chat",
+    "s6_desc": "Mở liên kết phiên video bảo mật được chia sẻ trực tiếp trong cuộc trò chuyện của bạn."
+  },
+  "ui_preview": {
+    "discount": "Giảm 50% cho phiên đầu tiên",
+    "intro_trial": "Phiên tòa giới thiệu",
+    "select_focus": "Chọn các lĩnh vực trọng tâm của bạn:",
+    "ai_match": "AI Match",
+    "ai_match_sub": "Đề xuất tự động",
+    "browse_team": "Duyệt Nhóm",
+    "browse_team_sub": "Chọn thủ công",
+    "therapist_msg": "Xin chào! Tôi rất mong được hỗ trợ bạn.",
+    "therapist_reply": "Chào bác sĩ Miller! Tôi vừa đặt lịch vào thứ Sáu.",
+    "calendar_title": "Chọn Thời gian phiên làm việc",
+    "join_btn": "Tham gia Phiên Video",
+    "secure_room": "100% mã hóa & bảo mật"
+  },
+  "video_title": "Xem toàn bộ hướng dẫn đặt chỗ",
+  "video_subtitle": "Trình diễn trực quan từng bước toàn bộ quy trình đặt chỗ trong ứng dụng.",
+  "faq_title": "Các câu hỏi thường gặp",
+  "cta_title": "Sẵn sàng bước tiếp theo chưa?",
+  "cta_subtitle": "Hãy khám phá các nhà trị liệu được cấp phép của chúng tôi và đặt lịch buổi đầu tiên khi bạn sẵn sàng.",
+  "cta_btn": "Khám phá Kế hoạch Liệu pháp"
+}

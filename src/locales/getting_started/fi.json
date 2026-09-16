@@ -1,0 +1,81 @@
+{
+  "header_back": "Takaisin",
+  "header_title": "Aloitus",
+  "hero_title_prefix": "Suunnitelma hyvinvoinnillesi,",
+  "hero_highlight": "rakennettu sinun ympärillesi.",
+  "hero_subtitle": "Hanki henkilökohtainen suunnitelma, jossa on ohjattuja aktiviteetteja, käytännön työkaluja ja tukea, jotka auttavat sinua etenemään askel kerrallaan.",
+  "how_it_works_title": "Kaikki, mitä tarvitset hyvinvointisi eteen.",
+  "how_it_works_subtitle": "Henkilökohtainen suunnitelmasi kokoaa yhteen toimintoja, työkaluja, edistymisen seurantaa ja ammatillista tukea yhteen paikkaan.",
+  "flow_steps": {
+    "plan": "Suunnitelmasi",
+    "activities": "Toiminta",
+    "tools": "Työkalut",
+    "progress": "Edistys",
+    "support": "Tuki"
+  },
+  "video_section_title": "Katso, miten Mantra toimii",
+  "video_section_subtitle": "Käy nopealla kierroksella sovelluksessa ja katso, miten suunnitelmasi, aktiviteettisi ja hyvinvointityökalusi sopivat matkaasi.",
+  "adapts_title": "Suunnitelmasi mukautuu sinuun",
+  "adapts_subtitle": "Valitse se, mihin haluat keskittyä, kuten ahdistusta, stressiä, matalaa mielialaa, ADHD:tä, pakko-oireista häiriötä tai muuta. Mantra tarjoaa sitten ohjattuja aktiviteetteja ja resursseja, jotka on räätälöity keskittymiseesi.",
+  "focus_areas": {
+    "anxiety": "Ahdistus",
+    "stress": "Stressi",
+    "low_mood": "Matala mieliala",
+    "adhd": "ADHD",
+    "ocd": "OCD",
+    "more": "Lisää"
+  },
+  "focus_taglines": {
+    "anxiety": "Hermoston piikit maadoittuvat ja ahdistuneita ajatuskierroksia helpottavat",
+    "stress": "Kroonisen työpäivän jännityksen lievittäminen ja loppuunpalamisen ehkäisy",
+    "low_mood": "Väsymyksen katkaiseminen lempeällä käyttäytymisen aktivoinnilla",
+    "adhd": "Johtavien toimintojen kitkan ja keskittymisen ylikuormituksen hallinta",
+    "ocd": "Vasteen ehkäisy- ja kognitiivisen joustavuuden harjoitukset",
+    "more": "Unien laatu, itsetunto, ihmissuhteet ja tapojen kasvu"
+  },
+  "phases_labels": {
+    "phase": "Vaihe 0{{num}} • {{step}}",
+    "understand": "Ymmärrä",
+    "practice": "Harjoitukset",
+    "reflect": "Reflect",
+    "progress": "Edistys"
+  },
+  "activities_title": "Pieniä aktiviteetteja. Todellista edistystä.",
+  "activities_subtitle": "Suunnitelmasi antaa sinulle aktiviteetteja, jotka auttavat sinua oppimaan, pohtimaan, harjoittelemaan ja seuraamaan, jotta voit ottaa pieniä askelia kohti paremman oloa.",
+  "activity_types": {
+    "learn": "Opi",
+    "reflect": "Reflect",
+    "practice": "Harjoitukset",
+    "track": "Rata"
+  },
+  "tools_title": "Työkalut silloin kun niitä tarvitsee",
+  "tools_subtitle": "Tutki meditaatiota, päiväkirjan pitämistä, tietoista läsnäoloa, arviointeja, seurantalaitteita, tekoälytukea ja paljon muuta aina kun tarvitset.",
+  "tools_list": {
+    "meditation": "Meditaatio",
+    "journaling": "Päiväkirjan pitäminen",
+    "mindfulness": "Tietoisuustaito",
+    "assessments": "Arvioinnit",
+    "trackers": "Trackerit",
+    "ai_support": "AI-tuki",
+    "self_care": "Itsestä huolehtiminen"
+  },
+  "points_title": "Jokainen askel on tärkeä",
+  "points_subtitle": "Suorita tehtäviä ja merkityksellisiä toimintoja ansaitaksesi pisteitä.",
+  "points_steps": {
+    "complete_title": "Täydellinen",
+    "complete_desc": "Maalitoiminnot",
+    "earn_title": "Ansaitse pisteitä",
+    "earn_desc": "+10 pisteen palkinto",
+    "redeem_title": "Lunasta palkinnot",
+    "redeem_desc": "Kelvolliset palvelut"
+  },
+  "points_footer": "Pisteitä voi käyttää Mantran kautta saatavilla oleviin kelvollisiin hyvinvointipalveluihin.",
+  "support_title": "Tarvitsetko lisää tukea?",
+  "support_subtitle": "Et ole yksin.",
+  "support_desc": "Tutustu ammattimaiseen tukeen päteviltä terapeuteilta ja muilta hyvinvointipalveluilta aina kun tarvitset lisäapua.",
+  "support_btn": "Tutustu ammatilliseen tukeen",
+  "cta_title": "Olet valmis aloittamaan.",
+  "cta_subtitle": "Avaa henkilökohtainen suunnitelmasi, suorita ensimmäinen tehtäväsi ja ota seuraava askel kohti parempaa hyvinvointia.",
+  "cta_btn_start": "Aloita matkani",
+  "cta_btn_starting": "Aloitetaan..."
+}

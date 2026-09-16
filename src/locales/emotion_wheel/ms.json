@@ -1,0 +1,14 @@
+{
+  "header_back": "Kembali",
+  "header_title": "roda emosi",
+  "prompt_level1": "Apa yang kamu rasa sekarang?",
+  "prompt_level2": "Meneroka {{family}}",
+  "prompt_level3": "Mari kita lebih spesifik",
+  "prompt_intensity": "Sejauh mana intensnya emosi ini?",
+  "prompt_context": "Apa yang mencetuskan perasaan ini?",
+  "prompt_needs": "Apa yang kamu perlukan sekarang?",
+  "snapshot_title": "Gambaran Emosi Anda",
+  "btn_explore": "Terokai Lagi",
+  "btn_complete": "Lengkapkan Aktiviti",
+  "btn_share": "Kongsi Snapshot"
+}

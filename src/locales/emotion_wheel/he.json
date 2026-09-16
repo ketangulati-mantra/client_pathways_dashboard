@@ -1,0 +1,14 @@
+{
+  "header_back": "חזרה",
+  "header_title": "גלגל רגשות",
+  "prompt_level1": "מה אתה מרגיש עכשיו?",
+  "prompt_level2": "חקר {{משפחה}}",
+  "prompt_level3": "בואו נהיה יותר ספציפיים",
+  "prompt_intensity": "כמה עוצמתי הרגש הזה?",
+  "prompt_context": "מה עורר את ההרגשה הזו?",
+  "prompt_needs": "מה אתה צריך עכשיו?",
+  "snapshot_title": "התמונה הרגשית שלך",
+  "btn_explore": "חקור עוד",
+  "btn_complete": "פעילות מלאה",
+  "btn_share": "שתף תמונת מצב"
+}

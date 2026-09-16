@@ -1,0 +1,81 @@
+{
+  "header_back": "Zurück",
+  "header_title": "Anfang",
+  "hero_title_prefix": "Ein Plan für dein Wohlbefinden,",
+  "hero_highlight": "um dich herum gebaut.",
+  "hero_subtitle": "Erhalten Sie einen personalisierten Plan mit geführten Aktivitäten, praktischen Werkzeugen und Unterstützung, die Ihnen helfen, Schritt für Schritt Fortschritte zu machen.",
+  "how_it_works_title": "Alles, was du brauchst, um an deinem Wohlbefinden zu arbeiten.",
+  "how_it_works_subtitle": "Ihr personalisierter Plan vereint Aktivitäten, Werkzeuge, Fortschrittsverfolgung und professionelle Unterstützung an einem Ort.",
+  "flow_steps": {
+    "plan": "Dein Plan",
+    "activities": "Aktivitäten",
+    "tools": "Werkzeuge",
+    "progress": "Fortschritt",
+    "support": "Unterstützung"
+  },
+  "video_section_title": "Sehen Sie, wie Mantra funktioniert",
+  "video_section_subtitle": "Machen Sie eine kurze Tour durch die App und sehen Sie, wo Ihr Plan, Ihre Aktivitäten und Ihre Wohlfühlwerkzeuge in Ihre Reise passen.",
+  "adapts_title": "Dein Plan passt sich an dich an",
+  "adapts_subtitle": "Wähle aus, woran du arbeiten möchtest, wie Angst, Stress, Stimmung, ADHS, Zwangsstörungen oder mehr. Mantra gibt dir dann geführte Aktivitäten und Ressourcen, die auf deinen Fokus zugeschnitten sind.",
+  "focus_areas": {
+    "anxiety": "Angst",
+    "stress": "Stress",
+    "low_mood": "Niedergeschlagene Stimmung",
+    "adhd": "ADHS",
+    "ocd": "OCD",
+    "more": "Mehr"
+  },
+  "focus_taglines": {
+    "anxiety": "Nervensystemspitzen zu erden und ängstliche Gedankenschleifen zu lindern",
+    "stress": "Linderung chronischer Arbeitstagsspannungen und Burnout-Prävention",
+    "low_mood": "Durchbrechen von Lethargie-Zyklen mit sanfter Verhaltensaktivierung",
+    "adhd": "Umgang mit Reibung bei exekutiven Funktionen und Überforderung zur Konzentration",
+    "ocd": "Übungen zur Reaktionsprävention und kognitiver Flexibilität",
+    "more": "Schlafqualität, Selbstwertgefühl, Beziehungen und Gewohnheitsentwicklung"
+  },
+  "phases_labels": {
+    "phase": "Phase 0{{num}} • {{step}}",
+    "understand": "Verstanden",
+    "practice": "Praxis",
+    "reflect": "Reflektieren",
+    "progress": "Fortschritt"
+  },
+  "activities_title": "Kleine Aktivitäten. Echte Fortschritte.",
+  "activities_subtitle": "Dein Plan gibt dir Aktivitäten, die dir helfen, zu lernen, zu reflektieren, zu üben und zu verfolgen, damit du kleine Schritte machen kannst, um dich besser zu fühlen.",
+  "activity_types": {
+    "learn": "Lernen Sie",
+    "reflect": "Reflektieren",
+    "practice": "Praxis",
+    "track": "Leichtathletik"
+  },
+  "tools_title": "Werkzeuge, wenn du sie brauchst",
+  "tools_subtitle": "Entdecken Sie Meditation, Tagebuchschreiben, Achtsamkeit, Assessments, Tracker, KI-Unterstützung und mehr, wann immer Sie es brauchen.",
+  "tools_list": {
+    "meditation": "Meditation",
+    "journaling": "Tagebuchschreiben",
+    "mindfulness": "Achtsamkeit",
+    "assessments": "Bewertungen",
+    "trackers": "Tracker",
+    "ai_support": "KI-Unterstützung",
+    "self_care": "Selbstfürsorge"
+  },
+  "points_title": "Jeder Schritt zählt",
+  "points_subtitle": "Erledige Aktivitäten und sinnvolle Aktionen, um Punkte zu sammeln.",
+  "points_steps": {
+    "complete_title": "Vollständig",
+    "complete_desc": "Endaktivitäten",
+    "earn_title": "Punkte verdienen",
+    "earn_desc": "+10 Punkte Belohnung",
+    "redeem_title": "Belohnungen einlösen",
+    "redeem_desc": "Förderfähige Dienste"
+  },
+  "points_footer": "Punkte können für berechtigte Wellness-Leistungen verwendet werden, die über Mantra verfügbar sind.",
+  "support_title": "Brauchen Sie mehr Unterstützung?",
+  "support_subtitle": "Du bist nicht auf dich allein gestellt.",
+  "support_desc": "Suchen Sie professionelle Unterstützung von qualifizierten Therapeuten und anderen Wellness-Diensten, wann immer Sie zusätzliche Hilfe benötigen.",
+  "support_btn": "Entdecken Sie professionelle Unterstützung",
+  "cta_title": "Du bist bereit, loszulegen.",
+  "cta_subtitle": "Öffnen Sie Ihren persönlichen Plan, erledigen Sie Ihre erste Aktivität und gehen Sie den nächsten Schritt zu besserem Wohlbefinden.",
+  "cta_btn_start": "Beginne meine Reise",
+  "cta_btn_starting": "Fangen an..."
+}

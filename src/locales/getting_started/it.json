@@ -1,0 +1,81 @@
+{
+  "header_back": "Indietro",
+  "header_title": "Iniziare",
+  "hero_title_prefix": "Un piano per il tuo benessere,",
+  "hero_highlight": "costruito intorno a te.",
+  "hero_subtitle": "Ottieni un piano personalizzato con attività guidate, strumenti pratici e supporto per aiutarti a fare progressi, un passo alla volta.",
+  "how_it_works_title": "Tutto ciò di cui hai bisogno per lavorare sul tuo benessere.",
+  "how_it_works_subtitle": "Il tuo piano personalizzato riunisce attività, strumenti, monitoraggio dei progressi e supporto professionale in un unico posto.",
+  "flow_steps": {
+    "plan": "Il tuo piano",
+    "activities": "Attività",
+    "tools": "Strumenti",
+    "progress": "Progressi",
+    "support": "Supporto"
+  },
+  "video_section_title": "Scopri come funziona Mantra",
+  "video_section_subtitle": "Fai un rapido giro dell'app e scopri dove si inseriscono il tuo piano, le tue attività e gli strumenti per il benessere nel tuo percorso.",
+  "adapts_title": "Il tuo piano si adatta a te",
+  "adapts_subtitle": "Scegli su cosa vorresti lavorare, come ansia, stress, umore basso, ADHD, DOC o altro. Mantra ti offre quindi attività guidate e risorse su misura per il tuo focus.",
+  "focus_areas": {
+    "anxiety": "Ansia",
+    "stress": "Stress",
+    "low_mood": "Umore basso",
+    "adhd": "ADHD",
+    "ocd": "DOC",
+    "more": "Altro"
+  },
+  "focus_taglines": {
+    "anxiety": "Radicare i picchi del sistema nervoso e alleviare i cicli di pensieri ansiosi",
+    "stress": "Alleviare la tensione cronica della giornata lavorativa e la prevenzione del burnout",
+    "low_mood": "Rompere i cicli di letargia con una gentile attivazione comportamentale",
+    "adhd": "Gestione dell'attrito delle funzioni esecutive e della sovraccarico della concentrazione",
+    "ocd": "Esercizi di prevenzione della risposta e flessibilità cognitiva",
+    "more": "Qualità del sonno, autostima, relazioni e crescita delle abitudini"
+  },
+  "phases_labels": {
+    "phase": "Fase 0{{num}} • {{step}}",
+    "understand": "Capito",
+    "practice": "Pratica",
+    "reflect": "Rifletti",
+    "progress": "Progressi"
+  },
+  "activities_title": "Piccole attività. Veri progressi.",
+  "activities_subtitle": "Il tuo piano ti offre attività che ti aiutano a imparare, riflettere, esercitarti e monitorare, così puoi fare piccoli passi per sentirti meglio.",
+  "activity_types": {
+    "learn": "Impara",
+    "reflect": "Rifletti",
+    "practice": "Pratica",
+    "track": "Pista"
+  },
+  "tools_title": "Strumenti quando ne hai bisogno",
+  "tools_subtitle": "Esplora meditazione, scrittura di diario, mindfulness, valutazioni, tracker, supporto AI e altro ancora ogni volta che ne hai bisogno.",
+  "tools_list": {
+    "meditation": "Meditazione",
+    "journaling": "Journaling",
+    "mindfulness": "Consapevolezza",
+    "assessments": "Valutazioni",
+    "trackers": "Tracker",
+    "ai_support": "Supporto AI",
+    "self_care": "Cura di sé"
+  },
+  "points_title": "Ogni passo conta",
+  "points_subtitle": "Completa attività e azioni significative per guadagnare punti.",
+  "points_steps": {
+    "complete_title": "Completa",
+    "complete_desc": "Attività finali",
+    "earn_title": "Guadagna punti",
+    "earn_desc": "Ricompensa di +10 punti",
+    "redeem_title": "Riscatta le ricompense",
+    "redeem_desc": "Servizi idonei"
+  },
+  "points_footer": "I punti possono essere utilizzati per i servizi di benessere idonei disponibili tramite Mantra.",
+  "support_title": "Hai bisogno di più supporto?",
+  "support_subtitle": "Non sei da solo.",
+  "support_desc": "Cerca di trovare supporto professionale da parte di terapisti qualificati e altri servizi di benessere ogni volta che hai bisogno di ulteriore aiuto.",
+  "support_btn": "Esplora il supporto professionale",
+  "cta_title": "Sei pronto a cominciare.",
+  "cta_subtitle": "Apri il tuo piano personalizzato, completa la tua prima attività e fai il passo successivo verso un benessere migliore.",
+  "cta_btn_start": "Inizia il mio viaggio",
+  "cta_btn_starting": "Iniziando..."
+}

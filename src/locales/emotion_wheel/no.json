@@ -1,0 +1,14 @@
+{
+  "header_back": "Tilbake",
+  "header_title": "Følelseshjul",
+  "prompt_level1": "Hva føler du akkurat nå?",
+  "prompt_level2": "Utforsking av {{family}}",
+  "prompt_level3": "La oss bli mer spesifikke",
+  "prompt_intensity": "Hvor intens er denne følelsen?",
+  "prompt_context": "Hva utløste denne følelsen?",
+  "prompt_needs": "Hva trenger du akkurat nå?",
+  "snapshot_title": "Ditt følelsesmessige øyeblikksbilde",
+  "btn_explore": "Utforsk mer",
+  "btn_complete": "Fullstendig aktivitet",
+  "btn_share": "Del øyeblikksbilde"
+}

@@ -1,0 +1,81 @@
+{
+  "header_back": "Bumalik",
+  "header_title": "Pagsisimula",
+  "hero_title_prefix": "Isang plano para sa iyong kapakanan,",
+  "hero_highlight": "Itinayo sa paligid mo.",
+  "hero_subtitle": "Kumuha ng personalisadong plano na may mga gabay na aktibidad, praktikal na mga kagamitan, at suporta upang matulungan kang umusad, isang hakbang sa bawat pagkakataon.",
+  "how_it_works_title": "Lahat ng kailangan mo para sa iyong kalusugan.",
+  "how_it_works_subtitle": "Pinagsasama ng iyong personalisadong plano ang mga aktibidad, kasangkapan, pagsubaybay ng progreso, at propesyonal na suporta sa isang lugar.",
+  "flow_steps": {
+    "plan": "Ang Iyong Plano",
+    "activities": "Mga Aktibidad",
+    "tools": "Mga Kasangkapan",
+    "progress": "Pag-unlad",
+    "support": "Suporta"
+  },
+  "video_section_title": "Tingnan kung paano gumagana ang Mantra",
+  "video_section_subtitle": "Mag-tour nang mabilis sa app at tingnan kung saan nababagay ang iyong plano, mga aktibidad, at mga kasangkapan sa kagalingan sa iyong paglalakbay.",
+  "adapts_title": "Ang iyong plano ay umaangkop sa iyo",
+  "adapts_subtitle": "Pumili kung ano ang gusto mong pagtuunan ng pansin, tulad ng anxiety, stress, mababang mood, ADHD, OCD, o iba pa. Pagkatapos ay nagbibigay ang Mantra ng mga gabay na aktibidad at mga resources na akma sa iyong pokus.",
+  "focus_areas": {
+    "anxiety": "Pagkabalisa",
+    "stress": "Stress",
+    "low_mood": "mababang mood",
+    "adhd": "ADHD",
+    "ocd": "OCD",
+    "more": "Higit pa"
+  },
+  "focus_taglines": {
+    "anxiety": "Pag-ground ng mga spike sa nervous system at pagpapagaan ng mga balisa sa pag-iisip",
+    "stress": "Pag-alis ng matagal nang tensyon sa araw ng trabaho at pag-iwas sa burnout",
+    "low_mood": "Pagputol ng mga siklo ng pagkapagod gamit ang banayad na pag-aktibo ng pag-uugali",
+    "adhd": "Pamamahala ng alitan at labis na konsentrasyon sa executive function",
+    "ocd": "Mga ehersisyo sa pag-iwas sa tugon at kakayahang mag-adjust ng kognitibo",
+    "more": "Kalidad ng tulog, tiwala sa sarili, mga relasyon at paglago ng mga gawi"
+  },
+  "phases_labels": {
+    "phase": "Yugto 0{{num}} • {{step}}",
+    "understand": "Unawain",
+    "practice": "Pagsasanay",
+    "reflect": "Mag-reflect",
+    "progress": "Pag-unlad"
+  },
+  "activities_title": "Maliliit na gawain. Tunay na progreso.",
+  "activities_subtitle": "Ang iyong plano ay nagbibigay sa iyo ng mga aktibidad na tumutulong sa iyo matuto, magmuni-muni, magpraktis, at subaybayan, upang makagawa ka ng maliliit na hakbang patungo sa pakiramdam na mas maayos.",
+  "activity_types": {
+    "learn": "Matuto",
+    "reflect": "Mag-reflect",
+    "practice": "Pagsasanay",
+    "track": "Track"
+  },
+  "tools_title": "Mga kasangkapan kapag kailangan mo",
+  "tools_subtitle": "Tuklasin ang meditasyon, journaling, mindfulness, assessments, trackers, AI support, at marami pang iba kung kailan mo ito kailangan.",
+  "tools_list": {
+    "meditation": "Pagmumuni-muni",
+    "journaling": "Pagsusulat sa Journal",
+    "mindfulness": "pagiging maingat",
+    "assessments": "Mga Pagsusuri",
+    "trackers": "Mga Tagasubaybay",
+    "ai_support": "Suporta ng AI",
+    "self_care": "Pag-aalaga sa Sarili"
+  },
+  "points_title": "Bawat hakbang ay mahalaga",
+  "points_subtitle": "Tapusin ang mga aktibidad at makabuluhang aksyon upang kumita ng puntos.",
+  "points_steps": {
+    "complete_title": "Kumpleto",
+    "complete_desc": "Tapusin ang mga aktibidad",
+    "earn_title": "Kumita ng Puntos",
+    "earn_desc": "+10 pts na gantimpala",
+    "redeem_title": "I-redeem ang mga Gantimpala",
+    "redeem_desc": "Mga kwalipikadong serbisyo"
+  },
+  "points_footer": "Maaaring gamitin ang mga puntos para sa mga kwalipikadong wellness services na makukuha sa pamamagitan ng Mantra.",
+  "support_title": "Kailangan mo pa ng suporta?",
+  "support_subtitle": "Hindi ka nag-iisa.",
+  "support_desc": "Alamin ang propesyonal na suporta mula sa mga kwalipikadong therapist at iba pang wellness services tuwing kailangan mo ng karagdagang tulong.",
+  "support_btn": "Tuklasin ang propesyonal na suporta",
+  "cta_title": "Handa ka nang magsimula.",
+  "cta_subtitle": "Buksan ang iyong personalisadong plano, tapusin ang iyong unang aktibidad, at gawin ang susunod na hakbang patungo sa mas mabuting kalusugan.",
+  "cta_btn_start": "Simulan ang Aking Paglalakbay",
+  "cta_btn_starting": "Nagsisimula na..."
+}

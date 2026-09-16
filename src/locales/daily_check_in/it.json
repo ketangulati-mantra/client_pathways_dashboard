@@ -1,0 +1,17 @@
+{
+  "header_back": "Indietro",
+  "header_title": "Controllo giornaliero",
+  "streak_title": "Serie di giorni",
+  "home_welcome": "Come ti senti in questo momento?",
+  "home_subtitle": "Prenditi un momento di consapevolezza per sintonizzarti sul tuo paesaggio emotivo e sul tuo stato fisico.",
+  "btn_start_checkin": "Avvia il check-in",
+  "history_title": "I tuoi recenti controlli",
+  "step_emotion_title": "Seleziona il tuo stato emotivo attuale",
+  "step_intensity_title": "Quanto è forte questa sensazione?",
+  "step_context_title": "Cosa contribuisce a come ti senti?",
+  "step_reflection_title": "Riflettere e notare",
+  "step_response_title": "Intuizioni personalizzate",
+  "btn_continue": "Continua",
+  "btn_finish": "Check-in completo",
+  "btn_exit": "Continua con il mio piano"
+}

@@ -1,0 +1,14 @@
+{
+  "header_back": "Takaisin",
+  "header_title": "Tunnepyörä",
+  "prompt_level1": "Miltä sinusta tuntuu juuri nyt?",
+  "prompt_level2": "{{perhe}} tutkiminen",
+  "prompt_level3": "Mennään tarkempiin",
+  "prompt_intensity": "Kuinka voimakas tämä tunne on?",
+  "prompt_context": "Mikä sai aikaan tämän tunteen?",
+  "prompt_needs": "Mitä tarvitset juuri nyt?",
+  "snapshot_title": "Tunteellinen tilannekuvasi",
+  "btn_explore": "Tutustu lisää",
+  "btn_complete": "Koko toiminta",
+  "btn_share": "Jaa tilannekuva"
+}

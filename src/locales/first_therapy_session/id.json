@@ -1,0 +1,43 @@
+{
+  "header_back": "Kembali",
+  "header_title": "Cara Memesan Sesi",
+  "hero_title_prefix": "Terhubung dengan terapis yang tepat,",
+  "hero_highlight": "dengan ritme Anda sendiri.",
+  "hero_subtitle": "Memesan sesi Anda di Mantra sangat mudah dan rahasia. Lihat betapa mudahnya memilih paket, bagikan kebutuhan Anda, mencocokkan dengan penyedia, dan mulai perawatan.",
+  "interactive_title": "Cara kerja pemesanan",
+  "interactive_subtitle": "Panduan interaktif langkah demi langkah dari proses pemesanan.",
+  "steps": {
+    "s1_title": "Pilih paket",
+    "s1_desc": "Mulailah dengan sesi percobaan atau pilih paket multi-bulan.",
+    "s2_title": "Bagikan preferensi Anda",
+    "s2_desc": "Sampaikan kepada Mantra tujuan, tantangan, dan preferensi terapis Anda.",
+    "s3_title": "Dapatkan pasangan atau pilih terapis Anda",
+    "s3_desc": "Biarkan AI mencocokkan Anda secara instan atau jelajahi dan undang penyedia.",
+    "s4_title": "Ngobrol dengan terapis Anda",
+    "s4_desc": "Kirim pesan ke terapis Anda di aplikasi untuk merasa nyaman sebelum memesan.",
+    "s5_title": "Pilih waktu & pesan",
+    "s5_desc": "Pilih tanggal dan waktu yang nyaman di kalender terapis Anda.",
+    "s6_title": "Bergabung dari chat",
+    "s6_desc": "Buka tautan sesi video aman yang dibagikan langsung di chat Anda."
+  },
+  "ui_preview": {
+    "discount": "Diskon 50% untuk Sesi Pertama",
+    "intro_trial": "Persidangan Pengantar",
+    "select_focus": "Pilih area fokus Anda:",
+    "ai_match": "Pertandingan AI",
+    "ai_match_sub": "Rekomendasi otomatis",
+    "browse_team": "Jelajahi Tim",
+    "browse_team_sub": "Pilih secara manual",
+    "therapist_msg": "Halo! Saya menantikan untuk mendukung Anda.",
+    "therapist_reply": "Hai Dr. Miller! Saya baru saja memesan hari Jumat.",
+    "calendar_title": "Pilih Waktu Sesi",
+    "join_btn": "Bergabung dengan Sesi Video",
+    "secure_room": "100% terenkripsi & rahasia"
+  },
+  "video_title": "Tonton panduan pemesanan lengkap",
+  "video_subtitle": "Demonstrasi visual langkah demi langkah dari seluruh proses pemesanan dalam aplikasi.",
+  "faq_title": "Pertanyaan yang sering diajukan",
+  "cta_title": "Siap melangkah ke tahap berikutnya?",
+  "cta_subtitle": "Jelajahi terapis berlisensi kami dan pesan sesi pertama Anda kapan pun Anda siap.",
+  "cta_btn": "Jelajahi Rencana Terapi"
+}

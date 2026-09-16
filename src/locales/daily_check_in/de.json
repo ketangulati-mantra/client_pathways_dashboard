@@ -1,0 +1,17 @@
+{
+  "header_back": "Zurück",
+  "header_title": "Täglicher Check-in",
+  "streak_title": "Tagesserie",
+  "home_welcome": "Wie fühlst du dich gerade?",
+  "home_subtitle": "Nimm dir einen achtsamen Moment, um dich auf deine emotionale Landschaft und deinen Körperzustand einzustellen.",
+  "btn_start_checkin": "Start Check-In",
+  "history_title": "Ihre jüngsten Check-ins",
+  "step_emotion_title": "Wählen Sie Ihren aktuellen emotionalen Zustand",
+  "step_intensity_title": "Wie stark ist dieses Gefühl?",
+  "step_context_title": "Was trägt dazu bei, wie du dich fühlst?",
+  "step_reflection_title": "Reflektieren & Notizen",
+  "step_response_title": "Personalisierte Einblicke",
+  "btn_continue": "Weitermachen",
+  "btn_finish": "Vollständiges Check-in",
+  "btn_exit": "Mach mit meinem Plan weiter."
+}

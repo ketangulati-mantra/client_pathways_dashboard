@@ -18,26 +18,9 @@ export interface Activity {
 }
 
 export const activities: Activity[] = [
-  {
-    lessonId: 'getting-started',
-    activityId: 'getting-started',
-    title: 'TherapyMantra Getting Started',
-    rewardPoints: 25,
-    estimatedDuration: '4 min',
-    route: '/task/getting-started',
-    services: ['therapy'],
-    description: 'Learn how TherapyMantra works, how to access your support, and what to expect along the way.'
-  },
-  {
-    lessonId: 'first-therapy-session',
-    activityId: 'first-therapy-session',
-    title: 'How to Book a Session',
-    rewardPoints: 25,
-    estimatedDuration: '3 min',
-    route: '/task/first-therapy-session',
-    services: ['therapy'],
-    description: 'Learn how to choose a therapist, book a convenient time, and join your session.'
-  },
+  // ==========================================
+  // FOUNDATIONAL ACTIVITIES (IN SPECIFIC ORDER)
+  // ==========================================
   {
     lessonId: 'emotional-wellbeing-assessment',
     activityId: 'emotional-wellbeing-assessment',
@@ -46,7 +29,21 @@ export const activities: Activity[] = [
     estimatedDuration: '3 min',
     route: '/task/emotional-wellbeing-assessment',
     services: ['therapy'],
+    problem: 'foundational',
+    problems: ['foundational'],
     description: 'Check in on your current emotional state across anxiety, depression, and stress in 9 simple questions.'
+  },
+  {
+    lessonId: 'getting-started',
+    activityId: 'getting-started',
+    title: 'How TherapyMantra Works?',
+    rewardPoints: 25,
+    estimatedDuration: '4 min',
+    route: '/task/getting-started',
+    services: ['therapy'],
+    problem: 'foundational',
+    problems: ['foundational'],
+    description: 'Learn how TherapyMantra works, how to access your support, and what to expect along the way.'
   },
   {
     lessonId: 'how-can-therapy-help',
@@ -56,17 +53,34 @@ export const activities: Activity[] = [
     estimatedDuration: '2-3 min',
     route: '/task/how-can-therapy-help',
     services: ['therapy'],
+    problem: 'foundational',
+    problems: ['foundational'],
     description: 'Learn what therapy actually helps with, what happens in a session, and how to get started.'
   },
   {
-    lessonId: 'earn-while-you-improve-your-wellbeing',
-    activityId: 'earn-while-you-improve-your-wellbeing',
-    title: 'Earn While You Improve Your Wellbeing',
-    rewardPoints: 50,
-    estimatedDuration: '2 min',
-    route: '/task/earn-while-you-improve-your-wellbeing',
+    lessonId: 'mantra21_myths_we_tell_ourselves',
+    activityId: 'mantra21_myths_we_tell_ourselves',
+    title: 'Myths We Tell Ourselves',
+    rewardPoints: 25,
+    estimatedDuration: '3 min',
+    route: '/task/myths-we-tell-ourselves',
     services: ['therapy'],
-    description: 'Learn how your guided pathway supports your daily wellbeing habits and recognizes consistency.'
+    problem: 'foundational',
+    problems: ['foundational', 'depression'],
+    day: 1,
+    description: 'Day 1: 5 common beliefs about mental health. Let’s question them.'
+  },
+  {
+    lessonId: 'emotion-wheel',
+    activityId: 'emotion-wheel',
+    title: 'Emotion Wheel',
+    rewardPoints: 25,
+    estimatedDuration: '2 min',
+    route: '/task/emotion-wheel',
+    services: ['therapy'],
+    problem: 'foundational',
+    problems: ['foundational'],
+    description: 'Identify and understand what you are feeling right now through an interactive emotion wheel.'
   },
   {
     lessonId: 'daily-check-in',
@@ -76,18 +90,64 @@ export const activities: Activity[] = [
     estimatedDuration: '1 min',
     route: '/task/daily-check-in',
     services: ['therapy'],
+    problem: 'foundational',
+    problems: ['foundational'],
     description: 'A 30-60 second pause to explore your emotional state and discover personalized next steps.'
   },
   {
     lessonId: 'journal',
     activityId: 'journal',
-    title: 'Journal & Reflections',
+    title: 'Journal',
     rewardPoints: 20,
     estimatedDuration: '3 min',
     route: '/task/journal',
     services: ['therapy'],
+    problem: 'foundational',
+    problems: ['foundational'],
     description: 'Deepen self-awareness with connected daily reflections and free-form journaling.'
   },
+  {
+    lessonId: 'depression_one_tiny_step',
+    activityId: 'depression_one_tiny_step',
+    title: 'One Tiny Step',
+    rewardPoints: 25,
+    estimatedDuration: '3 min',
+    route: '/task/depression-one-tiny-step',
+    services: ['therapy'],
+    problem: 'foundational',
+    problems: ['foundational', 'depression'],
+    day: 1,
+    description: 'Day 1: Move from reflection into action. Choose one tiny, micro-stepped action to make today 1% easier.'
+  },
+  {
+    lessonId: 'mantra21_my_support_circle',
+    activityId: 'mantra21_my_support_circle',
+    title: 'My Support Circle',
+    rewardPoints: 25,
+    estimatedDuration: '3 min',
+    route: '/task/my-support-circle',
+    services: ['therapy'],
+    problem: 'foundational',
+    problems: ['foundational', 'depression'],
+    day: 1,
+    description: 'Day 1: Who can you lean on when things feel difficult?'
+  },
+  {
+    lessonId: 'first-therapy-session',
+    activityId: 'first-therapy-session',
+    title: 'How to Book a Session?',
+    rewardPoints: 25,
+    estimatedDuration: '3 min',
+    route: '/task/first-therapy-session',
+    services: ['therapy'],
+    problem: 'foundational',
+    problems: ['foundational'],
+    description: 'Learn how to choose a therapist, book a convenient time, and join your session.'
+  },
+
+  // ==========================================
+  // ADDITIONAL THERAPY & CONDITION ACTIVITIES
+  // ==========================================
   {
     lessonId: 'personalized-focus-assessment',
     activityId: 'personalized-focus-assessment',
@@ -99,27 +159,14 @@ export const activities: Activity[] = [
     description: 'Discover your personalized 21-day wellbeing focus and get matched with your tailored daily plan.'
   },
   {
-    lessonId: 'emotion-wheel',
-    activityId: 'emotion-wheel',
-    title: 'Emotion Wheel',
-    rewardPoints: 25,
+    lessonId: 'earn-while-you-improve-your-wellbeing',
+    activityId: 'earn-while-you-improve-your-wellbeing',
+    title: 'Earn While You Improve Your Wellbeing',
+    rewardPoints: 50,
     estimatedDuration: '2 min',
-    route: '/task/emotion-wheel',
+    route: '/task/earn-while-you-improve-your-wellbeing',
     services: ['therapy'],
-    description: 'Identify and understand what you are feeling right now through an interactive emotion wheel.'
-  },
-  {
-    lessonId: 'mantra21_myths_we_tell_ourselves',
-    activityId: 'mantra21_myths_we_tell_ourselves',
-    title: 'Myths We Tell Ourselves',
-    rewardPoints: 25,
-    estimatedDuration: '3 min',
-    route: '/task/myths-we-tell-ourselves',
-    services: ['therapy'],
-    problem: 'depression',
-    problems: ['depression'],
-    day: 1,
-    description: 'Day 1: 5 common beliefs about mental health. Let’s question them.'
+    description: 'Learn how your guided pathway supports your daily wellbeing habits and recognizes consistency.'
   },
   {
     lessonId: 'depression_what_is_depression',
@@ -146,19 +193,6 @@ export const activities: Activity[] = [
     problems: ['depression'],
     day: 1,
     description: 'Day 1: Recognize how depression is showing up across mind, feelings, body, and actions — without judgment or clinical labels.'
-  },
-  {
-    lessonId: 'depression_one_tiny_step',
-    activityId: 'depression_one_tiny_step',
-    title: 'One Tiny Step',
-    rewardPoints: 25,
-    estimatedDuration: '3 min',
-    route: '/task/depression-one-tiny-step',
-    services: ['therapy'],
-    problem: 'depression',
-    problems: ['depression'],
-    day: 1,
-    description: 'Day 1: Move from reflection into action. Choose one tiny, micro-stepped action to make today 1% easier.'
   },
   {
     lessonId: 'depression_where_am_i_right_now',

@@ -1,0 +1,81 @@
+{
+  "header_back": "Geri",
+  "header_title": "Başlamak",
+  "hero_title_prefix": "Sağlığınız için bir plan,",
+  "hero_highlight": "senin etrafında kurulmuş.",
+  "hero_subtitle": "Rehberli aktiviteler, pratik araçlar ve destek içeren kişiselleştirilmiş bir plan alın, adım adım ilerlemenize yardımcı olabilirsiniz.",
+  "how_it_works_title": "Sağlığınız üzerinde çalışmak için ihtiyacınız olan her şey.",
+  "how_it_works_subtitle": "Kişiselleştirilmiş planınız, faaliyetleri, araçları, ilerleme takibi ve profesyonel desteği tek bir yerde bir araya getirir.",
+  "flow_steps": {
+    "plan": "Planın",
+    "activities": "Faaliyetler",
+    "tools": "Araçlar",
+    "progress": "İlerleme",
+    "support": "Destek"
+  },
+  "video_section_title": "Mantra'nın nasıl çalıştığını görün",
+  "video_section_subtitle": "Uygulamayı hızlıca gezin ve planınızın, aktivitelerinizin ve sağlık araçlarınızın yolculuğunuza nasıl uyduğunu görün.",
+  "adapts_title": "Planın sana göre uyum sağlıyor",
+  "adapts_subtitle": "Üzerinde çalışmak istediğiniz şeyleri seçin; örneğin anksiyete, stres, düşük ruh hali, DEHB, OKB veya daha fazlası. Mantra daha sonra odaklanmanıza göre yönlendirilmiş aktiviteler ve kaynaklar sunar.",
+  "focus_areas": {
+    "anxiety": "Anksiyete",
+    "stress": "Stres",
+    "low_mood": "Düşük Ruh Hali",
+    "adhd": "DEHB",
+    "ocd": "OKB",
+    "more": "Daha fazlası"
+  },
+  "focus_taglines": {
+    "anxiety": "Sinir sistemi yükselmelerini sağladı ve kaygılı düşünce döngülerini hafifletiyordu",
+    "stress": "Kronik iş günü gerginliğini azaltmak ve tükenmişliği önlemek",
+    "low_mood": "Nazik davranışsal aktivasyonla halsizlik döngülerini kırmak",
+    "adhd": "Yürütme fonksiyonu sürtünmesi ve odaklanma bunalığını yönetmek",
+    "ocd": "Yanıt önleme ve bilişsel esneklik egzersizleri",
+    "more": "Uyku kalitesi, özsaygı, ilişkiler ve alışkanlık gelişimi"
+  },
+  "phases_labels": {
+    "phase": "Phase 0{{num}} • {{step}}",
+    "understand": "Anlayın",
+    "practice": "Uygulama",
+    "reflect": "Yansıt",
+    "progress": "İlerleme"
+  },
+  "activities_title": "Küçük aktiviteler. Gerçek ilerleme.",
+  "activities_subtitle": "Planınız, öğrenmenize, yansıtmanıza, pratik yapmanıza ve takip etmenize yardımcı olan aktiviteler sunar, böylece kendinizi daha iyi hissetmek için küçük adımlar atabilirsiniz.",
+  "activity_types": {
+    "learn": "Öğren",
+    "reflect": "Yansıt",
+    "practice": "Uygulama",
+    "track": "Pist"
+  },
+  "tools_title": "İhtiyacınız olduğunda araçlar",
+  "tools_subtitle": "Meditasyon, günlük tutma, farkındalık, değerlendirmeler, takipçiler, yapay zeka desteği ve daha fazlasını ihtiyacınız olduğunda keşfedin.",
+  "tools_list": {
+    "meditation": "Meditasyon",
+    "journaling": "Günlük tutma",
+    "mindfulness": "Farkındalık",
+    "assessments": "Değerlendirmeler",
+    "trackers": "İzleyiciler",
+    "ai_support": "Yapay Zeka Desteği",
+    "self_care": "Kendine Bakım"
+  },
+  "points_title": "Her adım önemlidir",
+  "points_subtitle": "Puan kazanmak için aktiviteleri ve anlamlı eylemleri tamamla.",
+  "points_steps": {
+    "complete_title": "Tamam",
+    "complete_desc": "Bitiş faaliyetleri",
+    "earn_title": "Puan Kazan",
+    "earn_desc": "+10 puan ödülü",
+    "redeem_title": "Ödülleri Kullan",
+    "redeem_desc": "Uygun hizmetler"
+  },
+  "points_footer": "Puanlar, Mantra aracılığıyla sunulan uygun sağlık hizmetleri için kullanılabilir.",
+  "support_title": "Daha fazla desteğe mi ihtiyacınız var?",
+  "support_subtitle": "Yalnız değilsin.",
+  "support_desc": "Ek yardıma ihtiyacınız olduğunda nitelikli terapistlerden ve diğer sağlık hizmetlerinden profesyonel destek almayı keşfedin.",
+  "support_btn": "Profesyonel desteği keşfedin",
+  "cta_title": "Başlamaya hazırsın.",
+  "cta_subtitle": "Kişiselleştirilmiş planınızı açın, ilk etkinliğinizi tamamlayın ve daha iyi bir yaşam için bir sonraki adımı atın.",
+  "cta_btn_start": "Yolculuğuma Başla",
+  "cta_btn_starting": "Başlıyorum..."
+}

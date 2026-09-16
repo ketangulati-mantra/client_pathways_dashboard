@@ -1,0 +1,43 @@
+{
+  "header_back": "Zpět",
+  "header_title": "Jak si rezervovat sezení",
+  "hero_title_prefix": "Spojte se s tím správným terapeutem,",
+  "hero_highlight": "vlastním tempem.",
+  "hero_subtitle": "Rezervace sezení na Mantru je jednoduchá a důvěrná. Podívejte se, jak snadné je vybrat si plán, sdílet své potřeby, spojit se s poskytovatelem a začít péči.",
+  "interactive_title": "Jak funguje rezervace",
+  "interactive_subtitle": "Krok za krokem interaktivní průchod procesem rezervace.",
+  "steps": {
+    "s1_title": "Vyberte si plán",
+    "s1_desc": "Začněte zkušební sezením nebo zvolte víceměsíční plán.",
+    "s2_title": "Podělte se o své preference",
+    "s2_desc": "Řekněte Mantrovi své cíle, výzvy a preference terapeuta.",
+    "s3_title": "Získejte párování nebo si vyberte svého terapeuta",
+    "s3_desc": "Nechte AI vás okamžitě spojit, nebo si prohlížejte a pozvěte poskytovatele.",
+    "s4_title": "Povídej si se svým terapeutem",
+    "s4_desc": "Napiš svému terapeutovi v aplikaci, abys se cítil pohodlně, než si rezervuješ.",
+    "s5_title": "Vyberte si čas a rezervujte si",
+    "s5_desc": "Vyberte si vhodné datum a čas v kalendáři svého terapeuta.",
+    "s6_title": "Připojit se z chatu",
+    "s6_desc": "Otevřete odkaz na zabezpečenou video relaci, který sdílíte přímo ve svém chatu."
+  },
+  "ui_preview": {
+    "discount": "50% SLEVA na první sezení",
+    "intro_trial": "Úvodní soudní proces",
+    "select_focus": "Vyberte si své oblasti zaměření:",
+    "ai_match": "AI Match",
+    "ai_match_sub": "Doporučení aut",
+    "browse_team": "Browse Team",
+    "browse_team_sub": "Pickujte ručně",
+    "therapist_msg": "Ahoj! Těším se, že tě podpořím.",
+    "therapist_reply": "Dobrý den, doktore Millerová! Právě jsem si rezervovala pátek.",
+    "calendar_title": "Vybraný čas sezení",
+    "join_btn": "Připojte se k video sezení",
+    "secure_room": "100% šifrované a důvěrné"
+  },
+  "video_title": "Podívejte se na kompletní průvodce rezervací",
+  "video_subtitle": "Krok za krokem vizuální ukázka celého procesu rezervace v aplikaci.",
+  "faq_title": "Často kladené otázky",
+  "cta_title": "Jste připraveni udělat další krok?",
+  "cta_subtitle": "Prozkoumejte naše licencované terapeuty a rezervujte si první sezení, až budete připraveni.",
+  "cta_btn": "Prozkoumejte terapeutické plány"
+}

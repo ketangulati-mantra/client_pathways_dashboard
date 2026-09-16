@@ -1,0 +1,43 @@
+{
+  "header_back": "Bumalik",
+  "header_title": "Paano Mag-book ng Sesyon",
+  "hero_title_prefix": "Makipag-ugnayan sa tamang therapist,",
+  "hero_highlight": "sa sarili mong bilis.",
+  "hero_subtitle": "Simple at kumpidensyal ang pag-book ng iyong session sa Mantra. Tingnan kung gaano kadaling pumili ng plan, ibahagi ang iyong mga pangangailangan, makipag-match sa provider, at simulan ang pangangalaga.",
+  "interactive_title": "Paano gumagana ang booking",
+  "interactive_subtitle": "Hakbang-hakbang na interaktibong walkthrough ng proseso ng booking.",
+  "steps": {
+    "s1_title": "Pumili ng plano",
+    "s1_desc": "Magsimula sa trial session o pumili ng multi-month plan.",
+    "s2_title": "Ibahagi ang iyong mga kagustuhan",
+    "s2_desc": "Sabihin kay Mantra ang iyong mga layunin, hamon, at mga kagustuhan ng therapist.",
+    "s3_title": "Magpa-match o pumili ng therapist",
+    "s3_desc": "Hayaan ang AI na i-match ka agad o mag-browse at mag-imbita ng provider.",
+    "s4_title": "Makipag-chat sa iyong therapist",
+    "s4_desc": "I-message ang therapist mo sa app para maging komportable bago mag-book.",
+    "s5_title": "Pumili ng oras at mag-book",
+    "s5_desc": "Pumili ng maginhawang petsa at oras sa kalendaryo ng iyong therapist.",
+    "s6_title": "Sumali mula sa chat",
+    "s6_desc": "Buksan ang secure video session link na direktang ibinahagi sa iyong chat."
+  },
+  "ui_preview": {
+    "discount": "50% DISKWENTO sa Unang Sesyon",
+    "intro_trial": "Panimulang Pagsubok",
+    "select_focus": "Piliin ang iyong mga pokus na lugar:",
+    "ai_match": "AI Match",
+    "ai_match_sub": "Mga rekomendasyon para sa auto",
+    "browse_team": "Mag-browse ng Team",
+    "browse_team_sub": "Pumili nang mano-mano",
+    "therapist_msg": "Hello! Inaasahan kong suportahan ka.",
+    "therapist_reply": "Hi Dr. Miller! Kakabook ko lang ng Biyernes.",
+    "calendar_title": "Piliin ang Oras ng Sesyon",
+    "join_btn": "Sumali sa Video Session",
+    "secure_room": "100% naka-encrypt at kumpidensyal"
+  },
+  "video_title": "Panoorin ang buong booking walkthrough",
+  "video_subtitle": "Hakbang-hakbang na visual na demonstrasyon ng buong proseso ng pag-book sa loob ng app.",
+  "faq_title": "Mga madalas itanong",
+  "cta_title": "Handa ka na bang gawin ang susunod na hakbang?",
+  "cta_subtitle": "Tuklasin ang aming mga lisensyadong therapist at mag-book ng iyong unang sesyon kapag handa ka na.",
+  "cta_btn": "Tuklasin ang mga Plano sa Therapy"
+}

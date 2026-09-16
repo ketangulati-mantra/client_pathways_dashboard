@@ -1,0 +1,81 @@
+{
+  "header_back": "Z powrotem",
+  "header_title": "Zaczynamy",
+  "hero_title_prefix": "Plan dla twojego dobra,",
+  "hero_highlight": "zbudowany wokół ciebie.",
+  "hero_subtitle": "Uzyskaj spersonalizowany plan z prowadzonymi aktywnościami, praktycznymi narzędziami i wsparciem, które pomogą Ci robić postępy, krok po kroku.",
+  "how_it_works_title": "Wszystko, czego potrzebujesz, by pracować nad swoim samopoczuciem.",
+  "how_it_works_subtitle": "Twój spersonalizowany plan łączy aktywności, narzędzia, śledzenie postępów oraz profesjonalne wsparcie w jednym miejscu.",
+  "flow_steps": {
+    "plan": "Twój plan",
+    "activities": "Działalność",
+    "tools": "Narzędzia",
+    "progress": "Postępy",
+    "support": "Wsparcie"
+  },
+  "video_section_title": "Zobacz, jak działa Mantra",
+  "video_section_subtitle": "Zrób szybkie przejście po aplikacji i zobacz, gdzie Twój plan, aktywności i narzędzia do dobrostanu pasują do Twojej drogi.",
+  "adapts_title": "Twój plan dostosowuje się do ciebie",
+  "adapts_subtitle": "Wybierz to, nad czym chcesz pracować, na przykład z lękiem, stresem, obniżonym nastrojem, ADHD, OCD lub innymi sprawami. Mantra następnie oferuje prowadzone aktywności i materiały dostosowane do twojego skupienia.",
+  "focus_areas": {
+    "anxiety": "Lęk",
+    "stress": "Stres",
+    "low_mood": "Niski nastrój",
+    "adhd": "ADHD",
+    "ocd": "OCD",
+    "more": "Więcej"
+  },
+  "focus_taglines": {
+    "anxiety": "Uziemienie układu nerwowego powoduje skoki i łagodzenie lękowych pętli myślowych",
+    "stress": "Łagodzenie przewlekłego napięcia w pracy i zapobieganie wypaleniu",
+    "low_mood": "Przerywanie cykli ospałości delikatną aktywacją behawioralną",
+    "adhd": "Zarządzanie tarciami w funkcjach wykonawczych i przytłoczeniem koncentracji",
+    "ocd": "Ćwiczenia zapobiegania reakcji i elastyczności poznawcze",
+    "more": "Jakość snu, poczucie własnej wartości, relacje i rozwój nawyków"
+  },
+  "phases_labels": {
+    "phase": "Faza 0{{num}} • {{step}}",
+    "understand": "Rozumiem",
+    "practice": "Praktyka",
+    "reflect": "Refleksja",
+    "progress": "Postępy"
+  },
+  "activities_title": "Małe aktywności. Prawdziwy postęp.",
+  "activities_subtitle": "Twój plan daje ci aktywności, które pomagają ci się uczyć, refleksyjnie analizować, ćwiczyć i śledzić, dzięki czemu możesz robić małe kroki w kierunku lepszego samopoczucia.",
+  "activity_types": {
+    "learn": "Ucz się",
+    "reflect": "Refleksja",
+    "practice": "Praktyka",
+    "track": "Tor"
+  },
+  "tools_title": "Narzędzia, gdy są potrzebne",
+  "tools_subtitle": "Odkrywaj medytację, prowadzenie dziennika, uważność, oceny, trackery, wsparcie AI i wiele więcej, kiedy tylko tego potrzebujesz.",
+  "tools_list": {
+    "meditation": "Medytacja",
+    "journaling": "Prowadzenie dziennika",
+    "mindfulness": "Uważność",
+    "assessments": "Oceny",
+    "trackers": "Trackery",
+    "ai_support": "Wsparcie AI",
+    "self_care": "Dbanie o siebie"
+  },
+  "points_title": "Każdy krok się liczy",
+  "points_subtitle": "Wykonuj aktywności i znaczące działania, aby zdobywać punkty.",
+  "points_steps": {
+    "complete_title": "Ukończone",
+    "complete_desc": "Działania końcowe",
+    "earn_title": "Zdobywaj punkty",
+    "earn_desc": "+10 pkt nagrody",
+    "redeem_title": "Nagrody Redeem",
+    "redeem_desc": "Uprawnione usługi"
+  },
+  "points_footer": "Punkty można wykorzystać na kwalifikowane usługi wellness dostępne przez Mantra.",
+  "support_title": "Potrzebujesz więcej wsparcia?",
+  "support_subtitle": "Nie jesteś sam.",
+  "support_desc": "Korzystaj z profesjonalnego wsparcia wykwalifikowanych terapeutów i innych usług wellness zawsze, gdy potrzebujesz dodatkowej pomocy.",
+  "support_btn": "Odkryj profesjonalne wsparcie",
+  "cta_title": "Jesteś gotowy, by zacząć.",
+  "cta_subtitle": "Otwórz swój spersonalizowany plan, wykonaj pierwszą aktywność i zrób kolejny krok w kierunku lepszego samopoczucia.",
+  "cta_btn_start": "Rozpocznij moją podróż",
+  "cta_btn_starting": "Zaczynam..."
+}

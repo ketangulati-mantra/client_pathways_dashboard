@@ -1,0 +1,17 @@
+{
+  "header_back": "Bumalik",
+  "header_title": "Araw-araw na Pag-check-In",
+  "streak_title": "sunod-sunod na araw",
+  "home_welcome": "Kumusta ang pakiramdam mo ngayon?",
+  "home_subtitle": "Maglaan ng isang maingat na sandali upang maunawaan ang iyong emosyonal na kalagayan at kalagayan ng katawan.",
+  "btn_start_checkin": "Simulan ang Check-In",
+  "history_title": "Ang Iyong Kamakailang Check-In",
+  "step_emotion_title": "Piliin ang iyong kasalukuyang emosyonal na kalagayan",
+  "step_intensity_title": "Gaano kalakas ang pakiramdam na ito?",
+  "step_context_title": "Ano ang nakakaapekto sa nararamdaman mo?",
+  "step_reflection_title": "Magmuni-muni at Tandaan",
+  "step_response_title": "Personalisadong Pananaw",
+  "btn_continue": "Magpatuloy",
+  "btn_finish": "Kumpletong Check-In",
+  "btn_exit": "Magpatuloy sa Aking Plano"
+}

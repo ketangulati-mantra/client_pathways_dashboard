@@ -1,0 +1,43 @@
+{
+  "header_back": "Z powrotem",
+  "header_title": "Jak zarezerwować sesję",
+  "hero_title_prefix": "Połącz się z odpowiednim terapeutą,",
+  "hero_highlight": "Własnym tempem.",
+  "hero_subtitle": "Rezerwacja sesji na Mantrze jest prosta i poufna. Sprawdź, jak łatwo jest wybrać plan, podzielić się potrzebami, dopasować się do lekarza i rozpocząć opiekę.",
+  "interactive_title": "Jak działa rezerwacja",
+  "interactive_subtitle": "Interaktywny krok po kroku przegląd procesu rezerwacji.",
+  "steps": {
+    "s1_title": "Wybierz plan",
+    "s1_desc": "Zacznij od sesji próbnej lub wybierz plan wielomiesięczny.",
+    "s2_title": "Podziel się swoimi preferencjami",
+    "s2_desc": "Powiedz Mantrze o swoich celach, wyzwaniach i preferencjach terapeuty.",
+    "s3_title": "Znajdź dopasowanie lub wybierz swojego terapeutę",
+    "s3_desc": "Pozwól AI natychmiast cię dopasować lub przeglądaj i zaproś dostawcę.",
+    "s4_title": "Porozmawiaj ze swoim terapeutą",
+    "s4_desc": "Napisz do terapeuty w aplikacji, żeby poczuć się komfortowo przed rezerwacją.",
+    "s5_title": "Wybierz czas i zarezerwuj",
+    "s5_desc": "Wybierz dogodną datę i godzinę w kalendarzu terapeuty.",
+    "s6_title": "Dołącz z czatu",
+    "s6_desc": "Otwórz link do bezpiecznej sesji wideo, udostępniony bezpośrednio na czacie."
+  },
+  "ui_preview": {
+    "discount": "50% ZNIŻKI na pierwszą sesję",
+    "intro_trial": "Proces wprowadzający",
+    "select_focus": "Wybierz obszary zainteresowania:",
+    "ai_match": "Mecz AI",
+    "ai_match_sub": "Rekomendacje samochodowe",
+    "browse_team": "Przeglądaj zespół",
+    "browse_team_sub": "Wybieraj ręcznie",
+    "therapist_msg": "Cześć! Nie mogę się doczekać, by Cię wspierać.",
+    "therapist_reply": "Cześć, dr Miller! Właśnie zarezerwowałem termin w piątek.",
+    "calendar_title": "Wybrany czas sesji",
+    "join_btn": "Dołącz do sesji wideo",
+    "secure_room": "100% szyfrowane i poufne"
+  },
+  "video_title": "Obejrzyj pełny przegląd rezerwacji",
+  "video_subtitle": "Wizualna prezentacja krok po kroku całego procesu rezerwacji w aplikacji.",
+  "faq_title": "Najczęściej zadawane pytania",
+  "cta_title": "Gotowy, by zrobić kolejny krok?",
+  "cta_subtitle": "Poznaj naszych licencjonowanych terapeutów i umów się na pierwszą sesję, kiedy będziesz gotowy.",
+  "cta_btn": "Poznaj plany terapii"
+}

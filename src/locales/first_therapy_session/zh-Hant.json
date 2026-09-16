@@ -1,0 +1,43 @@
+{
+  "header_back": "返回",
+  "header_title": "如何預約諮詢",
+  "hero_title_prefix": "聯繫合適的治療師，",
+  "hero_highlight": "按你自己的步調。",
+  "hero_subtitle": "在 Mantra 預約療程既簡單又保密。看看選擇方案、分享需求、配對醫師並開始照護的簡單程度。",
+  "interactive_title": "預約流程",
+  "interactive_subtitle": "逐步互動式的預約流程導覽。",
+  "steps": {
+    "s1_title": "選擇方案",
+    "s1_desc": "先從試用課程開始，或選擇多月計畫。",
+    "s2_title": "分享你的偏好",
+    "s2_desc": "告訴Mantra你的目標、挑戰和治療師偏好。",
+    "s3_title": "配對或選擇你的治療師",
+    "s3_desc": "讓 AI 即時配對你，或瀏覽並邀請服務提供者。",
+    "s4_title": "和你的治療師聊聊",
+    "s4_desc": "在預約前，先在App裡聯絡你的治療師，讓自己感到自在。",
+    "s5_title": "選擇時間和書",
+    "s5_desc": "在你的治療師行事曆上選擇一個方便的日期和時間。",
+    "s6_title": "從聊天室加入",
+    "s6_desc": "打開你聊天中直接分享的安全視訊連線。"
+  },
+  "ui_preview": {
+    "discount": "首場五折優惠",
+    "intro_trial": "入門審判",
+    "select_focus": "選擇你的重點領域：",
+    "ai_match": "AI 比賽",
+    "ai_match_sub": "汽車推薦",
+    "browse_team": "瀏覽團隊",
+    "browse_team_sub": "手動挑貨",
+    "therapist_msg": "你好！我期待支持你。",
+    "therapist_reply": "嗨，Miller醫生！我剛訂了星期五的預約。",
+    "calendar_title": "選擇時段",
+    "join_btn": "加入視訊會議",
+    "secure_room": "100% 加密且保密"
+  },
+  "video_title": "觀看完整預約導覽",
+  "video_subtitle": "逐步視覺示範整個應用程式內預訂流程。",
+  "faq_title": "常見問題",
+  "cta_title": "準備好邁出下一步了嗎？",
+  "cta_subtitle": "探索我們的持牌治療師，隨時預約您的首次諮詢。",
+  "cta_btn": "探索治療計畫"
+}

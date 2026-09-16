@@ -1,0 +1,17 @@
+{
+  "header_back": "Atrás",
+  "header_title": "Revisión diaria",
+  "streak_title": "Serie de días",
+  "home_welcome": "¿Cómo te sientes ahora mismo?",
+  "home_subtitle": "Tómate un momento de atención plena para sintonizar con tu paisaje emocional y tu estado corporal.",
+  "btn_start_checkin": "Inicio del registro",
+  "history_title": "Tus revisiones recientes",
+  "step_emotion_title": "Selecciona tu estado emocional actual",
+  "step_intensity_title": "¿Qué tan fuerte es esta sensación?",
+  "step_context_title": "¿Qué contribuye a cómo te sientes?",
+  "step_reflection_title": "Reflexionar y Notar",
+  "step_response_title": "Perspectiva Personalizada",
+  "btn_continue": "Continúa",
+  "btn_finish": "Registro completo",
+  "btn_exit": "Sigue con mi plan"
+}

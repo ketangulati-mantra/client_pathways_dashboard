@@ -1,0 +1,43 @@
+{
+  "header_back": "Tillbaka",
+  "header_title": "Hur man bokar en session",
+  "hero_title_prefix": "Kontakta rätt terapeut,",
+  "hero_highlight": "I din egen takt.",
+  "hero_subtitle": "Att boka din session på Mantra är enkelt och konfidentiellt. Se hur enkelt det är att välja din plan, dela dina behov, matcha med en vårdgivare och påbörja vården.",
+  "interactive_title": "Hur bokning fungerar",
+  "interactive_subtitle": "Steg-för-steg-interaktiv genomgång av bokningsprocessen.",
+  "steps": {
+    "s1_title": "Välj en plan",
+    "s1_desc": "Börja med en provperiod eller välj en flerårig plan.",
+    "s2_title": "Dela med dig av dina preferenser",
+    "s2_desc": "Berätta för Mantra om dina mål, utmaningar och terapeutpreferenser.",
+    "s3_title": "Bli matchad eller välj din terapeut",
+    "s3_desc": "Låt AI matcha dig direkt eller bläddra och bjud in en leverantör.",
+    "s4_title": "Prata med din terapeut",
+    "s4_desc": "Skicka ett meddelande till din terapeut i appen för att känna dig bekväm innan du bokar.",
+    "s5_title": "Välj en tid och bok",
+    "s5_desc": "Välj ett lämpligt datum och tid i din terapeuts kalender.",
+    "s6_title": "Gå med från chatten",
+    "s6_desc": "Öppna länken till den säkra videosessionen som delas direkt i chatten."
+  },
+  "ui_preview": {
+    "discount": "50% RABATT på första sessionen",
+    "intro_trial": "Introduktionsrättegången",
+    "select_focus": "Välj dina fokusområden:",
+    "ai_match": "AI-matchen",
+    "ai_match_sub": "Bilrekommendationer",
+    "browse_team": "Bläddra bland teamet",
+    "browse_team_sub": "Plocka manuellt",
+    "therapist_msg": "Hej! Jag ser fram emot att stötta dig.",
+    "therapist_reply": "Hej, Dr. Miller! Jag bokade precis i fredags.",
+    "calendar_title": "Val sessionstid",
+    "join_btn": "Gå med i videosessionen",
+    "secure_room": "100 % krypterat och konfidentiellt"
+  },
+  "video_title": "Se hela bokningsgenomgången",
+  "video_subtitle": "Steg-för-steg-visuell demonstration av hela bokningsprocessen i appen.",
+  "faq_title": "Vanliga frågor",
+  "cta_title": "Redo att ta nästa steg?",
+  "cta_subtitle": "Utforska våra licensierade terapeuter och boka din första session när du är redo.",
+  "cta_btn": "Utforska terapiplaner"
+}

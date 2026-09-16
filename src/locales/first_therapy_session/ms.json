@@ -1,0 +1,43 @@
+{
+  "header_back": "Kembali",
+  "header_title": "Cara Menempah Sesi",
+  "hero_title_prefix": "Berhubung dengan ahli terapi yang tepat,",
+  "hero_highlight": "mengikut rentak anda sendiri.",
+  "hero_subtitle": "Menempah sesi anda di Mantra adalah mudah dan sulit. Lihat betapa mudahnya memilih pelan anda, kongsi keperluan anda, padankan dengan penyedia, dan mulakan penjagaan.",
+  "interactive_title": "Cara tempahan berfungsi",
+  "interactive_subtitle": "Panduan interaktif langkah demi langkah untuk proses tempahan.",
+  "steps": {
+    "s1_title": "Pilih pelan",
+    "s1_desc": "Mulakan dengan sesi percubaan atau pilih pelan berbilang bulan.",
+    "s2_title": "Kongsi keutamaan anda",
+    "s2_desc": "Beritahu Mantra matlamat, cabaran, dan pilihan ahli terapi anda.",
+    "s3_title": "Dapatkan padanan atau pilih ahli terapi anda",
+    "s3_desc": "Biarkan AI memadankan anda serta-merta atau melayari dan menjemput penyedia.",
+    "s4_title": "Berbual dengan ahli terapi anda",
+    "s4_desc": "Mesej ahli terapi anda dalam aplikasi untuk rasa selesa sebelum membuat tempahan.",
+    "s5_title": "Pilih masa & tempah",
+    "s5_desc": "Pilih tarikh dan masa yang sesuai dalam kalendar ahli terapi anda.",
+    "s6_title": "Sertai dari sembang",
+    "s6_desc": "Buka pautan sesi video selamat yang dikongsi terus dalam sembang anda."
+  },
+  "ui_preview": {
+    "discount": "Diskaun 50% Untuk Sesi Pertama",
+    "intro_trial": "Perbicaraan Pengenalan",
+    "select_focus": "Pilih kawasan fokus anda:",
+    "ai_match": "Perlawanan AI",
+    "ai_match_sub": "Cadangan auto",
+    "browse_team": "Semak Pasukan",
+    "browse_team_sub": "Pilih secara manual",
+    "therapist_msg": "Helo! Saya tidak sabar untuk menyokong anda.",
+    "therapist_reply": "Hai Dr. Miller! Saya baru sahaja menempah hari Jumaat.",
+    "calendar_title": "Pilih Masa Sesi",
+    "join_btn": "Sertai Sesi Video",
+    "secure_room": "100% disulitkan & sulit"
+  },
+  "video_title": "Tonton panduan penuh tempahan",
+  "video_subtitle": "Demonstrasi visual langkah demi langkah keseluruhan proses tempahan dalam aplikasi.",
+  "faq_title": "Soalan lazim",
+  "cta_title": "Bersedia untuk melangkah ke tahap seterusnya?",
+  "cta_subtitle": "Terokai ahli terapi berlesen kami dan tempah sesi pertama anda bila-bila masa anda bersedia.",
+  "cta_btn": "Terokai Pelan Terapi"
+}

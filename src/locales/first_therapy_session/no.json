@@ -1,0 +1,43 @@
+{
+  "header_back": "Tilbake",
+  "header_title": "Hvordan bestille en økt",
+  "hero_title_prefix": "Få kontakt med riktig terapeut,",
+  "hero_highlight": "i ditt eget tempo.",
+  "hero_subtitle": "Å bestille timen din på Mantra er enkelt og konfidensielt. Se hvor enkelt det er å velge plan, dele dine behov, matche med en behandler og starte behandling.",
+  "interactive_title": "Slik fungerer booking",
+  "interactive_subtitle": "Steg-for-steg interaktiv gjennomgang av bestillingsprosessen.",
+  "steps": {
+    "s1_title": "Velg en plan",
+    "s1_desc": "Start med en prøveperiode eller velg en flerårig plan.",
+    "s2_title": "Del dine preferanser",
+    "s2_desc": "Fortell Mantra om dine mål, utfordringer og terapeutpreferanser.",
+    "s3_title": "Bli matchet eller velg terapeuten din",
+    "s3_desc": "La AI matche deg umiddelbart, eller bla gjennom og invitere en leverandør.",
+    "s4_title": "Snakk med terapeuten din",
+    "s4_desc": "Send melding til terapeuten din i appen for å bli komfortabel før du bestiller tid.",
+    "s5_title": "Velg tid og bok",
+    "s5_desc": "Velg en passende dato og tid i terapeutens kalender.",
+    "s6_title": "Bli med fra chatten",
+    "s6_desc": "Åpne den sikre videosesjonslenken som deles direkte i chatten din."
+  },
+  "ui_preview": {
+    "discount": "50 % rabatt på første økt",
+    "intro_trial": "Innledende prøve",
+    "select_focus": "Velg dine fokusområder:",
+    "ai_match": "AI-kamp",
+    "ai_match_sub": "Bilanbefalinger",
+    "browse_team": "Bla gjennom Team",
+    "browse_team_sub": "Velg manuelt",
+    "therapist_msg": "Hei! Jeg gleder meg til å støtte deg.",
+    "therapist_reply": "Hei, Dr. Miller! Jeg bestilte nettopp fredag.",
+    "calendar_title": "Velg sesjonstid",
+    "join_btn": "Bli med på videosesjon",
+    "secure_room": "100 % kryptert og konfidensielt"
+  },
+  "video_title": "Se hele bestillingsgjennomgangen",
+  "video_subtitle": "Trinnvis visuell demonstrasjon av hele bestillingsprosessen i appen.",
+  "faq_title": "Ofte stilte spørsmål",
+  "cta_title": "Klar for å ta neste steg?",
+  "cta_subtitle": "Utforsk våre autoriserte terapeuter og bestill din første time når du er klar.",
+  "cta_btn": "Utforsk terapiplaner"
+}

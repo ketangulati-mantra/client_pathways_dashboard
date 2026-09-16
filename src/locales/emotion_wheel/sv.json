@@ -1,0 +1,14 @@
+{
+  "header_back": "Tillbaka",
+  "header_title": "Emotion Wheel",
+  "prompt_level1": "Vad känner du just nu?",
+  "prompt_level2": "Utforska {{family}}",
+  "prompt_level3": "Låt oss bli mer specifika",
+  "prompt_intensity": "Hur intensiv är den här känslan?",
+  "prompt_context": "Vad utlöste den här känslan?",
+  "prompt_needs": "Vad behöver du just nu?",
+  "snapshot_title": "Din känslomässiga ögonblicksbild",
+  "btn_explore": "Utforska mer",
+  "btn_complete": "Fullständig aktivitet",
+  "btn_share": "Dela ögonblicksbild"
+}

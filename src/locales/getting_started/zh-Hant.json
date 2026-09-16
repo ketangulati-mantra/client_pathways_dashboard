@@ -1,0 +1,81 @@
+{
+  "header_back": "返回",
+  "header_title": "入門",
+  "hero_title_prefix": "為你的福祉制定計畫，",
+  "hero_highlight": "圍繞著你打造。",
+  "hero_subtitle": "獲得個人化計畫，包含引導活動、實用工具與支持，幫助你一步步前進。",
+  "how_it_works_title": "你需要的一切都是你為了身心健康而努力的。",
+  "how_it_works_subtitle": "您的個人化計畫將活動、工具、進度追蹤與專業支援整合於一處。",
+  "flow_steps": {
+    "plan": "你的計畫",
+    "activities": "活動",
+    "tools": "工具",
+    "progress": "進展",
+    "support": "支持"
+  },
+  "video_section_title": "看看 Mantra 的運作方式",
+  "video_section_subtitle": "快速瀏覽應用程式，看看你的計畫、活動和健康工具在你旅程中扮演什麼角色。",
+  "adapts_title": "你的計畫會因應你而調整",
+  "adapts_subtitle": "選擇你想處理的主題，例如焦慮、壓力、情緒低落、注意力不足過動症（ADHD）、強迫症（OCD）或其他。Mantra 接著會提供針對你專注的引導活動和資源。",
+  "focus_areas": {
+    "anxiety": "焦慮",
+    "stress": "壓力",
+    "low_mood": "低落的心情",
+    "adhd": "注意力不足過動症",
+    "ocd": "強迫症",
+    "more": "更多"
+  },
+  "focus_taglines": {
+    "anxiety": "讓神經系統的神經波動穩定下來，緩解焦慮的思緒循環",
+    "stress": "緩解長期工作日的緊張與預防職業倦怠",
+    "low_mood": "用溫和的行為啟動打破倦怠循環",
+    "adhd": "管理執行功能摩擦與專注過於過重",
+    "ocd": "反應預防與認知彈性練習",
+    "more": "睡眠品質、自尊、人際關係與習慣成長"
+  },
+  "phases_labels": {
+    "phase": "Phase 0{{num}} • {{step}}",
+    "understand": "明白",
+    "practice": "實務",
+    "reflect": "反思",
+    "progress": "進展"
+  },
+  "activities_title": "小活動。真正的進步。",
+  "activities_subtitle": "你的計畫會提供幫助你學習、反思、練習和追蹤的活動，讓你能一步步朝著感覺好一點前進。",
+  "activity_types": {
+    "learn": "學習",
+    "reflect": "反思",
+    "practice": "實務",
+    "track": "田徑"
+  },
+  "tools_title": "需要時就用工具",
+  "tools_subtitle": "隨時探索冥想、寫日記、正念、評估、追蹤器、AI 支援等。",
+  "tools_list": {
+    "meditation": "冥想",
+    "journaling": "日記",
+    "mindfulness": "正念",
+    "assessments": "評價",
+    "trackers": "追蹤器",
+    "ai_support": "AI 支援",
+    "self_care": "自我照顧"
+  },
+  "points_title": "每一步都很重要",
+  "points_subtitle": "完成活動和有意義的行動來賺取點數。",
+  "points_steps": {
+    "complete_title": "完結",
+    "complete_desc": "結束活動",
+    "earn_title": "賺取積分",
+    "earn_desc": "+10分獎勵",
+    "redeem_title": "兌換獎勵",
+    "redeem_desc": "符合資格的服務"
+  },
+  "points_footer": "點數可用於 Mantra 提供的合格健康服務。",
+  "support_title": "需要更多支援嗎？",
+  "support_subtitle": "你不是孤軍奮戰。",
+  "support_desc": "當你需要額外幫助時，請尋求合格治療師及其他健康促進服務的專業支持。",
+  "support_btn": "探索專業支持",
+  "cta_title": "你準備好開始了。",
+  "cta_subtitle": "開啟個人化計畫，完成你的第一項活動，邁向更美好的下一步。",
+  "cta_btn_start": "開始我的旅程",
+  "cta_btn_starting": "開始......"
+}

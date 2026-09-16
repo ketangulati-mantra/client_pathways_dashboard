@@ -1,0 +1,17 @@
+{
+  "header_back": "Takaisin",
+  "header_title": "Päivittäinen sisäänkirjautuminen",
+  "streak_title": "Päiväputki",
+  "home_welcome": "Miltä sinusta tuntuu juuri nyt?",
+  "home_subtitle": "Ota tietoinen hetki virittäytyäksesi tunne-elämäsi ja kehosi tilaan.",
+  "btn_start_checkin": "Aloita sisäänkirjautuminen",
+  "history_title": "Viimeaikaiset tarkistuksesi",
+  "step_emotion_title": "Valitse nykyinen tunne-elämäsi",
+  "step_intensity_title": "Kuinka voimakas tämä tunne on?",
+  "step_context_title": "Mikä vaikuttaa siihen, miltä sinusta tuntuu?",
+  "step_reflection_title": "Pohdi ja huomioi",
+  "step_response_title": "Henkilökohtainen oivallus",
+  "btn_continue": "Jatka",
+  "btn_finish": "Täydellinen sisäänkirjautuminen",
+  "btn_exit": "Jatka suunnitelmaani"
+}

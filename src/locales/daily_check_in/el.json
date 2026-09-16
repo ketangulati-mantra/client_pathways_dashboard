@@ -1,0 +1,17 @@
+{
+  "header_back": "Πίσω",
+  "header_title": "Καθημερινό check-in",
+  "streak_title": "Σερί ημέρας",
+  "home_welcome": "Πώς νιώθεις αυτή τη στιγμή;",
+  "home_subtitle": "Αφιερώστε μια προσεκτική στιγμή για να συντονιστείτε με το συναισθηματικό σας τοπίο και την κατάσταση του σώματός σας.",
+  "btn_start_checkin": "Ξεκινήστε το check-in",
+  "history_title": "Τα πρόσφατα check-in σας",
+  "step_emotion_title": "Επιλέξτε την τρέχουσα συναισθηματική σας κατάσταση",
+  "step_intensity_title": "Πόσο δυνατό είναι αυτό το συναίσθημα;",
+  "step_context_title": "Τι συμβάλλει στο πώς αισθάνεστε;",
+  "step_reflection_title": "Αντανάκλαση & Σημείωση",
+  "step_response_title": "Εξατομικευμένη ενόραση",
+  "btn_continue": "Συνέχεια",
+  "btn_finish": "Ολοκληρώστε το check-in",
+  "btn_exit": "Συνεχίστε στο σχέδιό μου"
+}

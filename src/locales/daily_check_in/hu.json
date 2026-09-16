@@ -1,0 +1,17 @@
+{
+  "header_back": "Hátra",
+  "header_title": "Napi bejelentkezés",
+  "streak_title": "Nappali sorozat",
+  "home_welcome": "Hogy érzed magad most?",
+  "home_subtitle": "Szánj egy tudatos pillanatot, hogy ráhangolódj az érzelmi tájadra és a testállapotodra.",
+  "btn_start_checkin": "Kezdje a bejelentkezést",
+  "history_title": "A legutóbbi bejelentkezéseid",
+  "step_emotion_title": "Válaszd ki a jelenlegi érzelmi állapotodat",
+  "step_intensity_title": "Mennyire erős ez az érzés?",
+  "step_context_title": "Mi járul hozzá ahhoz, hogy érzed magad?",
+  "step_reflection_title": "Reflektálj és Jegyzet",
+  "step_response_title": "Személyre szabott betekintés",
+  "btn_continue": "Folytatás",
+  "btn_finish": "Teljes bejelentkezés",
+  "btn_exit": "Folytasd a tervemet"
+}

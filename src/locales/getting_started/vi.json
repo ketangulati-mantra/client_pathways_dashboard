@@ -1,0 +1,81 @@
+{
+  "header_back": "Quay lại",
+  "header_title": "Bắt đầu",
+  "hero_title_prefix": "Một kế hoạch cho sức khỏe của bạn,",
+  "hero_highlight": "được xây dựng xung quanh bạn.",
+  "hero_subtitle": "Nhận một kế hoạch cá nhân hóa với các hoạt động có hướng dẫn, công cụ thực tiễn và hỗ trợ giúp bạn tiến bộ từng bước một.",
+  "how_it_works_title": "Mọi thứ bạn cần để cải thiện sức khỏe tinh thần của mình.",
+  "how_it_works_subtitle": "Kế hoạch cá nhân hóa của bạn tập hợp các hoạt động, công cụ, theo dõi tiến độ và hỗ trợ chuyên nghiệp tại một nơi.",
+  "flow_steps": {
+    "plan": "Kế hoạch của bạn",
+    "activities": "Hoạt động",
+    "tools": "Dụng cụ",
+    "progress": "Tiến bộ",
+    "support": "Hỗ trợ"
+  },
+  "video_section_title": "Xem cách Mantra hoạt động",
+  "video_section_subtitle": "Hãy tham quan nhanh ứng dụng và xem kế hoạch, hoạt động và công cụ chăm sóc sức khỏe của bạn nằm ở đâu trong hành trình của mình.",
+  "adapts_title": "Kế hoạch của bạn sẽ thích nghi với bạn",
+  "adapts_subtitle": "Chọn những gì bạn muốn tập trung, chẳng hạn như lo âu, căng thẳng, tâm trạng thấp, ADHD, OCD hoặc nhiều hơn nữa. Mantra sau đó cung cấp cho bạn các hoạt động và tài nguyên hướng dẫn phù hợp với trọng tâm của bạn.",
+  "focus_areas": {
+    "anxiety": "Lo âu",
+    "stress": "Căng thẳng",
+    "low_mood": "tâm trạng thấp",
+    "adhd": "ADHD",
+    "ocd": "OCD",
+    "more": "Xem thêm"
+  },
+  "focus_taglines": {
+    "anxiety": "Giúp hệ thần kinh ổn định tăng đột ngột và giảm bớt vòng lặp suy nghĩ lo âu",
+    "stress": "Giảm căng thẳng ngày làm việc mãn tính và phòng ngừa kiệt sức",
+    "low_mood": "Phá vỡ chu kỳ uể oải bằng cách kích hoạt hành vi nhẹ nhàng",
+    "adhd": "Quản lý ma sát chức năng điều hành và quá tải tập trung",
+    "ocd": "Phòng ngừa phản ứng và bài tập tăng độ linh hoạt nhận thức",
+    "more": "Chất lượng giấc ngủ, lòng tự trọng, các mối quan hệ và sự phát triển thói quen"
+  },
+  "phases_labels": {
+    "phase": "Giai đoạn 0{{num}} • {{step}}",
+    "understand": "Hiểu",
+    "practice": "Thực hành",
+    "reflect": "Phản chiếu",
+    "progress": "Tiến bộ"
+  },
+  "activities_title": "Hoạt động nhỏ. Tiến bộ thực sự.",
+  "activities_subtitle": "Kế hoạch của bạn cung cấp các hoạt động giúp bạn học hỏi, suy ngẫm, luyện tập và theo dõi, để bạn có thể tiến từng bước nhỏ hướng tới cảm giác tốt hơn.",
+  "activity_types": {
+    "learn": "Học",
+    "reflect": "Phản chiếu",
+    "practice": "Thực hành",
+    "track": "Đường chạy"
+  },
+  "tools_title": "Dụng cụ khi bạn cần",
+  "tools_subtitle": "Khám phá thiền, viết nhật ký, chánh niệm, đánh giá, theo dõi, hỗ trợ AI và nhiều hơn nữa bất cứ khi nào bạn cần.",
+  "tools_list": {
+    "meditation": "Thiền định",
+    "journaling": "Viết nhật ký",
+    "mindfulness": "chánh niệm",
+    "assessments": "Đánh giá",
+    "trackers": "Trackers",
+    "ai_support": "Hỗ trợ AI",
+    "self_care": "chăm sóc bản thân"
+  },
+  "points_title": "Mỗi bước đi đều quan trọng",
+  "points_subtitle": "Hoàn thành các hoạt động và hành động ý nghĩa để kiếm điểm.",
+  "points_steps": {
+    "complete_title": "Hoàn chỉnh",
+    "complete_desc": "Hoàn thành các hoạt động",
+    "earn_title": "Kiếm điểm",
+    "earn_desc": "+10 điểm thưởng",
+    "redeem_title": "Đổi phần thưởng",
+    "redeem_desc": "Dịch vụ đủ điều kiện"
+  },
+  "points_footer": "Điểm có thể được sử dụng để mua các dịch vụ chăm sóc sức khỏe đủ điều kiện qua Mantra.",
+  "support_title": "Cần thêm sự hỗ trợ?",
+  "support_subtitle": "Bạn không đơn độc.",
+  "support_desc": "Hãy tìm kiếm sự hỗ trợ chuyên nghiệp từ các nhà trị liệu có trình độ và các dịch vụ chăm sóc sức khỏe khác bất cứ khi nào bạn cần thêm sự giúp đỡ.",
+  "support_btn": "Khám phá sự hỗ trợ chuyên nghiệp",
+  "cta_title": "Bạn đã sẵn sàng bắt đầu.",
+  "cta_subtitle": "Mở kế hoạch cá nhân hóa, hoàn thành hoạt động đầu tiên và bước tiếp theo hướng tới sức khỏe tốt hơn.",
+  "cta_btn_start": "Bắt Đầu Hành Trình Của Tôi",
+  "cta_btn_starting": "Bắt đầu..."
+}

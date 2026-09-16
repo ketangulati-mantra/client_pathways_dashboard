@@ -1,0 +1,17 @@
+{
+  "header_back": "Voltar",
+  "header_title": "Check-in Diário",
+  "streak_title": "Sequência de Dias",
+  "home_welcome": "Como você está se sentindo agora?",
+  "home_subtitle": "Reserve um momento de atenção para se conectar ao seu cenário emocional e ao seu estado corporal.",
+  "btn_start_checkin": "Início do check-in",
+  "history_title": "Seus Retornos Recentes",
+  "step_emotion_title": "Selecione seu estado emocional atual",
+  "step_intensity_title": "Quão forte é esse sentimento?",
+  "step_context_title": "O que está contribuindo para o que você sente?",
+  "step_reflection_title": "Refletir & Observar",
+  "step_response_title": "Percepção Personalizada",
+  "btn_continue": "Continue",
+  "btn_finish": "Check-In Completo",
+  "btn_exit": "Continue com meu plano"
+}

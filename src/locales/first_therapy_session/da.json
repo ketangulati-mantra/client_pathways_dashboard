@@ -1,0 +1,43 @@
+{
+  "header_back": "Tilbage",
+  "header_title": "Sådan booker du en session",
+  "hero_title_prefix": "Kontakt den rette terapeut,",
+  "hero_highlight": "I dit eget tempo.",
+  "hero_subtitle": "At booke din session på Mantra er enkelt og fortroligt. Se hvor nemt det er at vælge din plan, dele dine behov, matche med en behandler og begynde behandlingen.",
+  "interactive_title": "Sådan fungerer booking",
+  "interactive_subtitle": "Trin-for-trin interaktiv gennemgang af bookingprocessen.",
+  "steps": {
+    "s1_title": "Vælg en plan",
+    "s1_desc": "Start med en prøvesession eller vælg en flerårig plan.",
+    "s2_title": "Del dine præferencer",
+    "s2_desc": "Fortæl Mantra om dine mål, udfordringer og terapeutpræferencer.",
+    "s3_title": "Bliv matchet eller vælg din terapeut",
+    "s3_desc": "Lad AI matche dig øjeblikkeligt, eller gennemse og invitere en udbyder.",
+    "s4_title": "Tal med din terapeut",
+    "s4_desc": "Send en besked til din terapeut i appen for at blive tryg, inden du booker.",
+    "s5_title": "Vælg et tidspunkt og en bog",
+    "s5_desc": "Vælg en passende dato og et tidspunkt i din terapeuts kalender.",
+    "s6_title": "Deltag fra chatten",
+    "s6_desc": "Åbn det sikre videosessionslink, der deles direkte i din chat."
+  },
+  "ui_preview": {
+    "discount": "50% RABAT på første session",
+    "intro_trial": "Indledende retssag",
+    "select_focus": "Vælg dine fokusområder:",
+    "ai_match": "AI-kamp",
+    "ai_match_sub": "Bilanbefalinger",
+    "browse_team": "Gennemse Team",
+    "browse_team_sub": "Vælg manuelt",
+    "therapist_msg": "Hej! Jeg ser frem til at støtte dig.",
+    "therapist_reply": "Hej Dr. Miller! Jeg har lige booket fredag.",
+    "calendar_title": "Udvalgt sessionstid",
+    "join_btn": "Deltag i videosession",
+    "secure_room": "100% krypteret og fortroligt"
+  },
+  "video_title": "Se hele bookinggennemgangen",
+  "video_subtitle": "Trin-for-trin visuel demonstration af hele bookingprocessen i appen.",
+  "faq_title": "Ofte stillede spørgsmål",
+  "cta_title": "Klar til at tage det næste skridt?",
+  "cta_subtitle": "Udforsk vores autoriserede terapeuter og book din første session, når du er klar.",
+  "cta_btn": "Udforsk terapiplaner"
+}

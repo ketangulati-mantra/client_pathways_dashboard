@@ -1,0 +1,17 @@
+{
+  "header_back": "Tilbage",
+  "header_title": "Daglig tjek-in",
+  "streak_title": "Dagsstime",
+  "home_welcome": "Hvordan har du det lige nu?",
+  "home_subtitle": "Tag et opmærksomt øjeblik til at tune ind på dit følelsesmæssige landskab og din kropstilstand.",
+  "btn_start_checkin": "Start Check-In",
+  "history_title": "Dine seneste tjek",
+  "step_emotion_title": "Vælg din nuværende følelsesmæssige tilstand",
+  "step_intensity_title": "Hvor stærk er denne følelse?",
+  "step_context_title": "Hvad bidrager til, hvordan du har det?",
+  "step_reflection_title": "Reflekter & Note",
+  "step_response_title": "Personlig indsigt",
+  "btn_continue": "Fortsæt",
+  "btn_finish": "Fuldstændig tjek",
+  "btn_exit": "Fortsæt med min plan"
+}

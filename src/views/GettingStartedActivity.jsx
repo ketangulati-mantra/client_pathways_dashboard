@@ -19,6 +19,7 @@ import {
   Loader2,
   CheckCircle2
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { triggerCompletionWebhook } from '../mantra/api';
 import { handleExit } from '../mantra/navigation';
 import WellbeingJourneyCanvas from '../components/canvas/WellbeingJourneyCanvas';
@@ -116,6 +117,7 @@ const ECOSYSTEM_TOOLS = [
 ];
 
 export default function HowTherapymantraWorksLessonPage({ onBack }) {
+  const { t } = useTranslation('getting_started');
   const [activeNodeIndex, setActiveNodeIndex] = useState(0);
   const [selectedFocus, setSelectedFocus] = useState('Anxiety');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -241,11 +243,11 @@ export default function HowTherapymantraWorksLessonPage({ onBack }) {
             }}
           >
             <ArrowLeft size={16} />
-            <span>Back</span>
+            <span>{t('header_back', { defaultValue: 'Back' })}</span>
           </button>
 
           <span style={{ fontSize: '0.82rem', fontWeight: 600, color: '#64748b' }}>
-            Getting Started
+            {t('header_title', { defaultValue: 'Getting Started' })}
           </span>
         </div>
       </header>
@@ -282,8 +284,8 @@ export default function HowTherapymantraWorksLessonPage({ onBack }) {
               color: '#0f172a',
               margin: '0 auto 16px'
             }}>
-              A plan for your wellbeing, <br />
-              <span style={{ color: '#2563eb' }}>built around you.</span>
+              {t('hero_title_prefix', { defaultValue: 'A plan for your wellbeing,' })} <br />
+              <span style={{ color: '#2563eb' }}>{t('hero_highlight', { defaultValue: 'built around you.' })}</span>
             </h1>
 
             <p style={{
@@ -294,7 +296,7 @@ export default function HowTherapymantraWorksLessonPage({ onBack }) {
               margin: '0 auto',
               fontWeight: 500
             }}>
-              Get a personalized plan with guided activities, practical tools, and support to help you make progress, one step at a time.
+              {t('hero_subtitle', { defaultValue: 'Get a personalized plan with guided activities, practical tools, and support to help you make progress, one step at a time.' })}
             </p>
           </motion.div>
         </section>
@@ -308,10 +310,10 @@ export default function HowTherapymantraWorksLessonPage({ onBack }) {
           boxShadow: '0 4px 20px rgba(15, 23, 42, 0.03)'
         }}>
           <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: '#0f172a', margin: '0 0 10px', letterSpacing: '-0.02em' }}>
-            Everything you need to work on your wellbeing.
+            {t('how_it_works_title', { defaultValue: 'Everything you need to work on your wellbeing.' })}
           </h2>
           <p style={{ fontSize: '0.96rem', color: '#475569', lineHeight: 1.65, margin: '0 0 20px' }}>
-            Your personalized plan brings together activities, tools, progress tracking, and professional support in one place.
+            {t('how_it_works_subtitle', { defaultValue: 'Your personalized plan brings together activities, tools, progress tracking, and professional support in one place.' })}
           </p>
 
           {/* Connected Flow - Responsive Segmented Track */}
@@ -324,9 +326,15 @@ export default function HowTherapymantraWorksLessonPage({ onBack }) {
             borderRadius: '14px',
             padding: '10px'
           }}>
-            {['Your Plan', 'Activities', 'Tools', 'Progress', 'Support'].map((item, idx) => (
+            {[
+              { key: 'plan', defaultLabel: 'Your Plan' },
+              { key: 'activities', defaultLabel: 'Activities' },
+              { key: 'tools', defaultLabel: 'Tools' },
+              { key: 'progress', defaultLabel: 'Progress' },
+              { key: 'support', defaultLabel: 'Support' }
+            ].map((item, idx) => (
               <div
-                key={item}
+                key={item.key}
                 style={{
                   background: idx === 0 ? '#eff6ff' : '#ffffff',
                   border: idx === 0 ? '1px solid #bfdbfe' : '1px solid #e2e8f0',
@@ -348,7 +356,7 @@ export default function HowTherapymantraWorksLessonPage({ onBack }) {
                   fontWeight: 700,
                   color: idx === 0 ? '#1d4ed8' : '#334155'
                 }}>
-                  {item}
+                  {t(`flow_steps.${item.key}`, { defaultValue: item.defaultLabel })}
                 </span>
               </div>
             ))}
@@ -359,10 +367,10 @@ export default function HowTherapymantraWorksLessonPage({ onBack }) {
         <section id="video-sec">
           <div style={{ marginBottom: '14px' }}>
             <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: '#0f172a', margin: '0 0 6px', letterSpacing: '-0.02em' }}>
-              See how Mantra works
+              {t('video_section_title', { defaultValue: 'See how Mantra works' })}
             </h2>
             <p style={{ fontSize: '0.94rem', color: '#64748b', margin: 0 }}>
-              Take a quick tour of the app and see where your plan, activities, and wellbeing tools fit into your journey.
+              {t('video_section_subtitle', { defaultValue: 'Take a quick tour of the app and see where your plan, activities, and wellbeing tools fit into your journey.' })}
             </p>
           </div>
 

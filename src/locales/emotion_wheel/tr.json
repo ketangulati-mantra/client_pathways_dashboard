@@ -1,0 +1,14 @@
+{
+  "header_back": "Geri",
+  "header_title": "Duygu Çarkı",
+  "prompt_level1": "Şu anda ne hissediyorsun?",
+  "prompt_level2": "{{family}} keşfi",
+  "prompt_level3": "Daha spesifik olalım",
+  "prompt_intensity": "Bu duygu ne kadar yoğun?",
+  "prompt_context": "Bu duyguyu ne tetikledi?",
+  "prompt_needs": "Şu anda neye ihtiyacın var?",
+  "snapshot_title": "Duygusal Anlık Görüntün",
+  "btn_explore": "Daha Fazlasını Keşfet",
+  "btn_complete": "Tam Etkinlik",
+  "btn_share": "Anlık Fotoğrafı Paylaş"
+}

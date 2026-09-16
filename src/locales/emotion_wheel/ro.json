@@ -1,0 +1,14 @@
+{
+  "header_back": "Înapoi",
+  "header_title": "Roata emoțiilor",
+  "prompt_level1": "Ce simți acum?",
+  "prompt_level2": "Explorând {{family}}",
+  "prompt_level3": "Să fim mai specifici",
+  "prompt_intensity": "Cât de intensă este această emoție?",
+  "prompt_context": "Ce a declanșat acest sentiment?",
+  "prompt_needs": "Ce ai nevoie acum?",
+  "snapshot_title": "Instantanea ta emoțională",
+  "btn_explore": "Explorează mai mult",
+  "btn_complete": "Activitate completă",
+  "btn_share": "Distribuie instantanee"
+}

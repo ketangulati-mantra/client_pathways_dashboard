@@ -1,0 +1,17 @@
+{
+  "header_back": "返回",
+  "header_title": "每日報到",
+  "streak_title": "日間連續紀錄",
+  "home_welcome": "你現在感覺如何？",
+  "home_subtitle": "花點正念的時間，調頻你的情緒景觀和身體狀態。",
+  "btn_start_checkin": "開始報到",
+  "history_title": "你最近的聯絡",
+  "step_emotion_title": "選擇你目前的情緒狀態",
+  "step_intensity_title": "這種感覺有多強烈？",
+  "step_context_title": "是什麼因素影響了你的感受？",
+  "step_reflection_title": "反思與註記",
+  "step_response_title": "個人化洞察",
+  "btn_continue": "繼續",
+  "btn_finish": "完整報到流程",
+  "btn_exit": "繼續我的計畫"
+}

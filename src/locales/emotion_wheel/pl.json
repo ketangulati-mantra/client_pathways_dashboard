@@ -1,0 +1,14 @@
+{
+  "header_back": "Z powrotem",
+  "header_title": "Koło Emocji",
+  "prompt_level1": "Co teraz czujesz?",
+  "prompt_level2": "Odkrywanie {{family}}",
+  "prompt_level3": "Bądźmy bardziej konkretni",
+  "prompt_intensity": "Jak intensywne jest to uczucie?",
+  "prompt_context": "Co wywołało to uczucie?",
+  "prompt_needs": "Czego teraz potrzebujesz?",
+  "snapshot_title": "Twój emocjonalny obraz",
+  "btn_explore": "Poznaj więcej",
+  "btn_complete": "Pełna aktywność",
+  "btn_share": "Udostępnij Snapshot"
+}

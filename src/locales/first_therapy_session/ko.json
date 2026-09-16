@@ -1,0 +1,43 @@
+{
+  "header_back": "뒤로",
+  "header_title": "세션 예약 방법",
+  "hero_title_prefix": "적합한 치료사와 연결하세요,",
+  "hero_highlight": "네 속도에 맞춰.",
+  "hero_subtitle": "Mantra에서 세션 예약은 간단하고 비밀이 보장됩니다. 플랜 선택, 필요 공유, 제공자 매칭, 치료 시작 등 얼마나 쉬운지 확인해 보세요.",
+  "interactive_title": "예약 방식",
+  "interactive_subtitle": "예약 과정을 단계별로 인터랙티브하게 안내합니다.",
+  "steps": {
+    "s1_title": "계획을 선택하세요",
+    "s1_desc": "체험 세션부터 시작하거나 다개월 플랜을 선택하세요.",
+    "s2_title": "선호도를 공유해 주세요",
+    "s2_desc": "Mantra에게 당신의 목표, 어려움, 그리고 치료사 선호도를 말하세요.",
+    "s3_title": "매칭을 받거나 치료사를 선택하세요",
+    "s3_desc": "AI가 즉시 매칭하거나 서비스를 이용해 초대할 수 있습니다.",
+    "s4_title": "치료사와 대화하세요",
+    "s4_desc": "예약 전에 앱에서 치료사에게 메시지를 보내서 편안해지세요.",
+    "s5_title": "시간과 책을 정하세요",
+    "s5_desc": "치료사 일정에서 편리한 날짜와 시간을 선택하세요.",
+    "s6_title": "채팅에서 가입하세요",
+    "s6_desc": "채팅에서 직접 공유한 보안 영상 세션 링크를 열어보세요."
+  },
+  "ui_preview": {
+    "discount": "첫 세션 50% 할인",
+    "intro_trial": "소개 시험",
+    "select_focus": "집중 분야를 선택하세요:",
+    "ai_match": "AI 매치",
+    "ai_match_sub": "자동차 추천",
+    "browse_team": "브라우즈 팀",
+    "browse_team_sub": "수동으로 선택하세요",
+    "therapist_msg": "안녕하세요! 응원하게 되어 기대됩니다.",
+    "therapist_reply": "안녕하세요, 밀러 박사님! 금요일에 예약했어요.",
+    "calendar_title": "셀렉트 세션 타임",
+    "join_btn": "비디오 세션 참여하기",
+    "secure_room": "100% 암호화 및 기밀"
+  },
+  "video_title": "전체 예약 공략 영상을 시청하세요",
+  "video_subtitle": "전체 앱 내 예약 과정을 단계별 시각 시각으로 보여줍니다.",
+  "faq_title": "자주 묻는 질문",
+  "cta_title": "다음 단계로 나아갈 준비가 되셨나요?",
+  "cta_subtitle": "저희 공인 치료사를 탐색하시고 준비가 되시면 첫 세션을 예약하세요.",
+  "cta_btn": "치료 계획 탐색하기"
+}

@@ -1,0 +1,60 @@
+{
+  "back": "Zpět",
+  "assessment_title": "Hodnocení emoční pohody",
+  "instruction": "Jak moc se vás to týká za poslední týden?",
+  "question_counter": "Otázka {{current}} z {{total}}",
+  "options": {
+    "not_at_all": "Vůbec ne",
+    "sometimes": "Někdy",
+    "often": "Často",
+    "almost_always": "Téměř vždy"
+  },
+  "questions": {
+    "q1": "Už jsem začínal panikařit",
+    "q2": "Cítil jsem, jak mi srdce buší rychle, i když jsem se nijak fyzicky nesnažil",
+    "q3": "Bál jsem se zbytečně",
+    "q4": "Měl jsem pocit, že se nemám na co těšit",
+    "q5": "Cítil jsem se sklesle a sklesle",
+    "q6": "Nedokázal jsem se pro nic nadchnout",
+    "q7": "Bylo pro mě těžké se uklidnit",
+    "q8": "Začal jsem být rozrušený",
+    "q9": "Bylo pro mě těžké se uvolnit"
+  },
+  "categories": {
+    "anxiety": "Úzkost",
+    "anxiety_desc": "Měří situační úzkost, fyzické napětí a pocity nervozity.",
+    "depression": "Deprese",
+    "depression_desc": "Měří nízkou energii, nedostatek pozitivních pocitů a obtíže s nadšením.",
+    "stress": "Stres",
+    "stress_desc": "Měří potíže s uvolněním, neklid a emoční napětí."
+  },
+  "levels": {
+    "mild": "Mírné",
+    "moderate": "Střední",
+    "severe": "Těžká",
+    "extremely_severe": "Extrémně těžké"
+  },
+  "messages": {
+    "anxiety_mild": "Vaše reakce naznačují mírnou nebo situacionální úzkost. Každodenní stres může někdy působit zvýšeně, ale jemná všímavost a dýchání vás mohou udržet na zemi.",
+    "anxiety_moderate": "Vaše odpovědi naznačují mírnou úzkost. Můžete občas zažívat fyzické nebo psychické napětí, které narušuje váš klid.",
+    "anxiety_severe": "Vaše odpovědi naznačují zvýšenou úzkost, která může narušovat váš každodenní klid na duši.",
+    "anxiety_extremely_severe": "Vaše odpovědi naznačují vysokou úroveň úzkosti a úzkosti právě teď. Spojení s odborníkem může přinést bezpečí a úlevu.",
+    "depression_mild": "Vaše odpovědi naznačují mírnou až mírnou nízkou náladu. Jemná péče o sebe a udržování spojení s podpůrnými rutinami je užitečné.",
+    "depression_moderate": "Vaše odpovědi naznačují mírnou nízkou náladu nebo nízký entuziasmus. Rozhovor s terapeutem může poskytnout cenné rady.",
+    "depression_severe": "Vaše odpovědi naznačují, že právě teď nesete znatelnou emocionální tíhu.",
+    "depression_extremely_severe": "Vaše odpovědi naznačují vysokou úroveň emocionální tíhy. Odborné vedení vám může pomoci bezpečně se v tom orientovat.",
+    "stress_mild": "Vaše odpovědi ukazují zvládnutelnou úroveň každodenního stresu.",
+    "stress_moderate": "Vaše odpovědi naznačují mírný stres a potíže s uvolněním. Malé záměrné přestávky mohou pomoci obnovit rovnováhu.",
+    "stress_severe": "Vaše odpovědi naznačují vysokou úroveň stresu, která může ovlivnit váš spánek a energii.",
+    "stress_extremely_severe": "Vaše odpovědi naznačují intenzivní úroveň stresu právě teď. Nechat se s tím vyřešit od odborníka může přinést úlevu."
+  },
+  "report": {
+    "title": "Tvůj emocionální okamžik",
+    "desc": "Zde je přehled toho, jak se cítíte napříč klíčovými emocionálními ukazateli.",
+    "talk_prompt": "Chceš si s někým promluvit?",
+    "talk_sub": "Profesionální podpora je k dispozici kdykoli ji potřebujete.",
+    "btn_view_plans": "Zobrazit terapeutické plány",
+    "btn_finish": "Kompletní hodnocení",
+    "btn_back": "Zpět"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "header_back": "Achteruit",
+  "header_title": "Beginnen",
+  "hero_title_prefix": "Een plan voor je welzijn,",
+  "hero_highlight": "Gebouwd om jou heen.",
+  "hero_subtitle": "Krijg een persoonlijk plan met begeleide activiteiten, praktische hulpmiddelen en ondersteuning om je stap voor stap vooruitgang te boeken.",
+  "how_it_works_title": "Alles wat je nodig hebt om aan je welzijn te werken.",
+  "how_it_works_subtitle": "Uw persoonlijke plan brengt activiteiten, tools, voortgangstracking en professionele ondersteuning samen op één plek.",
+  "flow_steps": {
+    "plan": "Jouw Plan",
+    "activities": "Activiteiten",
+    "tools": "Gereedschappen",
+    "progress": "Voortgang",
+    "support": "Ondersteuning"
+  },
+  "video_section_title": "Bekijk hoe Mantra werkt",
+  "video_section_subtitle": "Maak een korte rondleiding door de app en zie waar jouw plan, activiteiten en welzijnstools passen in jouw reis.",
+  "adapts_title": "Je plan past zich aan jou aan",
+  "adapts_subtitle": "Kies waar je aan wilt werken, zoals angst, stress, sombere stemming, ADHD, OCD of meer. Mantra geeft je vervolgens begeleide activiteiten en hulpmiddelen die zijn afgestemd op jouw focus.",
+  "focus_areas": {
+    "anxiety": "Angst",
+    "stress": "Stress",
+    "low_mood": "Sombere stemming",
+    "adhd": "ADHD",
+    "ocd": "OCD",
+    "more": "Meer"
+  },
+  "focus_taglines": {
+    "anxiety": "Zenuwstelselpieken aarden en angstige gedachteloops verzachten",
+    "stress": "Het verminderen van chronische spanning op werkdagen en het voorkomen van burn-out",
+    "low_mood": "Lethargiecycli doorbreken met zachte gedragsactivatie",
+    "adhd": "Omgaan met wrijving van executieve functies en overweldigende focus",
+    "ocd": "Responspreventie en cognitieve flexibiliteitsoefeningen",
+    "more": "Slaapkwaliteit, zelfvertrouwen, relaties en gewoontegroei"
+  },
+  "phases_labels": {
+    "phase": "Fase 0{{num}} • {{step}}",
+    "understand": "Begrijp het",
+    "practice": "Praktijk",
+    "reflect": "Reflecteer",
+    "progress": "Voortgang"
+  },
+  "activities_title": "Kleine activiteiten. Echte vooruitgang.",
+  "activities_subtitle": "Je plan geeft je activiteiten die je helpen leren, reflecteren, oefenen en bijhouden, zodat je kleine stappen kunt zetten richting een beter gevoel.",
+  "activity_types": {
+    "learn": "Leer",
+    "reflect": "Reflecteer",
+    "practice": "Praktijk",
+    "track": "Baan"
+  },
+  "tools_title": "Gereedschap wanneer je ze nodig hebt",
+  "tools_subtitle": "Ontdek meditatie, dagboekschrijven, mindfulness, assessments, trackers, AI-ondersteuning en meer wanneer je dat nodig hebt.",
+  "tools_list": {
+    "meditation": "Meditatie",
+    "journaling": "Dagboekschrijven",
+    "mindfulness": "Mindfulness",
+    "assessments": "Beoordelingen",
+    "trackers": "Trackers",
+    "ai_support": "AI-ondersteuning",
+    "self_care": "Zelfzorg"
+  },
+  "points_title": "Elke stap telt",
+  "points_subtitle": "Voltooi activiteiten en betekenisvolle acties om punten te verdienen.",
+  "points_steps": {
+    "complete_title": "Volledig",
+    "complete_desc": "Afsluitactiviteiten",
+    "earn_title": "Verdien punten",
+    "earn_desc": "+10 punten beloning",
+    "redeem_title": "Rewards inwisselen",
+    "redeem_desc": "In aanmerking komende diensten"
+  },
+  "points_footer": "Punten kunnen worden gebruikt voor in aanmerking komende welzijnsdiensten die via Mantra beschikbaar zijn.",
+  "support_title": "Meer ondersteuning nodig?",
+  "support_subtitle": "Je staat er niet alleen voor.",
+  "support_desc": "Zoek professionele ondersteuning van gekwalificeerde therapeuten en andere welzijnsdiensten wanneer u extra hulp nodig heeft.",
+  "support_btn": "Ontdek professionele ondersteuning",
+  "cta_title": "Je bent klaar om te beginnen.",
+  "cta_subtitle": "Open je persoonlijke plan, voltooi je eerste activiteit en zet de volgende stap naar beter welzijn.",
+  "cta_btn_start": "Begin mijn reis",
+  "cta_btn_starting": "Beginnend..."
+}

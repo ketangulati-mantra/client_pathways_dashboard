@@ -1,0 +1,60 @@
+{
+  "back": "Tillbaka",
+  "assessment_title": "Bedömning av emotionellt välbefinnande",
+  "instruction": "Hur mycket har detta påverkat dig under den senaste veckan?",
+  "question_counter": "Fråga {{current}} i {{total}}",
+  "options": {
+    "not_at_all": "Inte alls",
+    "sometimes": "Ibland",
+    "often": "Ofta",
+    "almost_always": "Nästan alltid"
+  },
+  "questions": {
+    "q1": "Jag var på väg att få panik",
+    "q2": "Jag kände hur mitt hjärta slog snabbt trots att jag inte gjort någon fysisk ansträngning",
+    "q3": "Jag var rädd utan anledning",
+    "q4": "Jag kände att jag inte hade något att se fram emot",
+    "q5": "Jag kände mig nedstämd och nedstämd",
+    "q6": "Jag kunde inte bli entusiastisk över någonting",
+    "q7": "Jag hade svårt att varva ner",
+    "q8": "Jag märkte att jag blev irriterad",
+    "q9": "Jag hade svårt att slappna av"
+  },
+  "categories": {
+    "anxiety": "Ångest",
+    "anxiety_desc": "Mäter situationsbetingad ångest, fysisk spänning och känslor av nervositet.",
+    "depression": "Depression",
+    "depression_desc": "Mäter låg energi, brist på positiva känslor och svårigheter att känna entusiasm.",
+    "stress": "Stress",
+    "stress_desc": "Måttar svårigheter att slappna av, rastlöshet och känslomässig spänning."
+  },
+  "levels": {
+    "mild": "Mild",
+    "moderate": "Måttlig",
+    "severe": "Allvarlig",
+    "extremely_severe": "Extremt allvarlig"
+  },
+  "messages": {
+    "anxiety_mild": "Dina svar tyder på mild eller situationsbunden ångest. Vardagsstress kan ibland kännas förhöjd, men mild mindfulness och andning kan hålla dig jordad.",
+    "anxiety_moderate": "Dina svar tyder på måttlig ångest. Du kan uppleva tillfällig fysisk eller mental spänning som påverkar ditt lugn.",
+    "anxiety_severe": "Dina svar tyder på ökad ångest som kan störa din dagliga sinnesro.",
+    "anxiety_extremely_severe": "Dina svar visar på en hög nivå av ångest och oro just nu. Att kontakta en professionell kan ge trygghet och lindring.",
+    "depression_mild": "Dina svar antyder minimal till mild nedstämdhet. Mild egenvård och att hålla kontakten med stödjande rutiner är hjälpsamt.",
+    "depression_moderate": "Dina svar antyder måttligt lågt humör eller låg entusiasm. Att prata med en terapeut kan ge värdefull vägledning.",
+    "depression_severe": "Dina svar tyder på att du bär på en märkbar känslomässig tyngd just nu.",
+    "depression_extremely_severe": "Dina svar tyder på en hög nivå av känslomässig tyngd. Professionell vägledning kan hjälpa dig att navigera detta på ett säkert sätt.",
+    "stress_mild": "Dina svar visar på en hanterbar nivå av vardaglig stress.",
+    "stress_moderate": "Dina svar tyder på måttlig stress och svårigheter att slappna av. Små avsiktliga pauser kan hjälpa till att återställa balansen.",
+    "stress_severe": "Dina svar tyder på höga stressnivåer som kan påverka din sömn och energi.",
+    "stress_extremely_severe": "Dina svar tyder på en intensiv stressnivå just nu. Att låta en professionell hjälpa dig att reda ut detta kan ge lättnad."
+  },
+  "report": {
+    "title": "Din känslomässiga ögonblicksbild",
+    "desc": "Här är en översikt över hur du har känt dig utifrån viktiga emotionella indikatorer.",
+    "talk_prompt": "Vill du prata med någon?",
+    "talk_sub": "Professionellt stöd finns tillgängligt när du behöver det.",
+    "btn_view_plans": "Visa terapiplaner",
+    "btn_finish": "Fullständig bedömning",
+    "btn_back": "Tillbaka"
+  }
+}

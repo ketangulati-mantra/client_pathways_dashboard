@@ -1,0 +1,14 @@
+{
+  "header_back": "Back",
+  "header_title": "Emotion Wheel",
+  "prompt_level1": "What are you feeling right now?",
+  "prompt_level2": "Exploring {{family}}",
+  "prompt_level3": "Let's get more specific",
+  "prompt_intensity": "How intense is this emotion?",
+  "prompt_context": "What sparked this feeling?",
+  "prompt_needs": "What do you need right now?",
+  "snapshot_title": "Your Emotional Snapshot",
+  "btn_explore": "Explore More",
+  "btn_complete": "Complete Activity",
+  "btn_share": "Share Snapshot"
+}

@@ -1,0 +1,81 @@
+{
+  "header_back": "返回",
+  "header_title": "入门指南",
+  "hero_title_prefix": "为你的福祉制定的计划，",
+  "hero_highlight": "围绕你构建。",
+  "hero_subtitle": "获取个性化计划，包含指导活动、实用工具和支持，帮助你一步步进步。",
+  "how_it_works_title": "你需要的一切都是你为健康而努力的。",
+  "how_it_works_subtitle": "您的个性化计划将活动、工具、进展跟踪和专业支持汇聚于一处。",
+  "flow_steps": {
+    "plan": "你的计划",
+    "activities": "活动",
+    "tools": "工具",
+    "progress": "进展",
+    "support": "支持"
+  },
+  "video_section_title": "看看Mantra是如何工作的",
+  "video_section_subtitle": "快速浏览一下应用，看看你的计划、活动和健康工具在你旅程中的位置。",
+  "adapts_title": "你的计划会根据你调整",
+  "adapts_subtitle": "选择你想解决的问题，比如焦虑、压力、情绪低落、多动症、强迫症等。Mantra 会根据你的关注重点提供指导活动和资源。",
+  "focus_areas": {
+    "anxiety": "焦虑",
+    "stress": "应力",
+    "low_mood": "低落情绪",
+    "adhd": "多动症",
+    "ocd": "强迫症",
+    "more": "更多"
+  },
+  "focus_taglines": {
+    "anxiety": "让神经系统的波动稳定下来，缓解焦虑的思维循环",
+    "stress": "缓解长期工作日紧张与预防倦怠",
+    "low_mood": "用温和的行为激活打破嗜睡循环",
+    "adhd": "管理执行功能摩擦和注意力过于过重",
+    "ocd": "反应预防与认知灵活性练习",
+    "more": "睡眠质量、自尊、人际关系和习惯增长"
+  },
+  "phases_labels": {
+    "phase": "Phase 0{{num}} • {{step}}",
+    "understand": "明白",
+    "practice": "实践",
+    "reflect": "反思",
+    "progress": "进展"
+  },
+  "activities_title": "小活动。真正的进步。",
+  "activities_subtitle": "你的计划会提供帮助你学习、反思、练习和跟踪的活动，让你能迈出小步，朝着感觉好走。",
+  "activity_types": {
+    "learn": "学习",
+    "reflect": "反思",
+    "practice": "实践",
+    "track": "赛道"
+  },
+  "tools_title": "需要时用工具",
+  "tools_subtitle": "随时探索冥想、写日记、正念、评估、追踪器、人工智能支持等。",
+  "tools_list": {
+    "meditation": "冥想",
+    "journaling": "日记",
+    "mindfulness": "正念",
+    "assessments": "评估",
+    "trackers": "追踪器",
+    "ai_support": "人工智能支持",
+    "self_care": "自我关怀"
+  },
+  "points_title": "每一步都很重要",
+  "points_subtitle": "完成活动和有意义的行动以赚取积分。",
+  "points_steps": {
+    "complete_title": "完整",
+    "complete_desc": "结尾活动",
+    "earn_title": "积分",
+    "earn_desc": "+10分奖励",
+    "redeem_title": "兑换奖励",
+    "redeem_desc": "符合条件的服务"
+  },
+  "points_footer": "积分可用于通过Mantra提供的符合条件的健康服务。",
+  "support_title": "需要更多支持吗？",
+  "support_subtitle": "你不是一个人。",
+  "support_desc": "每当你需要额外帮助时，可以寻求合格治疗师和其他健康服务的专业支持。",
+  "support_btn": "探索专业支持",
+  "cta_title": "你准备好开始了。",
+  "cta_subtitle": "开启个性化计划，完成你的第一项活动，迈出迈向更好健康的下一步。",
+  "cta_btn_start": "开始我的旅程",
+  "cta_btn_starting": "开始......"
+}

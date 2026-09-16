@@ -1,0 +1,14 @@
+{
+  "header_back": "Voltar",
+  "header_title": "Roda da Emoção",
+  "prompt_level1": "O que você está sentindo agora?",
+  "prompt_level2": "Explorando {{family}}",
+  "prompt_level3": "Vamos ser mais específicos",
+  "prompt_intensity": "Quão intensa é essa emoção?",
+  "prompt_context": "O que despertou esse sentimento?",
+  "prompt_needs": "O que você precisa agora?",
+  "snapshot_title": "Seu Retrato Emocional",
+  "btn_explore": "Explore Mais",
+  "btn_complete": "Atividade Completa",
+  "btn_share": "Compartilhar Snapshot"
+}

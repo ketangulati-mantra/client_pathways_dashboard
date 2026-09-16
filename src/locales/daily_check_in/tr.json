@@ -1,0 +1,17 @@
+{
+  "header_back": "Geri",
+  "header_title": "Günlük Check-In",
+  "streak_title": "Gün Serisi",
+  "home_welcome": "Şu anda nasıl hissediyorsun?",
+  "home_subtitle": "Duygusal manzaranıza ve beden durumunuza odaklanmak için bilinçli bir an ayırın.",
+  "btn_start_checkin": "Check-In Başlat",
+  "history_title": "Son Kontrolleriniz",
+  "step_emotion_title": "Mevcut duygusal durumunuzu seçin",
+  "step_intensity_title": "Bu his ne kadar güçlü?",
+  "step_context_title": "Hissetmene ne katkıda bulunuyor?",
+  "step_reflection_title": "Düşün ve Not",
+  "step_response_title": "Kişiselleştirilmiş İçgörü",
+  "btn_continue": "Devam et",
+  "btn_finish": "Tam Check-In",
+  "btn_exit": "Planıma Devam Et"
+}

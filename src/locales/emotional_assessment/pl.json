@@ -1,0 +1,60 @@
+{
+  "back": "Z powrotem",
+  "assessment_title": "Ocena dobrostanu emocjonalnego",
+  "instruction": "Na ile to dotyczyło Ciebie w ciągu ostatniego tygodnia?",
+  "question_counter": "Pytanie {{current}} od {{total}}",
+  "options": {
+    "not_at_all": "Wcale nie",
+    "sometimes": "Czasami",
+    "often": "Często",
+    "almost_always": "Prawie zawsze"
+  },
+  "questions": {
+    "q1": "Byłem bliski paniki",
+    "q2": "Czułem, jak serce bije mi szybko, mimo że nie włożyłem żadnego wysiłku fizycznego",
+    "q3": "Bałem się bez powodu",
+    "q4": "Czułem, że nie mam na co czekać",
+    "q5": "Czułem się przygnębiony i przygnębiony",
+    "q6": "Nie potrafiłem się zainteresować niczym",
+    "q7": "Trudno było mi się uspokoić",
+    "q8": "Zaczęłam się denerwować",
+    "q9": "Trudno mi było się zrelaksować"
+  },
+  "categories": {
+    "anxiety": "Lęk",
+    "anxiety_desc": "Mierzy lęk sytuacyjny, napięcie fizyczne oraz uczucie nerwowości.",
+    "depression": "Kryzys",
+    "depression_desc": "Mierzy niską energię, brak pozytywnych uczuć oraz trudności z odczuwaniem entuzjazmu.",
+    "stress": "Stres",
+    "stress_desc": "Mierzy trudności z relaksem, niepokój i napięcie emocjonalne."
+  },
+  "levels": {
+    "mild": "Łagodne",
+    "moderate": "Umiarkowany",
+    "severe": "Ciężkie",
+    "extremely_severe": "Bardzo ciężkie"
+  },
+  "messages": {
+    "anxiety_mild": "Twoje reakcje sugerują łagodny lub sytuacyjny lęk. Codzienny stres czasem może wydawać się podwyższony, ale delikatna uważność i oddychanie mogą pomóc Ci się ugruntować.",
+    "anxiety_moderate": "Twoje odpowiedzi sugerują umiarkowany lęk. Możesz odczuwać sporadyczne napięcie fizyczne lub psychiczne, które wpływa na Twój spokój.",
+    "anxiety_severe": "Twoje reakcje wskazują na podwyższony niepokój, który może zakłócać Twój codzienny spokój.",
+    "anxiety_extremely_severe": "Twoje odpowiedzi wskazują na wysoki poziom lęku i stresu w tej chwili. Połączenie z profesjonalistą może przynieść bezpieczeństwo i ulgę.",
+    "depression_mild": "Twoje odpowiedzi sugerują minimalny lub łagodny obniżony nastrój. Delikatna dbanie o siebie i utrzymywanie kontaktu w oparciu o rutyny są pomocne.",
+    "depression_moderate": "Twoje odpowiedzi sugerują umiarkowanie obniżony nastrój lub niski entuzjazm. Rozmowa z terapeutą może dostarczyć cennych wskazówek.",
+    "depression_severe": "Twoje odpowiedzi sugerują, że teraz nosisz wyraźny ciężar emocjonalny.",
+    "depression_extremely_severe": "Twoje odpowiedzi sugerują wysoki poziom emocjonalnego ciężaru. Profesjonalne wsparcie może pomóc ci bezpiecznie przejść przez ten proces.",
+    "stress_mild": "Twoje odpowiedzi wskazują na możliwy do opanowania poziom codziennego stresu.",
+    "stress_moderate": "Twoje odpowiedzi sugerują umiarkowany stres i trudności z odprężeniem. Małe, celowe przerwy mogą pomóc w przywróceniu równowagi.",
+    "stress_severe": "Twoje odpowiedzi sugerują wysoki poziom stresu, który może wpływać na sen i energię.",
+    "stress_extremely_severe": "Twoje odpowiedzi sugerują teraz ogromny poziom stresu. Pozwolenie profesjonaliście pomóc ci to rozpakować może przynieść ulgę."
+  },
+  "report": {
+    "title": "Twój emocjonalny obraz",
+    "desc": "Oto przegląd tego, jak się czujesz w kluczowych aspektach emocjonalnych.",
+    "talk_prompt": "Chcesz z kimś porozmawiać?",
+    "talk_sub": "Profesjonalne wsparcie jest dostępne zawsze, gdy tylko go potrzebujesz.",
+    "btn_view_plans": "Zobacz plany terapii",
+    "btn_finish": "Pełna ocena",
+    "btn_back": "Z powrotem"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "back": "Tilbake",
+  "assessment_title": "Vurdering av emosjonell velvære",
+  "instruction": "Hvor mye har dette påvirket deg den siste uken?",
+  "question_counter": "Spørsmål {{current}} av {{total}}",
+  "options": {
+    "not_at_all": "Ikke i det hele tatt",
+    "sometimes": "Noen ganger",
+    "often": "Ofte",
+    "almost_always": "Nesten alltid"
+  },
+  "questions": {
+    "q1": "Jeg var i ferd med å få panikk",
+    "q2": "Jeg kjente hjertet slå fort selv om jeg ikke hadde gjort noen fysisk innsats",
+    "q3": "Jeg var redd uten grunn",
+    "q4": "Jeg følte at jeg ikke hadde noe å se frem til",
+    "q5": "Jeg følte meg nedfor og trist",
+    "q6": "Jeg klarte ikke å bli entusiastisk for noe som helst",
+    "q7": "Jeg syntes det var vanskelig å roe ned",
+    "q8": "Jeg merket at jeg ble urolig",
+    "q9": "Jeg syntes det var vanskelig å slappe av"
+  },
+  "categories": {
+    "anxiety": "Angst",
+    "anxiety_desc": "Måler situasjonsbetinget angst, fysisk spenning og følelser av nervøsitet.",
+    "depression": "Depresjon",
+    "depression_desc": "Måler lav energi, mangel på positive følelser og vanskeligheter med å være entusiastisk.",
+    "stress": "Stress",
+    "stress_desc": "Måler vanskeligheter med å slappe av, rastløshet og følelsesmessig spenning."
+  },
+  "levels": {
+    "mild": "Mild",
+    "moderate": "Moderat",
+    "severe": "Alvorlig",
+    "extremely_severe": "Ekstremt alvorlig"
+  },
+  "messages": {
+    "anxiety_mild": "Dine svar antyder mild eller situasjonsbestemt angst. Hverdagsstress kan noen ganger føles forhøyet, men mild mindfulness og pusting kan holde deg jordet.",
+    "anxiety_moderate": "Svarene dine tyder på moderat angst. Du kan oppleve sporadisk fysisk eller mental spenning som påvirker roen din.",
+    "anxiety_severe": "Dine svar indikerer økt angst som kan forstyrre din daglige sinnsro.",
+    "anxiety_extremely_severe": "Dine svar viser et høyt nivå av angst og ubehag akkurat nå. Å kontakte en profesjonell kan gi trygghet og lindring.",
+    "depression_mild": "Svarene dine antyder minimal til mild nedstemthet. Mild egenomsorg og å holde seg tilknyttet støttende rutiner er nyttig.",
+    "depression_moderate": "Svarene dine antyder moderat lavt humør eller lav entusiasme. Å snakke med en terapeut kan gi verdifull veiledning.",
+    "depression_severe": "Svarene dine tyder på at du bærer på en merkbar emosjonell byrde akkurat nå.",
+    "depression_extremely_severe": "Svarene dine antyder et høyt nivå av emosjonell tyngde. Profesjonell veiledning kan hjelpe deg å navigere dette trygt.",
+    "stress_mild": "Svarene dine indikerer et håndterbart nivå av daglig stress.",
+    "stress_moderate": "Svarene dine antyder moderat stress og vanskeligheter med å slappe av. Små, bevisste pauser kan hjelpe med å gjenopprette balansen.",
+    "stress_severe": "Svarene dine antyder høyt stressnivå som kan påvirke søvnen og energien din.",
+    "stress_extremely_severe": "Svarene dine tyder på et intenst stressnivå akkurat nå. Å la en profesjonell hjelpe deg med å bearbeide dette kan gi lindring."
+  },
+  "report": {
+    "title": "Ditt følelsesmessige øyeblikksbilde",
+    "desc": "Her er en oversikt over hvordan du har følt deg på tvers av viktige emosjonelle indikatorer.",
+    "talk_prompt": "Vil du ha noen å snakke med?",
+    "talk_sub": "Profesjonell støtte er tilgjengelig når du trenger det.",
+    "btn_view_plans": "Se terapiplaner",
+    "btn_finish": "Fullstendig vurdering",
+    "btn_back": "Tilbake"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "header_back": "Retour",
+  "header_title": "Contrôle quotidien",
+  "streak_title": "Série de jours",
+  "home_welcome": "Comment te sens-tu en ce moment ?",
+  "home_subtitle": "Prenez un moment de conscience pour vous connecter à votre paysage émotionnel et à votre état corporel.",
+  "btn_start_checkin": "Début de l’enregistrement",
+  "history_title": "Vos récents bilans",
+  "step_emotion_title": "Sélectionnez votre état émotionnel actuel",
+  "step_intensity_title": "Quelle est la force de ce sentiment ?",
+  "step_context_title": "Qu’est-ce qui influence ce que vous ressentez ?",
+  "step_reflection_title": "Réflexion & Note",
+  "step_response_title": "Analyse personnalisée",
+  "btn_continue": "Continuez",
+  "btn_finish": "Enregistrement complet",
+  "btn_exit": "Continuez mon plan"
+}

@@ -1,0 +1,81 @@
+{
+  "header_back": "Zpět",
+  "header_title": "Začátky",
+  "hero_title_prefix": "Plán pro tvé blaho,",
+  "hero_highlight": "postavený kolem tebe.",
+  "hero_subtitle": "Získejte personalizovaný plán s řízenými aktivitami, praktickými nástroji a podporou, která vám pomůže postupovat krok za krokem.",
+  "how_it_works_title": "Všechno, co potřebujete, abyste pracovali na svém zdraví.",
+  "how_it_works_subtitle": "Váš personalizovaný plán spojuje aktivity, nástroje, sledování pokroku a profesionální podporu na jednom místě.",
+  "flow_steps": {
+    "plan": "Tvůj plán",
+    "activities": "Aktivity",
+    "tools": "Nástroje",
+    "progress": "Pokrok",
+    "support": "Podpora"
+  },
+  "video_section_title": "Podívejte se, jak Mantra funguje",
+  "video_section_subtitle": "Projděte si rychlou aplikaci a zjistěte, kam váš plán, aktivity a nástroje pro pohodu zapadají do vaší cesty.",
+  "adapts_title": "Tvůj plán se přizpůsobí tobě",
+  "adapts_subtitle": "Vyberte si, na čem chcete pracovat, například na úzkosti, stresu, nízké náladě, ADHD, OCD nebo dalších oblastech. Mantra vám pak poskytne vedené aktivity a zdroje přizpůsobené vašemu zaměření na míru.",
+  "focus_areas": {
+    "anxiety": "Úzkost",
+    "stress": "Stres",
+    "low_mood": "Nízká nálada",
+    "adhd": "ADHD",
+    "ocd": "OCD",
+    "more": "Více"
+  },
+  "focus_taglines": {
+    "anxiety": "Uzemňující nervové výkyvy a uvolňování úzkostných myšlenkových smyček",
+    "stress": "Zmírnění chronického napětí během pracovního dne a prevence vyhoření",
+    "low_mood": "Přerušování cyklů letargie jemnou behaviorální aktivací",
+    "adhd": "Řízení tření exekutivních funkcí a přetížení soustředěním",
+    "ocd": "Cvičení prevence reakce a kognitivní flexibility",
+    "more": "Kvalita spánku, sebevědomí, vztahy a růst návyků"
+  },
+  "phases_labels": {
+    "phase": "Phase 0{{num}} • {{step}}",
+    "understand": "Pochopte",
+    "practice": "Praxe",
+    "reflect": "Zamyslet se",
+    "progress": "Pokrok"
+  },
+  "activities_title": "Malé aktivity. Skutečný pokrok.",
+  "activities_subtitle": "Váš plán vám dává aktivity, které vám pomáhají se učit, reflektovat, cvičit a sledovat, abyste mohli dělat malé krůčky k lepšímu pocitu.",
+  "activity_types": {
+    "learn": "Učte se",
+    "reflect": "Zamyslet se",
+    "practice": "Praxe",
+    "track": "Dráha"
+  },
+  "tools_title": "Nástroje, když je potřebuješ",
+  "tools_subtitle": "Objevte meditaci, psaní deníku, mindfulness, hodnocení, sledovače, podporu AI a další, kdykoli je potřebujete.",
+  "tools_list": {
+    "meditation": "Meditace",
+    "journaling": "Psaní deníku",
+    "mindfulness": "Všímavost",
+    "assessments": "Hodnocení",
+    "trackers": "Trackery",
+    "ai_support": "Podpora AI",
+    "self_care": "Péče o sebe"
+  },
+  "points_title": "Každý krok se počítá",
+  "points_subtitle": "Plňte aktivity a smysluplné akce, abyste získali body.",
+  "points_steps": {
+    "complete_title": "Dokončeno",
+    "complete_desc": "Závěrečné aktivity",
+    "earn_title": "Získávejte body",
+    "earn_desc": "+10 bodů odměny",
+    "redeem_title": "Odměny za uplatnění",
+    "redeem_desc": "Způsobilé služby"
+  },
+  "points_footer": "Body lze použít na způsobilé wellness služby dostupné přes Mantra.",
+  "support_title": "Potřebujete více podpory?",
+  "support_subtitle": "Nejsi na to sám.",
+  "support_desc": "Vyhledejte odbornou podporu kvalifikovaných terapeutů a dalších wellness služeb kdykoli potřebujete další pomoc.",
+  "support_btn": "Objevte odbornou podporu",
+  "cta_title": "Jste připraveni začít.",
+  "cta_subtitle": "Otevřete svůj personalizovaný plán, dokončete první aktivitu a udělejte další krok k lepšímu blahu.",
+  "cta_btn_start": "Začnu svou cestu",
+  "cta_btn_starting": "Začínáme..."
+}

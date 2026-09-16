@@ -1,0 +1,43 @@
+{
+  "header_back": "Takaisin",
+  "header_title": "Kuinka varata istunto",
+  "hero_title_prefix": "Ota yhteys oikeaan terapeuttiin,",
+  "hero_highlight": "Omaan tahtiin.",
+  "hero_subtitle": "Istunnon varaaminen Mantrassa on yksinkertaista ja luottamuksellista palvelua. Katso, kuinka helppoa on valita suunnitelmasi, jakaa tarpeesi, löytää yhteys palveluntarjoajaan ja aloittaa hoito.",
+  "interactive_title": "Miten varaus toimii",
+  "interactive_subtitle": "Vaiheittainen interaktiivinen opastus varausprosessista.",
+  "steps": {
+    "s1_title": "Valitse suunnitelma",
+    "s1_desc": "Aloita kokeilusessiolla tai valitse monikuukausinen suunnitelma.",
+    "s2_title": "Jaa mieltymyksesi",
+    "s2_desc": "Kerro Mantralle tavoitteesi, haasteesi ja terapeutin mieltymyksesi.",
+    "s3_title": "Hanki yhteys tai valitse terapeutti",
+    "s3_desc": "Anna tekoälyn yhdistää sinut välittömästi tai selaa ja kutsu palveluntarjoaja.",
+    "s4_title": "Keskustele terapeutin kanssa",
+    "s4_desc": "Lähetä viesti terapeutille sovelluksessa, niin voit olla mukava ennen varaamista.",
+    "s5_title": "Valitse aika ja varaa",
+    "s5_desc": "Valitse sopiva päivämäärä ja kellonaika terapeutin kalenterista.",
+    "s6_title": "Liity chatista",
+    "s6_desc": "Avaa suojattu videoistuntolinkki, joka on jaettu suoraan chatissasi."
+  },
+  "ui_preview": {
+    "discount": "50 % ALENNUS ensimmäisellä istunnolla",
+    "intro_trial": "Aloitusoikeudenkäynti",
+    "select_focus": "Valitse painopistealueesi:",
+    "ai_match": "AI-ottelu",
+    "ai_match_sub": "Autosuosituksia",
+    "browse_team": "Selaa joukkuetta",
+    "browse_team_sub": "Valitse manuaalisesti",
+    "therapist_msg": "Hei! Odotan innolla, että voin tukea sinua.",
+    "therapist_reply": "Hei tohtori Miller! Varasin juuri perjantain.",
+    "calendar_title": "Valitse istuntoaika",
+    "join_btn": "Liity videoistuntoon",
+    "secure_room": "100 % salattu ja luottamuksellinen"
+  },
+  "video_title": "Katso koko varausopas",
+  "video_subtitle": "Koko sovelluksen sisäisen varausprosessin vaiheittainen visuaalinen demonstraatio.",
+  "faq_title": "Usein kysytyt kysymykset",
+  "cta_title": "Valmiina ottamaan seuraavan askeleen?",
+  "cta_subtitle": "Tutustu lisensoituihin terapeuteihimme ja varaa ensimmäinen istunto, kun olet valmis.",
+  "cta_btn": "Tutustu terapiasuunnitelmiin"
+}

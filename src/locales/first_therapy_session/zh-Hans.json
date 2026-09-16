@@ -1,0 +1,43 @@
+{
+  "header_back": "返回",
+  "header_title": "如何预约会谈",
+  "hero_title_prefix": "联系合适的治疗师，",
+  "hero_highlight": "按自己的节奏。",
+  "hero_subtitle": "在Mantra上预约您的会诊既简单又保密。看看选择计划、分享需求、匹配服务提供者并开始护理的简单性。",
+  "interactive_title": "预订流程",
+  "interactive_subtitle": "预订流程的逐步互动演示。",
+  "steps": {
+    "s1_title": "选择一个计划",
+    "s1_desc": "先试用一次，或者选择一个为期数月的计划。",
+    "s2_title": "分享你的偏好",
+    "s2_desc": "告诉Mantra你的目标、挑战和治疗师的偏好。",
+    "s3_title": "匹配你或者选择你的治疗师",
+    "s3_desc": "让AI即时匹配你，或者浏览并邀请服务提供商。",
+    "s4_title": "和你的治疗师聊聊",
+    "s4_desc": "在预约前，先在应用里联系你的治疗师，先让自己适应。",
+    "s5_title": "选一个时间和书",
+    "s5_desc": "在你的治疗师日历上选择一个方便的日期和时间。",
+    "s6_title": "从聊天加入",
+    "s6_desc": "打开你聊天中直接分享的安全视频会话链接。"
+  },
+  "ui_preview": {
+    "discount": "首场五折优惠",
+    "intro_trial": "入门试验",
+    "select_focus": "选择你的重点领域：",
+    "ai_match": "AI比赛",
+    "ai_match_sub": "汽车推荐",
+    "browse_team": "浏览团队",
+    "browse_team_sub": "手动拣选",
+    "therapist_msg": "你好！我期待支持你。",
+    "therapist_reply": "你好，米勒医生！我刚预订了周五。",
+    "calendar_title": "精选时段",
+    "join_btn": "加入视频会议",
+    "secure_room": "100%加密且保密"
+  },
+  "video_title": "观看完整的预订流程",
+  "video_subtitle": "逐步可视化，展示整个应用内预订流程。",
+  "faq_title": "常见问题解答",
+  "cta_title": "准备好迈出下一步了吗？",
+  "cta_subtitle": "探索我们的持证治疗师，随时预约您的首次会谈。",
+  "cta_btn": "探索治疗计划"
+}

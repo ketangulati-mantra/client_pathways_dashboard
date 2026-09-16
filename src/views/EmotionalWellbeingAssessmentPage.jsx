@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useLessonCompletion } from '../hooks/useLessonCompletion';
 import { AssessmentWizard } from '../components/assessment/AssessmentWizard';
 import { dass21Schema } from '../utils/dass21Schema';
@@ -8,6 +9,7 @@ import { handleExit } from '../mantra/navigation';
 const LESSON_ID = 'emotional-wellbeing-assessment';
 
 export default function EmotionalWellbeingAssessmentPage({ onBack }) {
+  const { t } = useTranslation('emotional_assessment');
   const {
     handleActionComplete
   } = useLessonCompletion(LESSON_ID, onBack, {
@@ -72,7 +74,7 @@ export default function EmotionalWellbeingAssessmentPage({ onBack }) {
           aria-label="Go back"
         >
           <ArrowLeft size={14} />
-          <span>Back</span>
+          <span>{t('back', { defaultValue: 'Back' })}</span>
         </button>
 
         {/* Section Label on Right */}
@@ -81,7 +83,7 @@ export default function EmotionalWellbeingAssessmentPage({ onBack }) {
           fontWeight: 600,
           color: '#64748b'
         }}>
-          Assessment
+          {t('assessment_label', { defaultValue: 'Assessment' })}
         </span>
       </header>
 

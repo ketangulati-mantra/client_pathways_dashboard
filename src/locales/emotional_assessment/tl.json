@@ -1,0 +1,60 @@
+{
+  "back": "Bumalik",
+  "assessment_title": "Pagsusuri ng Emosyonal na Kagalingan",
+  "instruction": "Gaano kalaki ang epekto nito sa iyo nitong nakaraang linggo?",
+  "question_counter": "Tanong {{current}} ng {{total}}",
+  "options": {
+    "not_at_all": "Hindi naman talaga",
+    "sometimes": "Minsan",
+    "often": "madalas",
+    "almost_always": "Halos palaging"
+  },
+  "questions": {
+    "q1": "Malapit na akong mag-panic",
+    "q2": "Ramdam ko ang mabilis na tibok ng puso ko kahit hindi ako nag-effort ng pisikal",
+    "q3": "Natakot ako nang walang dahilan",
+    "q4": "Pakiramdam ko wala akong inaabangan",
+    "q5": "Nalungkot at nalungkot ako",
+    "q6": "Hindi ako naging masigla sa kahit ano",
+    "q7": "Nahihirapan akong magpahinga",
+    "q8": "Naramdaman kong naiinis ako",
+    "q9": "Nahihirapan akong mag-relax"
+  },
+  "categories": {
+    "anxiety": "Pagkabalisa",
+    "anxiety_desc": "Sinusukat ang situational anxiety, pisikal na tensyon, at pakiramdam ng kaba.",
+    "depression": "Depresyon",
+    "depression_desc": "Sinusukat ang mababang enerhiya, kakulangan sa positibong damdamin, at hirap sa pagiging masigla.",
+    "stress": "Stress",
+    "stress_desc": "Sinusukat ang hirap sa pagpapahinga, pagkabalisa, at emosyonal na tensyon."
+  },
+  "levels": {
+    "mild": "banayad",
+    "moderate": "Katamtaman",
+    "severe": "Matindi",
+    "extremely_severe": "Sobrang Matindi"
+  },
+  "messages": {
+    "anxiety_mild": "Ipinapahiwatig ng iyong mga sagot ang banayad o situational na pagkabalisa. Minsan, ang pang-araw-araw na stress ay maaaring maging mataas, ngunit ang banayad na mindfulness at paghinga ay maaaring panatilihing nakatapak ka.",
+    "anxiety_moderate": "Ipinapahiwatig ng iyong mga sagot ang katamtamang pagkabalisa. Maaaring nakakaranas ka ng paminsang pisikal o mental na tensyon na nakakaapekto sa iyong katahimikan.",
+    "anxiety_severe": "Ipinapakita ng iyong mga sagot ang mataas na pagkabalisa na maaaring nakakaapekto sa iyong pang-araw-araw na kapanatagan ng isip.",
+    "anxiety_extremely_severe": "Ipinapakita ng iyong mga sagot ang mataas na antas ng pagkabalisa at pagkabalisa sa kasalukuyan. Ang pakikipag-ugnayan sa isang propesyonal ay maaaring magbigay ng kaligtasan at ginhawa.",
+    "depression_mild": "Iminumungkahi ng iyong mga sagot na minimal hanggang banayad ang mababang mood. Nakakatulong ang banayad na pag-aalaga sa sarili at pananatiling konektado sa mga sumusuportang routine.",
+    "depression_moderate": "Ipinapahiwatig ng iyong mga sagot ang katamtamang mababang mood o mababang sigla. Ang pakikipag-usap sa therapist ay maaaring magbigay ng mahalagang gabay.",
+    "depression_severe": "Ipinapahiwatig ng mga sagot mo na may dalang malinaw kang emosyonal na bigat ngayon.",
+    "depression_extremely_severe": "Ipinapakita ng iyong mga sagot ang mataas na antas ng emosyonal na bigat. Makakatulong ang propesyonal na gabay upang ligtas kang malampasan ito.",
+    "stress_mild": "Ipinapakita ng iyong mga sagot ang isang kayang antas ng pang-araw-araw na stress.",
+    "stress_moderate": "Ipinapahiwatig ng iyong mga sagot ang katamtamang stress at hirap sa pagpapahinga. Ang maliliit na sinadyang pahinga ay makakatulong upang maibalik ang balanse.",
+    "stress_severe": "Ipinapahiwatig ng iyong mga sagot ang mataas na antas ng stress na maaaring makaapekto sa iyong tulog at enerhiya.",
+    "stress_extremely_severe": "Ipinapahiwatig ng iyong mga sagot ang matinding antas ng stress ngayon. Ang pagpapahintulot sa isang propesyonal na tulungan kang unawain ito ay maaaring magdala ng ginhawa."
+  },
+  "report": {
+    "title": "Ang Iyong Emosyonal na Larawan",
+    "desc": "Narito ang isang pangkalahatang-ideya kung paano mo nararamdaman ang mga pangunahing emosyonal na palatandaan.",
+    "talk_prompt": "Gusto mo ba ng makausap?",
+    "talk_sub": "Propesyonal na suporta ay handang gamitin anumang oras na kailangan mo.",
+    "btn_view_plans": "Tingnan ang mga Plano sa Therapy",
+    "btn_finish": "Kumpletong Pagsusuri",
+    "btn_back": "Bumalik"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "header_back": "返回",
+  "header_title": "情绪轮",
+  "prompt_level1": "你现在感觉如何？",
+  "prompt_level2": "探索{{家族}}",
+  "prompt_level3": "我们来更具体一点",
+  "prompt_intensity": "这种情绪有多强烈？",
+  "prompt_context": "是什么激发了这种感觉？",
+  "prompt_needs": "你现在需要什么？",
+  "snapshot_title": "你的情感快照",
+  "btn_explore": "探索更多",
+  "btn_complete": "完整活动",
+  "btn_share": "分享快照"
+}

@@ -1,0 +1,14 @@
+{
+  "header_back": "Achteruit",
+  "header_title": "Emotion Wheel",
+  "prompt_level1": "Wat voel je nu?",
+  "prompt_level2": "Verkennen {{family}}",
+  "prompt_level3": "Laten we specifieker worden",
+  "prompt_intensity": "Hoe intens is deze emotie?",
+  "prompt_context": "Wat veroorzaakte dit gevoel?",
+  "prompt_needs": "Wat heb je nu nodig?",
+  "snapshot_title": "Jouw emotionele momentopname",
+  "btn_explore": "Ontdek meer",
+  "btn_complete": "Volledige activiteit",
+  "btn_share": "Deel Momentopname"
+}

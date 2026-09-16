@@ -1,0 +1,60 @@
+{
+  "back": "Back",
+  "assessment_title": "Emotional Well-Being Assessment",
+  "instruction": "How much has this applied to you over the past week?",
+  "question_counter": "Question {{current}} of {{total}}",
+  "options": {
+    "not_at_all": "Not at all",
+    "sometimes": "Sometimes",
+    "often": "Often",
+    "almost_always": "Almost always"
+  },
+  "questions": {
+    "q1": "I was about to panic",
+    "q2": "I felt my heart beating fast even though I had not made any physical effort",
+    "q3": "I was afraid for no reason",
+    "q4": "I felt I had nothing to look forward to",
+    "q5": "I felt down-hearted and blue",
+    "q6": "I was unable to become enthusiastic about anything",
+    "q7": "I found it hard to wind down",
+    "q8": "I found myself getting agitated",
+    "q9": "I found it difficult to relax"
+  },
+  "categories": {
+    "anxiety": "Anxiety",
+    "anxiety_desc": "Measures situational anxiety, physical tension, and feelings of nervousness.",
+    "depression": "Depression",
+    "depression_desc": "Measures low energy, lack of positive feelings, and difficulty feeling enthusiastic.",
+    "stress": "Stress",
+    "stress_desc": "Measures difficulty relaxing, restlessness, and emotional tension."
+  },
+  "levels": {
+    "mild": "Mild",
+    "moderate": "Moderate",
+    "severe": "Severe",
+    "extremely_severe": "Extremely Severe"
+  },
+  "messages": {
+    "anxiety_mild": "Your responses suggest mild or situational anxiety. Everyday stress can sometimes feel elevated, but gentle mindfulness and breathing can keep you grounded.",
+    "anxiety_moderate": "Your responses suggest moderate anxiety. You may be experiencing occasional physical or mental tension that impacts your calm.",
+    "anxiety_severe": "Your responses indicate elevated anxiety that may be interfering with your daily peace of mind.",
+    "anxiety_extremely_severe": "Your responses indicate a high level of anxiety and distress right now. Connecting with a professional can provide safety and relief.",
+    "depression_mild": "Your responses suggest minimal to mild low mood. Gentle self-care and staying connected with supportive routines is helpful.",
+    "depression_moderate": "Your responses suggest moderate low mood or low enthusiasm. Speaking with a therapist can provide valuable guidance.",
+    "depression_severe": "Your responses suggest you are carrying a noticeable emotional weight right now.",
+    "depression_extremely_severe": "Your responses suggest a high level of emotional heaviness. Professional guidance can help you navigate this safely.",
+    "stress_mild": "Your responses indicate a manageable level of everyday stress.",
+    "stress_moderate": "Your responses suggest moderate stress and difficulty unwinding. Small intentional breaks can help restore balance.",
+    "stress_severe": "Your responses suggest high stress levels that may affect your sleep and energy.",
+    "stress_extremely_severe": "Your responses suggest an intense level of stress right now. Letting a professional help you unpack this can bring relief."
+  },
+  "report": {
+    "title": "Your Emotional Snapshot",
+    "desc": "Here is an overview of how you have been feeling across key emotional indicators.",
+    "talk_prompt": "Want someone to talk to?",
+    "talk_sub": "Professional support is available whenever you need it.",
+    "btn_view_plans": "View Therapy Plans",
+    "btn_finish": "Complete Assessment",
+    "btn_back": "Back"
+  }
+}

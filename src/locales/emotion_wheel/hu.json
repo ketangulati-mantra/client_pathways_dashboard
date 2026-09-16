@@ -1,0 +1,14 @@
+{
+  "header_back": "Hátra",
+  "header_title": "Érzelem Kerek",
+  "prompt_level1": "Mit érzel most?",
+  "prompt_level2": "{{family}} felfedezése",
+  "prompt_level3": "Legyünk konkrétabbak",
+  "prompt_intensity": "Mennyire intenzív ez az érzelem?",
+  "prompt_context": "Mi váltotta ki ezt az érzést?",
+  "prompt_needs": "Mit kell most neked?",
+  "snapshot_title": "Az érzelmi pillanatképed",
+  "btn_explore": "Fedezz fel többet",
+  "btn_complete": "Teljes tevékenység",
+  "btn_share": "Megosztás pillanatképet"
+}

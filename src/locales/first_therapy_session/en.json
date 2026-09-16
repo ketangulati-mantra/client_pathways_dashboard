@@ -1,0 +1,43 @@
+{
+  "header_back": "Back",
+  "header_title": "How to Book a Session",
+  "hero_title_prefix": "Connect with the right therapist,",
+  "hero_highlight": "at your own pace.",
+  "hero_subtitle": "Booking your session on Mantra is simple and confidential. See how easy it is to choose your plan, share your needs, match with a provider, and begin care.",
+  "interactive_title": "How booking works",
+  "interactive_subtitle": "Step-by-step interactive walkthrough of the booking process.",
+  "steps": {
+    "s1_title": "Choose a plan",
+    "s1_desc": "Start with a trial session or select a multi-month plan.",
+    "s2_title": "Share your preferences",
+    "s2_desc": "Tell Mantra your goals, challenges, and therapist preferences.",
+    "s3_title": "Get matched or choose your therapist",
+    "s3_desc": "Let AI match you instantly or browse and invite a provider.",
+    "s4_title": "Chat with your therapist",
+    "s4_desc": "Message your therapist in the app to get comfortable before booking.",
+    "s5_title": "Pick a time & book",
+    "s5_desc": "Select a convenient date and time on your therapist's calendar.",
+    "s6_title": "Join from chat",
+    "s6_desc": "Open the secure video session link shared directly in your chat."
+  },
+  "ui_preview": {
+    "discount": "50% OFF First Session",
+    "intro_trial": "Intro Trial",
+    "select_focus": "Select your focus areas:",
+    "ai_match": "AI Match",
+    "ai_match_sub": "Auto recommendations",
+    "browse_team": "Browse Team",
+    "browse_team_sub": "Pick manually",
+    "therapist_msg": "Hello! I'm looking forward to supporting you.",
+    "therapist_reply": "Hi Dr. Miller! I just booked Friday.",
+    "calendar_title": "Select Session Time",
+    "join_btn": "Join Video Session",
+    "secure_room": "100% encrypted & confidential"
+  },
+  "video_title": "Watch the full booking walkthrough",
+  "video_subtitle": "Step-by-step visual demonstration of the entire in-app booking process.",
+  "faq_title": "Frequently asked questions",
+  "cta_title": "Ready to take the next step?",
+  "cta_subtitle": "Explore our licensed therapists and book your first session whenever you're ready.",
+  "cta_btn": "Explore Therapy Plans"
+}

@@ -1,0 +1,81 @@
+{
+  "header_back": "Back",
+  "header_title": "Getting Started",
+  "hero_title_prefix": "A plan for your wellbeing,",
+  "hero_highlight": "built around you.",
+  "hero_subtitle": "Get a personalized plan with guided activities, practical tools, and support to help you make progress, one step at a time.",
+  "how_it_works_title": "Everything you need to work on your wellbeing.",
+  "how_it_works_subtitle": "Your personalized plan brings together activities, tools, progress tracking, and professional support in one place.",
+  "flow_steps": {
+    "plan": "Your Plan",
+    "activities": "Activities",
+    "tools": "Tools",
+    "progress": "Progress",
+    "support": "Support"
+  },
+  "video_section_title": "See how Mantra works",
+  "video_section_subtitle": "Take a quick tour of the app and see where your plan, activities, and wellbeing tools fit into your journey.",
+  "adapts_title": "Your plan adapts to you",
+  "adapts_subtitle": "Choose what you'd like to work on, such as anxiety, stress, low mood, ADHD, OCD, or more. Mantra then gives you guided activities and resources tailored to your focus.",
+  "focus_areas": {
+    "anxiety": "Anxiety",
+    "stress": "Stress",
+    "low_mood": "Low Mood",
+    "adhd": "ADHD",
+    "ocd": "OCD",
+    "more": "More"
+  },
+  "focus_taglines": {
+    "anxiety": "Grounding nervous system spikes and easing anxious thought loops",
+    "stress": "Relieving chronic workday tension and burnout prevention",
+    "low_mood": "Breaking lethargy cycles with gentle behavioral activation",
+    "adhd": "Managing executive function friction and focus overwhelm",
+    "ocd": "Response prevention and cognitive flexibility exercises",
+    "more": "Sleep quality, self esteem, relationships and habit growth"
+  },
+  "phases_labels": {
+    "phase": "Phase 0{{num}} • {{step}}",
+    "understand": "Understand",
+    "practice": "Practice",
+    "reflect": "Reflect",
+    "progress": "Progress"
+  },
+  "activities_title": "Small activities. Real progress.",
+  "activities_subtitle": "Your plan gives you activities that help you learn, reflect, practice, and track, so you can take small steps toward feeling better.",
+  "activity_types": {
+    "learn": "Learn",
+    "reflect": "Reflect",
+    "practice": "Practice",
+    "track": "Track"
+  },
+  "tools_title": "Tools when you need them",
+  "tools_subtitle": "Explore meditation, journaling, mindfulness, assessments, trackers, AI support, and more whenever you need them.",
+  "tools_list": {
+    "meditation": "Meditation",
+    "journaling": "Journaling",
+    "mindfulness": "Mindfulness",
+    "assessments": "Assessments",
+    "trackers": "Trackers",
+    "ai_support": "AI Support",
+    "self_care": "Self-Care"
+  },
+  "points_title": "Every step counts",
+  "points_subtitle": "Complete activities and meaningful actions to earn points.",
+  "points_steps": {
+    "complete_title": "Complete",
+    "complete_desc": "Finish activities",
+    "earn_title": "Earn Points",
+    "earn_desc": "+10 pts reward",
+    "redeem_title": "Redeem Rewards",
+    "redeem_desc": "Eligible services"
+  },
+  "points_footer": "Points can be used toward eligible wellness services available through Mantra.",
+  "support_title": "Need more support?",
+  "support_subtitle": "You're not on your own.",
+  "support_desc": "Explore professional support from qualified therapists and other wellness services whenever you need additional help.",
+  "support_btn": "Explore professional support",
+  "cta_title": "You're ready to get started.",
+  "cta_subtitle": "Open your personalized plan, complete your first activity, and take the next step toward better wellbeing.",
+  "cta_btn_start": "Start My Journey",
+  "cta_btn_starting": "Starting..."
+}

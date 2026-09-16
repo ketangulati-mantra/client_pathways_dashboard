@@ -1,0 +1,17 @@
+{
+  "header_back": "Z powrotem",
+  "header_title": "Codzienne odprawy",
+  "streak_title": "Seria dnia",
+  "home_welcome": "Jak się teraz czujesz?",
+  "home_subtitle": "Poświęć chwilę uważności, by dostroić się do swojego emocjonalnego krajobrazu i stanu ciała.",
+  "btn_start_checkin": "Start Check-In",
+  "history_title": "Twoje ostatnie odgłosy",
+  "step_emotion_title": "Wybierz swój aktualny stan emocjonalny",
+  "step_intensity_title": "Jak silne jest to uczucie?",
+  "step_context_title": "Co wpływa na to, jak się czujesz?",
+  "step_reflection_title": "Refleksja i Uwaga",
+  "step_response_title": "Spersonalizowany wgląd",
+  "btn_continue": "Kontynuuj",
+  "btn_finish": "Pełne zameldowanie",
+  "btn_exit": "Kontynuuj mój plan"
+}

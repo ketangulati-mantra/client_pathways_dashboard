@@ -1,0 +1,60 @@
+{
+  "back": "返回",
+  "assessment_title": "情绪健康评估",
+  "instruction": "过去一周这对你来说有多大影响？",
+  "question_counter": "{{current}} 问题 {{total}}",
+  "options": {
+    "not_at_all": "一点也不",
+    "sometimes": "有时候",
+    "often": "经常",
+    "almost_always": "几乎总是这样"
+  },
+  "questions": {
+    "q1": "我差点慌了",
+    "q2": "尽管我没有做任何身体上的努力，但我感觉心跳加速",
+    "q3": "我无缘无故害怕",
+    "q4": "我觉得自己没有什么值得期待的",
+    "q5": "我感到沮丧和沮丧",
+    "q6": "我无法对任何事情产生热情",
+    "q7": "我很难放松下来",
+    "q8": "我发现自己变得焦躁不安",
+    "q9": "我发现自己很难放松"
+  },
+  "categories": {
+    "anxiety": "焦虑",
+    "anxiety_desc": "测量情境性焦虑、身体紧张和紧张感。",
+    "depression": "抑郁",
+    "depression_desc": "测量能量低落、缺乏积极情绪以及难以产生热情。",
+    "stress": "应力",
+    "stress_desc": "测量放松困难、坐立不安和情绪紧张。"
+  },
+  "levels": {
+    "mild": "温和",
+    "moderate": "中等",
+    "severe": "严重",
+    "extremely_severe": "极其严重"
+  },
+  "messages": {
+    "anxiety_mild": "你的回答暗示你有轻度或情境性焦虑。日常压力有时会被放大，但温和的正念和呼吸可以让你保持脚踏实地。",
+    "anxiety_moderate": "你的反应显示你有中度焦虑。你可能偶尔会经历身体或心理紧张，影响你的平静。",
+    "anxiety_severe": "你的反应显示焦虑加剧，可能影响了你每天的内心平静。",
+    "anxiety_extremely_severe": "你的反应显示你现在处于高度焦虑和痛苦状态。与专业人士联系可以提供安全和缓解。",
+    "depression_mild": "你的回答显示情绪低落是轻微到轻微的。温和的自我关怀和保持支持性的日常习惯很有帮助。",
+    "depression_moderate": "你的回答显示情绪中度低落或热情低落。与治疗师交流可以提供宝贵的指导。",
+    "depression_severe": "你的回答表明你现在背负着明显的情绪负担。",
+    "depression_extremely_severe": "你的反应表明情绪沉重。专业指导可以帮助你安全应对。",
+    "stress_mild": "你的回答显示出日常压力是可控的。",
+    "stress_moderate": "你的回答表明你有适度压力和难以放松。有意识的小休息可以帮助恢复平衡。",
+    "stress_severe": "你的回答暗示你压力很大，可能影响你的睡眠和精力。",
+    "stress_extremely_severe": "你的回答表明你现在正承受着极大的压力。让专业人士帮你理清这些情绪，可能会带来缓解。"
+  },
+  "report": {
+    "title": "你的情感快照",
+    "desc": "以下是你在关键情绪指标上的感受概述。",
+    "talk_prompt": "想找人聊聊吗？",
+    "talk_sub": "您需要专业支持时随时为您提供。",
+    "btn_view_plans": "查看治疗计划",
+    "btn_finish": "全面评估",
+    "btn_back": "返回"
+  }
+}

@@ -128,4 +128,17 @@ if (i18n.language) {
   updateDocumentDirection(i18n.language);
 }
 
+// Dynamically react to URL param ?lang=xx changes in realtime
+if (typeof window !== 'undefined') {
+  const handleUrlLangChange = () => {
+    const currentLang = hashQueryDetector.lookup();
+    if (currentLang && currentLang !== i18n.language) {
+      i18n.changeLanguage(currentLang);
+    }
+  };
+
+  window.addEventListener('hashchange', handleUrlLangChange);
+  window.addEventListener('popstate', handleUrlLangChange);
+}
+
 export default i18n;

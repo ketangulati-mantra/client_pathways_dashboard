@@ -1,0 +1,43 @@
+{
+  "header_back": "Geri",
+  "header_title": "Bir Oturum Nasıl Rezervasyon Yapılır",
+  "hero_title_prefix": "Doğru terapistle bağlantı kurun,",
+  "hero_highlight": "kendi hızında.",
+  "hero_subtitle": "Mantra üzerinden seansınızı ayarlamak basit ve gizlidir. Planınızı seçmenin, ihtiyaçlarınızı paylaşmanın, bir sağlayıcıyla eşleşmenin ve bakıma başlamanın ne kadar kolay olduğunu görün.",
+  "interactive_title": "Rezervasyon Nasıl Çalışır",
+  "interactive_subtitle": "Rezervasyon sürecinin adım adım etkileşimli rehberi.",
+  "steps": {
+    "s1_title": "Bir plan seçin",
+    "s1_desc": "Deneme oturumu ile başlayın ya da çok aylık bir plan seçin.",
+    "s2_title": "Tercihlerinizi paylaşın",
+    "s2_desc": "Mantra'ya hedeflerinizi, zorluklarınızı ve terapist tercihlerinizi söyleyin.",
+    "s3_title": "Eşleştirin ya da terapistinizi seçin",
+    "s3_desc": "Yapay zekaya hemen eşleştirin ya da bir sağlayıcıya göz atıp davet edin.",
+    "s4_title": "Terapistinizle sohbet edin",
+    "s4_desc": "Rezervasyon yapmadan önce rahatlamak için uygulamadan terapistinize mesaj atın.",
+    "s5_title": "Bir zaman ve kitap seç",
+    "s5_desc": "Terapistinizin takviminden uygun bir tarih ve saat seçin.",
+    "s6_title": "Sohbetten katıl",
+    "s6_desc": "Sohbetinizde doğrudan paylaşılan güvenli video oturum bağlantısını açın."
+  },
+  "ui_preview": {
+    "discount": "İlk Oturumda %50 İNDİRİS",
+    "intro_trial": "Giriş Duruşması",
+    "select_focus": "Odak noktalarınızı seçin:",
+    "ai_match": "AI Maçı",
+    "ai_match_sub": "Otomobil önerileri",
+    "browse_team": "Takımı Gez",
+    "browse_team_sub": "Manuel seç",
+    "therapist_msg": "Merhaba! Size destek olmayı dört gözle bekliyorum.",
+    "therapist_reply": "Merhaba Dr. Miller! Cuma günü yeni rezervasyon yaptım.",
+    "calendar_title": "Oturum Zamanını Seç",
+    "join_btn": "Video Oturumuna Katılın",
+    "secure_room": "%100 şifreli ve gizli"
+  },
+  "video_title": "Rezervasyon sürecinin tamamını izleyin",
+  "video_subtitle": "Tüm uygulama içi rezervasyon sürecinin adım adım görsel gösterimi.",
+  "faq_title": "Sıkça Sorulan Sorular",
+  "cta_title": "Bir sonraki adımı atmaya hazır mısınız?",
+  "cta_subtitle": "Lisanslı terapistlerimizi keşfedin ve hazır olduğunuzda ilk seansınızı ayarlayın.",
+  "cta_btn": "Terapi Planlarını Keşfedin"
+}

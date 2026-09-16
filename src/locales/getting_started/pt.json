@@ -1,0 +1,81 @@
+{
+  "header_back": "Voltar",
+  "header_title": "Começando",
+  "hero_title_prefix": "Um plano para o seu bem-estar,",
+  "hero_highlight": "construído ao seu redor.",
+  "hero_subtitle": "Obtenha um plano personalizado com atividades guiadas, ferramentas práticas e apoio para ajudar você a progredir, um passo de cada vez.",
+  "how_it_works_title": "Tudo o que você precisa para trabalhar no seu bem-estar.",
+  "how_it_works_subtitle": "Seu plano personalizado reúne atividades, ferramentas, acompanhamento de progresso e suporte profissional em um só lugar.",
+  "flow_steps": {
+    "plan": "Seu Plano",
+    "activities": "Atividades",
+    "tools": "Ferramentas",
+    "progress": "Progresso",
+    "support": "Apoio"
+  },
+  "video_section_title": "Veja como funciona o Mantra",
+  "video_section_subtitle": "Faça um rápido tour pelo aplicativo e veja onde seu plano, atividades e ferramentas de bem-estar se encaixam na sua jornada.",
+  "adapts_title": "Seu plano se adapta a você",
+  "adapts_subtitle": "Escolha o que você gostaria de trabalhar, como ansiedade, estresse, humor baixo, TDAH, TOC ou outros. O Mantra então oferece atividades guiadas e recursos adaptados ao seu foco.",
+  "focus_areas": {
+    "anxiety": "Ansiedade",
+    "stress": "Estresse",
+    "low_mood": "Humor Baixo",
+    "adhd": "TDAH",
+    "ocd": "TOC",
+    "more": "Mais"
+  },
+  "focus_taglines": {
+    "anxiety": "Aterrando picos do sistema nervoso e aliviando os ciclos de pensamento ansioso",
+    "stress": "Aliviar a tensão crônica do dia de trabalho e a prevenção do esgotamento",
+    "low_mood": "Quebrar ciclos de letargia com ativação comportamental suave",
+    "adhd": "Gerenciando atritos na função executiva e sobrecarga de foco",
+    "ocd": "Prevenção de resposta e exercícios de flexibilidade cognitiva",
+    "more": "Qualidade do sono, autoestima, relacionamentos e desenvolvimento de hábitos"
+  },
+  "phases_labels": {
+    "phase": "Fase 0{{num}} • {{step}}",
+    "understand": "Entenda",
+    "practice": "Prática",
+    "reflect": "Refletir",
+    "progress": "Progresso"
+  },
+  "activities_title": "Pequenas atividades. Progresso real.",
+  "activities_subtitle": "Seu plano oferece atividades que ajudam a aprender, refletir, praticar e acompanhar, para que você possa dar pequenos passos para se sentir melhor.",
+  "activity_types": {
+    "learn": "Aprenda",
+    "reflect": "Refletir",
+    "practice": "Prática",
+    "track": "Pista"
+  },
+  "tools_title": "Ferramentas quando você precisa",
+  "tools_subtitle": "Explore meditação, diário, mindfulness, avaliações, rastreadores, suporte de IA e muito mais sempre que precisar.",
+  "tools_list": {
+    "meditation": "Meditação",
+    "journaling": "Diário",
+    "mindfulness": "Atenção plena",
+    "assessments": "Avaliações",
+    "trackers": "Rastreadores",
+    "ai_support": "Suporte de IA",
+    "self_care": "Autocuidado"
+  },
+  "points_title": "Cada passo conta",
+  "points_subtitle": "Complete atividades e ações significativas para ganhar pontos.",
+  "points_steps": {
+    "complete_title": "Completo",
+    "complete_desc": "Atividades finais",
+    "earn_title": "Ganhe Pontos",
+    "earn_desc": "Recompensa de +10 pontos",
+    "redeem_title": "Resgatar Recompensas",
+    "redeem_desc": "Serviços elegíveis"
+  },
+  "points_footer": "Os pontos podem ser usados para serviços de bem-estar elegíveis disponíveis através do Mantra.",
+  "support_title": "Precisa de mais apoio?",
+  "support_subtitle": "Você não está sozinho.",
+  "support_desc": "Explore o apoio profissional de terapeutas qualificados e outros serviços de bem-estar sempre que precisar de ajuda adicional.",
+  "support_btn": "Explore o suporte profissional",
+  "cta_title": "Você está pronto para começar.",
+  "cta_subtitle": "Abra seu plano personalizado, complete sua primeira atividade e dê o próximo passo rumo a um melhor bem-estar.",
+  "cta_btn_start": "Comece Minha Jornada",
+  "cta_btn_starting": "Começando..."
+}

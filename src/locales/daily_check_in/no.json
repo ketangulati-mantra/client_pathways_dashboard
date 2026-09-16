@@ -1,0 +1,17 @@
+{
+  "header_back": "Tilbake",
+  "header_title": "Daglig innsjekk",
+  "streak_title": "Dagsrekke",
+  "home_welcome": "Hvordan føler du deg akkurat nå?",
+  "home_subtitle": "Ta et bevisst øyeblikk for å stille inn på ditt emosjonelle landskap og kroppslige tilstand.",
+  "btn_start_checkin": "Start innsjekk",
+  "history_title": "Dine siste innsjekkinger",
+  "step_emotion_title": "Velg din nåværende følelsesmessige tilstand",
+  "step_intensity_title": "Hvor sterk er denne følelsen?",
+  "step_context_title": "Hva bidrar til hvordan du føler deg?",
+  "step_reflection_title": "Reflekter og noter",
+  "step_response_title": "Personlig innsikt",
+  "btn_continue": "Fortsett",
+  "btn_finish": "Fullstendig innsjekk",
+  "btn_exit": "Fortsett med planen min"
+}

@@ -1,0 +1,81 @@
+{
+  "header_back": "Retour",
+  "header_title": "Commencer",
+  "hero_title_prefix": "Un plan pour ton bien-être,",
+  "hero_highlight": "construite autour de toi.",
+  "hero_subtitle": "Obtenez un plan personnalisé avec des activités guidées, des outils pratiques et du soutien pour vous aider à progresser, étape par étape.",
+  "how_it_works_title": "Tout ce dont vous avez besoin pour travailler sur votre bien-être.",
+  "how_it_works_subtitle": "Votre plan personnalisé réunit activités, outils, suivi de la progression et soutien professionnel en un seul endroit.",
+  "flow_steps": {
+    "plan": "Votre plan",
+    "activities": "Activités",
+    "tools": "Outils",
+    "progress": "Progrès",
+    "support": "Soutien"
+  },
+  "video_section_title": "Voyez comment fonctionne Mantra",
+  "video_section_subtitle": "Faites un rapide tour de l’application et voyez où votre plan, vos activités et vos outils de bien-être s’intègrent dans votre parcours.",
+  "adapts_title": "Votre plan s’adapte à vous",
+  "adapts_subtitle": "Choisissez ce sur quoi vous souhaitez travailler, comme l’anxiété, le stress, la baisse de moral, le TDAH, le TOC, ou d’autres encore. Mantra vous propose ensuite des activités guidées et des ressources adaptées à votre priorité.",
+  "focus_areas": {
+    "anxiety": "Anxiété",
+    "stress": "Stress",
+    "low_mood": "Humeur déprimée",
+    "adhd": "TDAH",
+    "ocd": "TOC",
+    "more": "Plus"
+  },
+  "focus_taglines": {
+    "anxiety": "Ancrage du système nerveux et apaisement des boucles de pensée anxieuse",
+    "stress": "Soulager la tension chronique de la journée de travail et prévenir l’épuisement professionnel",
+    "low_mood": "Briser les cycles de léthargie par une activation comportementale douce",
+    "adhd": "Gérer la friction des fonctions exécutives et la surcharge de concentration",
+    "ocd": "Exercices de prévention de la réponse et de flexibilité cognitive",
+    "more": "Qualité du sommeil, estime de soi, relations et développement des habitudes"
+  },
+  "phases_labels": {
+    "phase": "Phase 0{{num}} • {{step}}",
+    "understand": "Comprends",
+    "practice": "Pratique",
+    "reflect": "Réfléchir",
+    "progress": "Progrès"
+  },
+  "activities_title": "Petites activités. De vrais progrès.",
+  "activities_subtitle": "Votre plan vous propose des activités qui vous aident à apprendre, réfléchir, pratiquer et suivre, afin que vous puissiez faire de petits pas vers le mieux.",
+  "activity_types": {
+    "learn": "Apprendre",
+    "reflect": "Réfléchir",
+    "practice": "Pratique",
+    "track": "Piste"
+  },
+  "tools_title": "Des outils quand on en a besoin",
+  "tools_subtitle": "Explorez la méditation, le journal intime, la pleine conscience, les évaluations, les trackers, le soutien à l’IA, et plus encore quand vous en avez besoin.",
+  "tools_list": {
+    "meditation": "Méditation",
+    "journaling": "Journalisation",
+    "mindfulness": "Pleine conscience",
+    "assessments": "Évaluations",
+    "trackers": "Pisteurs",
+    "ai_support": "Support IA",
+    "self_care": "Soins personnels"
+  },
+  "points_title": "Chaque étape compte",
+  "points_subtitle": "Accomplissez des activités et des actions significatives pour gagner des points.",
+  "points_steps": {
+    "complete_title": "Complet",
+    "complete_desc": "Activités finales",
+    "earn_title": "Gagner des points",
+    "earn_desc": "Récompense de +10 points",
+    "redeem_title": "Échanger des récompenses",
+    "redeem_desc": "Services éligibles"
+  },
+  "points_footer": "Les points peuvent être utilisés pour les services de bien-être éligibles disponibles via Mantra.",
+  "support_title": "Vous avez besoin de plus de soutien ?",
+  "support_subtitle": "Tu n’es pas seul.",
+  "support_desc": "Explorez le soutien professionnel de thérapeutes qualifiés et d’autres services de bien-être chaque fois que vous avez besoin d’aide supplémentaire.",
+  "support_btn": "Découvrez un soutien professionnel",
+  "cta_title": "Vous êtes prêt à commencer.",
+  "cta_subtitle": "Ouvrez votre plan personnalisé, terminez votre première activité et passez à l’étape suivante vers un meilleur bien-être.",
+  "cta_btn_start": "Commence mon voyage",
+  "cta_btn_starting": "Commencer..."
+}

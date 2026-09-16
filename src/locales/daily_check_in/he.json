@@ -1,0 +1,17 @@
+{
+  "header_back": "חזרה",
+  "header_title": "צ'ק-אין יומי",
+  "streak_title": "רצף יום",
+  "home_welcome": "איך אתה מרגיש עכשיו?",
+  "home_subtitle": "קחו רגע מודע כדי להתמקד בנוף הרגשי ובמצב הגוף שלכם.",
+  "btn_start_checkin": "התחל בצ'ק-אין",
+  "history_title": "הצ'ק-אין האחרונים שלך",
+  "step_emotion_title": "בחר את המצב הרגשי הנוכחי שלך",
+  "step_intensity_title": "כמה חזקה ההרגשה הזו?",
+  "step_context_title": "מה תורם לאיך שאתה מרגיש?",
+  "step_reflection_title": "רפלקט & הערה",
+  "step_response_title": "תובנה מותאמת אישית",
+  "btn_continue": "המשך",
+  "btn_finish": "צ'ק-אין מלא",
+  "btn_exit": "המשך לתוכנית שלי"
+}

@@ -1,0 +1,14 @@
+{
+  "header_back": "Zpět",
+  "header_title": "Emotion Wheel",
+  "prompt_level1": "Co teď cítíš?",
+  "prompt_level2": "Objevování {{rodiny}}",
+  "prompt_level3": "Pojďme být konkrétnější",
+  "prompt_intensity": "Jak intenzivní je tato emoce?",
+  "prompt_context": "Co v tobě vyvolalo tento pocit?",
+  "prompt_needs": "Co teď potřebuješ?",
+  "snapshot_title": "Tvůj emocionální okamžik",
+  "btn_explore": "Prozkoumejte více",
+  "btn_complete": "Kompletní činnost",
+  "btn_share": "Sdílet Snapshot"
+}

@@ -2,7 +2,7 @@ import { Response } from 'express';
 import jwt from 'jsonwebtoken';
 import { config } from '../config/index.js';
 import { AuthRequest, AdminJwtPayload } from '../types/auth.js';
-import { findAdminByEmail, findAdminById, verifyPassword, hashPassword, updateAdminLastLogin, createAdminRecord } from '../services/adminAuthService.js';
+import { findAdminByEmail, findAdminById, verifyPassword, hashPassword, updateAdminLastLogin, createAdminRecord, resetAdminPasswordRecord } from '../services/adminAuthService.js';
 
 const COOKIE_NAME = 'admin_token';
 
@@ -63,11 +63,23 @@ export async function login(req: AuthRequest, res: Response) {
             error: 'Invalid email or password.'
           });
         }
+      } else {
+        // If account had no password hash, store current password as its hash
+        try {
+          const hashed = await hashPassword(password);
+          await resetAdminPasswordRecord(admin.user_id || admin.id, hashed);
+        } catch (e) {
+          console.warn('⚠️ Could not update initial password hash:', e);
+        }
       }
     }
 
-    // Update last login timestamp in DB
-    await updateAdminLastLogin(admin.id);
+    // Update last login timestamp in DB (non-blocking if DB schema mismatch)
+    try {
+      await updateAdminLastLogin(admin.user_id || admin.id);
+    } catch (dbErr) {
+      console.warn('⚠️ updateAdminLastLogin warning:', dbErr);
+    }
 
     const payload: AdminJwtPayload = {
       id: String(admin.user_id || admin.id) as any,
@@ -88,7 +100,7 @@ export async function login(req: AuthRequest, res: Response) {
       admin: payload
     });
   } catch (err: any) {
-    console.error('❌ Login Error:', err);
+    console.error('❌ Login Error:', err?.message || err, err?.stack);
     return res.status(500).json({
       success: false,
       error: 'An unexpected error occurred during authentication.'

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import {
-  ActiveChallengeDashboardPayload,
-  ChallengeLeaderboardEntry
+  ChallengeDashboardPayload,
+  Challenge,
+  ChallengeEnrollment
 } from '../../services/challengeService';
 import Mantra21InviteModal from '../Mantra21InviteModal';
 
 interface ActiveChallengeDashboardViewProps {
-  dashboard: ActiveChallengeDashboardPayload;
-  onRefresh: () => void;
+  dashboard: ChallengeDashboardPayload;
+  onRefresh?: () => void;
   onNavigatePathwayTask?: (taskId: string) => void;
 }
 
@@ -16,39 +17,31 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
   onRefresh,
   onNavigatePathwayTask
 }) => {
-  const { challenge, enrollment, todayActivity, stats, milestones, suggestions, therapyRecommendation, leaderboard } = dashboard;
+  const { challenge, enrollment, today, progress, milestones, suggestions, therapyRecommendation, leaderboard } = dashboard;
   const [isInviteOpen, setIsInviteOpen] = useState(false);
 
-  const totalDays = challenge.durationDays || 21;
-  const currentDay = enrollment.currentDay || 1;
-  const progressPercent = Math.min(100, Math.round((enrollment.completedDays / totalDays) * 100));
+  const totalDays = challenge?.durationDays || 21;
+  const currentDay = enrollment?.currentDay || 1;
+  const completedDays = progress?.completedDays ?? enrollment?.completedDays ?? 0;
+  const currentStreak = progress?.currentStreak ?? enrollment?.currentStreak ?? 0;
+  const longestStreak = progress?.longestStreak ?? enrollment?.longestStreak ?? 0;
+  const progressPercent = progress?.percentage ?? Math.min(100, Math.round((completedDays / totalDays) * 100));
 
   const handleContinueToday = () => {
-    if (challenge.slug === 'mantra_21' || challenge.id === 'mantra_21') {
-      window.location.hash = '#/task/mantra-21';
-    } else if (todayActivity?.actionUrl) {
-      if (todayActivity.actionUrl.startsWith('#') || todayActivity.actionUrl.startsWith('/')) {
-        window.location.hash = todayActivity.actionUrl.replace(/^#/, '');
-      } else {
-        window.location.href = todayActivity.actionUrl;
-      }
+    const route = today?.actionRoute || '/task/mantra-21';
+    if (onNavigatePathwayTask) {
+      onNavigatePathwayTask(route);
     } else {
-      window.location.hash = '#/task/mantra-21';
+      window.location.hash = route.startsWith('/') ? route : `/${route}`;
     }
   };
 
   const handleBookTherapy = () => {
-    if (therapyRecommendation?.actionUrl) {
-      const url = therapyRecommendation.actionUrl;
-      if (url.startsWith('#')) {
-        window.location.hash = url;
-      } else if (url.startsWith('/')) {
-        window.location.hash = `#${url}`;
-      } else {
-        window.location.href = url;
-      }
+    const route = therapyRecommendation?.actionRoute || '/task/how-can-therapy-help';
+    if (onNavigatePathwayTask) {
+      onNavigatePathwayTask(route);
     } else {
-      window.location.hash = '#/task/how-can-therapy-help';
+      window.location.hash = route.startsWith('/') ? route : `/${route}`;
     }
   };
 
@@ -86,10 +79,10 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
 
           {/* Title & Tagline */}
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            {challenge.title}
+            {challenge?.name || 'Mantra 21'}
           </h1>
           <p className="mt-2 text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
-            {challenge.tagline || challenge.description}
+            {challenge?.tagline || challenge?.description}
           </p>
 
           {/* Main Action Bar / Daily Tracker Card */}
@@ -105,11 +98,11 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
                     / {totalDays}
                   </span>
                 </div>
-                {todayActivity && (
+                {today && (
                   <div className="text-sm font-medium text-slate-200 mt-1 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
-                    {todayActivity.title}
-                    <span className="text-xs text-slate-400 font-normal">({todayActivity.estimatedMinutes} min)</span>
+                    {today.title}
+                    <span className="text-xs text-slate-400 font-normal">({today.estimatedMinutes} min)</span>
                   </div>
                 )}
               </div>
@@ -144,7 +137,7 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
               <div className="grid grid-cols-3 gap-3 pt-2">
                 <div className="bg-slate-950/60 rounded-xl p-3 border border-slate-800/80 text-center">
                   <div className="text-lg sm:text-xl font-extrabold text-amber-400">
-                    🔥 {stats.currentStreak} <span className="text-xs font-normal text-slate-400">days</span>
+                    🔥 {currentStreak} <span className="text-xs font-normal text-slate-400">days</span>
                   </div>
                   <div className="text-[11px] text-slate-400 uppercase tracking-wide mt-0.5">
                     Current Streak
@@ -153,7 +146,7 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
 
                 <div className="bg-slate-950/60 rounded-xl p-3 border border-slate-800/80 text-center">
                   <div className="text-lg sm:text-xl font-extrabold text-emerald-400">
-                    ✓ {stats.completedDays} <span className="text-xs font-normal text-slate-400">days</span>
+                    ✓ {completedDays} <span className="text-xs font-normal text-slate-400">days</span>
                   </div>
                   <div className="text-[11px] text-slate-400 uppercase tracking-wide mt-0.5">
                     Completed
@@ -162,7 +155,7 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
 
                 <div className="bg-slate-950/60 rounded-xl p-3 border border-slate-800/80 text-center">
                   <div className="text-lg sm:text-xl font-extrabold text-sky-400">
-                    🏆 {stats.longestStreak} <span className="text-xs font-normal text-slate-400">best</span>
+                    🏆 {longestStreak} <span className="text-xs font-normal text-slate-400">best</span>
                   </div>
                   <div className="text-[11px] text-slate-400 uppercase tracking-wide mt-0.5">
                     Longest Streak
@@ -177,36 +170,38 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
       {/* Main Content Area */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 space-y-8">
         {/* Section 1: Milestones Track */}
-        <section className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 sm:p-6 backdrop-blur-sm">
-          <h2 className="text-base font-bold text-white flex items-center gap-2 mb-4">
-            <span className="text-sky-400">📍</span> Journey Milestones
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {milestones.map((m) => (
-              <div
-                key={m.day}
-                className={`p-3.5 rounded-xl border transition-all ${
-                  m.isUnlocked
-                    ? 'bg-sky-950/40 border-sky-500/40 text-sky-200'
-                    : 'bg-slate-950/40 border-slate-800 text-slate-400'
-                }`}
-              >
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-xs font-bold uppercase tracking-wider">
-                    Day {m.day}
-                  </span>
-                  <span>{m.icon}</span>
+        {milestones && milestones.length > 0 && (
+          <section className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 sm:p-6 backdrop-blur-sm">
+            <h2 className="text-base font-bold text-white flex items-center gap-2 mb-4">
+              <span className="text-sky-400">📍</span> Journey Milestones
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {milestones.map((m) => (
+                <div
+                  key={m.day}
+                  className={`p-3.5 rounded-xl border transition-all ${
+                    m.isReached
+                      ? 'bg-sky-950/40 border-sky-500/40 text-sky-200'
+                      : 'bg-slate-950/40 border-slate-800 text-slate-400'
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-xs font-bold uppercase tracking-wider">
+                      Day {m.day}
+                    </span>
+                    <span>{m.isReached ? '✓' : '🔒'}</span>
+                  </div>
+                  <div className="text-xs font-semibold text-slate-200 line-clamp-1">
+                    {m.title}
+                  </div>
+                  <div className="text-[11px] text-slate-400 mt-0.5">
+                    {m.isReached ? 'Unlocked' : (m.isCurrent ? 'Current' : 'Upcoming')}
+                  </div>
                 </div>
-                <div className="text-xs font-semibold text-slate-200 line-clamp-1">
-                  {m.title}
-                </div>
-                <div className="text-[11px] text-slate-400 mt-0.5">
-                  {m.isUnlocked ? 'Unlocked' : 'Upcoming'}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Section 2: Personalized Pathway Suggestions */}
         {suggestions && suggestions.length > 0 && (
@@ -231,19 +226,19 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
                 >
                   <div>
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-semibold text-sky-400">{sug.category}</span>
-                      <span className="text-[11px] text-slate-400">{sug.estimatedMinutes} min</span>
+                      <span className="text-xs font-semibold text-sky-400">{sug.tag || 'ACTIVITY'}</span>
+                      <span className="text-[11px] text-slate-400">{sug.estimatedMinutes || 5} min</span>
                     </div>
                     <h3 className="text-sm font-bold text-slate-100 mt-1">{sug.title}</h3>
                     <p className="text-xs text-slate-300 mt-1 line-clamp-2">{sug.description}</p>
                   </div>
-                  {sug.actionUrl && (
+                  {sug.actionRoute && (
                     <button
                       onClick={() => {
                         if (onNavigatePathwayTask) {
-                          onNavigatePathwayTask(sug.actionUrl);
+                          onNavigatePathwayTask(sug.actionRoute);
                         } else {
-                          window.location.hash = sug.actionUrl.startsWith('#') ? sug.actionUrl : `#${sug.actionUrl}`;
+                          window.location.hash = sug.actionRoute.startsWith('#') ? sug.actionRoute : `#${sug.actionRoute}`;
                         }
                       }}
                       className="text-xs font-medium text-sky-300 hover:text-sky-200 flex items-center gap-1 self-start group"
@@ -264,7 +259,7 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="space-y-1 max-w-xl">
                 <span className="text-[10px] font-bold tracking-widest text-teal-300 uppercase bg-teal-950/80 px-2.5 py-0.5 rounded-md border border-teal-500/30">
-                  {therapyRecommendation.badge}
+                  {therapyRecommendation.subtitle || 'RECOMMENDED'}
                 </span>
                 <h3 className="text-lg font-bold text-white mt-1">
                   {therapyRecommendation.title}
@@ -277,7 +272,7 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
                 onClick={handleBookTherapy}
                 className="whitespace-nowrap px-5 py-2.5 rounded-xl text-xs font-bold bg-teal-500 hover:bg-teal-400 text-slate-950 shadow-md shadow-teal-500/20 transition-all active:scale-95"
               >
-                {therapyRecommendation.actionText} →
+                {therapyRecommendation.ctaText || 'EXPLORE SUPPORT →'}
               </button>
             </div>
           </section>
@@ -295,20 +290,13 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
                   Snapshot calculated daily. Sticking to small habits together.
                 </p>
               </div>
-              <span className="text-xs font-semibold text-slate-400 bg-slate-800 px-3 py-1 rounded-full">
-                {leaderboard.totalParticipants.toLocaleString()} active participants
-              </span>
             </div>
 
             <div className="space-y-2 mt-3">
-              {leaderboard.topEntries.map((entry: ChallengeLeaderboardEntry) => (
+              {leaderboard.top?.map((entry) => (
                 <div
-                  key={entry.userId}
-                  className={`flex items-center justify-between p-3 rounded-xl border text-xs sm:text-sm ${
-                    entry.isCurrentUser
-                      ? 'bg-sky-950/60 border-sky-400/50 text-white font-semibold shadow-inner'
-                      : 'bg-slate-950/40 border-slate-800/80 text-slate-300'
-                  }`}
+                  key={entry.rank}
+                  className="flex items-center justify-between p-3 rounded-xl border text-xs sm:text-sm bg-slate-950/40 border-slate-800/80 text-slate-300"
                 >
                   <div className="flex items-center gap-3">
                     <span
@@ -325,46 +313,17 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
                       {entry.rank}
                     </span>
                     <span>
-                      {entry.displayName} {entry.isCurrentUser && '(You)'}
+                      {entry.name}
                     </span>
                   </div>
 
                   <div className="flex items-center gap-4 text-xs">
-                    <span className="text-slate-400">
-                      Day <span className="text-white font-semibold">{entry.currentDay}</span>
-                    </span>
                     <span className="text-amber-400 font-semibold">
                       🔥 {entry.streak}d
                     </span>
                   </div>
                 </div>
               ))}
-
-              {/* Show current user entry if outside top slice */}
-              {leaderboard.currentUserEntry &&
-                !leaderboard.topEntries.some((e) => e.userId === leaderboard.currentUserEntry?.userId) && (
-                  <>
-                    <div className="text-center text-xs text-slate-500 py-1">• • •</div>
-                    <div className="flex items-center justify-between p-3 rounded-xl border bg-sky-950/60 border-sky-400/50 text-white font-semibold text-xs sm:text-sm">
-                      <div className="flex items-center gap-3">
-                        <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-sky-600 text-white">
-                          {leaderboard.currentUserEntry.rank}
-                        </span>
-                        <span>
-                          {leaderboard.currentUserEntry.displayName} (You)
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-4 text-xs">
-                        <span className="text-slate-400">
-                          Day <span className="text-white font-semibold">{leaderboard.currentUserEntry.currentDay}</span>
-                        </span>
-                        <span className="text-amber-400 font-semibold">
-                          🔥 {leaderboard.currentUserEntry.streak}d
-                        </span>
-                      </div>
-                    </div>
-                  </>
-                )}
             </div>
           </section>
         )}

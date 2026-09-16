@@ -61,7 +61,7 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
                 ACTIVE CHALLENGE
               </span>
               <span className="text-xs text-slate-400 font-medium">
-                {challenge.category?.toUpperCase()}
+                {challenge?.category?.toUpperCase() || 'MENTAL WELLNESS'}
               </span>
             </div>
 

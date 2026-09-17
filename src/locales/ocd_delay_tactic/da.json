@@ -1,0 +1,107 @@
+{
+  "header_back": "Tilbage",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "Den 60 sekunders pause",
+    "subtitle": "Nogle gange kan en trang føles som noget, du skal handle på med det samme. Lad os øve os i at skabe lidt plads, før du svarer.",
+    "btn_begin": "Begynd"
+  },
+  "step2": {
+    "eyebrow": "SCENARIE 1",
+    "title": "Lad os prøve et scenarie",
+    "subtitle": "Forestil dig, at du lige har forladt dit hus.",
+    "visual_line1": "Du låser hoveddøren og går hen mod din bil.",
+    "visual_thought": "\"Låste jeg den ordentligt?\"",
+    "visual_line2": "Du bemærker trangen til at vende dig om og tjekke.",
+    "btn_continue": "Fortsæt"
+  },
+  "step3": {
+    "eyebrow": "TRANGEN",
+    "banner": "\"Tjek det én gang til.\"",
+    "subtitle": "Du mærker en trang til at vende dig om og tjekke.",
+    "question": "Hvad ville du normalt føle dig tiltrukket af at gøre?",
+    "responses": {
+      "check": "Tjek igen",
+      "ask": "Bed nogen om bekræftelse",
+      "goback": "Gå tilbage og sørg for det",
+      "wait": "Pause og vent"
+    },
+    "btn_next": "Næste"
+  },
+  "step4": {
+    "title": "Du behøver ikke svare endnu.",
+    "subtitle": "I de næste 60 sekunder vil vi øve os i at skabe lidt afstand mellem trangen og din reaktion.",
+    "cadence_pause": "PAS",
+    "cadence_notice": "MEDDELELSE",
+    "cadence_choose": "VÆLG",
+    "detail": "Målet er ikke at få tanken til at forsvinde. Det er at bemærke trangen uden straks at svare på den.",
+    "btn_start": "Start 60-sekunders pause"
+  },
+  "step5": {
+    "badge": "TRANGEN ER HER",
+    "prompts": {
+      "0": "Læg mærke til trangen, som den opstår.",
+      "1": "Du kan mærke trækket uden at svare på det.",
+      "2": "Tag en blid indånding og observer.",
+      "3": "Trangen er bare en fornemmelse lige nu.",
+      "4": "Du behøver ikke løse usikkerheden med det samme.",
+      "5": "Læg mærke til, hvor du mærker spændinger i kroppen.",
+      "6": "Tankerne kommer og går som krusninger på vandet.",
+      "7": "Skaber afstand mellem tanke og handling.",
+      "8": "Du observerer trangen, ikke adlyder den.",
+      "9": "Usikkerhed kan være ubehageligt, og det er okay.",
+      "10": "Lad tanken være der uden at engagere sig.",
+      "11": "Læg mærke til impulsen til at rette eller tjekke.",
+      "12": "Vær nysgerrig på fornemmelsen.",
+      "13": "Du har kontrol over din reaktion.",
+      "14": "Intet behøver at blive afgjort lige nu.",
+      "15": "Du har skabt plads i over 45 sekunder.",
+      "16": "Bare læg mærke til trangen uden at skynde dig med at handle.",
+      "17": "Næsten der — hvilende i pausen.",
+      "18": "Bliv til stede med dette sidste åndedrag.",
+      "19": "Du fuldendte pausen."
+    }
+  },
+  "step6": {
+    "title": "Du har gjort plads.",
+    "subtitle": "Målet var ikke at få trangen til at forsvinde. Det var at give dig selv et øjeblik, før du svarede.",
+    "question": "Hvad lagde du mærke til?",
+    "reflections": {
+      "thought_there": "Tanken var der stadig",
+      "felt_urge": "Jeg følte en trang til at svare",
+      "uncomfortable": "Usikkerheden føltes ubehagelig",
+      "could_wait": "Jeg kunne vente uden at svare med det samme"
+    },
+    "btn_continue": "Fortsæt"
+  },
+  "step7": {
+    "eyebrow": "OCD-CYKLUS",
+    "title": "Hvor pausen passer ind",
+    "subtitle": "OCD skaber en stærk tiltrækning til straks at reagere på tvivl.",
+    "node_doubt": "Tvivl / Påtrængende Tanke",
+    "node_urge": "Trang til at svare",
+    "space_tag": "DEN 60 SEKUNDERS PAUSE",
+    "space_title": "Det er det område, du lige har øvet.",
+    "node_compulsion": "Tvangsmæssig respons",
+    "node_relief": "Midlertidig lettelse → tvivl vender tilbage",
+    "detail": "En pause giver dig et øjeblik, før du automatisk følger det træk.",
+    "btn_try_another": "Prøv et andet scenarie"
+  },
+  "step8": {
+    "eyebrow": "SCENARIE 2",
+    "title": "Øvelsesoverførsel",
+    "subtitle": "Forestil dig, at du lige har sendt en vigtig besked.",
+    "visual_line1": "Du trykker send og lukker samtalen.",
+    "visual_thought": "\"Sagde jeg noget forkert? Måske skulle jeg læse det igen.\"",
+    "visual_line2": "Det samme mønster: Tænkte → trang → pause → valg.",
+    "btn_practice": "Øvepause (60'erne)"
+  },
+  "step9": {
+    "title": "En trang er ikke en instruktion.",
+    "subtitle": "Du behøver ikke svare på alle impulser med det samme. Lidt plads kan skabe et andet udgangspunkt.",
+    "cadence_pause": "PAS",
+    "cadence_notice": "MEDDELELSE",
+    "cadence_choose": "VÆLG",
+    "btn_continue": "Fortsæt"
+  }
+}

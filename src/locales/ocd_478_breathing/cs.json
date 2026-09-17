@@ -1,0 +1,55 @@
+{
+  "header_back": "Zpět",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "DÝCHÁNÍ",
+    "subtitle": "Jednoduchý rytmus, který vám pomůže s dýcháním.",
+    "rhythm_badge": "Nadechněte se 4 · Zadržte 7 · Vydechněte 8",
+    "label_how_long": "JAK DLOUHO?",
+    "btn_begin": "Začátek"
+  },
+  "time_options": {
+    "opt_30s": "30 sekund",
+    "opt_30s_hint": "2 cykly · ≈ 38 sekund",
+    "opt_1m": "1 min",
+    "opt_1m_hint": "3 cykly · ≈ 1 minuta",
+    "opt_2m": "2 minuty",
+    "opt_2m_hint": "6 cyklů · ≈ 2 minuty",
+    "opt_3m": "3 min",
+    "opt_3m_hint": "10 cyklů · ≈ 3 minuty",
+    "opt_5m": "5 minut",
+    "opt_5m_hint": "16 cyklů · ≈ 5 minut"
+  },
+  "settling": {
+    "title": "Usadit se",
+    "subcopy": "Dej si chvíli."
+  },
+  "phases": {
+    "inhale_title": "Nadechněte se",
+    "inhale_sub": "Pomalu se nadechni",
+    "hold_title": "Držte",
+    "hold_sub": "Zůstaň tady",
+    "exhale_title": "Výdech",
+    "exhale_sub": "Pomalu vydechni"
+  },
+  "reflection": {
+    "title": "Dobrá práce.",
+    "subtitle": "Dej si chvíli, než půjdeš dál. Všímej si, jak se teď cítíš.",
+    "question": "Čeho si všimnete?",
+    "choices": {
+      "settled": "Více usazený",
+      "present": "Více přítomnosti",
+      "same": "Stejně tak"
+    },
+    "btn_continue": "Pokračovat"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "NÁDECH 4",
+    "step_hold": "HOLD 7",
+    "step_exhale": "VÝDECH 8",
+    "subtitle": "Vraťte se k této praxi kdykoli budete chtít klidnou chvíli na obnovení své pozornosti.",
+    "btn_continue": "Pokračovat"
+  }
+}

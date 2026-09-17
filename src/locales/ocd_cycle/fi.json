@@ -1,0 +1,155 @@
+{
+  "header_back": "Takaisin",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "OCD-silmukan sisällä",
+    "subtitle": "Katso, miten ajatus voi muuttua kierteeksi."
+  },
+  "stages": {
+    "step_experience": "01 Kokemus",
+    "step_recognize": "02 Tunnusta",
+    "step_explore": "03 Tutustu",
+    "step_practice": "04 Ilmoitus",
+    "step_takeaway": "05 Takeaway"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Ajatus",
+      "uncertainty": "Epävarmuus",
+      "response": "Vastaanotto",
+      "relief": "Helpotus"
+    },
+    "cycle_1": {
+      "thought": "\"Entä jos en lukinnut ovea?\"",
+      "uncertainty": "\"Lukitsinko sen oikeasti?\"",
+      "response": "\"Tarkista uudelleen.\"",
+      "relief": "\"Okei. Voin paremmin.\""
+    },
+    "cycle_2": {
+      "thought": "\"Odota... mutta tarkistinko todella kunnolla?\"",
+      "uncertainty": "\"Minun täytyy olla varma.\"",
+      "response": "\"Tarkista vielä kerran.\"",
+      "relief": "\"Väliaikainen helpotus...\""
+    },
+    "notice_prompt": "Huomasitko sen?",
+    "notice_detail": "Helpotus oli todellinen, mutta epäilys palasi.",
+    "action_prompt": "Katso, mikä muutti →"
+  },
+  "scenarios": {
+    "heading": "Nyt tee siitä sinun.",
+    "subheading": "Valitse tunnistettava skenaario nähdäksesi sen liikkuvan silmukassa.",
+    "checking": {
+      "name": "Tarkistus",
+      "phrase": "\"Entä jos en lukinnut ovea?\"",
+      "thought": "\"Entä jos en lukinnut ovea?\"",
+      "uncertainty": "\"Lukitsinko sen oikeasti?\"",
+      "response": "\"Tarkista lukko uudelleen.\"",
+      "relief": "\"Okei, nyt tuntuu turvalliselta.\"",
+      "return": "\"Odota... tarkistinko kunnolla?\"",
+      "takeaway_quote": "Huomasin, että tarkistaminen tuo nopeaa helpotusta, mutta epäilys palaa.",
+      "takeaway_action": "Seuraavan kerran kun epäilys ilmestyy, pysähdy ja huomaa tarve ennen kuin tarkistat automaattisesti."
+    },
+    "responsibility": {
+      "name": "Vastuu",
+      "phrase": "\"Entä jos tein vakavan virheen?\"",
+      "thought": "\"Entä jos tein vakavan virheen?\"",
+      "uncertainty": "\"Minun täytyy tietää varmasti.\"",
+      "response": "\"Toista jokainen yksityiskohta päässäni.\"",
+      "relief": "\"Hetken aikaa näyttää olevan kunnossa.\"",
+      "return": "\"Entä jos unohdin jonkin yksityiskohdan?\"",
+      "takeaway_quote": "Huomasin, että mielessäni toistaminen yrittää luoda varmuutta, mutta pidentää epäilyä.",
+      "takeaway_action": "Seuraavan kerran, kun halu pelata uudelleen iskee, myönnä epäilys analysoimatta sitä."
+    },
+    "contamination": {
+      "name": "Saastuminen",
+      "phrase": "\"Entä jos koskisin johonkin saastunutta?\"",
+      "thought": "\"Entä jos tuo pinta ei ollut puhdas?\"",
+      "uncertainty": "\"Tunnen oloni epämukavaksi ja saastuneeksi.\"",
+      "response": "\"Pese huolellisesti.\"",
+      "relief": "\"Tunnen oloni puhtaaksi toistaiseksi.\"",
+      "return": "\"Pesinkö tarpeeksi hyvin?\"",
+      "takeaway_quote": "Huomasin, että pesu lievittää alkuperäistä epämukavuutta, mutta luo seuraavan epäilyn.",
+      "takeaway_action": "Seuraavan kerran, kun pesun tarve iskee, anna itsellesi hetki huomata tunne ensin."
+    },
+    "symmetry": {
+      "name": "Juuri sopiva",
+      "phrase": "\"Entä jos en tee tätä ihan oikein?\"",
+      "thought": "\"Tämä ei tunnu tasapainoiselta.\"",
+      "uncertainty": "\"Jotain pahaa saattaa tapahtua tai tuntua väärältä.\"",
+      "response": "\"Tee se uudelleen, kunnes se loksahtaa paikoilleen.\"",
+      "relief": "\"Tuntuu nyt oikealta.\"",
+      "return": "\"Teinkö oikein viimeksi?\"",
+      "takeaway_quote": "Huomasin, että jonkin toiminnon toistaminen 'juuri oikean' tunteen vuoksi pitää halun elossa.",
+      "takeaway_action": "Seuraavan kerran, kun jokin tuntuu keskeneräiseltä, huomaa tarve tehdä uusi asia toistamatta heti."
+    },
+    "doubt_return_label": "Epäilys palaa:"
+  },
+  "snapshot": {
+    "title": "Sinun Loop-tilannekuvasi",
+    "thought_label": "Ajatus",
+    "uncertainty_label": "Epävarmuus",
+    "response_label": "Vastaanotto",
+    "effect_label": "Lyhyen aikavälin vaikutus",
+    "next_label": "Mitä tapahtuu seuraavaksi",
+    "replay_btn": "Uusintaskenaario"
+  },
+  "response_point": {
+    "heading": "Tässä kohtaa kuvio muuttuu mielenkiintoiseksi.",
+    "subheading": "Et ehkä hallitse ajatusta tai epävarmuutta. Mutta voit huomata, mitä tapahtuu seuraavaksi.",
+    "choice_check": "Tarkista uudestaan",
+    "choice_notice": "Huomaa tarve",
+    "check_result_title": "Automaattinen vaste",
+    "check_result_body": "Tarkistus toi helpotusta. Epäilys palasi.",
+    "notice_result_title": "Tauko",
+    "notice_result_body": "Epävarmuus saattaa silti tuntua epämukavalta. Halun huomaaminen antaa hetken ennen kuin reagoit automaattisesti.",
+    "try_again": "Haluatko nähdä eron uudelleen?"
+  },
+  "compulsions": {
+    "statement": "Pakko-oireet eivät aina ole jotain, mitä teet.",
+    "tab_outward": "Ulospäin",
+    "tab_inward": "Sisäänpäin",
+    "outward_items": {
+      "0": "Tarkistus",
+      "1": "Pesu",
+      "2": "Toistaminen"
+    },
+    "inward_items": {
+      "0": "Uusintaottelut",
+      "1": "Arvostelu",
+      "2": "Analyysi",
+      "3": "Varmuuden etsiminen"
+    }
+  },
+  "recognition": {
+    "heading": "Saatat huomata kuvion, kuin...",
+    "pattern_1": {
+      "step1": "Tarkista",
+      "step2": "Helpotus",
+      "step3": "Epäilys"
+    },
+    "pattern_2": {
+      "step1": "Uusinta",
+      "step2": "Varmuus",
+      "step3": "Epäilys"
+    },
+    "pattern_3": {
+      "step1": "Vältä",
+      "step2": "Helpotus",
+      "step3": "Pelko palaa"
+    }
+  },
+  "takeaway": {
+    "tag": "Tiivistelmäsi",
+    "main_headline": "Ajatus ei ole silmukka.",
+    "sub_headline": "Huomaa, mitä tapahtuu seuraavaksi.",
+    "closing": "Kaavan ymmärtäminen on ensimmäinen askel kohti sen tunnistamista oikeassa elämässä."
+  },
+  "next_step": {
+    "prompt_title": "Valmiina siihen, mitä seuraavaksi tapahtuu?",
+    "prompt_desc": "Merkitse tämä tehtävä suoritetuksi, jotta edistymisesi säilyy ja jatketaan polkuasi.",
+    "btn_complete": "Merkitse toiminta valmiiksi",
+    "saving": "Säästäminen...",
+    "completed_badge": "Toiminta suoritettu",
+    "error_save": "Emme voineet tallentaa toimintasi suoritusta juuri nyt. Edistymisesi tallennetaan paikallisesti."
+  }
+}

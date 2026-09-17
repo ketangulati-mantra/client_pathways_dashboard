@@ -1,0 +1,55 @@
+{
+  "header_back": "Bumalik",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "PAGHINGA",
+    "subtitle": "Isang simpleng ritmo para gabayan ang iyong paghinga.",
+    "rhythm_badge": "Huminga ng 4 · Hawakan ng 7 · Huminga ng 8",
+    "label_how_long": "GAANO KATAGAL?",
+    "btn_begin": "Simulan"
+  },
+  "time_options": {
+    "opt_30s": "30 segundo",
+    "opt_30s_hint": "2 cycle · ≈ 38 segundo",
+    "opt_1m": "1 minuto",
+    "opt_1m_hint": "3 cycle · ≈ 1 min",
+    "opt_2m": "2 minuto",
+    "opt_2m_hint": "6 na siklo · ≈ 2 minuto",
+    "opt_3m": "3 minuto",
+    "opt_3m_hint": "10 cycles · ≈ 3 min",
+    "opt_5m": "5 minuto",
+    "opt_5m_hint": "16 na siklo · ≈ 5 minuto"
+  },
+  "settling": {
+    "title": "Mag-ayos ka",
+    "subcopy": "Magpahinga ka muna."
+  },
+  "phases": {
+    "inhale_title": "huminga",
+    "inhale_sub": "Dahan-dahang huminga",
+    "hold_title": "Hawakan",
+    "hold_sub": "Manatili ka dito",
+    "exhale_title": "huminga palabas",
+    "exhale_sub": "Dahan-dahang huminga palabas"
+  },
+  "reflection": {
+    "title": "Magaling.",
+    "subtitle": "Maglaan ka muna ng sandali bago ka magpatuloy. Pansinin mo kung ano ang nararamdaman mo ngayon.",
+    "question": "Ano ang napapansin mo?",
+    "choices": {
+      "settled": "Mas matatag",
+      "present": "Mas naroroon",
+      "same": "Ganoon pa rin"
+    },
+    "btn_continue": "Magpatuloy"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "INHALE 4",
+    "step_hold": "HAWAKAN 7",
+    "step_exhale": "HUMINGA NG MALALIM 8",
+    "subtitle": "Bumalik sa gawaing ito tuwing gusto mong magkaroon ng tahimik na sandali upang maibalik ang iyong atensyon.",
+    "btn_continue": "Magpatuloy"
+  }
+}

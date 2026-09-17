@@ -1,0 +1,86 @@
+{
+  "header_back": "返回",
+  "brand": "強迫咒語",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "活動三",
+    "title": "抬頭看。",
+    "subtitle": "警報不是危險。",
+    "detail": "一種感覺可以很強烈，卻沒有告訴你全部故事。",
+    "btn_enter": "這時→"
+  },
+  "screen2": {
+    "title_line1": "有時候，",
+    "title_line2": "不確定性就足夠了。",
+    "subtitle": "點擊一個詞語，觀察偵測器的反應。",
+    "example1": "「如果我犯錯了呢？」",
+    "example2": "「如果有什麼地方不夠乾淨怎麼辦？」",
+    "example3": "「如果我無法完全確定怎麼辦？」",
+    "btn_activates": "訊號啟動→"
+  },
+  "screen3": {
+    "ambient_heart": "心跳加速",
+    "ambient_tension": "緊張感",
+    "ambient_attention": "注意",
+    "ambient_urge": "衝動",
+    "title": "那種感覺可能會很吵。",
+    "subtitle": "這種感覺是真實的。它似乎傳達的訊息並非全部。",
+    "btn_look_closer": "仔細看→"
+  },
+  "screen4": {
+    "tag_left": "[ 訊號 // 靈敏度 ]",
+    "tag_right": "[ 回應 // 解讀 ]",
+    "title": "仔細看。",
+    "subtitle": "隨意拖曳，從任何角度檢查偵測器。",
+    "detail": "你可以注意到這個訊號，而不必急於做出結論。",
+    "btn_continue": "繼續→"
+  },
+  "screen5": {
+    "title": "信號≠判決",
+    "subtitle": "強烈的感覺可以是真實的，但不必自動證明它似乎在說什麼。",
+    "col_feel_title": "我的感受",
+    "feel_anxious": "焦慮。",
+    "feel_uncertain": "不確定。",
+    "feel_tense": "緊張。",
+    "feel_pulled": "被拉去檢查。",
+    "col_conclude_title": "我的結論",
+    "conclude_wrong": "「一定有什麼不對勁。」",
+    "conclude_make_sure": "「我得確定一下。」",
+    "conclude_certainty": "「我需要確定。」",
+    "btn_next": "接下來會發生什麼？→"
+  },
+  "screen6": {
+    "title": "有時候一個回應能暫時讓訊號安靜下來。",
+    "subtitle": "點擊即可觀察回應如何與訊號互動。",
+    "item_check_title": "檢查",
+    "item_check_quote": "「我會再確認一次。」",
+    "item_ask_title": "問",
+    "item_ask_quote": "「我會問問別人怎麼想。」",
+    "item_replay_title": "重賽",
+    "item_replay_quote": "「我會在心裡再過一遍。」",
+    "item_avoid_title": "避免",
+    "item_avoid_quote": "「我會避開那些讓你感到不確定的事。」",
+    "btn_let_signal": "讓訊號存在→"
+  },
+  "screen7": {
+    "title": "讓訊號存在。",
+    "subtitle": "注意當你不急著去解讀時會發生什麼。",
+    "btn_watch": "注意訊號",
+    "observing_format": "觀察信號......（{{秒}}）",
+    "done_title": "訊號改變了。",
+    "done_sub": "你不必解開它。",
+    "btn_continue": "繼續→"
+  },
+  "screen8": {
+    "title_line1": "警報是一種訊號。",
+    "title_line2": "這不是判決。",
+    "subtitle": "注意那種感覺。注意你的心靈為它增添的故事。",
+    "question": "下次鬧鐘響起時，你可能會先注意到什麼？",
+    "opt_feeling": "那種感覺",
+    "opt_thought": "這個想法",
+    "opt_urge": "回應的衝動",
+    "feedback": "持續注意差異。",
+    "btn_saving": "拯救......",
+    "btn_continue": "繼續→"
+  }
+}

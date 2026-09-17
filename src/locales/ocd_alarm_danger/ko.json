@@ -1,0 +1,86 @@
+{
+  "header_back": "뒤로",
+  "brand": "강박만트라",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "활동 3",
+    "title": "위를 봐.",
+    "subtitle": "경보가 위험이 아니야.",
+    "detail": "감정은 전체 이야기를 다 말하지 않아도 크게 들릴 수 있습니다.",
+    "btn_enter": "등장→"
+  },
+  "screen2": {
+    "title_line1": "때때로,",
+    "title_line2": "불확실성만으로도 충분하다.",
+    "subtitle": "문구를 탭해 탐지기가 어떻게 반응하는지 관찰하세요.",
+    "example1": "\"내가 실수한 거면 어쩌지?\"",
+    "example2": "\"뭔가 충분히 깨끗하지 않으면 어쩌지?\"",
+    "example3": "\"만약 내가 완전히 확신할 수 없다면?\"",
+    "btn_activates": "신호가 →를 활성화시킨다"
+  },
+  "screen3": {
+    "ambient_heart": "심장이 두근거린다",
+    "ambient_tension": "긴장",
+    "ambient_attention": "주의",
+    "ambient_urge": "충동",
+    "title": "그 느낌은 꽤 시끄러울 수 있어요.",
+    "subtitle": "그 감정은 진짜다. 그것이 담고 있는 메시지가 자동으로 전부는 아니다.",
+    "btn_look_closer": "좀 더 자세히 보세요→"
+  },
+  "screen4": {
+    "tag_left": "[ 신호 // 감도 ]",
+    "tag_right": "[ 응답 // 해석 ]",
+    "title": "더 자세히 봐.",
+    "subtitle": "어디든 끌고 가서 어떤 각도에서든 탐지기를 검사할 수 있습니다.",
+    "detail": "신호를 바로 결론 내리지 않고도 인지할 수 있습니다.",
+    "btn_continue": "계속→"
+  },
+  "screen5": {
+    "title": "신호 ≠ 판결",
+    "subtitle": "강한 감정은 자동으로 증명하지 않아도 진짜일 수 있습니다.",
+    "col_feel_title": "내가 느끼는 것",
+    "feel_anxious": "불안해.",
+    "feel_uncertain": "확실하지 않다.",
+    "feel_tense": "긴장감이 감돌았다.",
+    "feel_pulled": "확인하러 끌고 갔어.",
+    "col_conclude_title": "내 결론",
+    "conclude_wrong": "\"뭔가 잘못된 게 분명해.\"",
+    "conclude_make_sure": "\"확실히 해야 해.\"",
+    "conclude_certainty": "\"확실함이 필요해.\"",
+    "btn_next": "다음에는 무슨 일이 일어날까? →"
+  },
+  "screen6": {
+    "title": "때로는 응답이 신호를 잠시 조용하게 할 수 있습니다.",
+    "subtitle": "반응이 신호와 어떻게 상호작용하는지 탭해 보세요.",
+    "item_check_title": "체크",
+    "item_check_quote": "\"한 번 더 확인할게.\"",
+    "item_ask_title": "물어보세요",
+    "item_ask_quote": "\"누군가에게 의견을 물어볼게요.\"",
+    "item_replay_title": "재경기",
+    "item_replay_quote": "\"머릿속으로 다시 한 번 되새길게.\"",
+    "item_avoid_title": "피하세요",
+    "item_avoid_quote": "\"불확실한 일은 피할 거야.\"",
+    "btn_let_signal": "신호가 존재하라→"
+  },
+  "screen7": {
+    "title": "신호가 그곳에 있길 바랍니다.",
+    "subtitle": "즉시 서두르지 않고 해석할 때 어떤 일이 일어나는지 주목하세요.",
+    "btn_watch": "신호 조심해",
+    "observing_format": "관찰 신호... ({{초}})",
+    "done_title": "신호가 바뀌었다.",
+    "done_sub": "굳이 해결할 필요는 없었어요.",
+    "btn_continue": "계속→"
+  },
+  "screen8": {
+    "title_line1": "알람은 신호입니다.",
+    "title_line2": "평결이 아니야.",
+    "subtitle": "그 감정을 느껴보세요. 당신의 마음이 덧붙이는 이야기를 알아차리세요.",
+    "question": "다음에 경보가 크게 울릴 때, 가장 먼저 눈에 띈 것은 무엇일까요?",
+    "opt_feeling": "그 느낌",
+    "opt_thought": "생각",
+    "opt_urge": "반응하고 싶은 충동",
+    "feedback": "계속 차이를 느껴보세요.",
+    "btn_saving": "구하는 중...",
+    "btn_continue": "계속→"
+  }
+}

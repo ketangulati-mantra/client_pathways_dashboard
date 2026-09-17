@@ -1,0 +1,113 @@
+{
+  "header_back": "Bumalik",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSYCHOEDUCATION",
+    "title": "PAANO GUMAGANA ANG ERP",
+    "subtitle": "Tinutulungan ng ERP ang mga taong may OCD na magpraktis ng pagharap sa mga trigger habang binabago ang susunod nilang gagawin.",
+    "quote": "\"Hindi ka nagsasanay na maging walang takot. Nagsasanay ka sa pagtugon nang iba.\"",
+    "btn_explore": "Tuklasin"
+  },
+  "screen2": {
+    "badge": "SENARYO 1",
+    "title": "Kakalabas mo lang ng bahay.",
+    "thought": "\"Na-lock ko ba ang pinto?\"",
+    "urge_tag": "Naramdaman mong gusto mong bumalik",
+    "subtitle": "Isang karaniwang sandali ng pagdududa ang dumarating. Tingnan natin kung ano ang mangyayari kapag sinunod ang pagnanasa.",
+    "btn_see_happens": "Tingnan kung ano ang mangyayari"
+  },
+  "screen3": {
+    "badge": "LANDAS A",
+    "title": "Sundin ang Pagnanasa",
+    "btn_check": "Suriin ang Kandado",
+    "checking_status": "Tinitingnan ang hawakan... Iniikot ang susi...",
+    "relief_thought": "\"Sige, naka-lock na. Nakakagaan ng loob.\"",
+    "doubt_thought": "\"Sandali... Talaga bang nilock ko ito nang maayos?\"",
+    "subtitle": "Ang ginhawa ay nagpakalma sa pakiramdam sandali, ngunit bumalik agad ang pagdududa.",
+    "btn_continue": "Magpatuloy"
+  },
+  "screen4": {
+    "badge": "PAGNINILAY",
+    "title": "Ano ang nakuha ng tseke?",
+    "point1": "Nakahinga ako ng ginhawa sa mismong sandali.",
+    "point2": "Mas marami pang dahilan para mag-check ulit kapag bumalik ang pagdududa.",
+    "subtitle": "Ang pag-check ay maaaring magpababa ng pagkabalisa sa sandaling iyon, ngunit ang panandaliang ginhawa na iyon ay nagpapalakas sa pagnanais ng utak na muling suriin.",
+    "btn_rewind": "Ibalik ang Sandali"
+  },
+  "screen5": {
+    "badge": "BALIKAN",
+    "title": "Subukan natin ang parehong sandali sa ibang paraan.",
+    "thought": "\"Na-lock ko ba ang pinto?\"",
+    "urge_tag": "Lumilitaw ang pagnanasa: \"Bumalik ka at tingnan\"",
+    "subtitle": "Sa pagkakataong ito, sa halip na awtomatikong sundan ang pagnanasa, sinusuri namin ang pamamaraan ng ERP.",
+    "btn_step1": "Hakbang 1: Exposure"
+  },
+  "screen6": {
+    "badge": "HAKBANG 1",
+    "title": "1. Exposure",
+    "subtitle1": "Nagsisimula ang ERP sa paglapit sa isang trigger imbes na iwasan ito o gawing mawala ito.",
+    "thought": "\"Nandito ang pagdududa: Nakasara ko ba ang pinto?\"",
+    "subtitle2": "Sa ERP, ang exposure ay nangangahulugang hayaan ang trigger o kawalang-katiyakan na naroroon nang hindi agad itinataboy ito sa isip.",
+    "btn_step2": "Hakbang 2: Pag-iwas sa Tugon"
+  },
+  "screen7": {
+    "badge": "HAKBANG 2",
+    "title": "2. Pag-iwas sa Tugon",
+    "subtitle1": "Sumunod ang pangalawang bahagi: ang pagpigil o pagpapaliban sa compulsive response.",
+    "thought": "Urge: \"Bumalik ka at tingnan mo ngayon din.\"",
+    "btn_dont_check": "Huwag mo nang tingnan ngayon",
+    "subtitle2": "Simulated practice: Ang pagpili na huwag isagawa ang ritwal ay nagbibigay ng pagkakataon sa utak na matuto ng bago."
+  },
+  "screen8": {
+    "badge": "PAGHAHAMBING",
+    "title": "Ang Dalawang Landas",
+    "col_urge_title": "Sundin ang Pagnanasa",
+    "col_urge_step1": "Trigger",
+    "col_urge_step2": "Suriin",
+    "col_urge_step3": "Relief",
+    "col_urge_step4": "Bumabalik ang pagdududa",
+    "col_erp_title": "ERP Pathway",
+    "col_erp_step1": "Trigger",
+    "col_erp_step2": "Hikayatin",
+    "col_erp_step3": "Pag-iwas sa Tugon",
+    "col_erp_step4": "Bagong pagkatuto",
+    "btn_learning": "Ano ang natutunan mo?"
+  },
+  "screen9": {
+    "badge": "PANGUNAHING PANANAW",
+    "title": "Ang punto ay hindi makaramdam ng anuman.",
+    "subtitle": "Ang ERP ay hindi tungkol sa pagpapawala agad ng pagkabalisa. Itinuturo nito:",
+    "insight1": "\"Kaya kong maranasan ang kawalang-katiyakan at tiisin ito.\"",
+    "insight2": "\"Maaari akong magkaroon ng pagnanasa nang hindi awtomatikong kumikilos.\"",
+    "insight3": "\"Hindi ko kailangan ng ritwal para sagutin ang bawat pagdududa.\"",
+    "btn_scenario2": "Subukan ang Pangalawang Senaryo"
+  },
+  "screen10": {
+    "badge": "SENARYO 2",
+    "title": "Nagpadala ka ng mahalagang mensahe.",
+    "thought": "Naisip ko: \"May nasabi ba akong mali?\"",
+    "urge_tag": "Urge: Basahin mo ulit",
+    "question": "Ano ang magiging hitsura ng response prevention?",
+    "opt_read": "Basahin muli ang mensahe upang matiyak",
+    "opt_ask": "Magtanong sa isang tao kung ayos lang ito",
+    "opt_leave": "Hayaan mo muna ito nang hindi na kailangang basahin muli",
+    "feedback_correct": "✓ Iyan ay halimbawa ng pag-iwas sa pag-check o reassurance response.",
+    "feedback_incorrect": "Iyan ang paraan ng pagtugon sa kawalang-katiyakan. Sa ERP, ang response prevention ay nangangahulugang pagsasanay ng hindi paggamit ng checking o reassurance behavior.",
+    "btn_final_model": "Pangwakas na Modelo",
+    "btn_try_again": "Subukan Muli"
+  },
+  "screen11": {
+    "badge": "BUOD",
+    "title": "Binabago ng ERP ang susunod mong gagawin.",
+    "node_trigger": "Trigger",
+    "node_trigger_sub": "Dumating ang pagdududa",
+    "node_urge": "Hikayatin",
+    "node_urge_sub": "Pagnanais na magritwal",
+    "node_erp": "Pag-iwas sa Exposure + Tugon",
+    "node_erp_sub": "Labanan ang pamimilit",
+    "node_learning": "Bagong Pagkatuto",
+    "node_learning_sub": "Maaaring tiisin ang kawalang-katiyakan",
+    "subtitle": "Ang layunin ay hindi alisin ang bawat intrusive na kaisipan o damdamin. Ang layunin ay bumuo ng ibang tugon dito.",
+    "btn_complete": "Kumpletuhin ang Aktibidad"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "header_back": "Hátra",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "3. TEVÉKENYSÉG",
+    "title": "NÉZZ FEL.",
+    "subtitle": "A RIASZTÓ NEM A VESZÉLY.",
+    "detail": "Egy érzés lehet hangos anélkül, hogy elmondaná az egész történetet.",
+    "btn_enter": "JÖJJÖN →"
+  },
+  "screen2": {
+    "title_line1": "NÉHA,",
+    "title_line2": "A BIZONYTALANSÁG ELÉG.",
+    "subtitle": "Érints meg egy kifejezést, hogy megfigyeld, hogyan reagál a detektor.",
+    "example1": "\"Mi van, ha hibáznék?\"",
+    "example2": "\"Mi van, ha valami nem elég tiszta?\"",
+    "example3": "\"Mi van, ha nem lehetek teljesen biztos?\"",
+    "btn_activates": "A JEL AKTIVÁLJA →"
+  },
+  "screen3": {
+    "ambient_heart": "SZÍVVERÉS",
+    "ambient_tension": "FESZÜLTSÉG",
+    "ambient_attention": "FIGYELEM",
+    "ambient_urge": "KÉSZTETÉS",
+    "title": "EZ AZ ÉRZÉS NÉHA HANGOS IS LEHET.",
+    "subtitle": "Az érzés valós. Az üzenet, amit visz, nem automatikusan az egész történet.",
+    "btn_look_closer": "NÉZZ MEG →"
+  },
+  "screen4": {
+    "tag_left": "[ JEL // ÉRZÉKENYSÉG ]",
+    "tag_right": "[ VÁLASZ // ÉRTELMEZÉS ]",
+    "title": "NÉZZ KÖZELEBB.",
+    "subtitle": "Húzz bárhová, hogy bármilyen szögből megvizsgáld a detektort.",
+    "detail": "Észreveheted a jelet anélkül, hogy azonnal sietnél a következtetést.",
+    "btn_continue": "FOLYTASD →"
+  },
+  "screen5": {
+    "title": "JELZÉS ≠ ÍTÉLET",
+    "subtitle": "Egy erős érzés lehet valós anélkül, hogy automatikusan bizonyítaná, amit látszólag mond.",
+    "col_feel_title": "MIT ÉRZEK",
+    "feel_anxious": "Ideges.",
+    "feel_uncertain": "Bizonytalan.",
+    "feel_tense": "Feszült.",
+    "feel_pulled": "Meghúztam, hogy ellenőrizzem.",
+    "col_conclude_title": "MIT VONOK LE A KÖVETKEZTETÉSRE",
+    "conclude_wrong": "\"Valami biztosan nincs rendben.\"",
+    "conclude_make_sure": "\"Meg kell győződnöm róla.\"",
+    "conclude_certainty": "\"Bizonyosságra van szükségem.\"",
+    "btn_next": "MI TÖRTÉNIK EZUTÁN? →"
+  },
+  "screen6": {
+    "title": "NÉHA EGY VÁLASZ EGY PILLANATRA ELCSENDESÍTHETI A JELET.",
+    "subtitle": "Érintsd meg, hogy lásd, hogyan lépnek kölcsönhatásba a válaszok a jellel.",
+    "item_check_title": "MEGVAN",
+    "item_check_quote": "\"Még egyszer megteszem.\"",
+    "item_ask_title": "KÉRDEZZ",
+    "item_ask_quote": "\"Megkérdezem valakit, mit gondol.\"",
+    "item_replay_title": "VISSZAJÁTSZÁS",
+    "item_replay_quote": "\"Újra átgondolom a fejemben.\"",
+    "item_avoid_title": "KERÜLD",
+    "item_avoid_quote": "\"Távol maradok attól, ami bizonytalannak tűnik.\"",
+    "btn_let_signal": "LEGYEN OTT A JEL →"
+  },
+  "screen7": {
+    "title": "LEGYEN OTT A JEL.",
+    "subtitle": "Figyeld meg, mi történik, ha nem sietsz azonnal értelmezni.",
+    "btn_watch": "FIGYELD A JELET",
+    "observing_format": "Megfigyelő jel... ({{seconds}}s)",
+    "done_title": "A JEL MEGVÁLTOZOTT.",
+    "done_sub": "Nem kellett volna megoldani.",
+    "btn_continue": "FOLYTASD →"
+  },
+  "screen8": {
+    "title_line1": "A RIASZTÓ JELZÉS.",
+    "title_line2": "NEM ÍTÉLET.",
+    "subtitle": "Figyeld fel az érzést. Figyeld meg azt a történetet, amit az elméd hozzáad hozzá.",
+    "question": "LEGKÖZELEBB, AMIKOR HANGOS LESZ AZ ÉBRESZTŐ, MIT VESZEL ÉSZRE ELŐSZÖR?",
+    "opt_feeling": "AZ ÉRZÉS",
+    "opt_thought": "A GONDOLAT",
+    "opt_urge": "A VÁLASZ IRÁNTI KÉSZTETÉS",
+    "feedback": "Folyamatosan figyeld a különbséget.",
+    "btn_saving": "MEGMENTÉS...",
+    "btn_continue": "FOLYTASD →"
+  }
+}

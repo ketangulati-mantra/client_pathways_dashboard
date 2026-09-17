@@ -1,0 +1,83 @@
+{
+  "header_back": "Retour",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Qu’est-ce que le TOC ?",
+    "subtitle": "Comprenez ce qu’est le TOC, comment il peut apparaître, et pourquoi il peut sembler si convaincant."
+  },
+  "video": {
+    "eyebrow": "COMMENCEZ ICI",
+    "title": "Regardez cette courte introduction au TOC."
+  },
+  "basics": {
+    "eyebrow": "LES BASES",
+    "headline": "Le TOC, c’est plus que des pensées indésirables.",
+    "obsession_title": "OBSESSIONS",
+    "obsession_desc": "Des pensées, images, doutes ou pulsions indésirables qui peuvent sembler difficiles à ignorer.",
+    "compulsion_title": "COMPULSIONS",
+    "compulsion_desc": "Des actions ou des réactions mentales que vous ressentez poussé à répéter pour réduire l’inconfort ou vous sentir certain."
+  },
+  "themes": {
+    "eyebrow": "THÈMES COMMUNS",
+    "headline": "Le TOC peut prendre de nombreuses formes.",
+    "subtext": "Ce sont des thèmes courants, pas des diagnostics distincts. Une personne peut en vivre plusieurs.",
+    "disclaimer": "Ce ne sont là que quelques exemples.",
+    "items": {
+      "contamination": {
+        "name": "Contamination",
+        "desc": "Peurs concernant les germes, la maladie, la saleté ou la contamination."
+      },
+      "harm": {
+        "name": "Dommage",
+        "desc": "Des peurs indésirables de causer ou d’en être responsable."
+      },
+      "checking": {
+        "name": "Vérification",
+        "desc": "Vérifier à plusieurs reprises la sécurité, les erreurs, les portes, les appareils électroménagers ou d’autres préoccupations."
+      },
+      "symmetry": {
+        "name": "Symétrie & « Juste ce qu’il faut »",
+        "desc": "Sentir que les choses doivent être équilibrées, exactes ou juste justes."
+      },
+      "taboo": {
+        "name": "Pensées intrusives / tabous",
+        "desc": "Pensées indésirables impliquant des thèmes sexuels, religieux, agressifs ou autres tabous."
+      },
+      "responsibility": {
+        "name": "Responsabilité et doute",
+        "desc": "Un doute persistant sur les erreurs, la responsabilité, ou sur la vérité d’une certaine chose."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "VOUS POURRIEZ RECONNAÎTRE CECI",
+    "headline": "Le TOC peut rendre l’incertitude impossible à laisser tranquille.",
+    "example_1": {
+      "thought": "« Ai-je verrouillé la porte ? »",
+      "action": "Tu vérifies. Tu te sens soulagé.",
+      "loop": "Puis : « Mais ai-je vraiment vérifié ? »"
+    },
+    "example_2": {
+      "thought": "« Et si je faisais une terrible erreur ? »",
+      "action": "Tu rejoues ce qui s’est passé.",
+      "loop": "Tu cherches des assurances."
+    }
+  },
+  "takeaway": {
+    "quote": "Tout le monde a des pensées indésirables. \n\nLe TOC peut faire en sorte que ces pensées semblent être quelque chose qu’il faut résoudre.",
+    "sub": "Comprendre ce schéma est une première étape importante."
+  },
+  "next_step": {
+    "eyebrow": "LA PROCHAINE ÉTAPE DE VOTRE PARCOURS",
+    "headline": "Voyons maintenant comment le cycle du TOC peut se répéter sans cesse.",
+    "btn_explore": "Découvrez le cycle du TOC →"
+  },
+  "completion": {
+    "eyebrow": "Tu as fini d’explorer ?",
+    "btn_complete": "Marquez l’activité comme effectuée →",
+    "saving": "Sauver...",
+    "completed_badge": "Activité achevée",
+    "error_save": "Nous n’avons pas pu sauvegarder la fin de votre activité pour l’instant. Votre progression est enregistrée localement."
+  }
+}

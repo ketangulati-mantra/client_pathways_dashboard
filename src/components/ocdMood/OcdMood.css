@@ -1,0 +1,816 @@
+/* ==========================================================================
+   Activity: OCD Mood Check-In & Moments History
+   Scoped Light Theme matching OCDMantra Experience
+   Colors: Warm ivory (#F7F5F0), Deep slate navy (#18243A), Sky/Cyan (#0284C7),
+           Muted slate (#64748B), Soft lavender (#E9E5F2), Off-white cards (#FFFFFF)
+   ========================================================================== */
+
+.ocd-mood-activity {
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  max-width: 100vw;
+  background-color: #F7F5F0;
+  color: #18243A;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Plus Jakarta Sans', 'Outfit', 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header */
+.ocd-mood-header {
+  width: 100%;
+  max-width: 860px;
+  min-height: 56px;
+  padding: 14px 20px 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 30;
+  position: relative;
+}
+
+.ocd-mood-back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.ocd-mood-back-btn:hover {
+  color: #005387;
+  border-color: #CBD5E1;
+  background-color: #F1F5F9;
+}
+
+.ocd-mood-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: clamp(24px, 5.5vw, 28px);
+  width: auto;
+  object-fit: contain;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+.ocd-mood-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.ocd-mood-header-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ocd-mood-header-pill:hover,
+.ocd-mood-header-pill.active {
+  background: #005387;
+  color: #FFFFFF;
+  border-color: #005387;
+}
+
+/* Main Container */
+.ocd-mood-main {
+  width: 100%;
+  max-width: 580px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 20px 48px 20px;
+  box-sizing: border-box;
+  z-index: 10;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Screen Wrapper */
+.ocd-mood-screen {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Editorial Typography */
+.ocd-mood-badge {
+  font-size: clamp(11px, 2.8vw, 12.5px);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #0284C7;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.ocd-mood-heading {
+  font-size: clamp(28px, 6.2vw, 40px);
+  font-family: Georgia, 'Playfair Display', 'Times New Roman', serif;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #18243A;
+  margin: 0 0 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.ocd-mood-subcopy {
+  font-size: clamp(14px, 3.2vw, 15.5px);
+  font-weight: 400;
+  line-height: 1.5;
+  color: #64748B;
+  max-width: 420px;
+  margin: 0 auto 24px auto;
+  text-align: center;
+}
+
+/* Action Buttons */
+.ocd-mood-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1.5px solid #005387;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 28px;
+  min-height: 48px;
+  color: #005387;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 83, 135, 0.08);
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  text-decoration: none;
+  max-width: 100%;
+}
+
+.ocd-mood-btn:hover:not(:disabled) {
+  background: #005387;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 83, 135, 0.18);
+}
+
+.ocd-mood-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  border-color: #CBD5E1;
+  color: #94A3B8;
+  background: #F8FAFC;
+  box-shadow: none;
+}
+
+.ocd-mood-btn.secondary {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #475569;
+  box-shadow: none;
+}
+
+.ocd-mood-btn.secondary:hover:not(:disabled) {
+  background: #F1F5F9;
+  color: #0F172A;
+  border-color: #94A3B8;
+}
+
+/* Screen 1: Mood Choice Tiles */
+.ocd-mood-choice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.ocd-mood-choice-tile {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.ocd-mood-choice-tile:hover {
+  border-color: #0284C7;
+  background-color: #F8FAFC;
+  transform: translateY(-1px);
+}
+
+.ocd-mood-choice-tile.selected {
+  border-color: #005387;
+  background-color: #F0F9FF;
+  box-shadow: 0 4px 14px rgba(0, 83, 135, 0.08);
+}
+
+.ocd-mood-choice-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ocd-mood-choice-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #18243A;
+}
+
+.ocd-mood-choice-subtitle {
+  font-size: 13px;
+  color: #64748B;
+  font-weight: 400;
+}
+
+/* Screen 2: OCD Impact Slider */
+.ocd-impact-card {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 20px -2px rgba(24, 36, 58, 0.04);
+  margin-bottom: 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ocd-impact-value-display {
+  font-size: 48px;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  color: #005387;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.ocd-impact-label-display {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #18243A;
+  margin-bottom: 24px;
+}
+
+.ocd-impact-slider-track {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ocd-impact-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 9999px;
+  background: #E2E8F0;
+  outline: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.ocd-impact-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #005387;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 83, 135, 0.3);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.ocd-impact-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.ocd-impact-slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #005387;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 83, 135, 0.3);
+  cursor: pointer;
+}
+
+.ocd-impact-scale-ticks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.ocd-impact-scale-tick {
+  font-size: 12px;
+  font-weight: 600;
+  color: #94A3B8;
+  cursor: pointer;
+}
+
+.ocd-impact-scale-tick.active {
+  color: #005387;
+  font-weight: 700;
+}
+
+.ocd-impact-scale-bounds {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #64748B;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* Screen 3: Experiences Selection (List Rows) */
+.ocd-experiences-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.ocd-experience-row {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 13px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #18243A;
+  transition: all 0.18s ease;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.ocd-experience-row:hover {
+  border-color: #0284C7;
+  background: #F8FAFC;
+}
+
+.ocd-experience-row.selected {
+  border-color: #005387;
+  background-color: #F0F9FF;
+  color: #005387;
+}
+
+.ocd-experience-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1.5px solid #CBD5E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  background: #FFFFFF;
+  font-size: 12px;
+  transition: all 0.15s ease;
+}
+
+.ocd-experience-row.selected .ocd-experience-checkbox {
+  background: #005387;
+  border-color: #005387;
+}
+
+/* Screen 4: Note Area */
+.ocd-note-container {
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ocd-note-textarea {
+  width: 100%;
+  min-height: 120px;
+  max-height: 200px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 14px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  color: #18243A;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.ocd-note-textarea:focus {
+  border-color: #0284C7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+}
+
+.ocd-note-char-count {
+  font-size: 12px;
+  color: #94A3B8;
+  text-align: right;
+  padding-right: 4px;
+}
+
+/* Screen 5: Saved Moment Card */
+.ocd-moment-card {
+  width: 100%;
+  max-width: 440px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 24px 22px;
+  box-shadow: 0 4px 20px -2px rgba(24, 36, 58, 0.05);
+  margin: 12px auto 24px auto;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.ocd-moment-date {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #64748B;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.ocd-moment-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #F1F5F9;
+  margin-bottom: 14px;
+}
+
+.ocd-moment-mood-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ocd-moment-mood-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #18243A;
+}
+
+.ocd-moment-impact-tag {
+  background: #F0F9FF;
+  border: 1px solid #BAE6FD;
+  color: #0369A1;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ocd-moment-experiences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.ocd-moment-chip {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.ocd-moment-note {
+  font-size: 14px;
+  font-style: italic;
+  color: #475569;
+  line-height: 1.5;
+  background: #FAFAFA;
+  padding: 10px 14px;
+  border-left: 3px solid #CBD5E1;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* History Navigation & Subheading */
+.ocd-history-tabs {
+  display: flex;
+  gap: 6px;
+  background: #E2E8F0;
+  padding: 4px;
+  border-radius: 9999px;
+  margin: 12px 0 20px 0;
+}
+
+.ocd-history-tab-btn {
+  padding: 6px 18px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  background: transparent;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ocd-history-tab-btn.active {
+  background: #FFFFFF;
+  color: #005387;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* History Moments Timeline */
+.ocd-timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.ocd-timeline-card {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-sizing: border-box;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ocd-timeline-card:hover {
+  border-color: #0284C7;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+/* Calendar Mini View */
+.ocd-calendar-box {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.ocd-calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #18243A;
+}
+
+.ocd-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+}
+
+.ocd-calendar-day-header {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94A3B8;
+  padding-bottom: 4px;
+}
+
+.ocd-calendar-cell {
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.15s ease;
+}
+
+.ocd-calendar-cell:hover {
+  background: #F1F5F9;
+}
+
+.ocd-calendar-cell.has-log {
+  background: #F0F9FF;
+  color: #005387;
+  font-weight: 700;
+}
+
+.ocd-calendar-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #0284C7;
+  position: absolute;
+  bottom: 4px;
+}
+
+/* Trends Chart Card */
+.ocd-trends-card {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.ocd-trends-filter-pills {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.ocd-trends-filter-pill {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
+  color: #64748B;
+  cursor: pointer;
+}
+
+.ocd-trends-filter-pill.active {
+  background: #005387;
+  color: #FFFFFF;
+  border-color: #005387;
+}
+
+/* Empty State */
+.ocd-empty-state {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Detail Modal */
+.ocd-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.ocd-modal-card {
+  width: 100%;
+  max-width: 440px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: clamp(16px, 4.5vw, 24px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  text-align: left;
+  margin: auto;
+  position: relative;
+}
+
+.ocd-modal-close-btn {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  width: 28px !important;
+  min-width: 28px !important;
+  max-width: 28px !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  max-height: 28px !important;
+  border-radius: 50% !important;
+  background-color: #F1F5F9 !important;
+  background: #F1F5F9 !important;
+  border: none !important;
+  cursor: pointer !important;
+  color: #64748B !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  z-index: 20 !important;
+  flex-shrink: 0 !important;
+  transition: all 0.15s ease !important;
+}
+
+.ocd-modal-close-btn:hover {
+  background-color: #E2E8F0 !important;
+  background: #E2E8F0 !important;
+  color: #0F172A !important;
+}
+
+@media (max-width: 480px) {
+  .ocd-mood-main {
+    padding: 10px 14px 32px 14px;
+  }
+  .ocd-mood-header {
+    padding: 10px 14px 6px 14px;
+  }
+  .ocd-modal-overlay {
+    padding: 12px;
+    align-items: center;
+  }
+  .ocd-modal-card {
+    padding: 18px 16px;
+    border-radius: 18px;
+    max-height: calc(100dvh - 24px);
+  }
+}

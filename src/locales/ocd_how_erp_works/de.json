@@ -1,0 +1,113 @@
+{
+  "header_back": "Zurück",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSYCHOEDUKATION",
+    "title": "WIE ERP FUNKTIONIERT",
+    "subtitle": "ERP hilft Menschen mit Zwangsstörungen zu üben, sich dem zu stellen, was sie auslöst, während sie ihre nächsten Schritte ändern.",
+    "quote": "\"Du übst nicht, furchtlos zu sein. Du übst, anders zu reagieren.\"",
+    "btn_explore": "Entdecken Sie"
+  },
+  "screen2": {
+    "badge": "SZENARIO 1",
+    "title": "Du hast gerade das Haus verlassen.",
+    "thought": "\"Habe ich die Tür abgeschlossen?\"",
+    "urge_tag": "Du verspürst den Drang, zurückzugehen",
+    "subtitle": "Ein häufiger Moment des Zweifels tritt ein. Mal sehen, was passiert, wenn dem Drang folgt.",
+    "btn_see_happens": "Sehen Sie, was passiert"
+  },
+  "screen3": {
+    "badge": "WEG A",
+    "title": "Folge dem Drang",
+    "btn_check": "Überprüfe das Schloss",
+    "checking_status": "Den Griff überprüfen... Den Schlüssel drehen...",
+    "relief_thought": "\"Okay, es ist abgeschlossen. Erleichterung.\"",
+    "doubt_thought": "\"Warte... habe ich es wirklich richtig abgeschlossen?\"",
+    "subtitle": "Die Erleichterung beruhigte das Gefühl für einen Moment, doch der Zweifel kehrte sofort zurück.",
+    "btn_continue": "Weitermachen"
+  },
+  "screen4": {
+    "badge": "REFLEXION",
+    "title": "Was hat dir der Scheck geliefert?",
+    "point1": "Erleichterung im Moment.",
+    "point2": "Noch ein Grund, noch einmal nachzusehen, wenn der Zweifel zurückkehrt.",
+    "subtitle": "Das Überprüfen kann im Moment Stress reduzieren, aber diese kurzfristige Erleichterung verstärkt den Drang des Gehirns, erneut zu kontrollieren.",
+    "btn_rewind": "Spul den Moment zurück"
+  },
+  "screen5": {
+    "badge": "ZURÜCKSPULEN",
+    "title": "Versuchen wir denselben Moment anders.",
+    "thought": "\"Habe ich die Tür abgeschlossen?\"",
+    "urge_tag": "Der Drang erscheint: \"Geh zurück und schau nach.\"",
+    "subtitle": "Diesmal folgen wir nicht automatisch dem Drang, sondern erkunden den ERP-Ansatz.",
+    "btn_step1": "Schritt 1: Exposition"
+  },
+  "screen6": {
+    "badge": "SCHRITT 1",
+    "title": "1. Exposition",
+    "subtitle1": "ERP beginnt damit, sich einem Auslöser zu nähern, anstatt ihn zu vermeiden oder ihn verschwinden zu lassen.",
+    "thought": "\"Der Zweifel ist da: Habe ich die Tür abgeschlossen?\"",
+    "subtitle2": "Im ERP bedeutet Exposition, den Auslöser oder die Unsicherheit vorhanden zu lassen, ohne sofort zu versuchen, sie aus dem Kopf zu drängen.",
+    "btn_step2": "Schritt 2: Reaktionsprävention"
+  },
+  "screen7": {
+    "badge": "SCHRITT 2",
+    "title": "2. Reaktionsprävention",
+    "subtitle1": "Dann folgt der zweite Teil: das Widerstand gegen oder das Verzögern der zwanghaften Reaktion.",
+    "thought": "Drängen: \"Geh jetzt zurück und schau nach.\"",
+    "btn_dont_check": "Schau jetzt nicht nach",
+    "subtitle2": "Simulierte Praxis: Die Entscheidung, das Ritual nicht durchzuführen, gibt dem Gehirn die Möglichkeit, etwas Neues zu lernen."
+  },
+  "screen8": {
+    "badge": "VERGLEICH",
+    "title": "Die zwei Wege",
+    "col_urge_title": "Folge dem Drang",
+    "col_urge_step1": "Auslöser",
+    "col_urge_step2": "Check",
+    "col_urge_step3": "Relief",
+    "col_urge_step4": "Zweifel kehren zurück",
+    "col_erp_title": "ERP-Pfad",
+    "col_erp_step1": "Auslöser",
+    "col_erp_step2": "Drang",
+    "col_erp_step3": "Reaktionsprävention",
+    "col_erp_step4": "Neues Lernen",
+    "btn_learning": "Was lernst du?"
+  },
+  "screen9": {
+    "badge": "GRUNDEINSICHT",
+    "title": "Es geht nicht darum, nichts zu fühlen.",
+    "subtitle": "ERP bedeutet nicht, Stress sofort verschwinden zu lassen. Es lehrt:",
+    "insight1": "\"Ich kann Unsicherheit erleben und tolerieren.\"",
+    "insight2": "\"Ich kann einen Drang haben, ohne automatisch darauf zu reagieren.\"",
+    "insight3": "\"Ich brauche kein Ritual, um auf jeden Zweifel zu reagieren.\"",
+    "btn_scenario2": "Versuch ein zweites Szenario"
+  },
+  "screen10": {
+    "badge": "SZENARIO 2",
+    "title": "Du hast eine wichtige Nachricht gesendet.",
+    "thought": "Gedanke: \"Habe ich etwas Falsches gesagt?\"",
+    "urge_tag": "Dränge: Lies es noch einmal",
+    "question": "Wie würde Reaktionsprävention aussehen?",
+    "opt_read": "Lies die Nachricht noch einmal durch, um sicherzugehen.",
+    "opt_ask": "Frag jemanden, ob das okay klingt",
+    "opt_leave": "Lass es vorerst so, wie es ist, ohne es noch einmal zu lesen",
+    "feedback_correct": "✓ Das ist ein Beispiel dafür, wie man sich gegen die Kontroll- oder Beruhigungsreaktion widersetzt.",
+    "feedback_incorrect": "Das wäre eine Möglichkeit, auf die Unsicherheit zu reagieren. Im ERP-Bereich bedeutet Reaktionsverhinderung, das Kontroll- oder Beruhigungsverhalten nicht zu üben.",
+    "btn_final_model": "Endgültiges Modell",
+    "btn_try_again": "Versuchen Sie es nochmal"
+  },
+  "screen11": {
+    "badge": "ZUSAMMENFASSUNG",
+    "title": "ERP verändert, was du als Nächstes tust.",
+    "node_trigger": "Auslöser",
+    "node_trigger_sub": "Zweifel kommen",
+    "node_urge": "Drang",
+    "node_urge_sub": "Verlangen zur Ritualisierung",
+    "node_erp": "Exposition + Reaktionsprävention",
+    "node_erp_sub": "Widerstand gegen Zwang",
+    "node_learning": "Neues Lernen",
+    "node_learning_sub": "Unsicherheit kann toleriert werden",
+    "subtitle": "Das Ziel ist nicht, jeden aufdringlichen Gedanken oder jedes Gefühl zu eliminieren. Es geht darum, eine andere Reaktion darauf aufzubauen.",
+    "btn_complete": "Vollständige Aktivität"
+  }
+}

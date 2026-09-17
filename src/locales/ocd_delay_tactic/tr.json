@@ -1,0 +1,107 @@
+{
+  "header_back": "Geri",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "60 Saniyelik Duraklama",
+    "subtitle": "Bazen bir dürtü, hemen harekete geçmeniz gereken bir şey gibi gelebilir. Cevap vermeden önce biraz alan yaratmayı pratik yapalım.",
+    "btn_begin": "Başla"
+  },
+  "step2": {
+    "eyebrow": "SENARYO 1",
+    "title": "Bir senaryo deneyelim",
+    "subtitle": "Düşün ki evden yeni çıkmışsın.",
+    "visual_line1": "Ön kapıyı kilitliyorsun ve arabana doğru yürüyorsun.",
+    "visual_thought": "\"Düzgün kilitledim mi?\"",
+    "visual_line2": "Arkanızı dönüp kontrol etme çekişini fark ediyorsunuz.",
+    "btn_continue": "Devam et"
+  },
+  "step3": {
+    "eyebrow": "DÜRTÜ",
+    "banner": "\"Bir kez daha kontrol et.\"",
+    "subtitle": "Arkanıza dönüp kontrol etme isteği hissediyorsunuz.",
+    "question": "Normalde ne yapmaya çekilmiş hissederdiniz?",
+    "responses": {
+      "check": "Tekrar kontrol et",
+      "ask": "Birinden güvence isteyin",
+      "goback": "Geri dön ve emin ol",
+      "wait": "Durak ve bekle"
+    },
+    "btn_next": "Sıradaki"
+  },
+  "step4": {
+    "title": "Henüz cevaplamanıza gerek yok.",
+    "subtitle": "Sonraki 60 saniye boyunca, dürtü ile tepkiniz arasında biraz boşluk bırakmayı pratik edeceğiz.",
+    "cadence_pause": "DURAKLAMA",
+    "cadence_notice": "BILDIRIM",
+    "cadence_choose": "SEÇ",
+    "detail": "Amaç, düşünceyi ortadan kaldırmak değil. Hemen cevap vermeden dürtüyü fark etmek.",
+    "btn_start": "60 saniyelik duraklama başlat"
+  },
+  "step5": {
+    "badge": "İSTEK BURADA",
+    "prompts": {
+      "0": "Ortaya çıkan dürtüye dikkat edin.",
+      "1": "Çekimi cevap vermeden hissedebiliyorsun.",
+      "2": "Nazik bir nefes al ve gözlemle.",
+      "3": "Bu dürtü şu anda sadece bir his.",
+      "4": "Belirsizliği hemen çözmek zorunda değilsiniz.",
+      "5": "Vücudunuzda gerilim hissettiğiniz yere dikkat edin.",
+      "6": "Düşünceler su üzerindeki dalgalar gibi gelip gider.",
+      "7": "Düşünce ile eylem arasında boşluk yaratmak.",
+      "8": "Dürtüyü gözlemliyorsunuz, ona uymuyorsunuz.",
+      "9": "Belirsizlik rahatsız edici olabilir ve bu sorun değil.",
+      "10": "Düşünce orada olsun, müdahale etmeden.",
+      "11": "Düzeltme veya kontrol etme dürtüsüne dikkat edin.",
+      "12": "Bu hissi merak etmeye devam edin.",
+      "13": "Tepkinin kontrolü sende.",
+      "14": "Şu anda hiçbir şeyin çözülmesine gerek yok.",
+      "15": "45 saniyeden fazla bir alan yarattınız.",
+      "16": "Harekete geçmeden dürtüyü fark et.",
+      "17": "Neredeyse oradaydı — duraklamada dinleniyordu.",
+      "18": "Bu son nefeste hazır kalın.",
+      "19": "Duraklamayı tamamladın."
+    }
+  },
+  "step6": {
+    "title": "Alan açtın.",
+    "subtitle": "Amaç, dürtüyü ortadan kaldırmak değildi. Kendine bir an verip cevap vermekti.",
+    "question": "Ne fark ettin?",
+    "reflections": {
+      "thought_there": "Düşünce hâlâ oradaydı",
+      "felt_urge": "Cevap verme isteği hissettim",
+      "uncomfortable": "Belirsizlik rahatsız ediciydi",
+      "could_wait": "Hemen cevap vermeden bekleyebilirim"
+    },
+    "btn_continue": "Devam et"
+  },
+  "step7": {
+    "eyebrow": "OKBİ DÖNGÜSÜ",
+    "title": "Duraklamanın Nerede Uyduğu",
+    "subtitle": "OKB, şüpheye hemen yanıt verme için güçlü bir çekim yaratır.",
+    "node_doubt": "Şüphe / Müdahaleci Düşünce",
+    "node_urge": "Yanıt verme isteği",
+    "space_tag": "60 SANIYELIK DURAKLAMA",
+    "space_title": "Az önce pratik yaptığın alan burası.",
+    "node_compulsion": "Kompulsif Tepki",
+    "node_relief": "Geçici Rahatlama → Şüphe Geri Döndü",
+    "detail": "Bir duraklama size bir an veriyor, ardından otomatik olarak o çekişi takip ediyor.",
+    "btn_try_another": "Başka bir senaryo deneyin"
+  },
+  "step8": {
+    "eyebrow": "SENARYO 2",
+    "title": "Antrenman Transferi",
+    "subtitle": "Önemli bir mesaj gönderdiğinizi hayal edin.",
+    "visual_line1": "Gönder tuşuna basıp konuşmayı kapatıyorsunuz.",
+    "visual_thought": "\"Yanlış bir şey mi söyledim? Belki tekrar okumalıyım.\"",
+    "visual_line2": "Aynı desen: Düşünce → dürtü → duraklamayı → seçim.",
+    "btn_practice": "Pratik Duraklaması (60'lar)"
+  },
+  "step9": {
+    "title": "Bir Dürtü Bir Talimat Değildir.",
+    "subtitle": "Her dürtüye hemen cevap vermek zorunda değilsin. Biraz mesafe farklı bir başlangıç noktası yaratabilir.",
+    "cadence_pause": "DURAKLAMA",
+    "cadence_notice": "BILDIRIM",
+    "cadence_choose": "SEÇ",
+    "btn_continue": "Devam et"
+  }
+}

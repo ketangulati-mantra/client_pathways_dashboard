@@ -1,0 +1,107 @@
+{
+  "header_back": "Achteruit",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "De 60-seconden pauze",
+    "subtitle": "Soms voelt een drang als iets waar je meteen op moet handelen. Laten we oefenen met het creëren van een beetje ruimte voordat je reageert.",
+    "btn_begin": "Begin"
+  },
+  "step2": {
+    "eyebrow": "SCENARIO 1",
+    "title": "Laten we een scenario proberen",
+    "subtitle": "Stel je voor dat je net je huis hebt verlaten.",
+    "visual_line1": "Je doet de voordeur op slot en loopt naar je auto.",
+    "visual_thought": "\"Heb ik hem goed op slot gedaan?\"",
+    "visual_line2": "Je merkt de drang om je om te draaien en te kijken.",
+    "btn_continue": "Ga verder"
+  },
+  "step3": {
+    "eyebrow": "DE DRANG",
+    "banner": "\"Controleer het nog één keer.\"",
+    "subtitle": "Je merkt een drang om je om te draaien en te kijken.",
+    "question": "Wat zou je normaal gesproken aangetrokken voelen om te doen?",
+    "responses": {
+      "check": "Controleer nog eens",
+      "ask": "Vraag iemand om geruststelling",
+      "goback": "Ga terug en zorg dat",
+      "wait": "Pauze en wacht"
+    },
+    "btn_next": "Volgende"
+  },
+  "step4": {
+    "title": "Je hoeft het nog niet te beantwoorden.",
+    "subtitle": "De komende 60 seconden gaan we oefenen met het maken van een kleine afstand tussen de drang en je reactie.",
+    "cadence_pause": "PAUZE",
+    "cadence_notice": "KENNISGEVING",
+    "cadence_choose": "KIES",
+    "detail": "Het doel is niet om de gedachte te laten verdwijnen. Het is om de drang te merken zonder er meteen op te reageren.",
+    "btn_start": "Start 60-seconden pauze"
+  },
+  "step5": {
+    "badge": "DE DRANG IS HIER",
+    "prompts": {
+      "0": "Let op de drang zoals die verschijnt.",
+      "1": "Je voelt de aantrekkingskracht zonder erop te reageren.",
+      "2": "Haal zacht adem en observeer.",
+      "3": "De drang is nu gewoon een sensatie.",
+      "4": "Je hoeft onzekerheid niet meteen op te lossen.",
+      "5": "Let op waar je spanning in je lichaam voelt.",
+      "6": "Gedachten komen en gaan als rimpelingen op water.",
+      "7": "Ruimte creëren tussen gedachte en handelen.",
+      "8": "Je observeert de drang, je gehoorzaamt er niet naar.",
+      "9": "Onzekerheid kan ongemakkelijk zijn, en dat is oké.",
+      "10": "Laat de gedachte er zijn zonder in te gaan.",
+      "11": "Let op de neiging om te repareren of te controleren.",
+      "12": "Blijf nieuwsgierig naar het gevoel.",
+      "13": "Jij hebt de controle over je reactie.",
+      "14": "Er hoeft op dit moment niets geregeld te worden.",
+      "15": "Je hebt ruimte gecreëerd voor meer dan 45 seconden.",
+      "16": "Let gewoon op de drang zonder te overhaasten om te handelen.",
+      "17": "Bijna daar — rustend in de pauze.",
+      "18": "Blijf aanwezig bij deze laatste adem.",
+      "19": "Je hebt de pauze voltooid."
+    }
+  },
+  "step6": {
+    "title": "Je hebt ruimte gemaakt.",
+    "subtitle": "Het doel was niet om de drang te laten verdwijnen. Het was om jezelf even de tijd te geven voordat je reageerde.",
+    "question": "Wat viel je op?",
+    "reflections": {
+      "thought_there": "De gedachte was er nog steeds",
+      "felt_urge": "Ik voelde de drang om te antwoorden",
+      "uncomfortable": "De onzekerheid voelde ongemakkelijk",
+      "could_wait": "Ik kon wachten zonder meteen te antwoorden"
+    },
+    "btn_continue": "Ga verder"
+  },
+  "step7": {
+    "eyebrow": "OCD-CYCLUS",
+    "title": "Waar de pauze past",
+    "subtitle": "OCD creëert een sterke drang om direct te reageren op twijfel.",
+    "node_doubt": "Twijfel / Opdringerige gedachte",
+    "node_urge": "Drang om te reageren",
+    "space_tag": "DE 60-SECONDEN PAUZE",
+    "space_title": "Dit is de ruimte die je net hebt geoefend.",
+    "node_compulsion": "Dwangmatige reactie",
+    "node_relief": "Tijdelijke verlichting → twijfel keert terug",
+    "detail": "Een pauze geeft je een moment voordat je automatisch die trek volgt.",
+    "btn_try_another": "Probeer een ander scenario"
+  },
+  "step8": {
+    "eyebrow": "SCENARIO 2",
+    "title": "Praktijkoverdracht",
+    "subtitle": "Stel je voor dat je net een belangrijk bericht hebt gestuurd.",
+    "visual_line1": "Je drukt op verzenden en sluit het gesprek.",
+    "visual_thought": "\"Heb ik iets verkeerds gezegd? Misschien moet ik het nog eens lezen.\"",
+    "visual_line2": "Hetzelfde patroon: Gedachte → Drang → Pauzeren → Keuze.",
+    "btn_practice": "Oefenpauze (60s)"
+  },
+  "step9": {
+    "title": "Een drang is geen instructie.",
+    "subtitle": "Je hoeft niet meteen op elke drang te reageren. Een beetje ruimte kan een ander startpunt creëren.",
+    "cadence_pause": "PAUZE",
+    "cadence_notice": "KENNISGEVING",
+    "cadence_choose": "KIES",
+    "btn_continue": "Ga verder"
+  }
+}

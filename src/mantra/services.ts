@@ -5,6 +5,7 @@
 
 export const SUPPORTED_SERVICES = [
   'therapy',
+  'ocd',
   'listener',
   'yoga',
   'diet',
@@ -26,6 +27,12 @@ export const DEFAULT_SERVICE = 'therapy';
  */
 const SERVICE_ALIAS_MAP: Record<string, string> = {
   therapist: 'therapy',
+  collection: 'therapy',
+  collections: 'therapy',
+  ocd: 'ocd',
+  ocdmantra: 'ocd',
+  'ocd-mantra': 'ocd',
+  'ocd_mantra': 'ocd',
   dietician: 'diet',
   psychiatrist: 'psychiatry',
   physiotherapist: 'physiotherapy',

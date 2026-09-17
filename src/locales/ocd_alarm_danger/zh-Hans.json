@@ -1,0 +1,86 @@
+{
+  "header_back": "返回",
+  "brand": "强迫咒语",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "活动三",
+    "title": "抬头看。",
+    "subtitle": "警报不是危险。",
+    "detail": "一种感觉可以很响亮，但并不会告诉你全部故事。",
+    "btn_enter": "这时→"
+  },
+  "screen2": {
+    "title_line1": "有时候，",
+    "title_line2": "不确定性就足够了。",
+    "subtitle": "点击短语观察探测器的反应。",
+    "example1": "“如果我犯了错呢？”",
+    "example2": "“如果有什么地方不够干净怎么办？”",
+    "example3": "“如果我不能完全确定怎么办？”",
+    "btn_activates": "信号激活→"
+  },
+  "screen3": {
+    "ambient_heart": "心跳加速",
+    "ambient_tension": "紧张感",
+    "ambient_attention": "注意",
+    "ambient_urge": "冲动",
+    "title": "这种感觉可能会很响亮。",
+    "subtitle": "这种感觉是真实的。它似乎传达的信息并不自动成为全部故事。",
+    "btn_look_closer": "仔细看看→"
+  },
+  "screen4": {
+    "tag_left": "[ 信号 // 灵敏度 ]",
+    "tag_right": "[ 回复 // 翻译 ]",
+    "title": "仔细看。",
+    "subtitle": "随意拖动，从任意角度检查探测器。",
+    "detail": "你可以注意到信号，而不必急于下结论。",
+    "btn_continue": "继续→"
+  },
+  "screen5": {
+    "title": "信号≠判决",
+    "subtitle": "强烈的感受可以是真实的，但不必自动证明它似乎在说什么。",
+    "col_feel_title": "我的感受",
+    "feel_anxious": "焦虑。",
+    "feel_uncertain": "不确定。",
+    "feel_tense": "紧张。",
+    "feel_pulled": "拉去检查。",
+    "col_conclude_title": "我的结论",
+    "conclude_wrong": "“一定是出了什么问题。”",
+    "conclude_make_sure": "“我得确认一下。”",
+    "conclude_certainty": "“我需要确定。”",
+    "btn_next": "接下来会发生什么？→"
+  },
+  "screen6": {
+    "title": "有时响应能暂时安静信号。",
+    "subtitle": "点击查看反应如何与信号互动。",
+    "item_check_title": "检查",
+    "item_check_quote": "“我会再保证一次。”",
+    "item_ask_title": "问",
+    "item_ask_quote": "“我去问问别人怎么看。”",
+    "item_replay_title": "重赛",
+    "item_replay_quote": "“我会在脑海里再过一遍。”",
+    "item_avoid_title": "避免",
+    "item_avoid_quote": "“我会远离那些让我感到不确定的事情。”",
+    "btn_let_signal": "让信号存在→"
+  },
+  "screen7": {
+    "title": "让信号存在。",
+    "subtitle": "注意当你不急于去解读时会发生什么。",
+    "btn_watch": "注意信号",
+    "observing_format": "观察信号......（{{秒}}）",
+    "done_title": "信号变了。",
+    "done_sub": "你本不必去解谜。",
+    "btn_continue": "继续→"
+  },
+  "screen8": {
+    "title_line1": "警报是一种信号。",
+    "title_line2": "这不是判决。",
+    "subtitle": "注意那种感觉。注意你的大脑为它添加的故事。",
+    "question": "下次闹钟响起时，你可能首先注意到什么？",
+    "opt_feeling": "那种感觉",
+    "opt_thought": "想法",
+    "opt_urge": "回应的冲动",
+    "feedback": "继续注意这些差异。",
+    "btn_saving": "拯救......",
+    "btn_continue": "继续→"
+  }
+}

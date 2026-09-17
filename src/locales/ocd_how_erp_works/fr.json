@@ -1,0 +1,113 @@
+{
+  "header_back": "Retour",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSYCHOÉDUCATION",
+    "title": "COMMENT FONCTIONNE L’ERP",
+    "subtitle": "L’ERP aide les personnes atteintes de TOC à s’exercer à affronter ce qui les déclenche tout en changeant ce qu’elles font ensuite.",
+    "quote": "« Tu ne t’entraînes pas à être intrépide. Tu t’entraînes à réagir différemment. »",
+    "btn_explore": "Explorer"
+  },
+  "screen2": {
+    "badge": "SCÉNARIO 1",
+    "title": "Tu viens de quitter la maison.",
+    "thought": "« Ai-je verrouillé la porte ? »",
+    "urge_tag": "Tu ressens l’envie de revenir",
+    "subtitle": "Un moment de doute fréquent arrive. Voyons ce qui se passe lorsque l’envie est suivie.",
+    "btn_see_happens": "Voyez ce qui se passe"
+  },
+  "screen3": {
+    "badge": "CHEMIN A",
+    "title": "Suis l’Impulsion",
+    "btn_check": "Vérifie la serrure",
+    "checking_status": "Vérifier la poignée... Tourner la clé...",
+    "relief_thought": "« D’accord, c’est verrouillé. Soulagement. »",
+    "doubt_thought": "« Attends... est-ce que je l’ai vraiment bien verrouillé ? »",
+    "subtitle": "Le soulagement apaisa ce sentiment un instant, mais le doute revint aussitôt.",
+    "btn_continue": "Continuez"
+  },
+  "screen4": {
+    "badge": "RÉFLEXION",
+    "title": "Qu’est-ce que le chèque t’a rapporté ?",
+    "point1": "Un soulagement sur le moment.",
+    "point2": "Encore une raison de vérifier à nouveau quand le doute reviendra.",
+    "subtitle": "Vérifier peut réduire la détresse sur le moment, mais ce soulagement à court terme renforce l’envie du cerveau de vérifier à nouveau.",
+    "btn_rewind": "Rembobiner le moment"
+  },
+  "screen5": {
+    "badge": "REMBOBINER",
+    "title": "Essayons le même moment différemment.",
+    "thought": "« Ai-je verrouillé la porte ? »",
+    "urge_tag": "L’envie apparaît : « Retourne vérifier »",
+    "subtitle": "Cette fois, au lieu de suivre automatiquement l’envie, nous explorons l’approche ERP.",
+    "btn_step1": "Étape 1 : Exposition"
+  },
+  "screen6": {
+    "badge": "ÉTAPE 1",
+    "title": "1. Exposition",
+    "subtitle1": "L’ERP commence par aborder un déclencheur plutôt que de l’éviter ou de le faire disparaître.",
+    "thought": "« Le doute est là : ai-je verrouillé la porte ? »",
+    "subtitle2": "En ERP, l’exposition signifie laisser le déclencheur ou l’incertitude présent sans chercher immédiatement à le chasser de l’esprit.",
+    "btn_step2": "Étape 2 : Prévention de la réponse"
+  },
+  "screen7": {
+    "badge": "ÉTAPE 2",
+    "title": "2. Prévention de la réponse",
+    "subtitle1": "Puis vient la deuxième partie : résister ou retarder la réponse compulsive.",
+    "thought": "Urge : « Retourne vérifier tout de suite. »",
+    "btn_dont_check": "Ne vérifie pas maintenant",
+    "subtitle2": "Pratique simulée : Choisir de ne pas effectuer le rituel donne au cerveau la possibilité d’apprendre quelque chose de nouveau."
+  },
+  "screen8": {
+    "badge": "COMPARAISON",
+    "title": "Les deux voies",
+    "col_urge_title": "Suis l’Impulsion",
+    "col_urge_step1": "Déclencheur",
+    "col_urge_step2": "Vérifié",
+    "col_urge_step3": "Relief",
+    "col_urge_step4": "Le doute revient",
+    "col_erp_title": "Voie ERP",
+    "col_erp_step1": "Déclencheur",
+    "col_erp_step2": "Envie",
+    "col_erp_step3": "Prévention de la réponse",
+    "col_erp_step4": "Nouveaux apprentissages",
+    "btn_learning": "Qu’apprends-tu ?"
+  },
+  "screen9": {
+    "badge": "COMPRÉHENSION FONDAMENTALE",
+    "title": "Le but n’est pas de ne rien ressentir.",
+    "subtitle": "L’ERP ne consiste pas à faire disparaître la détresse instantanément. Elle enseigne :",
+    "insight1": "« Je peux ressentir de l’incertitude et la tolérer. »",
+    "insight2": "« Je peux avoir une envie sans agir automatiquement dessus. »",
+    "insight3": "« Je n’ai pas besoin d’un rituel pour répondre à chaque doute. »",
+    "btn_scenario2": "Essayez un second scénario"
+  },
+  "screen10": {
+    "badge": "SCÉNARIO 2",
+    "title": "Tu as envoyé un message important.",
+    "thought": "Pensée : « Ai-je dit quelque chose de mal ? »",
+    "urge_tag": "Impulsion : Relisez-le",
+    "question": "À quoi ressemblerait la prévention de la réponse ?",
+    "opt_read": "Relisez le message pour en être sûr",
+    "opt_ask": "Demande à quelqu’un si ça te va",
+    "opt_leave": "Laissez-le tel quel pour l’instant sans relire",
+    "feedback_correct": "✓ C’est un exemple de résistance à la réponse de vérification ou de réassurance.",
+    "feedback_incorrect": "Ce serait une façon de répondre à l’incertitude. En ERP, la prévention de la réponse signifie pratiquer l’absence de comportement de vérification ou de réassurance.",
+    "btn_final_model": "Modèle final",
+    "btn_try_again": "Réessayez"
+  },
+  "screen11": {
+    "badge": "RÉSUMÉ",
+    "title": "L’ERP change ce que vous faites ensuite.",
+    "node_trigger": "Déclencheur",
+    "node_trigger_sub": "Le doute arrive",
+    "node_urge": "Envie",
+    "node_urge_sub": "Désir de ritualiser",
+    "node_erp": "Exposition + Prévention de la réponse",
+    "node_erp_sub": "Résistez à la compulsion",
+    "node_learning": "Nouvelles Connaissances",
+    "node_learning_sub": "L’incertitude peut être tolérée",
+    "subtitle": "Le but n’est pas d’éliminer chaque pensée ou sentiment intrusif. C’est de construire une réponse différente à eux.",
+    "btn_complete": "Activité complète"
+  }
+}

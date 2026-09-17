@@ -1,0 +1,100 @@
+{
+  "header_back": "Voltar",
+  "header_history": "História",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "CHECAGEM DE HUMOR DO TOC",
+    "title": "Como você está se sentindo agora?",
+    "subtitle": "Tire uma foto rápida. Não existe uma resposta certa.",
+    "levels": {
+      "l1_title": "1 — Muito baixo",
+      "l1_sub": "Sentindo-se pesado, sobrecarregado ou esgotado",
+      "l2_title": "2 — Baixo",
+      "l2_sub": "Inquieto, tenso ou com pouca energia",
+      "l3_title": "3 — Estável / Neutro",
+      "l3_sub": "Equilibrado, ok, ou aceitando as coisas como vêm",
+      "l4_title": "4 — Bom",
+      "l4_sub": "Claro, engajado ou quase à vontade",
+      "l5_title": "5 — Muito bom",
+      "l5_sub": "Com os pés no chão, energizados ou pacíficos"
+    },
+    "btn_continue": "Continue"
+  },
+  "screen2": {
+    "badge": "PASSO 2 DE 4",
+    "title": "O quanto o TOC tem estado na sua mente hoje?",
+    "subtitle": "Pense na quantidade de atenção, sofrimento ou perturbação que o TOC tem tomado hoje.",
+    "impact_l1": "Pouco — Silencioso",
+    "impact_l2": "Leve — Gerenciável",
+    "impact_l3": "Moderado — Perceptível",
+    "impact_l4": "Significativo — Disruptivo",
+    "impact_l5": "Muita — Alta presença",
+    "scale_min": "1 = Não muito",
+    "scale_max": "5 = Muito",
+    "btn_back": "Voltar",
+    "btn_continue": "Continue"
+  },
+  "screen3": {
+    "badge": "PASSO 3 DE 4",
+    "title": "O que se destacou hoje?",
+    "subtitle": "Escolha qualquer coisa que tenha feito parte da sua experiência.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Pensamentos / dúvidas intrusivas",
+      "CHECKING": "Vontade de conferir ou repetir",
+      "MENTAL_REVIEW": "Replay/análise mental",
+      "REASSURANCE": "Buscando certeza / segurança",
+      "AVOIDANCE": "Evitando gatilhos ou situações",
+      "HIGH_ANXIETY": "Alta ansiedade ou astresse",
+      "PAUSED_URGE": "Pausar ou atrasar um ritual",
+      "FOCUSED_WELL": "Engajado com tarefas diárias",
+      "NONE": "Nenhum desses hoje"
+    },
+    "btn_back": "Voltar",
+    "btn_continue": "Continue"
+  },
+  "screen4": {
+    "badge": "PASSO 4 DE 4",
+    "title": "Tem algo que queira lembrar?",
+    "subtitle": "Opcional. Algumas palavras são suficientes.",
+    "placeholder": "Escreva um bilhete...",
+    "btn_back": "Voltar",
+    "btn_save": "Salve o check-in",
+    "saving": "Salvando..."
+  },
+  "screen5": {
+    "badge": "✓ SALVO",
+    "title": "O momento de hoje.",
+    "subtitle": "Seu check-in foi registrado na sua linha do tempo privada.",
+    "impact_label": "Impacto do TOC {{impact}} / 5",
+    "btn_view_moments": "Veja seus momentos",
+    "btn_done": "Feito"
+  },
+  "history": {
+    "tab_moments": "Momentos",
+    "tab_trends": "Tendências",
+    "today_title": "Check-in de hoje",
+    "no_log_today": "Ainda não registrou check-in para hoje.",
+    "btn_check_in_now": "Registre o check-in de hoje",
+    "btn_view_past": "Veja check-ins anteriores ({{count}})",
+    "btn_hide_past": "Esconder check-ins passados",
+    "past_title": "Check-ins anteriores",
+    "no_logs_title": "Ainda não checar",
+    "no_logs_desc": "Seus registros privados e linha do tempo emocional aparecerão aqui.",
+    "today_tag": "HOJE",
+    "yesterday_tag": "ONTEM",
+    "modal_title": "Detalhes de Check-In",
+    "modal_mood_label": "Nível de humor",
+    "modal_impact_label": "Impacto do TOC",
+    "modal_experiences_label": "Experiências",
+    "modal_note_label": "Nota Pessoal",
+    "btn_edit": "Nota de edição",
+    "btn_delete": "Excluir Entrada",
+    "btn_close": "Fechar",
+    "trends_14d": "14 Dias",
+    "trends_30d": "30 Dias",
+    "trends_90d": "90 Dias",
+    "trends_avg_mood": "Humor Médio",
+    "trends_avg_impact": "Impacto médio do TOC",
+    "trends_total_entries": "Total de inscrições"
+  }
+}

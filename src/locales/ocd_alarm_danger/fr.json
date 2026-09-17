@@ -1,0 +1,86 @@
+{
+  "header_back": "Retour",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "ACTIVITÉ 3",
+    "title": "REGARDE EN HAUT.",
+    "subtitle": "L’ALARME N’EST PAS LE DANGER.",
+    "detail": "Un sentiment peut être fort sans toute l’histoire.",
+    "btn_enter": "ENTREZ →"
+  },
+  "screen2": {
+    "title_line1": "PARFOIS,",
+    "title_line2": "L’INCERTITUDE SUFFIT.",
+    "subtitle": "Appuyez sur une phrase pour observer la réaction du détecteur.",
+    "example1": "« Et si je faisais une erreur ? »",
+    "example2": "« Et si quelque chose n’est pas assez propre ? »",
+    "example3": "« Et si je ne peux pas en être complètement sûr ? »",
+    "btn_activates": "LE SIGNAL S’ACTIVE →"
+  },
+  "screen3": {
+    "ambient_heart": "CŒUR QUI BAT FORT",
+    "ambient_tension": "TENSION",
+    "ambient_attention": "ATTENTION",
+    "ambient_urge": "URGE",
+    "title": "CE SENTIMENT PEUT ÊTRE BRUYANT.",
+    "subtitle": "Le sentiment est réel. Le message qu’il semble porter n’est pas automatiquement toute l’histoire.",
+    "btn_look_closer": "REGARDE DE PLUS PRÈS →"
+  },
+  "screen4": {
+    "tag_left": "[ SIGNAL // SENSIBILITÉ ]",
+    "tag_right": "[ RÉPONSE // INTERPRÉTATION ]",
+    "title": "REGARDE DE PLUS PRÈS.",
+    "subtitle": "Faites glisser n’importe où pour inspecter le détecteur sous n’importe quel angle.",
+    "detail": "Vous pouvez remarquer le signal sans vous précipiter immédiatement vers une conclusion.",
+    "btn_continue": "CONTINUEZ →"
+  },
+  "screen5": {
+    "title": "SIGNAL ≠ VERDICT",
+    "subtitle": "Un sentiment fort peut être réel sans prouver automatiquement ce qu’il semble dire.",
+    "col_feel_title": "CE QUE JE RESSENS",
+    "feel_anxious": "Anxieux.",
+    "feel_uncertain": "Incertain.",
+    "feel_tense": "Tendu.",
+    "feel_pulled": "Tiré pour vérifier.",
+    "col_conclude_title": "CE QUE JE CONCLUS",
+    "conclude_wrong": "« Il doit y avoir un problème. »",
+    "conclude_make_sure": "« Je dois m’en assurer. »",
+    "conclude_certainty": "« J’ai besoin de certitude. »",
+    "btn_next": "QUE SE PASSE-T-IL ENSUITE ? →"
+  },
+  "screen6": {
+    "title": "PARFOIS, UNE RÉPONSE PEUT FAIRE TAIRE LE SIGNAL UN INSTANT.",
+    "subtitle": "Appuyez pour voir comment les réponses interagissent avec le signal.",
+    "item_check_title": "CHECK",
+    "item_check_quote": "« Je m’assurerai encore une fois. »",
+    "item_ask_title": "POSEZ",
+    "item_ask_quote": "« Je demanderai à quelqu’un ce qu’il en pense. »",
+    "item_replay_title": "REPLAY",
+    "item_replay_quote": "« Je vais y repasser dans ma tête. »",
+    "item_avoid_title": "ÉVITER",
+    "item_avoid_quote": "« Je resterai loin de tout ce qui me semble incertain. »",
+    "btn_let_signal": "QUE LE SIGNAL SOIT LÀ →"
+  },
+  "screen7": {
+    "title": "QUE LE SIGNAL SOIT LÀ.",
+    "subtitle": "Remarquez ce qui se passe quand vous ne vous précipitez pas immédiatement pour l’interpréter.",
+    "btn_watch": "ATTENTION AU SIGNAL",
+    "observing_format": "Signal d’observation... ({{seconds}}s)",
+    "done_title": "LE SIGNAL A CHANGÉ.",
+    "done_sub": "Tu n’étais pas obligé de le résoudre.",
+    "btn_continue": "CONTINUEZ →"
+  },
+  "screen8": {
+    "title_line1": "UNE ALARME EST UN SIGNAL.",
+    "title_line2": "PAS UN VERDICT.",
+    "subtitle": "Remarquez ce sentiment. Remarquez l’histoire que votre esprit y apporte.",
+    "question": "LA PROCHAINE FOIS QUE L’ALARME RETENTIT, QUE REMARQUEREZ-VOUS EN PREMIER ?",
+    "opt_feeling": "LE SENTIMENT",
+    "opt_thought": "LA PENSÉE",
+    "opt_urge": "L’ENVIE DE RÉPONDRE",
+    "feedback": "Continuez à remarquer la différence.",
+    "btn_saving": "SAUVEGARDER...",
+    "btn_continue": "CONTINUEZ →"
+  }
+}

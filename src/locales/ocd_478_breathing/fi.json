@@ -1,0 +1,55 @@
+{
+  "header_back": "Takaisin",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "HENGITYS",
+    "subtitle": "Yksinkertainen rytmi hengityksen ohjaamiseen.",
+    "rhythm_badge": "Hengitä sisään 4 · Pidä 7 · Hengitä ulos 8",
+    "label_how_long": "KAUANKO?",
+    "btn_begin": "Aloita"
+  },
+  "time_options": {
+    "opt_30s": "30 sekuntia",
+    "opt_30s_hint": "2 sykliä · ≈ 38 sekuntia",
+    "opt_1m": "1 min",
+    "opt_1m_hint": "3 sykliä · ≈ 1 min",
+    "opt_2m": "2 min",
+    "opt_2m_hint": "6 sykliä · ≈ 2 min",
+    "opt_3m": "3 min",
+    "opt_3m_hint": "10 sykliä · ≈ 3 min",
+    "opt_5m": "5 min",
+    "opt_5m_hint": "16 sykliä · ≈ 5 min"
+  },
+  "settling": {
+    "title": "Asettukaa",
+    "subcopy": "Ota hetki."
+  },
+  "phases": {
+    "inhale_title": "Hengitä sisään",
+    "inhale_sub": "Hengitä hitaasti sisään",
+    "hold_title": "Pidä",
+    "hold_sub": "Pysy täällä",
+    "exhale_title": "Hengitä ulos",
+    "exhale_sub": "Hengitä hitaasti ulos"
+  },
+  "reflection": {
+    "title": "Hyvin tehty.",
+    "subtitle": "Ota hetki ennen kuin jatkat eteenpäin. Huomaa, miltä sinusta tuntuu juuri nyt.",
+    "question": "Mitä huomaat?",
+    "choices": {
+      "settled": "Enemmän vakiintuneita",
+      "present": "Enemmän nykyhetkeä",
+      "same": "Ihan sama"
+    },
+    "btn_continue": "Jatka"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "SISÄÄNHENGITYS 4",
+    "step_hold": "PIDÄ 7",
+    "step_exhale": "ULOSHENGITYS 8",
+    "subtitle": "Palaa tähän käytäntöön aina, kun haluat hiljaisen hetken palauttaaksesi huomiosi.",
+    "btn_continue": "Jatka"
+  }
+}

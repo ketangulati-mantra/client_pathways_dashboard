@@ -1,0 +1,155 @@
+{
+  "header_back": "返回",
+  "brand": "強迫咒語",
+  "hero": {
+    "title": "進入強迫症循環",
+    "subtitle": "看看一個想法如何演變成一個循環。"
+  },
+  "stages": {
+    "step_experience": "01 經驗",
+    "step_recognize": "02 認出",
+    "step_explore": "03 探索",
+    "step_practice": "04 通知",
+    "step_takeaway": "05 重點摘要"
+  },
+  "loop": {
+    "stages": {
+      "thought": "思想",
+      "uncertainty": "不確定性",
+      "response": "回應",
+      "relief": "地形"
+    },
+    "cycle_1": {
+      "thought": "「如果我沒鎖門呢？」",
+      "uncertainty": "「我真的鎖上了嗎？」",
+      "response": "「再檢查一次。」",
+      "relief": "「好。我感覺好多了。」"
+    },
+    "cycle_2": {
+      "thought": "「等等......但我真的有仔細檢查過嗎？」",
+      "uncertainty": "「我需要確定。」",
+      "response": "「再檢查一次。」",
+      "relief": "「暫時的解脫......」"
+    },
+    "notice_prompt": "你有注意到嗎？",
+    "notice_detail": "鬆了一口氣的是真的，但疑慮又回來了。",
+    "action_prompt": "看看是什麼改變了→"
+  },
+  "scenarios": {
+    "heading": "現在讓它成為你的。",
+    "subheading": "選擇一個可辨識的場景，觀看它在迴圈中移動。",
+    "checking": {
+      "name": "跳票",
+      "phrase": "「如果我沒鎖門呢？」",
+      "thought": "「如果我沒鎖門呢？」",
+      "uncertainty": "「我真的鎖上了嗎？」",
+      "response": "「再檢查一次鎖。」",
+      "relief": "「好，現在感覺安全。」",
+      "return": "「等等......我有檢查清楚嗎？」",
+      "takeaway_quote": "我發現檢查會很快帶來緩解，但懷疑又會回來。",
+      "takeaway_action": "下次懷疑出現時，先停下來注意這個衝動，再自動檢查。"
+    },
+    "responsibility": {
+      "name": "責任",
+      "phrase": "「如果我犯了嚴重錯誤怎麼辦？」",
+      "thought": "「如果我犯了嚴重錯誤怎麼辦？」",
+      "uncertainty": "「我必須確定。」",
+      "response": "「在腦海中重播每個細節。」",
+      "relief": "「暫時看起來還好。」",
+      "return": "「如果我漏掉了什麼細節怎麼辦？」",
+      "takeaway_quote": "我注意到腦海重播試圖創造確定性，但反而拖延了懷疑。",
+      "takeaway_action": "下次想重玩的衝動出現時，承認懷疑而非分析。"
+    },
+    "contamination": {
+      "name": "污染",
+      "phrase": "「如果我碰到被污染的東西怎麼辦？」",
+      "thought": "「如果那個表面不乾淨怎麼辦？」",
+      "uncertainty": "「我感到不舒服，也被污染了。」",
+      "response": "「徹底洗乾淨。」",
+      "relief": "「我現在覺得很乾淨。」",
+      "return": "「我洗得夠乾淨嗎？」",
+      "takeaway_quote": "我注意到洗滌能緩解最初的不適，但卻引發下一個疑慮。",
+      "takeaway_action": "下次洗澡的衝動襲來時，先給自己一點時間去感受那種感覺。"
+    },
+    "symmetry": {
+      "name": "剛剛好",
+      "phrase": "「如果我做得不完全正確怎麼辦？」",
+      "thought": "「這感覺不平衡。」",
+      "uncertainty": "「可能會發生不好的事，或感覺不對勁。」",
+      "response": "「重做直到你明白為止。」",
+      "relief": "「現在這樣感覺很對。」",
+      "return": "「我上次做對了嗎？」",
+      "takeaway_quote": "我發現重複一個動作來達到「剛剛好」的感覺，能讓衝動持續存在。",
+      "takeaway_action": "下次當某件事感覺不完整時，注意重做的衝動，但不要立刻重複。"
+    },
+    "doubt_return_label": "疑慮又回來了："
+  },
+  "snapshot": {
+    "title": "你的迴圈快照",
+    "thought_label": "思想",
+    "uncertainty_label": "不確定性",
+    "response_label": "回應",
+    "effect_label": "短期影響",
+    "next_label": "接下來會發生什麼",
+    "replay_btn": "重播情境"
+  },
+  "response_point": {
+    "heading": "這裡的模式變得有趣。",
+    "subheading": "你可能無法控制這個想法或不確定性。但你可以注意到接下來會發生什麼。",
+    "choice_check": "再檢查一次",
+    "choice_notice": "注意那股衝動",
+    "check_result_title": "自動回應",
+    "check_result_body": "檢查帶來的解脫。懷疑又回來了。",
+    "notice_result_title": "停頓",
+    "notice_result_body": "不確定感可能仍會讓你感到不舒服。察覺到這種衝動，讓你有片刻時間才自動回應。",
+    "try_again": "想再看看差別嗎？"
+  },
+  "compulsions": {
+    "statement": "強迫行為不一定是你會做的事。",
+    "tab_outward": "向外",
+    "tab_inward": "內向",
+    "outward_items": {
+      "0": "跳票",
+      "1": "洗滌",
+      "2": "重複"
+    },
+    "inward_items": {
+      "0": "重賽",
+      "1": "評論",
+      "2": "分析",
+      "3": "尋求確定性"
+    }
+  },
+  "recognition": {
+    "heading": "你可能會注意到這個模式......",
+    "pattern_1": {
+      "step1": "檢查",
+      "step2": "地形",
+      "step3": "疑慮"
+    },
+    "pattern_2": {
+      "step1": "重賽",
+      "step2": "確定性",
+      "step3": "疑慮"
+    },
+    "pattern_3": {
+      "step1": "避免",
+      "step2": "地形",
+      "step3": "恐懼回歸"
+    }
+  },
+  "takeaway": {
+    "tag": "你的收穫",
+    "main_headline": "念頭不是循環。",
+    "sub_headline": "注意接下來發生的事。",
+    "closing": "理解這個模式是現實生活中辨識它的第一步。"
+  },
+  "next_step": {
+    "prompt_title": "準備好迎接接下來的挑戰了嗎？",
+    "prompt_desc": "將此活動標記為已完成，以儲存進度並繼續你的路徑。",
+    "btn_complete": "標記活動為已完成",
+    "saving": "拯救......",
+    "completed_badge": "活動完成",
+    "error_save": "我們現在無法儲存你的活動完成。你的進度已儲存在本地。"
+  }
+}

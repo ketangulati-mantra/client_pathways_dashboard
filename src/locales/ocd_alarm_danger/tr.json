@@ -1,0 +1,86 @@
+{
+  "header_back": "Geri",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "ETKINLIK 3",
+    "title": "YUXARI BAK.",
+    "subtitle": "ALARM TEHLIKE DEĞIL.",
+    "detail": "Bir his, tüm hikayeyi anlatmadan yüksek sesli olabilir.",
+    "btn_enter": "GIRER →"
+  },
+  "screen2": {
+    "title_line1": "BAZEN,",
+    "title_line2": "BELIRSIZLIK YETER.",
+    "subtitle": "Dedektörün nasıl tepki verdiğini gözlemlemek için bir ifadeye dokunun.",
+    "example1": "\"Ya hata yaptıysam?\"",
+    "example2": "\"Ya bir şey yeterince temiz değilse?\"",
+    "example3": "\"Ya tamamen emin olamıyorsam?\"",
+    "btn_activates": "SINYAL → HAREKETE GEÇIRIYOR"
+  },
+  "screen3": {
+    "ambient_heart": "KALBI ATIYOR",
+    "ambient_tension": "GERILIM",
+    "ambient_attention": "DIKKAT",
+    "ambient_urge": "DÜRTÜ",
+    "title": "BU HIS YÜKSEK OLABILIR.",
+    "subtitle": "Duygu gerçek. Taşıdığı mesaj otomatik olarak tüm hikaye değil.",
+    "btn_look_closer": "DAHA YOKTAN →"
+  },
+  "screen4": {
+    "tag_left": "[ SINYAL // HASSASIYET ]",
+    "tag_right": "[ CEVAP // YORUM ]",
+    "title": "Daha yakından bak.",
+    "subtitle": "Dedektörü herhangi bir açıdan incelemek için herhangi bir yere sürükleyin.",
+    "detail": "Sinyali hemen sonuca varmadan fark edebilirsiniz.",
+    "btn_continue": "DEVAM ET →"
+  },
+  "screen5": {
+    "title": "SINYAL ≠ KARAR",
+    "subtitle": "Güçlü bir his, otomatik olarak ne söylediğini kanıtlamadan gerçek olabilir.",
+    "col_feel_title": "NE HİSS EDİYORUM",
+    "feel_anxious": "Endişeli.",
+    "feel_uncertain": "Belirsiz.",
+    "feel_tense": "Gergin.",
+    "feel_pulled": "Kontrol etmek için çekildim.",
+    "col_conclude_title": "SONUÇ VERDİĞİMİ",
+    "conclude_wrong": "\"Bir şeyler yanlış olmalı.\"",
+    "conclude_make_sure": "\"Emin olmam lazım.\"",
+    "conclude_certainty": "\"Kesinliğe ihtiyacım var.\"",
+    "btn_next": "SONRA NE OLACAK? →"
+  },
+  "screen6": {
+    "title": "BAZEN BIR YANIT SINYALI BIR AN SUSTURABILIR.",
+    "subtitle": "Tepkilerin sinyalle nasıl etkileşime girdiğini görmek için dokunun.",
+    "item_check_title": "KONTROL",
+    "item_check_quote": "\"Bir kez daha emin olacağım.\"",
+    "item_ask_title": "SORUN",
+    "item_ask_quote": "\"Birine ne düşündüğünü soracağım.\"",
+    "item_replay_title": "TEKRAR OYNATMA",
+    "item_replay_quote": "\"Kafamda tekrar gözden geçireceğim.\"",
+    "item_avoid_title": "KAÇIN",
+    "item_avoid_quote": "\"Belirsiz hissettiren her şeyden uzak duracağım.\"",
+    "btn_let_signal": "İNYAL ORADA OLSUN →"
+  },
+  "screen7": {
+    "title": "İNYAL ORADA OLSUN.",
+    "subtitle": "Hemen yorumlamadığınızda ne olduğunu fark edin.",
+    "btn_watch": "İNYALI İZLE.",
+    "observing_format": "Gözlem sinyali... ({{seconds}}s)",
+    "done_title": "SINYAL DEĞIŞTI.",
+    "done_sub": "Çözmek zorunda değildin.",
+    "btn_continue": "DEVAM ET →"
+  },
+  "screen8": {
+    "title_line1": "ALARM BIR SINYALDIR.",
+    "title_line2": "KARAR DEĞİL.",
+    "subtitle": "Duyguyu fark et. Zihninin ona eklediği hikayeyi fark et.",
+    "question": "BIR DAHAKI ALARM YÜKSEK ÇALINCA, ÖNCE NEYI FARK EDERSINIZ?",
+    "opt_feeling": "HİSS",
+    "opt_thought": "DÜŞÜNCE",
+    "opt_urge": "CEVAP VERME ISTEĞI",
+    "feedback": "Farkı fark etmeye devam et.",
+    "btn_saving": "KURTARMAK...",
+    "btn_continue": "DEVAM ET →"
+  }
+}

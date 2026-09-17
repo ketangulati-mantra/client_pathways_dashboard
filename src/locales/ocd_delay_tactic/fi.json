@@ -1,0 +1,107 @@
+{
+  "header_back": "Takaisin",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "60 sekunnin tauko",
+    "subtitle": "Joskus halu voi tuntua siltä, että siihen täytyy reagoida heti. Harjoitellaanpa pienen tilan luomista ennen kuin vastaat.",
+    "btn_begin": "Aloita"
+  },
+  "step2": {
+    "eyebrow": "SKENAARIO 1",
+    "title": "Kokeillaanpa skenaariota",
+    "subtitle": "Kuvittele, että olet juuri lähtenyt kotoasi.",
+    "visual_line1": "Lukitset etuoven ja kävelet kohti autoasi.",
+    "visual_thought": "\"Lukitinko sen kunnolla?\"",
+    "visual_line2": "Huomaat vetovoiman kääntyä ympäri ja tarkistaa.",
+    "btn_continue": "Jatka"
+  },
+  "step3": {
+    "eyebrow": "HALU",
+    "banner": "\"Katso vielä kerran.\"",
+    "subtitle": "Huomaat halun kääntyä ympäri ja tarkistaa.",
+    "question": "Mitä sinä normaalisti tuntisit vetovoiman tehdä?",
+    "responses": {
+      "check": "Tarkista uudestaan",
+      "ask": "Pyydä joltain varmuutta",
+      "goback": "Mene takaisin ja varmista",
+      "wait": "Pysähdytä ja odota"
+    },
+    "btn_next": "Seuraavaksi"
+  },
+  "step4": {
+    "title": "Sinun ei tarvitse vastata vielä.",
+    "subtitle": "Seuraavat 60 sekuntia harjoittelemme pienen etäisyyden pitämistä halun ja reaktion välille.",
+    "cadence_pause": "TAUKO",
+    "cadence_notice": "ILMOITUS",
+    "cadence_choose": "VALITSE",
+    "detail": "Tavoitteena ei ole saada ajatus katoamaan. Tavoitteena on huomata halu vastaamatta siihen heti.",
+    "btn_start": "Aloita 60 sekunnin tauko"
+  },
+  "step5": {
+    "badge": "TARVE ON TÄÄLLÄ",
+    "prompts": {
+      "0": "Huomaa halu sellaisena kuin se ilmenee.",
+      "1": "Voit tuntea vetovoiman vastaamatta siihen.",
+      "2": "Hengitä lempeästi ja tarkkaile.",
+      "3": "Halu on tällä hetkellä vain tunne.",
+      "4": "Epävarmuutta ei tarvitse ratkaista heti.",
+      "5": "Huomaa, missä tunnet jännitystä kehossasi.",
+      "6": "Ajatukset tulevat ja menevät kuin aallot vedessä.",
+      "7": "Luomalla tilaa ajatuksen ja toiminnan välille.",
+      "8": "Tarkkailet halua, et tottele sitä.",
+      "9": "Epävarmuus voi olla epämukavaa, ja se on ihan okei.",
+      "10": "Anna ajatuksen olla siellä ilman osallistumista.",
+      "11": "Huomaa halu korjata tai tarkistaa.",
+      "12": "Pysy uteliaana tuntemuksesta.",
+      "13": "Sinä hallitset reaktiosi.",
+      "14": "Mitään ei tarvitse ratkaista juuri nyt.",
+      "15": "Olet luonut tilaa yli 45 sekunniksi.",
+      "16": "Huomaa vain tarve ilman kiirehtimistä.",
+      "17": "Melkein perillä — lepäämässä tauossa.",
+      "18": "Pysy läsnä tämän viimeisen hengenvedon kanssa.",
+      "19": "Sinä lopetit tauon."
+    }
+  },
+  "step6": {
+    "title": "Teit tilaa.",
+    "subtitle": "Tavoitteena ei ollut saada halu katoamaan. Tavoitteena oli antaa itsellesi hetki ennen kuin vastaat.",
+    "question": "Mitä huomasit?",
+    "reflections": {
+      "thought_there": "Ajatus oli yhä läsnä",
+      "felt_urge": "Tunsin tarvetta vastata",
+      "uncomfortable": "Epävarmuus tuntui epämukavalta",
+      "could_wait": "Voisin odottaa vastaamatta heti"
+    },
+    "btn_continue": "Jatka"
+  },
+  "step7": {
+    "eyebrow": "OCD-SYKLI",
+    "title": "Missä tauko sopii",
+    "subtitle": "OCD luo vahvan vetovoiman reagoida välittömästi epäilyksiin.",
+    "node_doubt": "Epäilys / Tunkeileva ajatus",
+    "node_urge": "Tarve vastata",
+    "space_tag": "60 SEKUNNIN TAUKO",
+    "space_title": "Tämä on se tila, jota juuri harjoittelit.",
+    "node_compulsion": "Pakonomainen vaste",
+    "node_relief": "Väliaikainen helpotus → epäilys palaa",
+    "detail": "Tauko antaa hetken ennen kuin automaattisesti seuraa vetoa.",
+    "btn_try_another": "Kokeile toista skenaariota"
+  },
+  "step8": {
+    "eyebrow": "SKENAARIO 2",
+    "title": "Harjoitussiirto",
+    "subtitle": "Kuvittele, että olet juuri lähettänyt tärkeän viestin.",
+    "visual_line1": "Lähetät ja suljet keskustelun.",
+    "visual_thought": "\"Sanoinko jotain väärin? Ehkä minun pitäisi lukea se uudelleen.\"",
+    "visual_line2": "Sama kaava: Ajatus → Halu → Pysähtyä → Valinta.",
+    "btn_practice": "Harjoitustauko (60-luku)"
+  },
+  "step9": {
+    "title": "Halu ei ole käsky.",
+    "subtitle": "Sinun ei tarvitse vastata jokaiseen haluun heti. Pieni tila voi luoda erilaisen lähtökohdan.",
+    "cadence_pause": "TAUKO",
+    "cadence_notice": "ILMOITUS",
+    "cadence_choose": "VALITSE",
+    "btn_continue": "Jatka"
+  }
+}

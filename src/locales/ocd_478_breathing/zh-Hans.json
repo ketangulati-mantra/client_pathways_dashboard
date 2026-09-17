@@ -1,0 +1,55 @@
+{
+  "header_back": "返回",
+  "brand": "强迫咒语",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "呼吸",
+    "subtitle": "一个简单的节奏来引导你的呼吸。",
+    "rhythm_badge": "吸气4秒 ·屏息7秒 ·呼气8秒",
+    "label_how_long": "多久？",
+    "btn_begin": "开始"
+  },
+  "time_options": {
+    "opt_30s": "30秒",
+    "opt_30s_hint": "2个周期 ·≈ 38秒",
+    "opt_1m": "1分钟",
+    "opt_1m_hint": "3个周期 ·≈ 1分钟",
+    "opt_2m": "2分钟",
+    "opt_2m_hint": "6个周期 ·≈ 2分钟",
+    "opt_3m": "3分钟",
+    "opt_3m_hint": "10个周期·≈ 3分钟",
+    "opt_5m": "5分钟",
+    "opt_5m_hint": "16个周期 ·≈ 5分钟"
+  },
+  "settling": {
+    "title": "安顿好",
+    "subcopy": "花点时间。"
+  },
+  "phases": {
+    "inhale_title": "吸气",
+    "inhale_sub": "慢慢吸气",
+    "hold_title": "停",
+    "hold_sub": "留在这里",
+    "exhale_title": "呼气",
+    "exhale_sub": "慢慢呼气"
+  },
+  "reflection": {
+    "title": "干得好。",
+    "subtitle": "在你继续前行之前，先花点时间。注意你现在的感受。",
+    "question": "你注意到了什么？",
+    "choices": {
+      "settled": "更安定了",
+      "present": "更为现代",
+      "same": "还是一样"
+    },
+    "btn_continue": "继续"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "吸气4",
+    "step_hold": "HOLD 7",
+    "step_exhale": "呼气 8",
+    "subtitle": "每当你想要安静时刻来重置注意力时，都可以回到这个练习。",
+    "btn_continue": "继续"
+  }
+}

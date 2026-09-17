@@ -1,0 +1,155 @@
+{
+  "header_back": "Geri",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "OKB döngüsünün içinde",
+    "subtitle": "Bir düşüncenin nasıl bir döngüye dönüşebileceğini gör."
+  },
+  "stages": {
+    "step_experience": "01 Deneyimi",
+    "step_recognize": "02 Tanıma",
+    "step_explore": "03 Keşfet",
+    "step_practice": "04 Bildirimi",
+    "step_takeaway": "05 Paket Servis"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Düşünce",
+      "uncertainty": "Belirsizlik",
+      "response": "Tepki",
+      "relief": "Rölyef"
+    },
+    "cycle_1": {
+      "thought": "\"Ya kapıyı kilitlemezsem?\"",
+      "uncertainty": "\"Gerçekten kilitledim mi?\"",
+      "response": "\"Tekrar kontrol et.\"",
+      "relief": "\"Tamam. Kendimi daha iyi hissediyorum.\""
+    },
+    "cycle_2": {
+      "thought": "\"Bekle... ama gerçekten düzgün kontrol ettim mi?\"",
+      "uncertainty": "\"Emin olmam gerekiyor.\"",
+      "response": "\"Bir kez daha kontrol et.\"",
+      "relief": "\"Geçici rahatlama...\""
+    },
+    "notice_prompt": "Fark ettin mi?",
+    "notice_detail": "Rahatlama gerçekti ama şüphe geri geldi.",
+    "action_prompt": "Neyin değiştiğine bakın→"
+  },
+  "scenarios": {
+    "heading": "Şimdi onu kendine ait yap.",
+    "subheading": "Döngüde ilerlemesini izlemek için tanınabilir bir senaryo seçin.",
+    "checking": {
+      "name": "Kontrol",
+      "phrase": "\"Ya kapıyı kilitlemezsem?\"",
+      "thought": "\"Ya kapıyı kilitlemezsem?\"",
+      "uncertainty": "\"Gerçekten kilitledim mi?\"",
+      "response": "\"Kilidi tekrar kontrol et.\"",
+      "relief": "\"Tamam, şimdilik güvende hissediyorum.\"",
+      "return": "\"Bekle... düzgün kontrol ettim mi?\"",
+      "takeaway_quote": "Kontrol etmek hızlı bir rahatlama sağlıyor ama şüphe geri geliyor.",
+      "takeaway_action": "Bir dahaki şüphe ortaya çıktığında, duraklayın ve isteği fark edin, sonra otomatik olarak kontrol edin."
+    },
+    "responsibility": {
+      "name": "Sorumluluk",
+      "phrase": "\"Ya ciddi bir hata yaptıysam?\"",
+      "thought": "\"Ya ciddi bir hata yaptıysam?\"",
+      "uncertainty": "\"Kesin olarak bilmem gerekiyor.\"",
+      "response": "\"Her detayı kafamda tekrar tekrar oynat.\"",
+      "relief": "\"Bir an için sorun yok gibi görünüyor.\"",
+      "return": "\"Ya bir detayı kaçırırsam?\"",
+      "takeaway_quote": "Zihinsel tekrar oynamanın kesinlik yaratmaya çalıştığını ama şüpheyi uzattığını fark ettim.",
+      "takeaway_action": "Bir dahaki sefere tekrar oynama isteği ortaya çıktığında, şüpheyi analiz etmeden kabul edin."
+    },
+    "contamination": {
+      "name": "Kirlenme",
+      "phrase": "\"Ya kirlenmiş bir şeye dokunsam?\"",
+      "thought": "\"Ya o yüzey temiz değilse?\"",
+      "uncertainty": "\"Kendimi rahatsız ve kirlenmiş hissediyorum.\"",
+      "response": "\"İyice yıka.\"",
+      "relief": "\"Şimdilik kendimi temiz hissediyorum.\"",
+      "return": "\"Yeterince yıkandım mı?\"",
+      "takeaway_quote": "Yıkamanın ilk rahatsızlığı hafiflettiğini, ama bir sonraki şüpheyi ortaya çıkardığını fark ettim.",
+      "takeaway_action": "Bir dahaki sefere yıkanma isteği geldiğinde, önce hissi fark etmek için kendinize bir an verin."
+    },
+    "symmetry": {
+      "name": "Tam Doğru",
+      "phrase": "\"Ya bunu tam olarak doğru yapmazsam?\"",
+      "thought": "\"Bu dengeli hissettirmiyor.\"",
+      "uncertainty": "\"Kötü bir şey olabilir ya da yanlış hissedebilir.\"",
+      "response": "\"Tekrar yap, ta ki yerine oturana kadar.\"",
+      "relief": "\"Şimdilik doğru geliyor.\"",
+      "return": "\"Geçen sefer doğru mu yaptım?\"",
+      "takeaway_quote": "'Tam doğru' bir his için bir eylemi tekrarlamanın dürtü canlı tuttuğunu fark ettim.",
+      "takeaway_action": "Bir dahaki sefere bir şey eksik geldiğinde, hemen tekrar etmeden tekrar yapma isteğini fark edin."
+    },
+    "doubt_return_label": "Şüphe geri dönüyor:"
+  },
+  "snapshot": {
+    "title": "Döngü Anlık Fotoğrafınız",
+    "thought_label": "Düşünce",
+    "uncertainty_label": "Belirsizlik",
+    "response_label": "Tepki",
+    "effect_label": "Kısa vadeli etkisi",
+    "next_label": "Sonra ne olur?",
+    "replay_btn": "Tekrar Görüş Senaryosu"
+  },
+  "response_point": {
+    "heading": "İşte desen burada ilginçleşiyor.",
+    "subheading": "Düşünceyi ya da belirsizliği kontrol edemeyebilirsiniz. Ama sonrasında ne olduğunu fark edebilirsiniz.",
+    "choice_check": "Tekrar kontrol et",
+    "choice_notice": "Dürtüye dikkat edin",
+    "check_result_title": "Otomatik tepki",
+    "check_result_body": "Kontrol rahatlama getirdi. Şüphe geri döndü.",
+    "notice_result_title": "Duraklama",
+    "notice_result_body": "Belirsizlik yine de rahatsız edici olabilir. Dürtüyü fark etmek otomatik olarak yanıt vermeden önce bir an verir.",
+    "try_again": "Farkı tekrar görmek ister misin?"
+  },
+  "compulsions": {
+    "statement": "Zorlamalar her zaman yaptığın bir şey değildir.",
+    "tab_outward": "Dışa Bakış",
+    "tab_inward": "İçe Doğru",
+    "outward_items": {
+      "0": "Kontrol",
+      "1": "Yıkama",
+      "2": "Tekrarlama"
+    },
+    "inward_items": {
+      "0": "Tekrar oynanma",
+      "1": "İnceleme",
+      "2": "Analiz",
+      "3": "Kesinlik arıyor"
+    }
+  },
+  "recognition": {
+    "heading": "Deseni fark edebilirsiniz...",
+    "pattern_1": {
+      "step1": "Kontrol",
+      "step2": "Rölyef",
+      "step3": "Şüphe"
+    },
+    "pattern_2": {
+      "step1": "Tekrar",
+      "step2": "Kesinlik",
+      "step3": "Şüphe"
+    },
+    "pattern_3": {
+      "step1": "Kaçın",
+      "step2": "Rölyef",
+      "step3": "Korku geri döner"
+    }
+  },
+  "takeaway": {
+    "tag": "Sizin Çıkardığınız Şey",
+    "main_headline": "Düşünce döngü değil.",
+    "sub_headline": "Sonrasında ne olduğunu fark et.",
+    "closing": "Kalıbı anlamak, onu gerçek hayatta tanımanın ilk adımıdır."
+  },
+  "next_step": {
+    "prompt_title": "Sırada ne olacak mı?",
+    "prompt_desc": "Bu etkinliği tamamlanmış olarak işaretleyin, ilerlemenizi kaydedin ve yolunuza devam edin.",
+    "btn_complete": "Faaliyeti Tamamlanmış Olarak Belirt",
+    "saving": "Kurtarmak...",
+    "completed_badge": "Etkinlik Tamamlandı",
+    "error_save": "Şu anda etkinliğinizi kaydedemedik. İlerlemeniz yerel olarak kaydedildi."
+  }
+}

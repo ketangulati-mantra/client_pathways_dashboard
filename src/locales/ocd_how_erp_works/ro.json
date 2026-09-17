@@ -1,0 +1,113 @@
+{
+  "header_back": "Înapoi",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSHOEDUCAȚIE",
+    "title": "CUM FUNCȚIONEAZĂ ERP",
+    "subtitle": "ERP ajută persoanele cu OCD să exerseze confruntarea cu ceea ce le declanșează, schimbând în același timp ceea ce fac în continuare.",
+    "quote": "\"Nu exersezi să fii neînfricat. Exersezi să răspunzi diferit.\"",
+    "btn_explore": "Explorează"
+  },
+  "screen2": {
+    "badge": "SCENARIUL 1",
+    "title": "Tocmai ai ieșit din casă.",
+    "thought": "\"Am încuiat ușa?\"",
+    "urge_tag": "Simți nevoia să te întorci",
+    "subtitle": "Apare un moment comun de îndoială. Să vedem ce se întâmplă când impulsul este urmat.",
+    "btn_see_happens": "Vezi ce se întâmplă"
+  },
+  "screen3": {
+    "badge": "CALEA A",
+    "title": "Urmează Impulsul",
+    "btn_check": "Verifică lacătul",
+    "checking_status": "Verific mânerul... Rotesc cheia...",
+    "relief_thought": "\"Bine, e încuiat. Ușurare.\"",
+    "doubt_thought": "\"Stai... chiar am încuiat-o bine?\"",
+    "subtitle": "Ușurarea a liniștit sentimentul pentru o clipă, dar îndoiala a revenit imediat după.",
+    "btn_continue": "Continuă"
+  },
+  "screen4": {
+    "badge": "REFLECȚIE",
+    "title": "Ce ți-a dat cecul?",
+    "point1": "Ușurare chiar pe moment.",
+    "point2": "Încă un motiv să verifici din nou când îndoiala revine.",
+    "subtitle": "Verificarea poate reduce stresul pe moment, dar acea ușurare pe termen scurt întărește impulsul creierului de a verifica din nou.",
+    "btn_rewind": "Derulează înapoi momentul"
+  },
+  "screen5": {
+    "badge": "DERULARE ÎNAPOI",
+    "title": "Hai să încercăm același moment diferit.",
+    "thought": "\"Am încuiat ușa?\"",
+    "urge_tag": "Impulsul apare: \"Întoarce-te și verifică\"",
+    "subtitle": "De data aceasta, în loc să urmăm automat impulsul, explorăm abordarea ERP.",
+    "btn_step1": "Pasul 1: Expunere"
+  },
+  "screen6": {
+    "badge": "PASUL 1",
+    "title": "1. Expunere",
+    "subtitle1": "ERP începe prin a aborda un declanșator, nu prin a-l evita sau a-l face să dispară.",
+    "thought": "\"Îndoiala este aici: Am încuiat ușa?\"",
+    "subtitle2": "În ERP, expunerea înseamnă să lași declanșatorul sau incertitudinea să fie prezentă fără a încerca imediat să o alunge din minte.",
+    "btn_step2": "Pasul 2: Prevenirea răspunsului"
+  },
+  "screen7": {
+    "badge": "PASUL 2",
+    "title": "2. Prevenirea răspunsului",
+    "subtitle1": "Apoi urmează a doua parte: rezistența sau întârzierea răspunsului compulsiv.",
+    "thought": "Impuls: \"Întoarce-te și verifică chiar acum.\"",
+    "btn_dont_check": "Nu verifica acum",
+    "subtitle2": "Practică simulată: Alegerea de a nu efectua ritualul oferă creierului șansa să învețe ceva nou."
+  },
+  "screen8": {
+    "badge": "COMPARAȚIE",
+    "title": "Cele două căi",
+    "col_urge_title": "Urmează Impulsul",
+    "col_urge_step1": "Declanșator",
+    "col_urge_step2": "Bifat",
+    "col_urge_step3": "Relieful",
+    "col_urge_step4": "Îndoiala revine",
+    "col_erp_title": "Calea ERP",
+    "col_erp_step1": "Declanșator",
+    "col_erp_step2": "Impuls",
+    "col_erp_step3": "Prevenirea răspunsului",
+    "col_erp_step4": "Învățare nouă",
+    "btn_learning": "Ce înveți?"
+  },
+  "screen9": {
+    "badge": "PERSPECTIVE DE BAZĂ",
+    "title": "Scopul nu este să nu simți nimic.",
+    "subtitle": "ERP nu este despre a face ca suferința să dispară instantaneu. Ea învață:",
+    "insight1": "\"Pot experimenta incertitudinea și o pot tolera.\"",
+    "insight2": "\"Pot avea o dorință fără să acționez automat.\"",
+    "insight3": "\"Nu am nevoie de un ritual ca să răspund la orice îndoială.\"",
+    "btn_scenario2": "Încearcă un al doilea scenariu"
+  },
+  "screen10": {
+    "badge": "SCENARIUL 2",
+    "title": "Ai trimis un mesaj important.",
+    "thought": "Gândire: \"Am spus ceva greșit?\"",
+    "urge_tag": "Urge: Citește-l din nou",
+    "question": "Cum ar arăta prevenirea răspunsului?",
+    "opt_read": "Citește din nou mesajul ca să fii sigur",
+    "opt_ask": "Întreabă pe cineva dacă ți se pare bine",
+    "opt_leave": "Lasă-l așa cum este pentru moment, fără să recitești",
+    "feedback_correct": "✓ Acesta este un exemplu de rezistență la răspunsul de verificare sau reasigurare.",
+    "feedback_incorrect": "Aceasta ar fi o modalitate de a răspunde incertitudinii. În ERP, prevenirea răspunsului înseamnă să exersezi să nu folosești comportamentul de verificare sau reasigurare.",
+    "btn_final_model": "Final Model",
+    "btn_try_again": "Încearcă din nou"
+  },
+  "screen11": {
+    "badge": "REZUMAT",
+    "title": "ERP schimbă ceea ce faci în continuare.",
+    "node_trigger": "Declanșator",
+    "node_trigger_sub": "Îndoiala sosește",
+    "node_urge": "Impuls",
+    "node_urge_sub": "Dorința de a ritualiza",
+    "node_erp": "Expunere + Prevenire a răspunsului",
+    "node_erp_sub": "Rezistă compulsiei",
+    "node_learning": "Învățare nouă",
+    "node_learning_sub": "Incertitudinea poate fi tolerată",
+    "subtitle": "Scopul nu este să elimini fiecare gând sau sentiment intruziv. Este să construiești un răspuns diferit la ele.",
+    "btn_complete": "Activitate completă"
+  }
+}

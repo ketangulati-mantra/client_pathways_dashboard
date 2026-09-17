@@ -1,0 +1,83 @@
+{
+  "header_back": "返回",
+  "brand": "强迫咒语",
+  "hero": {
+    "label": "强迫咒语",
+    "title": "什么是强迫症？",
+    "subtitle": "了解什么是强迫症，它如何表现，以及为什么它会让人觉得如此有说服力。"
+  },
+  "video": {
+    "eyebrow": "从这里开始",
+    "title": "观看这段关于强迫症的简短介绍。"
+  },
+  "basics": {
+    "eyebrow": "基础知识",
+    "headline": "强迫症不仅仅是不想要的想法。",
+    "obsession_title": "痴迷",
+    "obsession_desc": "那些让人难以忽视的不受欢迎的想法、画面、疑虑或冲动。",
+    "compulsion_title": "强迫行为",
+    "compulsion_desc": "你感到必须重复的动作或心理反应，以减轻不适或感到确定。"
+  },
+  "themes": {
+    "eyebrow": "共同主题",
+    "headline": "强迫症可以有很多种形式。",
+    "subtext": "这些是常见的主题，而非单独的诊断。一个人可能会经历多个症状。",
+    "disclaimer": "这些只是一些例子。",
+    "items": {
+      "contamination": {
+        "name": "污染",
+        "desc": "对细菌、疾病、污垢或污染的担忧。"
+      },
+      "harm": {
+        "name": "伤害",
+        "desc": "对造成或承担伤害责任的不受欢迎的恐惧。"
+      },
+      "checking": {
+        "name": "跳牌",
+        "desc": "反复检查安全、错误、门、电器或其他问题。"
+      },
+      "symmetry": {
+        "name": "对称与“恰到好处”",
+        "desc": "觉得事情需要平衡、精确或恰到好处。"
+      },
+      "taboo": {
+        "name": "侵入性/禁忌想法",
+        "desc": "涉及性、宗教、攻击或其他禁忌主题的不受欢迎的想法。"
+      },
+      "responsibility": {
+        "name": "责任与怀疑",
+        "desc": "对错误、责任或某事是否真正确定的持续怀疑。"
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "你可能认得这个",
+    "headline": "强迫症会让不确定感变得无法放下。",
+    "example_1": {
+      "thought": "“我锁门了吗？”",
+      "action": "你检查一下。你感到松了口气。",
+      "loop": "然后：“但我真的检查过吗？”"
+    },
+    "example_2": {
+      "thought": "“如果我犯了个大错怎么办？”",
+      "action": "你反复回放发生的事情。",
+      "loop": "你寻求安慰。"
+    }
+  },
+  "takeaway": {
+    "quote": "每个人都会有不想要的想法。\n\n强迫症会让这些想法感觉像是必须解决的问题。",
+    "sub": "理解这种模式是重要的第一步。"
+  },
+  "next_step": {
+    "eyebrow": "你旅程的下一步",
+    "headline": "现在让我们看看强迫症循环是如何不断重复的。",
+    "btn_explore": "探索强迫症循环→"
+  },
+  "completion": {
+    "eyebrow": "探索完了吗？",
+    "btn_complete": "将活动标记为已完成→",
+    "saving": "拯救......",
+    "completed_badge": "活动已完成",
+    "error_save": "我们现在无法保存你的活动完成。你的进度已保存在本地。"
+  }
+}

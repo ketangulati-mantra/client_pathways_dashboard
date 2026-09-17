@@ -1,0 +1,107 @@
+{
+  "header_back": "Tillbaka",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "Den 60 sekunder långa pausen",
+    "subtitle": "Ibland kan en impuls kännas som något du måste agera på direkt. Låt oss öva på att skapa lite utrymme innan du svarar.",
+    "btn_begin": "Börja"
+  },
+  "step2": {
+    "eyebrow": "SCENARIO 1",
+    "title": "Låt oss prova ett scenario",
+    "subtitle": "Föreställ dig att du just har lämnat ditt hus.",
+    "visual_line1": "Du låser ytterdörren och går mot din bil.",
+    "visual_thought": "\"Låste jag den ordentligt?\"",
+    "visual_line2": "Du märker dragningen att vända dig om och kolla.",
+    "btn_continue": "Fortsätt"
+  },
+  "step3": {
+    "eyebrow": "DRIFTEN",
+    "banner": "\"Kolla en gång till.\"",
+    "subtitle": "Du märker en impuls att vända dig om och kolla.",
+    "question": "Vad skulle du normalt känna dig dragen till att göra?",
+    "responses": {
+      "check": "Kolla igen",
+      "ask": "Be någon om beröring",
+      "goback": "Gå tillbaka och se till att",
+      "wait": "Pausa och vänta"
+    },
+    "btn_next": "Nästa"
+  },
+  "step4": {
+    "title": "Du behöver inte svara än.",
+    "subtitle": "Under de kommande 60 sekunderna ska vi öva på att skapa lite avstånd mellan impulsen och din reaktion.",
+    "cadence_pause": "PAUS",
+    "cadence_notice": "MEDDELANDE",
+    "cadence_choose": "VÄLJ",
+    "detail": "Målet är inte att få tanken att försvinna. Det är att märka lusten utan att omedelbart svara på den.",
+    "btn_start": "Starta 60-sekunders paus"
+  },
+  "step5": {
+    "badge": "IMPULSEN ÄR HÄR",
+    "prompts": {
+      "0": "Lägg märke till impulsen när den dyker upp.",
+      "1": "Du kan känna dragningen utan att svara på den.",
+      "2": "Ta ett försiktigt andetag och observera.",
+      "3": "Impulsen är bara en känsla just nu.",
+      "4": "Du behöver inte lösa osäkerheten direkt.",
+      "5": "Lägg märke till var du känner spänningar i kroppen.",
+      "6": "Tankar kommer och går som krusningar på vattnet.",
+      "7": "Skapa utrymme mellan tanke och handling.",
+      "8": "Du observerar impulsen, inte lyder den.",
+      "9": "Osäkerhet kan vara obekväm, och det är okej.",
+      "10": "Låt tanken finnas där utan att engagera sig.",
+      "11": "Lägg märke till impulsen att fixa eller kontrollera.",
+      "12": "Var nyfiken på känslan.",
+      "13": "Du har kontroll över ditt svar.",
+      "14": "Inget behöver avgöras just nu.",
+      "15": "Du har skapat utrymme i över 45 sekunder.",
+      "16": "Lägg bara märke till impulsen utan att skynda dig att agera.",
+      "17": "Nästan där — vilar i pausen.",
+      "18": "Var närvarande med detta sista andetag.",
+      "19": "Du fullbordade pausen."
+    }
+  },
+  "step6": {
+    "title": "Du gjorde plats.",
+    "subtitle": "Målet var inte att få lusten att försvinna. Det var att ge sig själv en stund innan man svarade.",
+    "question": "Vad märkte du?",
+    "reflections": {
+      "thought_there": "Tanken fanns fortfarande där",
+      "felt_urge": "Jag kände en stark lust att svara",
+      "uncomfortable": "Osäkerheten kändes obekväm",
+      "could_wait": "Jag kunde vänta utan att svara direkt"
+    },
+    "btn_continue": "Fortsätt"
+  },
+  "step7": {
+    "eyebrow": "OCD-CYKELN",
+    "title": "Där pausen passar in",
+    "subtitle": "OCD skapar en stark dragning att reagera omedelbart på tvivel.",
+    "node_doubt": "Tvivel / påträngande tanke",
+    "node_urge": "Impuls att svara",
+    "space_tag": "DEN 60 SEKUNDER LÅNGA PAUSEN",
+    "space_title": "Det här är platsen du just övade på.",
+    "node_compulsion": "Tvångsmässig respons",
+    "node_relief": "Tillfällig lättnad → tvivel återvänder",
+    "detail": "En paus ger dig ett ögonblick innan du automatiskt följer den dragningen.",
+    "btn_try_another": "Prova ett annat scenario"
+  },
+  "step8": {
+    "eyebrow": "SCENARIO 2",
+    "title": "Övergång till praktik",
+    "subtitle": "Föreställ dig att du just har skickat ett viktigt meddelande.",
+    "visual_line1": "Du trycker på skicka och stänger konversationen.",
+    "visual_thought": "\"Sa jag något fel? Kanske borde jag läsa den igen.\"",
+    "visual_line2": "Samma mönster: Tänkte → Impuls → Pausa → Val.",
+    "btn_practice": "Övningspaus (60 sekunder)"
+  },
+  "step9": {
+    "title": "En impuls är ingen instruktion.",
+    "subtitle": "Du behöver inte svara på varje impuls direkt. Lite utrymme kan skapa en annan startpunkt.",
+    "cadence_pause": "PAUS",
+    "cadence_notice": "MEDDELANDE",
+    "cadence_choose": "VÄLJ",
+    "btn_continue": "Fortsätt"
+  }
+}

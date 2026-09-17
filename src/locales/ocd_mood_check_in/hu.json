@@ -1,0 +1,100 @@
+{
+  "header_back": "Hátra",
+  "header_history": "Történelem",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "OCD HANGULATELLENŐRZÉS",
+    "title": "Hogy érzed magad most?",
+    "subtitle": "Készíts egy gyors képet. Nincs helyes válasz.",
+    "levels": {
+      "l1_title": "1 — Nagyon alacsony",
+      "l1_sub": "Nehéznek, túlterheltnek vagy kimerültnek érzem magam",
+      "l2_title": "2 — Alacsony",
+      "l2_sub": "Nyugtalan, feszült vagy alacsony energiaigényű",
+      "l3_title": "3 — Stabil / Semleges",
+      "l3_sub": "Kiegyensúlyozott, rendben, vagy úgy veszed a dolgokat, ahogy jönnek",
+      "l4_title": "4 — Jó",
+      "l4_sub": "Tiszta, elkötelezett vagy többnyire nyugodt",
+      "l5_title": "5 — Nagyon jó",
+      "l5_sub": "Földhözragadt, energikus, vagy békés"
+    },
+    "btn_continue": "Folytatás"
+  },
+  "screen2": {
+    "badge": "2. LÉPÉS A 4-BŐL",
+    "title": "Mennyit járt ma az OCD-nél?",
+    "subtitle": "Gondolj bele, mennyi figyelmet, szorongást vagy zavart jelent ma az OCD.",
+    "impact_l1": "Nem sok — Csendes",
+    "impact_l2": "Enyhe — Kezelhető",
+    "impact_l3": "Közepes — Észrevehető",
+    "impact_l4": "Jelentős — Zavaró",
+    "impact_l5": "Sok — Magas jelenlét",
+    "scale_min": "1 = Nem sok",
+    "scale_max": "5 = Sok",
+    "btn_back": "Hátra",
+    "btn_continue": "Folytatás"
+  },
+  "screen3": {
+    "badge": "3. LÉPÉS A 4-BŐL",
+    "title": "Mi tűnt ki ma a kiemelkedőnek?",
+    "subtitle": "Válassz bármit, ami része volt az élményednek.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Tolakodó gondolatok / kételyek",
+      "CHECKING": "Késztetés a megnézésre vagy ismételésre",
+      "MENTAL_REVIEW": "Mentális újrajátszás / elemzés",
+      "REASSURANCE": "Bizonyosság / megnyugtatás keresése",
+      "AVOIDANCE": "A kiváltó tényezők vagy helyzetek elkerülése",
+      "HIGH_ANXIETY": "Magas stressz vagy szorongás",
+      "PAUSED_URGE": "Megállított vagy késleltetett egy rituálét",
+      "FOCUSED_WELL": "A mindennapi feladatokban való részvétel",
+      "NONE": "Ma egyik sem ilyen"
+    },
+    "btn_back": "Hátra",
+    "btn_continue": "Folytatás"
+  },
+  "screen4": {
+    "badge": "4. LÉPÉS A 4-BŐL",
+    "title": "Van valami, amit meg akarsz jegyezni?",
+    "subtitle": "Opcionális. Néhány szó elég.",
+    "placeholder": "Írj egy üzenetet...",
+    "btn_back": "Hátra",
+    "btn_save": "Mentési bejelentkezés",
+    "saving": "Megmentem..."
+  },
+  "screen5": {
+    "badge": "✓ MEGMENTVE",
+    "title": "A mai pillanat.",
+    "subtitle": "A bejelentkezésed rögzítve van a privát idővonaladban.",
+    "impact_label": "OCD hatás {{impact}} / 5",
+    "btn_view_moments": "Nézd meg a pillanataidat",
+    "btn_done": "Kész"
+  },
+  "history": {
+    "tab_moments": "Pillanatok",
+    "tab_trends": "Trendek",
+    "today_title": "A mai bejelentkezés",
+    "no_log_today": "Ma még nem volt regisztrálva.",
+    "btn_check_in_now": "Rögzítsd a mai bejelentkezést",
+    "btn_view_past": "Korábbi check-inek megtekintése ({{count}})",
+    "btn_hide_past": "Bújj el a bejelentkezések után",
+    "past_title": "Korábbi ellenőrzések",
+    "no_logs_title": "Még nincs bejelentkezés",
+    "no_logs_desc": "A privát naplóid és az érzelmi idővonalad itt jelennek meg.",
+    "today_tag": "MA",
+    "yesterday_tag": "TEGNAP",
+    "modal_title": "Részletes bejelentkezés",
+    "modal_mood_label": "Hangulatszint",
+    "modal_impact_label": "OCD hatása",
+    "modal_experiences_label": "Tapasztalatok",
+    "modal_note_label": "Személyes megjegyzés",
+    "btn_edit": "Szerkesztési jegyzet",
+    "btn_delete": "Bejegyzés törlése",
+    "btn_close": "Zárt",
+    "trends_14d": "14 nap",
+    "trends_30d": "30 nap",
+    "trends_90d": "90 nap",
+    "trends_avg_mood": "Átlagos hangulat",
+    "trends_avg_impact": "Az átlagos OCD-hatás",
+    "trends_total_entries": "Összes nevezés"
+  }
+}

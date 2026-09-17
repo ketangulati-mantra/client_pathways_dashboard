@@ -1,0 +1,107 @@
+{
+  "header_back": "Zurück",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "Die 60-Sekunden-Pause",
+    "subtitle": "Manchmal kann sich ein Drang wie etwas anfühlen, dem man sofort nachgehen muss. Lass uns üben, ein wenig Abstand zu schaffen, bevor du antwortest.",
+    "btn_begin": "Beginnen"
+  },
+  "step2": {
+    "eyebrow": "SZENARIO 1",
+    "title": "Versuchen wir ein Szenario",
+    "subtitle": "Stell dir vor, du hast gerade dein Haus verlassen.",
+    "visual_line1": "Du schließt die Haustür ab und gehst zu deinem Auto.",
+    "visual_thought": "\"Habe ich es richtig abgeschlossen?\"",
+    "visual_line2": "Du bemerkst den Drang, dich umzudrehen und nachzusehen.",
+    "btn_continue": "Weitermachen"
+  },
+  "step3": {
+    "eyebrow": "DER DRANG",
+    "banner": "\"Überprüf es noch einmal.\"",
+    "subtitle": "Du bemerkst den Drang, dich umzudrehen und nachzusehen.",
+    "question": "Wozu würdest du dich normalerweise hingezogen fühlen?",
+    "responses": {
+      "check": "Überprüfen Sie nochmal",
+      "ask": "Frag jemanden um Bestätigung",
+      "goback": "Geh zurück und vergewisse dich",
+      "wait": "Pause und Warte"
+    },
+    "btn_next": "Als Nächstes"
+  },
+  "step4": {
+    "title": "Du musst noch nicht antworten.",
+    "subtitle": "In den nächsten 60 Sekunden üben wir, einen kleinen Abstand zwischen dem Drang und deiner Reaktion zu schaffen.",
+    "cadence_pause": "PAUSE",
+    "cadence_notice": "HINWEIS",
+    "cadence_choose": "WÄHLE",
+    "detail": "Das Ziel ist nicht, den Gedanken verschwinden zu lassen. Es ist, den Drang zu bemerken, ohne ihn sofort zu beantworten.",
+    "btn_start": "60-Sekunden-Pause starten"
+  },
+  "step5": {
+    "badge": "DER DRANG IST DA",
+    "prompts": {
+      "0": "Beachte den Drang, wie er auftaucht.",
+      "1": "Man spürt das Ziehen, ohne darauf zu antworten.",
+      "2": "Atme sanft durch und beobachte.",
+      "3": "Der Drang ist gerade nur eine Empfindung.",
+      "4": "Du musst Unsicherheit nicht sofort lösen.",
+      "5": "Achte darauf, wo du Spannung in deinem Körper spürst.",
+      "6": "Gedanken kommen und gehen wie Wellen auf Wasser.",
+      "7": "Er schafft Raum zwischen Gedanken und Taten.",
+      "8": "Du beobachtest den Drang, gehorchst ihm nicht.",
+      "9": "Unsicherheit kann unangenehm sein, und das ist in Ordnung.",
+      "10": "Lass den Gedanken da sein, ohne sich zu engagieren.",
+      "11": "Achte auf den Impuls, zu reparieren oder zu überprüfen.",
+      "12": "Bleib neugierig auf das Gefühl.",
+      "13": "Du hast die Kontrolle über deine Reaktion.",
+      "14": "Nichts muss in diesem Moment geklärt werden.",
+      "15": "Du hast über 45 Sekunden Raum geschaffen.",
+      "16": "Achte einfach auf den Drang, ohne zu überstürzen zu handeln.",
+      "17": "Fast da – ruhend in der Pause.",
+      "18": "Bleib präsent mit diesem letzten Atemzug.",
+      "19": "Du beendetest die Pause."
+    }
+  },
+  "step6": {
+    "title": "Du hast Platz gemacht.",
+    "subtitle": "Das Ziel war nicht, das Verlangen verschwinden zu lassen. Es war, sich einen Moment zu geben, bevor man reagierte.",
+    "question": "Was ist dir aufgefallen?",
+    "reflections": {
+      "thought_there": "Der Gedanke war immer noch da",
+      "felt_urge": "Ich verspürte den Drang zu antworten",
+      "uncomfortable": "Die Ungewissheit fühlte sich unangenehm an",
+      "could_wait": "Ich könnte warten, ohne sofort zu antworten"
+    },
+    "btn_continue": "Weitermachen"
+  },
+  "step7": {
+    "eyebrow": "OCD-ZYKLUS",
+    "title": "Wo die Pause hineinpasst",
+    "subtitle": "OCD erzeugt einen starken Drang, sofort auf Zweifel zu reagieren.",
+    "node_doubt": "Zweifel / Aufdringlicher Gedanke",
+    "node_urge": "Drang zu antworten",
+    "space_tag": "DIE 60-SEKUNDEN-PAUSE",
+    "space_title": "Das ist der Raum, den du gerade geübt hast.",
+    "node_compulsion": "Zwanghafte Reaktion",
+    "node_relief": "Vorübergehende Erleichterung → Zweifel kehrt zurück",
+    "detail": "Eine Pause gibt dir einen Moment, bevor du diesem Zug automatisch folgst.",
+    "btn_try_another": "Versuch ein anderes Szenario"
+  },
+  "step8": {
+    "eyebrow": "SZENARIO 2",
+    "title": "Praxisübertragung",
+    "subtitle": "Stell dir vor, du hast gerade eine wichtige Nachricht gesendet.",
+    "visual_line1": "Du drückst auf Senden und schließt das Gespräch.",
+    "visual_thought": "\"Habe ich etwas Falsches gesagt? Vielleicht sollte ich es nochmal lesen.\"",
+    "visual_line2": "Dasselbe Muster: Thought → Drang → Pause → Entscheidung.",
+    "btn_practice": "Übungspause (60 Sekunden)"
+  },
+  "step9": {
+    "title": "Ein Drang ist keine Anweisung.",
+    "subtitle": "Du musst nicht auf jeden Wunsch sofort antworten. Ein wenig Abstand kann einen anderen Ausgangspunkt schaffen.",
+    "cadence_pause": "PAUSE",
+    "cadence_notice": "HINWEIS",
+    "cadence_choose": "WÄHLE",
+    "btn_continue": "Weitermachen"
+  }
+}

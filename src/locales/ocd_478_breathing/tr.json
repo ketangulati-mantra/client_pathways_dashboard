@@ -1,0 +1,55 @@
+{
+  "header_back": "Geri",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "NEFES ALIYOR",
+    "subtitle": "Nefesinizi yönlendirecek basit bir ritim.",
+    "rhythm_badge": "4 dakika nefes alın · 7 dakika bekleyin · 8 nefes verin",
+    "label_how_long": "NE KADAR SÜRE?",
+    "btn_begin": "Başla"
+  },
+  "time_options": {
+    "opt_30s": "30 saniye",
+    "opt_30s_hint": "2 döngü · ≈ 38 saniye",
+    "opt_1m": "1 dakika",
+    "opt_1m_hint": "3 döngü · ≈ 1 dakika",
+    "opt_2m": "2 dakika",
+    "opt_2m_hint": "6 döngü · ≈ 2 dakika",
+    "opt_3m": "3 dakika",
+    "opt_3m_hint": "10 döngü · ≈ 3 dakika",
+    "opt_5m": "5 dakika",
+    "opt_5m_hint": "16 döngü · ≈ 5 dakika"
+  },
+  "settling": {
+    "title": "Yerleşin",
+    "subcopy": "Bir an dur."
+  },
+  "phases": {
+    "inhale_title": "Nefes al",
+    "inhale_sub": "Yavaşça nefes al",
+    "hold_title": "Bekle",
+    "hold_sub": "Burada kal",
+    "exhale_title": "Nefes ver",
+    "exhale_sub": "Yavaşça nefes ver"
+  },
+  "reflection": {
+    "title": "Aferin.",
+    "subtitle": "Devam etmeden önce bir an ayır. Şu anda nasıl hissettiğini fark et.",
+    "question": "Ne fark ediyorsun?",
+    "choices": {
+      "settled": "Daha yerleşim",
+      "present": "Daha fazla günümüz",
+      "same": "Aynı şekilde"
+    },
+    "btn_continue": "Devam et"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "NEFES ALIN 4",
+    "step_hold": "HOLD 7",
+    "step_exhale": "NEFES VER 8",
+    "subtitle": "Dikkatinizi yeniden başlatmak için sessiz bir an istediğinizde bu uygulamaya geri dönün.",
+    "btn_continue": "Devam et"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "header_back": "Hátra",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSZICHOOKTATÓ",
+    "title": "HOGYAN MŰKÖDIK AZ ERP",
+    "subtitle": "Az ERP segít az OCD-s betegeknek gyakorolni, hogy szembesüljenek azzal, ami kiváltja őket, miközben megváltoztatja azt, amit a következő lépések váltanak ki.",
+    "quote": "\"Nem gyakorolod a félelem nélküli viselkedést. Másképp reagálsz.\"",
+    "btn_explore": "Fedezd fel"
+  },
+  "screen2": {
+    "badge": "1. FORGATÓKÖNYV",
+    "title": "Most hagytad el a házat.",
+    "thought": "\"Bezártam az ajtót?\"",
+    "urge_tag": "Késztetést érzel, hogy visszamenj",
+    "subtitle": "Egy gyakori kételypillanat érkezik. Nézzük meg, mi történik, ha követik a késztetést.",
+    "btn_see_happens": "Nézd meg, mi történik"
+  },
+  "screen3": {
+    "badge": "AZ ÚT",
+    "title": "Kövesd a késztetést",
+    "btn_check": "Ellenőrizd a zárat",
+    "checking_status": "Ellenőrizni a kilincset... A kulcsot elfordítani...",
+    "relief_thought": "\"Rendben, zárva van. Megkönnyebbülés.\"",
+    "doubt_thought": "\"Várj... tényleg rendesen bezártam?\"",
+    "subtitle": "A megkönnyebbülés egy pillanatra megnyugtatta az érzést, de a kétely rögtön visszatért.",
+    "btn_continue": "Folytatás"
+  },
+  "screen4": {
+    "badge": "REFLEKTORÁLÁS",
+    "title": "Mit adott a csekk?",
+    "point1": "Megkönnyebbülés a pillanatban.",
+    "point2": "Még több ok, hogy újra megnézzem, ha visszatér a kétség.",
+    "subtitle": "A kontroll csökkentheti a pillanatnyi szorongást, de ez a rövid távú enyhülés erősíti az agy késztetését, hogy újra ellenőrizze.",
+    "btn_rewind": "Tekerd vissza a pillanatot"
+  },
+  "screen5": {
+    "badge": "VISSZATEKERÉS",
+    "title": "Próbáljuk meg ugyanazt a pillanatot másképp.",
+    "thought": "\"Bezártam az ajtót?\"",
+    "urge_tag": "Megjelenik a késztetés: \"Menj vissza és nézd meg\"",
+    "subtitle": "Ezúttal nem automatikusan követnénk a késztetést, hanem az ERP megközelítést vizsgáljuk.",
+    "btn_step1": "1. lépés: Expozíció"
+  },
+  "screen6": {
+    "badge": "1. LÉPÉS",
+    "title": "1. Expozíció",
+    "subtitle1": "Az ERP azzal kezdődik, hogy közelít egy triggerre, nem pedig elkerülné vagy megszüntetné.",
+    "thought": "\"Itt van a kétség: bezártam az ajtót?\"",
+    "subtitle2": "Az ERP-ben az expozíció azt jelenti, hogy hagyjuk, hogy a kiváltó vagy bizonytalanság jelen legyen anélkül, hogy azonnal kitaszítanád a fejéből.",
+    "btn_step2": "2. lépés: Válaszmegelőzés"
+  },
+  "screen7": {
+    "badge": "2. LÉPÉS",
+    "title": "2. Válaszmegelőzés",
+    "subtitle1": "Ezután jön a második rész: a kényszerreakció ellenállása vagy késleltetése.",
+    "thought": "Sürgetés: \"Menj vissza és nézd meg most rögtön.\"",
+    "btn_dont_check": "Ne nézz most",
+    "subtitle2": "Szimulált gyakorlat: Ha úgy dönt, hogy nem végzed el a rituálét, az az agy lehetőséget ad arra, hogy valami újat tanuljon."
+  },
+  "screen8": {
+    "badge": "ÖSSZEHASONLÍTÁS",
+    "title": "A két út",
+    "col_urge_title": "Kövesd a késztetést",
+    "col_urge_step1": "Trigger",
+    "col_urge_step2": "Megvan",
+    "col_urge_step3": "Felmentés",
+    "col_urge_step4": "Kétség visszatér",
+    "col_erp_title": "ERP útvonal",
+    "col_erp_step1": "Trigger",
+    "col_erp_step2": "Késztetés",
+    "col_erp_step3": "Válaszmegelőzés",
+    "col_erp_step4": "Új tanulás",
+    "btn_learning": "Mit tanulsz?"
+  },
+  "screen9": {
+    "badge": "ALAP BETEKINTÉS",
+    "title": "Nem a lényeg, hogy semmit sem érezzünk.",
+    "subtitle": "Az ERP nem arról szól, hogy a szorongás azonnal eltűnjön. Tanítja:",
+    "insight1": "\"Meg tudom tapasztalni a bizonytalanságot és elviselni.\"",
+    "insight2": "\"Képes vagyok késztetést anélkül, hogy automatikusan cselekednék rá.\"",
+    "insight3": "\"Nem kell rituálé, hogy minden kételyre válaszoljak.\"",
+    "btn_scenario2": "Próbálj ki egy második forgatókönyvet"
+  },
+  "screen10": {
+    "badge": "2. FORGATÓKÖNYV",
+    "title": "Fontos üzenetet küldtél.",
+    "thought": "Gondolat: \"Mondtam valami rosszat?\"",
+    "urge_tag": "Késztetés: Olvasd el újra",
+    "question": "Hogyan nézne ki a válaszmegelőzés?",
+    "opt_read": "Olvasd el újra az üzenetet, hogy biztos legyél",
+    "opt_ask": "Kérdezz meg valakit, hogy jól hangzik-e",
+    "opt_leave": "Hagyd egyelőre úgy, ahogy van, anélkül, hogy újraolvasnád",
+    "feedback_correct": "✓ Ez egy példa arra, hogyan ellenállunk a ellenőrzési vagy megnyugtató válasznak.",
+    "feedback_incorrect": "Ez egy módja lenne a bizonytalanságra való reagálásnak. Az ERP-ben a válaszmegelőzés azt jelenti, hogy nem alkalmazunk ellenőrzési vagy megnyugtató viselkedést.",
+    "btn_final_model": "Végső modell",
+    "btn_try_again": "Próbáld újra"
+  },
+  "screen11": {
+    "badge": "ÖSSZEFOGLALÓ",
+    "title": "Az ERP megváltoztatja, amit ezután csinálsz.",
+    "node_trigger": "Trigger",
+    "node_trigger_sub": "Kétely érkezik",
+    "node_urge": "Késztetés",
+    "node_urge_sub": "Rituáléi szertartás iránti vágy",
+    "node_erp": "Expozíció + Válaszmegelőzés",
+    "node_erp_sub": "Ellenállás a kényszernek",
+    "node_learning": "Új tanulás",
+    "node_learning_sub": "A bizonytalanság elviselhető",
+    "subtitle": "A cél nem az, hogy minden tolakodó gondolatot vagy érzést eltörölj. A cél az, hogy más reakciót építsünk ki rájuk.",
+    "btn_complete": "Teljes tevékenység"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "header_back": "Tillbaka",
+  "header_history": "Historia",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "OCD-HUMÖRKONTROLL",
+    "title": "Hur mår du just nu?",
+    "subtitle": "Ta en snabb bild. Det finns inget rätt svar.",
+    "levels": {
+      "l1_title": "1 — Mycket låg",
+      "l1_sub": "Känner mig tung, överväldigad eller utmattad",
+      "l2_title": "2 — Låg",
+      "l2_sub": "Orolig, ansträngd eller låg energi",
+      "l3_title": "3 — Stabil / Neutral",
+      "l3_sub": "Balanserad, okej, eller att ta saker som de kommer",
+      "l4_title": "4 — Bra",
+      "l4_sub": "Klar, engagerad eller mestadels avslappnad",
+      "l5_title": "5 — Mycket bra",
+      "l5_sub": "Jordad, energifylld eller fridfull"
+    },
+    "btn_continue": "Fortsätt"
+  },
+  "screen2": {
+    "badge": "STEG 2 AV 4",
+    "title": "Hur mycket har OCD varit i dina tankar idag?",
+    "subtitle": "Tänk på hur mycket uppmärksamhet, stress eller störning OCD har tagit idag.",
+    "impact_l1": "Inte mycket — Tyst",
+    "impact_l2": "Mild — Hanterbar",
+    "impact_l3": "Måttlig — Märkbar",
+    "impact_l4": "Betydande — Störande",
+    "impact_l5": "Mycket — Hög närvaro",
+    "scale_min": "1 = Inte mycket",
+    "scale_max": "5 = Mycket",
+    "btn_back": "Tillbaka",
+    "btn_continue": "Fortsätt"
+  },
+  "screen3": {
+    "badge": "STEG 3 AV 4",
+    "title": "Vad stack ut idag?",
+    "subtitle": "Välj vad som helst som var en del av din upplevelse.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Påträngande tankar / tvivel",
+      "CHECKING": "Behov av att kontrollera eller upprepa",
+      "MENTAL_REVIEW": "Mental återupprepning / analys",
+      "REASSURANCE": "Sökande efter visshet / trygghet",
+      "AVOIDANCE": "Undvika triggers eller situationer",
+      "HIGH_ANXIETY": "Hög stress eller ångest",
+      "PAUSED_URGE": "Pausade eller fördröjde en ritual",
+      "FOCUSED_WELL": "Engagerad i dagliga uppgifter",
+      "NONE": "Inget av detta idag"
+    },
+    "btn_back": "Tillbaka",
+    "btn_continue": "Fortsätt"
+  },
+  "screen4": {
+    "badge": "STEG 4 AV 4",
+    "title": "Något du vill minnas?",
+    "subtitle": "Valfritt. Några ord räcker.",
+    "placeholder": "Skriv en lapp...",
+    "btn_back": "Tillbaka",
+    "btn_save": "Spara incheckning",
+    "saving": "Rädda..."
+  },
+  "screen5": {
+    "badge": "✓ RÄDDAD",
+    "title": "Dagens ögonblick.",
+    "subtitle": "Din incheckning har registrerats på din privata tidslinje.",
+    "impact_label": "OCD-påverkan {{påverkan}} / 5",
+    "btn_view_moments": "Se dina ögonblick",
+    "btn_done": "Klart"
+  },
+  "history": {
+    "tab_moments": "Ögonblick",
+    "tab_trends": "Trender",
+    "today_title": "Dagens incheckning",
+    "no_log_today": "Ingen incheckning inbokad för idag än.",
+    "btn_check_in_now": "Spela in dagens incheckning",
+    "btn_view_past": "Visa tidigare incheckningar ({{count}})",
+    "btn_hide_past": "Göm efter incheckningar",
+    "past_title": "Tidigare incheckningar",
+    "no_logs_title": "Inga incheckningar än",
+    "no_logs_desc": "Dina privata loggar och känslomässiga tidslinje visas här.",
+    "today_tag": "IDAG",
+    "yesterday_tag": "IGÅR",
+    "modal_title": "Incheckningsdetalj",
+    "modal_mood_label": "Humörnivå",
+    "modal_impact_label": "OCD-påverkan",
+    "modal_experiences_label": "Erfarenheter",
+    "modal_note_label": "Personlig not",
+    "btn_edit": "Redigering",
+    "btn_delete": "Ta bort posten",
+    "btn_close": "Stäng",
+    "trends_14d": "14 dagar",
+    "trends_30d": "30 dagar",
+    "trends_90d": "90 dagar",
+    "trends_avg_mood": "Medelhumör",
+    "trends_avg_impact": "Genomsnittlig OCD-påverkan",
+    "trends_total_entries": "Totalt antal anmälningar"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "header_back": "Geri",
+  "header_history": "Tarihçe",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "OKB'Sİ RUH HALI KONTROLÜ",
+    "title": "Şu anda nasıl hissediyorsun?",
+    "subtitle": "Hızlı bir anlık çek. Doğru bir cevap yok.",
+    "levels": {
+      "l1_title": "1 — Çok düşük",
+      "l1_sub": "Ağır, bunalmış ya da tükenmiş hissetmek",
+      "l2_title": "2 — Düşük",
+      "l2_sub": "Huzursuz, zorlanan ya da enerjisi düşük",
+      "l3_title": "3 — Sabit / Nötr",
+      "l3_sub": "Dengeli, tamam mı, yoksa işleri olduğu gibi almak",
+      "l4_title": "4 — İyi",
+      "l4_sub": "Açık, ilgili ya da çoğunlukla rahat",
+      "l5_title": "5 — Çok iyi",
+      "l5_sub": "Yere basılmış, enerjik ya da huzurlu"
+    },
+    "btn_continue": "Devam et"
+  },
+  "screen2": {
+    "badge": "4 ADIMDAN 2.",
+    "title": "Bugün OKB aklınızda ne kadar şey var?",
+    "subtitle": "Bugün OKB'nin ne kadar ilgi, sıkıntı veya rahatsızlık getirdiğini düşünün.",
+    "impact_l1": "Çok fazla değil — Sessiz",
+    "impact_l2": "Hafif — Yönetilebilir",
+    "impact_l3": "Orta — Belirgin",
+    "impact_l4": "Önemli — Yıkıcı",
+    "impact_l5": "Çok — Yüksek varlık",
+    "scale_min": "1 = Çok bir şey yok",
+    "scale_max": "5 = Çok",
+    "btn_back": "Geri",
+    "btn_continue": "Devam et"
+  },
+  "screen3": {
+    "badge": "4 ÜZERINDEN 3. ADIM",
+    "title": "Bugün öne çıkan neydi?",
+    "subtitle": "Deneyiminizin bir parçası olan herhangi bir şeyi seçin.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Rahatsız edici düşünceler / şüpheler",
+      "CHECKING": "Kontrol etme isteği ya da tekrar etme",
+      "MENTAL_REVIEW": "Zihinsel tekrar oynama / analiz",
+      "REASSURANCE": "Kesinlik / güvence arıyorum",
+      "AVOIDANCE": "Tetikleyicilerden veya durumlardan kaçınmak",
+      "HIGH_ANXIETY": "Yüksek sıkıntı veya kaygı",
+      "PAUSED_URGE": "Bir ritüeli duraklattı veya erteledi",
+      "FOCUSED_WELL": "Günlük işlerle meşgul",
+      "NONE": "Bugün bunların hiçbiri yok"
+    },
+    "btn_back": "Geri",
+    "btn_continue": "Devam et"
+  },
+  "screen4": {
+    "badge": "4. ADIM 4",
+    "title": "Hatırlamak istediğin bir şey var mı?",
+    "subtitle": "İstekli. Birkaç kelime yeterli.",
+    "placeholder": "Bir not yaz...",
+    "btn_back": "Geri",
+    "btn_save": "Kayıt kontrolü",
+    "saving": "Kurtarmak..."
+  },
+  "screen5": {
+    "badge": "✓ KURTARILDI",
+    "title": "Bugünün anı.",
+    "subtitle": "Check-in işleminiz özel zaman çizelgenize kaydedildi.",
+    "impact_label": "OKB etkisi {{impact}} / 5",
+    "btn_view_moments": "Anlarınızı izleyin",
+    "btn_done": "Tamam"
+  },
+  "history": {
+    "tab_moments": "Anlar",
+    "tab_trends": "Trendler",
+    "today_title": "Bugünkü Kayıt",
+    "no_log_today": "Bugün için henüz kayıt yapılmadı.",
+    "btn_check_in_now": "Bugünkü kayıt kaydı",
+    "btn_view_past": "Geçmiş check-in'leri görüntüle ({{count}})",
+    "btn_hide_past": "Check-in geçmişini sakla",
+    "past_title": "Geçmiş Check-In'ler",
+    "no_logs_title": "Henüz Kontrol Yok",
+    "no_logs_desc": "Özel kayıtlarınız ve duygusal zaman çizelgeniz burada görünecektir.",
+    "today_tag": "BUGÜN",
+    "yesterday_tag": "DÜN",
+    "modal_title": "Check-In Detayı",
+    "modal_mood_label": "Ruh Hali Seviyesi",
+    "modal_impact_label": "OKB Etkisi",
+    "modal_experiences_label": "Deneyimler",
+    "modal_note_label": "Kişisel Not",
+    "btn_edit": "Düzenleme Notu",
+    "btn_delete": "Girişi Sil",
+    "btn_close": "Kapat",
+    "trends_14d": "14 Gün",
+    "trends_30d": "30 Gün",
+    "trends_90d": "90 Gün",
+    "trends_avg_mood": "Ortalama Ruh Hali",
+    "trends_avg_impact": "Ortalama OKB Etkisi",
+    "trends_total_entries": "Toplam Katılım"
+  }
+}

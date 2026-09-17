@@ -1,0 +1,55 @@
+{
+  "header_back": "العودة",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "التنفس",
+    "subtitle": "إيقاع بسيط يوجه تنفسك.",
+    "rhythm_badge": "شهيق لمدة 4 · احتفظ لمدة 7 · زفر لمدة 8",
+    "label_how_long": "كم من الوقت؟",
+    "btn_begin": "البداية"
+  },
+  "time_options": {
+    "opt_30s": "30 ثانية",
+    "opt_30s_hint": "دورتان · ≈ 38 ثانية",
+    "opt_1m": "دقيقة واحدة",
+    "opt_1m_hint": "3 دورات · ≈ دقيقة واحدة",
+    "opt_2m": "دقيقتان",
+    "opt_2m_hint": "6 دورات · ≈ دقيقتان",
+    "opt_3m": "3 دقائق",
+    "opt_3m_hint": "10 دورات · ≈ 3 دقائق",
+    "opt_5m": "5 دقائق",
+    "opt_5m_hint": "16 دورة · ≈ 5 دقائق"
+  },
+  "settling": {
+    "title": "استقر",
+    "subcopy": "خذ لحظة."
+  },
+  "phases": {
+    "inhale_title": "استنشق",
+    "inhale_sub": "تنفس ببطء",
+    "hold_title": "انتظر",
+    "hold_sub": "ابق هنا",
+    "exhale_title": "زفر",
+    "exhale_sub": "تنفس ببطء"
+  },
+  "reflection": {
+    "title": "عمل رائع.",
+    "subtitle": "خذ لحظة قبل أن تمضي قدما. لاحظ كيف تشعر الآن.",
+    "question": "ماذا تلاحظ؟",
+    "choices": {
+      "settled": "أكثر استقرارا",
+      "present": "أكثر حضورا",
+      "same": "ومع ذلك"
+    },
+    "btn_continue": "تابع"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "شهيق 4",
+    "step_hold": "الحجز 7",
+    "step_exhale": "زفير 8",
+    "subtitle": "عد إلى هذه الممارسة كلما أردت لحظة هادئة لإعادة ضبط انتباهك.",
+    "btn_continue": "تابع"
+  }
+}

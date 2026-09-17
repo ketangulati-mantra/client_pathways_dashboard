@@ -1,0 +1,83 @@
+{
+  "header_back": "Back",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "What is OCD?",
+    "subtitle": "Understand what OCD is, how it can show up, and why it can feel so convincing."
+  },
+  "video": {
+    "eyebrow": "START HERE",
+    "title": "Watch this short introduction to OCD."
+  },
+  "basics": {
+    "eyebrow": "THE BASICS",
+    "headline": "OCD is more than unwanted thoughts.",
+    "obsession_title": "OBSESSIONS",
+    "obsession_desc": "Unwanted thoughts, images, doubts, or urges that can feel difficult to dismiss.",
+    "compulsion_title": "COMPULSIONS",
+    "compulsion_desc": "Actions or mental responses you feel driven to repeat to reduce discomfort or feel certain."
+  },
+  "themes": {
+    "eyebrow": "COMMON THEMES",
+    "headline": "OCD can take many forms.",
+    "subtext": "These are common themes, not separate diagnoses. One person can experience more than one.",
+    "disclaimer": "These are only some examples.",
+    "items": {
+      "contamination": {
+        "name": "Contamination",
+        "desc": "Fears about germs, illness, dirt, or contamination."
+      },
+      "harm": {
+        "name": "Harm",
+        "desc": "Unwanted fears about causing or being responsible for harm."
+      },
+      "checking": {
+        "name": "Checking",
+        "desc": "Repeatedly checking safety, mistakes, doors, appliances, or other concerns."
+      },
+      "symmetry": {
+        "name": "Symmetry & \"Just Right\"",
+        "desc": "Feeling that things need to be balanced, exact, or just right."
+      },
+      "taboo": {
+        "name": "Intrusive / Taboo Thoughts",
+        "desc": "Unwanted thoughts involving sexual, religious, aggressive, or other taboo themes."
+      },
+      "responsibility": {
+        "name": "Responsibility & Doubt",
+        "desc": "Persistent doubt about mistakes, responsibility, or whether something is truly certain."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "YOU MIGHT RECOGNIZE THIS",
+    "headline": "OCD can make uncertainty feel impossible to leave alone.",
+    "example_1": {
+      "thought": "“Did I lock the door?”",
+      "action": "You check. You feel relieved.",
+      "loop": "Then: “But did I really check?”"
+    },
+    "example_2": {
+      "thought": "“What if I made a terrible mistake?”",
+      "action": "You replay what happened.",
+      "loop": "You look for reassurance."
+    }
+  },
+  "takeaway": {
+    "quote": "Everyone gets unwanted thoughts.\n\nOCD can make those thoughts feel like something you have to solve.",
+    "sub": "Understanding that pattern is an important first step."
+  },
+  "next_step": {
+    "eyebrow": "NEXT IN YOUR JOURNEY",
+    "headline": "Now let's look at how the OCD cycle can keep repeating.",
+    "btn_explore": "Explore the OCD Cycle →"
+  },
+  "completion": {
+    "eyebrow": "Finished exploring?",
+    "btn_complete": "Mark Activity as Done →",
+    "saving": "Saving...",
+    "completed_badge": "Activity Completed",
+    "error_save": "We couldn't save your activity completion right now. Your progress is saved locally."
+  }
+}

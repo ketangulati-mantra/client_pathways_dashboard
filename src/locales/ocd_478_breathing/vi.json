@@ -1,0 +1,55 @@
+{
+  "header_back": "Quay lại",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "THỞ",
+    "subtitle": "Một nhịp điệu đơn giản để dẫn dắt hơi thở của bạn.",
+    "rhythm_badge": "Hít vào trong 4 · giữ trong 7 · thở ra trong 8",
+    "label_how_long": "BAO LÂU RỒI?",
+    "btn_begin": "Bắt đầu"
+  },
+  "time_options": {
+    "opt_30s": "30 giây",
+    "opt_30s_hint": "2 chu kỳ · ≈ 38 giây",
+    "opt_1m": "1 phút",
+    "opt_1m_hint": "3 chu kỳ · ≈ 1 phút",
+    "opt_2m": "2 phút",
+    "opt_2m_hint": "6 chu kỳ · ≈ 2 phút",
+    "opt_3m": "3 phút",
+    "opt_3m_hint": "10 chu kỳ · ≈ 3 phút",
+    "opt_5m": "5 phút",
+    "opt_5m_hint": "16 chu kỳ · ≈ 5 phút"
+  },
+  "settling": {
+    "title": "Ổn định chỗ ở",
+    "subcopy": "Hãy dành chút thời gian."
+  },
+  "phases": {
+    "inhale_title": "hít vào",
+    "inhale_sub": "Hít thở chậm rãi",
+    "hold_title": "Giữ",
+    "hold_sub": "Ở lại đây",
+    "exhale_title": "Thở ra",
+    "exhale_sub": "Thở ra chậm rãi"
+  },
+  "reflection": {
+    "title": "Làm tốt lắm.",
+    "subtitle": "Hãy dành một chút thời gian trước khi bạn tiếp tục. Hãy chú ý cảm xúc của bạn ngay lúc này.",
+    "question": "Bạn nhận thấy điều gì?",
+    "choices": {
+      "settled": "Ổn định hơn",
+      "present": "Hiện diện hơn",
+      "same": "Dù sao đi nữa"
+    },
+    "btn_continue": "Tiếp tục"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "HÍT VÀO 4",
+    "step_hold": "GIỮ 7",
+    "step_exhale": "THỞ RA 8",
+    "subtitle": "Hãy quay lại thói quen này bất cứ khi nào bạn muốn có khoảnh khắc yên tĩnh để lấy lại sự chú ý.",
+    "btn_continue": "Tiếp tục"
+  }
+}

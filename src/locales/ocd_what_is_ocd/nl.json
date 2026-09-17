@@ -1,0 +1,83 @@
+{
+  "header_back": "Achteruit",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Wat is OCD?",
+    "subtitle": "Begrijp wat OCD is, hoe het zich kan uiten en waarom het zo overtuigend kan aanvoelen."
+  },
+  "video": {
+    "eyebrow": "BEGIN HIER",
+    "title": "Bekijk deze korte introductie tot OCD."
+  },
+  "basics": {
+    "eyebrow": "DE BASIS",
+    "headline": "OCD is meer dan ongewenste gedachten.",
+    "obsession_title": "OBSESSIES",
+    "obsession_desc": "Ongewenste gedachten, beelden, twijfels of driften die moeilijk te negeren zijn.",
+    "compulsion_title": "DWANGHANDELINGEN",
+    "compulsion_desc": "Handelingen of mentale reacties waarvan je je gedwongen voelt te herhalen om ongemak te verminderen of je zeker te voelen."
+  },
+  "themes": {
+    "eyebrow": "GEMEENSCHAPPELIJKE THEMA'S",
+    "headline": "OCD kan vele vormen aannemen.",
+    "subtext": "Dit zijn veelvoorkomende thema's, geen aparte diagnoses. Eén persoon kan er meer dan één hebben.",
+    "disclaimer": "Dit zijn slechts enkele voorbeelden.",
+    "items": {
+      "contamination": {
+        "name": "Verontreiniging",
+        "desc": "Angst voor bacteriën, ziekte, vuil of besmetting."
+      },
+      "harm": {
+        "name": "Harm",
+        "desc": "Ongewenste angsten over het veroorzaken of verantwoordelijk zijn voor schade."
+      },
+      "checking": {
+        "name": "Controleren",
+        "desc": "Herhaaldelijk controleren van veiligheid, fouten, deuren, apparaten of andere zorgen."
+      },
+      "symmetry": {
+        "name": "Symmetrie & \"Precies Goed\"",
+        "desc": "Het gevoel dat dingen in balans, precies of precies goed moeten zijn."
+      },
+      "taboo": {
+        "name": "Opdringerige / Taboe-gedachten",
+        "desc": "Ongewenste gedachten die te maken hebben met seksuele, religieuze, agressieve of andere taboethema's."
+      },
+      "responsibility": {
+        "name": "Verantwoordelijkheid & Twijfel",
+        "desc": "Aanhoudende twijfel over fouten, verantwoordelijkheid, of of iets echt zeker is."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "JE HERKENT DIT MISSCHIEN",
+    "headline": "OCD kan onzekerheid onmogelijk maken om met rust te laten.",
+    "example_1": {
+      "thought": "\"Heb ik de deur op slot gedaan?\"",
+      "action": "Jij controleert. Je voelt je opgelucht.",
+      "loop": "Toen: \"Maar heb ik het echt gecontroleerd?\""
+    },
+    "example_2": {
+      "thought": "\"Wat als ik een vreselijke fout heb gemaakt?\"",
+      "action": "Je speelt opnieuw wat er gebeurd is.",
+      "loop": "Je zoekt geruststelling."
+    }
+  },
+  "takeaway": {
+    "quote": "Iedereen krijgt ongewenste gedachten. \n\nOCD kan ervoor zorgen dat die gedachten voelen als iets wat je moet oplossen.",
+    "sub": "Het begrijpen van dat patroon is een belangrijke eerste stap."
+  },
+  "next_step": {
+    "eyebrow": "VOLGENDE STAP IN JE REIS",
+    "headline": "Laten we nu eens kijken hoe de OCD-cyclus zich kan blijven herhalen.",
+    "btn_explore": "Verken de OCD-cyclus →"
+  },
+  "completion": {
+    "eyebrow": "Klaar met verkennen?",
+    "btn_complete": "Markeer activiteit als uitgevoerd →",
+    "saving": "Redden...",
+    "completed_badge": "Voltooide activiteit",
+    "error_save": "We konden je activiteit nu niet opslaan. Je voortgang wordt lokaal opgeslagen."
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "header_back": "Înapoi",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "Pauza de 60 de secunde",
+    "subtitle": "Uneori, o dorință poate părea ceva ce trebuie să acționezi imediat. Hai să exersăm crearea unui mic spațiu înainte să răspunzi.",
+    "btn_begin": "Începe"
+  },
+  "step2": {
+    "eyebrow": "SCENARIUL 1",
+    "title": "Hai să încercăm un scenariu",
+    "subtitle": "Imaginează-ți că tocmai ai ieșit din casă.",
+    "visual_line1": "Încui ușa din față și mergi spre mașina ta.",
+    "visual_thought": "\"Am încuiat-o bine?\"",
+    "visual_line2": "Observi chemarea de a te întoarce și de a verifica.",
+    "btn_continue": "Continuă"
+  },
+  "step3": {
+    "eyebrow": "IMPULSUL",
+    "banner": "\"Verifică încă o dată.\"",
+    "subtitle": "Simți o nevoie să te întorci să verifici.",
+    "question": "Ce te-ai simți de obicei atras să faci?",
+    "responses": {
+      "check": "Verifică din nou",
+      "ask": "Cere reasigurare cuiva",
+      "goback": "Întoarce-te și asigură-te",
+      "wait": "Opriți-vă și așteptați"
+    },
+    "btn_next": "Următorul"
+  },
+  "step4": {
+    "title": "Nu trebuie să răspunzi încă.",
+    "subtitle": "În următoarele 60 de secunde, vom exersa să facem un mic spațiu între impuls și răspunsul tău.",
+    "cadence_pause": "PAUZĂ",
+    "cadence_notice": "ANUNȚ",
+    "cadence_choose": "ALEGE",
+    "detail": "Scopul nu este să faci gândul să dispară. Este să observi impulsul fără să-i răspunzi imediat.",
+    "btn_start": "Începeți pauza de 60 de secunde"
+  },
+  "step5": {
+    "badge": "IMPULSUL ESTE AICI",
+    "prompts": {
+      "0": "Observă impulsul pe măsură ce apare.",
+      "1": "Poți simți atracția fără să-i răspunzi.",
+      "2": "Inspiră ușor și observă.",
+      "3": "Impulsul este doar o senzație acum.",
+      "4": "Nu trebuie să rezolvi incertitudinea imediat.",
+      "5": "Observă unde simți tensiunea în corpul tău.",
+      "6": "Gândurile vin și pleacă ca valurile pe apă.",
+      "7": "Crearea spațiului între gând și acțiune.",
+      "8": "Observi impulsul, nu îl asculți.",
+      "9": "Nesiguranța poate fi inconfortabilă, și asta e în regulă.",
+      "10": "Lasă gândul să fie acolo fără să se implice.",
+      "11": "Observă impulsul de a repara sau de a verifica.",
+      "12": "Rămâi curios despre senzație.",
+      "13": "Tu controlezi răspunsul tău.",
+      "14": "Nimic nu trebuie rezolvat chiar în această clipă.",
+      "15": "Ai creat spațiu peste 45 de secunde.",
+      "16": "Doar observă impulsul fără să te grăbești să acționezi.",
+      "17": "Aproape am ajuns — odihnindu-se în pauză.",
+      "18": "Rămâi prezent cu această ultimă suflare.",
+      "19": "Ai terminat pauza."
+    }
+  },
+  "step6": {
+    "title": "Ai făcut loc.",
+    "subtitle": "Scopul nu era să faci impulsul să dispară. Era să-ți acorzi un moment înainte să răspunzi.",
+    "question": "Ce ai observat?",
+    "reflections": {
+      "thought_there": "Gândul era încă acolo",
+      "felt_urge": "Am simțit nevoia să răspund",
+      "uncomfortable": "Incertitudinea era inconfortabilă",
+      "could_wait": "Puteam aștepta fără să răspund imediat"
+    },
+    "btn_continue": "Continuă"
+  },
+  "step7": {
+    "eyebrow": "CICLUL OCD",
+    "title": "Unde se potrivește pauza",
+    "subtitle": "OCD-ul creează o atracție puternică de a răspunde imediat la îndoială.",
+    "node_doubt": "Îndoiala / Gândul intruziv",
+    "node_urge": "Impulsul de a răspunde",
+    "space_tag": "PAUZA DE 60 DE SECUNDE",
+    "space_title": "Acesta este spațiul pe care tocmai l-ai exersat.",
+    "node_compulsion": "Răspuns compulsiv",
+    "node_relief": "Ușurarea temporară → îndoială revine",
+    "detail": "O pauză îți oferă un moment înainte de a urma automat acea tragere.",
+    "btn_try_another": "Încearcă un alt scenariu"
+  },
+  "step8": {
+    "eyebrow": "SCENARIUL 2",
+    "title": "Transfer de antrenament",
+    "subtitle": "Imaginează-ți că tocmai ai trimis un mesaj important.",
+    "visual_line1": "Apeși trimite și închizi conversația.",
+    "visual_thought": "\"Am spus ceva greșit? Poate ar trebui să o citesc din nou.\"",
+    "visual_line2": "Același tipar: Gândire → Impuls → Pauză → Alegere.",
+    "btn_practice": "Pauză de antrenament (anii '60)"
+  },
+  "step9": {
+    "title": "Un impuls nu este o instrucțiune.",
+    "subtitle": "Nu trebuie să răspunzi imediat tuturor dorințelor. Un mic spațiu poate crea un punct de plecare diferit.",
+    "cadence_pause": "PAUZĂ",
+    "cadence_notice": "ANUNȚ",
+    "cadence_choose": "ALEGE",
+    "btn_continue": "Continuă"
+  }
+}

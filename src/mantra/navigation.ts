@@ -147,8 +147,23 @@ export const goToLesson = (route: string) => {
 };
 
 /**
- * Controls completion redirection actions.
+ * Centrally completes an activity via the completion webhook and then invokes exit/back navigation.
  */
-export const redirectAfterCompletion = (lessonId: string, onBackCallback?: () => void) => {
+export const completeAndExit = async (lessonId: string, onBackCallback?: () => void) => {
+  try {
+    const { completeLesson } = await import('./api');
+    await completeLesson(lessonId);
+  } catch (error) {
+    console.warn('[Mantra Navigation] Activity completion warning:', error);
+  }
   goBack(onBackCallback);
 };
+
+/**
+ * Controls completion redirection actions.
+ * First hits the activity completion webhook and then uses the back button exit logic.
+ */
+export const redirectAfterCompletion = async (lessonId: string, onBackCallback?: () => void) => {
+  await completeAndExit(lessonId, onBackCallback);
+};
+

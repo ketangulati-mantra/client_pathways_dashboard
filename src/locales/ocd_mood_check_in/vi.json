@@ -1,0 +1,100 @@
+{
+  "header_back": "Quay lại",
+  "header_history": "Lịch sử",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "KIỂM TRA TÂM TRẠNG OCD",
+    "title": "Bạn cảm thấy thế nào lúc này?",
+    "subtitle": "Chụp nhanh một bức ảnh đi. Không có câu trả lời đúng.",
+    "levels": {
+      "l1_title": "1 — Rất thấp",
+      "l1_sub": "Cảm thấy nặng nề, quá tải hoặc kiệt sức",
+      "l2_title": "2 — Thấp",
+      "l2_sub": "Bất an, căng thẳng hoặc năng lượng thấp",
+      "l3_title": "3 — Ổn định / Trung tính",
+      "l3_sub": "Cân bằng, ổn, hoặc cứ để mọi thứ diễn ra",
+      "l4_title": "4 — Tốt",
+      "l4_sub": "Rõ ràng, tham gia hoặc phần lớn là thoải mái",
+      "l5_title": "5 — Rất tốt",
+      "l5_sub": "Vững vàng, tràn đầy năng lượng hoặc bình yên"
+    },
+    "btn_continue": "Tiếp tục"
+  },
+  "screen2": {
+    "badge": "BƯỚC 2 TRÊN 4",
+    "title": "Hôm nay OCD đã ám ảnh bạn đến mức nào?",
+    "subtitle": "Hãy nghĩ về lượng sự chú ý, căng thẳng hoặc gián đoạn mà OCD đã chiếm lấy ngày nay.",
+    "impact_l1": "Không nhiều — Yên tĩnh",
+    "impact_l2": "Nhẹ — Dễ kiểm soát",
+    "impact_l3": "Trung bình — Dễ nhận thấy",
+    "impact_l4": "Đáng kể — Đột phá",
+    "impact_l5": "Rất nhiều — Mức độ hiện diện cao",
+    "scale_min": "1 = Không nhiều",
+    "scale_max": "5 = Rất nhiều",
+    "btn_back": "Quay lại",
+    "btn_continue": "Tiếp tục"
+  },
+  "screen3": {
+    "badge": "BƯỚC 3 TRÊN 4",
+    "title": "Điều gì nổi bật hôm nay?",
+    "subtitle": "Hãy chọn bất cứ điều gì từng là một phần trong trải nghiệm của bạn.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Những suy nghĩ xâm nhập / nghi ngờ",
+      "CHECKING": "Thôi thúc kiểm tra hoặc lặp lại",
+      "MENTAL_REVIEW": "Phát lại / phân tích trong đầu",
+      "REASSURANCE": "Tìm kiếm sự chắc chắn / sự đảm bảo",
+      "AVOIDANCE": "Tránh các yếu tố kích thích hoặc tình huống",
+      "HIGH_ANXIETY": "Căng thẳng hoặc lo âu cao",
+      "PAUSED_URGE": "Tạm dừng hoặc trì hoãn một nghi lễ",
+      "FOCUSED_WELL": "Gắn bó với các công việc hàng ngày",
+      "NONE": "Ngày nay không có cái nào trong số đó"
+    },
+    "btn_back": "Quay lại",
+    "btn_continue": "Tiếp tục"
+  },
+  "screen4": {
+    "badge": "BƯỚC 4 TRÊN 4",
+    "title": "Có điều gì bạn muốn nhớ không?",
+    "subtitle": "Tùy chọn. Chỉ cần vài từ là đủ.",
+    "placeholder": "Viết một mảnh giấy...",
+    "btn_back": "Quay lại",
+    "btn_save": "Lưu thủ tục nhận phòng",
+    "saving": "Tiết kiệm..."
+  },
+  "screen5": {
+    "badge": "✓ ĐÃ LƯU",
+    "title": "Khoảnh khắc hôm nay.",
+    "subtitle": "Việc nhận phòng của bạn đã được ghi lại vào dòng thời gian riêng tư.",
+    "impact_label": "Tác động của OCD {{impact}} / 5",
+    "btn_view_moments": "Xem những khoảnh khắc của bạn",
+    "btn_done": "Xong"
+  },
+  "history": {
+    "tab_moments": "Khoảnh khắc",
+    "tab_trends": "Xu hướng",
+    "today_title": "Check-in hôm nay",
+    "no_log_today": "Hôm nay vẫn chưa có lịch nhận phòng nào được ghi nhận.",
+    "btn_check_in_now": "Ghi lại quá trình nhận phòng hôm nay",
+    "btn_view_past": "Xem các lần check-in trước đây ({{count}})",
+    "btn_hide_past": "Ẩn các lần check-in trước đây",
+    "past_title": "Các lần Check-in trước đây",
+    "no_logs_title": "Chưa nhận phòng",
+    "no_logs_desc": "Nhật ký riêng tư và dòng thời gian cảm xúc của bạn sẽ xuất hiện ở đây.",
+    "today_tag": "NGÀY NAY",
+    "yesterday_tag": "HÔM QUA",
+    "modal_title": "Chi tiết Check-In",
+    "modal_mood_label": "Mức độ tâm trạng",
+    "modal_impact_label": "Tác động của OCD",
+    "modal_experiences_label": "Kinh nghiệm",
+    "modal_note_label": "Ghi chú cá nhân",
+    "btn_edit": "Ghi chú chỉnh sửa",
+    "btn_delete": "Xóa mục",
+    "btn_close": "Đóng",
+    "trends_14d": "14 Ngày",
+    "trends_30d": "30 Ngày",
+    "trends_90d": "90 Ngày",
+    "trends_avg_mood": "tâm trạng trung bình",
+    "trends_avg_impact": "Tác động trung bình của OCD",
+    "trends_total_entries": "Tổng số bài dự thi"
+  }
+}

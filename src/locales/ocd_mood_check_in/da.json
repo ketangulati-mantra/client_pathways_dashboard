@@ -1,0 +1,100 @@
+{
+  "header_back": "Tilbage",
+  "header_history": "Historie",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "OCD HUMØR-TJEK",
+    "title": "Hvordan har du det lige nu?",
+    "subtitle": "Tag et hurtigt billede. Der er ikke noget rigtigt svar.",
+    "levels": {
+      "l1_title": "1 — Meget lav",
+      "l1_sub": "Føler mig tung, overvældet eller udmattet",
+      "l2_title": "2 — Lav",
+      "l2_sub": "Urolig, anstrengt eller lavenergisk",
+      "l3_title": "3 — Stabil / Neutral",
+      "l3_sub": "Balanceret, okay, eller tage tingene, som de kommer",
+      "l4_title": "4 — Godt",
+      "l4_sub": "Klar, engageret eller for det meste afslappet",
+      "l5_title": "5 — Meget godt",
+      "l5_sub": "Jordnær, energisk eller fredelig"
+    },
+    "btn_continue": "Fortsæt"
+  },
+  "screen2": {
+    "badge": "TRIN 2 AF 4",
+    "title": "Hvor meget har OCD fyldt med dig i dag?",
+    "subtitle": "Tænk på den mængde opmærksomhed, stress eller forstyrrelse, OCD har taget i dag.",
+    "impact_l1": "Ikke meget — Stille",
+    "impact_l2": "Mild — håndterbar",
+    "impact_l3": "Moderat — Mærkbar",
+    "impact_l4": "Betydningsfuld — Forstyrrende",
+    "impact_l5": "Meget — Høj tilstedeværelse",
+    "scale_min": "1 = Ikke meget",
+    "scale_max": "5 = Mange",
+    "btn_back": "Tilbage",
+    "btn_continue": "Fortsæt"
+  },
+  "screen3": {
+    "badge": "TRIN 3 AF 4",
+    "title": "Hvad skilte sig ud i dag?",
+    "subtitle": "Vælg noget, der var en del af din oplevelse.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Påtrængende tanker / tvivl",
+      "CHECKING": "Trang til at tjekke eller gentage",
+      "MENTAL_REVIEW": "Mental genafspilning / analyse",
+      "REASSURANCE": "Søger sikkerhed / tryghed",
+      "AVOIDANCE": "Undgåelse af triggere eller situationer",
+      "HIGH_ANXIETY": "Høj stress eller angst",
+      "PAUSED_URGE": "Satte en pause eller udsatte et ritual",
+      "FOCUSED_WELL": "Engageret i daglige opgaver",
+      "NONE": "Ingen af disse i dag"
+    },
+    "btn_back": "Tilbage",
+    "btn_continue": "Fortsæt"
+  },
+  "screen4": {
+    "badge": "TRIN 4 AF 4",
+    "title": "Er der noget, du vil huske?",
+    "subtitle": "Valgfrit. Et par ord er nok.",
+    "placeholder": "Skriv en seddel...",
+    "btn_back": "Tilbage",
+    "btn_save": "Gem check-in",
+    "saving": "At redde..."
+  },
+  "screen5": {
+    "badge": "✓ REDDET",
+    "title": "Dagens øjeblik.",
+    "subtitle": "Din check-in er blevet registreret på din private tidslinje.",
+    "impact_label": "OCD impact {{impact}} / 5",
+    "btn_view_moments": "Se dine øjeblikke",
+    "btn_done": "Færdig"
+  },
+  "history": {
+    "tab_moments": "Øjeblikke",
+    "tab_trends": "Tendenser",
+    "today_title": "Dagens indtjekning",
+    "no_log_today": "Ingen indtjekning for i dag endnu.",
+    "btn_check_in_now": "Optag dagens check-in",
+    "btn_view_past": "Se tidligere check-ins ({{count}})",
+    "btn_hide_past": "Skjul tidligere check-ins",
+    "past_title": "Tidligere indtjekninger",
+    "no_logs_title": "Ingen check-ins endnu",
+    "no_logs_desc": "Dine private logfiler og følelsesmæssige tidslinje vil vises her.",
+    "today_tag": "I DAG",
+    "yesterday_tag": "I GÅR",
+    "modal_title": "Check-in detalje",
+    "modal_mood_label": "Humørniveau",
+    "modal_impact_label": "OCD-påvirkning",
+    "modal_experiences_label": "Oplevelser",
+    "modal_note_label": "Personlig note",
+    "btn_edit": "Redigeringsnote",
+    "btn_delete": "Slet post",
+    "btn_close": "Luk",
+    "trends_14d": "14 dage",
+    "trends_30d": "30 dage",
+    "trends_90d": "90 dage",
+    "trends_avg_mood": "Gennemsnitligt humør",
+    "trends_avg_impact": "Gennemsnitlig OCD-påvirkning",
+    "trends_total_entries": "Samlet antal tilmeldinger"
+  }
+}

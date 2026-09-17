@@ -1,0 +1,100 @@
+{
+  "header_back": "Înapoi",
+  "header_history": "Istoric",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "VERIFICAREA DISPOZIȚIEI OCD",
+    "title": "Cum te simți acum?",
+    "subtitle": "Fă o fotografie rapidă. Nu există un răspuns corect.",
+    "levels": {
+      "l1_title": "1 — Foarte scăzut",
+      "l1_sub": "Mă simt greu, copleșit sau epuizat",
+      "l2_title": "2 — Jos",
+      "l2_sub": "Neliniștită, tensionată sau cu energie scăzută",
+      "l3_title": "3 — Stabil / Neutru",
+      "l3_sub": "Echilibrat, bine, sau să ia lucrurile așa cum vin",
+      "l4_title": "4 — Bine",
+      "l4_sub": "Clar, implicat sau în mare parte relaxat",
+      "l5_title": "5 — Foarte bine",
+      "l5_sub": "Ancorat, energizat sau pașnic"
+    },
+    "btn_continue": "Continuă"
+  },
+  "screen2": {
+    "badge": "PASUL 2 DIN 4",
+    "title": "Cât de mult te-a afectat OCD-ul astăzi?",
+    "subtitle": "Gândește-te la cantitatea de atenție, suferință sau perturbare pe care OCD-ul le-a ocupat astăzi.",
+    "impact_l1": "Nu prea mult — Liniște",
+    "impact_l2": "Ușor — Gestionabil",
+    "impact_l3": "Moderat — Vizibil",
+    "impact_l4": "Semnificativ — Disruptiv",
+    "impact_l5": "Mult — Prezență ridicată",
+    "scale_min": "1 = Nu prea mult",
+    "scale_max": "5 = Mult",
+    "btn_back": "Înapoi",
+    "btn_continue": "Continuă"
+  },
+  "screen3": {
+    "badge": "PASUL 3 DIN 4",
+    "title": "Ce a ieșit în evidență astăzi?",
+    "subtitle": "Alege orice a făcut parte din experiența ta.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Gânduri intruzive / îndoieli",
+      "CHECKING": "Impulsul de a verifica sau de a repeta",
+      "MENTAL_REVIEW": "Reluare / analiză mentală",
+      "REASSURANCE": "Căutând certitudine / reasigurare",
+      "AVOIDANCE": "Evitarea factorilor declanșatori sau situațiilor",
+      "HIGH_ANXIETY": "Stres sau anxietate ridicată",
+      "PAUSED_URGE": "A întrerupt sau a întârziat un ritual",
+      "FOCUSED_WELL": "Implicat în sarcinile zilnice",
+      "NONE": "Niciuna dintre acestea astăzi"
+    },
+    "btn_back": "Înapoi",
+    "btn_continue": "Continuă"
+  },
+  "screen4": {
+    "badge": "PASUL 4 DIN 4",
+    "title": "Vrei să-ți amintești ceva?",
+    "subtitle": "Opțional. Câteva cuvinte sunt suficiente.",
+    "placeholder": "Scrie un bilet...",
+    "btn_back": "Înapoi",
+    "btn_save": "Salvează check-in-ul",
+    "saving": "Salvând..."
+  },
+  "screen5": {
+    "badge": "✓ SALVAT",
+    "title": "Momentul de azi.",
+    "subtitle": "Check-in-ul tău a fost înregistrat pe timeline-ul tău privat.",
+    "impact_label": "Impactul OCD {{impact}} / 5",
+    "btn_view_moments": "Privește-ți momentele",
+    "btn_done": "Gata"
+  },
+  "history": {
+    "tab_moments": "Momente",
+    "tab_trends": "Tendințe",
+    "today_title": "Check-in-ul de astăzi",
+    "no_log_today": "Nu a fost înregistrat niciun check-in pentru azi.",
+    "btn_check_in_now": "Înregistrează check-in-ul de azi",
+    "btn_view_past": "Vezi check-in-urile anterioare ({{count}})",
+    "btn_hide_past": "Ascunde verificările anterioare",
+    "past_title": "Verificări anterioare",
+    "no_logs_title": "Niciun check-in încă",
+    "no_logs_desc": "Jurnalele tale private și cronologia emoțională vor apărea aici.",
+    "today_tag": "ASTĂZI",
+    "yesterday_tag": "IERI",
+    "modal_title": "Detalii de check-in",
+    "modal_mood_label": "Nivelul stării de spirit",
+    "modal_impact_label": "Impactul OCD",
+    "modal_experiences_label": "Experiențe",
+    "modal_note_label": "Notă personală",
+    "btn_edit": "Notă de editare",
+    "btn_delete": "Șterge intrarea",
+    "btn_close": "Închide",
+    "trends_14d": "14 zile",
+    "trends_30d": "30 de zile",
+    "trends_90d": "90 de zile",
+    "trends_avg_mood": "Starea de spirit medie",
+    "trends_avg_impact": "Impactul mediu al OCD-ului",
+    "trends_total_entries": "Total înscrieri"
+  }
+}

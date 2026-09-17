@@ -1,0 +1,86 @@
+{
+  "header_back": "Indietro",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "ATTIVITÀ 3",
+    "title": "GUARDA IN ALTO.",
+    "subtitle": "L'ALLARME NON È IL PERICOLO.",
+    "detail": "Una sensazione può essere forte senza raccontarti tutta la storia.",
+    "btn_enter": "ENTRA →"
+  },
+  "screen2": {
+    "title_line1": "A VOLTE,",
+    "title_line2": "L'INCERTEZZA È SUFFICIENTE.",
+    "subtitle": "Tocca una frase per osservare come reagisce il rivelatore.",
+    "example1": "\"E se avessi commesso un errore?\"",
+    "example2": "\"E se qualcosa non è abbastanza pulito?\"",
+    "example3": "\"E se non posso esserne completamente sicuro?\"",
+    "btn_activates": "IL SEGNALE SI ATTIVA →"
+  },
+  "screen3": {
+    "ambient_heart": "BATTITO CARDIACO",
+    "ambient_tension": "TENSIONE",
+    "ambient_attention": "ATTENZIONI",
+    "ambient_urge": "URGE",
+    "title": "QUELLA SENSAZIONE PUÒ ESSERE FORTE.",
+    "subtitle": "La sensazione è reale. Il messaggio che sembra portare non è automaticamente tutta la storia.",
+    "btn_look_closer": "GUARDA MEGLIO →"
+  },
+  "screen4": {
+    "tag_left": "[ SEGNALE // SENSIBILITÀ ]",
+    "tag_right": "[ RISPOSTA // INTERPRETAZIONE ]",
+    "title": "GUARDA MEGLIO.",
+    "subtitle": "Trascina ovunque per ispezionare il rilevatore da qualsiasi angolazione.",
+    "detail": "Puoi notare il segnale senza precipitarti subito a concludere.",
+    "btn_continue": "CONTINUA →"
+  },
+  "screen5": {
+    "title": "SEGNALE ≠ VERDETTO",
+    "subtitle": "Un sentimento forte può essere reale senza dimostrare automaticamente ciò che sembra dire.",
+    "col_feel_title": "QUELLO CHE SENTO",
+    "feel_anxious": "Ansioso.",
+    "feel_uncertain": "Incerto.",
+    "feel_tense": "Teso.",
+    "feel_pulled": "Ho tirato per controllare.",
+    "col_conclude_title": "COSA CONCLUDO",
+    "conclude_wrong": "\"Qualcosa deve non andare.\"",
+    "conclude_make_sure": "\"Devo esserne sicuro.\"",
+    "conclude_certainty": "\"Ho bisogno di certezza.\"",
+    "btn_next": "COSA SUCCEDE DOPO? →"
+  },
+  "screen6": {
+    "title": "A VOLTE UNA RISPOSTA PUÒ METTERE IL SEGNALE A TACERE PER UN MOMENTO.",
+    "subtitle": "Tocca per vedere come le risposte interagiscono con il segnale.",
+    "item_check_title": "CONTROLLO",
+    "item_check_quote": "\"Me ne assicurerò ancora una volta.\"",
+    "item_ask_title": "CHIEDI",
+    "item_ask_quote": "\"Chiederò a qualcuno cosa ne pensa.\"",
+    "item_replay_title": "REPLICA",
+    "item_replay_quote": "\"Ci ripenserò di nuovo.\"",
+    "item_avoid_title": "EVITA",
+    "item_avoid_quote": "\"Starò lontano da ciò che sembra incerto.\"",
+    "btn_let_signal": "LASCIA CHE IL SEGNALE SIA LÌ →"
+  },
+  "screen7": {
+    "title": "LASCIA CHE IL SEGNALE SIA LÌ.",
+    "subtitle": "Nota cosa succede quando non ti affretti subito a interpretarlo.",
+    "btn_watch": "GUARDA IL SEGNALE",
+    "observing_format": "Segnale di osservazione... ({{secondi}}s)",
+    "done_title": "IL SEGNALE È CAMBIATO.",
+    "done_sub": "Non dovevi risolverlo.",
+    "btn_continue": "CONTINUA →"
+  },
+  "screen8": {
+    "title_line1": "UN ALLARME È UN SEGNALE.",
+    "title_line2": "NON UN VERDETTO.",
+    "subtitle": "Nota la sensazione. Nota la storia che la tua mente aggiunge a essa.",
+    "question": "LA PROSSIMA VOLTA CHE LA SVEGLIA SI FARÀ FORTE, COSA NOTERAI PER PRIMO?",
+    "opt_feeling": "LA SENSAZIONE",
+    "opt_thought": "IL PENSIERO",
+    "opt_urge": "L'IMPULSO DI RISPONDERE",
+    "feedback": "Continua a notare la differenza.",
+    "btn_saving": "SALVANDO...",
+    "btn_continue": "CONTINUA →"
+  }
+}

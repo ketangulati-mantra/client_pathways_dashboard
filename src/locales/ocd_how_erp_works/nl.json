@@ -1,0 +1,113 @@
+{
+  "header_back": "Achteruit",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSYCHO-EDUCATIE",
+    "title": "HOE ERP WERKT",
+    "subtitle": "ERP helpt mensen met OCD te oefenen met wat hen triggert terwijl ze veranderen wat ze daarna doen.",
+    "quote": "\"Je oefent niet met onbevreesd zijn. Je oefent om anders te reageren.\"",
+    "btn_explore": "Verken"
+  },
+  "screen2": {
+    "badge": "SCENARIO 1",
+    "title": "Je bent net het huis uit.",
+    "thought": "\"Heb ik de deur op slot gedaan?\"",
+    "urge_tag": "Je voelt de drang om terug te gaan",
+    "subtitle": "Een veelvoorkomend moment van twijfel komt aan. Laten we zien wat er gebeurt als de drang wordt gevolgd.",
+    "btn_see_happens": "Kijk wat er gebeurt"
+  },
+  "screen3": {
+    "badge": "PAD A",
+    "title": "Volg de Drang",
+    "btn_check": "Controleer het slot",
+    "checking_status": "De hendel controleren... De sleutel draaien...",
+    "relief_thought": "\"Oké, het is op slot. Opluchting.\"",
+    "doubt_thought": "\"Wacht... heb ik hem echt goed op slot gedaan?\"",
+    "subtitle": "De opluchting stelde het gevoel even weg, maar de twijfel keerde meteen terug.",
+    "btn_continue": "Ga verder"
+  },
+  "screen4": {
+    "badge": "REFLECTIE",
+    "title": "Wat gaf je op de cheque?",
+    "point1": "Opluchting op dat moment.",
+    "point2": "Nog meer reden om opnieuw te kijken als de twijfel terugkeert.",
+    "subtitle": "Controleren kan stress op het moment zelf verminderen, maar die kortetermijnverlichting versterkt de drang van de hersenen om opnieuw te controleren.",
+    "btn_rewind": "Spoel het moment terug"
+  },
+  "screen5": {
+    "badge": "REWIND",
+    "title": "Laten we hetzelfde moment anders proberen.",
+    "thought": "\"Heb ik de deur op slot gedaan?\"",
+    "urge_tag": "De drang verschijnt: \"Ga terug en kijk\"",
+    "subtitle": "Deze keer volgen we niet automatisch de drang, maar verkennen we de ERP-aanpak.",
+    "btn_step1": "Stap 1: Blootstelling"
+  },
+  "screen6": {
+    "badge": "STAP 1",
+    "title": "1. Blootstelling",
+    "subtitle1": "ERP begint met het benaderen van een trigger in plaats van het te vermijden of te laten verdwijnen.",
+    "thought": "\"De twijfel is hier: heb ik de deur op slot gedaan?\"",
+    "subtitle2": "In ERP betekent blootstelling dat je de trigger of onzekerheid toestaat zonder het meteen uit je gedachten te proberen te verdringen.",
+    "btn_step2": "Stap 2: Responspreventie"
+  },
+  "screen7": {
+    "badge": "STAP 2",
+    "title": "2. Responspreventie",
+    "subtitle1": "Dan komt het tweede deel: het weerstaan of uitstellen van de dwangmatige reactie.",
+    "thought": "Aandrang: \"Ga nu meteen terug en kijk.\"",
+    "btn_dont_check": "Kijk nu niet",
+    "subtitle2": "Gesimuleerde oefening: Kiezen om het ritueel niet uit te voeren geeft de hersenen de kans om iets nieuws te leren."
+  },
+  "screen8": {
+    "badge": "VERGELIJKING",
+    "title": "De Twee Paden",
+    "col_urge_title": "Volg de Drang",
+    "col_urge_step1": "Trigger",
+    "col_urge_step2": "Check",
+    "col_urge_step3": "Reliëf",
+    "col_urge_step4": "Twijfel keert terug",
+    "col_erp_title": "ERP-pad",
+    "col_erp_step1": "Trigger",
+    "col_erp_step2": "Urge",
+    "col_erp_step3": "Responspreventie",
+    "col_erp_step4": "Nieuwe kennis",
+    "btn_learning": "Wat leer je?"
+  },
+  "screen9": {
+    "badge": "KERNINZICHT",
+    "title": "Het punt is niet om niets te voelen.",
+    "subtitle": "ERP gaat er niet om dat stress onmiddellijk verdwijnt. Het leert:",
+    "insight1": "\"Ik kan onzekerheid ervaren en het tolereren.\"",
+    "insight2": "\"Ik kan een drang hebben zonder er automatisch op te reageren.\"",
+    "insight3": "\"Ik heb geen ritueel nodig om op elke twijfel te reageren.\"",
+    "btn_scenario2": "Probeer een tweede scenario"
+  },
+  "screen10": {
+    "badge": "SCENARIO 2",
+    "title": "Je hebt een belangrijk bericht gestuurd.",
+    "thought": "Gedachte: \"Heb ik iets verkeerds gezegd?\"",
+    "urge_tag": "Aandrang: Lees het nog eens",
+    "question": "Hoe zou responspreventie eruitzien?",
+    "opt_read": "Lees het bericht nog eens voor de zekerheid",
+    "opt_ask": "Vraag iemand of het goed klinkt",
+    "opt_leave": "Laat het voorlopig zoals het is zonder het opnieuw te lezen",
+    "feedback_correct": "✓ Dat is een voorbeeld van het weerstaan van de controlerende of geruststellende reactie.",
+    "feedback_incorrect": "Dat zou een manier zijn om op de onzekerheid te reageren. In ERP betekent responspreventie het oefenen van het niet toepassen van controle- of geruststellende gedrag.",
+    "btn_final_model": "Eindmodel",
+    "btn_try_again": "Probeer het nog eens"
+  },
+  "screen11": {
+    "badge": "SAMENVATTING",
+    "title": "ERP verandert wat je daarna doet.",
+    "node_trigger": "Trigger",
+    "node_trigger_sub": "Twijfel komt",
+    "node_urge": "Urge",
+    "node_urge_sub": "Verlangen om te rituleren",
+    "node_erp": "Blootstelling + Responspreventie",
+    "node_erp_sub": "Weerstaan dwang",
+    "node_learning": "Nieuw leren",
+    "node_learning_sub": "Onzekerheid kan worden getolereerd",
+    "subtitle": "Het doel is niet om elke opdringerige gedachte of gevoel te elimineren. Het is om een andere reactie daarop op te bouwen.",
+    "btn_complete": "Volledige activiteit"
+  }
+}

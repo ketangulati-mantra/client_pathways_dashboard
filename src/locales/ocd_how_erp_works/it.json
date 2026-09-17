@@ -1,0 +1,113 @@
+{
+  "header_back": "Indietro",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSICOEDUCAZIONE",
+    "title": "COME FUNZIONA L'ERP",
+    "subtitle": "L'ERP aiuta le persone con DOC a praticare l'affrontare ciò che le scatena mentre cambiano ciò che fanno dopo.",
+    "quote": "\"Non si pratica l'essere senza paura. Si pratica a rispondere in modo diverso.\"",
+    "btn_explore": "Esplora"
+  },
+  "screen2": {
+    "badge": "SCENARIO 1",
+    "title": "Sei appena uscito di casa.",
+    "thought": "\"Ho chiuso la porta a chiave?\"",
+    "urge_tag": "Senti il bisogno di tornare indietro",
+    "subtitle": "Arriva un momento comune di dubbio. Vediamo cosa succede quando l'impulso viene seguito.",
+    "btn_see_happens": "Vediamo cosa succede"
+  },
+  "screen3": {
+    "badge": "PERCORSO A",
+    "title": "Segui l'Impulso",
+    "btn_check": "Controlla la serratura",
+    "checking_status": "Controllando la maniglia... Girando la chiave...",
+    "relief_thought": "\"Ok, è chiusa a chiave. Sollievo.\"",
+    "doubt_thought": "\"Aspetta... l'ho davvero chiuso bene?\"",
+    "subtitle": "Il sollievo placò la sensazione per un attimo, ma il dubbio tornò subito dopo.",
+    "btn_continue": "Continua"
+  },
+  "screen4": {
+    "badge": "RIFLESSIONE",
+    "title": "Cosa ti ha dato l'assegno?",
+    "point1": "Sollievo proprio sul momento.",
+    "point2": "Un motivo in più per ricontrollare quando il dubbio torna.",
+    "subtitle": "Controllare può ridurre il disagio sul momento, ma quel sollievo a breve termine rafforza l'impulso del cervello a controllare di nuovo.",
+    "btn_rewind": "Riavvolge il momento"
+  },
+  "screen5": {
+    "badge": "RIAVVOLGI",
+    "title": "Proviamo lo stesso momento in modo diverso.",
+    "thought": "\"Ho chiuso la porta a chiave?\"",
+    "urge_tag": "Compare l'impulso: \"Torna indietro e controlla\"",
+    "subtitle": "Questa volta, invece di seguire automaticamente l'impulso, esploriamo l'approccio ERP.",
+    "btn_step1": "Passo 1: Esposizione"
+  },
+  "screen6": {
+    "badge": "PASSO 1",
+    "title": "1. Esposizione",
+    "subtitle1": "L'ERP inizia affrontando un trigger piuttosto che evitarlo o farlo sparire.",
+    "thought": "\"Il dubbio è qui: ho chiuso la porta a chiave?\"",
+    "subtitle2": "Nell'ERP, l'esposizione significa permettere al trigger o all'incertezza di essere presente senza cercare immediatamente di scacciarlo dalla mente.",
+    "btn_step2": "Passo 2: Prevenzione della Risposta"
+  },
+  "screen7": {
+    "badge": "PASSO 2",
+    "title": "2. Prevenzione della risposta",
+    "subtitle1": "Poi arriva la seconda parte: resistere o ritardare la risposta compulsiva.",
+    "thought": "Impulso: \"Torna indietro e controlla subito.\"",
+    "btn_dont_check": "Non controllare adesso",
+    "subtitle2": "Pratica simulata: Scegliere di non eseguire il rituale dà al cervello la possibilità di imparare qualcosa di nuovo."
+  },
+  "screen8": {
+    "badge": "CONFRONTO",
+    "title": "I due percorsi",
+    "col_urge_title": "Segui l'Impulso",
+    "col_urge_step1": "Trigger",
+    "col_urge_step2": "Controllo",
+    "col_urge_step3": "Rilievo",
+    "col_urge_step4": "Il ritorno del dubbio",
+    "col_erp_title": "Percorso ERP",
+    "col_erp_step1": "Trigger",
+    "col_erp_step2": "Impulso",
+    "col_erp_step3": "Prevenzione della risposta",
+    "col_erp_step4": "Nuovi apprendimenti",
+    "btn_learning": "Cosa stai imparando?"
+  },
+  "screen9": {
+    "badge": "INTUIZIONI FONDAMENTALI",
+    "title": "Il punto non è sentire nulla.",
+    "subtitle": "L'ERP non riguarda far sparire il disagio all'istante. Insegna:",
+    "insight1": "\"Posso provare incertezza e tollerarla.\"",
+    "insight2": "\"Posso avere un impulso senza agire automaticamente di conseguenza.\"",
+    "insight3": "\"Non ho bisogno di un rituale per rispondere a ogni dubbio.\"",
+    "btn_scenario2": "Prova un secondo scenario"
+  },
+  "screen10": {
+    "badge": "SCENARIO 2",
+    "title": "Hai mandato un messaggio importante.",
+    "thought": "Pensiero: \"Ho detto qualcosa di sbagliato?\"",
+    "urge_tag": "Urge: Rileggilo",
+    "question": "Come sarebbe la prevenzione della risposta?",
+    "opt_read": "Rileggi il messaggio per esserne sicuro",
+    "opt_ask": "Chiedi a qualcuno se ti va bene",
+    "opt_leave": "Lascialo com'è per ora senza rileggere",
+    "feedback_correct": "✓ Questo è un esempio di resistenza alla risposta di controllo o rassicurazione.",
+    "feedback_incorrect": "Questo sarebbe un modo per rispondere all'incertezza. Nell'ERP, la prevenzione della risposta significa praticare il non usare il comportamento di controllo o rassicurazione.",
+    "btn_final_model": "Modello finale",
+    "btn_try_again": "Riprova"
+  },
+  "screen11": {
+    "badge": "SOMMARIO",
+    "title": "L'ERP cambia ciò che fai dopo.",
+    "node_trigger": "Trigger",
+    "node_trigger_sub": "Arriva il dubbio",
+    "node_urge": "Impulso",
+    "node_urge_sub": "Desiderio di ritualizzare",
+    "node_erp": "Esposizione + Prevenzione della Risposta",
+    "node_erp_sub": "Resisti alla compulsione",
+    "node_learning": "Nuovo Apprendimento",
+    "node_learning_sub": "L'incertezza può essere tollerata",
+    "subtitle": "L'obiettivo non è eliminare ogni pensiero o sentimento intrusivo. È costruire una risposta diversa a loro.",
+    "btn_complete": "Attività completa"
+  }
+}

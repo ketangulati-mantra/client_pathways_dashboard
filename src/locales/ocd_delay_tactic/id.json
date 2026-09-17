@@ -1,0 +1,107 @@
+{
+  "header_back": "Kembali",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "Jeda 60 Detik",
+    "subtitle": "Kadang-kadang dorongan bisa terasa seperti sesuatu yang harus segera Anda tindakkan. Mari kita latih menciptakan sedikit ruang sebelum Anda merespons.",
+    "btn_begin": "Mulai"
+  },
+  "step2": {
+    "eyebrow": "SKENARIO 1",
+    "title": "Mari Coba Sebuah Skenario",
+    "subtitle": "Bayangkan kamu baru saja meninggalkan rumahmu.",
+    "visual_line1": "Kamu mengunci pintu depan dan berjalan menuju mobilmu.",
+    "visual_thought": "\"Apakah aku menguncinya dengan benar?\"",
+    "visual_line2": "Kamu merasakan tarikan untuk berbalik dan memeriksa.",
+    "btn_continue": "Lanjutkan"
+  },
+  "step3": {
+    "eyebrow": "DORONGAN",
+    "banner": "\"Periksa sekali lagi.\"",
+    "subtitle": "Kamu merasakan dorongan untuk berbalik dan memeriksa.",
+    "question": "Biasanya kamu merasa apa yang harus kamu lakukan?",
+    "responses": {
+      "check": "Periksa lagi",
+      "ask": "Minta seseorang untuk meyakinkan",
+      "goback": "Kembali dan pastikan",
+      "wait": "Berhenti sejenak dan tunggu"
+    },
+    "btn_next": "Selanjutnya"
+  },
+  "step4": {
+    "title": "Kamu belum harus menjawabnya.",
+    "subtitle": "Selama 60 detik ke depan, kita akan berlatih membuat sedikit jarak antara dorongan dan respons Anda.",
+    "cadence_pause": "JEDA",
+    "cadence_notice": "PEMBERITAHUAN",
+    "cadence_choose": "PILIH",
+    "detail": "Tujuannya bukan untuk menghilangkan pikiran itu. Tapi untuk menyadari dorongan tanpa langsung menjawabnya.",
+    "btn_start": "Mulai Jeda 60 Detik"
+  },
+  "step5": {
+    "badge": "DORONGAN ITU ADA DI SINI",
+    "prompts": {
+      "0": "Perhatikan dorongan itu saat muncul.",
+      "1": "Kamu bisa merasakan tarikan itu tanpa menjawabnya.",
+      "2": "Tarik napas lembut dan amati.",
+      "3": "Dorongan itu hanya sensasi saat ini.",
+      "4": "Anda tidak harus langsung menyelesaikan ketidakpastian.",
+      "5": "Perhatikan di mana kamu merasakan ketegangan di tubuhmu.",
+      "6": "Pikiran datang dan pergi seperti riak di atas air.",
+      "7": "Menciptakan ruang antara pikiran dan tindakan.",
+      "8": "Kamu mengamati dorongan itu, bukan mematuhinya.",
+      "9": "Ketidakpastian bisa terasa tidak nyaman, dan itu tidak apa-apa.",
+      "10": "Biarkan pikiran itu ada tanpa melibatkan diri.",
+      "11": "Perhatikan dorongan untuk memperbaiki atau memeriksa.",
+      "12": "Tetap penasaran dengan sensasinya.",
+      "13": "Kamu mengendalikan responsmu.",
+      "14": "Tidak ada yang perlu diselesaikan sekarang juga.",
+      "15": "Anda telah menciptakan ruang selama lebih dari 45 detik.",
+      "16": "Cukup perhatikan dorongan itu tanpa terburu-buru bertindak.",
+      "17": "Hampir sampai — beristirahat dalam jeda.",
+      "18": "Tetaplah hadir di saat napas terakhir ini.",
+      "19": "Kamu sudah menyelesaikan jeda."
+    }
+  },
+  "step6": {
+    "title": "Kamu memberi ruang.",
+    "subtitle": "Tujuannya bukan untuk menghilangkan dorongan itu. Tapi untuk memberi diri Anda waktu sebelum merespons.",
+    "question": "Apa yang kamu perhatikan?",
+    "reflections": {
+      "thought_there": "Pikiran itu masih ada",
+      "felt_urge": "Saya merasa ingin merespons",
+      "uncomfortable": "Ketidakpastian itu terasa tidak nyaman",
+      "could_wait": "Saya bisa menunggu tanpa harus langsung menjawabnya"
+    },
+    "btn_continue": "Lanjutkan"
+  },
+  "step7": {
+    "eyebrow": "SIKLUS OCD",
+    "title": "Di Mana Jeda Cocok",
+    "subtitle": "OCD menciptakan tarikan kuat untuk segera merespons keraguan.",
+    "node_doubt": "Keraguan / Pikiran Mengganggu",
+    "node_urge": "dorongan untuk merespons",
+    "space_tag": "JEDA 60 DETIK",
+    "space_title": "Ini adalah ruang yang baru saja kamu latih.",
+    "node_compulsion": "Respons Kompulsif",
+    "node_relief": "Kelegaan Sementara → Keraguan Kembali",
+    "detail": "Jeda memberi Anda waktu sebelum secara otomatis mengikuti tarikan itu.",
+    "btn_try_another": "Coba Skenario Lain"
+  },
+  "step8": {
+    "eyebrow": "SKENARIO 2",
+    "title": "Transfer Praktik",
+    "subtitle": "Bayangkan Anda baru saja mengirim pesan penting.",
+    "visual_line1": "Kamu tekan kirim dan tutup percakapan.",
+    "visual_thought": "\"Apa aku bilang sesuatu yang salah? Mungkin aku harus membacanya lagi.\"",
+    "visual_line2": "Pola yang sama: Pikiran → Dorongan → Jeda → Pilihan.",
+    "btn_practice": "Jeda Latihan (60-an)"
+  },
+  "step9": {
+    "title": "Dorongan bukanlah instruksi.",
+    "subtitle": "Anda tidak harus langsung menjawab setiap dorongan. Sedikit ruang bisa menciptakan titik awal yang berbeda.",
+    "cadence_pause": "JEDA",
+    "cadence_notice": "PEMBERITAHUAN",
+    "cadence_choose": "PILIH",
+    "btn_continue": "Lanjutkan"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "header_back": "Achteruit",
+  "header_history": "Geschiedenis",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "OCD STEMMINGSCHECK-IN",
+    "title": "Hoe voel je je nu?",
+    "subtitle": "Maak snel een foto. Er is geen juist antwoord.",
+    "levels": {
+      "l1_title": "1 — Zeer laag",
+      "l1_sub": "Je zwaar, overweldigd of uitgeput voelen",
+      "l2_title": "2 — Laag",
+      "l2_sub": "Onrustig, gespannen of energieloos",
+      "l3_title": "3 — Stabiel / Neutraal",
+      "l3_sub": "In balans, oké, of dingen nemen zoals ze komen",
+      "l4_title": "4 — Goed",
+      "l4_sub": "Helder, betrokken, of grotendeels op zijn gemak",
+      "l5_title": "5 — Zeer goed",
+      "l5_sub": "Geaard, energiek of vredig"
+    },
+    "btn_continue": "Ga verder"
+  },
+  "screen2": {
+    "badge": "STAP 2 VAN 4",
+    "title": "Hoeveel heeft OCD vandaag in je hoofd gezeten?",
+    "subtitle": "Denk aan de hoeveelheid aandacht, stress of verstoring die OCD vandaag heeft opgelegd.",
+    "impact_l1": "Niet veel — Rustig",
+    "impact_l2": "Mild — Beheersbaar",
+    "impact_l3": "Matig — Opvallend",
+    "impact_l4": "Significant — Ontwrichtend",
+    "impact_l5": "Veel — Hoge aanwezigheid",
+    "scale_min": "1 = Niet veel",
+    "scale_max": "5 = Veel",
+    "btn_back": "Achteruit",
+    "btn_continue": "Ga verder"
+  },
+  "screen3": {
+    "badge": "STAP 3 VAN 4",
+    "title": "Wat viel er vandaag op?",
+    "subtitle": "Kies iets wat deel uitmaakte van jouw ervaring.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Opdringerige gedachten / twijfels",
+      "CHECKING": "Drang om te controleren of te herhalen",
+      "MENTAL_REVIEW": "Mentale herhaling / analyse",
+      "REASSURANCE": "Op zoek naar zekerheid / geruststelling",
+      "AVOIDANCE": "Het vermijden van triggers of situaties",
+      "HIGH_ANXIETY": "Hoge stress of angst",
+      "PAUSED_URGE": "Een ritueel gepauzeerd of uitgesteld",
+      "FOCUSED_WELL": "Bezig met dagelijkse taken",
+      "NONE": "Geen van deze vandaag"
+    },
+    "btn_back": "Achteruit",
+    "btn_continue": "Ga verder"
+  },
+  "screen4": {
+    "badge": "STAP 4 VAN 4",
+    "title": "Is er iets dat je wilt onthouden?",
+    "subtitle": "Optioneel. Een paar woorden zijn genoeg.",
+    "placeholder": "Schrijf een briefje...",
+    "btn_back": "Achteruit",
+    "btn_save": "Inchecken opslaan",
+    "saving": "Redden..."
+  },
+  "screen5": {
+    "badge": "✓ GEREDD",
+    "title": "Het moment van vandaag.",
+    "subtitle": "Je incheckafspraak is vastgelegd op je privé-tijdlijn.",
+    "impact_label": "OCD impact {{impact}} / 5",
+    "btn_view_moments": "Bekijk je momenten",
+    "btn_done": "Klaar"
+  },
+  "history": {
+    "tab_moments": "Momenten",
+    "tab_trends": "Trends",
+    "today_title": "Inchecken van vandaag",
+    "no_log_today": "Nog geen incheckafspraak voor vandaag.",
+    "btn_check_in_now": "Noteer de check-in van vandaag",
+    "btn_view_past": "Bekijk eerdere check-ins ({{count}})",
+    "btn_hide_past": "Verstop je achter incheck-ins",
+    "past_title": "Eerdere incheckingen",
+    "no_logs_title": "Nog geen check-ins",
+    "no_logs_desc": "Je privélogs en emotionele tijdlijn verschijnen hier.",
+    "today_tag": "VANDAAG",
+    "yesterday_tag": "GISTEREN",
+    "modal_title": "Incheckdetail",
+    "modal_mood_label": "Stemmingsniveau",
+    "modal_impact_label": "OCD-impact",
+    "modal_experiences_label": "Ervaringen",
+    "modal_note_label": "Persoonlijke noot",
+    "btn_edit": "Bewerkingsnotitie",
+    "btn_delete": "Verwijder Invoer",
+    "btn_close": "Sluit",
+    "trends_14d": "14 Dagen",
+    "trends_30d": "30 Dagen",
+    "trends_90d": "90 Dagen",
+    "trends_avg_mood": "Gemiddelde stemming",
+    "trends_avg_impact": "Gemiddelde OCD-impact",
+    "trends_total_entries": "Totaal aantal inschrijvingen"
+  }
+}

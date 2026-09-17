@@ -16,6 +16,7 @@ import journalRoutes from './routes/journalRoutes.js';
 import storyRoutes from './routes/storyRoutes.js';
 import assessmentRoutes from './routes/assessmentRoutes.js';
 import challengeRoutes from './routes/challengeRoutes.js';
+import ocdMoodRoutes from './routes/ocdMoodRoutes.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -55,6 +56,7 @@ apiPrefixes.forEach((prefix) => {
   app.use(`${prefix}/journal`, journalRoutes);
   app.use(`${prefix}/story`, storyRoutes);
   app.use(`${prefix}/assessments`, assessmentRoutes);
+  app.use(`${prefix}/ocd-mood`, ocdMoodRoutes);
 });
 
 // Serve Frontend Static Assets in Production (supporting root and subpaths)

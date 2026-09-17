@@ -1,0 +1,113 @@
+{
+  "header_back": "Voltar",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSICOEDUCAÇÃO",
+    "title": "COMO FUNCIONA O ERP",
+    "subtitle": "O ERP ajuda pessoas com TOC a praticar o que as desencadeia enquanto muda o que fazem a seguir.",
+    "quote": "\"Você não pratica ser destemido. Você pratica responder de forma diferente.\"",
+    "btn_explore": "Explore"
+  },
+  "screen2": {
+    "badge": "CENÁRIO 1",
+    "title": "Você acabou de sair de casa.",
+    "thought": "\"Eu tranquei a porta?\"",
+    "urge_tag": "Você sente vontade de voltar",
+    "subtitle": "Um momento comum de dúvida chega. Vamos ver o que acontece quando o impulso é seguido.",
+    "btn_see_happens": "Veja o que acontece"
+  },
+  "screen3": {
+    "badge": "CAMINHO A",
+    "title": "Siga o Impulso",
+    "btn_check": "Verifique a fechadura",
+    "checking_status": "Checando a maçaneta... Girando a chave...",
+    "relief_thought": "\"Ok, está trancado. Alívio.\"",
+    "doubt_thought": "\"Espera... eu realmente tranquei direito?\"",
+    "subtitle": "O alívio acalmou a sensação por um segundo, mas a dúvida voltou logo depois.",
+    "btn_continue": "Continue"
+  },
+  "screen4": {
+    "badge": "REFLEXÃO",
+    "title": "O que o cheque te deu?",
+    "point1": "Alívio no momento.",
+    "point2": "Mais um motivo para verificar novamente quando a dúvida voltar.",
+    "subtitle": "Verificar pode reduzir o desconforto no momento, mas esse alívio de curto prazo reforça o impulso do cérebro de verificar novamente.",
+    "btn_rewind": "Rebobinar o Momento"
+  },
+  "screen5": {
+    "badge": "REWIND",
+    "title": "Vamos tentar o mesmo momento de forma diferente.",
+    "thought": "\"Eu tranquei a porta?\"",
+    "urge_tag": "Surge o impulso: \"Volte e confera\"",
+    "subtitle": "Desta vez, em vez de seguir automaticamente o impulso, exploramos a abordagem ERP.",
+    "btn_step1": "Passo 1: Exposição"
+  },
+  "screen6": {
+    "badge": "PASSO 1",
+    "title": "1. Exposição",
+    "subtitle1": "A ERP começa abordando um gatilho, em vez de evitá-lo ou fazê-lo desaparecer.",
+    "thought": "\"A dúvida está aqui: Eu tranquei a porta?\"",
+    "subtitle2": "Na ERP, exposição significa permitir que o gatilho ou incerteza esteja presente sem tentar imediatamente afastá-lo da mente.",
+    "btn_step2": "Passo 2: Prevenção da Resposta"
+  },
+  "screen7": {
+    "badge": "PASSO 2",
+    "title": "2. Prevenção da Resposta",
+    "subtitle1": "Depois vem a segunda parte: resistir ou atrasar a resposta compulsiva.",
+    "thought": "Impulso: \"Volte e confira agora mesmo.\"",
+    "btn_dont_check": "Não verifique agora",
+    "subtitle2": "Prática simulada: Escolher não realizar o ritual dá ao cérebro a chance de aprender algo novo."
+  },
+  "screen8": {
+    "badge": "COMPARAÇÃO",
+    "title": "Os Dois Caminhos",
+    "col_urge_title": "Siga o Impulso",
+    "col_urge_step1": "Gatilho",
+    "col_urge_step2": "Confere",
+    "col_urge_step3": "Relevo",
+    "col_urge_step4": "A dúvida retorna",
+    "col_erp_title": "Via ERP",
+    "col_erp_step1": "Gatilho",
+    "col_erp_step2": "Impulso",
+    "col_erp_step3": "Prevenção da Resposta",
+    "col_erp_step4": "Novos aprendizados",
+    "btn_learning": "O que você está aprendendo?"
+  },
+  "screen9": {
+    "badge": "INSIGHT CENTRAL",
+    "title": "O objetivo não é não sentir nada.",
+    "subtitle": "ERP não é sobre fazer o sofrimento desaparecer instantaneamente. Ela ensina:",
+    "insight1": "\"Posso experimentar a incerteza e tolerá-la.\"",
+    "insight2": "\"Posso ter um impulso sem agir automaticamente sobre ele.\"",
+    "insight3": "\"Não preciso de um ritual para responder a todas as dúvidas.\"",
+    "btn_scenario2": "Tente um Segundo Cenário"
+  },
+  "screen10": {
+    "badge": "CENÁRIO 2",
+    "title": "Você enviou uma mensagem importante.",
+    "thought": "Pensamento: \"Eu disse algo errado?\"",
+    "urge_tag": "Urge: Leia de novo",
+    "question": "Como seria a prevenção da resposta?",
+    "opt_read": "Leia a mensagem novamente para ter certeza",
+    "opt_ask": "Pergunte a alguém se parece bom",
+    "opt_leave": "Deixe como está por enquanto, sem reler",
+    "feedback_correct": "✓ Esse é um exemplo de resistir à resposta de checagem ou de segurança.",
+    "feedback_incorrect": "Essa seria uma forma de responder à incerteza. Na ERP, prevenção de resposta significa praticar não usar o comportamento de verificação ou de garantia.",
+    "btn_final_model": "Modelo Final",
+    "btn_try_again": "Tente de novo"
+  },
+  "screen11": {
+    "badge": "RESUMO",
+    "title": "O ERP muda o que você faz a seguir.",
+    "node_trigger": "Gatilho",
+    "node_trigger_sub": "A dúvida chega",
+    "node_urge": "Impulso",
+    "node_urge_sub": "Desejo de ritualizar",
+    "node_erp": "Exposição + Prevenção de Resposta",
+    "node_erp_sub": "Resistir à compulsão",
+    "node_learning": "Novos Aprendizados",
+    "node_learning_sub": "A incerteza pode ser tolerada",
+    "subtitle": "O objetivo não é eliminar todo pensamento ou sentimento intrusivo. É construir uma resposta diferente para eles.",
+    "btn_complete": "Atividade Completa"
+  }
+}

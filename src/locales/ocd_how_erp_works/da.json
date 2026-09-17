@@ -1,0 +1,113 @@
+{
+  "header_back": "Tilbage",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSYKOEDUKATION",
+    "title": "SÅDAN FUNGERER ERP",
+    "subtitle": "ERP hjælper folk med OCD med at øve sig i at konfrontere det, der udløser dem, samtidig med at de ændrer deres næste handling.",
+    "quote": "\"Du øver dig ikke i at være frygtløs. Du øver dig i at reagere anderledes.\"",
+    "btn_explore": "Udforsk"
+  },
+  "screen2": {
+    "badge": "SCENARIE 1",
+    "title": "Du er lige gået hjemmefra.",
+    "thought": "\"Låste jeg døren?\"",
+    "urge_tag": "Du føler trangen til at gå tilbage",
+    "subtitle": "Et almindeligt øjeblik af tvivl opstår. Lad os se, hvad der sker, når trangen følges.",
+    "btn_see_happens": "Se hvad der sker"
+  },
+  "screen3": {
+    "badge": "STI A",
+    "title": "Følg trangen",
+    "btn_check": "Tjek låsen",
+    "checking_status": "Tjekker håndtaget... drejer nøglen...",
+    "relief_thought": "\"Okay, den er låst. Lettelse.\"",
+    "doubt_thought": "\"Vent... låste jeg den virkelig ordentligt?\"",
+    "subtitle": "Lettelsen beroligede følelsen et øjeblik, men tvivlen vendte straks tilbage.",
+    "btn_continue": "Fortsæt"
+  },
+  "screen4": {
+    "badge": "REFLEKSION",
+    "title": "Hvad gav checken dig?",
+    "point1": "Lettelse lige i øjeblikket.",
+    "point2": "Endnu en grund til at tjekke igen, når tvivlen vender tilbage.",
+    "subtitle": "At tjekke kan mindske ubehag i øjeblikket, men den kortvarige lindring forstærker hjernens trang til at tjekke igen.",
+    "btn_rewind": "Spol øjeblikket tilbage"
+  },
+  "screen5": {
+    "badge": "SPOL TILBAGE",
+    "title": "Lad os prøve det samme øjeblik anderledes.",
+    "thought": "\"Låste jeg døren?\"",
+    "urge_tag": "Trangen dukker op: \"Gå tilbage og tjek\"",
+    "subtitle": "Denne gang udforsker vi i stedet for automatisk at følge trangen, ERP-tilgangen.",
+    "btn_step1": "Trin 1: Eksponering"
+  },
+  "screen6": {
+    "badge": "TRIN 1",
+    "title": "1. Eksponering",
+    "subtitle1": "ERP starter med at nærme sig en trigger i stedet for at undgå den eller få den til at forsvinde.",
+    "thought": "\"Tvivlen er her: Låste jeg døren?\"",
+    "subtitle2": "I ERP betyder eksponering, at man tillader triggeren eller usikkerheden at være til stede uden straks at forsøge at skubbe det ud af sindet.",
+    "btn_step2": "Trin 2: Responsforebyggelse"
+  },
+  "screen7": {
+    "badge": "TRIN 2",
+    "title": "2. Responsforebyggelse",
+    "subtitle1": "Så kommer anden del: at modstå eller udsætte den tvangsmæssige reaktion.",
+    "thought": "Urge: \"Gå tilbage og tjek nu.\"",
+    "btn_dont_check": "Tjek ikke lige nu",
+    "subtitle2": "Simuleret praksis: At vælge ikke at udføre ritualet giver hjernen en chance for at lære noget nyt."
+  },
+  "screen8": {
+    "badge": "SAMMENLIGNING",
+    "title": "De to stier",
+    "col_urge_title": "Følg trangen",
+    "col_urge_step1": "Trigger",
+    "col_urge_step2": "Tjek",
+    "col_urge_step3": "Relief",
+    "col_urge_step4": "Tvivlen vender tilbage",
+    "col_erp_title": "ERP-vej",
+    "col_erp_step1": "Trigger",
+    "col_erp_step2": "Urge",
+    "col_erp_step3": "Responsforebyggelse",
+    "col_erp_step4": "Ny læring",
+    "btn_learning": "Hvad lærer du?"
+  },
+  "screen9": {
+    "badge": "KERNEINDSIGT",
+    "title": "Pointen er ikke at føle ingenting.",
+    "subtitle": "ERP handler ikke om at få stress til at forsvinde øjeblikkeligt. Det lærer:",
+    "insight1": "\"Jeg kan opleve usikkerhed og tolerere det.\"",
+    "insight2": "\"Jeg kan have en trang uden automatisk at handle på den.\"",
+    "insight3": "\"Jeg behøver ikke et ritual for at svare på enhver tvivl.\"",
+    "btn_scenario2": "Prøv et andet scenarie"
+  },
+  "screen10": {
+    "badge": "SCENARIE 2",
+    "title": "Du sendte en vigtig besked.",
+    "thought": "Tanke: \"Sagde jeg noget forkert?\"",
+    "urge_tag": "Trang: Læs det igen",
+    "question": "Hvordan ville responsforebyggelse se ud?",
+    "opt_read": "Læs beskeden igen for at være sikker",
+    "opt_ask": "Spørg nogen, om det lyder okay",
+    "opt_leave": "Lad det være som det er for nu uden at genlæse det",
+    "feedback_correct": "✓ Det er et eksempel på at modstå tjekke- eller bekræftelsesresponsen.",
+    "feedback_incorrect": "Det ville være en måde at reagere på usikkerheden. I ERP betyder responsforebyggelse at øve sig i ikke at bruge kontrol- eller bekræftelsesadfærden.",
+    "btn_final_model": "Endelig model",
+    "btn_try_again": "Prøv igen"
+  },
+  "screen11": {
+    "badge": "RESUMÉ",
+    "title": "ERP ændrer, hvad du gør næste gang.",
+    "node_trigger": "Trigger",
+    "node_trigger_sub": "Tvivlen opstår",
+    "node_urge": "Urge",
+    "node_urge_sub": "Ønske om at ritualisere",
+    "node_erp": "Eksponering + Responsforebyggelse",
+    "node_erp_sub": "Resist tvang",
+    "node_learning": "Ny læring",
+    "node_learning_sub": "Usikkerhed kan tolereres",
+    "subtitle": "Målet er ikke at eliminere alle påtrængende tanker eller følelser. Det er at opbygge en anden reaktion på dem.",
+    "btn_complete": "Fuldstændig aktivitet"
+  }
+}

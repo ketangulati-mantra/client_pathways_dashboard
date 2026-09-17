@@ -1,0 +1,86 @@
+{
+  "header_back": "Voltar",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "ATIVIDADE 3",
+    "title": "OLHE PARA CIMA.",
+    "subtitle": "O ALARME NÃO É O PERIGO.",
+    "detail": "Um sentimento pode ser alto sem contar toda a história.",
+    "btn_enter": "ENTRA →"
+  },
+  "screen2": {
+    "title_line1": "ÀS VEZES,",
+    "title_line2": "A INCERTEZA JÁ É SUFICIENTE.",
+    "subtitle": "Toque uma frase para observar como o detector reage.",
+    "example1": "\"E se eu cometi um erro?\"",
+    "example2": "\"E se algo não estiver limpo o suficiente?\"",
+    "example3": "\"E se eu não conseguir ter certeza absoluta?\"",
+    "btn_activates": "O SINAL ATIVA →"
+  },
+  "screen3": {
+    "ambient_heart": "CORAÇÃO ACELERADO",
+    "ambient_tension": "TENSÃO",
+    "ambient_attention": "ATENÇÃO",
+    "ambient_urge": "URGE",
+    "title": "ESSE SENTIMENTO PODE SER ALTO.",
+    "subtitle": "A sensação é real. A mensagem que parece carregar não é automaticamente toda a história.",
+    "btn_look_closer": "OLHE MAIS DE PERTO →"
+  },
+  "screen4": {
+    "tag_left": "[ SINAL // SENSIBILIDADE ]",
+    "tag_right": "[ RESPOSTA // INTERPRETAÇÃO ]",
+    "title": "OLHE MAIS DE PERTO.",
+    "subtitle": "Arraste para qualquer lugar para inspecionar o detector de qualquer ângulo.",
+    "detail": "Você pode perceber o sinal sem se apressar imediatamente a uma conclusão.",
+    "btn_continue": "CONTINUE →"
+  },
+  "screen5": {
+    "title": "SINAL ≠ VEREDITO",
+    "subtitle": "Um sentimento forte pode ser real sem provar automaticamente o que parece dizer.",
+    "col_feel_title": "O QUE EU SINTO",
+    "feel_anxious": "Ansioso.",
+    "feel_uncertain": "Incerto.",
+    "feel_tense": "Tenso.",
+    "feel_pulled": "Puxei para conferir.",
+    "col_conclude_title": "O QUE CONCLUO",
+    "conclude_wrong": "\"Algo deve estar errado.\"",
+    "conclude_make_sure": "\"Preciso ter certeza.\"",
+    "conclude_certainty": "\"Preciso de certeza.\"",
+    "btn_next": "O QUE ACONTECE A SEGUIR? →"
+  },
+  "screen6": {
+    "title": "ÀS VEZES, UMA RESPOSTA PODE SILENCIAR O SINAL POR UM MOMENTO.",
+    "subtitle": "Toque para ver como as respostas interagem com o sinal.",
+    "item_check_title": "CONFERE",
+    "item_check_quote": "\"Vou garantir mais uma vez.\"",
+    "item_ask_title": "PERGUNTE",
+    "item_ask_quote": "\"Vou perguntar a alguém o que acha.\"",
+    "item_replay_title": "REPLAY",
+    "item_replay_quote": "\"Vou revisar isso de novo na minha cabeça.\"",
+    "item_avoid_title": "EVITE",
+    "item_avoid_quote": "\"Vou ficar longe do que parecer incerto.\"",
+    "btn_let_signal": "DEIXE O SINAL ESTAR LÁ →"
+  },
+  "screen7": {
+    "title": "DEIXE O SINAL ESTAR LÁ.",
+    "subtitle": "Perceba o que acontece quando você não corre imediatamente para interpretar.",
+    "btn_watch": "FIQUE DE OLHO NO SINAL",
+    "observing_format": "Sinal de observação... ({{segundos}}s)",
+    "done_title": "O SINAL MUDOU.",
+    "done_sub": "Você não precisava resolver isso.",
+    "btn_continue": "CONTINUE →"
+  },
+  "screen8": {
+    "title_line1": "UM ALARME É UM SINAL.",
+    "title_line2": "NÃO É UM VEREDITO.",
+    "subtitle": "Perceba o sentimento. Perceba a história que sua mente acrescenta a ela.",
+    "question": "DA PRÓXIMA VEZ QUE O ALARME FICAR ALTO, O QUE VOCÊ VAI NOTAR PRIMEIRO?",
+    "opt_feeling": "O SENTIMENTO",
+    "opt_thought": "O PENSAMENTO",
+    "opt_urge": "A VONTADE DE RESPONDER",
+    "feedback": "Continue notando a diferença.",
+    "btn_saving": "POUPANDO...",
+    "btn_continue": "CONTINUE →"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "header_back": "Achteruit",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "ADEMHALING",
+    "subtitle": "Een eenvoudig ritme om je ademhaling te sturen.",
+    "rhythm_badge": "Inadem voor 4 · Houd voor 7 · adem uit voor 8",
+    "label_how_long": "HOE LANG?",
+    "btn_begin": "Begin"
+  },
+  "time_options": {
+    "opt_30s": "30 seconden",
+    "opt_30s_hint": "2 cycli · ≈ 38 sek",
+    "opt_1m": "1 min",
+    "opt_1m_hint": "3 cycli · ≈ 1 min",
+    "opt_2m": "2 min",
+    "opt_2m_hint": "6 cycli · ≈ 2 min",
+    "opt_3m": "3 min",
+    "opt_3m_hint": "10 cycli · ≈ 3 min",
+    "opt_5m": "5 min",
+    "opt_5m_hint": "16 cycli · ≈ 5 min"
+  },
+  "settling": {
+    "title": "Ga je settelen",
+    "subcopy": "Neem even de tijd."
+  },
+  "phases": {
+    "inhale_title": "Inadem",
+    "inhale_sub": "Adem langzaam in",
+    "hold_title": "Houd vast",
+    "hold_sub": "Blijf hier",
+    "exhale_title": "Uitademen",
+    "exhale_sub": "Adem langzaam uit"
+  },
+  "reflection": {
+    "title": "Goed gedaan.",
+    "subtitle": "Neem even de tijd voordat je verder gaat. Let op hoe je je nu voelt.",
+    "question": "Wat valt je op?",
+    "choices": {
+      "settled": "Meer gesetteld",
+      "present": "Meer aanwezig",
+      "same": "Toch"
+    },
+    "btn_continue": "Ga verder"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "INHALE 4",
+    "step_hold": "HOLD 7",
+    "step_exhale": "ADEM 8 UIT",
+    "subtitle": "Keer terug naar deze praktijk wanneer je een rustig moment wilt om je aandacht te resetten.",
+    "btn_continue": "Ga verder"
+  }
+}

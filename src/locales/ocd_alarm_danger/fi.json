@@ -1,0 +1,86 @@
+{
+  "header_back": "Takaisin",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "TOIMINTA 3",
+    "title": "KATSO YLÖS.",
+    "subtitle": "HÄLYTYS EI OLE VAARA.",
+    "detail": "Tunne voi olla äänekäs kertomatta koko tarinaa.",
+    "btn_enter": "ASTUU →"
+  },
+  "screen2": {
+    "title_line1": "JOSKUS,",
+    "title_line2": "EPÄVARMUUS RIITTÄÄ.",
+    "subtitle": "Napauta lausetta nähdäksesi, miten ilmaisin reagoi.",
+    "example1": "\"Entä jos tein virheen?\"",
+    "example2": "\"Entä jos jokin ei ole tarpeeksi puhdasta?\"",
+    "example3": "\"Entä jos en voi olla täysin varma?\"",
+    "btn_activates": "SIGNAALI AKTIVOI →"
+  },
+  "screen3": {
+    "ambient_heart": "SYDÄN HAKKAA",
+    "ambient_tension": "JÄNNITYS",
+    "ambient_attention": "HUOMIO",
+    "ambient_urge": "TARVE",
+    "title": "SE TUNNE VOI OLLA KOVA.",
+    "subtitle": "Tunne on todellinen. Viesti, jonka se näyttää kantavan, ei automaattisesti ole koko totuus.",
+    "btn_look_closer": "KATSO TARKEMMIN →"
+  },
+  "screen4": {
+    "tag_left": "[ SIGNAALI // HERKKYYS ]",
+    "tag_right": "[ VASTAUS // TULKINTA ]",
+    "title": "KATSO TARKEMMIN.",
+    "subtitle": "Raahaa minne tahansa tutkiaksesi ilmaisinta mistä tahansa kulmasta.",
+    "detail": "Voit huomata signaalin ilman, että kiirehdit tekemään johtopäätöstä.",
+    "btn_continue": "JATKA →"
+  },
+  "screen5": {
+    "title": "SIGNAALI ≠ TUOMIO",
+    "subtitle": "Vahva tunne voi olla todellinen ilman, että se automaattisesti todistaa sitä, mitä se näyttää sanovan.",
+    "col_feel_title": "MITÄ TUNNEN",
+    "feel_anxious": "Ahdistunut.",
+    "feel_uncertain": "Epävarma.",
+    "feel_tense": "Jännittynyt.",
+    "feel_pulled": "Vedetty tarkistettavaksi.",
+    "col_conclude_title": "MITÄ JOHTOPÄÄTÖKSENI",
+    "conclude_wrong": "\"Jotain täytyy olla vialla.\"",
+    "conclude_make_sure": "\"Minun täytyy varmistaa.\"",
+    "conclude_certainty": "\"Tarvitsen varmuutta.\"",
+    "btn_next": "MITÄ TAPAHTUU SEURAAVAKSI? →"
+  },
+  "screen6": {
+    "title": "JOSKUS VASTAUS VOI HILJENTÄÄ SIGNAALIN HETKEKSI.",
+    "subtitle": "Napauta nähdäksesi, miten vaste vuorovaikuttaa signaalin kanssa.",
+    "item_check_title": "TARKISTA",
+    "item_check_quote": "\"Varmistan sen vielä kerran.\"",
+    "item_ask_title": "KYSY",
+    "item_ask_quote": "\"Kysyn joltain, mitä he ajattelevat.\"",
+    "item_replay_title": "UUSINTA",
+    "item_replay_quote": "\"Käyn sen mielessäni uudelleen läpi.\"",
+    "item_avoid_title": "VÄLTÄ",
+    "item_avoid_quote": "\"Pysyn kaukana kaikesta, mikä tuntuu epävarmalta.\"",
+    "btn_let_signal": "ANNA SIGNAALIN OLLA →"
+  },
+  "screen7": {
+    "title": "ANNA SIGNAALIN OLLA SIELLÄ.",
+    "subtitle": "Huomaa, mitä tapahtuu, kun et heti kiirehdi tulkitsemaan sitä.",
+    "btn_watch": "VARO MERKKIÄ",
+    "observing_format": "Havaintosignaali... ({{seconds}}s)",
+    "done_title": "SIGNAALI MUUTTUI.",
+    "done_sub": "Sinun ei olisi tarvinnut ratkaista sitä.",
+    "btn_continue": "JATKA →"
+  },
+  "screen8": {
+    "title_line1": "HÄLYTYS ON SIGNAALI.",
+    "title_line2": "EI TUOMIOTA.",
+    "subtitle": "Huomaa tunne. Huomaa tarina, jonka mielesi siihen lisää.",
+    "question": "SEURAAVAN KERRAN KUN HÄLYTYS ALKAA KOVAKSI, MITÄ HUOMAAT ENSIN?",
+    "opt_feeling": "SE TUNNE",
+    "opt_thought": "AJATUS",
+    "opt_urge": "TARVE VASTATA",
+    "feedback": "Huomaa ero jatkuvasti.",
+    "btn_saving": "SÄÄSTÄMINEN...",
+    "btn_continue": "JATKA →"
+  }
+}

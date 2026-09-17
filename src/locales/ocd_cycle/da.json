@@ -1,0 +1,155 @@
+{
+  "header_back": "Tilbage",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Inde i en OCD-løkke",
+    "subtitle": "Se, hvordan en tanke kan blive til en cyklus."
+  },
+  "stages": {
+    "step_experience": "01-oplevelsen",
+    "step_recognize": "02 Erkend",
+    "step_explore": "03 Udforsk",
+    "step_practice": "04 Meddelelse",
+    "step_takeaway": "05 Takeaway"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Tanker",
+      "uncertainty": "Usikkerhed",
+      "response": "Respons",
+      "relief": "Relief"
+    },
+    "cycle_1": {
+      "thought": "\"Hvad hvis jeg ikke låste døren?\"",
+      "uncertainty": "\"Låste jeg den virkelig?\"",
+      "response": "\"Tjek igen.\"",
+      "relief": "\"Okay. Jeg har det bedre.\""
+    },
+    "cycle_2": {
+      "thought": "\"Vent... men tjekkede jeg virkelig ordentligt?\"",
+      "uncertainty": "\"Jeg skal være sikker.\"",
+      "response": "\"Tjek én gang til.\"",
+      "relief": "\"Midlertidig lindring...\""
+    },
+    "notice_prompt": "Lagde du mærke til det?",
+    "notice_detail": "Lettelsen var ægte, men tvivlen vendte tilbage.",
+    "action_prompt": "Se hvad der ændrede →"
+  },
+  "scenarios": {
+    "heading": "Gør den nu til din.",
+    "subheading": "Vælg et genkendeligt scenarie for at se den bevæge sig gennem loopet.",
+    "checking": {
+      "name": "Kontrol",
+      "phrase": "\"Hvad hvis jeg ikke låste døren?\"",
+      "thought": "\"Hvad hvis jeg ikke låste døren?\"",
+      "uncertainty": "\"Låste jeg den virkelig?\"",
+      "response": "\"Tjek låsen igen.\"",
+      "relief": "\"Okay, det føles sikkert for nu.\"",
+      "return": "\"Vent... tjekkede jeg ordentligt?\"",
+      "takeaway_quote": "Jeg har bemærket, at det at tjekke giver hurtig lindring, men tvivlen vender tilbage.",
+      "takeaway_action": "Næste gang tvivlen opstår, stop op og læg mærke til trangen, før du automatisk tjekker."
+    },
+    "responsibility": {
+      "name": "Ansvar",
+      "phrase": "\"Hvad nu hvis jeg lavede en alvorlig fejl?\"",
+      "thought": "\"Hvad nu hvis jeg lavede en alvorlig fejl?\"",
+      "uncertainty": "\"Jeg er nødt til at vide det med sikkerhed.\"",
+      "response": "\"Spil alle detaljer igennem i mit hoved.\"",
+      "relief": "\"Det ser fint ud et øjeblik.\"",
+      "return": "\"Hvad hvis jeg har glemt en detalje?\"",
+      "takeaway_quote": "Jeg har bemærket, at mental genafspilning prøver at skabe sikkerhed, men forlænger tvivlen.",
+      "takeaway_action": "Næste gang trangen til at spille igen opstår, så anerkend tvivlen uden at analysere den."
+    },
+    "contamination": {
+      "name": "Forurening",
+      "phrase": "\"Hvad nu hvis jeg rørte ved noget forurenet?\"",
+      "thought": "\"Hvad nu hvis den overflade ikke var ren?\"",
+      "uncertainty": "\"Jeg føler mig utilpas og forurenet.\"",
+      "response": "\"Vask grundigt.\"",
+      "relief": "\"Jeg føler mig ren for nu.\"",
+      "return": "\"Vaskede jeg mig godt nok?\"",
+      "takeaway_quote": "Jeg har bemærket, at vask lindrer det indledende ubehag, men sætter gang i den næste tvivl.",
+      "takeaway_action": "Næste gang trangen til at vaske sig kommer, så giv dig selv et øjeblik til først at mærke følelsen."
+    },
+    "symmetry": {
+      "name": "Lige til",
+      "phrase": "\"Hvad hvis jeg ikke gør det helt rigtigt?\"",
+      "thought": "\"Det føles ikke balanceret.\"",
+      "uncertainty": "\"Noget dårligt kan ske eller føles forkert.\"",
+      "response": "\"Lav det om, indtil det klikker.\"",
+      "relief": "\"Det føles rigtigt for nu.\"",
+      "return": "\"Gjorde jeg det rigtigt sidste gang?\"",
+      "takeaway_quote": "Jeg har bemærket, at det at gentage en handling for en 'lige præcis' følelse holder trangen i live.",
+      "takeaway_action": "Næste gang noget føles ufuldstændigt, så læg mærke til trangen til at gentage uden straks at gentage."
+    },
+    "doubt_return_label": "Tvivlen vender tilbage:"
+  },
+  "snapshot": {
+    "title": "Din Loop Snapshot",
+    "thought_label": "Tanker",
+    "uncertainty_label": "Usikkerhed",
+    "response_label": "Respons",
+    "effect_label": "Kortsigtet effekt",
+    "next_label": "Hvad sker der nu",
+    "replay_btn": "Genafspilningsscenarie"
+  },
+  "response_point": {
+    "heading": "Her bliver mønsteret interessant.",
+    "subheading": "Du kontrollerer måske ikke tanken eller usikkerheden. Men du kan mærke, hvad der sker bagefter.",
+    "choice_check": "Tjek igen",
+    "choice_notice": "Læg mærke til trangen",
+    "check_result_title": "Den automatiske respons",
+    "check_result_body": "Tjekket bragte lettelse. Tvivlen vendte tilbage.",
+    "notice_result_title": "Pausen",
+    "notice_result_body": "Usikkerheden kan stadig føles ubehagelig. At mærke trangen giver dig et øjeblik, før du automatisk reagerer.",
+    "try_again": "Vil du se forskellen igen?"
+  },
+  "compulsions": {
+    "statement": "Tvangshandlinger er ikke altid noget, man gør.",
+    "tab_outward": "Udad",
+    "tab_inward": "Indad",
+    "outward_items": {
+      "0": "Kontrol",
+      "1": "Vask",
+      "2": "Gentagelse"
+    },
+    "inward_items": {
+      "0": "Genafspilning",
+      "1": "Anmeldelse",
+      "2": "Analyse",
+      "3": "Søgen efter sikkerhed"
+    }
+  },
+  "recognition": {
+    "heading": "Du vil måske lægge mærke til mønsteret som...",
+    "pattern_1": {
+      "step1": "Tjek",
+      "step2": "Relief",
+      "step3": "Tvivl"
+    },
+    "pattern_2": {
+      "step1": "Omkamp",
+      "step2": "Sikkerhed",
+      "step3": "Tvivl"
+    },
+    "pattern_3": {
+      "step1": "Undgå",
+      "step2": "Relief",
+      "step3": "Frygten vender tilbage"
+    }
+  },
+  "takeaway": {
+    "tag": "Din konklusion",
+    "main_headline": "Tanken er ikke loopet.",
+    "sub_headline": "Læg mærke til, hvad der sker næste gang.",
+    "closing": "At forstå mønsteret er det første skridt mod at genkende det i virkeligheden."
+  },
+  "next_step": {
+    "prompt_title": "Klar til det næste?",
+    "prompt_desc": "Markér denne aktivitet som fuldført for at gemme din fremgang og fortsætte din vej.",
+    "btn_complete": "Marker aktivitet som udført",
+    "saving": "At redde...",
+    "completed_badge": "Aktivitet afsluttet",
+    "error_save": "Vi kunne ikke gemme din aktivitetsfuldførelse lige nu. Din fremgang gemmes lokalt."
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "header_back": "Tillbaka",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Inuti en OCD-loop",
+    "subtitle": "Se hur en tanke kan förvandlas till en cykel."
+  },
+  "stages": {
+    "step_experience": "01-upplevelsen",
+    "step_recognize": "02 Känn igen",
+    "step_explore": "03 Utforska",
+    "step_practice": "04 Meddelande",
+    "step_takeaway": "05 Sammanfattning"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Tankar",
+      "uncertainty": "Osäkerhet",
+      "response": "Respons",
+      "relief": "Relief"
+    },
+    "cycle_1": {
+      "thought": "\"Tänk om jag inte låste dörren?\"",
+      "uncertainty": "\"Låste jag verkligen den?\"",
+      "response": "\"Kolla igen.\"",
+      "relief": "\"Okej. Jag mår bättre.\""
+    },
+    "cycle_2": {
+      "thought": "\"Vänta... men kollade jag verkligen ordentligt?\"",
+      "uncertainty": "\"Jag måste vara säker.\"",
+      "response": "\"Kolla en gång till.\"",
+      "relief": "\"Tillfällig lättnad...\""
+    },
+    "notice_prompt": "Märkte du det?",
+    "notice_detail": "Lättnaden var verklig, men tvivlet kom tillbaka.",
+    "action_prompt": "Se vad som förändrade →"
+  },
+  "scenarios": {
+    "heading": "Gör den till din.",
+    "subheading": "Välj ett igenkännbart scenario för att se den röra sig genom loopen.",
+    "checking": {
+      "name": "Kontroll",
+      "phrase": "\"Tänk om jag inte låste dörren?\"",
+      "thought": "\"Tänk om jag inte låste dörren?\"",
+      "uncertainty": "\"Låste jag verkligen den?\"",
+      "response": "\"Kolla låset igen.\"",
+      "relief": "\"Okej, det känns säkert för tillfället.\"",
+      "return": "\"Vänta... kollade jag ordentligt?\"",
+      "takeaway_quote": "Jag märkte att kontroll ger snabb lindring, men tvivlet återvänder.",
+      "takeaway_action": "Nästa gång tvivlet dyker upp, pausa och märk impulsen innan du automatiskt kontrollerar."
+    },
+    "responsibility": {
+      "name": "Ansvar",
+      "phrase": "\"Tänk om jag gjorde ett allvarligt misstag?\"",
+      "thought": "\"Tänk om jag gjorde ett allvarligt misstag?\"",
+      "uncertainty": "\"Jag måste veta säkert.\"",
+      "response": "\"Spela upp varje detalj i huvudet.\"",
+      "relief": "\"Det verkar okej för ett ögonblick.\"",
+      "return": "\"Tänk om jag missade en detalj?\"",
+      "takeaway_quote": "Jag märkte att mental återuppspelning försöker skapa säkerhet, men förlänger tvivlet.",
+      "takeaway_action": "Nästa gång lusten att spela om den uppstår, erkänn tvivlet utan att analysera det."
+    },
+    "contamination": {
+      "name": "Kontaminering",
+      "phrase": "\"Tänk om jag rörde vid något som är kontaminerat?\"",
+      "thought": "\"Tänk om den ytan inte var ren?\"",
+      "uncertainty": "\"Jag känner mig obekväm och förorenad.\"",
+      "response": "\"Tvätta noggrant.\"",
+      "relief": "\"Jag känner mig ren för tillfället.\"",
+      "return": "\"Tvättade jag mig tillräckligt bra?\"",
+      "takeaway_quote": "Jag märkte att tvätt lindrar det initiala obehaget, men väcker nästa tvekan.",
+      "takeaway_action": "Nästa gång du får lust att tvätta dig, ge dig själv en stund att först märka känslan."
+    },
+    "symmetry": {
+      "name": "Precis lagom",
+      "phrase": "\"Tänk om jag inte gör det här helt rätt?\"",
+      "thought": "\"Det här känns inte balanserat.\"",
+      "uncertainty": "\"Något dåligt kan hända eller kännas fel.\"",
+      "response": "\"Gör om det tills det klickar.\"",
+      "relief": "\"Känns rätt just nu.\"",
+      "return": "\"Gjorde jag rätt förra gången?\"",
+      "takeaway_quote": "Jag märkte att om man upprepar en handling för en 'precis lagom' känsla håller jag suget vid liv.",
+      "takeaway_action": "Nästa gång något känns ofullständigt, märk lusten att göra om utan att genast upprepa."
+    },
+    "doubt_return_label": "Tvivlet återvänder:"
+  },
+  "snapshot": {
+    "title": "Din loop-snapshot",
+    "thought_label": "Tankar",
+    "uncertainty_label": "Osäkerhet",
+    "response_label": "Respons",
+    "effect_label": "Kortsiktig effekt",
+    "next_label": "Vad händer härnäst",
+    "replay_btn": "Omspelningsscenario"
+  },
+  "response_point": {
+    "heading": "Här blir mönstret intressant.",
+    "subheading": "Du kanske inte kontrollerar tanken eller osäkerheten. Men du kan märka vad som händer härnäst.",
+    "choice_check": "Kolla igen",
+    "choice_notice": "Lägg märke till impulsen",
+    "check_result_title": "Den automatiska responsen",
+    "check_result_body": "Kontrollen gav lättnad. Tvivlet återvände.",
+    "notice_result_title": "Pausen",
+    "notice_result_body": "Osäkerheten kan fortfarande kännas obekväm. Att märka impulsen ger dig en stund innan du automatiskt svarar.",
+    "try_again": "Vill du se skillnaden igen?"
+  },
+  "compulsions": {
+    "statement": "Tvång är inte alltid något man gör.",
+    "tab_outward": "Utåt",
+    "tab_inward": "Inåt",
+    "outward_items": {
+      "0": "Kontroll",
+      "1": "Tvätt",
+      "2": "Upprepning"
+    },
+    "inward_items": {
+      "0": "Omspel",
+      "1": "Recension",
+      "2": "Analys",
+      "3": "Sökande efter säkerhet"
+    }
+  },
+  "recognition": {
+    "heading": "Du kanske märker mönstret som...",
+    "pattern_1": {
+      "step1": "Check",
+      "step2": "Relief",
+      "step3": "Tvivel"
+    },
+    "pattern_2": {
+      "step1": "Omspel",
+      "step2": "Säkerhet",
+      "step3": "Tvivel"
+    },
+    "pattern_3": {
+      "step1": "Undvik",
+      "step2": "Relief",
+      "step3": "Rädslan återvänder"
+    }
+  },
+  "takeaway": {
+    "tag": "Din slutsats",
+    "main_headline": "Tanken är inte loopen.",
+    "sub_headline": "Lägg märke till vad som händer härnäst.",
+    "closing": "Att förstå mönstret är det första steget mot att känna igen det i verkliga livet."
+  },
+  "next_step": {
+    "prompt_title": "Redo för vad som kommer härnäst?",
+    "prompt_desc": "Markera denna aktivitet som slutförd för att spara din framsteg och fortsätta din väg.",
+    "btn_complete": "Markera aktiviteten som utförd",
+    "saving": "Rädda...",
+    "completed_badge": "Aktivitet avslutad",
+    "error_save": "Vi kunde inte spara din aktivitetsslutföring just nu. Din framsteg sparas lokalt."
+  }
+}

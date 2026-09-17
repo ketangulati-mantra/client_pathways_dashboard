@@ -1,0 +1,100 @@
+{
+  "header_back": "返回",
+  "header_history": "历史",
+  "brand": "强迫咒语",
+  "screen1": {
+    "badge": "强迫症情绪检查",
+    "title": "你现在感觉怎么样？",
+    "subtitle": "快速拍张快照。没有绝对的正确答案。",
+    "levels": {
+      "l1_title": "1 — 非常低",
+      "l1_sub": "感到沉重、不堪重负或精疲力竭",
+      "l2_title": "2 — 低",
+      "l2_sub": "不安、紧张或精力低落",
+      "l3_title": "3 — 稳重 / 中性",
+      "l3_sub": "平衡、还行，或者顺其自然",
+      "l4_title": "4 — 良好",
+      "l4_sub": "清晰、投入，或大多自在",
+      "l5_title": "5 — 非常好",
+      "l5_sub": "是脚踏实地、充满活力，还是平静"
+    },
+    "btn_continue": "继续"
+  },
+  "screen2": {
+    "badge": "第四步中的第二步",
+    "title": "今天你脑海里有多少强迫症？",
+    "subtitle": "想想强迫症今天占据了多少注意力、痛苦或干扰。",
+    "impact_l1": "没什么——安静",
+    "impact_l2": "轻度 — 可控",
+    "impact_l3": "中度 — 明显",
+    "impact_l4": "重要性——颠覆性",
+    "impact_l5": "很多——高存在感",
+    "scale_min": "1 = 不多",
+    "scale_max": "5 = 很多",
+    "btn_back": "返回",
+    "btn_continue": "继续"
+  },
+  "screen3": {
+    "badge": "第四步",
+    "title": "今天有什么特别突出的？",
+    "subtitle": "选择任何与你相关经历的内容。",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "侵入性思维/疑虑",
+      "CHECKING": "想要检查或重复的冲动",
+      "MENTAL_REVIEW": "脑海中回放/分析",
+      "REASSURANCE": "寻求确定性/安心感",
+      "AVOIDANCE": "避免触发点或情境",
+      "HIGH_ANXIETY": "高度焦虑或焦虑",
+      "PAUSED_URGE": "暂停或延迟仪式",
+      "FOCUSED_WELL": "参与日常事务",
+      "NONE": "如今这些作品都没有"
+    },
+    "btn_back": "返回",
+    "btn_continue": "继续"
+  },
+  "screen4": {
+    "badge": "第四步，共四步",
+    "title": "有什么想记住的吗？",
+    "subtitle": "可选。几句话就够了。",
+    "placeholder": "写个便条......",
+    "btn_back": "返回",
+    "btn_save": "保存签到。",
+    "saving": "拯救......"
+  },
+  "screen5": {
+    "badge": "✓ 已保存",
+    "title": "今天的时刻。",
+    "subtitle": "你的签到记录在你的私人时间线上。",
+    "impact_label": "强迫症影响 {{impact}} / 5",
+    "btn_view_moments": "查看你的时刻",
+    "btn_done": "完成"
+  },
+  "history": {
+    "tab_moments": "瞬间",
+    "tab_trends": "趋势",
+    "today_title": "今日签到点",
+    "no_log_today": "今天还没有记录到签到。",
+    "btn_check_in_now": "记录今天的签到记录",
+    "btn_view_past": "查看过往签到记录 （{{count}}）",
+    "btn_hide_past": "隐藏过去的签到记录",
+    "past_title": "往届签到情况",
+    "no_logs_title": "还没有签到。",
+    "no_logs_desc": "您的私人日志和情感时间线将显示在这里。",
+    "today_tag": "现今",
+    "yesterday_tag": "昨天",
+    "modal_title": "报到详情",
+    "modal_mood_label": "情绪等级",
+    "modal_impact_label": "强迫症影响",
+    "modal_experiences_label": "经历",
+    "modal_note_label": "个人笔记",
+    "btn_edit": "编辑说明",
+    "btn_delete": "删除条目",
+    "btn_close": "结束",
+    "trends_14d": "14天",
+    "trends_30d": "30天",
+    "trends_90d": "90天",
+    "trends_avg_mood": "普通心情",
+    "trends_avg_impact": "强迫症的平均影响",
+    "trends_total_entries": "参赛总数"
+  }
+}

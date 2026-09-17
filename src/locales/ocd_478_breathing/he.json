@@ -1,0 +1,55 @@
+{
+  "header_back": "חזרה",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "נשימה",
+    "subtitle": "קצב פשוט שמכוון את הנשימה שלך.",
+    "rhythm_badge": "שאף פנימה ל-4 · החזק 7 · נשוף ל-8",
+    "label_how_long": "כמה זמן?",
+    "btn_begin": "התחלה"
+  },
+  "time_options": {
+    "opt_30s": "30 שניות",
+    "opt_30s_hint": "2 מחזורים · ≈ 38 שניות",
+    "opt_1m": "דקה אחת",
+    "opt_1m_hint": "3 מחזורים · ≈ 1 דקה",
+    "opt_2m": "2 דקות",
+    "opt_2m_hint": "6 מחזורים · ≈ 2 דקות",
+    "opt_3m": "3 דקות",
+    "opt_3m_hint": "10 מחזורים · ≈ 3 דקות",
+    "opt_5m": "5 דקות",
+    "opt_5m_hint": "16 מחזורים · ≈ 5 דקות"
+  },
+  "settling": {
+    "title": "תתמקמו",
+    "subcopy": "קח רגע."
+  },
+  "phases": {
+    "inhale_title": "שאוף פנימה",
+    "inhale_sub": "נשום לאט פנימה",
+    "hold_title": "המתן",
+    "hold_sub": "תישאר כאן",
+    "exhale_title": "נשיפה",
+    "exhale_sub": "נשוף לאט החוצה"
+  },
+  "reflection": {
+    "title": "כל הכבוד.",
+    "subtitle": "קח רגע לפני שאתה ממשיך הלאה. שים לב איך אתה מרגיש עכשיו.",
+    "question": "מה אתה מבחין?",
+    "choices": {
+      "settled": "יותר מיושב",
+      "present": "נוכחים יותר",
+      "same": "בדיוק אותו דבר"
+    },
+    "btn_continue": "המשך"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "שאיפה 4",
+    "step_hold": "החזקה 7",
+    "step_exhale": "נשיפה 8",
+    "subtitle": "חזור לתרגול הזה בכל פעם שאתה רוצה רגע שקט שיחזיר את תשומת הלב שלך.",
+    "btn_continue": "המשך"
+  }
+}

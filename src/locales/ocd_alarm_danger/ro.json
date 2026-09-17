@@ -1,0 +1,86 @@
+{
+  "header_back": "Înapoi",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "ACTIVITATEA 3",
+    "title": "UITĂ-TE ÎN SUS.",
+    "subtitle": "ALARMA NU ESTE PERICOLUL.",
+    "detail": "Un sentiment poate fi puternic fără să-ți spună toată povestea.",
+    "btn_enter": "INTRĂ →"
+  },
+  "screen2": {
+    "title_line1": "UNEORI,",
+    "title_line2": "INCERTITUDINEA ESTE SUFICIENTĂ.",
+    "subtitle": "Apasă o frază pentru a observa cum reacționează detectorul.",
+    "example1": "\"Dacă am greșit?\"",
+    "example2": "\"Ce se întâmplă dacă ceva nu e suficient de curat?\"",
+    "example3": "\"Dar dacă nu pot fi complet sigur?\"",
+    "btn_activates": "SEMNALUL SE ACTIVEAZĂ →"
+  },
+  "screen3": {
+    "ambient_heart": "INIMA BATE",
+    "ambient_tension": "TENSIUNE",
+    "ambient_attention": "ATENȚIE",
+    "ambient_urge": "IMPULS",
+    "title": "ACEST SENTIMENT POATE FI PUTERNIC.",
+    "subtitle": "Sentimentul este real. Mesajul pe care pare să-l poarte nu este automat întreaga poveste.",
+    "btn_look_closer": "UITĂ-TE MAI ATENT →"
+  },
+  "screen4": {
+    "tag_left": "[ SEMNAL // SENSIBILITATE ]",
+    "tag_right": "[ RĂSPUNS // INTERPRETARE ]",
+    "title": "UITĂ-TE MAI ATENT.",
+    "subtitle": "Trage oriunde pentru a inspecta detectorul din orice unghi.",
+    "detail": "Poți observa semnalul fără să te grăbești imediat la o concluzie.",
+    "btn_continue": "CONTINUĂ →"
+  },
+  "screen5": {
+    "title": "SEMNALUL ≠ VERDICT",
+    "subtitle": "Un sentiment puternic poate fi real fără să demonstreze automat ceea ce pare să spună.",
+    "col_feel_title": "CE SIMT",
+    "feel_anxious": "Anxioasă.",
+    "feel_uncertain": "Nesigur.",
+    "feel_tense": "Tensionat.",
+    "feel_pulled": "Am tras să verific.",
+    "col_conclude_title": "CE CONCLUZIONEZ EU",
+    "conclude_wrong": "\"Trebuie să fie ceva în neregulă.\"",
+    "conclude_make_sure": "\"Trebuie să mă asigur.\"",
+    "conclude_certainty": "\"Am nevoie de certitudine.\"",
+    "btn_next": "CE SE ÎNTÂMPLĂ MAI DEPARTE? →"
+  },
+  "screen6": {
+    "title": "UNEORI, UN RĂSPUNS POATE REDUCE SEMNALUL PENTRU O CLIPĂ.",
+    "subtitle": "Atinge pentru a vedea cum interacționează răspunsurile cu semnalul.",
+    "item_check_title": "BIFAT",
+    "item_check_quote": "\"O să mă asigur încă o dată.\"",
+    "item_ask_title": "ÎNTREABĂ",
+    "item_ask_quote": "\"O să întreb pe cineva ce părere are.\"",
+    "item_replay_title": "RELUARE",
+    "item_replay_quote": "\"O să-l revăd din nou în minte.\"",
+    "item_avoid_title": "EVITĂ",
+    "item_avoid_quote": "\"Voi sta departe de orice pare nesigur.\"",
+    "btn_let_signal": "SĂ FIE SEMNALUL ACOLO →"
+  },
+  "screen7": {
+    "title": "SĂ FIE SEMNALUL ACOLO.",
+    "subtitle": "Observă ce se întâmplă când nu te grăbești imediat să interpretezi.",
+    "btn_watch": "URMĂREȘTE SEMNALUL",
+    "observing_format": "Semnal de observare... ({{secunde}}s)",
+    "done_title": "SEMNALUL S-A SCHIMBAT.",
+    "done_sub": "Nu trebuia să-l rezolvi.",
+    "btn_continue": "CONTINUĂ →"
+  },
+  "screen8": {
+    "title_line1": "O ALARMĂ ESTE UN SEMNAL.",
+    "title_line2": "NU E UN VERDICT.",
+    "subtitle": "Observă sentimentul. Observă povestea pe care mintea ta o adaugă.",
+    "question": "DATA VIITOARE CÂND ALARMA DEVINE PUTERNICĂ, CE AI PUTEA OBSERVA PRIMUL?",
+    "opt_feeling": "SENTIMENTUL",
+    "opt_thought": "GÂNDUL",
+    "opt_urge": "IMPULSUL DE A RĂSPUNDE",
+    "feedback": "Continuă să observi diferența.",
+    "btn_saving": "SALVÂND...",
+    "btn_continue": "CONTINUĂ →"
+  }
+}

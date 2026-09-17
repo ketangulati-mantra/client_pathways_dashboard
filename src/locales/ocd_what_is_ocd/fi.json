@@ -1,0 +1,83 @@
+{
+  "header_back": "Takaisin",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Mitä on pakko-oireinen häiriö?",
+    "subtitle": "Ymmärrä, mitä OCD on, miten se voi näkyä ja miksi se voi tuntua niin vakuuttavalta."
+  },
+  "video": {
+    "eyebrow": "ALOITA TÄSTÄ",
+    "title": "Katso tämä lyhyt johdanto OCD:hen."
+  },
+  "basics": {
+    "eyebrow": "PERUSTEET",
+    "headline": "OCD on enemmän kuin ei-toivottuja ajatuksia.",
+    "obsession_title": "PAKKOMIELTEET",
+    "obsession_desc": "Ei-toivotut ajatukset, mielikuvat, epäilykset tai halut, joita voi olla vaikea sivuuttaa.",
+    "compulsion_title": "PAKKO-TOIMET",
+    "compulsion_desc": "Teot tai henkiset reaktiot, joita tunnet ajavan toistaa vähentääksesi epämukavuutta tai varmuutta."
+  },
+  "themes": {
+    "eyebrow": "YLEISIÄ TEEMOJA",
+    "headline": "OCD voi ilmetä monin eri tavoin.",
+    "subtext": "Nämä ovat yleisiä teemoja, eivät erillisiä diagnooseja. Yksi henkilö voi kokea useamman.",
+    "disclaimer": "Nämä ovat vain muutamia esimerkkejä.",
+    "items": {
+      "contamination": {
+        "name": "Saastuminen",
+        "desc": "Pelkoja bakteereista, sairauksista, liasta tai saastumisesta."
+      },
+      "harm": {
+        "name": "Vahinko",
+        "desc": "Ei-toivotut pelot aiheuttaa tai olla vastuussa vahingosta."
+      },
+      "checking": {
+        "name": "Tarkistus",
+        "desc": "Turvallisuuden, virheiden, ovien, kodinkoneiden tai muiden huolien toistuva tarkistaminen."
+      },
+      "symmetry": {
+        "name": "Symmetria ja \"juuri oikea\"",
+        "desc": "Tunne, että asioiden täytyy olla tasapainossa, tarkasti tai juuri oikeassa."
+      },
+      "taboo": {
+        "name": "Tunkeilevat / Tabu-ajatukset",
+        "desc": "Ei-toivotut ajatukset, jotka liittyvät seksuaalisiin, uskonnollisiin, aggressiivisiin tai muihin tabuaiheisiin."
+      },
+      "responsibility": {
+        "name": "Vastuu ja epäilys",
+        "desc": "Jatkuva epäilys virheistä, vastuusta tai siitä, onko jokin todella varmaa."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "SAATAT TUNNISTAA TÄMÄN",
+    "headline": "OCD voi saada epävarmuuden tuntumaan mahdottomalta jättää rauhaan.",
+    "example_1": {
+      "thought": "\"Lukitinko oven?\"",
+      "action": "Sinä tarkistat. Tunnet helpotusta.",
+      "loop": "Sitten: \"Mutta tarkistinko oikeasti?\""
+    },
+    "example_2": {
+      "thought": "\"Entä jos tein kauhean virheen?\"",
+      "action": "Toistat tapahtuneen.",
+      "loop": "Etsit varmuutta."
+    }
+  },
+  "takeaway": {
+    "quote": "Kaikki saavat ei-toivottuja ajatuksia. \n\nOCD voi saada nuo ajatukset tuntumaan ratkaisulta.",
+    "sub": "Tämän kaavan ymmärtäminen on tärkeä ensimmäinen askel."
+  },
+  "next_step": {
+    "eyebrow": "SEURAAVA MATKALLASI",
+    "headline": "Katsotaanpa nyt, miten OCD-sykli voi toistua.",
+    "btn_explore": "Tutustu OCD-sykliin →"
+  },
+  "completion": {
+    "eyebrow": "Oletko saanut tutkimisen valmiiksi?",
+    "btn_complete": "Merkitse toiminta tehdyksi →",
+    "saving": "Säästäminen...",
+    "completed_badge": "Toiminta suoritettu",
+    "error_save": "Emme voineet tallentaa toimintasi suoritusta juuri nyt. Edistymisesi tallennetaan paikallisesti."
+  }
+}

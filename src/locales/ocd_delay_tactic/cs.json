@@ -1,0 +1,107 @@
+{
+  "header_back": "Zpět",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "60sekundová pauza",
+    "subtitle": "Někdy může nutkání působit jako něco, co musíte jednat hned. Pojďme si procvičit vytvoření malého prostoru, než odpovíte.",
+    "btn_begin": "Začátek"
+  },
+  "step2": {
+    "eyebrow": "SCÉNÁŘ 1",
+    "title": "Zkusme scénář",
+    "subtitle": "Představte si, že jste právě odešli z domu.",
+    "visual_line1": "Zamkneš vchodové dveře a jdeš ke svému autu.",
+    "visual_thought": "\"Zamkl jsem to správně?\"",
+    "visual_line2": "Všimneš si nutnosti otočit se a zkontrolovat.",
+    "btn_continue": "Pokračovat"
+  },
+  "step3": {
+    "eyebrow": "NUTKÁNÍ",
+    "banner": "\"Zkontroluj to ještě jednou.\"",
+    "subtitle": "Všimneš si nutkání otočit se a zkontrolovat.",
+    "question": "Co byste normálně cítili nutkání dělat?",
+    "responses": {
+      "check": "Zkontrolujte to znovu",
+      "ask": "Požádejte někoho o ujištění",
+      "goback": "Vrať se a ujisti se",
+      "wait": "Zastav a počkej"
+    },
+    "btn_next": "Další"
+  },
+  "step4": {
+    "title": "Nemusíš to ještě zvedat.",
+    "subtitle": "Následujících 60 sekund budeme trénovat vytvoření malého prostoru mezi nutkáním a vaší odpovědí.",
+    "cadence_pause": "PAUZA",
+    "cadence_notice": "UPOZORNĚNÍ",
+    "cadence_choose": "VYBERTE",
+    "detail": "Cílem není nechat myšlenku zmizet. Jde o to, všimnout si nutkání, aniž byste na ni okamžitě odpověděli.",
+    "btn_start": "Začáteční 60sekundová pauza"
+  },
+  "step5": {
+    "badge": "TOUHA JE TADY",
+    "prompts": {
+      "0": "Všimněte si nutkání, jak se objevuje.",
+      "1": "Cítíš to přitažlivost, aniž bys na něj odpovídal.",
+      "2": "Zhluboka se nadechněte a pozorujte.",
+      "3": "Touha je teď jen pocit.",
+      "4": "Nemusíte nejistotu řešit hned.",
+      "5": "Všímejte si, kde cítíte napětí v těle.",
+      "6": "Myšlenky přicházejí a odcházejí jako vlnky na vodě.",
+      "7": "Vytváření prostoru mezi myšlenkou a činem.",
+      "8": "Pozoruješ nutkání, ne ho posloucháš.",
+      "9": "Nejistota může být nepříjemná, a to je v pořádku.",
+      "10": "Nechte myšlenku být, aniž byste se do toho zapojovali.",
+      "11": "Všimněte si nutkání opravit nebo zkontrolovat.",
+      "12": "Zůstaňte zvědaví na ten pocit.",
+      "13": "Máte kontrolu nad svou reakcí.",
+      "14": "Nic není třeba řešit hned teď.",
+      "15": "Vytvořili jste prostor na více než 45 sekund.",
+      "16": "Stačí si všimnout nutkání, aniž byste spěchali jednat.",
+      "17": "Téměř tam — odpočívá v pauze.",
+      "18": "Zůstaňte přítomní i s tímto posledním dechem.",
+      "19": "Dokončil jsi pauzu."
+    }
+  },
+  "step6": {
+    "title": "Udělal jsi místo.",
+    "subtitle": "Cílem nebylo touhu odstranit. Šlo o to dát si chvíli, než odpovíte.",
+    "question": "Čeho jste si všimli?",
+    "reflections": {
+      "thought_there": "Ta myšlenka tam stále byla",
+      "felt_urge": "Cítil jsem nutkání odpovědět",
+      "uncomfortable": "Nejistota byla nepříjemná",
+      "could_wait": "Mohl bych počkat, aniž bych hned odpověděl"
+    },
+    "btn_continue": "Pokračovat"
+  },
+  "step7": {
+    "eyebrow": "OCD CYKLUS",
+    "title": "Kam zapadá pauza",
+    "subtitle": "OCD vytváří silný tlak reagovat okamžitě na pochybnosti.",
+    "node_doubt": "Pochybnosti / Vtíravé myšlenky",
+    "node_urge": "Nutkání reagovat",
+    "space_tag": "60sekundová pauza",
+    "space_title": "Tohle je prostor, který jste právě procvičovali.",
+    "node_compulsion": "Kompulzivní reakce",
+    "node_relief": "Dočasná úleva → se vrací pochybnosti",
+    "detail": "Pauza vám dá chvíli, než automaticky následujete ten tah.",
+    "btn_try_another": "Zkuste jiný scénář"
+  },
+  "step8": {
+    "eyebrow": "SCÉNÁŘ 2",
+    "title": "Přesun do praxe",
+    "subtitle": "Představte si, že jste právě poslali důležitou zprávu.",
+    "visual_line1": "Stisknete odesílat a ukončíte konverzaci.",
+    "visual_thought": "\"Řekl jsem něco špatně? Možná bych si to měl přečíst znovu.\"",
+    "visual_line2": "Stejný vzorec: Myšlenka → Nutkání → Pauza → volby.",
+    "btn_practice": "Cvičná pauza (60 s)"
+  },
+  "step9": {
+    "title": "Nutkání není instrukce.",
+    "subtitle": "Nemusíte na každou touhu reagovat hned. Trocha prostoru může vytvořit jiný výchozí bod.",
+    "cadence_pause": "PAUZA",
+    "cadence_notice": "UPOZORNĚNÍ",
+    "cadence_choose": "VYBERTE",
+    "btn_continue": "Pokračovat"
+  }
+}

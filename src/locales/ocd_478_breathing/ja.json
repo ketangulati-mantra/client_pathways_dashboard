@@ -1,0 +1,55 @@
+{
+  "header_back": "戻る",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "呼吸",
+    "subtitle": "呼吸を導くシンプルなリズム。",
+    "rhythm_badge": "4秒息を吸う ·7秒息を止めて8息を吐く",
+    "label_how_long": "どれくらい?",
+    "btn_begin": "開始"
+  },
+  "time_options": {
+    "opt_30s": "30秒",
+    "opt_30s_hint": "2サイクル ·≈ 38秒",
+    "opt_1m": "1分",
+    "opt_1m_hint": "3サイクル ·≈ 1分",
+    "opt_2m": "2分",
+    "opt_2m_hint": "6サイクル ·≈ 2分",
+    "opt_3m": "3分",
+    "opt_3m_hint": "10サイクル ·≈ 3分",
+    "opt_5m": "5分",
+    "opt_5m_hint": "16サイクル ·≈ 5分"
+  },
+  "settling": {
+    "title": "落ち着いて",
+    "subcopy": "少し休んで。"
+  },
+  "phases": {
+    "inhale_title": "息を吸う",
+    "inhale_sub": "ゆっくり息を吸って",
+    "hold_title": "ホールド",
+    "hold_sub": "ここにいて",
+    "exhale_title": "息を吐く",
+    "exhale_sub": "ゆっくり息を吐いて"
+  },
+  "reflection": {
+    "title": "よくやった。",
+    "subtitle": "次に進む前に少し時間を取って。今の自分の気持ちに気づいてください。",
+    "question": "何に気づきましたか?",
+    "choices": {
+      "settled": "より落ち着いた",
+      "present": "より現代的",
+      "same": "それでも"
+    },
+    "btn_continue": "続けてください"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "吸う 4",
+    "step_hold": "ホールド7",
+    "step_exhale": "吐息 8",
+    "subtitle": "静かな時間を取り戻して注意をリセットしたいときはいつでもこの実践に戻ってください。",
+    "btn_continue": "続けてください"
+  }
+}

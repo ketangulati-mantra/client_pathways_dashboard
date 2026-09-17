@@ -1,0 +1,155 @@
+{
+  "header_back": "Quay lại",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Bên trong vòng lặp OCD",
+    "subtitle": "Hãy xem một suy nghĩ có thể biến thành một vòng luẩn quẩn."
+  },
+  "stages": {
+    "step_experience": "01 Kinh nghiệm",
+    "step_recognize": "02 Nhận diện",
+    "step_explore": "03 Khám phá",
+    "step_practice": "04 Thông báo",
+    "step_takeaway": "05 Mang đi"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Ý tưởng",
+      "uncertainty": "Sự không chắc chắn",
+      "response": "Phản hồi",
+      "relief": "Relief"
+    },
+    "cycle_1": {
+      "thought": "\"Nếu tôi không khóa cửa thì sao?\"",
+      "uncertainty": "\"Tôi thật sự khóa cửa à?\"",
+      "response": "\"Kiểm tra lại đi.\"",
+      "relief": "\"Được rồi. Tôi cảm thấy khá hơn.\""
+    },
+    "cycle_2": {
+      "thought": "\"Khoan đã... nhưng tôi đã kiểm tra kỹ chưa?\"",
+      "uncertainty": "\"Tôi cần chắc chắn.\"",
+      "response": "\"Kiểm tra lại lần nữa.\"",
+      "relief": "\"Giảm nhẹ tạm thời...\""
+    },
+    "notice_prompt": "Bạn có để ý không?",
+    "notice_detail": "Sự nhẹ nhõm là thật, nhưng sự nghi ngờ lại quay trở lại.",
+    "action_prompt": "Xem điều gì đã thay đổi →"
+  },
+  "scenarios": {
+    "heading": "Giờ hãy làm cho nó thuộc về bạn.",
+    "subheading": "Chọn một kịch bản dễ nhận biết để xem nó di chuyển qua vòng lặp.",
+    "checking": {
+      "name": "Kiểm tra",
+      "phrase": "\"Nếu tôi không khóa cửa thì sao?\"",
+      "thought": "\"Nếu tôi không khóa cửa thì sao?\"",
+      "uncertainty": "\"Tôi thật sự khóa cửa à?\"",
+      "response": "\"Kiểm tra lại ổ khóa.\"",
+      "relief": "\"Được rồi, tạm thời cảm thấy an toàn.\"",
+      "return": "\"Khoan đã... tôi đã kiểm tra kỹ chưa?\"",
+      "takeaway_quote": "Tôi nhận thấy kiểm tra giúp giảm nhanh chóng, nhưng nghi ngờ lại quay trở lại.",
+      "takeaway_action": "Lần tới khi nghi ngờ xuất hiện, hãy dừng lại và nhận ra thôi thúc trước khi tự động kiểm tra."
+    },
+    "responsibility": {
+      "name": "Trách nhiệm",
+      "phrase": "\"Nếu tôi phạm sai lầm nghiêm trọng thì sao?\"",
+      "thought": "\"Nếu tôi phạm sai lầm nghiêm trọng thì sao?\"",
+      "uncertainty": "\"Tôi phải biết chắc chắn.\"",
+      "response": "\"Tua lại từng chi tiết trong đầu tôi.\"",
+      "relief": "\"Có vẻ ổn trong chốc lát.\"",
+      "return": "\"Nếu tôi bỏ sót một chi tiết thì sao?\"",
+      "takeaway_quote": "Tôi nhận thấy việc hồi tưởng trong đầu cố gắng tạo ra sự chắc chắn, nhưng lại kéo dài sự nghi ngờ.",
+      "takeaway_action": "Lần tới khi cảm giác muốn lặp lại xuất hiện, hãy thừa nhận sự nghi ngờ mà không phân tích nó."
+    },
+    "contamination": {
+      "name": "Sự ô nhiễm",
+      "phrase": "\"Nếu tôi chạm vào thứ gì đó bị nhiễm bẩn thì sao?\"",
+      "thought": "\"Nếu bề mặt đó không sạch thì sao?\"",
+      "uncertainty": "\"Tôi cảm thấy khó chịu và bị nhiễm bẩn.\"",
+      "response": "\"Rửa sạch sẽ nhé.\"",
+      "relief": "\"Hiện tại tôi cảm thấy sạch sẽ.\"",
+      "return": "\"Tôi đã rửa sạch chưa?\"",
+      "takeaway_quote": "Tôi nhận thấy rằng giặt giũ giúp giảm bớt khó chịu ban đầu, nhưng lại tạo ra nghi ngờ tiếp theo.",
+      "takeaway_action": "Lần tới khi cảm giác muốn tắm rửa, hãy cho bản thân một chút thời gian để cảm nhận cảm giác đó trước."
+    },
+    "symmetry": {
+      "name": "vừa vặn",
+      "phrase": "\"Nếu tôi làm không đúng thì sao?\"",
+      "thought": "\"Cảm giác này không cân bằng.\"",
+      "uncertainty": "\"Có thể sẽ có chuyện xấu xảy ra hoặc cảm thấy không ổn.\"",
+      "response": "\"Làm lại cho đến khi bạn hiểu ra.\"",
+      "relief": "\"Cảm giác ổn lúc này.\"",
+      "return": "\"Lần trước tôi làm đúng chứ?\"",
+      "takeaway_quote": "Tôi nhận thấy việc lặp lại một hành động để có cảm giác 'vừa vặn' giúp giữ cho ham muốn vẫn còn mãi.",
+      "takeaway_action": "Lần tới khi có điều gì đó chưa hoàn chỉnh, hãy chú ý đến sự thôi thúc làm lại mà không lặp lại ngay lập tức."
+    },
+    "doubt_return_label": "Nghi ngờ lại quay trở lại:"
+  },
+  "snapshot": {
+    "title": "Ảnh chụp vòng lặp của bạn",
+    "thought_label": "Ý tưởng",
+    "uncertainty_label": "Sự không chắc chắn",
+    "response_label": "Phản hồi",
+    "effect_label": "Ảnh hưởng ngắn hạn",
+    "next_label": "Điều gì xảy ra tiếp theo",
+    "replay_btn": "Kịch bản phát lại"
+  },
+  "response_point": {
+    "heading": "Đây là lúc mô hình trở nên thú vị.",
+    "subheading": "Bạn có thể không kiểm soát được suy nghĩ hay sự bất định. Nhưng bạn có thể nhận ra điều gì xảy ra tiếp theo.",
+    "choice_check": "Kiểm tra lại",
+    "choice_notice": "Hãy chú ý đến sự thôi thúc",
+    "check_result_title": "Phản hồi tự động",
+    "check_result_body": "Việc kiểm tra mang lại sự nhẹ nhõm. Sự nghi ngờ lại trở lại.",
+    "notice_result_title": "Sự tạm dừng",
+    "notice_result_body": "Sự không chắc chắn vẫn có thể khiến bạn cảm thấy khó chịu. Nhận ra sự thôi thúc đó cho bạn một khoảnh khắc trước khi tự động phản ứng.",
+    "try_again": "Muốn xem lại sự khác biệt không?"
+  },
+  "compulsions": {
+    "statement": "Những hành vi cưỡng chế không phải lúc nào cũng là điều bạn làm.",
+    "tab_outward": "ra ngoài",
+    "tab_inward": "hướng vào trong",
+    "outward_items": {
+      "0": "Kiểm tra",
+      "1": "Giặt giũ",
+      "2": "Lặp lại"
+    },
+    "inward_items": {
+      "0": "Phát lại",
+      "1": "Đang xem xét",
+      "2": "đang phân tích",
+      "3": "Tìm kiếm sự chắc chắn"
+    }
+  },
+  "recognition": {
+    "heading": "Bạn có thể nhận thấy mẫu này như...",
+    "pattern_1": {
+      "step1": "Kiểm tra",
+      "step2": "Relief",
+      "step3": "Nghi ngờ"
+    },
+    "pattern_2": {
+      "step1": "Trận đấu lại",
+      "step2": "Sự chắc chắn",
+      "step3": "Nghi ngờ"
+    },
+    "pattern_3": {
+      "step1": "Tránh",
+      "step2": "Relief",
+      "step3": "Nỗi sợ trở lại"
+    }
+  },
+  "takeaway": {
+    "tag": "Điều bạn rút ra",
+    "main_headline": "Suy nghĩ không phải là vòng lặp.",
+    "sub_headline": "Hãy chú ý điều gì xảy ra tiếp theo.",
+    "closing": "Hiểu được mô hình là bước đầu tiên để nhận ra nó trong cuộc sống thực."
+  },
+  "next_step": {
+    "prompt_title": "Sẵn sàng cho những gì tiếp theo chưa?",
+    "prompt_desc": "Đánh dấu hoạt động này là đã hoàn thành để lưu tiến trình và tiếp tục hành trình của bạn.",
+    "btn_complete": "Đánh dấu Hoạt động là Đã hoàn thành",
+    "saving": "Tiết kiệm...",
+    "completed_badge": "Hoạt động đã hoàn thành",
+    "error_save": "Chúng tôi không thể lưu lại việc hoàn thành hoạt động của bạn ngay lúc này. Tiến trình của bạn đã được lưu cục bộ."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "header_back": "뒤로",
+  "brand": "강박만트라",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "호흡",
+    "subtitle": "호흡을 이끄는 단순한 리듬.",
+    "rhythm_badge": "4초 동안 숨 들이마시고 · 7분 참기 · 8분 내쉬기",
+    "label_how_long": "얼마나 오래?",
+    "btn_begin": "시작"
+  },
+  "time_options": {
+    "opt_30s": "30초",
+    "opt_30s_hint": "2 사이클 · ≈ 38초",
+    "opt_1m": "1분",
+    "opt_1m_hint": "3 사이클 · ≈ 1분",
+    "opt_2m": "2분",
+    "opt_2m_hint": "6 사이클 · ≈ 2분",
+    "opt_3m": "3분",
+    "opt_3m_hint": "10 사이클 · ≈ 3분",
+    "opt_5m": "5분",
+    "opt_5m_hint": "16 사이클 · ≈ 5분"
+  },
+  "settling": {
+    "title": "정착해",
+    "subcopy": "잠시 쉬어."
+  },
+  "phases": {
+    "inhale_title": "숨 들이마셔",
+    "inhale_sub": "천천히 숨을 들이마셔",
+    "hold_title": "멈춰",
+    "hold_sub": "여기 있어.",
+    "exhale_title": "숨 내쉬어",
+    "exhale_sub": "천천히 숨을 내쉬어"
+  },
+  "reflection": {
+    "title": "잘했어.",
+    "subtitle": "잠시 시간을 갖고 넘어가세요. 지금 당신이 느끼는 감정을 잘 알아보세요.",
+    "question": "무엇이 눈에 띄나요?",
+    "choices": {
+      "settled": "좀 더 안정된 느낌이었다",
+      "present": "더 많은 현상을 보여준다",
+      "same": "똑같아요"
+    },
+    "btn_continue": "계속"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "숨 들이마시기 4번",
+    "step_hold": "홀드 7",
+    "step_exhale": "내쉬기 8",
+    "subtitle": "조용한 순간을 원할 때마다 이 연습을 다시 시작하세요.",
+    "btn_continue": "계속"
+  }
+}

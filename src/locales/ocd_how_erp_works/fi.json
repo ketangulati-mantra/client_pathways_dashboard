@@ -1,0 +1,113 @@
+{
+  "header_back": "Takaisin",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSYKOKOULUTUS",
+    "title": "MITEN ERP TOIMII",
+    "subtitle": "ERP auttaa OCD-potilaita harjoittelemaan sitä, mikä heidät laukaisee, samalla kun he muuttavat sitä, mitä he tekevät seuraavaksi.",
+    "quote": "\"Et harjoittele pelottomaisuutta. Harjoittelet reagoimaan eri tavalla.\"",
+    "btn_explore": "Tutustu"
+  },
+  "screen2": {
+    "badge": "SKENAARIO 1",
+    "title": "Olet juuri lähtenyt kotoa.",
+    "thought": "\"Lukitinko oven?\"",
+    "urge_tag": "Tunnet halun palata takaisin",
+    "subtitle": "Saapuu tavallinen epäilyn hetki. Katsotaan, mitä tapahtuu, kun halu toteutuu.",
+    "btn_see_happens": "Katso mitä tapahtuu"
+  },
+  "screen3": {
+    "badge": "POLKU A",
+    "title": "Seuraa halua",
+    "btn_check": "Tarkista lukko",
+    "checking_status": "Tarkistan kahvan... Käännän avainta...",
+    "relief_thought": "\"Okei, se on lukossa. Helpotus.\"",
+    "doubt_thought": "\"Hetkinen... lukitsinko sen oikeasti kunnolla?\"",
+    "subtitle": "Helpotus rauhoitti tunteen hetkeksi, mutta epäilys palasi heti sen jälkeen.",
+    "btn_continue": "Jatka"
+  },
+  "screen4": {
+    "badge": "REFLEKTIO",
+    "title": "Mitä shekki antoi sinulle?",
+    "point1": "Helpotus juuri siinä hetkessä.",
+    "point2": "Lisäsyy tarkistaa uudelleen, kun epäilys palaa.",
+    "subtitle": "Tarkistaminen voi vähentää ahdistusta hetkessä, mutta tuo lyhytaikainen helpotus vahvistaa aivojen tarvetta tarkistaa uudelleen.",
+    "btn_rewind": "Kelaa hetki taaksepäin"
+  },
+  "screen5": {
+    "badge": "KELAA TAAKSEPÄIN",
+    "title": "Kokeillaan samaa hetkeä eri tavalla.",
+    "thought": "\"Lukitinko oven?\"",
+    "urge_tag": "Halu ilmestyy: \"Mene takaisin ja tarkista\"",
+    "subtitle": "Tällä kertaa sen sijaan, että seuraisimme automaattisesti halua, tutkimme ERP-lähestymistapaa.",
+    "btn_step1": "Vaihe 1: Altistus"
+  },
+  "screen6": {
+    "badge": "VAIHE 1",
+    "title": "1. Altistus",
+    "subtitle1": "ERP alkaa lähestymällä laukaisinta sen sijaan, että välttelisi sitä tai saa sen katoamaan.",
+    "thought": "\"Epäilys on tässä: lukitsiko oven?\"",
+    "subtitle2": "ERP:ssä altistuminen tarkoittaa, että laukaisijan tai epävarmuuden annetaan olla läsnä ilman, että sitä heti yritetään työntää pois mielestä.",
+    "btn_step2": "Vaihe 2: Vasteen ehkäisy"
+  },
+  "screen7": {
+    "badge": "VAIHE 2",
+    "title": "2. Vasteen ehkäisy",
+    "subtitle1": "Sitten tulee toinen osa: pakonomaisen reaktion vastustaminen tai viivyttäminen.",
+    "thought": "Kehotus: \"Mene takaisin ja tarkista heti.\"",
+    "btn_dont_check": "Älä tarkista nyt",
+    "subtitle2": "Simuloitu harjoitus: Rituaalin suorittamatta jättäminen antaa aivoille mahdollisuuden oppia jotain uutta."
+  },
+  "screen8": {
+    "badge": "VERTAILU",
+    "title": "Kaksi polkua",
+    "col_urge_title": "Seuraa halua",
+    "col_urge_step1": "Trigger",
+    "col_urge_step2": "Tarkista",
+    "col_urge_step3": "Helpotus",
+    "col_urge_step4": "Epäilys palaa",
+    "col_erp_title": "ERP-polku",
+    "col_erp_step1": "Trigger",
+    "col_erp_step2": "Halu",
+    "col_erp_step3": "Vasteen ehkäisy",
+    "col_erp_step4": "Uusi oppiminen",
+    "btn_learning": "Mitä opette?"
+  },
+  "screen9": {
+    "badge": "YDINOIVALLUKSET",
+    "title": "Tarkoitus ei ole tuntea mitään.",
+    "subtitle": "ERP ei tarkoita ahdistuksen katoamista välittömästi. Se opettaa:",
+    "insight1": "\"Voin kokea epävarmuutta ja sietää sitä.\"",
+    "insight2": "\"Voin saada halun ilman, että toimin automaattisesti sen mukaan.\"",
+    "insight3": "\"En tarvitse rituaalia vastatakseni jokaiseen epäilykseen.\"",
+    "btn_scenario2": "Kokeile toista skenaariota"
+  },
+  "screen10": {
+    "badge": "SKENAARIO 2",
+    "title": "Lähetit tärkeän viestin.",
+    "thought": "Ajatus: \"Sanoinko jotain väärin?\"",
+    "urge_tag": "Halu: Lue se uudelleen",
+    "question": "Miltä vasteen ehkäisy näyttäisi?",
+    "opt_read": "Lue viesti uudelleen varmistaaksesi",
+    "opt_ask": "Kysy joltain, kuulostaako se sopivalta",
+    "opt_leave": "Jätä se sellaiseksi toistaiseksi ilman uudelleenlukemista",
+    "feedback_correct": "✓ Se on esimerkki siitä, miten vastustetaan tarkistus- tai vakuutteluvastausta.",
+    "feedback_incorrect": "Se olisi tapa vastata epävarmuuteen. ERP:ssä vasteen ehkäisy tarkoittaa harjoittelua, ettei tarvitse käyttää tarkistus- tai vakuuttelukäyttäytymistä.",
+    "btn_final_model": "Lopullinen malli",
+    "btn_try_again": "Yritä uudestaan"
+  },
+  "screen11": {
+    "badge": "YHTEENVETO",
+    "title": "ERP muuttaa seuraavaa toimintaasi.",
+    "node_trigger": "Trigger",
+    "node_trigger_sub": "Epäilys saapuu",
+    "node_urge": "Halu",
+    "node_urge_sub": "Halu rituaaliin",
+    "node_erp": "Altistuminen + Vasteen ehkäisy",
+    "node_erp_sub": "Vastusta pakko-oireita",
+    "node_learning": "Uusi oppi",
+    "node_learning_sub": "Epävarmuutta voi sietää",
+    "subtitle": "Tavoitteena ei ole poistaa jokaista tunkeilevaa ajatusta tai tunnetta. Tavoitteena on rakentaa niihin erilainen reaktio.",
+    "btn_complete": "Koko toiminta"
+  }
+}

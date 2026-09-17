@@ -1,0 +1,155 @@
+{
+  "header_back": "Zurück",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Innerhalb einer OCD-Schleife",
+    "subtitle": "Sehen Sie, wie ein Gedanke zu einem Kreislauf werden kann."
+  },
+  "stages": {
+    "step_experience": "01-Erfahrung",
+    "step_recognize": "02 Erkennen",
+    "step_explore": "03 Entdecken",
+    "step_practice": "04 Bekanntmachung",
+    "step_takeaway": "05 Zusammenhalt"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Gedanken",
+      "uncertainty": "Unsicherheit",
+      "response": "Reaktion",
+      "relief": "Relief"
+    },
+    "cycle_1": {
+      "thought": "\"Was, wenn ich die Tür nicht abgeschlossen habe?\"",
+      "uncertainty": "\"Habe ich es wirklich abgeschlossen?\"",
+      "response": "\"Schau nochmal nach.\"",
+      "relief": "\"Okay. Ich fühle mich besser.\""
+    },
+    "cycle_2": {
+      "thought": "\"Warte... aber habe ich wirklich richtig nachgesehen?\"",
+      "uncertainty": "\"Ich muss sicher sein.\"",
+      "response": "\"Schau noch einmal nach.\"",
+      "relief": "\"Vorübergehende Erleichterung...\""
+    },
+    "notice_prompt": "Ist es dir aufgefallen?",
+    "notice_detail": "Die Erleichterung war echt, aber der Zweifel kehrte zurück.",
+    "action_prompt": "Sehen Sie, was sich →"
+  },
+  "scenarios": {
+    "heading": "Jetzt mach ihn zu deinem eigenen.",
+    "subheading": "Wähle ein erkennbares Szenario, um zu beobachten, wie es sich durch die Schleife bewegt.",
+    "checking": {
+      "name": "Überprüfen",
+      "phrase": "\"Was, wenn ich die Tür nicht abgeschlossen habe?\"",
+      "thought": "\"Was, wenn ich die Tür nicht abgeschlossen habe?\"",
+      "uncertainty": "\"Habe ich es wirklich abgeschlossen?\"",
+      "response": "\"Überprüfe das Schloss nochmal.\"",
+      "relief": "\"Okay, es fühlt sich vorerst sicher an.\"",
+      "return": "\"Warte... habe ich richtig nachgesehen?\"",
+      "takeaway_quote": "Mir ist aufgefallen, dass das Nachschauen schnell Erleichterung bringt, aber der Zweifel kehrt zurück.",
+      "takeaway_action": "Wenn der Zweifel das nächste Mal auftaucht, halten Sie inne und bemerken Sie den Drang, bevor Sie automatisch nachsehen."
+    },
+    "responsibility": {
+      "name": "Verantwortung",
+      "phrase": "\"Was, wenn ich einen ernsthaften Fehler gemacht habe?\"",
+      "thought": "\"Was, wenn ich einen ernsthaften Fehler gemacht habe?\"",
+      "uncertainty": "\"Ich muss es sicher wissen.\"",
+      "response": "\"Spiel jedes Detail in meinem Kopf noch einmal ab.\"",
+      "relief": "\"Es scheint für einen Moment in Ordnung zu sein.\"",
+      "return": "\"Was, wenn ich ein Detail übersehen habe?\"",
+      "takeaway_quote": "Mir ist aufgefallen, dass mentales Wiederholen versucht, Gewissheit zu schaffen, aber den Zweifel verlängert.",
+      "takeaway_action": "Wenn das nächste Mal der Drang aufkommt, das Spiel zu wiederholen, erkenne den Zweifel an, ohne ihn zu analysieren."
+    },
+    "contamination": {
+      "name": "Kontamination",
+      "phrase": "\"Was, wenn ich etwas Kontaminiertes berühre?\"",
+      "thought": "\"Was, wenn diese Oberfläche nicht sauber war?\"",
+      "uncertainty": "\"Ich fühle mich unwohl und kontaminiert.\"",
+      "response": "\"Wasche gründlich.\"",
+      "relief": "\"Ich fühle mich vorerst sauber.\"",
+      "return": "\"Habe ich mich gut genug gewaschen?\"",
+      "takeaway_quote": "Mir ist aufgefallen, dass Waschen das anfängliche Unbehagen lindert, aber den nächsten Zweifel aufwirft.",
+      "takeaway_action": "Wenn das nächste Mal, wenn der Drang zu waschen aufkommt, gib dir einen Moment, um das Gefühl zuerst zu bemerken."
+    },
+    "symmetry": {
+      "name": "Genau richtig",
+      "phrase": "\"Was, wenn ich das nicht ganz richtig mache?\"",
+      "thought": "\"Das fühlt sich nicht ausgewogen an.\"",
+      "uncertainty": "\"Etwas Schlimmes könnte passieren oder sich falsch anfühlen.\"",
+      "response": "\"Wiederhole es, bis es Klick macht.\"",
+      "relief": "\"Fühlt sich vorerst richtig an.\"",
+      "return": "\"Habe ich es beim letzten Mal richtig gemacht?\"",
+      "takeaway_quote": "Mir ist aufgefallen, dass das Wiederholen einer Handlung für ein 'genau richtiges' Gefühl den Drang am Leben hält.",
+      "takeaway_action": "Wenn sich das nächste Mal etwas unvollständig anfühlt, achte auf den Drang, es zu wiederholen, ohne es sofort zu wiederholen."
+    },
+    "doubt_return_label": "Der Zweifel kehrt zurück:"
+  },
+  "snapshot": {
+    "title": "Dein Loop-Snapshot",
+    "thought_label": "Gedanken",
+    "uncertainty_label": "Unsicherheit",
+    "response_label": "Reaktion",
+    "effect_label": "Kurzfristige Wirkung",
+    "next_label": "Was passiert als Nächstes",
+    "replay_btn": "Wiederholungsszenario"
+  },
+  "response_point": {
+    "heading": "Hier wird das Muster interessant.",
+    "subheading": "Vielleicht kontrollierst du den Gedanken oder die Unsicherheit nicht. Aber du kannst merken, was als Nächstes passiert.",
+    "choice_check": "Überprüfen Sie nochmal",
+    "choice_notice": "Beachte den Drang",
+    "check_result_title": "Die automatische Antwort",
+    "check_result_body": "Das Überprüfen brachte Erleichterung. Der Zweifel kehrte zurück.",
+    "notice_result_title": "Die Pause",
+    "notice_result_body": "Die Unsicherheit kann sich immer noch unangenehm anfühlen. Das Spüren des Drangs gibt dir einen Moment, bevor du automatisch reagierst.",
+    "try_again": "Möchten Sie den Unterschied noch einmal sehen?"
+  },
+  "compulsions": {
+    "statement": "Zwänge sind nicht immer etwas, das man ausübt.",
+    "tab_outward": "Nach außen",
+    "tab_inward": "Nach innen",
+    "outward_items": {
+      "0": "Überprüfen",
+      "1": "Waschen",
+      "2": "Wiederholung"
+    },
+    "inward_items": {
+      "0": "Wiederholung",
+      "1": "Rezension",
+      "2": "Analyse",
+      "3": "Auf der Suche nach Gewissheit"
+    }
+  },
+  "recognition": {
+    "heading": "Vielleicht fällt dir das Muster auf, als...",
+    "pattern_1": {
+      "step1": "Check",
+      "step2": "Relief",
+      "step3": "Zweifel"
+    },
+    "pattern_2": {
+      "step1": "Wiederholung",
+      "step2": "Gewissheit",
+      "step3": "Zweifel"
+    },
+    "pattern_3": {
+      "step1": "Vermeiden Sie",
+      "step2": "Relief",
+      "step3": "Die Angst kehrt zurück"
+    }
+  },
+  "takeaway": {
+    "tag": "Ihre Quintessenz",
+    "main_headline": "Der Gedanke ist nicht die Schleife.",
+    "sub_headline": "Achte darauf, was als Nächstes passiert.",
+    "closing": "Das Verständnis des Musters ist der erste Schritt, um es im echten Leben zu erkennen."
+  },
+  "next_step": {
+    "prompt_title": "Bereit für das, was als Nächstes kommt?",
+    "prompt_desc": "Markiere diese Aktivität als abgeschlossen, um deinen Fortschritt zu speichern und deinen Weg fortzusetzen.",
+    "btn_complete": "Aktivität als erledigt markieren",
+    "saving": "Retten...",
+    "completed_badge": "Abgeschlossene Tätigkeit",
+    "error_save": "Wir konnten deine Aktivitätsabschluss gerade nicht speichern. Dein Fortschritt wird lokal gespeichert."
+  }
+}

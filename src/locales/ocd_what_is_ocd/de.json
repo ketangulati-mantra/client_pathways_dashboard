@@ -1,0 +1,83 @@
+{
+  "header_back": "Zurück",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Was ist OCD?",
+    "subtitle": "Verstehe, was OCD ist, wie sie auftreten kann und warum sie so überzeugend wirken kann."
+  },
+  "video": {
+    "eyebrow": "FANG HIER AN",
+    "title": "Sehen Sie sich diese kurze Einführung in OCD an."
+  },
+  "basics": {
+    "eyebrow": "DIE GRUNDLAGEN",
+    "headline": "OCD ist mehr als unerwünschte Gedanken.",
+    "obsession_title": "OBSESSIONEN",
+    "obsession_desc": "Unerwünschte Gedanken, Bilder, Zweifel oder Impulse, die schwer abzutun sind.",
+    "compulsion_title": "ZWÄNGE",
+    "compulsion_desc": "Handlungen oder mentale Reaktionen, zu denen du dich gezwungen fühlst zu wiederholen, um Unbehagen zu verringern oder dich sicher zu fühlen."
+  },
+  "themes": {
+    "eyebrow": "HÄUFIGE THEMEN",
+    "headline": "OCD kann viele Formen annehmen.",
+    "subtext": "Das sind häufige Themen, keine separaten Diagnosen. Eine Person kann mehr als eine erleben.",
+    "disclaimer": "Dies sind nur einige Beispiele.",
+    "items": {
+      "contamination": {
+        "name": "Kontamination",
+        "desc": "Angst vor Keimen, Krankheiten, Schmutz oder Kontamination."
+      },
+      "harm": {
+        "name": "Harm",
+        "desc": "Unerwünschte Ängste, Schaden zu verursachen oder dafür verantwortlich zu sein."
+      },
+      "checking": {
+        "name": "Überprüfen",
+        "desc": "Überprüfen Sie wiederholt Sicherheit, Fehler, Türen, Geräte oder andere Bedenken."
+      },
+      "symmetry": {
+        "name": "Symmetrie & \"Genau richtig\"",
+        "desc": "Das Gefühl, dass alles ausgewogen, genau oder genau richtig sein muss."
+      },
+      "taboo": {
+        "name": "Aufdringliche / Tabu-Gedanken",
+        "desc": "Unerwünschte Gedanken zu sexuellen, religiösen, aggressiven oder anderen Tabuthemen."
+      },
+      "responsibility": {
+        "name": "Verantwortung und Zweifel",
+        "desc": "Anhaltender Zweifel an Fehlern, Verantwortung oder ob etwas wirklich sicher ist."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "DAS KENNST DU VIELLEICHT WIEDER.",
+    "headline": "OCD kann Unsicherheit unmöglich lassen, allein zu lassen.",
+    "example_1": {
+      "thought": "\"Habe ich die Tür abgeschlossen?\"",
+      "action": "Du überprüfst. Du fühlst dich erleichtert.",
+      "loop": "Dann: \"Aber habe ich wirklich nachgesehen?\""
+    },
+    "example_2": {
+      "thought": "\"Was, wenn ich einen schrecklichen Fehler gemacht habe?\"",
+      "action": "Du spielst das Geschehene noch einmal durch.",
+      "loop": "Du suchst nach Bestätigung."
+    }
+  },
+  "takeaway": {
+    "quote": "Jeder bekommt unerwünschte Gedanken. \n\nOCD kann diese Gedanken so wirken lassen, als müsste man sie lösen.",
+    "sub": "Das Verständnis dieses Musters ist ein wichtiger erster Schritt."
+  },
+  "next_step": {
+    "eyebrow": "ALS NÄCHSTES AUF DEINER REISE",
+    "headline": "Schauen wir uns nun an, wie sich der OCD-Zyklus immer wieder wiederholen kann.",
+    "btn_explore": "Erkunde den OCD-Zyklus →"
+  },
+  "completion": {
+    "eyebrow": "Fertig mit der Erkundung?",
+    "btn_complete": "Aktivität als erledigt markieren →",
+    "saving": "Retten...",
+    "completed_badge": "Abgeschlossene Tätigkeit",
+    "error_save": "Wir konnten deine Aktivitätsabschluss gerade nicht speichern. Dein Fortschritt wird lokal gespeichert."
+  }
+}

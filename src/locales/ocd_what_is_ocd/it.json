@@ -1,0 +1,83 @@
+{
+  "header_back": "Indietro",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Cos'è il DOC?",
+    "subtitle": "Capire cos'è il DOC, come può manifestarsi e perché può sembrare così convincente."
+  },
+  "video": {
+    "eyebrow": "INIZIA QUI",
+    "title": "Guarda questa breve introduzione al DOC."
+  },
+  "basics": {
+    "eyebrow": "LE BASI",
+    "headline": "Il DOC è più di pensieri indesiderati.",
+    "obsession_title": "OSSESSIONI",
+    "obsession_desc": "Pensieri, immagini, dubbi o impulsi indesiderati che possono sembrare difficili da ignorare.",
+    "compulsion_title": "COMPULSIONI",
+    "compulsion_desc": "Azioni o risposte mentali che senti la spinta a ripetere per ridurre il disagio o sentirti certo."
+  },
+  "themes": {
+    "eyebrow": "TEMI COMUNI",
+    "headline": "Il DOC può assumere molte forme.",
+    "subtext": "Questi sono temi comuni, non diagnosi separate. Una persona può sperimentare più di una.",
+    "disclaimer": "Questi sono solo alcuni esempi.",
+    "items": {
+      "contamination": {
+        "name": "Contaminazione",
+        "desc": "Paure riguardo a germi, malattie, sporcizia o contaminazione."
+      },
+      "harm": {
+        "name": "Danno",
+        "desc": "Paure indesiderate di causare o essere responsabili di danni."
+      },
+      "checking": {
+        "name": "Controllo",
+        "desc": "Controllare ripetutamente la sicurezza, errori, porte, elettrodomestici o altre problematiche."
+      },
+      "symmetry": {
+        "name": "Simmetria & \"Proprio Giusti\"",
+        "desc": "Sento che le cose devono essere bilanciate, precise o semplicemente giuste."
+      },
+      "taboo": {
+        "name": "Pensieri intrusivi / tabù",
+        "desc": "Pensieri indesiderati che coinvolgono temi sessuali, religiosi, aggressivi o altri tabù."
+      },
+      "responsibility": {
+        "name": "Responsabilità e dubbio",
+        "desc": "Dubbi persistenti sugli errori, sulla responsabilità o sul fatto che qualcosa sia davvero certo."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "POTRESTI RICONOSCERLO",
+    "headline": "Il DOC può far sembrare impossibile lasciare stare l'incertezza.",
+    "example_1": {
+      "thought": "\"Ho chiuso la porta a chiave?\"",
+      "action": "Controlla. Ti senti sollevato.",
+      "loop": "Poi: \"Ma ho davvero controllato?\""
+    },
+    "example_2": {
+      "thought": "\"E se avessi commesso un errore terribile?\"",
+      "action": "Rivivi quello che è successo.",
+      "loop": "Cerchi rassicurazioni."
+    }
+  },
+  "takeaway": {
+    "quote": "Tutti hanno pensieri indesiderati. \n\nIl DOC può far sembrare quei pensieri qualcosa che devi risolvere.",
+    "sub": "Capire questo schema è un primo passo importante."
+  },
+  "next_step": {
+    "eyebrow": "IL PROSSIMO NEL TUO PERCORSO",
+    "headline": "Ora vediamo come il ciclo del DOC può continuare a ripetersi.",
+    "btn_explore": "Esplora il ciclo del DOC →"
+  },
+  "completion": {
+    "eyebrow": "Hai finito di esplorare?",
+    "btn_complete": "Segna l'attività come fatta →",
+    "saving": "Salvando...",
+    "completed_badge": "Attività completata",
+    "error_save": "Non siamo riusciti a salvare il completamento della tua attività in questo momento. I tuoi progressi sono salvati localmente."
+  }
+}

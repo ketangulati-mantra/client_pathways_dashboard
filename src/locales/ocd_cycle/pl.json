@@ -1,0 +1,155 @@
+{
+  "header_back": "Z powrotem",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "W pętli OCD",
+    "subtitle": "Zobacz, jak myśl może zamienić się w cykl."
+  },
+  "stages": {
+    "step_experience": "01 Doświadczenie",
+    "step_recognize": "02 Rozpoznaj",
+    "step_explore": "03 Eksploruj",
+    "step_practice": "04 Ogłoszenie",
+    "step_takeaway": "05 Na wynos"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Myśl",
+      "uncertainty": "Niepewność",
+      "response": "Odpowiedź",
+      "relief": "Relief"
+    },
+    "cycle_1": {
+      "thought": "\"A co jeśli nie zamknę drzwi?\"",
+      "uncertainty": "\"Naprawdę to zamknąłem?\"",
+      "response": "\"Sprawdź jeszcze raz.\"",
+      "relief": "\"Dobrze. Czuję się lepiej.\""
+    },
+    "cycle_2": {
+      "thought": "\"Czekaj... ale czy naprawdę sprawdziłem dokładnie?\"",
+      "uncertainty": "\"Muszę mieć pewność.\"",
+      "response": "\"Sprawdź jeszcze raz.\"",
+      "relief": "\"Tymczasowa ulga...\""
+    },
+    "notice_prompt": "Zauważyłeś to?",
+    "notice_detail": "Ulga była prawdziwa, ale wątpliwości wróciły.",
+    "action_prompt": "Zobacz, co się zmieniło →"
+  },
+  "scenarios": {
+    "heading": "Teraz zrób to swoim.",
+    "subheading": "Wybierz rozpoznawalny scenariusz, aby obserwować, jak przechodzi przez pętlę.",
+    "checking": {
+      "name": "Sprawdzam",
+      "phrase": "\"A co jeśli nie zamknę drzwi?\"",
+      "thought": "\"A co jeśli nie zamknę drzwi?\"",
+      "uncertainty": "\"Naprawdę to zamknąłem?\"",
+      "response": "\"Sprawdź zamek jeszcze raz.\"",
+      "relief": "\"Dobrze, na razie czuję się bezpiecznie.\"",
+      "return": "\"Czekaj... czy sprawdziłem dokładnie?\"",
+      "takeaway_quote": "Zauważyłem, że sprawdzanie szybko przynosi ulgę, ale wątpliwości wracają.",
+      "takeaway_action": "Następnym razem, gdy pojawi się wątpliwość, zatrzymaj się i zauważ potrzebę, zanim automatycznie sprawdzisz."
+    },
+    "responsibility": {
+      "name": "Odpowiedzialność",
+      "phrase": "\"A co jeśli popełniłem poważny błąd?\"",
+      "thought": "\"A co jeśli popełniłem poważny błąd?\"",
+      "uncertainty": "\"Muszę się upewnić.\"",
+      "response": "\"Odtwarzam w głowie każdy szczegół.\"",
+      "relief": "\"Przez chwilę wydaje się w porządku.\"",
+      "return": "\"A co jeśli przeoczyłem jakiś szczegół?\"",
+      "takeaway_quote": "Zauważyłem, że powtarzanie się w myślach próbuje stworzyć pewność, ale przedłuża wątpliwości.",
+      "takeaway_action": "Następnym razem, gdy pojawi się chęć ponownego odtwarzania, uznaj wątpliwości bez analizowania."
+    },
+    "contamination": {
+      "name": "Zanieczyszczenie",
+      "phrase": "\"A co jeśli dotknę czegoś skażonego?\"",
+      "thought": "\"A co jeśli ta powierzchnia nie była czysta?\"",
+      "uncertainty": "\"Czuję się niekomfortowo i skażony.\"",
+      "response": "\"Dokładnie umyj.\"",
+      "relief": "\"Na razie czuję się czysty.\"",
+      "return": "\"Czy umyłam się wystarczająco dobrze?\"",
+      "takeaway_quote": "Zauważyłem, że mycie łagodzi początkowy dyskomfort, ale buduje kolejne wątpliwości.",
+      "takeaway_action": "Następnym razem, gdy pojawi się potrzeba mycia, daj sobie chwilę, by najpierw to zauważyć."
+    },
+    "symmetry": {
+      "name": "W sam raz",
+      "phrase": "\"A co jeśli nie zrobię tego dokładnie dobrze?\"",
+      "thought": "\"To nie wydaje się zrównoważone.\"",
+      "uncertainty": "\"Może się wydarzyć coś złego albo coś złego się wydarzy.\"",
+      "response": "\"Powtarzaj, aż wszystko zacznie działać.\"",
+      "relief": "\"Na razie tak się czuję.\"",
+      "return": "\"Czy zrobiłem to dobrze ostatnim razem?\"",
+      "takeaway_quote": "Zauważyłem, że powtarzanie czynności dla \"idealnego\" uczucia utrzymuje tę potrzebę.",
+      "takeaway_action": "Następnym razem, gdy coś będzie niekompletne, zauważ chęć powtórzenia bez natychmiastowego powtarzania."
+    },
+    "doubt_return_label": "Wątpliwości powracają:"
+  },
+  "snapshot": {
+    "title": "Twój Snapshot w pętli",
+    "thought_label": "Myśl",
+    "uncertainty_label": "Niepewność",
+    "response_label": "Odpowiedź",
+    "effect_label": "Efekt krótkoterminowy",
+    "next_label": "Co się dzieje dalej",
+    "replay_btn": "Scenariusz powtórki"
+  },
+  "response_point": {
+    "heading": "Tu zaczyna się ciekawszy schemat.",
+    "subheading": "Możesz nie kontrolować myśli ani niepewności. Ale możesz zauważyć, co wydarzy się dalej.",
+    "choice_check": "Sprawdź jeszcze raz",
+    "choice_notice": "Zauważ tę potrzebę",
+    "check_result_title": "Automatyczna odpowiedź",
+    "check_result_body": "To sprawdzanie przyniosło ulgę. Wątpliwości powróciły.",
+    "notice_result_title": "Przerwa",
+    "notice_result_body": "Niepewność może nadal być niekomfortowa. Zauważanie tej potrzeby daje ci chwilę, zanim automatycznie odpowiesz.",
+    "try_again": "Chcesz zobaczyć różnicę jeszcze raz?"
+  },
+  "compulsions": {
+    "statement": "Przymusy nie zawsze są czymś, co się robi.",
+    "tab_outward": "Na zewnątrz",
+    "tab_inward": "Do środka",
+    "outward_items": {
+      "0": "Sprawdzam",
+      "1": "Pranie",
+      "2": "Powtarzanie"
+    },
+    "inward_items": {
+      "0": "Powtórka",
+      "1": "Recenzja",
+      "2": "Analiza",
+      "3": "Poszukiwanie pewności"
+    }
+  },
+  "recognition": {
+    "heading": "Możesz zauważyć wzór jako...",
+    "pattern_1": {
+      "step1": "Sprawdzone",
+      "step2": "Relief",
+      "step3": "Wątpliwość"
+    },
+    "pattern_2": {
+      "step1": "Powtórka",
+      "step2": "Pewność",
+      "step3": "Wątpliwość"
+    },
+    "pattern_3": {
+      "step1": "Unikaj",
+      "step2": "Relief",
+      "step3": "Strach powraca"
+    }
+  },
+  "takeaway": {
+    "tag": "Twoje wnioski",
+    "main_headline": "Myśl nie jest pętlą.",
+    "sub_headline": "Zwróć uwagę, co się dzieje dalej.",
+    "closing": "Zrozumienie wzorca to pierwszy krok do rozpoznania go w prawdziwym życiu."
+  },
+  "next_step": {
+    "prompt_title": "Gotowy na to, co dalej?",
+    "prompt_desc": "Oznacz tę aktywność jako zakończoną, aby zapisać postępy i kontynuować swoją ścieżkę.",
+    "btn_complete": "Oznacz aktywność jako wykonaną",
+    "saving": "Zapisuję...",
+    "completed_badge": "Zakończona działalność",
+    "error_save": "Nie mogliśmy teraz zapisać zakończenia twojej aktywności. Twój postęp jest zapisany lokalnie."
+  }
+}

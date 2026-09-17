@@ -1,0 +1,83 @@
+{
+  "header_back": "Tilbage",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Hvad er OCD?",
+    "subtitle": "Forstå hvad OCD er, hvordan det kan vise sig, og hvorfor det kan føles så overbevisende."
+  },
+  "video": {
+    "eyebrow": "START HER",
+    "title": "Se denne korte introduktion til OCD."
+  },
+  "basics": {
+    "eyebrow": "GRUNDLÆGGENDE",
+    "headline": "OCD er mere end uønskede tanker.",
+    "obsession_title": "BESÆTTELSER",
+    "obsession_desc": "Uønskede tanker, billeder, tvivl eller impulser, som kan føles svære at afvise.",
+    "compulsion_title": "TVANGSHANDLINGER",
+    "compulsion_desc": "Handlinger eller mentale reaktioner, du føler dig drevet til at gentage for at mindske ubehag eller føle dig sikker."
+  },
+  "themes": {
+    "eyebrow": "FÆLLES TEMAER",
+    "headline": "OCD kan antage mange former.",
+    "subtext": "Dette er almindelige temaer, ikke separate diagnoser. Én person kan opleve mere end én.",
+    "disclaimer": "Dette er kun nogle få eksempler.",
+    "items": {
+      "contamination": {
+        "name": "Forurening",
+        "desc": "Frygt for bakterier, sygdom, snavs eller forurening."
+      },
+      "harm": {
+        "name": "Harm",
+        "desc": "Uønskede frygt for at forårsage eller være ansvarlig for skade."
+      },
+      "checking": {
+        "name": "Kontrol",
+        "desc": "Gentagne gange at tjekke sikkerhed, fejl, døre, apparater eller andre bekymringer."
+      },
+      "symmetry": {
+        "name": "Symmetri & \"Lige Rigtigt\"",
+        "desc": "At føle, at tingene skal være balancerede, præcise eller bare rigtige."
+      },
+      "taboo": {
+        "name": "Påtrængende / tabubelagte tanker",
+        "desc": "Uønskede tanker om seksuelle, religiøse, aggressive eller andre tabubelagte temaer."
+      },
+      "responsibility": {
+        "name": "Ansvar og tvivl",
+        "desc": "Vedvarende tvivl om fejl, ansvar eller om noget virkelig er sikkert."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "DU GENKENDER MÅSKE DETTE",
+    "headline": "OCD kan gøre usikkerhed umulig at lade være.",
+    "example_1": {
+      "thought": "\"Låste jeg døren?\"",
+      "action": "Du tjekker. Du føler dig lettet.",
+      "loop": "Så: \"Men tjekkede jeg virkelig?\""
+    },
+    "example_2": {
+      "thought": "\"Hvad nu hvis jeg lavede en frygtelig fejl?\"",
+      "action": "Du genafspiller, hvad der skete.",
+      "loop": "Du søger bekræftelse."
+    }
+  },
+  "takeaway": {
+    "quote": "Alle får uønskede tanker. \n\nOCD kan få de tanker til at føles som noget, du skal løse.",
+    "sub": "At forstå det mønster er et vigtigt første skridt."
+  },
+  "next_step": {
+    "eyebrow": "NÆSTE PÅ DIN REJSE",
+    "headline": "Lad os nu se på, hvordan OCD-cyklussen kan blive ved med at gentage sig.",
+    "btn_explore": "Udforsk OCD-cyklussen →"
+  },
+  "completion": {
+    "eyebrow": "Færdig med at udforske?",
+    "btn_complete": "Markér aktivitet som udført →",
+    "saving": "At redde...",
+    "completed_badge": "Aktivitet afsluttet",
+    "error_save": "Vi kunne ikke gemme din aktivitetsfuldførelse lige nu. Din fremgang gemmes lokalt."
+  }
+}

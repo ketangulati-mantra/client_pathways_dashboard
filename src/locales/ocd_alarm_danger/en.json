@@ -1,0 +1,86 @@
+{
+  "header_back": "Back",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "ACTIVITY 3",
+    "title": "LOOK UP.",
+    "subtitle": "THE ALARM IS NOT THE DANGER.",
+    "detail": "A feeling can be loud without telling you the whole story.",
+    "btn_enter": "ENTER →"
+  },
+  "screen2": {
+    "title_line1": "SOMETIMES,",
+    "title_line2": "UNCERTAINTY IS ENOUGH.",
+    "subtitle": "Tap a phrase to observe how the detector reacts.",
+    "example1": "“What if I made a mistake?”",
+    "example2": "“What if something isn’t clean enough?”",
+    "example3": "“What if I can’t be completely sure?”",
+    "btn_activates": "THE SIGNAL ACTIVATES →"
+  },
+  "screen3": {
+    "ambient_heart": "HEART RACING",
+    "ambient_tension": "TENSION",
+    "ambient_attention": "ATTENTION",
+    "ambient_urge": "URGE",
+    "title": "THAT FEELING CAN BE LOUD.",
+    "subtitle": "The feeling is real. The message it seems to carry isn’t automatically the whole story.",
+    "btn_look_closer": "LOOK CLOSER →"
+  },
+  "screen4": {
+    "tag_left": "[ SIGNAL // SENSITIVITY ]",
+    "tag_right": "[ RESPONSE // INTERPRETATION ]",
+    "title": "LOOK CLOSER.",
+    "subtitle": "Drag anywhere to inspect the detector from any angle.",
+    "detail": "You can notice the signal without immediately rushing to a conclusion.",
+    "btn_continue": "CONTINUE →"
+  },
+  "screen5": {
+    "title": "SIGNAL ≠ VERDICT",
+    "subtitle": "A strong feeling can be real without automatically proving what it seems to say.",
+    "col_feel_title": "WHAT I FEEL",
+    "feel_anxious": "Anxious.",
+    "feel_uncertain": "Uncertain.",
+    "feel_tense": "Tense.",
+    "feel_pulled": "Pulled to check.",
+    "col_conclude_title": "WHAT I CONCLUDE",
+    "conclude_wrong": "“Something must be wrong.”",
+    "conclude_make_sure": "“I need to make sure.”",
+    "conclude_certainty": "“I need certainty.”",
+    "btn_next": "WHAT HAPPENS NEXT? →"
+  },
+  "screen6": {
+    "title": "SOMETIMES A RESPONSE CAN QUIET THE SIGNAL FOR A MOMENT.",
+    "subtitle": "Tap to see how responses interact with the signal.",
+    "item_check_title": "CHECK",
+    "item_check_quote": "“I’ll make sure one more time.”",
+    "item_ask_title": "ASK",
+    "item_ask_quote": "“I’ll ask someone what they think.”",
+    "item_replay_title": "REPLAY",
+    "item_replay_quote": "“I’ll go over it again in my head.”",
+    "item_avoid_title": "AVOID",
+    "item_avoid_quote": "“I’ll stay away from whatever feels uncertain.”",
+    "btn_let_signal": "LET THE SIGNAL BE THERE →"
+  },
+  "screen7": {
+    "title": "LET THE SIGNAL BE THERE.",
+    "subtitle": "Notice what happens when you don't immediately rush to interpret it.",
+    "btn_watch": "WATCH THE SIGNAL",
+    "observing_format": "Observing signal... ({{seconds}}s)",
+    "done_title": "THE SIGNAL CHANGED.",
+    "done_sub": "You didn't have to solve it.",
+    "btn_continue": "CONTINUE →"
+  },
+  "screen8": {
+    "title_line1": "AN ALARM IS A SIGNAL.",
+    "title_line2": "NOT A VERDICT.",
+    "subtitle": "Notice the feeling. Notice the story your mind adds to it.",
+    "question": "NEXT TIME THE ALARM GETS LOUD, WHAT MIGHT YOU NOTICE FIRST?",
+    "opt_feeling": "THE FEELING",
+    "opt_thought": "THE THOUGHT",
+    "opt_urge": "THE URGE TO RESPOND",
+    "feedback": "Keep noticing the difference.",
+    "btn_saving": "SAVING...",
+    "btn_continue": "CONTINUE →"
+  }
+}

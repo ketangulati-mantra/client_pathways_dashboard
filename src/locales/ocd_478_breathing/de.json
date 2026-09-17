@@ -1,0 +1,55 @@
+{
+  "header_back": "Zurück",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "ATMUNG",
+    "subtitle": "Ein einfacher Rhythmus, der deine Atmung lenkt.",
+    "rhythm_badge": "Einatmen für 4 · halten für 7 · Ausatmen für 8 ·",
+    "label_how_long": "WIE LANGE?",
+    "btn_begin": "Beginnen"
+  },
+  "time_options": {
+    "opt_30s": "30 Sekunden",
+    "opt_30s_hint": "2 Zyklen · ≈ 38 Sekunden",
+    "opt_1m": "1 Min.",
+    "opt_1m_hint": "3 Zyklen · ≈ 1 Min",
+    "opt_2m": "2 Minuten",
+    "opt_2m_hint": "6 Zyklen · ≈ 2 Minuten",
+    "opt_3m": "3 Minuten",
+    "opt_3m_hint": "10 Zyklen · ≈ 3 Minuten",
+    "opt_5m": "5 Minuten",
+    "opt_5m_hint": "16 Zyklen · ≈ 5 Minuten"
+  },
+  "settling": {
+    "title": "Mach es dir bequem",
+    "subcopy": "Nimm dir einen Moment."
+  },
+  "phases": {
+    "inhale_title": "Einatmen",
+    "inhale_sub": "Atme langsam ein",
+    "hold_title": "Halt",
+    "hold_sub": "Bleib hier",
+    "exhale_title": "Ausatmen",
+    "exhale_sub": "Atme langsam aus"
+  },
+  "reflection": {
+    "title": "Gut gemacht.",
+    "subtitle": "Nimm dir einen Moment, bevor du weitermachst. Achte darauf, wie du dich gerade fühlst.",
+    "question": "Was fällt dir auf?",
+    "choices": {
+      "settled": "Ruhiger",
+      "present": "Präsenter",
+      "same": "Ganz gleich"
+    },
+    "btn_continue": "Weitermachen"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "EINATMEN 4",
+    "step_hold": "HALT 7",
+    "step_exhale": "AUSATMEN 8",
+    "subtitle": "Kehre zu dieser Praxis zurück, wann immer du einen ruhigen Moment suchst, um deine Aufmerksamkeit neu zu starten.",
+    "btn_continue": "Weitermachen"
+  }
+}

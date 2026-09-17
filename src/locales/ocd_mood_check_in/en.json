@@ -1,0 +1,100 @@
+{
+  "header_back": "Back",
+  "header_history": "History",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "OCD MOOD CHECK-IN",
+    "title": "How are you feeling right now?",
+    "subtitle": "Take a quick snapshot. There’s no right answer.",
+    "levels": {
+      "l1_title": "1 — Very low",
+      "l1_sub": "Feeling heavy, overwhelmed, or depleted",
+      "l2_title": "2 — Low",
+      "l2_sub": "Unsettled, strained, or low energy",
+      "l3_title": "3 — Steady / Neutral",
+      "l3_sub": "Balanced, okay, or taking things as they come",
+      "l4_title": "4 — Good",
+      "l4_sub": "Clear, engaged, or mostly at ease",
+      "l5_title": "5 — Very good",
+      "l5_sub": "Grounded, energized, or peaceful"
+    },
+    "btn_continue": "Continue"
+  },
+  "screen2": {
+    "badge": "STEP 2 OF 4",
+    "title": "How much has OCD been on your mind today?",
+    "subtitle": "Think about the amount of attention, distress, or disruption OCD has taken up today.",
+    "impact_l1": "Not much — Quiet",
+    "impact_l2": "Mild — Manageable",
+    "impact_l3": "Moderate — Noticeable",
+    "impact_l4": "Significant — Disruptive",
+    "impact_l5": "A lot — High presence",
+    "scale_min": "1 = Not much",
+    "scale_max": "5 = A lot",
+    "btn_back": "Back",
+    "btn_continue": "Continue"
+  },
+  "screen3": {
+    "badge": "STEP 3 OF 4",
+    "title": "What stood out today?",
+    "subtitle": "Choose anything that was part of your experience.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Intrusive thoughts / doubts",
+      "CHECKING": "Urge to check or repeat",
+      "MENTAL_REVIEW": "Mental replaying / analyzing",
+      "REASSURANCE": "Seeking certainty / reassurance",
+      "AVOIDANCE": "Avoiding triggers or situations",
+      "HIGH_ANXIETY": "High distress or anxiety",
+      "PAUSED_URGE": "Paused or delayed a ritual",
+      "FOCUSED_WELL": "Engaged with daily tasks",
+      "NONE": "None of these today"
+    },
+    "btn_back": "Back",
+    "btn_continue": "Continue"
+  },
+  "screen4": {
+    "badge": "STEP 4 OF 4",
+    "title": "Anything you want to remember?",
+    "subtitle": "Optional. A few words are enough.",
+    "placeholder": "Write a note...",
+    "btn_back": "Back",
+    "btn_save": "Save check-in",
+    "saving": "Saving..."
+  },
+  "screen5": {
+    "badge": "✓ SAVED",
+    "title": "Today's Moment.",
+    "subtitle": "Your check-in has been recorded to your private timeline.",
+    "impact_label": "OCD impact {{impact}} / 5",
+    "btn_view_moments": "View your moments",
+    "btn_done": "Done"
+  },
+  "history": {
+    "tab_moments": "Moments",
+    "tab_trends": "Trends",
+    "today_title": "Today's Check-in",
+    "no_log_today": "No check-in recorded for today yet.",
+    "btn_check_in_now": "Record today's check-in",
+    "btn_view_past": "View past check-ins ({{count}})",
+    "btn_hide_past": "Hide past check-ins",
+    "past_title": "Past Check-ins",
+    "no_logs_title": "No Check-ins Yet",
+    "no_logs_desc": "Your private logs and emotional timeline will appear here.",
+    "today_tag": "TODAY",
+    "yesterday_tag": "YESTERDAY",
+    "modal_title": "Check-In Detail",
+    "modal_mood_label": "Mood Level",
+    "modal_impact_label": "OCD Impact",
+    "modal_experiences_label": "Experiences",
+    "modal_note_label": "Personal Note",
+    "btn_edit": "Edit Note",
+    "btn_delete": "Delete Entry",
+    "btn_close": "Close",
+    "trends_14d": "14 Days",
+    "trends_30d": "30 Days",
+    "trends_90d": "90 Days",
+    "trends_avg_mood": "Average Mood",
+    "trends_avg_impact": "Average OCD Impact",
+    "trends_total_entries": "Total Entries"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "header_back": "Bumalik",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{kasalukuyan}} / 5",
+  "screen1": {
+    "badge": "AKTIBIDAD 3",
+    "title": "TUMINGIN KA PATAAS.",
+    "subtitle": "ANG ALARMA AY HINDI ANG PANGANIB.",
+    "detail": "Maaaring malakas ang isang damdamin kahit hindi mo isinasasabi ang buong kwento.",
+    "btn_enter": "PUMASOK →"
+  },
+  "screen2": {
+    "title_line1": "MINSAN,",
+    "title_line2": "SAPAT NA ANG KAWALANG-KATIYAKAN.",
+    "subtitle": "Pindutin ang isang parirala upang makita kung paano tumutugon ang detector.",
+    "example1": "\"Paano kung nagkamali ako?\"",
+    "example2": "\"Paano kung may kulang sa linis?\"",
+    "example3": "\"Paano kung hindi ako ganap na sigurado?\"",
+    "btn_activates": "PINAPAGANA NG SIGNAL ANG →"
+  },
+  "screen3": {
+    "ambient_heart": "MABILIS ANG TIBOK NG PUSO",
+    "ambient_tension": "TENSYON",
+    "ambient_attention": "PANSIN",
+    "ambient_urge": "PAGHIKAYAT",
+    "title": "MALAKAS ANG PAKIRAMDAM NA IYON.",
+    "subtitle": "Totoo ang pakiramdam. Ang mensaheng tila dala nito ay hindi awtomatikong buong kwento.",
+    "btn_look_closer": "TINGNAN MO NANG MABUTI →"
+  },
+  "screen4": {
+    "tag_left": "[ SIGNAL // SENSITIVITY ]",
+    "tag_right": "[ TUGON // INTERPRETASYON ]",
+    "title": "TINGNAN MO NANG MABUTI.",
+    "subtitle": "I-drag kahit saan para inspeksyunin ang detector mula sa kahit anong anggulo.",
+    "detail": "Mapapansin mo ang senyales nang hindi agad nagmamadali.",
+    "btn_continue": "MAGPATULOY →"
+  },
+  "screen5": {
+    "title": "SIGNAL ≠ HATOL",
+    "subtitle": "Ang isang malakas na damdamin ay maaaring maging totoo kahit hindi awtomatikong pinapatunayan ang sinasabi nito.",
+    "col_feel_title": "ANG NARARAMDAMAN KO",
+    "feel_anxious": "Nababahala.",
+    "feel_uncertain": "Hindi sigurado.",
+    "feel_tense": "Tensyonado.",
+    "feel_pulled": "Hinila para tingnan.",
+    "col_conclude_title": "ANG AKING KONKLUSYON",
+    "conclude_wrong": "\"May mali siguro.\"",
+    "conclude_make_sure": "\"Kailangan kong siguraduhin.\"",
+    "conclude_certainty": "\"Kailangan ko ng katiyakan.\"",
+    "btn_next": "ANO ANG SUSUNOD NA MANGYAYARI? →"
+  },
+  "screen6": {
+    "title": "MINSAN, ANG TUGON AY NAKAKAPAGPATAHIMIK NG SIGNAL SANDALI.",
+    "subtitle": "I-tap upang makita kung paano nakikipag-ugnayan ang mga tugon sa signal.",
+    "item_check_title": "SURIIN",
+    "item_check_quote": "\"Sisiguraduhin ko pa ulit.\"",
+    "item_ask_title": "MAGTANONG",
+    "item_ask_quote": "\"Tatanungin ko ang isang tao kung ano ang kanilang opinyon.\"",
+    "item_replay_title": "REPLAY",
+    "item_replay_quote": "\"Uulitin ko ito sa isip ko.\"",
+    "item_avoid_title": "IWASAN",
+    "item_avoid_quote": "\"Iiwasan ko ang anumang tila hindi tiyak.\"",
+    "btn_let_signal": "HAYAAN MONG NANDOON ANG SIGNAL →"
+  },
+  "screen7": {
+    "title": "HAYAAN MONG NANDOON ANG SIGNAL.",
+    "subtitle": "Pansinin kung ano ang nangyayari kapag hindi ka agad nagmamadaling bigyang-kahulugan ito.",
+    "btn_watch": "BANTAYAN ANG SIGNAL",
+    "observing_format": "Nagbabantay ng signal... ({{seconds}}s)",
+    "done_title": "NAGBAGO ANG SIGNAL.",
+    "done_sub": "Hindi mo kailangang lutasin ito.",
+    "btn_continue": "MAGPATULOY →"
+  },
+  "screen8": {
+    "title_line1": "ANG ALARM AY ISANG SIGNAL.",
+    "title_line2": "HINDI ITO ISANG HATOL.",
+    "subtitle": "Pansinin ang pakiramdam. Pansinin ang kwento na idinadagdag ng isip mo dito.",
+    "question": "SA SUSUNOD NA TUNOG ANG ALARM, ANO ANG UNANG MAPAPANSIN MO?",
+    "opt_feeling": "ANG PAKIRAMDAM",
+    "opt_thought": "ANG IDEYA",
+    "opt_urge": "ANG PAGNANAIS NA TUMUGON",
+    "feedback": "Patuloy na mapapansin ang pagkakaiba.",
+    "btn_saving": "PAG-SAVE...",
+    "btn_continue": "MAGPATULOY →"
+  }
+}

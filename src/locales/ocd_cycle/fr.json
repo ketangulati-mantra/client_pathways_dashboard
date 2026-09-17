@@ -1,0 +1,155 @@
+{
+  "header_back": "Retour",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Dans une boucle TOC",
+    "subtitle": "Voyez comment une pensée peut devenir un cycle."
+  },
+  "stages": {
+    "step_experience": "01 Expérience",
+    "step_recognize": "02 Reconnaissance",
+    "step_explore": "03 Explorer",
+    "step_practice": "04 Avis",
+    "step_takeaway": "05 Plat à emporter"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Pensée",
+      "uncertainty": "Incertitude",
+      "response": "Réception",
+      "relief": "Relief"
+    },
+    "cycle_1": {
+      "thought": "« Et si je ne verrouillais pas la porte ? »",
+      "uncertainty": "« Est-ce que je l’ai vraiment verrouillé ? »",
+      "response": "« Vérifie encore. »",
+      "relief": "« D’accord. Je me sens mieux. »"
+    },
+    "cycle_2": {
+      "thought": "« Attends... mais est-ce que j’ai vraiment vérifié correctement ? »",
+      "uncertainty": "« Je dois en être certain. »",
+      "response": "« Vérifie encore une fois. »",
+      "relief": "« Un soulagement temporaire... »"
+    },
+    "notice_prompt": "Tu l’as remarqué ?",
+    "notice_detail": "Le soulagement était réel, mais le doute revint.",
+    "action_prompt": "Voyez ce qui a changé →"
+  },
+  "scenarios": {
+    "heading": "Maintenant, fais-le taire.",
+    "subheading": "Sélectionnez un scénario reconnaissable pour le voir se déplacer dans la boucle.",
+    "checking": {
+      "name": "Vérification",
+      "phrase": "« Et si je ne verrouillais pas la porte ? »",
+      "thought": "« Et si je ne verrouillais pas la porte ? »",
+      "uncertainty": "« Est-ce que je l’ai vraiment verrouillé ? »",
+      "response": "« Vérifie encore la serrure. »",
+      "relief": "« D’accord, ça me semble en sécurité pour l’instant. »",
+      "return": "« Attends... est-ce que j’ai bien vérifié ? »",
+      "takeaway_quote": "J’ai remarqué que vérifier apporte un soulagement rapide, mais le doute revient.",
+      "takeaway_action": "La prochaine fois que le doute apparaît, faites une pause et remarquez l’envie avant de vérifier automatiquement."
+    },
+    "responsibility": {
+      "name": "Responsabilité",
+      "phrase": "« Et si je faisais une grave erreur ? »",
+      "thought": "« Et si je faisais une grave erreur ? »",
+      "uncertainty": "« Je dois en être sûr. »",
+      "response": "« Rejoue chaque détail dans ma tête. »",
+      "relief": "« Ça semble aller un instant. »",
+      "return": "« Et si j’avais raté un détail ? »",
+      "takeaway_quote": "J’ai remarqué que rejouer mentalement tente de créer de la certitude, mais prolonge le doute.",
+      "takeaway_action": "La prochaine fois que l’envie de rejouer surgit, reconnaissez le doute sans l’analyser."
+    },
+    "contamination": {
+      "name": "Contamination",
+      "phrase": "« Et si je touchais quelque chose de contaminé ? »",
+      "thought": "« Et si cette surface n’était pas propre ? »",
+      "uncertainty": "« Je me sens mal à l’aise et contaminé. »",
+      "response": "« Lave-toi bien. »",
+      "relief": "« Je me sens propre pour l’instant. »",
+      "return": "« Est-ce que je me suis bien lavé ? »",
+      "takeaway_quote": "J’ai remarqué que le lavage soulage l’inconfort initial, mais crée le doute suivant.",
+      "takeaway_action": "La prochaine fois que l’envie de vous laver vous présente, accordez-vous un moment pour remarquer d’abord ce sentiment."
+    },
+    "symmetry": {
+      "name": "Juste ce qu’il faut",
+      "phrase": "« Et si je ne fais pas ça exactement comme il faut ? »",
+      "thought": "« Ça ne semble pas équilibré. »",
+      "uncertainty": "« Quelque chose de grave pourrait arriver ou sembler anormal. »",
+      "response": "« Refais-le jusqu’à ce que ça fasse tilt. »",
+      "relief": "« Ça me semble juste pour l’instant. »",
+      "return": "« Est-ce que je l’ai bien fait la dernière fois ? »",
+      "takeaway_quote": "J’ai remarqué que répéter une action pour obtenir une sensation « juste ce qu’il faut » garde l’envie vivante.",
+      "takeaway_action": "La prochaine fois que quelque chose vous semble incomplet, remarquez l’envie de recommencer sans recommencer immédiatement."
+    },
+    "doubt_return_label": "Le doute revient :"
+  },
+  "snapshot": {
+    "title": "Votre instantané de boucle",
+    "thought_label": "Pensée",
+    "uncertainty_label": "Incertitude",
+    "response_label": "Réception",
+    "effect_label": "Effet à court terme",
+    "next_label": "Que se passe-t-il ensuite",
+    "replay_btn": "Scénario de reprise"
+  },
+  "response_point": {
+    "heading": "C’est là que le schéma devient intéressant.",
+    "subheading": "Vous ne contrôlez peut-être pas la pensée ou l’incertitude. Mais vous pouvez remarquer ce qui se passe ensuite.",
+    "choice_check": "Vérifie encore",
+    "choice_notice": "Remarquez l’envie",
+    "check_result_title": "La réponse automatique",
+    "check_result_body": "Le contrôle apporta un soulagement. Le doute revint.",
+    "notice_result_title": "La pause",
+    "notice_result_body": "L’incertitude peut quand même être inconfortable. Ressentir l’envie te laisse un moment avant de répondre automatiquement.",
+    "try_again": "Vous voulez revoir la différence ?"
+  },
+  "compulsions": {
+    "statement": "Les compulsions ne sont pas toujours quelque chose que l’on fait.",
+    "tab_outward": "Vers l’extérieur",
+    "tab_inward": "Vers l’intérieur",
+    "outward_items": {
+      "0": "Vérification",
+      "1": "Lavage",
+      "2": "Répétition"
+    },
+    "inward_items": {
+      "0": "Rediffusion",
+      "1": "Critique",
+      "2": "Analyse",
+      "3": "Recherche de certitude"
+    }
+  },
+  "recognition": {
+    "heading": "Vous remarquerez peut-être le schéma comme...",
+    "pattern_1": {
+      "step1": "Vérifié",
+      "step2": "Relief",
+      "step3": "Doute"
+    },
+    "pattern_2": {
+      "step1": "Rejouage",
+      "step2": "Certitude",
+      "step3": "Doute"
+    },
+    "pattern_3": {
+      "step1": "Évitez",
+      "step2": "Relief",
+      "step3": "La peur revient"
+    }
+  },
+  "takeaway": {
+    "tag": "Votre retien",
+    "main_headline": "La pensée n’est pas la boucle.",
+    "sub_headline": "Observez ce qui se passe ensuite.",
+    "closing": "Comprendre le schéma est la première étape pour le reconnaître dans la vie réelle."
+  },
+  "next_step": {
+    "prompt_title": "Prêt pour la suite ?",
+    "prompt_desc": "Marquez cette activité comme terminée pour sauvegarder votre progression et poursuivre votre chemin.",
+    "btn_complete": "Marquez l’activité comme effectuée",
+    "saving": "Sauver...",
+    "completed_badge": "Activité achevée",
+    "error_save": "Nous n’avons pas pu sauvegarder la fin de votre activité pour l’instant. Votre progression est enregistrée localement."
+  }
+}

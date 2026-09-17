@@ -1,0 +1,55 @@
+{
+  "header_back": "Retour",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "RESPIRATION",
+    "subtitle": "Un rythme simple pour guider ta respiration.",
+    "rhythm_badge": "Inspirer pendant 4 · Maintenir pendant 7 · expirer pendant 8",
+    "label_how_long": "COMBIEN DE TEMPS ?",
+    "btn_begin": "Début"
+  },
+  "time_options": {
+    "opt_30s": "30 secondes",
+    "opt_30s_hint": "2 cycles · ≈ 38 secondes",
+    "opt_1m": "1 min",
+    "opt_1m_hint": "3 cycles · ≈ 1 min",
+    "opt_2m": "2 min",
+    "opt_2m_hint": "6 cycles · ≈ 2 min",
+    "opt_3m": "3 min",
+    "opt_3m_hint": "10 cycles · ≈ 3 min",
+    "opt_5m": "5 min",
+    "opt_5m_hint": "16 cycles · ≈ 5 min"
+  },
+  "settling": {
+    "title": "Installez-vous",
+    "subcopy": "Prends un moment."
+  },
+  "phases": {
+    "inhale_title": "Inspire",
+    "inhale_sub": "Inspire lentement",
+    "hold_title": "Tiens",
+    "hold_sub": "Reste ici",
+    "exhale_title": "Expire",
+    "exhale_sub": "Expire lentement"
+  },
+  "reflection": {
+    "title": "Bien joué.",
+    "subtitle": "Prenez un moment avant de passer à autre chose. Remarquez ce que vous ressentez en ce moment.",
+    "question": "Qu’est-ce que tu remarques ?",
+    "choices": {
+      "settled": "Plus installé",
+      "present": "Plus présentes",
+      "same": "Pareil"
+    },
+    "btn_continue": "Continuez"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "INSPIRE 4",
+    "step_hold": "TENIR 7",
+    "step_exhale": "EXPIRE 8",
+    "subtitle": "Revenez à cette pratique chaque fois que vous souhaitez un moment de calme pour réinitialiser votre attention.",
+    "btn_continue": "Continuez"
+  }
+}

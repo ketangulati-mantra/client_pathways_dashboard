@@ -1,0 +1,107 @@
+{
+  "header_back": "Z powrotem",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "60-sekundowa pauza",
+    "subtitle": "Czasem impuls może wydawać się czymś, co trzeba zrobić od razu. Poćwiczmy tworzenie trochę przestrzeni, zanim odpowiesz.",
+    "btn_begin": "Początek"
+  },
+  "step2": {
+    "eyebrow": "SCENARIUSZ 1",
+    "title": "Spróbujmy scenariusza",
+    "subtitle": "Wyobraź sobie, że właśnie wyszedłeś z domu.",
+    "visual_line1": "Zamykasz drzwi wejściowe i idziesz w stronę samochodu.",
+    "visual_thought": "\"Czy dobrze je zamknąłem?\"",
+    "visual_line2": "Zauważasz, że musisz się odwrócić i sprawdzić.",
+    "btn_continue": "Kontynuuj"
+  },
+  "step3": {
+    "eyebrow": "TA POTRZEBA",
+    "banner": "\"Sprawdź jeszcze raz.\"",
+    "subtitle": "Zauważasz chęć, by się odwrócić i sprawdzić.",
+    "question": "Do czego zwykle czułbyś się przyciągany?",
+    "responses": {
+      "check": "Sprawdź jeszcze raz",
+      "ask": "Poproś kogoś o potwierdzenie",
+      "goback": "Wróć i upewnij się",
+      "wait": "Zatrzymaj się i poczekaj"
+    },
+    "btn_next": "Następny"
+  },
+  "step4": {
+    "title": "Nie musisz jeszcze odbierać.",
+    "subtitle": "Przez następne 60 sekund będziemy ćwiczyć robienie odstępu między impulsem a twoją odpowiedzią.",
+    "cadence_pause": "PAUZA",
+    "cadence_notice": "UWAGA",
+    "cadence_choose": "WYBIERZ",
+    "detail": "Celem nie jest sprawić, by myśl zniknęła. Chodzi o zauważenie potrzeby bez natychmiastowej odpowiedzi.",
+    "btn_start": "Rozpocznij 60-sekundową pauzę"
+  },
+  "step5": {
+    "badge": "POTRZEBA JEST TUTAJ",
+    "prompts": {
+      "0": "Zauważaj tę potrzebę, gdy się pojawia.",
+      "1": "Można poczuć przyciąganie, nie odpowiadając na niego.",
+      "2": "Weź delikatny oddech i obserwuj.",
+      "3": "To pragnienie to teraz tylko uczucie.",
+      "4": "Nie musisz od razu rozwiązywać niepewności.",
+      "5": "Zauważ, gdzie czujesz napięcie w ciele.",
+      "6": "Myśli przychodzą i odchodzą jak fale na wodzie.",
+      "7": "Tworzenie przestrzeni między myślą a działaniem.",
+      "8": "Obserwujesz impuls, a nie mu się poddajesz.",
+      "9": "Niepewność może być niekomfortowa i to jest w porządku.",
+      "10": "Pozwól, by myśl była obecna, ale nie angażuj się.",
+      "11": "Zauważ impuls, by naprawić lub sprawdzić.",
+      "12": "Bądź ciekawy tego uczucia.",
+      "13": "To ty kontrolujesz swoją reakcję.",
+      "14": "Nic nie musi być rozstrzygane w tej chwili.",
+      "15": "Stworzyłeś przestrzeń przez ponad 45 sekund.",
+      "16": "Po prostu zauważ tę potrzebę, nie spiesząc się z działaniem.",
+      "17": "Już prawie — odpoczywając w pauzie.",
+      "18": "Pozostań obecny przy tym ostatnim tchu.",
+      "19": "Zakończyłeś pauzę."
+    }
+  },
+  "step6": {
+    "title": "Zrobiłeś miejsce.",
+    "subtitle": "Celem nie było zniknięcie tej potrzeby. Chodziło o to, by dać sobie chwilę przed odpowiedzią.",
+    "question": "Co zauważyłeś?",
+    "reflections": {
+      "thought_there": "Ta myśl wciąż była obecna",
+      "felt_urge": "Poczułem potrzebę odpowiedzi",
+      "uncomfortable": "Niepewność była niekomfortowa",
+      "could_wait": "Mogłem czekać, nie odpowiadając od razu"
+    },
+    "btn_continue": "Kontynuuj"
+  },
+  "step7": {
+    "eyebrow": "CYKL OCD",
+    "title": "Gdzie pasuje pauza",
+    "subtitle": "OCD wywołuje silną potrzebę natychmiastowej reakcji na wątpliwości.",
+    "node_doubt": "Wątpliwość / Natrętne myśli",
+    "node_urge": "Chęć odpowiedzi",
+    "space_tag": "60-SEKUNDOWA PAUZA",
+    "space_title": "To jest przestrzeń, którą właśnie ćwiczyłeś.",
+    "node_compulsion": "Reakcja kompulsywna",
+    "node_relief": "Tymczasowa ulga → powraca wątpliwości",
+    "detail": "Pauza daje ci chwilę, zanim automatycznie podążasz za tym pociągnięciem.",
+    "btn_try_another": "Spróbuj innego scenariusza"
+  },
+  "step8": {
+    "eyebrow": "SCENARIUSZ 2",
+    "title": "Transfer do treningu",
+    "subtitle": "Wyobraź sobie, że właśnie wysłałeś ważną wiadomość.",
+    "visual_line1": "Naciskasz wyślij i zamykasz rozmowę.",
+    "visual_thought": "\"Czy powiedziałem coś nie tak? Może powinienem przeczytać to jeszcze raz.\"",
+    "visual_line2": "Ten sam schemat: myśl → impuls → pauza → wybor.",
+    "btn_practice": "Pauza ćwiczeń (60s)"
+  },
+  "step9": {
+    "title": "Impuls to nie instrukcja.",
+    "subtitle": "Nie musisz od razu odpowiadać na każdą potrzebę. Trochę przestrzeni może stworzyć inny punkt wyjścia.",
+    "cadence_pause": "PAUZA",
+    "cadence_notice": "UWAGA",
+    "cadence_choose": "WYBIERZ",
+    "btn_continue": "Kontynuuj"
+  }
+}

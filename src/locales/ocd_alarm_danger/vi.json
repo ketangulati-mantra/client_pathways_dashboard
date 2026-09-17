@@ -1,0 +1,86 @@
+{
+  "header_back": "Quay lại",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "HOẠT ĐỘNG 3",
+    "title": "NGẨNG LÊN.",
+    "subtitle": "BÁO ĐỘNG KHÔNG PHẢI LÀ NGUY HIỂM.",
+    "detail": "Một cảm xúc có thể lớn tiếng mà không kể cho bạn toàn bộ câu chuyện.",
+    "btn_enter": "XUẤT HIỆN →"
+  },
+  "screen2": {
+    "title_line1": "ĐÔI KHI,",
+    "title_line2": "SỰ KHÔNG CHẮC CHẮN LÀ ĐỦ.",
+    "subtitle": "Nhấn vào một cụm từ để quan sát cách bộ dò phản ứng.",
+    "example1": "\"Nếu tôi mắc sai lầm thì sao?\"",
+    "example2": "\"Nếu có gì đó không đủ sạch thì sao?\"",
+    "example3": "\"Nếu tôi không thể chắc chắn hoàn toàn thì sao?\"",
+    "btn_activates": "TÍN HIỆU KÍCH HOẠT →"
+  },
+  "screen3": {
+    "ambient_heart": "TIM ĐẬP NHANH",
+    "ambient_tension": "CĂNG THẲNG",
+    "ambient_attention": "CHÚ Ý",
+    "ambient_urge": "THÔI THÚC",
+    "title": "CẢM GIÁC ĐÓ CÓ THỂ RẤT LỚN.",
+    "subtitle": "Cảm giác đó là thật. Thông điệp mà nó truyền tải không tự động là toàn bộ câu chuyện.",
+    "btn_look_closer": "NHÌN KỸ →"
+  },
+  "screen4": {
+    "tag_left": "[ TÍN HIỆU // ĐỘ NHẠY ]",
+    "tag_right": "[ PHẢN HỒI // PHIÊN DỊCH ]",
+    "title": "NHÌN KỸ HƠN ĐI.",
+    "subtitle": "Kéo bất cứ đâu để kiểm tra bộ phát hiện từ bất kỳ góc nào.",
+    "detail": "Bạn có thể nhận ra tín hiệu mà không cần vội vàng kết luận.",
+    "btn_continue": "TIẾP TỤC →"
+  },
+  "screen5": {
+    "title": "ĐÁNH GIÁ ≠ TÍN HIỆU",
+    "subtitle": "Một cảm xúc mạnh mẽ có thể là thật mà không cần tự động chứng minh những gì nó dường như muốn nói.",
+    "col_feel_title": "CẢM XÚC CỦA TÔI",
+    "feel_anxious": "Lo lắng.",
+    "feel_uncertain": "Không chắc chắn.",
+    "feel_tense": "Căng thẳng.",
+    "feel_pulled": "Kéo xe để kiểm tra.",
+    "col_conclude_title": "KẾT LUẬN CỦA TÔI",
+    "conclude_wrong": "\"Chắc chắn có chuyện gì đó không ổn.\"",
+    "conclude_make_sure": "\"Tôi cần chắc chắn.\"",
+    "conclude_certainty": "\"Tôi cần sự chắc chắn.\"",
+    "btn_next": "CHUYỆN GÌ SẼ XẢY RA TIẾP THEO? →"
+  },
+  "screen6": {
+    "title": "ĐÔI KHI MỘT PHẢN HỒI CÓ THỂ LÀM TÍN HIỆU IM LẶNG TRONG CHỐC LÁT.",
+    "subtitle": "Nhấn để xem cách các phản hồi tương tác với tín hiệu.",
+    "item_check_title": "KIỂM TRA",
+    "item_check_quote": "\"Tôi sẽ kiểm tra thêm một lần nữa.\"",
+    "item_ask_title": "HỎI",
+    "item_ask_quote": "\"Tôi sẽ hỏi ai đó nghĩ sao.\"",
+    "item_replay_title": "PHÁT LẠI",
+    "item_replay_quote": "\"Tôi sẽ xem lại trong đầu.\"",
+    "item_avoid_title": "TRÁNH",
+    "item_avoid_quote": "\"Tôi sẽ tránh xa bất cứ điều gì cảm thấy không chắc chắn.\"",
+    "btn_let_signal": "HÃY ĐỂ TÍN HIỆU HIỆN DIỆN →"
+  },
+  "screen7": {
+    "title": "HÃY ĐỂ TÍN HIỆU Ở ĐÓ.",
+    "subtitle": "Hãy chú ý điều gì xảy ra khi bạn không vội vàng giải thích ngay lập tức.",
+    "btn_watch": "CHÚ Ý TÍN HIỆU",
+    "observing_format": "Đang quan sát tín hiệu... ({{giây}}s)",
+    "done_title": "TÍN HIỆU ĐÃ THAY ĐỔI.",
+    "done_sub": "Bạn không cần phải giải quyết nó.",
+    "btn_continue": "TIẾP TỤC →"
+  },
+  "screen8": {
+    "title_line1": "BÁO ĐỘNG LÀ MỘT TÍN HIỆU.",
+    "title_line2": "KHÔNG PHẢI LÀ PHÁN QUYẾT.",
+    "subtitle": "Hãy chú ý đến cảm giác đó. Hãy chú ý đến câu chuyện mà tâm trí bạn thêm vào.",
+    "question": "LẦN TỚI KHI CHUÔNG BÁO ĐỘNG QUÁ LỚN, BẠN SẼ NHẬN THẤY ĐIỀU GÌ ĐẦU TIÊN?",
+    "opt_feeling": "CẢM GIÁC",
+    "opt_thought": "SUY NGHĨ",
+    "opt_urge": "KHAO KHÁT PHẢN HỒI",
+    "feedback": "Hãy tiếp tục chú ý đến sự khác biệt.",
+    "btn_saving": "TIẾT KIỆM...",
+    "btn_continue": "TIẾP TỤC →"
+  }
+}

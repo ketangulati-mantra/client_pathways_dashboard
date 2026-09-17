@@ -1,0 +1,155 @@
+{
+  "header_back": "Zpět",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Uvnitř OCD smyčky",
+    "subtitle": "Podívejte se, jak se myšlenka může proměnit v cyklus."
+  },
+  "stages": {
+    "step_experience": "01 Zkušenosti",
+    "step_recognize": "02 Rozpoznat",
+    "step_explore": "03 Explore",
+    "step_practice": "04 Oznámení",
+    "step_takeaway": "05 Snášení"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Myšlenka",
+      "uncertainty": "Nejistota",
+      "response": "Odezva",
+      "relief": "Reliéf"
+    },
+    "cycle_1": {
+      "thought": "\"Co kdybych nezamkl dveře?\"",
+      "uncertainty": "\"Opravdu jsem to zamkl?\"",
+      "response": "\"Zkontroluj to znovu.\"",
+      "relief": "\"Dobře. Cítím se lépe.\""
+    },
+    "cycle_2": {
+      "thought": "\"Počkej... ale opravdu jsem to pořádně zkontroloval?\"",
+      "uncertainty": "\"Potřebuji si být jistý.\"",
+      "response": "\"Zkontrolujte to ještě jednou.\"",
+      "relief": "\"Dočasná úleva...\""
+    },
+    "notice_prompt": "Všiml sis toho?",
+    "notice_detail": "Úleva byla skutečná, ale pochybnosti se vrátily.",
+    "action_prompt": "Podívejte se, co se změnilo →"
+  },
+  "scenarios": {
+    "heading": "Teď si ho udělej svým.",
+    "subheading": "Vyberte rozpoznatelný scénář, abyste ho sledovali, jak se pohybuje smyčkou.",
+    "checking": {
+      "name": "Kontrola",
+      "phrase": "\"Co kdybych nezamkl dveře?\"",
+      "thought": "\"Co kdybych nezamkl dveře?\"",
+      "uncertainty": "\"Opravdu jsem to zamkl?\"",
+      "response": "\"Zkontroluj zámek znovu.\"",
+      "relief": "\"Dobře, teď je to v bezpečí.\"",
+      "return": "\"Počkej... zkontroloval jsem to pořádně?\"",
+      "takeaway_quote": "Všiml jsem si, že kontrola přináší rychlou úlevu, ale pochybnosti se vrací.",
+      "takeaway_action": "Příště, až se objeví pochybnost, zastavte se a všimněte si nutkání, než to automaticky zkontrolujete."
+    },
+    "responsibility": {
+      "name": "Odpovědnost",
+      "phrase": "\"Co když jsem udělal vážnou chybu?\"",
+      "thought": "\"Co když jsem udělal vážnou chybu?\"",
+      "uncertainty": "\"Musím to vědět jistě.\"",
+      "response": "\"Přehrávám si každý detail v hlavě.\"",
+      "relief": "\"Na chvíli to vypadá v pořádku.\"",
+      "return": "\"Co když jsem něco přehlédl?\"",
+      "takeaway_quote": "Všiml jsem si, že mentální přehrávání se snaží vytvořit jistotu, ale prodlužuje pochybnosti.",
+      "takeaway_action": "Až příště přijde touha si to přehrát, přiznej pochybnost, aniž bys ji analyzoval."
+    },
+    "contamination": {
+      "name": "Kontaminace",
+      "phrase": "\"Co kdybych se dotkl něčeho kontaminovaného?\"",
+      "thought": "\"Co když ten povrch nebude čistý?\"",
+      "uncertainty": "\"Cítím se nepříjemně a nakaženě.\"",
+      "response": "\"Důkladně umyj.\"",
+      "relief": "\"Teď se cítím čistý.\"",
+      "return": "\"Umyla jsem se dost dobře?\"",
+      "takeaway_quote": "Všiml jsem si, že mytí zmírňuje počáteční nepohodlí, ale vyvolává další pochybnosti.",
+      "takeaway_action": "Až příště přijde potřeba se umýt, dejte si chvíli na to, abyste si toho pocitu všimli jako první."
+    },
+    "symmetry": {
+      "name": "Přesně tak",
+      "phrase": "\"Co když to neudělám úplně správně?\"",
+      "thought": "\"Tohle nepůsobí vyváženě.\"",
+      "uncertainty": "\"Může se stát něco špatného nebo se něco cítit špatně.\"",
+      "response": "\"Opakuj to, dokud to nesedne.\"",
+      "relief": "\"Teď to tak cítím.\"",
+      "return": "\"Udělala jsem to minule správně?\"",
+      "takeaway_quote": "Všiml jsem si, že opakování akce pro pocit \"přesně tak akorát\" udržuje touhu naživu.",
+      "takeaway_action": "Příště, až se něco bude zdát neúplné, všimněte si nutkání to zopakovat, aniž byste to hned opakovali."
+    },
+    "doubt_return_label": "Pochybnost se vrací:"
+  },
+  "snapshot": {
+    "title": "Tvůj smyčkový snímek",
+    "thought_label": "Myšlenka",
+    "uncertainty_label": "Nejistota",
+    "response_label": "Odezva",
+    "effect_label": "Krátkodobý efekt",
+    "next_label": "Co se stane dál",
+    "replay_btn": "Scénář opakování"
+  },
+  "response_point": {
+    "heading": "Tady začíná být vzorec zajímavý.",
+    "subheading": "Možná nebudeš ovládat myšlenku nebo nejistotu. Ale můžeš si všimnout, co se stane dál.",
+    "choice_check": "Zkontrolujte to znovu",
+    "choice_notice": "Všimněte si té touhy",
+    "check_result_title": "Automatická reakce",
+    "check_result_body": "Kontrola přinesla úlevu. Pochybnosti se vrátily.",
+    "notice_result_title": "Pauza",
+    "notice_result_body": "Nejistota může být stále nepříjemná. Když si toho všímáte, chvíli počkáte, než automaticky zareagujete.",
+    "try_again": "Chcete vidět ten rozdíl znovu?"
+  },
+  "compulsions": {
+    "statement": "Nutkání nejsou vždy něco, co děláš.",
+    "tab_outward": "Ven",
+    "tab_inward": "Vnitřní",
+    "outward_items": {
+      "0": "Kontrola",
+      "1": "Praní",
+      "2": "Opakování"
+    },
+    "inward_items": {
+      "0": "Opakování",
+      "1": "Recenze",
+      "2": "Analýza",
+      "3": "Hledání jistoty"
+    }
+  },
+  "recognition": {
+    "heading": "Možná si toho vzoru všimnete, jako...",
+    "pattern_1": {
+      "step1": "Zkontrolováno",
+      "step2": "Reliéf",
+      "step3": "Pochybnosti"
+    },
+    "pattern_2": {
+      "step1": "Opakovaný záběr",
+      "step2": "Jistota",
+      "step3": "Pochybnosti"
+    },
+    "pattern_3": {
+      "step1": "Vyhněte se",
+      "step2": "Reliéf",
+      "step3": "Strach se vrací"
+    }
+  },
+  "takeaway": {
+    "tag": "Vaše ponaučení",
+    "main_headline": "Myšlenka není smyčka.",
+    "sub_headline": "Všimněte si, co se stane dál.",
+    "closing": "Pochopení vzorce je prvním krokem k jeho rozpoznání v reálném životě."
+  },
+  "next_step": {
+    "prompt_title": "Připraveni na to, co přijde dál?",
+    "prompt_desc": "Označte tuto aktivitu jako dokončenou, abyste si uložili svůj postup a pokračovali ve své cestě.",
+    "btn_complete": "Označte činnost za dokončenou",
+    "saving": "Ukládám...",
+    "completed_badge": "Dokončení činnosti",
+    "error_save": "Teď jsme nemohli uložit dokončení vaší aktivity. Váš postup se ukládá lokálně."
+  }
+}

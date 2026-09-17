@@ -1,0 +1,86 @@
+{
+  "header_back": "戻る",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "活動3",
+    "title": "上を見ろ。",
+    "subtitle": "警報が危険ではない。",
+    "detail": "感情は全てを語らずに大きく響くことがあります。",
+    "btn_enter": "登場→"
+  },
+  "screen2": {
+    "title_line1": "時には、",
+    "title_line2": "不確実性だけで十分だ。",
+    "subtitle": "フレーズをタップして検出器の反応を観察します。",
+    "example1": "「もし間違えたら?」",
+    "example2": "「もし何かが十分にきれいじゃなかったらどうするの?」",
+    "example3": "「もし完全に確信が持てなかったらどうする?」",
+    "btn_activates": "信号が→を作動させます"
+  },
+  "screen3": {
+    "ambient_heart": "心臓がドキドキする",
+    "ambient_tension": "緊張感",
+    "ambient_attention": "注意",
+    "ambient_urge": "衝動",
+    "title": "その感覚は大きなものになり得ます。",
+    "subtitle": "その感覚は本物です。そのメッセージが自動的に全てを物語っているわけではありません。",
+    "btn_look_closer": "よく見てみて→"
+  },
+  "screen4": {
+    "tag_left": "[信号 // 感度]",
+    "tag_right": "[ 応答 // 通訳 ]",
+    "title": "よく見てみろ。",
+    "subtitle": "どこからでもドラッグして、どの角度からでも検出器を点検できます。",
+    "detail": "すぐに結論を急ぐことなく、その信号に気づくことができます。",
+    "btn_continue": "続けて→"
+  },
+  "screen5": {
+    "title": "シグナル≠評決",
+    "subtitle": "強い感情は、自動的に証明することなく、現実的になり得ます。",
+    "col_feel_title": "私の感じていること",
+    "feel_anxious": "不安そうだった。",
+    "feel_uncertain": "不確かだ。",
+    "feel_tense": "緊張感がある。",
+    "feel_pulled": "確認するために引き寄せた。",
+    "col_conclude_title": "私の結論",
+    "conclude_wrong": "「何かがおかしいに違いない。」",
+    "conclude_make_sure": "「確かめたいんだ。」",
+    "conclude_certainty": "「確かなものが必要だ。」",
+    "btn_next": "次に何が起こるのか?→"
+  },
+  "screen6": {
+    "title": "時には応答が信号を一時的に静めることもあります。",
+    "subtitle": "タップすると、応答が信号とどのように相互作用するか確認できます。",
+    "item_check_title": "チェック",
+    "item_check_quote": "「もう一度必ずやるよ。」",
+    "item_ask_title": "聞いてみてください",
+    "item_ask_quote": "「誰かに意見を聞いてみるよ。」",
+    "item_replay_title": "再試合",
+    "item_replay_quote": "「頭の中でもう一度確認するよ。」",
+    "item_avoid_title": "避けてください",
+    "item_avoid_quote": "「不確かなものには近づかないよ。」",
+    "btn_let_signal": "信号をそこにあたらせて→"
+  },
+  "screen7": {
+    "title": "信号はそこにあってほしい。",
+    "subtitle": "すぐに解釈しようと急いでいなければ何が起こるかに気づいてください。",
+    "btn_watch": "信号に注意してください",
+    "observing_format": "観測信号...({{秒}})",
+    "done_title": "信号が変わった。",
+    "done_sub": "解く必要はなかったのに。",
+    "btn_continue": "続けて→"
+  },
+  "screen8": {
+    "title_line1": "アラームは信号です。",
+    "title_line2": "評決じゃない。",
+    "subtitle": "その感覚に気づいてください。あなたの心がそこに加える物語に気づいてください。",
+    "question": "次にアラームが大きく鳴ったとき、まず何に気づくでしょうか?",
+    "opt_feeling": "その感覚",
+    "opt_thought": "その考え",
+    "opt_urge": "返事をしたい衝動",
+    "feedback": "違いに気づき続けてください。",
+    "btn_saving": "救うこと...",
+    "btn_continue": "続けて→"
+  }
+}

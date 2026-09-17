@@ -1,0 +1,86 @@
+{
+  "header_back": "Tilbage",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "AKTIVITET 3",
+    "title": "SE OP.",
+    "subtitle": "ALARMEN ER IKKE FAREN.",
+    "detail": "En følelse kan være høj uden at fortælle dig hele historien.",
+    "btn_enter": "IND KOM →"
+  },
+  "screen2": {
+    "title_line1": "NOGLE GANGE,",
+    "title_line2": "USIKKERHED ER NOK.",
+    "subtitle": "Tryk på en sætning for at se, hvordan detektoren reagerer.",
+    "example1": "\"Hvad nu hvis jeg lavede en fejl?\"",
+    "example2": "\"Hvad hvis noget ikke er rent nok?\"",
+    "example3": "\"Hvad hvis jeg ikke kan være helt sikker?\"",
+    "btn_activates": "SIGNALET AKTIVERER →"
+  },
+  "screen3": {
+    "ambient_heart": "HJERTET BANKER",
+    "ambient_tension": "SPÆNDING",
+    "ambient_attention": "OPMÆRKSOMHED",
+    "ambient_urge": "TRANG",
+    "title": "DEN FØLELSE KAN VÆRE HØJ.",
+    "subtitle": "Følelsen er ægte. Budskabet, den ser ud til at bære, er ikke automatisk hele historien.",
+    "btn_look_closer": "SE NÆRMERE →"
+  },
+  "screen4": {
+    "tag_left": "[ SIGNAL // FØLSOMHED ]",
+    "tag_right": "[ SVAR // FORTOLKNING ]",
+    "title": "SE NÆRMERE.",
+    "subtitle": "Træk hvor som helst for at inspicere detektoren fra enhver vinkel.",
+    "detail": "Du kan se signalet uden straks at forhaste dig til en konklusion.",
+    "btn_continue": "FORTSÆT →"
+  },
+  "screen5": {
+    "title": "SIGNAL ≠ DOM",
+    "subtitle": "En stærk følelse kan være ægte uden automatisk at bevise, hvad den synes at sige.",
+    "col_feel_title": "HVAD JEG FØLER",
+    "feel_anxious": "Ængstelig.",
+    "feel_uncertain": "Usikker.",
+    "feel_tense": "Spændt.",
+    "feel_pulled": "Trukket for at tjekke.",
+    "col_conclude_title": "HVAD JEG KONKLUDERER",
+    "conclude_wrong": "\"Noget må være galt.\"",
+    "conclude_make_sure": "\"Jeg skal lige være sikker.\"",
+    "conclude_certainty": "\"Jeg har brug for sikkerhed.\"",
+    "btn_next": "HVAD SKER DER SÅ? →"
+  },
+  "screen6": {
+    "title": "NOGLE GANGE KAN ET SVAR DÆMPE SIGNALET ET ØJEBLIK.",
+    "subtitle": "Tryk for at se, hvordan svarene interagerer med signalet.",
+    "item_check_title": "TJEK",
+    "item_check_quote": "\"Jeg skal nok sørge én gang til.\"",
+    "item_ask_title": "SPØRG",
+    "item_ask_quote": "\"Jeg spørger nogen, hvad de synes.\"",
+    "item_replay_title": "GENAFSPILNING",
+    "item_replay_quote": "\"Jeg gennemgår det igen i mit hoved.\"",
+    "item_avoid_title": "UNDGÅ",
+    "item_avoid_quote": "\"Jeg holder mig væk fra alt, der føles usikkert.\"",
+    "btn_let_signal": "LAD SIGNALET VÆRE DER →"
+  },
+  "screen7": {
+    "title": "LAD SIGNALET VÆRE DER.",
+    "subtitle": "Læg mærke til, hvad der sker, når du ikke straks skynder dig at fortolke det.",
+    "btn_watch": "HOLD ØJE MED SIGNALET",
+    "observing_format": "Observerer signal... ({{seconds}}s)",
+    "done_title": "SIGNALET ÆNDREDE SIG.",
+    "done_sub": "Du behøvede ikke løse det.",
+    "btn_continue": "FORTSÆT →"
+  },
+  "screen8": {
+    "title_line1": "EN ALARM ER ET SIGNAL.",
+    "title_line2": "IKKE EN DOM.",
+    "subtitle": "Læg mærke til følelsen. Læg mærke til historien, din hjerne tilføjer til den.",
+    "question": "NÆSTE GANG ALARMEN BLIVER HØJ, HVAD LÆGGER DU SÅ MÆRKE TIL FØRST?",
+    "opt_feeling": "FØLELSEN",
+    "opt_thought": "TANKEN",
+    "opt_urge": "TRANGEN TIL AT SVARE",
+    "feedback": "Bliv ved med at lægge mærke til forskellen.",
+    "btn_saving": "REDDER...",
+    "btn_continue": "FORTSÆT →"
+  }
+}

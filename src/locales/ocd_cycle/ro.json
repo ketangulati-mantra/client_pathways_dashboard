@@ -1,0 +1,155 @@
+{
+  "header_back": "Înapoi",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "În interiorul unei bucle OCD",
+    "subtitle": "Vezi cum un gând se poate transforma într-un ciclu."
+  },
+  "stages": {
+    "step_experience": "Experiența 01",
+    "step_recognize": "02 Recunoaște",
+    "step_explore": "03 Explorează",
+    "step_practice": "04 Notificare",
+    "step_takeaway": "05 Takeaway"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Gândire",
+      "uncertainty": "Incertitudine",
+      "response": "Răspuns",
+      "relief": "Relieful"
+    },
+    "cycle_1": {
+      "thought": "\"Ce-ar fi dacă nu aș încui ușa?\"",
+      "uncertainty": "\"Chiar am încuiat-o?\"",
+      "response": "\"Verifică din nou.\"",
+      "relief": "\"Bine. Mă simt mai bine.\""
+    },
+    "cycle_2": {
+      "thought": "\"Stai... dar chiar am verificat cum trebuie?\"",
+      "uncertainty": "\"Trebuie să fiu sigur.\"",
+      "response": "\"Verifică încă o dată.\"",
+      "relief": "\"Ușurare temporară...\""
+    },
+    "notice_prompt": "Ai observat?",
+    "notice_detail": "Ușurarea a fost reală, dar îndoiala a revenit.",
+    "action_prompt": "Vezi ce s-a schimbat →"
+  },
+  "scenarios": {
+    "heading": "Acum fă-o a ta.",
+    "subheading": "Selectează un scenariu recunoscut pentru a-l urmări cum se deplasează prin buclă.",
+    "checking": {
+      "name": "Verificare",
+      "phrase": "\"Ce-ar fi dacă nu aș încui ușa?\"",
+      "thought": "\"Ce-ar fi dacă nu aș încui ușa?\"",
+      "uncertainty": "\"Chiar am încuiat-o?\"",
+      "response": "\"Verifică iarăși lacătul.\"",
+      "relief": "\"Bine, deocamdată se simte în siguranță.\"",
+      "return": "\"Stai... am verificat cum trebuie?\"",
+      "takeaway_quote": "Am observat că verificarea aduce o ușurare rapidă, dar îndoiala revine.",
+      "takeaway_action": "Data viitoare când apare îndoia, opresc și observă impulsul înainte să verifici automat."
+    },
+    "responsibility": {
+      "name": "Responsabilitate",
+      "phrase": "\"Ce-ar fi dacă aș face o greșeală gravă?\"",
+      "thought": "\"Ce-ar fi dacă aș face o greșeală gravă?\"",
+      "uncertainty": "\"Trebuie să știu sigur.\"",
+      "response": "\"Retrăiesc fiecare detaliu în mintea mea.\"",
+      "relief": "\"Pare în regulă pentru o clipă.\"",
+      "return": "\"Dacă am ratat un detaliu?\"",
+      "takeaway_quote": "Am observat că reluarea mentală încearcă să creeze certitudine, dar prelungește îndoia.",
+      "takeaway_action": "Data viitoare când apare impulsul de a relua, recunoaște îndoiala fără să o analizezi."
+    },
+    "contamination": {
+      "name": "Contaminare",
+      "phrase": "\"Dacă aș atinge ceva contaminat?\"",
+      "thought": "\"Dacă acea suprafață nu era curată?\"",
+      "uncertainty": "\"Mă simt inconfortabil și contaminat.\"",
+      "response": "\"Spală-te bine.\"",
+      "relief": "\"Mă simt curat deocamdată.\"",
+      "return": "\"M-am spălat destul de bine?\"",
+      "takeaway_quote": "Am observat că spălatul ameliorează disconfortul inițial, dar creează următoarea îndoială.",
+      "takeaway_action": "Data viitoare când îți apare dorința de a te spăla, acordă-ți un moment să observi mai întâi senzația."
+    },
+    "symmetry": {
+      "name": "Exact cum trebuie",
+      "phrase": "\"Dar dacă nu fac asta exact cum trebuie?\"",
+      "thought": "\"Nu pare echilibrat.\"",
+      "uncertainty": "\"S-ar putea întâmpla ceva rău sau să pară greșit.\"",
+      "response": "\"Refă-o până înțelegi.\"",
+      "relief": "\"Deocamdată se simte bine.\"",
+      "return": "\"Am făcut-o bine data trecută?\"",
+      "takeaway_quote": "Am observat că repetarea unei acțiuni pentru un sentiment \"exact potrivit\" menține impulsul viu.",
+      "takeaway_action": "Data viitoare când ceva pare incomplet, observă dorința de a relua fără să repete imediat."
+    },
+    "doubt_return_label": "Îndoiala revine:"
+  },
+  "snapshot": {
+    "title": "Snapshot-ul tău de buclă",
+    "thought_label": "Gândire",
+    "uncertainty_label": "Incertitudine",
+    "response_label": "Răspuns",
+    "effect_label": "Efect pe termen scurt",
+    "next_label": "Ce se întâmplă mai departe",
+    "replay_btn": "Scenariu de rejucare"
+  },
+  "response_point": {
+    "heading": "Aici tiparul devine interesant.",
+    "subheading": "Poate că nu controlezi gândul sau incertitudinea. Dar poți observa ce se întâmplă mai departe.",
+    "choice_check": "Verifică din nou",
+    "choice_notice": "Observă impulsul",
+    "check_result_title": "Răspunsul automat",
+    "check_result_body": "Verificarea a adus alinare. Îndoiala a revenit.",
+    "notice_result_title": "Pauza",
+    "notice_result_body": "Incertitudinea poate totuși să fie inconfortabilă. Observarea impulsului îți oferă un moment înainte să răspunzi automat.",
+    "try_again": "Vrei să vezi din nou diferența?"
+  },
+  "compulsions": {
+    "statement": "Compulsiile nu sunt întotdeauna ceva ce faci.",
+    "tab_outward": "Spre exterior",
+    "tab_inward": "Spre interior",
+    "outward_items": {
+      "0": "Verificare",
+      "1": "Spălarea",
+      "2": "Repetând"
+    },
+    "inward_items": {
+      "0": "Reluarea",
+      "1": "Recenzie",
+      "2": "Analiză",
+      "3": "Căutarea certitudinii"
+    }
+  },
+  "recognition": {
+    "heading": "Poate ai observat tiparul ca...",
+    "pattern_1": {
+      "step1": "Bifat",
+      "step2": "Relieful",
+      "step3": "Îndoiala"
+    },
+    "pattern_2": {
+      "step1": "Reluare",
+      "step2": "Certitudine",
+      "step3": "Îndoiala"
+    },
+    "pattern_3": {
+      "step1": "Evită",
+      "step2": "Relieful",
+      "step3": "Frica revine"
+    }
+  },
+  "takeaway": {
+    "tag": "Concluzia ta",
+    "main_headline": "Gândul nu e vorba de buclă.",
+    "sub_headline": "Observă ce urmează.",
+    "closing": "Înțelegerea tiparului este primul pas spre a-l recunoaște în viața reală."
+  },
+  "next_step": {
+    "prompt_title": "Ești gata pentru ce urmează?",
+    "prompt_desc": "Marcați această activitate ca finalizată pentru a-ți salva progresul și a-ți continua drumul.",
+    "btn_complete": "Marcați activitatea ca fiind făcută",
+    "saving": "Salvând...",
+    "completed_badge": "Activitate finalizată",
+    "error_save": "Nu am putut salva momentan finalizarea activității. Progresul tău este salvat local."
+  }
+}

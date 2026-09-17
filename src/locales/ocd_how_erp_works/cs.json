@@ -1,0 +1,113 @@
+{
+  "header_back": "Zpět",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSYCHOEDUKACE",
+    "title": "JAK ERP FUNGUJE",
+    "subtitle": "ERP pomáhá lidem s OCD zvládat to, co je spouští, a zároveň měnit to, co dělají dál.",
+    "quote": "\"Netrénuješ být nebojácný. Trénuješ reagovat jinak.\"",
+    "btn_explore": "Prozkoumat"
+  },
+  "screen2": {
+    "badge": "SCÉNÁŘ 1",
+    "title": "Právě jsi odešel z domu.",
+    "thought": "\"Zamkl jsem dveře?\"",
+    "urge_tag": "Cítíš nutkání se vrátit",
+    "subtitle": "Přichází běžný moment pochybnosti. Uvidíme, co se stane, když se touha následuje.",
+    "btn_see_happens": "Uvidíme, co se stane"
+  },
+  "screen3": {
+    "badge": "PATH A",
+    "title": "Následujte touhu",
+    "btn_check": "Zkontrolujte zámek",
+    "checking_status": "Kontroloval kliku... otočil klíčem...",
+    "relief_thought": "\"Dobře, je zamčeno. Úleva.\"",
+    "doubt_thought": "\"Počkej... opravdu jsem to zamkl pořádně?\"",
+    "subtitle": "Úleva na chvíli uklidnila ten pocit, ale hned se vrátila pochybnost.",
+    "btn_continue": "Pokračovat"
+  },
+  "screen4": {
+    "badge": "REFLEXE",
+    "title": "Co vám ten šek dal?",
+    "point1": "Úleva přímo v tu chvíli.",
+    "point2": "Další důvod to zkontrolovat, když se pochybnosti vrátí.",
+    "subtitle": "Kontrola může snížit stres v daném okamžiku, ale tato krátkodobá úleva posiluje touhu mozku znovu kontrolovat.",
+    "btn_rewind": "Vrať se v čase zpět"
+  },
+  "screen5": {
+    "badge": "PŘETOČTE ZPĚT",
+    "title": "Zkusme stejný okamžik jinak.",
+    "thought": "\"Zamkl jsem dveře?\"",
+    "urge_tag": "Objeví se nutkání: \"Vrať se a zkontroluj\"",
+    "subtitle": "Tentokrát místo automatického následování nutkání zkoumáme přístup ERP.",
+    "btn_step1": "Krok 1: Expozice"
+  },
+  "screen6": {
+    "badge": "KROK 1",
+    "title": "1. Expozice",
+    "subtitle1": "ERP začíná tím, že se přiblížíme k spouštěči, místo abychom se mu vyhýbali nebo ho nechali zmizet.",
+    "thought": "\"Pochybnost je tady: Zamkl jsem dveře?\"",
+    "subtitle2": "V ERP znamená expozice nechat spouštěč nebo nejistotu být přítomnou, aniž byste se ji okamžitě snažili vytlačit z mysli.",
+    "btn_step2": "Krok 2: Prevence reakce"
+  },
+  "screen7": {
+    "badge": "KROK 2",
+    "title": "2. Prevence reakce",
+    "subtitle1": "Pak přichází druhá část: odporovat nebo odkládat nutkavou reakci.",
+    "thought": "Nutkání: \"Jdi se hned podívat a zkontroluj.\"",
+    "btn_dont_check": "Teď se nekoukej",
+    "subtitle2": "Simulovaná praxe: Rozhodnutí neprovádět rituál dává mozku šanci naučit se něco nového."
+  },
+  "screen8": {
+    "badge": "SROVNÁNÍ",
+    "title": "Dvě cesty",
+    "col_urge_title": "Následujte touhu",
+    "col_urge_step1": "Trigger",
+    "col_urge_step2": "Zkontrolováno",
+    "col_urge_step3": "Reliéf",
+    "col_urge_step4": "Pochybnosti se vrací",
+    "col_erp_title": "ERP dráha",
+    "col_erp_step1": "Trigger",
+    "col_erp_step2": "Nutkání",
+    "col_erp_step3": "Prevence reakce",
+    "col_erp_step4": "Nové učení",
+    "btn_learning": "Co se učíš?"
+  },
+  "screen9": {
+    "badge": "ZÁKLADNÍ POZNATKY",
+    "title": "Nejde o to, nic necítit.",
+    "subtitle": "ERP není o tom, aby stres okamžitě zmizel. Učí:",
+    "insight1": "\"Mohu zažít nejistotu a snést ji.\"",
+    "insight2": "\"Můžu mít nutkání, aniž bych na něj automaticky reagoval.\"",
+    "insight3": "\"Nepotřebuji rituál, abych reagoval na každou pochybnost.\"",
+    "btn_scenario2": "Zkuste druhý scénář"
+  },
+  "screen10": {
+    "badge": "SCÉNÁŘ 2",
+    "title": "Poslal jsi důležitou zprávu.",
+    "thought": "Myšlenka: \"Řekl jsem něco špatně?\"",
+    "urge_tag": "Nutkání: Přečtěte si to znovu",
+    "question": "Jak by vypadala prevence reakce?",
+    "opt_read": "Přečti si tu zprávu znovu, abys měl jistotu",
+    "opt_ask": "Zeptej se někoho, jestli to zní v pořádku",
+    "opt_leave": "Nechte to zatím tak, jak to je, bez opětovného čtení",
+    "feedback_correct": "✓ To je příklad odporu vůči kontrolě nebo ujištění.",
+    "feedback_incorrect": "To by byl způsob, jak reagovat na nejistotu. V ERP znamená prevence reakce nepoužívat kontrolní nebo ujišťovací chování.",
+    "btn_final_model": "Konečný model",
+    "btn_try_again": "Zkus to znovu"
+  },
+  "screen11": {
+    "badge": "SHRNUTÍ",
+    "title": "ERP mění, co děláte dál.",
+    "node_trigger": "Trigger",
+    "node_trigger_sub": "Přichází pochybnost",
+    "node_urge": "Nutkání",
+    "node_urge_sub": "Touha rituálně",
+    "node_erp": "Expozice + Prevence reakce",
+    "node_erp_sub": "Odolávat nutkání",
+    "node_learning": "Nové učení",
+    "node_learning_sub": "Nejistotu lze tolerovat",
+    "subtitle": "Cílem není odstranit každou vtíravou myšlenku nebo pocit. Jde o to, vytvořit na ně jinou reakci.",
+    "btn_complete": "Kompletní činnost"
+  }
+}

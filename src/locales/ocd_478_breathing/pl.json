@@ -1,0 +1,55 @@
+{
+  "header_back": "Z powrotem",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "ODDYCHANIE",
+    "subtitle": "Prosty rytm, który kieruje twoim oddechem.",
+    "rhythm_badge": "Wdech przez 4 · Wstrzymaj 7 · Wydech przez 8",
+    "label_how_long": "JAK DŁUGO?",
+    "btn_begin": "Początek"
+  },
+  "time_options": {
+    "opt_30s": "30 sekund",
+    "opt_30s_hint": "2 cykle · ≈ 38 sek",
+    "opt_1m": "1 min",
+    "opt_1m_hint": "3 cykle · ≈ 1 min",
+    "opt_2m": "2 min",
+    "opt_2m_hint": "6 cykli · ≈ 2 min",
+    "opt_3m": "3 min",
+    "opt_3m_hint": "10 cykli · ≈ 3 min",
+    "opt_5m": "5 min",
+    "opt_5m_hint": "16 cykli · ≈ 5 min"
+  },
+  "settling": {
+    "title": "Rozgość się",
+    "subcopy": "Poświęć chwilę."
+  },
+  "phases": {
+    "inhale_title": "Wdech",
+    "inhale_sub": "Powoli wdychaj",
+    "hold_title": "Zatrzymaj",
+    "hold_sub": "Zostań tutaj",
+    "exhale_title": "Wydech",
+    "exhale_sub": "Powoli wydech"
+  },
+  "reflection": {
+    "title": "Dobra robota.",
+    "subtitle": "Zatrzymaj się na chwilę, zanim pójdziesz dalej. Zauważ, jak się teraz czujesz.",
+    "question": "Co zauważasz?",
+    "choices": {
+      "settled": "Bardziej osadzony",
+      "present": "Więcej obecnych",
+      "same": "Tak samo"
+    },
+    "btn_continue": "Kontynuuj"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "WDECH 4",
+    "step_hold": "HOLD 7",
+    "step_exhale": "WYDECH 8",
+    "subtitle": "Wracaj do tej praktyki, gdy tylko potrzebujesz chwili ciszy, by zresetować swoją uwagę.",
+    "btn_continue": "Kontynuuj"
+  }
+}

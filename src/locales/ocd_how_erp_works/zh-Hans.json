@@ -1,0 +1,113 @@
+{
+  "header_back": "返回",
+  "brand": "强迫咒语",
+  "screen1": {
+    "badge": "心理教育",
+    "title": "ERP的工作原理",
+    "subtitle": "ERP帮助强迫症患者练习面对触发因素，同时改变下一步行动。",
+    "quote": "“你不是在练习无畏。你是在练习以不同的方式回应。”",
+    "btn_explore": "探索"
+  },
+  "screen2": {
+    "badge": "情景一",
+    "title": "你刚离开家。",
+    "thought": "“我锁门了吗？”",
+    "urge_tag": "你感到想要回去的冲动",
+    "subtitle": "一个常见的怀疑时刻到来。让我们看看当冲动被追随时会发生什么。",
+    "btn_see_happens": "看看会发生什么"
+  },
+  "screen3": {
+    "badge": "路径A",
+    "title": "跟随冲动",
+    "btn_check": "检查锁",
+    "checking_status": "检查把手......转动钥匙......",
+    "relief_thought": "“好了，锁着。松了口气。”",
+    "doubt_thought": "“等等......我真的锁好了吗？”",
+    "subtitle": "松了口气的感觉暂时平复，但怀疑很快又回来了。",
+    "btn_continue": "继续"
+  },
+  "screen4": {
+    "badge": "反思",
+    "title": "支票给了你什么？",
+    "point1": "那种当下的释然。",
+    "point2": "当怀疑再次出现时，更值得再次检查。",
+    "subtitle": "检查可以减轻当下的痛苦，但这种短暂的缓解会强化大脑再次检查的冲动。",
+    "btn_rewind": "倒带这一刻"
+  },
+  "screen5": {
+    "badge": "倒带",
+    "title": "我们换个方式试试同一个时刻。",
+    "thought": "“我锁门了吗？”",
+    "urge_tag": "冲动出现了：“回去看看”",
+    "subtitle": "这一次，我们不再盲目跟随冲动，而是探索ERP方法。",
+    "btn_step1": "第一步：暴露"
+  },
+  "screen6": {
+    "badge": "第一步",
+    "title": "1. 暴露",
+    "subtitle1": "ERP的起点是接近触发点，而不是回避或让它消失。",
+    "thought": "“疑问来了：我锁门了吗？”",
+    "subtitle2": "在ERP中，暴露意味着让触发因素或不确定性存在，但不立即试图将其抛诸脑后。",
+    "btn_step2": "第二步：应对预防"
+  },
+  "screen7": {
+    "badge": "第二步",
+    "title": "2. 响应预防",
+    "subtitle1": "接下来是第二步：抵抗或延迟强迫反应。",
+    "thought": "Urge：“现在就回去检查。”",
+    "btn_dont_check": "现在别查",
+    "subtitle2": "模拟练习：选择不进行仪式给大脑一个学习新事物的机会。"
+  },
+  "screen8": {
+    "badge": "比较",
+    "title": "两条路径",
+    "col_urge_title": "跟随冲动",
+    "col_urge_step1": "触发器",
+    "col_urge_step2": "检查",
+    "col_urge_step3": "地形",
+    "col_urge_step4": "疑虑回归",
+    "col_erp_title": "ERP通路",
+    "col_erp_step1": "触发器",
+    "col_erp_step2": "冲动",
+    "col_erp_step3": "响应预防",
+    "col_erp_step4": "新学问",
+    "btn_learning": "你在学什么？"
+  },
+  "screen9": {
+    "badge": "核心洞见",
+    "title": "重点不是让你什么都感觉不到。",
+    "subtitle": "ERP并不是让痛苦瞬间消失。它教导：",
+    "insight1": "“我可以体验不确定并容忍它。”",
+    "insight2": "“我可以有冲动，却不会自动付诸行动。”",
+    "insight3": "“我不需要仪式来回应每一个疑惑。”",
+    "btn_scenario2": "试试第二种情景"
+  },
+  "screen10": {
+    "badge": "情景二",
+    "title": "你发了重要信息。",
+    "thought": "心想：“我说错什么了吗？”",
+    "urge_tag": "冲动：再读一遍",
+    "question": "反应预防会是什么样的？",
+    "opt_read": "再仔细读一遍信息以确保无误",
+    "opt_ask": "问问别人听起来是否合适",
+    "opt_leave": "暂时保持原样，不要重读",
+    "feedback_correct": "✓ 这就是抵抗检查或安慰反应的一个例子。",
+    "feedback_incorrect": "这将是一种应对不确定性的做法。在ERP中，反应预防意味着练习不使用检查或安慰行为。",
+    "btn_final_model": "最终型号",
+    "btn_try_again": "再试一次"
+  },
+  "screen11": {
+    "badge": "摘要",
+    "title": "ERP改变了你接下来的行动。",
+    "node_trigger": "触发器",
+    "node_trigger_sub": "怀疑降临",
+    "node_urge": "冲动",
+    "node_urge_sub": "想要仪式化的欲望",
+    "node_erp": "暴露+反应预防",
+    "node_erp_sub": "抵抗强迫",
+    "node_learning": "新学派",
+    "node_learning_sub": "不确定性是可以容忍的",
+    "subtitle": "目标不是消除所有侵入性想法或感受。而是建立一种不同的回应。",
+    "btn_complete": "完整活动"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "header_back": "Kembali",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Di Dalam Lingkaran OCD",
+    "subtitle": "Lihat bagaimana sebuah pikiran bisa berubah menjadi siklus."
+  },
+  "stages": {
+    "step_experience": "01 Pengalaman",
+    "step_recognize": "02 Kenali",
+    "step_explore": "03 Jelajahi",
+    "step_practice": "04 Pemberitahuan",
+    "step_takeaway": "05 Kesimpulan"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Pikiran",
+      "uncertainty": "ketidakpastian",
+      "response": "Tanggapan",
+      "relief": "Relief"
+    },
+    "cycle_1": {
+      "thought": "\"Bagaimana kalau aku tidak mengunci pintunya?\"",
+      "uncertainty": "\"Apa aku benar-benar menguncinya?\"",
+      "response": "\"Cek lagi.\"",
+      "relief": "\"Oke. Aku merasa lebih baik.\""
+    },
+    "cycle_2": {
+      "thought": "\"Tunggu... tapi apa aku benar-benar sudah periksa?\"",
+      "uncertainty": "\"Aku harus yakin.\"",
+      "response": "\"Periksa sekali lagi.\"",
+      "relief": "\"Kelegaan sementara...\""
+    },
+    "notice_prompt": "Apakah kamu menyadarinya?",
+    "notice_detail": "Kelegaan itu nyata, tapi keraguan itu kembali.",
+    "action_prompt": "Lihat apa yang mengubah →"
+  },
+  "scenarios": {
+    "heading": "Sekarang jadikan itu milikmu.",
+    "subheading": "Pilih skenario yang mudah dikenali untuk melihatnya bergerak melalui lingkaran tersebut.",
+    "checking": {
+      "name": "Memeriksa",
+      "phrase": "\"Bagaimana kalau aku tidak mengunci pintunya?\"",
+      "thought": "\"Bagaimana kalau aku tidak mengunci pintunya?\"",
+      "uncertainty": "\"Apa aku benar-benar menguncinya?\"",
+      "response": "\"Periksa kuncinya lagi.\"",
+      "relief": "\"Oke, untuk sekarang terasa aman.\"",
+      "return": "\"Tunggu... apakah aku sudah memeriksa dengan benar?\"",
+      "takeaway_quote": "Saya perhatikan memeriksa membawa kelegaan cepat, tapi keraguan itu kembali.",
+      "takeaway_action": "Lain kali keraguan muncul, berhenti sejenak dan perhatikan dorongan itu sebelum memeriksa secara otomatis."
+    },
+    "responsibility": {
+      "name": "Tanggung Jawab",
+      "phrase": "\"Bagaimana jika aku membuat kesalahan serius?\"",
+      "thought": "\"Bagaimana jika aku membuat kesalahan serius?\"",
+      "uncertainty": "\"Aku harus tahu pasti.\"",
+      "response": "\"Putar ulang setiap detail di kepalaku.\"",
+      "relief": "\"Sepertinya baik-baik saja untuk sesaat.\"",
+      "return": "\"Bagaimana kalau aku melewatkan satu detail?\"",
+      "takeaway_quote": "Saya perhatikan bahwa pemutaran ulang secara mental mencoba menciptakan kepastian, tapi memperpanjang keraguan.",
+      "takeaway_action": "Lain kali dorongan untuk mengulang muncul, akui keraguan itu tanpa menganalisisnya."
+    },
+    "contamination": {
+      "name": "Kontaminasi",
+      "phrase": "\"Bagaimana kalau aku menyentuh sesuatu yang terkontaminasi?\"",
+      "thought": "\"Bagaimana kalau permukaan itu tidak bersih?\"",
+      "uncertainty": "\"Aku merasa tidak nyaman dan terkontaminasi.\"",
+      "response": "\"Cuci dengan bersih.\"",
+      "relief": "\"Aku merasa bersih untuk sekarang.\"",
+      "return": "\"Apakah aku sudah cukup mandi?\"",
+      "takeaway_quote": "Saya perhatikan mencuci obat meredakan ketidaknyamanan awal, tapi menimbulkan keraguan berikutnya.",
+      "takeaway_action": "Lain kali dorongan untuk mencuci tangan, beri dirimu waktu sejenak untuk merasakan perasaan itu terlebih dahulu."
+    },
+    "symmetry": {
+      "name": "tepat sekali",
+      "phrase": "\"Bagaimana kalau aku tidak melakukan ini dengan benar?\"",
+      "thought": "\"Ini terasa tidak seimbang.\"",
+      "uncertainty": "\"Sesuatu yang buruk mungkin terjadi atau terasa salah.\"",
+      "response": "\"Ulangi sampai kamu paham.\"",
+      "relief": "\"Rasanya pas untuk sekarang.\"",
+      "return": "\"Apakah aku melakukannya dengan benar terakhir kali?\"",
+      "takeaway_quote": "Saya menyadari bahwa mengulangi suatu tindakan untuk mendapatkan perasaan 'pas' menjaga dorongan tetap hidup.",
+      "takeaway_action": "Lain kali jika sesuatu terasa tidak lengkap, perhatikan dorongan untuk mengulang tanpa langsung mengulang."
+    },
+    "doubt_return_label": "Keraguan itu kembali:"
+  },
+  "snapshot": {
+    "title": "Snapshot Loop Anda",
+    "thought_label": "Pikiran",
+    "uncertainty_label": "ketidakpastian",
+    "response_label": "Tanggapan",
+    "effect_label": "Efek jangka pendek",
+    "next_label": "Apa yang terjadi selanjutnya",
+    "replay_btn": "Skenario Putar Ulang"
+  },
+  "response_point": {
+    "heading": "Di sinilah pola ini menjadi menarik.",
+    "subheading": "Anda mungkin tidak mengendalikan pikiran atau ketidakpastian. Tapi Anda bisa memperhatikan apa yang terjadi selanjutnya.",
+    "choice_check": "Periksa lagi",
+    "choice_notice": "Perhatikan dorongan itu",
+    "check_result_title": "Respons otomatis",
+    "check_result_body": "Pemeriksaan itu membawa kelegaan. Keraguan itu kembali.",
+    "notice_result_title": "Jeda",
+    "notice_result_body": "Ketidakpastian itu mungkin masih terasa tidak nyaman. Menyadari dorongan itu memberimu waktu sebelum otomatis merespons.",
+    "try_again": "Ingin melihat perbedaannya lagi?"
+  },
+  "compulsions": {
+    "statement": "Kompulsi tidak selalu sesuatu yang kamu lakukan.",
+    "tab_outward": "Ke luar",
+    "tab_inward": "ke dalam",
+    "outward_items": {
+      "0": "Memeriksa",
+      "1": "Mencuci",
+      "2": "mengulangi"
+    },
+    "inward_items": {
+      "0": "Pemutaran Ulang",
+      "1": "Ulasan",
+      "2": "Menganalisis",
+      "3": "Mencari kepastian"
+    }
+  },
+  "recognition": {
+    "heading": "Anda mungkin akan melihat polanya sebagai...",
+    "pattern_1": {
+      "step1": "Cek",
+      "step2": "Relief",
+      "step3": "Keraguan"
+    },
+    "pattern_2": {
+      "step1": "Tayangan Ulang",
+      "step2": "Kepastian",
+      "step3": "Keraguan"
+    },
+    "pattern_3": {
+      "step1": "Hindari",
+      "step2": "Relief",
+      "step3": "Ketakutan kembali"
+    }
+  },
+  "takeaway": {
+    "tag": "Kesimpulan Anda",
+    "main_headline": "Pikirannya bukan lingkaran itu.",
+    "sub_headline": "Perhatikan apa yang terjadi selanjutnya.",
+    "closing": "Memahami pola ini adalah langkah pertama untuk mengenalinya dalam kehidupan nyata."
+  },
+  "next_step": {
+    "prompt_title": "Siap untuk apa yang akan datang?",
+    "prompt_desc": "Tandai aktivitas ini sebagai selesai untuk menyimpan kemajuan Anda dan melanjutkan jalur Anda.",
+    "btn_complete": "Tandai Aktivitas sebagai Selesai",
+    "saving": "Menyimpan...",
+    "completed_badge": "Aktivitas Selesai",
+    "error_save": "Kami tidak dapat menyimpan penyelesaian aktivitas Anda saat ini. Kemajuan Anda disimpan secara lokal."
+  }
+}

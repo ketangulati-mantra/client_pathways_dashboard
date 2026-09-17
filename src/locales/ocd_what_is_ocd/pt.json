@@ -1,0 +1,83 @@
+{
+  "header_back": "Voltar",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "O que é TOC?",
+    "subtitle": "Entenda o que é TOC, como ele pode aparecer e por que pode parecer tão convincente."
+  },
+  "video": {
+    "eyebrow": "COMECE AQUI",
+    "title": "Assista a esta breve introdução ao TOC."
+  },
+  "basics": {
+    "eyebrow": "O BÁSICO",
+    "headline": "TOC é mais do que pensamentos indesejados.",
+    "obsession_title": "OBSESSÕES",
+    "obsession_desc": "Pensamentos, imagens, dúvidas ou impulsos indesejados que podem parecer difíceis de ignorar.",
+    "compulsion_title": "COMPULSÕES",
+    "compulsion_desc": "Ações ou respostas mentais que você sente vontade de repetir para reduzir o desconforto ou se sentir certo."
+  },
+  "themes": {
+    "eyebrow": "TEMAS COMUNS",
+    "headline": "O TOC pode assumir muitas formas.",
+    "subtext": "Esses são temas comuns, não diagnósticos separados. Uma pessoa pode passar por mais de um.",
+    "disclaimer": "Estes são apenas alguns exemplos.",
+    "items": {
+      "contamination": {
+        "name": "Contaminação",
+        "desc": "Medos sobre germes, doenças, sujeira ou contaminação."
+      },
+      "harm": {
+        "name": "Harm",
+        "desc": "Medos indesejados de causar ou ser responsável por danos."
+      },
+      "checking": {
+        "name": "Verificação",
+        "desc": "Checar repetidamente a segurança, erros, portas, eletrodomésticos ou outras preocupações."
+      },
+      "symmetry": {
+        "name": "Simetria & \"Exatamente Certo\"",
+        "desc": "Sentindo que as coisas precisam estar equilibradas, exatas ou simplesmente certas."
+      },
+      "taboo": {
+        "name": "Pensamentos intrusivos / tabu",
+        "desc": "Pensamentos indesejados envolvendo temas sexuais, religiosos, agressivos ou outros tabus."
+      },
+      "responsibility": {
+        "name": "Responsabilidade e Dúvida",
+        "desc": "Dúvida persistente sobre erros, responsabilidade ou se algo é realmente certo."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "VOCÊ TALVEZ RECONHEÇA ISSO",
+    "headline": "O TOC pode fazer com que a incerteza pareça impossível de deixar em paz.",
+    "example_1": {
+      "thought": "\"Eu tranquei a porta?\"",
+      "action": "Você confere. Você se sente aliviado.",
+      "loop": "Então: \"Mas eu realmente conferi?\""
+    },
+    "example_2": {
+      "thought": "\"E se eu cometi um erro terrível?\"",
+      "action": "Você revive o que aconteceu.",
+      "loop": "Você busca garantia."
+    }
+  },
+  "takeaway": {
+    "quote": "Todo mundo tem pensamentos indesejados. \n\nTOC pode fazer esses pensamentos parecerem algo que você precisa resolver.",
+    "sub": "Compreender esse padrão é um passo inicial importante."
+  },
+  "next_step": {
+    "eyebrow": "PRÓXIMO NA SUA JORNADA",
+    "headline": "Agora vamos ver como o ciclo do TOC pode continuar se repetindo.",
+    "btn_explore": "Explore o ciclo do TOC →"
+  },
+  "completion": {
+    "eyebrow": "Terminou de explorar?",
+    "btn_complete": "Marque a atividade como realizada →",
+    "saving": "Salvando...",
+    "completed_badge": "Atividades concluídas",
+    "error_save": "Não conseguimos salvar sua atividade completada agora. Seu progresso está salvo localmente."
+  }
+}

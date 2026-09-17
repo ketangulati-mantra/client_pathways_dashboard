@@ -1,0 +1,55 @@
+{
+  "header_back": "Tillbaka",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "ANDNING",
+    "subtitle": "En enkel rytm för att styra din andning.",
+    "rhythm_badge": "Andas in i 4 · håll i 7 · andas ut i 8",
+    "label_how_long": "HUR LÄNGE?",
+    "btn_begin": "Börja"
+  },
+  "time_options": {
+    "opt_30s": "30 sek",
+    "opt_30s_hint": "2 cykler · ≈ 38 sek",
+    "opt_1m": "1 min",
+    "opt_1m_hint": "3 cykler · ≈ 1 min",
+    "opt_2m": "2 min",
+    "opt_2m_hint": "6 cykler · ≈ 2 min",
+    "opt_3m": "3 min",
+    "opt_3m_hint": "10 cykler · ≈ 3 min",
+    "opt_5m": "5 min",
+    "opt_5m_hint": "16 cykler · ≈ 5 min"
+  },
+  "settling": {
+    "title": "Gör dig hemmastadd",
+    "subcopy": "Ta en stund."
+  },
+  "phases": {
+    "inhale_title": "Andas in",
+    "inhale_sub": "Andas långsamt in",
+    "hold_title": "Håll",
+    "hold_sub": "Stanna här",
+    "exhale_title": "Andas ut",
+    "exhale_sub": "Andas långsamt ut"
+  },
+  "reflection": {
+    "title": "Bra jobbat.",
+    "subtitle": "Ta en stund innan du går vidare. Lägg märke till hur du känner just nu.",
+    "question": "Vad märker du?",
+    "choices": {
+      "settled": "Mer lugn",
+      "present": "Mer närvarande",
+      "same": "Precis som vanligt"
+    },
+    "btn_continue": "Fortsätt"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "INHALERA 4",
+    "step_hold": "HÅLL 7",
+    "step_exhale": "ANDAS UT 8",
+    "subtitle": "Återvänd till denna övning när du vill ha en lugn stund för att återställa din uppmärksamhet.",
+    "btn_continue": "Fortsätt"
+  }
+}

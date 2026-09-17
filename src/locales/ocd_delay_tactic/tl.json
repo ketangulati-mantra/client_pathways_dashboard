@@ -1,0 +1,107 @@
+{
+  "header_back": "Bumalik",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "Ang 60-Segundong Paghinto",
+    "subtitle": "Minsan, ang pagnanasa ay parang kailangan mong gawin agad. Magpraktis muna tayong gumawa ng kaunting espasyo bago ka tumugon.",
+    "btn_begin": "Simulan"
+  },
+  "step2": {
+    "eyebrow": "SENARYO 1",
+    "title": "Subukan natin ang isang senaryo",
+    "subtitle": "Isipin mong kakalabas mo lang ng bahay.",
+    "visual_line1": "Nilock mo ang pinto sa harap at naglakad papunta sa kotse mo.",
+    "visual_thought": "\"Na-lock ko ba ito nang maayos?\"",
+    "visual_line2": "Napapansin mo ang paghila na lumingon at tingnan.",
+    "btn_continue": "Magpatuloy"
+  },
+  "step3": {
+    "eyebrow": "ANG PAGNANASA",
+    "banner": "\"Suriin mo ulit.\"",
+    "subtitle": "Napansin mong may pagnanais kang lumingon at tingnan.",
+    "question": "Ano ang karaniwan mong mararamdaman na hinihila kang gawin?",
+    "responses": {
+      "check": "Suriin muli",
+      "ask": "Humingi ng katiyakan sa isang tao",
+      "goback": "Bumalik ka at siguraduhin",
+      "wait": "Mag-pause at maghintay"
+    },
+    "btn_next": "Susunod"
+  },
+  "step4": {
+    "title": "Hindi mo pa kailangang sagutin.",
+    "subtitle": "Sa susunod na 60 segundo, mag-eensayo tayo ng kaunting espasyo sa pagitan ng pagnanasa at ng iyong tugon.",
+    "cadence_pause": "HUMINTO",
+    "cadence_notice": "PAUNAWA",
+    "cadence_choose": "PUMILI",
+    "detail": "Ang layunin ay hindi para mawala ang kaisipan. Ang layunin ay mapansin ang pagnanasa nang hindi agad sinasagot.",
+    "btn_start": "Simulan ang 60-Segundong Paghinto"
+  },
+  "step5": {
+    "badge": "NARITO NA ANG PAGNANASA",
+    "prompts": {
+      "0": "Pansinin ang pagnanais habang ito ay lumilitaw.",
+      "1": "Mararamdaman mo ang hatak kahit hindi mo ito sinasagot.",
+      "2": "Huminga nang malumanay at obserbahan.",
+      "3": "Ang pagnanasa ay parang pakiramdam lang ngayon.",
+      "4": "Hindi mo kailangang lutasin agad ang kawalang-katiyakan.",
+      "5": "Pansinin kung saan mo nararamdaman ang tensyon sa iyong katawan.",
+      "6": "Ang mga iniisip ay dumarating at umaalis na parang mga alon sa tubig.",
+      "7": "Paglikha ng espasyo sa pagitan ng pag-iisip at pagkilos.",
+      "8": "Pinagmamasdan mo ang pagnanasa, hindi sumusunod dito.",
+      "9": "Ang kawalang-katiyakan ay maaaring maging hindi komportable, at ayos lang iyon.",
+      "10": "Hayaan mong nandiyan ang pag-iisip nang hindi nakikipag-ugnayan.",
+      "11": "Pansinin ang pagnanais na ayusin o tingnan.",
+      "12": "Manatiling mausisa sa pakiramdam.",
+      "13": "Ikaw ang may kontrol sa iyong tugon.",
+      "14": "Walang kailangang ayusin ngayon din.",
+      "15": "Lumikha ka ng espasyo nang mahigit 45 segundo.",
+      "16": "Pansinin mo lang ang pagnanais nang hindi nagmamadaling kumilos.",
+      "17": "Malapit na — nagpapahinga sa katahimikan.",
+      "18": "Manatiling present sa huling hininga na ito.",
+      "19": "Natapos mo ang paghinto."
+    }
+  },
+  "step6": {
+    "title": "Nagbigay ka ng espasyo.",
+    "subtitle": "Hindi layunin na mawala ang pagnanasa. Ang layunin ay bigyan ang sarili ng sandali bago sumagot.",
+    "question": "Ano ang napansin mo?",
+    "reflections": {
+      "thought_there": "Nandoon pa rin ang pag-iisip",
+      "felt_urge": "Naramdaman kong gusto kong sumagot",
+      "uncomfortable": "Hindi komportable ang kawalang-katiyakan",
+      "could_wait": "Kaya kong maghintay nang hindi agad sumagot"
+    },
+    "btn_continue": "Magpatuloy"
+  },
+  "step7": {
+    "eyebrow": "SIKLO NG OCD",
+    "title": "Kung Saan Nababagay ang Pause",
+    "subtitle": "Ang OCD ay lumilikha ng malakas na paghila na agad tumugon sa pagdududa.",
+    "node_doubt": "Pagdududa / Intrusive na Pag-iisip",
+    "node_urge": "Pagnanais na Tumugon",
+    "space_tag": "ANG 60-SEGUNDONG PAHINGA",
+    "space_title": "Ito ang espasyong pinagpraktisan mo.",
+    "node_compulsion": "Compulsive Response",
+    "node_relief": "Pansamantalang Pagluwag → Pagbabalik ng Pagdududa",
+    "detail": "May pause na nagbibigay sa iyo ng sandali bago awtomatikong sundan ang paghila na iyon.",
+    "btn_try_another": "Subukan ang ibang senaryo"
+  },
+  "step8": {
+    "eyebrow": "SENARYO 2",
+    "title": "Paglilipat ng Praktis",
+    "subtitle": "Isipin mong nagpadala ka lang ng mahalagang mensahe.",
+    "visual_line1": "Pindutin mo ang send at isinara ang usapan.",
+    "visual_thought": "\"May nasabi ba akong mali? Siguro dapat basahin ko ulit.\"",
+    "visual_line2": "Parehong pattern: Thought → Urge → Pause → Choice.",
+    "btn_practice": "Practice Pause (60s)"
+  },
+  "step9": {
+    "title": "Ang Pagnanasa ay Hindi Isang Tagubilin.",
+    "subtitle": "Hindi mo kailangang sagutin agad ang bawat pagnanasa. Ang kaunting espasyo ay maaaring magbigay ng ibang panimulang punto.",
+    "cadence_pause": "HUMINTO",
+    "cadence_notice": "PAUNAWA",
+    "cadence_choose": "PUMILI",
+    "btn_continue": "Magpatuloy"
+  }
+}

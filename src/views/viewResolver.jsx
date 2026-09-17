@@ -22,6 +22,16 @@ import ChallengeHubPage from './ChallengeHubPage';
 import Mantra21DailyActivityView from './Mantra21DailyActivityView';
 import MythsWeTellOurselvesActivity from './MythsWeTellOurselvesActivity';
 import MySupportCircleActivity from './MySupportCircleActivity';
+import OcdAssessmentPage from './OcdAssessmentPage';
+import WhatIsOcdActivity from './WhatIsOcdActivity';
+import InsideOcdLoopActivity from './InsideOcdLoopActivity';
+import IsItOcdOrHabitActivity from './IsItOcdOrHabitActivity';
+import FearLadderActivity from './FearLadderActivity';
+import TheAlarmIsNotTheDangerActivity from './TheAlarmIsNotTheDangerActivity';
+import The60SecondPauseActivity from './The60SecondPauseActivity';
+import FourSevenEightBreathingActivity from './FourSevenEightBreathingActivity';
+import HowErpWorksActivity from './HowErpWorksActivity';
+import OcdMoodTrackerActivity from './OcdMoodTrackerActivity';
 import AdminLoginPage from './AdminLoginPage';
 import { ProtectedRoute } from '../auth/ProtectedRoute';
 
@@ -91,6 +101,93 @@ const ROUTE_VIEW_REGISTRY = {
   '/task/emotional-wellbeing-assessment': { default: EmotionalWellbeingAssessmentPage },
   '/task/emotional_wellbeing_assessment': { default: EmotionalWellbeingAssessmentPage },
   '/emotional-wellbeing-assessment': { default: EmotionalWellbeingAssessmentPage },
+  '/task/ocd-assessment': { default: OcdAssessmentPage },
+  '/task/ocd_assessment': { default: OcdAssessmentPage },
+  '/ocd-assessment': { default: OcdAssessmentPage },
+  '/task/mantra21-ocd-assessment': { default: OcdAssessmentPage },
+  '/task/what-is-ocd': { default: WhatIsOcdActivity },
+  '/task/what_is_ocd': { default: WhatIsOcdActivity },
+  '/what-is-ocd': { default: WhatIsOcdActivity },
+  '/task/ocd_what_is_ocd': { default: WhatIsOcdActivity },
+  '/task/ocd-what-is-ocd': { default: WhatIsOcdActivity },
+  '/task/activity/400': { default: WhatIsOcdActivity },
+  '/task/activity-400': { default: WhatIsOcdActivity },
+  '/task/400': { default: WhatIsOcdActivity },
+  '/task/inside-an-ocd-loop': { default: InsideOcdLoopActivity },
+  '/task/inside-ocd-loop': { default: InsideOcdLoopActivity },
+  '/task/inside_an_ocd_loop': { default: InsideOcdLoopActivity },
+  '/task/inside_ocd_loop': { default: InsideOcdLoopActivity },
+  '/task/ocd-cycle': { default: InsideOcdLoopActivity },
+  '/task/ocd_cycle': { default: InsideOcdLoopActivity },
+  '/ocd-cycle': { default: InsideOcdLoopActivity },
+  '/inside-an-ocd-loop': { default: InsideOcdLoopActivity },
+  '/task/activity/401': { default: InsideOcdLoopActivity },
+  '/task/activity-401': { default: InsideOcdLoopActivity },
+  '/task/is-it-ocd-or-just-a-habit': { default: IsItOcdOrHabitActivity },
+  '/task/is-it-ocd-or-habit': { default: IsItOcdOrHabitActivity },
+  '/task/ocd-or-habit': { default: IsItOcdOrHabitActivity },
+  '/task/ocd_habit': { default: IsItOcdOrHabitActivity },
+  '/task/ocd-habit': { default: IsItOcdOrHabitActivity },
+  '/task/activity/402': { default: IsItOcdOrHabitActivity },
+  '/task/activity-402': { default: IsItOcdOrHabitActivity },
+  '/task/402': { default: IsItOcdOrHabitActivity },
+  '/is-it-ocd-or-habit': { default: IsItOcdOrHabitActivity },
+  '/ocd-or-habit': { default: IsItOcdOrHabitActivity },
+  '/task/fear-ladder': { default: FearLadderActivity },
+  '/task/fear_ladder': { default: FearLadderActivity },
+  '/fear-ladder': { default: FearLadderActivity },
+  '/fear_ladder': { default: FearLadderActivity },
+  '/task/activity/404': { default: FearLadderActivity },
+  '/task/activity-404': { default: FearLadderActivity },
+  '/task/404': { default: FearLadderActivity },
+  '/task/the-alarm-is-not-the-danger': { default: TheAlarmIsNotTheDangerActivity },
+  '/task/alarm-is-not-the-danger': { default: TheAlarmIsNotTheDangerActivity },
+  '/task/alarm-is-not-danger': { default: TheAlarmIsNotTheDangerActivity },
+  '/task/alarm_is_not_danger': { default: TheAlarmIsNotTheDangerActivity },
+  '/task/ocd_alarm_danger': { default: TheAlarmIsNotTheDangerActivity },
+  '/the-alarm-is-not-the-danger': { default: TheAlarmIsNotTheDangerActivity },
+  '/alarm-is-not-the-danger': { default: TheAlarmIsNotTheDangerActivity },
+  '/task/activity/403': { default: TheAlarmIsNotTheDangerActivity },
+  '/task/activity-403': { default: TheAlarmIsNotTheDangerActivity },
+  '/task/403': { default: TheAlarmIsNotTheDangerActivity },
+  '/task/the-60-second-pause': { default: The60SecondPauseActivity },
+  '/task/60-second-pause': { default: The60SecondPauseActivity },
+  '/task/the-delay-tactic': { default: The60SecondPauseActivity },
+  '/task/delay-tactic': { default: The60SecondPauseActivity },
+  '/task/ocd_delay_tactic': { default: The60SecondPauseActivity },
+  '/task/ocd_delay': { default: The60SecondPauseActivity },
+  '/the-60-second-pause': { default: The60SecondPauseActivity },
+  '/60-second-pause': { default: The60SecondPauseActivity },
+  '/task/activity/405': { default: The60SecondPauseActivity },
+  '/task/activity-405': { default: The60SecondPauseActivity },
+  '/task/405': { default: The60SecondPauseActivity },
+  '/task/4-7-8-breathing': { default: FourSevenEightBreathingActivity },
+  '/task/4-7-8': { default: FourSevenEightBreathingActivity },
+  '/task/four-seven-eight-breathing': { default: FourSevenEightBreathingActivity },
+  '/task/ocd_478_breathing': { default: FourSevenEightBreathingActivity },
+  '/task/478-breathing': { default: FourSevenEightBreathingActivity },
+  '/4-7-8-breathing': { default: FourSevenEightBreathingActivity },
+  '/task/activity/406': { default: FourSevenEightBreathingActivity },
+  '/task/activity-406': { default: FourSevenEightBreathingActivity },
+  '/task/406': { default: FourSevenEightBreathingActivity },
+  '/task/how-erp-works': { default: HowErpWorksActivity },
+  '/task/how_erp_works': { default: HowErpWorksActivity },
+  '/task/erp': { default: HowErpWorksActivity },
+  '/task/ocd_how_erp_works': { default: HowErpWorksActivity },
+  '/task/ocd-erp': { default: HowErpWorksActivity },
+  '/how-erp-works': { default: HowErpWorksActivity },
+  '/task/activity/407': { default: HowErpWorksActivity },
+  '/task/activity-407': { default: HowErpWorksActivity },
+  '/task/407': { default: HowErpWorksActivity },
+  '/task/ocd-mood-check-in': { default: OcdMoodTrackerActivity },
+  '/task/ocd_mood_check_in': { default: OcdMoodTrackerActivity },
+  '/task/ocd-mood-tracker': { default: OcdMoodTrackerActivity },
+  '/task/ocd_mood_tracker': { default: OcdMoodTrackerActivity },
+  '/ocd-mood-check-in': { default: OcdMoodTrackerActivity },
+  '/ocd-mood-tracker': { default: OcdMoodTrackerActivity },
+  '/task/activity/408': { default: OcdMoodTrackerActivity },
+  '/task/activity-408': { default: OcdMoodTrackerActivity },
+  '/task/408': { default: OcdMoodTrackerActivity },
   '/task/personalized-focus-assessment': { default: PersonalizedFocusAssessmentPage },
   '/task/personalized_focus_assessment': { default: PersonalizedFocusAssessmentPage },
   '/personalized-focus-assessment': { default: PersonalizedFocusAssessmentPage },
@@ -189,6 +286,10 @@ export function resolveLessonView({ currentPath, currentService, onBack, onNavig
 
     if (matchingActivity.lessonId === 'how-can-therapy-help' || matchingActivity.lessonId === 'how_can_therapy_help') {
       return <HowCanTherapyHelpLessonPage onBack={onBack} onNavigate={onNavigate} service={currentService} />;
+    }
+
+    if (matchingActivity.lessonId === 'ocd_mood_check_in' || matchingActivity.lessonId === 'ocd-mood-check-in' || matchingActivity.activityId === '408') {
+      return <OcdMoodTrackerActivity onBack={onBack} onNavigate={onNavigate} />;
     }
 
     if (matchingActivity.lessonId === 'daily-check-in' || matchingActivity.lessonId === 'daily_check_in' || matchingActivity.lessonId === 'check-in') {

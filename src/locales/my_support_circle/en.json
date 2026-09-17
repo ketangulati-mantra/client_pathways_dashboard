@@ -14,9 +14,9 @@
   "btn_saving": "SAVING PROGRESS...",
   "btn_back": "Back",
   "btn_exit": "Exit",
-  "step_1_eyebrow": "WHO’S IN YOUR CIRCLE?",
-  "step_1_title": "WHO COULD\nYOU TURN TO?",
-  "step_1_desc": "You don’t need to choose someone you talk to every day. Think of people who could feel safe, supportive, or helpful.",
+  "step_1_eyebrow": "WHO’S IN YOUR CORNER?",
+  "step_1_title": "WHO COULD YOU\nLEAN ON?",
+  "step_1_desc": "You don’t need someone you talk to every day. Think of people who make you feel safe, heard, or supported.",
   "select_all_apply": "Select all that apply",
   "count_selected": "{{count}} selected",
   "relationships": {

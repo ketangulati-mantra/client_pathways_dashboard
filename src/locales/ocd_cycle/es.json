@@ -1,0 +1,155 @@
+{
+  "header_back": "Atrás",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Dentro de un bucle obsesivo-compulsivo",
+    "subtitle": "Mira cómo un pensamiento puede convertirse en un ciclo."
+  },
+  "stages": {
+    "step_experience": "01 Experiencia",
+    "step_recognize": "02 Reconocer",
+    "step_explore": "03 Explorar",
+    "step_practice": "04 Aviso",
+    "step_takeaway": "05 Comida para llevar"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Pensamiento",
+      "uncertainty": "Incertidumbre",
+      "response": "Respuesta",
+      "relief": "Relevo"
+    },
+    "cycle_1": {
+      "thought": "\"¿Y si no cerrara la puerta con llave?\"",
+      "uncertainty": "\"¿De verdad lo he cerrado?\"",
+      "response": "\"Revisa otra vez.\"",
+      "relief": "\"Vale. Me siento mejor.\""
+    },
+    "cycle_2": {
+      "thought": "\"Espera... ¿pero de verdad lo comprobé bien?\"",
+      "uncertainty": "\"Necesito estar seguro.\"",
+      "response": "\"Revisa una vez más.\"",
+      "relief": "\"Alivio temporal...\""
+    },
+    "notice_prompt": "¿Lo has notado?",
+    "notice_detail": "El alivio era real, pero la duda volvió.",
+    "action_prompt": "Mira qué ha cambiado →"
+  },
+  "scenarios": {
+    "heading": "Ahora hazlo tuyo.",
+    "subheading": "Selecciona un escenario reconocible para verlo moverse por el bucle.",
+    "checking": {
+      "name": "Comprobación",
+      "phrase": "\"¿Y si no cerrara la puerta con llave?\"",
+      "thought": "\"¿Y si no cerrara la puerta con llave?\"",
+      "uncertainty": "\"¿De verdad lo he cerrado?\"",
+      "response": "\"Revisa la cerradura otra vez.\"",
+      "relief": "\"Vale, por ahora me siento seguro.\"",
+      "return": "\"Espera... ¿he comprobado bien?\"",
+      "takeaway_quote": "He notado que comprobar me da un alivio rápido, pero la duda vuelve.",
+      "takeaway_action": "La próxima vez que aparezca la duda, haz una pausa y nota el impulso antes de comprobar automáticamente."
+    },
+    "responsibility": {
+      "name": "Responsabilidad",
+      "phrase": "\"¿Y si cometí un error grave?\"",
+      "thought": "\"¿Y si cometí un error grave?\"",
+      "uncertainty": "\"Tengo que saberlo con certeza.\"",
+      "response": "\"Repasa cada detalle en mi cabeza.\"",
+      "relief": "\"Parece que está bien por un momento.\"",
+      "return": "\"¿Y si me he perdido algún detalle?\"",
+      "takeaway_quote": "He notado que la repetición mental intenta crear certeza, pero prolonga la duda.",
+      "takeaway_action": "La próxima vez que te apetezca volver a jugar, reconoce la duda sin analizarla."
+    },
+    "contamination": {
+      "name": "Contaminación",
+      "phrase": "\"¿Y si toco algo contaminado?\"",
+      "thought": "\"¿Y si esa superficie no estaba limpia?\"",
+      "uncertainty": "\"Me siento incómodo y contaminado.\"",
+      "response": "\"Lávate bien.\"",
+      "relief": "\"Me siento limpio por ahora.\"",
+      "return": "\"¿Me he lavado lo suficiente?\"",
+      "takeaway_quote": "He notado que lavar alivia la incomodidad inicial, pero genera la siguiente duda.",
+      "takeaway_action": "La próxima vez que te entren ganas de lavarte, date un momento para notar primero la sensación."
+    },
+    "symmetry": {
+      "name": "Justo",
+      "phrase": "\"¿Y si no hago esto exactamente bien?\"",
+      "thought": "\"Esto no parece equilibrado.\"",
+      "uncertainty": "\"Puede que pase algo malo o que se sienta mal.\"",
+      "response": "\"Hazlo de nuevo hasta que encaje.\"",
+      "relief": "\"Por ahora me parece lo correcto.\"",
+      "return": "\"¿Lo hice bien la última vez?\"",
+      "takeaway_quote": "He notado que repetir una acción para conseguir una sensación de 'justo la idea' mantiene viva la gana.",
+      "takeaway_action": "La próxima vez que algo te parezca incompleto, nota la necesidad de repetir sin repetirlo inmediatamente."
+    },
+    "doubt_return_label": "La duda regresa:"
+  },
+  "snapshot": {
+    "title": "Tu Instantánea de Bucle",
+    "thought_label": "Pensamiento",
+    "uncertainty_label": "Incertidumbre",
+    "response_label": "Respuesta",
+    "effect_label": "Efecto a corto plazo",
+    "next_label": "¿Qué pasa después?",
+    "replay_btn": "Escenario de repetición"
+  },
+  "response_point": {
+    "heading": "Aquí es donde el patrón se pone interesante.",
+    "subheading": "Puede que no controles el pensamiento o la incertidumbre. Pero puedes notar lo que sucede a continuación.",
+    "choice_check": "Revisa de nuevo",
+    "choice_notice": "Fíjate en el impulso",
+    "check_result_title": "La respuesta automática",
+    "check_result_body": "La comprobación trajo alivio. La duda volvió.",
+    "notice_result_title": "La pausa",
+    "notice_result_body": "La incertidumbre puede seguir resultando incómoda. Notar el impulso te da un momento antes de responder automáticamente.",
+    "try_again": "¿Quieres ver la diferencia otra vez?"
+  },
+  "compulsions": {
+    "statement": "Las compulsiones no siempre son algo que hagas.",
+    "tab_outward": "Hacia afuera",
+    "tab_inward": "Hacia el interior",
+    "outward_items": {
+      "0": "Comprobación",
+      "1": "Lavado",
+      "2": "Repitiendo"
+    },
+    "inward_items": {
+      "0": "Repetición",
+      "1": "Reseña",
+      "2": "Análisis",
+      "3": "Buscando certeza"
+    }
+  },
+  "recognition": {
+    "heading": "Quizá notes el patrón como...",
+    "pattern_1": {
+      "step1": "Comprobado",
+      "step2": "Relevo",
+      "step3": "Duda"
+    },
+    "pattern_2": {
+      "step1": "Repetición",
+      "step2": "Certeza",
+      "step3": "Duda"
+    },
+    "pattern_3": {
+      "step1": "Evita",
+      "step2": "Relevo",
+      "step3": "El miedo regresa"
+    }
+  },
+  "takeaway": {
+    "tag": "Tu conclusión",
+    "main_headline": "El pensamiento no es el bucle.",
+    "sub_headline": "Fíjate en lo que ocurre a continuación.",
+    "closing": "Entender el patrón es el primer paso para reconocerlo en la vida real."
+  },
+  "next_step": {
+    "prompt_title": "¿Preparado para lo que viene?",
+    "prompt_desc": "Marca esta actividad como completada para guardar tu progreso y continuar tu camino.",
+    "btn_complete": "Marca la actividad como hecha",
+    "saving": "Guardando...",
+    "completed_badge": "Actividad completada",
+    "error_save": "No pudimos guardar tu actividad completada ahora mismo. Tu progreso se guarda localmente."
+  }
+}

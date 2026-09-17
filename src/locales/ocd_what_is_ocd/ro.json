@@ -1,0 +1,83 @@
+{
+  "header_back": "Înapoi",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Ce este OCD?",
+    "subtitle": "Înțelege ce este OCD-ul, cum poate apărea și de ce poate părea atât de convingător."
+  },
+  "video": {
+    "eyebrow": "ÎNCEPE AICI",
+    "title": "Urmărește această scurtă introducere în OCD."
+  },
+  "basics": {
+    "eyebrow": "ELEMENTELE DE BAZĂ",
+    "headline": "OCD-ul înseamnă mai mult decât gânduri nedorite.",
+    "obsession_title": "OBSESII",
+    "obsession_desc": "Gânduri, imagini, îndoieli sau impulsuri nedorite care pot părea greu de respins.",
+    "compulsion_title": "COMPULSII",
+    "compulsion_desc": "Acțiuni sau răspunsuri mentale pe care simți nevoia să le repeți pentru a reduce disconfortul sau pentru a te simți sigur."
+  },
+  "themes": {
+    "eyebrow": "TEME COMUNE",
+    "headline": "OCD-ul poate lua multe forme.",
+    "subtext": "Acestea sunt teme comune, nu diagnostice separate. O singură persoană poate experimenta mai multe.",
+    "disclaimer": "Acestea sunt doar câteva exemple.",
+    "items": {
+      "contamination": {
+        "name": "Contaminare",
+        "desc": "Temeri legate de germeni, boli, murdărie sau contaminare."
+      },
+      "harm": {
+        "name": "Vătămare",
+        "desc": "Temeri nedorite legate de a provoca sau de a fi responsabil pentru rău."
+      },
+      "checking": {
+        "name": "Verificare",
+        "desc": "Verificarea repetată a siguranței, greșelilor, ușilor, electrocasnicelor sau altor probleme."
+      },
+      "symmetry": {
+        "name": "Simetrie & \"Exact Potrivit\"",
+        "desc": "Simțind că lucrurile trebuie să fie echilibrate, exacte sau pur și simplu potrivite."
+      },
+      "taboo": {
+        "name": "Gânduri intruzive / tabu",
+        "desc": "Gânduri nedorite legate de teme sexuale, religioase, agresive sau alte subiecte tabu."
+      },
+      "responsibility": {
+        "name": "Responsabilitate și îndoială",
+        "desc": "Îndoiala persistentă legată de greșeli, responsabilitate sau dacă ceva este cu adevărat sigur."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "S-AR PUTEA SĂ RECUNOȘTI ASTA",
+    "headline": "OCD poate face ca incertitudinea să pară imposibil de lăsat în pace.",
+    "example_1": {
+      "thought": "\"Am încuiat ușa?\"",
+      "action": "Verifică. Te simți ușurat.",
+      "loop": "Apoi: \"Dar chiar am verificat?\""
+    },
+    "example_2": {
+      "thought": "\"Dacă aș face o greșeală teribilă?\"",
+      "action": "Retrăiești ce s-a întâmplat.",
+      "loop": "Cauți reasigurare."
+    }
+  },
+  "takeaway": {
+    "quote": "Toată lumea are gânduri nedorite. \n\nOCD-ul poate face ca aceste gânduri să pară ceva ce trebuie rezolvat.",
+    "sub": "Înțelegerea acestui tipar este un prim pas important."
+  },
+  "next_step": {
+    "eyebrow": "URMĂTORUL ÎN CĂLĂTORIA TA",
+    "headline": "Acum să vedem cum ciclul OCD se poate repeta mereu.",
+    "btn_explore": "Explorează ciclul OCD →"
+  },
+  "completion": {
+    "eyebrow": "Ai terminat de explorat?",
+    "btn_complete": "Marcați activitatea ca fiind făcută →",
+    "saving": "Salvând...",
+    "completed_badge": "Activitate finalizată",
+    "error_save": "Nu am putut salva momentan finalizarea activității. Progresul tău este salvat local."
+  }
+}

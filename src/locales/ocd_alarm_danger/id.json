@@ -1,0 +1,86 @@
+{
+  "header_back": "Kembali",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "AKTIVITAS 3",
+    "title": "LIHAT KE ATAS.",
+    "subtitle": "ALARM BUKANLAH BAHAYA.",
+    "detail": "Sebuah perasaan bisa keras tanpa menceritakan seluruh kisahnya.",
+    "btn_enter": "MASUKKAN →"
+  },
+  "screen2": {
+    "title_line1": "KADANG-KADANG,",
+    "title_line2": "KETIDAKPASTIAN SUDAH CUKUP.",
+    "subtitle": "Ketuk sebuah frasa untuk mengamati bagaimana detektor bereaksi.",
+    "example1": "\"Bagaimana kalau aku salah?\"",
+    "example2": "\"Bagaimana kalau ada yang tidak cukup bersih?\"",
+    "example3": "\"Bagaimana kalau aku tidak bisa benar-benar yakin?\"",
+    "btn_activates": "SINYALNYA MENGAKTIFKAN →"
+  },
+  "screen3": {
+    "ambient_heart": "JANTUNG BERDEBAR",
+    "ambient_tension": "KETEGANGAN",
+    "ambient_attention": "PERHATIAN",
+    "ambient_urge": "DORONGAN",
+    "title": "PERASAAN ITU BISA SANGAT KERAS.",
+    "subtitle": "Perasaan itu nyata. Pesan yang tampaknya disampaikan tidak otomatis menjadi keseluruhan cerita.",
+    "btn_look_closer": "LIHAT LEBIH DEKAT →"
+  },
+  "screen4": {
+    "tag_left": "[ SINYAL// SENSITIVITAS ]",
+    "tag_right": "[ TANGGAPAN // INTERPRETASI ]",
+    "title": "LIHAT LEBIH DEKAT.",
+    "subtitle": "Seret ke mana saja untuk memeriksa detektor dari sudut mana pun.",
+    "detail": "Anda bisa merasakan sinyal tanpa langsung terburu-buru mengambil kesimpulan.",
+    "btn_continue": "LANJUTKAN →"
+  },
+  "screen5": {
+    "title": "SINYAL ≠ PUTUSAN",
+    "subtitle": "Perasaan yang kuat bisa terasa nyata tanpa secara otomatis membuktikan apa yang tampaknya dikatakannya.",
+    "col_feel_title": "APA YANG SAYA RASAKAN",
+    "feel_anxious": "Cemas.",
+    "feel_uncertain": "Tidak yakin.",
+    "feel_tense": "Tegang.",
+    "feel_pulled": "Dihentikan untuk memeriksa.",
+    "col_conclude_title": "APA YANG SAYA SIMPULKAN",
+    "conclude_wrong": "\"Pasti ada yang salah.\"",
+    "conclude_make_sure": "\"Aku harus memastikan.\"",
+    "conclude_certainty": "\"Aku butuh kepastian.\"",
+    "btn_next": "APA YANG TERJADI SELANJUTNYA? →"
+  },
+  "screen6": {
+    "title": "KADANG-KADANG RESPONS BISA MEREDAM SINYAL UNTUK SESAAT.",
+    "subtitle": "Ketuk untuk melihat bagaimana respons berinteraksi dengan sinyal.",
+    "item_check_title": "CEK",
+    "item_check_quote": "\"Aku akan pastikan sekali lagi.\"",
+    "item_ask_title": "TANYA",
+    "item_ask_quote": "\"Aku akan tanya seseorang apa pendapatnya.\"",
+    "item_replay_title": "TAYANGAN ULANG",
+    "item_replay_quote": "\"Aku akan memikirkannya lagi dalam kepalaku.\"",
+    "item_avoid_title": "MENGHINDARI",
+    "item_avoid_quote": "\"Aku akan menjauh dari apa pun yang terasa tidak pasti.\"",
+    "btn_let_signal": "BIARKAN SINYALNYA ADA →"
+  },
+  "screen7": {
+    "title": "BIARKAN SINYALNYA ADA.",
+    "subtitle": "Perhatikan apa yang terjadi ketika Anda tidak langsung terburu-buru menafsirkannya.",
+    "btn_watch": "PERHATIKAN SINYALNYA",
+    "observing_format": "Mengamati sinyal... ({{detik}}s)",
+    "done_title": "SINYALNYA BERUBAH.",
+    "done_sub": "Kamu tidak perlu menyelesaikannya.",
+    "btn_continue": "LANJUTKAN →"
+  },
+  "screen8": {
+    "title_line1": "ALARM ADALAH SINYAL.",
+    "title_line2": "BUKAN PUTUSAN.",
+    "subtitle": "Perhatikan perasaan itu. Perhatikan cerita yang ditambahkan pikiranmu.",
+    "question": "LAIN KALI ALARM BERBUNYI KERAS, APA YANG MUNGKIN KAMU PERHATIKAN PERTAMA KALI?",
+    "opt_feeling": "PERASAAN",
+    "opt_thought": "PIKIRAN",
+    "opt_urge": "DORONGAN UNTUK MERESPONS",
+    "feedback": "Terus perhatikan perbedaannya.",
+    "btn_saving": "MENYELAMATKAN...",
+    "btn_continue": "LANJUTKAN →"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "header_back": "뒤로",
+  "brand": "강박만트라",
+  "hero": {
+    "title": "강박장애 루프 속에서",
+    "subtitle": "생각이 어떻게 악순환으로 변하는지 보세요."
+  },
+  "stages": {
+    "step_experience": "01 경험",
+    "step_recognize": "02 인식",
+    "step_explore": "03 탐험",
+    "step_practice": "04 공지",
+    "step_takeaway": "05 테이크어웨이"
+  },
+  "loop": {
+    "stages": {
+      "thought": "사상",
+      "uncertainty": "불확실성",
+      "response": "반응",
+      "relief": "지형"
+    },
+    "cycle_1": {
+      "thought": "\"만약 내가 문을 잠그지 않았다면?\"",
+      "uncertainty": "\"내가 정말 잠갔어?\"",
+      "response": "\"다시 확인해.\"",
+      "relief": "\"알겠어. 기분이 좀 나아졌어.\""
+    },
+    "cycle_2": {
+      "thought": "\"잠깐만... 근데 내가 정말 제대로 확인했나?\"",
+      "uncertainty": "\"확실해야 해.\"",
+      "response": "\"한 번 더 확인해.\"",
+      "relief": "\"일시적인 안도...\""
+    },
+    "notice_prompt": "눈치챘어?",
+    "notice_detail": "안도감은 진짜였지만, 의심이 다시 돌아왔다.",
+    "action_prompt": "무엇이 →를 바꿨는지 확인해 보세요"
+  },
+  "scenarios": {
+    "heading": "이제 네 것으로 만들어.",
+    "subheading": "인식 가능한 시나리오를 선택해 루프를 통과하는 모습을 지켜보세요.",
+    "checking": {
+      "name": "체크",
+      "phrase": "\"만약 내가 문을 잠그지 않았다면?\"",
+      "thought": "\"만약 내가 문을 잠그지 않았다면?\"",
+      "uncertainty": "\"내가 정말 잠갔어?\"",
+      "response": "\"다시 자물쇠를 확인해.\"",
+      "relief": "\"괜찮아, 지금은 안전해 보여.\"",
+      "return": "\"잠깐만... 내가 제대로 확인했나?\"",
+      "takeaway_quote": "확인하면 금방 안도가 되지만, 의심이 다시 돌아옵니다.",
+      "takeaway_action": "다음에 의심이 생기면, 잠시 멈춰서 충동을 인지한 후 자동으로 확인하세요."
+    },
+    "responsibility": {
+      "name": "책임",
+      "phrase": "\"내가 심각한 실수를 한 건 아닐까?\"",
+      "thought": "\"내가 심각한 실수를 한 건 아닐까?\"",
+      "uncertainty": "\"확실히 알아야 해.\"",
+      "response": "\"머릿속에서 모든 세부사항을 다시 재생해.\"",
+      "relief": "\"잠시 괜찮아 보여.\"",
+      "return": "\"내가 뭔가 놓친 게 있으면 어쩌지?\"",
+      "takeaway_quote": "정신적 재생은 확실성을 만들려 하지만 의심을 오래 끌고 있다는 것을 알게 되었습니다.",
+      "takeaway_action": "다음에 다시 플레이하고 싶은 충동이 생기면, 의심을 분석하지 않고 인정하세요."
+    },
+    "contamination": {
+      "name": "오염",
+      "phrase": "\"오염된 걸 만지면 어쩌지?\"",
+      "thought": "\"만약 그 표면이 깨끗하지 않았다면?\"",
+      "uncertainty": "\"불편하고 오염된 기분이야.\"",
+      "response": "\"깨끗이 씻어라.\"",
+      "relief": "\"지금은 깨끗해.\"",
+      "return": "\"내가 충분히 씻었어?\"",
+      "takeaway_quote": "세척이 초기 불편함을 완화시켜 주지만, 다음 의심을 불러일으킨다는 것을 알게 되었습니다.",
+      "takeaway_action": "다음에 세탁 욕구가 생기면, 먼저 그 느낌을 인지할 시간을 주세요."
+    },
+    "symmetry": {
+      "name": "딱 맞는 것",
+      "phrase": "\"내가 이걸 정확히 제대로 하지 않으면 어떡하지?\"",
+      "thought": "\"이건 균형 잡히지 않는 것 같아.\"",
+      "uncertainty": "\"나쁜 일이 생기거나 뭔가 잘못된 느낌이 들 수도 있어.\"",
+      "response": "\"다시 해봐, 이해가 될 때까지.\"",
+      "relief": "\"지금은 그게 맞는 것 같아.\"",
+      "return": "\"지난번에 제대로 했나?\"",
+      "takeaway_quote": "'딱 맞는' 느낌을 위해 행동을 반복하면 그 충동이 계속 유지된다는 것을 알게 되었습니다.",
+      "takeaway_action": "다음에 뭔가가 미완성이라고 느껴질 때는, 바로 반복하지 말고 다시 하고 싶은 충동을 느끼세요."
+    },
+    "doubt_return_label": "의심이 다시 돌아온다:"
+  },
+  "snapshot": {
+    "title": "당신의 루프 스냅샷",
+    "thought_label": "사상",
+    "uncertainty_label": "불확실성",
+    "response_label": "반응",
+    "effect_label": "단기 효과",
+    "next_label": "다음에 일어나는 일은",
+    "replay_btn": "재플레이 시나리오"
+  },
+  "response_point": {
+    "heading": "여기서 패턴이 흥미로워집니다.",
+    "subheading": "생각이나 불확실성을 통제할 수는 없을 수도 있습니다. 하지만 다음에 무슨 일이 일어나는지 알아차릴 수 있습니다.",
+    "choice_check": "다시 확인해",
+    "choice_notice": "그 충동을 주목하세요",
+    "check_result_title": "자동 응답",
+    "check_result_body": "확인은 안도감을 가져다주었다. 의심이 다시 돌아왔다.",
+    "notice_result_title": "잠시 침묵",
+    "notice_result_body": "불확실함이 여전히 불편하게 느껴질 수 있습니다. 충동을 인지하면 자동으로 반응하기 전에 잠시 시간을 줍니다.",
+    "try_again": "다시 한 번 차이를 보고 싶으신가요?"
+  },
+  "compulsions": {
+    "statement": "강박은 항상 하는 행동이 아니에요.",
+    "tab_outward": "외부",
+    "tab_inward": "내면",
+    "outward_items": {
+      "0": "체크",
+      "1": "세척",
+      "2": "반복"
+    },
+    "inward_items": {
+      "0": "재경기",
+      "1": "리뷰",
+      "2": "분석",
+      "3": "확실함을 추구하다"
+    }
+  },
+  "recognition": {
+    "heading": "패턴을 눈치챌 수도 있겠지만...",
+    "pattern_1": {
+      "step1": "체크",
+      "step2": "지형",
+      "step3": "의심"
+    },
+    "pattern_2": {
+      "step1": "재경기",
+      "step2": "확실성",
+      "step3": "의심"
+    },
+    "pattern_3": {
+      "step1": "피하세요",
+      "step2": "지형",
+      "step3": "두려움이 돌아온다"
+    }
+  },
+  "takeaway": {
+    "tag": "당신의 주요 소식입니다",
+    "main_headline": "생각이 순환이 아니에요.",
+    "sub_headline": "다음에 무슨 일이 일어나는지 주목하세요.",
+    "closing": "패턴을 이해하는 것이 현실에서 그것을 인식하는 첫걸음입니다."
+  },
+  "next_step": {
+    "prompt_title": "다음 단계에 대해 준비되셨나요?",
+    "prompt_desc": "이 활동을 완료한 것으로 표시하면 진행 상황을 저장하고 경로를 계속 진행하세요.",
+    "btn_complete": "활동 완료 표시",
+    "saving": "절약...",
+    "completed_badge": "활동 완료",
+    "error_save": "지금은 활동 완료 상태를 저장할 수 없었습니다. 진행 상황은 로컬에 저장됩니다."
+  }
+}

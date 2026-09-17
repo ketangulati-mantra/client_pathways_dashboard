@@ -1,0 +1,107 @@
+{
+  "header_back": "Back",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "The 60-Second Pause",
+    "subtitle": "Sometimes an urge can feel like something you need to act on right away. Let’s practice creating a little space before you respond.",
+    "btn_begin": "Begin"
+  },
+  "step2": {
+    "eyebrow": "SCENARIO 1",
+    "title": "Let's Try a Scenario",
+    "subtitle": "Imagine you’ve just left your house.",
+    "visual_line1": "You lock the front door and walk toward your car.",
+    "visual_thought": "“Did I lock it properly?”",
+    "visual_line2": "You notice the pull to turn around and check.",
+    "btn_continue": "Continue"
+  },
+  "step3": {
+    "eyebrow": "THE URGE",
+    "banner": "“Check it one more time.”",
+    "subtitle": "You notice an urge to turn around and check.",
+    "question": "What would you normally feel pulled to do?",
+    "responses": {
+      "check": "Check again",
+      "ask": "Ask someone for reassurance",
+      "goback": "Go back and make sure",
+      "wait": "Pause and wait"
+    },
+    "btn_next": "Next"
+  },
+  "step4": {
+    "title": "You Don’t Have to Answer It Yet.",
+    "subtitle": "For the next 60 seconds, we’re going to practice making a little space between the urge and your response.",
+    "cadence_pause": "PAUSE",
+    "cadence_notice": "NOTICE",
+    "cadence_choose": "CHOOSE",
+    "detail": "The goal isn’t to make the thought disappear. It’s to notice the urge without immediately answering it.",
+    "btn_start": "Start 60-Second Pause"
+  },
+  "step5": {
+    "badge": "THE URGE IS HERE",
+    "prompts": [
+      "Notice the urge as it appears.",
+      "You can feel the pull without answering it.",
+      "Take a gentle breath and observe.",
+      "The urge is just a sensation right now.",
+      "You don’t have to solve uncertainty right away.",
+      "Notice where you feel tension in your body.",
+      "Thoughts come and go like ripples on water.",
+      "Creating space between thought and action.",
+      "You are observing the urge, not obeying it.",
+      "Uncertainty can be uncomfortable, and that's okay.",
+      "Let the thought be there without engaging.",
+      "Notice the impulse to fix or check.",
+      "Stay curious about the sensation.",
+      "You are in control of your response.",
+      "Nothing needs to be settled this very second.",
+      "You’ve created space for over 45 seconds.",
+      "Just notice the urge without rushing to act.",
+      "Almost there — resting in the pause.",
+      "Stay present with this final breath.",
+      "You completed the pause."
+    ]
+  },
+  "step6": {
+    "title": "You Made Space.",
+    "subtitle": "The goal wasn't to make the urge disappear. It was to give yourself a moment before responding.",
+    "question": "What did you notice?",
+    "reflections": {
+      "thought_there": "The thought was still there",
+      "felt_urge": "I felt an urge to respond",
+      "uncomfortable": "The uncertainty felt uncomfortable",
+      "could_wait": "I could wait without answering it right away"
+    },
+    "btn_continue": "Continue"
+  },
+  "step7": {
+    "eyebrow": "OCD CYCLE",
+    "title": "Where the Pause Fits",
+    "subtitle": "OCD creates a strong pull to respond immediately to doubt.",
+    "node_doubt": "Doubt / Intrusive Thought",
+    "node_urge": "Urge to Respond",
+    "space_tag": "THE 60-SECOND PAUSE",
+    "space_title": "This is the space you just practiced.",
+    "node_compulsion": "Compulsive Response",
+    "node_relief": "Temporary Relief → Doubt Returns",
+    "detail": "A pause gives you a moment before automatically following that pull.",
+    "btn_try_another": "Try Another Scenario"
+  },
+  "step8": {
+    "eyebrow": "SCENARIO 2",
+    "title": "Practice Transfer",
+    "subtitle": "Imagine you’ve just sent an important message.",
+    "visual_line1": "You press send and close the conversation.",
+    "visual_thought": "“Did I say something wrong? Maybe I should read it again.”",
+    "visual_line2": "The same pattern: Thought → Urge → Pause → Choice.",
+    "btn_practice": "Practice Pause (60s)"
+  },
+  "step9": {
+    "title": "An Urge is Not an Instruction.",
+    "subtitle": "You don’t have to answer every urge immediately. A little space can create a different starting point.",
+    "cadence_pause": "PAUSE",
+    "cadence_notice": "NOTICE",
+    "cadence_choose": "CHOOSE",
+    "btn_continue": "Continue"
+  }
+}

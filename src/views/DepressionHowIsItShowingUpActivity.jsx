@@ -501,7 +501,7 @@ export default function DepressionHowIsItShowingUpActivity({ onBack, onNavigate,
                     Depression doesn't look the same for everyone.
                   </p>
                   <p style={{ margin: 0 }}>
-                    Sometimes it's what you <strong>feel</strong>. Sometimes it's what you <strong>think</strong>. Sometimes it's what your <strong>body does</strong> — or what you <strong>stop doing</strong>.
+                    Sometimes it's what you <strong>feel</strong>. Sometimes it's what you <strong>think</strong>. Sometimes it's what your <strong>body does</strong>, or what you <strong>stop doing</strong>.
                   </p>
                   <p style={{ margin: 0, color: '#1C1917', fontWeight: 500 }}>
                     Let's see what it looks like for you.
@@ -1357,7 +1357,7 @@ export default function DepressionHowIsItShowingUpActivity({ onBack, onNavigate,
                     Depression can make everything feel like one big blur.
                   </p>
                   <p style={{ margin: 0 }}>
-                    Breaking it down helps you see what’s actually happening — and that gives us somewhere to start.
+                    Breaking it down helps you see what’s actually happening, and that gives us somewhere to start.
                   </p>
                 </div>
 

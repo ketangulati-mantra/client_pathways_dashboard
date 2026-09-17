@@ -1,0 +1,100 @@
+{
+  "header_back": "Indietro",
+  "header_history": "Storia",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "CONTROLLO DELL'UMORE OSSESSIVO-COMPULSIVO",
+    "title": "Come ti senti in questo momento?",
+    "subtitle": "Fai una foto veloce. Non c'è una risposta giusta.",
+    "levels": {
+      "l1_title": "1 — Molto basso",
+      "l1_sub": "Sentirsi pesante, sopraffatto o esaurito",
+      "l2_title": "2 — Basso",
+      "l2_sub": "Inquieto, teso o a bassa energia",
+      "l3_title": "3 — Stabile / Neutro",
+      "l3_sub": "Bilanciato, ok, o prendendo le cose come vengono",
+      "l4_title": "4 — Bene",
+      "l4_sub": "Libero, impegnato o per lo più a suo agio",
+      "l5_title": "5 — Molto bene",
+      "l5_sub": "Con i piedi per terra, energico o pacifico"
+    },
+    "btn_continue": "Continua"
+  },
+  "screen2": {
+    "badge": "PASSO 2 DI 4",
+    "title": "Quanto ti ha tormentato oggi il DOC?",
+    "subtitle": "Pensa alla quantità di attenzione, disagio o disagio che il DOC ha occupato oggi.",
+    "impact_l1": "Non molto — Silenzioso",
+    "impact_l2": "Lieve — gestibile",
+    "impact_l3": "Moderato — Evidente",
+    "impact_l4": "Significativo — Dirompente",
+    "impact_l5": "Molto — Alta presenza",
+    "scale_min": "1 = Non molto",
+    "scale_max": "5 = Molto",
+    "btn_back": "Indietro",
+    "btn_continue": "Continua"
+  },
+  "screen3": {
+    "badge": "PASSO 3 DI 4",
+    "title": "Cosa mi ha colpito oggi?",
+    "subtitle": "Scegli qualsiasi cosa che abbia fatto parte della tua esperienza.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Pensieri / dubbi intrusivi",
+      "CHECKING": "Impulso a controllare o a ripetere",
+      "MENTAL_REVIEW": "Riproduzione / analisi mentale",
+      "REASSURANCE": "Alla ricerca di certezza / rassicurazione",
+      "AVOIDANCE": "Evitare trigger o situazioni",
+      "HIGH_ANXIETY": "Forte disagio o ansia",
+      "PAUSED_URGE": "Sospeso o ritardo un rituale",
+      "FOCUSED_WELL": "Impegnato nelle attività quotidiane",
+      "NONE": "Nessuna di queste oggi"
+    },
+    "btn_back": "Indietro",
+    "btn_continue": "Continua"
+  },
+  "screen4": {
+    "badge": "PASSO 4 DI 4",
+    "title": "C'è qualcosa che vuoi ricordare?",
+    "subtitle": "Opzionale. Bastano poche parole.",
+    "placeholder": "Scrivi un biglietto...",
+    "btn_back": "Indietro",
+    "btn_save": "Salva il check-in",
+    "saving": "Salvando..."
+  },
+  "screen5": {
+    "badge": "✓ SALVATO",
+    "title": "Il momento di oggi.",
+    "subtitle": "Il tuo check-in è stato registrato nella tua timeline privata.",
+    "impact_label": "Impatto del DOC {{impact}} / 5",
+    "btn_view_moments": "Guarda i tuoi momenti",
+    "btn_done": "Fatto"
+  },
+  "history": {
+    "tab_moments": "Momenti",
+    "tab_trends": "Tendenze",
+    "today_title": "Il check-in di oggi",
+    "no_log_today": "Nessun check-in registrato per oggi.",
+    "btn_check_in_now": "Registra il check-in di oggi",
+    "btn_view_past": "Visualizza i check-in passati ({{count}})",
+    "btn_hide_past": "Nascondi i check-in passati",
+    "past_title": "Check-in passati",
+    "no_logs_title": "Nessun check-in ancora",
+    "no_logs_desc": "I tuoi registri privati e la tua cronologia emotiva appariranno qui.",
+    "today_tag": "OGGI",
+    "yesterday_tag": "IERI",
+    "modal_title": "Dettagli del check-in",
+    "modal_mood_label": "Livello d'umore",
+    "modal_impact_label": "Impatto del DOC",
+    "modal_experiences_label": "Esperienze",
+    "modal_note_label": "Nota personale",
+    "btn_edit": "Nota modifica",
+    "btn_delete": "Elimina voce",
+    "btn_close": "Chiudi",
+    "trends_14d": "14 giorni",
+    "trends_30d": "30 Giorni",
+    "trends_90d": "90 Giorni",
+    "trends_avg_mood": "Umore medio",
+    "trends_avg_impact": "Impatto medio del DOC",
+    "trends_total_entries": "Totale iscrizioni"
+  }
+}

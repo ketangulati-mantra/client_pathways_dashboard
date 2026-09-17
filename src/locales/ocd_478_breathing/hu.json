@@ -1,0 +1,55 @@
+{
+  "header_back": "Hátra",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "LÉGZÉS",
+    "subtitle": "Egy egyszerű ritmus, ami irányítja a légzésedet.",
+    "rhythm_badge": "Lélegezz be 4 · Tartsd 7 · Légzést kifújj 8 percig",
+    "label_how_long": "MENNYI IDŐ?",
+    "btn_begin": "Kezdjük"
+  },
+  "time_options": {
+    "opt_30s": "30 másodperc",
+    "opt_30s_hint": "2 ciklus · ≈ 38 másodperc",
+    "opt_1m": "1 perc",
+    "opt_1m_hint": "3 ciklus · ≈ 1 perc",
+    "opt_2m": "2 perc",
+    "opt_2m_hint": "6 ciklus · ≈ 2 perc",
+    "opt_3m": "3 perc",
+    "opt_3m_hint": "10 ciklus · ≈ 3 perc",
+    "opt_5m": "5 perc",
+    "opt_5m_hint": "16 ciklus · ≈ 5 perc"
+  },
+  "settling": {
+    "title": "Foglalj helyet",
+    "subcopy": "Szánj egy pillanatot."
+  },
+  "phases": {
+    "inhale_title": "Lélegezz be",
+    "inhale_sub": "Lélegezz lassan",
+    "hold_title": "Tartsd meg",
+    "hold_sub": "Maradj itt",
+    "exhale_title": "Légzést",
+    "exhale_sub": "Lassan lélegezz ki"
+  },
+  "reflection": {
+    "title": "Szép munka.",
+    "subtitle": "Szánj egy pillanatot, mielőtt továbblépsz. Figyeld meg, hogyan érzed magad most.",
+    "question": "Mit veszel észre?",
+    "choices": {
+      "settled": "Letelepedettebb",
+      "present": "Több jelenség",
+      "same": "Ugyanígy"
+    },
+    "btn_continue": "Folytatás"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "BELÉLEGZÉS 4",
+    "step_hold": "HOLD 7",
+    "step_exhale": "KILÉGZÉST 8",
+    "subtitle": "Térj vissza ehhez a gyakorlathoz, amikor szeretnél egy csendes pillanatot, hogy újraindítsd a figyelmed.",
+    "btn_continue": "Folytatás"
+  }
+}

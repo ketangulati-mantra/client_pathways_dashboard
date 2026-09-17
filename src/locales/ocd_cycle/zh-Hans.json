@@ -1,0 +1,155 @@
+{
+  "header_back": "返回",
+  "brand": "强迫咒语",
+  "hero": {
+    "title": "在强迫症循环中",
+    "subtitle": "看看一个想法如何演变成一个循环。"
+  },
+  "stages": {
+    "step_experience": "01 体验",
+    "step_recognize": "02 认出",
+    "step_explore": "03 探索",
+    "step_practice": "04 通知",
+    "step_takeaway": "05 摘要"
+  },
+  "loop": {
+    "stages": {
+      "thought": "思想",
+      "uncertainty": "不确定性",
+      "response": "反响",
+      "relief": "地形"
+    },
+    "cycle_1": {
+      "thought": "“如果我没锁门呢？”",
+      "uncertainty": "“我真的锁上了吗？”",
+      "response": "“再检查一次。”",
+      "relief": "“好吧。我感觉好多了。”"
+    },
+    "cycle_2": {
+      "thought": "“等等......但我真的检查得很清楚吗？”",
+      "uncertainty": "“我需要确定。”",
+      "response": "“再检查一次。”",
+      "relief": "“暂时的缓解......”"
+    },
+    "notice_prompt": "你注意到了吗？",
+    "notice_detail": "那种如释重负的感觉是真实的，但怀疑又回来了。",
+    "action_prompt": "看看是什么改变了→"
+  },
+  "scenarios": {
+    "heading": "现在让它成为你的。",
+    "subheading": "选择一个熟悉的场景，观看它在循环中移动。",
+    "checking": {
+      "name": "跳牌",
+      "phrase": "“如果我没锁门呢？”",
+      "thought": "“如果我没锁门呢？”",
+      "uncertainty": "“我真的锁上了吗？”",
+      "response": "“再检查一下锁。”",
+      "relief": "“好吧，现在感觉安全。”",
+      "return": "“等等......我检查得够清楚了吗？”",
+      "takeaway_quote": "我注意到检查会很快缓解，但怀疑又会回来。",
+      "takeaway_action": "下次怀疑出现时，先停下来注意这个冲动，然后自动去检查。"
+    },
+    "responsibility": {
+      "name": "责任",
+      "phrase": "“如果我犯了严重错误怎么办？”",
+      "thought": "“如果我犯了严重错误怎么办？”",
+      "uncertainty": "“我必须确定。”",
+      "response": "“在脑海中反复回放每一个细节。”",
+      "relief": "“刚开始看起来还好。”",
+      "return": "“如果我漏掉了什么细节怎么办？”",
+      "takeaway_quote": "我注意到脑海中回放试图制造确定性，但反而拖延了怀疑。",
+      "takeaway_action": "下次重玩的冲动出现时，承认怀疑而非分析。"
+    },
+    "contamination": {
+      "name": "污染",
+      "phrase": "“如果我碰到被污染的东西怎么办？”",
+      "thought": "“如果那个表面不干净怎么办？”",
+      "uncertainty": "“我感到不舒服，也被污染了。”",
+      "response": "“彻底洗净。”",
+      "relief": "“我现在感觉很干净。”",
+      "return": "“我洗得够干净吗？”",
+      "takeaway_quote": "我注意到洗澡能缓解最初的不适，但也会带来下一个疑虑。",
+      "takeaway_action": "下次冲动袭来时，先给自己一点时间去感受那种感觉。"
+    },
+    "symmetry": {
+      "name": "恰到好处",
+      "phrase": "“如果我做得不够好怎么办？”",
+      "thought": "“这感觉不平衡。”",
+      "uncertainty": "“可能会发生不好的事，或者感觉不对劲。”",
+      "response": "“重做，直到你明白为止。”",
+      "relief": "“现在感觉很对。”",
+      "return": "“我上次做对了吗？”",
+      "takeaway_quote": "我注意到重复一个动作以获得“刚刚好”的感觉能让冲动保持活跃。",
+      "takeaway_action": "下次当某件事感觉不完整时，注意重做的冲动，但不要立刻重复。"
+    },
+    "doubt_return_label": "怀疑又回来了："
+  },
+  "snapshot": {
+    "title": "你的环路快照",
+    "thought_label": "思想",
+    "uncertainty_label": "不确定性",
+    "response_label": "反响",
+    "effect_label": "短期影响",
+    "next_label": "接下来会发生什么",
+    "replay_btn": "重玩场景"
+  },
+  "response_point": {
+    "heading": "这里的模式变得有趣。",
+    "subheading": "你可能无法控制思想或不确定性。但你可以注意到接下来会发生什么。",
+    "choice_check": "再查一次",
+    "choice_notice": "注意那种冲动",
+    "check_result_title": "自动反应",
+    "check_result_body": "检查带来了释然。怀疑又回来了。",
+    "notice_result_title": "停顿",
+    "notice_result_body": "这种不确定感可能仍然让人感到不舒服。察觉到这种冲动后，你会有片刻时间自动回应。",
+    "try_again": "想再看看区别吗？"
+  },
+  "compulsions": {
+    "statement": "强迫行为并不总是你会做的。",
+    "tab_outward": "向外",
+    "tab_inward": "内向",
+    "outward_items": {
+      "0": "跳牌",
+      "1": "洗涤",
+      "2": "重复"
+    },
+    "inward_items": {
+      "0": "重赛",
+      "1": "书评",
+      "2": "分析",
+      "3": "寻求确定"
+    }
+  },
+  "recognition": {
+    "heading": "你可能会注意到这个模式......",
+    "pattern_1": {
+      "step1": "检查",
+      "step2": "地形",
+      "step3": "怀疑"
+    },
+    "pattern_2": {
+      "step1": "重赛",
+      "step2": "确定性",
+      "step3": "怀疑"
+    },
+    "pattern_3": {
+      "step1": "避免",
+      "step2": "地形",
+      "step3": "恐惧回归"
+    }
+  },
+  "takeaway": {
+    "tag": "你的收获",
+    "main_headline": "念头不是循环。",
+    "sub_headline": "注意接下来发生了什么。",
+    "closing": "理解这种模式是现实生活中识别它的第一步。"
+  },
+  "next_step": {
+    "prompt_title": "准备好迎接接下来的挑战了吗？",
+    "prompt_desc": "将此活动标记为已完成，以保存进度并继续你的路径。",
+    "btn_complete": "标记活动已完成",
+    "saving": "拯救......",
+    "completed_badge": "活动已完成",
+    "error_save": "我们现在无法保存你的活动完成。你的进度已保存在本地。"
+  }
+}

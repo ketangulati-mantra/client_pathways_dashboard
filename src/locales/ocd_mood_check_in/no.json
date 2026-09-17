@@ -1,0 +1,100 @@
+{
+  "header_back": "Tilbake",
+  "header_history": "Historie",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "OCD-STEMNINGSSJEKK",
+    "title": "Hvordan føler du deg akkurat nå?",
+    "subtitle": "Ta et raskt bilde. Det finnes ikke noe riktig svar.",
+    "levels": {
+      "l1_title": "1 — Veldig lavt",
+      "l1_sub": "Føler meg tung, overveldet eller utmattet",
+      "l2_title": "2 — Lav",
+      "l2_sub": "Urolig, anstrengt eller lavenergisk",
+      "l3_title": "3 — Stabil / Nøytral",
+      "l3_sub": "Balansert, ok, eller ta ting som de kommer",
+      "l4_title": "4 — Bra",
+      "l4_sub": "Klar, engasjert, eller stort sett avslappet",
+      "l5_title": "5 — Veldig bra",
+      "l5_sub": "Jordet, energisk eller fredelig"
+    },
+    "btn_continue": "Fortsett"
+  },
+  "screen2": {
+    "badge": "STEG 2 AV 4",
+    "title": "Hvor mye har OCD vært i tankene dine i dag?",
+    "subtitle": "Tenk på hvor mye oppmerksomhet, uro eller forstyrrelse OCD har fått i dag.",
+    "impact_l1": "Ikke mye — Stille",
+    "impact_l2": "Mild — Håndterbar",
+    "impact_l3": "Moderat — Merkbar",
+    "impact_l4": "Betydelig — Forstyrrende",
+    "impact_l5": "Mye — Høy tilstedeværelse",
+    "scale_min": "1 = Ikke mye",
+    "scale_max": "5 = Mye",
+    "btn_back": "Tilbake",
+    "btn_continue": "Fortsett"
+  },
+  "screen3": {
+    "badge": "TRINN 3 AV 4",
+    "title": "Hva skilte seg ut i dag?",
+    "subtitle": "Velg hva som helst som var en del av din opplevelse.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Påtrengende tanker / tvil",
+      "CHECKING": "Trang til å sjekke eller gjenta",
+      "MENTAL_REVIEW": "Mental gjenspilling / analyse",
+      "REASSURANCE": "Søker sikkerhet / trygghet",
+      "AVOIDANCE": "Unngå triggere eller situasjoner",
+      "HIGH_ANXIETY": "Høy stress eller angst",
+      "PAUSED_URGE": "Pauset eller utsatt et ritual",
+      "FOCUSED_WELL": "Engasjert i daglige oppgaver",
+      "NONE": "Ingen av disse i dag"
+    },
+    "btn_back": "Tilbake",
+    "btn_continue": "Fortsett"
+  },
+  "screen4": {
+    "badge": "STEG 4 AV 4",
+    "title": "Er det noe du vil huske?",
+    "subtitle": "Valgfritt. Noen få ord er nok.",
+    "placeholder": "Skriv en...",
+    "btn_back": "Tilbake",
+    "btn_save": "Lagre innsjekking",
+    "saving": "Redde..."
+  },
+  "screen5": {
+    "badge": "✓ REDDET",
+    "title": "Dagens øyeblikk.",
+    "subtitle": "Innsjekkingen din er registrert på din private tidslinje.",
+    "impact_label": "OCD impact {{impact}} / 5",
+    "btn_view_moments": "Se dine øyeblikk",
+    "btn_done": "Ferdig"
+  },
+  "history": {
+    "tab_moments": "Øyeblikk",
+    "tab_trends": "Trender",
+    "today_title": "Dagens innsjekk",
+    "no_log_today": "Ingen innsjekking for i dag ennå.",
+    "btn_check_in_now": "Noter dagens innsjekk",
+    "btn_view_past": "Se tidligere innsjekkinger ({{count}})",
+    "btn_hide_past": "Skjul tidligere innsjekkinger",
+    "past_title": "Tidligere innsjekkinger",
+    "no_logs_title": "Ingen innsjekk ennå",
+    "no_logs_desc": "Dine private logger og følelsesmessige tidslinje vil vises her.",
+    "today_tag": "I DAG",
+    "yesterday_tag": "I GÅR",
+    "modal_title": "Innsjekkingsdetalj",
+    "modal_mood_label": "Humørnivå",
+    "modal_impact_label": "OCD-påvirkning",
+    "modal_experiences_label": "Erfaringer",
+    "modal_note_label": "Personlig notat",
+    "btn_edit": "Redigeringsnotat",
+    "btn_delete": "Slett oppføring",
+    "btn_close": "Lukk",
+    "trends_14d": "14 dager",
+    "trends_30d": "30 dager",
+    "trends_90d": "90 dager",
+    "trends_avg_mood": "Gjennomsnittlig humør",
+    "trends_avg_impact": "Gjennomsnittlig OCD-påvirkning",
+    "trends_total_entries": "Totalt antall påmeldinger"
+  }
+}

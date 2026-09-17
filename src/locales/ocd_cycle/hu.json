@@ -1,0 +1,155 @@
+{
+  "header_back": "Hátra",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Egy OCD körben",
+    "subtitle": "Nézd meg, hogyan alakulhat egy gondolat körforgáská."
+  },
+  "stages": {
+    "step_experience": "01 Tapasztalat",
+    "step_recognize": "02 Elismerés",
+    "step_explore": "03 Fedezd fel",
+    "step_practice": "04 Értesítés",
+    "step_takeaway": "05 Takeaway"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Gondolat",
+      "uncertainty": "Bizonytalanság",
+      "response": "Válasz",
+      "relief": "Felmentés"
+    },
+    "cycle_1": {
+      "thought": "\"Mi van, ha nem zárnám be az ajtót?\"",
+      "uncertainty": "\"Tényleg bezártam?\"",
+      "response": "\"Nézd meg újra.\"",
+      "relief": "\"Rendben. Jobban érzem magam.\""
+    },
+    "cycle_2": {
+      "thought": "\"Várj... de tényleg ellenőriztem rendesen?\"",
+      "uncertainty": "\"Biztosnak kell lennem.\"",
+      "response": "\"Még egyszer ellenőrizz.\"",
+      "relief": "\"Átmeneti megkönnyebbülés...\""
+    },
+    "notice_prompt": "Észrevetted?",
+    "notice_detail": "A megkönnyebbülés valódi volt, de a kételye visszatért.",
+    "action_prompt": "Nézd meg, mi változtatott meg →"
+  },
+  "scenarios": {
+    "heading": "Most tedd a tiéd.",
+    "subheading": "Válassz egy felismerhető forgatókönyvet, hogy nézd, ahogy halad a hurkon.",
+    "checking": {
+      "name": "Ellenőrzés",
+      "phrase": "\"Mi van, ha nem zárnám be az ajtót?\"",
+      "thought": "\"Mi van, ha nem zárnám be az ajtót?\"",
+      "uncertainty": "\"Tényleg bezártam?\"",
+      "response": "\"Nézd meg újra a zárat.\"",
+      "relief": "\"Rendben, most biztonságnak érzem.\"",
+      "return": "\"Várj... jól ellenőriztem?\"",
+      "takeaway_quote": "Észrevettem, hogy az ellenőrzés gyors enyhülést hoz, de a kétely visszatér.",
+      "takeaway_action": "Legközelebb, amikor a kétely megjelenik, állj meg, és vedd észre a késztetést, mielőtt automatikusan ellenőriznéd."
+    },
+    "responsibility": {
+      "name": "Felelősség",
+      "phrase": "\"Mi van, ha komoly hibát követnék el?\"",
+      "thought": "\"Mi van, ha komoly hibát követnék el?\"",
+      "uncertainty": "\"Biztosan tudnom kell.\"",
+      "response": "\"Játssza újra minden részletet a fejemben.\"",
+      "relief": "\"Egy pillanatra rendben van.\"",
+      "return": "\"Mi van, ha kihagyok egy részletet?\"",
+      "takeaway_quote": "Észrevettem, hogy a mentális újrajátszás megpróbál bizonyosságot teremteni, de meghosszabbítja a kételyt.",
+      "takeaway_action": "Legközelebb, amikor újra játszani akarsz, ismerd el a kételyt anélkül, hogy elemeznéd."
+    },
+    "contamination": {
+      "name": "Szennyeződés",
+      "phrase": "\"Mi van, ha valami szennyezett dologhoz nyúlnék?\"",
+      "thought": "\"Mi van, ha az a felület nem tiszta?\"",
+      "uncertainty": "\"Kényelmetlenül és szennyezett vagyok.\"",
+      "response": "\"Mosd meg alaposan.\"",
+      "relief": "\"Most tisztának érzem magam.\"",
+      "return": "\"Elég jól mostam?\"",
+      "takeaway_quote": "Észrevettem, hogy a mosás enyhíti az első kellemetlenséget, de felveti a következő kételyt.",
+      "takeaway_action": "Legközelebb, amikor megjön a mosakodás késztetése, adj magadnak egy kis időt, hogy először észrevedd az érzést."
+    },
+    "symmetry": {
+      "name": "Pont tökéletes",
+      "phrase": "\"Mi van, ha nem csinálom pontosan jól?\"",
+      "thought": "\"Ez nem tűnik kiegyensúlyozottnak.\"",
+      "uncertainty": "\"Valami rossz történhet vagy rossznak érezhet.\"",
+      "response": "\"Ismételd újra, amíg össze nem áll.\"",
+      "relief": "\"Most helyesnek tűnik.\"",
+      "return": "\"Jól csináltam legutóbb?\"",
+      "takeaway_quote": "Észrevettem, hogy egy cselekvés ismétlése egy \"pont jó\" érzésért életben tartja a vágyat.",
+      "takeaway_action": "Legközelebb, amikor valami hiányosnak tűnik, vedd észre a késztetést a megismételés nélkül, hogy azonnal ismételnéd."
+    },
+    "doubt_return_label": "A kétség visszatér:"
+  },
+  "snapshot": {
+    "title": "A te Loop Snapshot",
+    "thought_label": "Gondolat",
+    "uncertainty_label": "Bizonytalanság",
+    "response_label": "Válasz",
+    "effect_label": "Rövid távú hatás",
+    "next_label": "Mi történik ezután",
+    "replay_btn": "Visszajátszás forgatókönyv"
+  },
+  "response_point": {
+    "heading": "Itt válik érdekessé a minta is.",
+    "subheading": "Lehet, hogy nem irányítod a gondolatot vagy a bizonytalanságot. De észreveheted, mi történik ezután.",
+    "choice_check": "Nézd meg újra",
+    "choice_notice": "Figyeld meg a késztetést",
+    "check_result_title": "Az automatikus válasz",
+    "check_result_body": "Az ellenőrzés megkönnyebbülést hozott. A kétely visszatért.",
+    "notice_result_title": "A szünet",
+    "notice_result_body": "A bizonytalanság még mindig kényelmetlen lehet. Ha észreveszed a késztetést, egy pillanatot ad, mielőtt automatikusan reagálnál.",
+    "try_again": "Újra látni akarod a különbséget?"
+  },
+  "compulsions": {
+    "statement": "A kényszerek nem mindig olyasmiek, amiket csinálsz.",
+    "tab_outward": "Külső",
+    "tab_inward": "Befelé",
+    "outward_items": {
+      "0": "Ellenőrzés",
+      "1": "Mosás",
+      "2": "Ismétlés"
+    },
+    "inward_items": {
+      "0": "Visszajátszás",
+      "1": "Kritikák",
+      "2": "Elemzés",
+      "3": "Bizonyosságot keresve"
+    }
+  },
+  "recognition": {
+    "heading": "Észreveheted a mintát, hogy...",
+    "pattern_1": {
+      "step1": "Megvan",
+      "step2": "Felmentés",
+      "step3": "Kétely"
+    },
+    "pattern_2": {
+      "step1": "Visszajátszás",
+      "step2": "Bizonyosság",
+      "step3": "Kétely"
+    },
+    "pattern_3": {
+      "step1": "Kerüld el",
+      "step2": "Felmentés",
+      "step3": "A félelem visszatér"
+    }
+  },
+  "takeaway": {
+    "tag": "A lényeg",
+    "main_headline": "A gondolat nem a hurok.",
+    "sub_headline": "Figyeld meg, mi történik ezután.",
+    "closing": "A minta megértése az első lépés annak felismerése felé."
+  },
+  "next_step": {
+    "prompt_title": "Készen állsz a következő lépésre?",
+    "prompt_desc": "Jelöld meg ezt a tevékenységet teljesítettnek, hogy megmentsd a haladásodat és folytasd az utadat.",
+    "btn_complete": "Jelöld meg az aktivitást késznek",
+    "saving": "Megmentem...",
+    "completed_badge": "Tevékenység befejezve",
+    "error_save": "Most nem tudtuk megmenteni az aktivitás teljesítését. A haladásod helyben mentve van."
+  }
+}

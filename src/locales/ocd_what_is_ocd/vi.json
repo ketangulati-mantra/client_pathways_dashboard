@@ -1,0 +1,83 @@
+{
+  "header_back": "Quay lại",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "OCD là gì?",
+    "subtitle": "Hiểu OCD là gì, nó có thể xuất hiện như thế nào, và tại sao nó lại có thể khiến bạn cảm thấy thuyết phục đến vậy."
+  },
+  "video": {
+    "eyebrow": "BẮT ĐẦU TỪ ĐÂY",
+    "title": "Hãy xem phần giới thiệu ngắn về OCD này."
+  },
+  "basics": {
+    "eyebrow": "NHỮNG ĐIỀU CƠ BẢN",
+    "headline": "OCD không chỉ là những suy nghĩ không mong muốn.",
+    "obsession_title": "NHỮNG ÁM ẢNH",
+    "obsession_desc": "Những suy nghĩ, hình ảnh, nghi ngờ hoặc thôi thúc không mong muốn mà bạn có thể cảm thấy khó gạt bỏ.",
+    "compulsion_title": "NHỮNG HÀNH VI CƯỠNG CHẾ",
+    "compulsion_desc": "Những hành động hoặc phản ứng tinh thần mà bạn cảm thấy bị thúc đẩy lặp lại để giảm bớt khó chịu hoặc cảm thấy chắc chắn."
+  },
+  "themes": {
+    "eyebrow": "CHỦ ĐỀ CHUNG",
+    "headline": "OCD có thể xuất hiện dưới nhiều hình thức khác nhau.",
+    "subtext": "Đây là những chủ đề chung, không phải chẩn đoán riêng biệt. Một người có thể trải qua nhiều hơn một lần.",
+    "disclaimer": "Đây chỉ là một vài ví dụ.",
+    "items": {
+      "contamination": {
+        "name": "Sự ô nhiễm",
+        "desc": "Nỗi sợ về vi trùng, bệnh tật, bụi bẩn hoặc ô nhiễm."
+      },
+      "harm": {
+        "name": "Tổn hại",
+        "desc": "Những nỗi sợ không mong muốn về việc gây ra hoặc chịu trách nhiệm về tổn hại."
+      },
+      "checking": {
+        "name": "Kiểm tra",
+        "desc": "Kiểm tra liên tục các vấn đề an toàn, sai sót, cửa, thiết bị hoặc các vấn đề khác."
+      },
+      "symmetry": {
+        "name": "Đối xứng & \"vừa vặn\"",
+        "desc": "Cảm giác rằng mọi thứ cần phải cân bằng, chính xác hoặc vừa phải."
+      },
+      "taboo": {
+        "name": "Những suy nghĩ xâm nhập / Cấm kỵ",
+        "desc": "Những suy nghĩ không mong muốn liên quan đến các chủ đề tình dục, tôn giáo, hung hăng hoặc các chủ đề cấm kỵ khác."
+      },
+      "responsibility": {
+        "name": "Trách nhiệm & Nghi ngờ",
+        "desc": "Nghi ngờ dai dẳng về sai lầm, trách nhiệm, hoặc liệu điều gì đó có thực sự chắc chắn hay không."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "BẠN CÓ THỂ NHẬN RA CÁI NÀY",
+    "headline": "OCD có thể khiến sự bất định trở nên không thể để yên.",
+    "example_1": {
+      "thought": "\"Tôi có khóa cửa không?\"",
+      "action": "Bạn kiểm tra. Bạn cảm thấy nhẹ nhõm.",
+      "loop": "Rồi: \"Nhưng tôi có thực sự kiểm tra không?\""
+    },
+    "example_2": {
+      "thought": "\"Nếu tôi phạm sai lầm khủng khiếp thì sao?\"",
+      "action": "Bạn sẽ xem lại những gì đã xảy ra.",
+      "loop": "Bạn tìm kiếm sự trấn an."
+    }
+  },
+  "takeaway": {
+    "quote": "Ai cũng có những suy nghĩ không mong muốn. \n\nOCD có thể khiến những suy nghĩ đó trở thành điều bạn phải giải quyết.",
+    "sub": "Hiểu được mô hình đó là bước đầu tiên quan trọng."
+  },
+  "next_step": {
+    "eyebrow": "TIẾP THEO TRONG HÀNH TRÌNH CỦA BẠN",
+    "headline": "Bây giờ hãy cùng xem vòng lặp OCD có thể tiếp tục diễn ra như thế nào.",
+    "btn_explore": "Khám phá chu kỳ OCD →"
+  },
+  "completion": {
+    "eyebrow": "Khám phá xong chưa?",
+    "btn_complete": "Đánh dấu Hoạt động là Đã hoàn thành →",
+    "saving": "Tiết kiệm...",
+    "completed_badge": "Hoạt động đã hoàn thành",
+    "error_save": "Chúng tôi không thể lưu lại việc hoàn thành hoạt động của bạn ngay lúc này. Tiến trình của bạn đã được lưu cục bộ."
+  }
+}

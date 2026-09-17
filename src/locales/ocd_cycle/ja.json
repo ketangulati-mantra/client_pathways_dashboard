@@ -1,0 +1,155 @@
+{
+  "header_back": "戻る",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "OCDループの中で",
+    "subtitle": "思考がどのようにしてサイクルに変わるかを見てみましょう。"
+  },
+  "stages": {
+    "step_experience": "01 経験",
+    "step_recognize": "02 認識",
+    "step_explore": "03 エクスプローブ",
+    "step_practice": "04 通知",
+    "step_takeaway": "05 総括"
+  },
+  "loop": {
+    "stages": {
+      "thought": "思想",
+      "uncertainty": "不確実性",
+      "response": "反応",
+      "relief": "地形"
+    },
+    "cycle_1": {
+      "thought": "「もしドアに鍵をかけなかったら?」",
+      "uncertainty": "「本当に鍵をかけたのか?」",
+      "response": "「もう一度確認しろ。」",
+      "relief": "「わかった。気分が良くなった。」"
+    },
+    "cycle_2": {
+      "thought": "「待って...でも本当にちゃんと確認した?」",
+      "uncertainty": "「確かめたいんだ。」",
+      "response": "「もう一度確認しろ。」",
+      "relief": "「一時的な安堵...」"
+    },
+    "notice_prompt": "気づいた?",
+    "notice_detail": "安堵は本物だったが、疑念は戻ってきた。",
+    "action_prompt": "何が変わったのか見てみましょう→"
+  },
+  "scenarios": {
+    "heading": "さあ、それをあなたのものにしてください。",
+    "subheading": "認識できるシナリオを選んで、ループを通過する様子を見てください。",
+    "checking": {
+      "name": "チェック",
+      "phrase": "「もしドアに鍵をかけなかったら?」",
+      "thought": "「もしドアに鍵をかけなかったら?」",
+      "uncertainty": "「本当に鍵をかけたのか?」",
+      "response": "「もう一度鍵を確認しろ。」",
+      "relief": "「うん、今のところは安全に感じる。」",
+      "return": "「待って...ちゃんと確認した?」",
+      "takeaway_quote": "確認するとすぐに楽になることに気づきましたが、また疑念が戻ってきます。",
+      "takeaway_action": "次に疑念が浮かんだときは、一旦立ち止まって衝動に気づき、自動的に確認してください。"
+    },
+    "responsibility": {
+      "name": "責任",
+      "phrase": "「もし私が重大な間違いを犯したらどうしよう?」",
+      "thought": "「もし私が重大な間違いを犯したらどうしよう?」",
+      "uncertainty": "「確かめたいんだ。」",
+      "response": "「頭の中で細部を全部再生して。」",
+      "relief": "「しばらくは大丈夫そうだ。」",
+      "return": "「もし何か見落としていたら?」",
+      "takeaway_quote": "頭の中で再生すると確信を持たせようとしますが、疑念を長引かせてしまうことに気づきました。",
+      "takeaway_action": "次に再プレイしたい衝動が湧いてきたときは、疑念を分析せずに認めましょう。"
+    },
+    "contamination": {
+      "name": "汚染",
+      "phrase": "「もし汚染されたものに触れたらどうする?」",
+      "thought": "「もしあの表面がきれいじゃなかったら?」",
+      "uncertainty": "「不快で汚染された気分だ。」",
+      "response": "「よく洗え。」",
+      "relief": "「今はきれいに感じている。」",
+      "return": "「ちゃんと洗えたか?」",
+      "takeaway_quote": "洗うことは最初の不快感を和らげるものの、次の疑念を生むことに気づきました。",
+      "takeaway_action": "次に洗いたい衝動が襲ったら、まずその感覚に気づく時間を自分に与えてください。"
+    },
+    "symmetry": {
+      "name": "ちょうどいい",
+      "phrase": "「もしこれを正しくやれなかったらどうしよう?」",
+      "thought": "「バランスが取れていない気がする。」",
+      "uncertainty": "「何か悪いことが起きたり、何か違和感が出たりするかもしれない。」",
+      "response": "「理解できるまでやり直せ。」",
+      "relief": "「今はそれが正しい気がする。」",
+      "return": "「前回、ちゃんとできたかな?」",
+      "takeaway_quote": "「ちょうどいい」感覚のために同じ行動を繰り返すことで、その衝動が持続することに気づきました。",
+      "takeaway_action": "次に何かが未完成に感じたら、すぐに繰り返さずにやり直したい衝動に気づきましょう。"
+    },
+    "doubt_return_label": "疑念が戻ってきます:"
+  },
+  "snapshot": {
+    "title": "あなたのループスナップショット",
+    "thought_label": "思想",
+    "uncertainty_label": "不確実性",
+    "response_label": "反応",
+    "effect_label": "短期的影響",
+    "next_label": "その後の展開",
+    "replay_btn": "リプレイシナリオ"
+  },
+  "response_point": {
+    "heading": "ここからパターンが面白くなります。",
+    "subheading": "思考や不確実性をコントロールできないかもしれません。しかし、次に何が起こるかは気づくことができます。",
+    "choice_check": "もう一度確認してください",
+    "choice_notice": "衝動に気づいてください",
+    "check_result_title": "自動応答",
+    "check_result_body": "確認は安堵をもたらした。疑念が戻ってきた。",
+    "notice_result_title": "間",
+    "notice_result_body": "その不確かさはまだ居心地が悪いかもしれません。その衝動に気づくと、自動的に返事をする前に少し時間が取れます。",
+    "try_again": "もう一度違いを見たいですか?"
+  },
+  "compulsions": {
+    "statement": "強迫行為は必ずしも行うものではありません。",
+    "tab_outward": "外側",
+    "tab_inward": "内側へ",
+    "outward_items": {
+      "0": "チェック",
+      "1": "洗浄",
+      "2": "繰り返し"
+    },
+    "inward_items": {
+      "0": "再試合",
+      "1": "レビュー",
+      "2": "分析",
+      "3": "確実性を求める"
+    }
+  },
+  "recognition": {
+    "heading": "パターンに気づくかもしれません...",
+    "pattern_1": {
+      "step1": "チェック",
+      "step2": "地形",
+      "step3": "疑い"
+    },
+    "pattern_2": {
+      "step1": "再試合",
+      "step2": "確実性",
+      "step3": "疑い"
+    },
+    "pattern_3": {
+      "step1": "避けてください",
+      "step2": "地形",
+      "step3": "恐怖が戻ってくる"
+    }
+  },
+  "takeaway": {
+    "tag": "あなたの持ち帰り",
+    "main_headline": "思考はループではありません。",
+    "sub_headline": "次に何が起こるか注目してください。",
+    "closing": "パターンを理解することが、現実生活でそれを認識するための第一歩です。"
+  },
+  "next_step": {
+    "prompt_title": "次に何が待っているか、準備はいいですか?",
+    "prompt_desc": "このアクティビティを完了したとマークして進行状況を保存し、パスを続けてください。",
+    "btn_complete": "アクティビティを完了としてマークしてください",
+    "saving": "セーブ...",
+    "completed_badge": "活動完了",
+    "error_save": "今はアクティビティ完了を保存できませんでした。進行状況はローカルに保存されています。"
+  }
+}

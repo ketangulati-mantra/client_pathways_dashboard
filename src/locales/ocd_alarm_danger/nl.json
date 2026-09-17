@@ -1,0 +1,86 @@
+{
+  "header_back": "Achteruit",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "ACTIVITEIT 3",
+    "title": "KIJK OMHOOG.",
+    "subtitle": "HET ALARM IS NIET HET GEVAAR.",
+    "detail": "Een gevoel kan luid zijn zonder je het hele verhaal te vertellen.",
+    "btn_enter": "HIER KOMT →"
+  },
+  "screen2": {
+    "title_line1": "SOMS,",
+    "title_line2": "ONZEKERHEID IS GENOEG.",
+    "subtitle": "Tik op een zin om te zien hoe de detector reageert.",
+    "example1": "\"Wat als ik een fout heb gemaakt?\"",
+    "example2": "\"Wat als iets niet schoon genoeg is?\"",
+    "example3": "\"Wat als ik het niet helemaal zeker kan weten?\"",
+    "btn_activates": "HET SIGNAAL ACTIVEERT →"
+  },
+  "screen3": {
+    "ambient_heart": "HARTKLOPPEND",
+    "ambient_tension": "SPANNING",
+    "ambient_attention": "AANDACHT",
+    "ambient_urge": "URGE",
+    "title": "DAT GEVOEL KAN LUID ZIJN.",
+    "subtitle": "Het gevoel is echt. De boodschap die het lijkt te dragen is niet automatisch het hele verhaal.",
+    "btn_look_closer": "KIJK BETER →"
+  },
+  "screen4": {
+    "tag_left": "[ SIGNAAL // GEVOELIGHEID ]",
+    "tag_right": "[ REACTIE // INTERPRETATIE ]",
+    "title": "KIJK BETER.",
+    "subtitle": "Sleep overal naartoe om de detector vanuit elke hoek te inspecteren.",
+    "detail": "Je kunt het signaal opmerken zonder meteen tot een conclusie te komen.",
+    "btn_continue": "GA VERDER →"
+  },
+  "screen5": {
+    "title": "SIGNAAL ≠ OORDEEL",
+    "subtitle": "Een sterk gevoel kan echt zijn zonder automatisch te bewijzen wat het lijkt te zeggen.",
+    "col_feel_title": "WAT IK VOEL",
+    "feel_anxious": "Angstig.",
+    "feel_uncertain": "Onzeker.",
+    "feel_tense": "Spannend.",
+    "feel_pulled": "Getrokken om te controleren.",
+    "col_conclude_title": "WAT IK CONCLUDEER",
+    "conclude_wrong": "\"Er moet iets mis zijn.\"",
+    "conclude_make_sure": "\"Ik moet het zeker weten.\"",
+    "conclude_certainty": "\"Ik heb zekerheid nodig.\"",
+    "btn_next": "WAT GEBEURT ER NU? →"
+  },
+  "screen6": {
+    "title": "SOMS KAN EEN REACTIE HET SIGNAAL EVEN STILMAKEN.",
+    "subtitle": "Tik om te zien hoe antwoorden met het signaal interageren.",
+    "item_check_title": "CHECK",
+    "item_check_quote": "\"Ik zorg er nog één keer voor.\"",
+    "item_ask_title": "VRAAG",
+    "item_ask_quote": "\"Ik zal iemand vragen wat die ervan vindt.\"",
+    "item_replay_title": "HERHALING",
+    "item_replay_quote": "\"Ik zal het nog eens in mijn hoofd doornemen.\"",
+    "item_avoid_title": "VERMIJD",
+    "item_avoid_quote": "\"Ik blijf weg van wat onzeker voelt.\"",
+    "btn_let_signal": "LAAT HET SIGNAAL ER →"
+  },
+  "screen7": {
+    "title": "LAAT HET SIGNAAL ER ZIJN.",
+    "subtitle": "Let op wat er gebeurt als je het niet meteen snel interpreteert.",
+    "btn_watch": "LET OP HET SIGNAAL",
+    "observing_format": "Observatiesignaal... ({{seconds}}s)",
+    "done_title": "HET SIGNAAL VERANDERDE.",
+    "done_sub": "Je hoefde het niet op te lossen.",
+    "btn_continue": "GA VERDER →"
+  },
+  "screen8": {
+    "title_line1": "EEN ALARM IS EEN SIGNAAL.",
+    "title_line2": "GEEN OORDEEL.",
+    "subtitle": "Let op het gevoel. Let op het verhaal dat je geest eraan toevoegt.",
+    "question": "DE VOLGENDE KEER DAT HET ALARM LUID WORDT, WAT VALT JE DAN ALS EERSTE OP?",
+    "opt_feeling": "HET GEVOEL",
+    "opt_thought": "DE GEDACHTE",
+    "opt_urge": "DE DRANG OM TE REAGEREN",
+    "feedback": "Blijf het verschil opmerken.",
+    "btn_saving": "REDDEN...",
+    "btn_continue": "GA VERDER →"
+  }
+}

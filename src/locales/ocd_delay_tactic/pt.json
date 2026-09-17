@@ -1,0 +1,107 @@
+{
+  "header_back": "Voltar",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "A pausa de 60 segundos",
+    "subtitle": "Às vezes, um impulso pode parecer algo que você precisa agir imediatamente. Vamos praticar criar um pouco de espaço antes de responder.",
+    "btn_begin": "Início"
+  },
+  "step2": {
+    "eyebrow": "CENÁRIO 1",
+    "title": "Vamos tentar um cenário",
+    "subtitle": "Imagine que você acabou de sair de casa.",
+    "visual_line1": "Você tranca a porta da frente e caminha em direção ao seu carro.",
+    "visual_thought": "\"Eu tranquei direito?\"",
+    "visual_line2": "Você percebe o impulso de se virar e verificar.",
+    "btn_continue": "Continue"
+  },
+  "step3": {
+    "eyebrow": "O IMPULSO",
+    "banner": "\"Confere mais uma vez.\"",
+    "subtitle": "Você percebe uma vontade de se virar para verificar.",
+    "question": "O que normalmente você se sentiria atraído a fazer?",
+    "responses": {
+      "check": "Verifique novamente",
+      "ask": "Peça garantias a alguém",
+      "goback": "Volte e confirme",
+      "wait": "Pausa e espera"
+    },
+    "btn_next": "Próximo"
+  },
+  "step4": {
+    "title": "Você não precisa responder ainda.",
+    "subtitle": "Nos próximos 60 segundos, vamos praticar criar um pequeno espaço entre o impulso e sua resposta.",
+    "cadence_pause": "PAUSA",
+    "cadence_notice": "AVISO",
+    "cadence_choose": "ESCOLHA",
+    "detail": "O objetivo não é fazer o pensamento desaparecer. É perceber o impulso sem responder imediatamente.",
+    "btn_start": "Pausa inicial de 60 segundos"
+  },
+  "step5": {
+    "badge": "O IMPULSO ESTÁ AQUI",
+    "prompts": {
+      "0": "Perceba o impulso assim que ele aparece.",
+      "1": "Você sente o chamado sem responder.",
+      "2": "Respire fundo e observe.",
+      "3": "O impulso é só uma sensação agora.",
+      "4": "Você não precisa resolver a incerteza imediatamente.",
+      "5": "Perceba onde você sente tensão no seu corpo.",
+      "6": "Pensamentos vêm e vão como ondas na água.",
+      "7": "Criando espaço entre pensamento e ação.",
+      "8": "Você está observando o impulso, não obedecendo.",
+      "9": "A incerteza pode ser desconfortável, e tudo bem.",
+      "10": "Deixe o pensamento estar presente sem se envolver.",
+      "11": "Perceba o impulso de consertar ou verificar.",
+      "12": "Fique curioso sobre a sensação.",
+      "13": "Você está no controle da sua resposta.",
+      "14": "Nada precisa ser resolvido neste exato segundo.",
+      "15": "Você criou espaço por mais de 45 segundos.",
+      "16": "Apenas perceba o impulso sem se apressar em agir.",
+      "17": "Quase lá — descansando na pausa.",
+      "18": "Fique presente com esse último suspiro.",
+      "19": "Você completou a pausa."
+    }
+  },
+  "step6": {
+    "title": "Você abriu espaço.",
+    "subtitle": "O objetivo não era fazer o impulso desaparecer. Era se dar um momento antes de responder.",
+    "question": "O que você percebeu?",
+    "reflections": {
+      "thought_there": "O pensamento ainda estava lá",
+      "felt_urge": "Senti uma vontade de responder",
+      "uncomfortable": "A incerteza era desconfortável",
+      "could_wait": "Eu podia esperar sem responder imediatamente"
+    },
+    "btn_continue": "Continue"
+  },
+  "step7": {
+    "eyebrow": "CICLO DO TOC",
+    "title": "Onde a Pausa se encaixa",
+    "subtitle": "O TOC cria um forte impulso para responder imediatamente à dúvida.",
+    "node_doubt": "Dúvida / Pensamento Intrusivo",
+    "node_urge": "Vontade de Responder",
+    "space_tag": "A PAUSA DE 60 SEGUNDOS",
+    "space_title": "Este é o espaço que você acabou de praticar.",
+    "node_compulsion": "Resposta Compulsiva",
+    "node_relief": "Alívio temporário → a dúvida retorna",
+    "detail": "Uma pausa te dá um momento antes de seguir automaticamente esse puxão.",
+    "btn_try_another": "Tente Outro Cenário"
+  },
+  "step8": {
+    "eyebrow": "CENÁRIO 2",
+    "title": "Transferência de Prática",
+    "subtitle": "Imagine que você acabou de enviar uma mensagem importante.",
+    "visual_line1": "Você aperta enviar e fecha a conversa.",
+    "visual_thought": "\"Eu disse algo errado? Talvez eu devesse ler de novo.\"",
+    "visual_line2": "O mesmo padrão: Pensamento → Impulso → Pausa → Escolha.",
+    "btn_practice": "Pausa de Prática (60s)"
+  },
+  "step9": {
+    "title": "Um impulso não é uma instrução.",
+    "subtitle": "Você não precisa responder a todos os impulsos imediatamente. Um pouco de espaço pode criar um ponto de partida diferente.",
+    "cadence_pause": "PAUSA",
+    "cadence_notice": "AVISO",
+    "cadence_choose": "ESCOLHA",
+    "btn_continue": "Continue"
+  }
+}

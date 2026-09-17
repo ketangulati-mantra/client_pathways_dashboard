@@ -1,0 +1,100 @@
+{
+  "header_back": "Kembali",
+  "header_history": "Sejarah",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PEMERIKSAAN MOOD OCD",
+    "title": "Bagaimana perasaan anda sekarang?",
+    "subtitle": "Ambil gambar ringkas. Tiada jawapan yang betul.",
+    "levels": {
+      "l1_title": "1 — Sangat rendah",
+      "l1_sub": "Rasa berat, tertekan, atau kehabisan tenaga",
+      "l2_title": "2 — Rendah",
+      "l2_sub": "Gelisah, tegang, atau tenaga rendah",
+      "l3_title": "3 — Stabil / Neutral",
+      "l3_sub": "Seimbang, okay, atau terima sesuatu seperti yang datang",
+      "l4_title": "4 — Bagus",
+      "l4_sub": "Jelas, terlibat, atau kebanyakannya selesa",
+      "l5_title": "5 — Sangat baik",
+      "l5_sub": "Tenang, bertenaga, atau damai"
+    },
+    "btn_continue": "Teruskan"
+  },
+  "screen2": {
+    "badge": "LANGKAH 2 DARIPADA 4",
+    "title": "Sejauh mana OCD bermain di fikiran anda hari ini?",
+    "subtitle": "Fikirkan tentang jumlah perhatian, tekanan, atau gangguan yang diambil oleh OCD hari ini.",
+    "impact_l1": "Tidak banyak — Diam",
+    "impact_l2": "Ringan — Boleh dikawal",
+    "impact_l3": "Sederhana — Ketara",
+    "impact_l4": "Signifikan — Mengganggu",
+    "impact_l5": "Banyak — Kehadiran tinggi",
+    "scale_min": "1 = Tidak banyak",
+    "scale_max": "5 = Banyak",
+    "btn_back": "Kembali",
+    "btn_continue": "Teruskan"
+  },
+  "screen3": {
+    "badge": "LANGKAH 3 DARIPADA 4",
+    "title": "Apa yang menonjol hari ini?",
+    "subtitle": "Pilih apa sahaja yang merupakan sebahagian daripada pengalaman anda.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Fikiran / keraguan mengganggu",
+      "CHECKING": "Keinginan untuk semak atau ulang",
+      "MENTAL_REVIEW": "Mengulangi / menganalisis mental",
+      "REASSURANCE": "Mencari kepastian / jaminan",
+      "AVOIDANCE": "Mengelak pencetus atau situasi",
+      "HIGH_ANXIETY": "Tekanan atau kebimbangan yang tinggi",
+      "PAUSED_URGE": "Menghentikan atau menangguhkan ritual",
+      "FOCUSED_WELL": "Terlibat dengan tugasan harian",
+      "NONE": "Tiada satu pun daripada ini hari ini"
+    },
+    "btn_back": "Kembali",
+    "btn_continue": "Teruskan"
+  },
+  "screen4": {
+    "badge": "LANGKAH 4 DARIPADA 4",
+    "title": "Ada apa-apa yang anda mahu ingat?",
+    "subtitle": "Pilihan. Beberapa perkataan sudah cukup.",
+    "placeholder": "Tulis nota...",
+    "btn_back": "Kembali",
+    "btn_save": "Simpan daftar masuk",
+    "saving": "Menyimpan..."
+  },
+  "screen5": {
+    "badge": "✓ DISIMPAN",
+    "title": "Saat hari ini.",
+    "subtitle": "Daftar masuk anda telah direkodkan dalam garis masa peribadi anda.",
+    "impact_label": "Kesan OCD {{impact}} / 5",
+    "btn_view_moments": "Lihat detik-detik anda",
+    "btn_done": "Selesai"
+  },
+  "history": {
+    "tab_moments": "Detik-detik",
+    "tab_trends": "Trend",
+    "today_title": "Daftar Masuk Hari Ini",
+    "no_log_today": "Belum ada daftar masuk untuk hari ini.",
+    "btn_check_in_now": "Rakam daftar masuk hari ini",
+    "btn_view_past": "Lihat daftar masuk terdahulu ({{count}})",
+    "btn_hide_past": "Sembunyikan daftar masuk lepas",
+    "past_title": "Daftar Masuk Terdahulu",
+    "no_logs_title": "Belum Daftar Masuk",
+    "no_logs_desc": "Log peribadi dan garis masa emosi anda akan dipaparkan di sini.",
+    "today_tag": "HARI INI",
+    "yesterday_tag": "SEMALAM",
+    "modal_title": "Perincian Daftar Masuk",
+    "modal_mood_label": "Tahap Mood",
+    "modal_impact_label": "Kesan OCD",
+    "modal_experiences_label": "Pengalaman",
+    "modal_note_label": "Nota Peribadi",
+    "btn_edit": "Sunting Nota",
+    "btn_delete": "Padam Entri",
+    "btn_close": "Tutup",
+    "trends_14d": "14 Hari",
+    "trends_30d": "30 Hari",
+    "trends_90d": "90 Hari",
+    "trends_avg_mood": "Mood Purata",
+    "trends_avg_impact": "Kesan OCD Purata",
+    "trends_total_entries": "Jumlah Penyertaan"
+  }
+}

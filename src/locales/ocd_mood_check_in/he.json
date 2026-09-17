@@ -1,0 +1,100 @@
+{
+  "header_back": "חזרה",
+  "header_history": "היסטוריה",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "בדיקת מצב רוח OCD",
+    "title": "איך אתה מרגיש עכשיו?",
+    "subtitle": "קח תמונה מהירה. אין תשובה נכונה.",
+    "levels": {
+      "l1_title": "1 — נמוך מאוד",
+      "l1_sub": "מרגיש כבד, מוצף או מותש",
+      "l2_title": "2 — נמוך",
+      "l2_sub": "לא רגוע, מתוח או באנרגיה נמוכה",
+      "l3_title": "3 — יציב / נייטרלי",
+      "l3_sub": "מאוזן, בסדר, או לקחת את הדברים כפי שהם באים",
+      "l4_title": "4 — טוב",
+      "l4_sub": "ברור, מעורב, או ברובו בנוח",
+      "l5_title": "5 — טוב מאוד",
+      "l5_sub": "מקורקע, מלא אנרגיה או שלוו"
+    },
+    "btn_continue": "המשך"
+  },
+  "screen2": {
+    "badge": "שלב 2 מתוך 4",
+    "title": "כמה OCD היה לך בראש היום?",
+    "subtitle": "תחשוב על כמות תשומת הלב, המצוקה או ההפרעה ש-OCD תפס היום.",
+    "impact_l1": "לא הרבה — שקט",
+    "impact_l2": "קל — ניתן לניהול",
+    "impact_l3": "בינוני — בולט",
+    "impact_l4": "משמעותי — משבש",
+    "impact_l5": "הרבה — נוכחות גבוהה",
+    "scale_min": "1 = לא הרבה",
+    "scale_max": "5 = הרבה",
+    "btn_back": "חזרה",
+    "btn_continue": "המשך"
+  },
+  "screen3": {
+    "badge": "שלב 3 מתוך 4",
+    "title": "מה בלט היום?",
+    "subtitle": "בחר כל דבר שהיה חלק מהחוויה שלך.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "מחשבות פולשניות / ספקות",
+      "CHECKING": "דחף לבדוק או לחזור על זה",
+      "MENTAL_REVIEW": "הפעלה מנטלית / ניתוח",
+      "REASSURANCE": "מחפש ודאות / הרגעה",
+      "AVOIDANCE": "הימנעות מטריגרים או מצבים",
+      "HIGH_ANXIETY": "מצוקה או חרדה גבוהה",
+      "PAUSED_URGE": "עצרו או עיכבו טקס",
+      "FOCUSED_WELL": "מעורב במשימות יומיומיות",
+      "NONE": "אף אחד מהדברים האלה לא היום"
+    },
+    "btn_back": "חזרה",
+    "btn_continue": "המשך"
+  },
+  "screen4": {
+    "badge": "שלב 4 מתוך 4",
+    "title": "יש משהו שתרצה לזכור?",
+    "subtitle": "אופציונלי. כמה מילים מספיקות.",
+    "placeholder": "כתוב פתק...",
+    "btn_back": "חזרה",
+    "btn_save": "שמירה בצ'ק-אין",
+    "saving": "מצילה..."
+  },
+  "screen5": {
+    "badge": "✓ נשמר",
+    "title": "הרגע של היום.",
+    "subtitle": "הצ'ק-אין שלך נרשם בציר הזמן הפרטי שלך.",
+    "impact_label": "השפעת OCD {{impact}} / 5",
+    "btn_view_moments": "צפו ברגעים שלכם",
+    "btn_done": "סגור"
+  },
+  "history": {
+    "tab_moments": "רגעים",
+    "tab_trends": "מגמות",
+    "today_title": "הצ'ק-אין של היום",
+    "no_log_today": "עדיין לא נרשם צ'ק-אין להיום.",
+    "btn_check_in_now": "הקלט את הצ'ק-אין של היום",
+    "btn_view_past": "צפו בבדיקות קודמות ({{count}})",
+    "btn_hide_past": "הסתתר אחרי בדיקות",
+    "past_title": "בדיקות עבר",
+    "no_logs_title": "עדיין אין בדיקות",
+    "no_logs_desc": "היומנים הפרטיים שלך וציר הזמן הרגשי שלך יופיעו כאן.",
+    "today_tag": "היום",
+    "yesterday_tag": "אתמול",
+    "modal_title": "פרטי צ'ק-אין",
+    "modal_mood_label": "רמת מצב רוח",
+    "modal_impact_label": "השפעת ה-OCD",
+    "modal_experiences_label": "חוויות",
+    "modal_note_label": "הערה אישית",
+    "btn_edit": "הערת עריכה",
+    "btn_delete": "מחק ערך",
+    "btn_close": "סגור",
+    "trends_14d": "14 ימים",
+    "trends_30d": "30 ימים",
+    "trends_90d": "90 ימים",
+    "trends_avg_mood": "מצב רוח ממוצע",
+    "trends_avg_impact": "השפעה ממוצעת על OCD",
+    "trends_total_entries": "סך כל ההגשות"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "header_back": "Takaisin",
+  "header_history": "Historia",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "OCD-MIELIALAN TARKISTUS",
+    "title": "Miltä sinusta tuntuu juuri nyt?",
+    "subtitle": "Ota nopea kuva. Oikeaa vastausta ei ole.",
+    "levels": {
+      "l1_title": "1 — Erittäin matala",
+      "l1_sub": "Raskaaksi, ylikuormittuneeksi tai uupuneeksi",
+      "l2_title": "2 — Matala",
+      "l2_sub": "Levoton, kireä tai vähäenerginen",
+      "l3_title": "3 — Tasainen / Neutraali",
+      "l3_sub": "Tasapainoinen, okei, tai ottaa asiat sellaisina kuin ne tulevat",
+      "l4_title": "4 — Hyvä",
+      "l4_sub": "Selvä, innostunut tai enimmäkseen rento",
+      "l5_title": "5 — Erittäin hyvä",
+      "l5_sub": "Maanläheinen, energinen tai rauhallinen"
+    },
+    "btn_continue": "Jatka"
+  },
+  "screen2": {
+    "badge": "VAIHE 2 NELJÄSTÄ",
+    "title": "Kuinka paljon OCD on ollut mielessäsi tänään?",
+    "subtitle": "Ajattele, kuinka paljon huomiota, ahdistusta tai häiriötä OCD on tänään vienyt.",
+    "impact_l1": "Ei paljoa — Hiljaista",
+    "impact_l2": "Lievä — Hallittavissa",
+    "impact_l3": "Maltillinen — Huomattava",
+    "impact_l4": "Merkittävä — Häiritsevä",
+    "impact_l5": "Paljon — Korkea läsnäolo",
+    "scale_min": "1 = Ei paljoa",
+    "scale_max": "5 = Paljon",
+    "btn_back": "Takaisin",
+    "btn_continue": "Jatka"
+  },
+  "screen3": {
+    "badge": "VAIHE 3/4",
+    "title": "Mikä jäi tänään mieleen?",
+    "subtitle": "Valitse mitä tahansa, mikä oli osa kokemustasi.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Tunkeilevia ajatuksia / epäilyksiä",
+      "CHECKING": "Tarve tarkistaa tai toistaa",
+      "MENTAL_REVIEW": "Mielen uudelleenpelaaminen / analysointi",
+      "REASSURANCE": "Varmuuden / varmuuden etsiminen",
+      "AVOIDANCE": "Laukaisijoiden tai tilanteiden välttäminen",
+      "HIGH_ANXIETY": "Korkea ahdistus tai ahdistus",
+      "PAUSED_URGE": "Keskeytti tai viivästytti rituaalia",
+      "FOCUSED_WELL": "Sitoutunut päivittäisiin tehtäviin",
+      "NONE": "Yksikään näistä ei ole tänään"
+    },
+    "btn_back": "Takaisin",
+    "btn_continue": "Jatka"
+  },
+  "screen4": {
+    "badge": "VAIHE 4/4",
+    "title": "Onko jotain, mitä haluat muistaa?",
+    "subtitle": "Valinnainen. Muutama sana riittää.",
+    "placeholder": "Kirjoita lappu...",
+    "btn_back": "Takaisin",
+    "btn_save": "Tallenna tarkistus",
+    "saving": "Säästäminen..."
+  },
+  "screen5": {
+    "badge": "✓ PELASTETTU",
+    "title": "Tämän päivän hetki.",
+    "subtitle": "Sisäänkirjautumisesi on tallennettu yksityiselle aikajanallesi.",
+    "impact_label": "OCD:n vaikutus {{impact}} / 5",
+    "btn_view_moments": "Katso omat hetkesi",
+    "btn_done": "Valmista"
+  },
+  "history": {
+    "tab_moments": "Hetket",
+    "tab_trends": "Trendit",
+    "today_title": "Tämän päivän check-in",
+    "no_log_today": "Tältä päivältä ei ole vielä kirjattu sisäänkirjautumista.",
+    "btn_check_in_now": "Nauhoita tämän päivän tarkistus",
+    "btn_view_past": "Katso aiemmat tarkistukset ({{count}})",
+    "btn_hide_past": "Piilota tarkistusten ohi",
+    "past_title": "Aiemmat tarkistukset",
+    "no_logs_title": "Ei vielä tarkistuksia",
+    "no_logs_desc": "Yksityiset lokisi ja tunnepohjainen aikajanasi näkyvät täällä.",
+    "today_tag": "TÄNÄÄN",
+    "yesterday_tag": "EILEN",
+    "modal_title": "Tarkistukset",
+    "modal_mood_label": "Mielialataso",
+    "modal_impact_label": "OCD:n vaikutus",
+    "modal_experiences_label": "Kokemuksia",
+    "modal_note_label": "Henkilökohtainen huomautus",
+    "btn_edit": "Muokkaushuomautus",
+    "btn_delete": "Poista merkintä",
+    "btn_close": "Sulje",
+    "trends_14d": "14 päivää",
+    "trends_30d": "30 päivää",
+    "trends_90d": "90 päivää",
+    "trends_avg_mood": "Keskiverto mieliala",
+    "trends_avg_impact": "OCD:n keskimääräinen vaikutus",
+    "trends_total_entries": "Osallistujien kokonaismäärä"
+  }
+}

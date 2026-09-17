@@ -655,7 +655,7 @@ export default function DepressionDay1Activity({ onBack, onNavigate, service }) 
                     maxWidth: '460px'
                   }}
                 >
-                  Take a few minutes to understand what depression actually is, why it can affect how you think, feel and function — and why it's not simply a matter of “trying harder.”
+                  Take a few minutes to understand what depression actually is, why it can affect how you think, feel and function, and why it's not simply a matter of “trying harder.”
                 </p>
 
                 <div
@@ -1537,7 +1537,7 @@ export default function DepressionDay1Activity({ onBack, onNavigate, service }) 
                   maxWidth: '520px'
                 }}
               >
-                You don't need to have everything figured out. Today you learned what depression can actually look like — and identified what matters most to you right now.
+                You don't need to have everything figured out. Today you learned what depression can actually look like, and identified what matters most to you right now.
               </p>
 
               {/* Your First Signal Highlight */}

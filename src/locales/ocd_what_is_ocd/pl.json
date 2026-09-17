@@ -1,0 +1,83 @@
+{
+  "header_back": "Z powrotem",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Czym jest OCD?",
+    "subtitle": "Zrozum, czym jest OCD, jak może się ujawnić i dlaczego może być tak przekonujące."
+  },
+  "video": {
+    "eyebrow": "ZACZNIJ TUTAJ",
+    "title": "Obejrzyj to krótkie wprowadzenie do OCD."
+  },
+  "basics": {
+    "eyebrow": "PODSTAWY",
+    "headline": "OCD to coś więcej niż niechciane myśli.",
+    "obsession_title": "OBSESJE",
+    "obsession_desc": "Niechciane myśli, obrazy, wątpliwości lub impulsy, które trudno odrzucić.",
+    "compulsion_title": "PRZYMUSY",
+    "compulsion_desc": "Działania lub reakcje mentalne, które czujesz zmuszone powtarzać, by zmniejszyć dyskomfort lub poczuć pewność."
+  },
+  "themes": {
+    "eyebrow": "WSPÓLNE MOTYWY",
+    "headline": "OCD może przybierać różne formy.",
+    "subtext": "To są wspólne tematy, a nie osobne diagnozy. Jedna osoba może doświadczyć więcej niż jednej.",
+    "disclaimer": "To tylko niektóre przykłady.",
+    "items": {
+      "contamination": {
+        "name": "Zanieczyszczenie",
+        "desc": "Obawy przed zarazkami, chorobami, brudem lub skażeniem."
+      },
+      "harm": {
+        "name": "Szkoda",
+        "desc": "Niechciane obawy przed wyrządzaniem lub braniem odpowiedzialności za szkodę."
+      },
+      "checking": {
+        "name": "Sprawdzam",
+        "desc": "Wielokrotne sprawdzanie bezpieczeństwa, błędów, drzwi, urządzeń lub innych kwestii."
+      },
+      "symmetry": {
+        "name": "Symetria i \"Idealnie\"",
+        "desc": "Poczucie, że wszystko musi być wyważone, precyzyjne lub po prostu właściwe."
+      },
+      "taboo": {
+        "name": "Natrętne / Tabu myśli",
+        "desc": "Niechciane myśli dotyczące tematów seksualnych, religijnych, agresywnych lub innych tabu."
+      },
+      "responsibility": {
+        "name": "Odpowiedzialność i wątpliwości",
+        "desc": "Uporczywe wątpliwości co do błędów, odpowiedzialności czy tego, czy coś jest naprawdę pewne."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "MOŻESZ TO ROZPOZNAĆ",
+    "headline": "OCD może sprawić, że niepewność wydaje się niemożliwa do odrzucenia w spokoju.",
+    "example_1": {
+      "thought": "\"Czy zamknąłem drzwi?\"",
+      "action": "Sprawdzasz. Czujesz ulgę.",
+      "loop": "Potem: \"Ale czy naprawdę sprawdziłem?\""
+    },
+    "example_2": {
+      "thought": "\"A co jeśli popełnię straszny błąd?\"",
+      "action": "Odtwarzasz w sobie, co się stało.",
+      "loop": "Szukasz pocieszenia."
+    }
+  },
+  "takeaway": {
+    "quote": "Każdy ma niechciane myśli. \n\nOCD może sprawić, że te myśli wydają się czymś, co trzeba rozwiązać.",
+    "sub": "Zrozumienie tego wzorca to ważny pierwszy krok."
+  },
+  "next_step": {
+    "eyebrow": "NASTĘPNY ETAP TWOJEJ DROGI",
+    "headline": "Teraz zobaczmy, jak cykl OCD może się powtarzać.",
+    "btn_explore": "Poznaj cykl OCD →"
+  },
+  "completion": {
+    "eyebrow": "Skończyłeś eksplorację?",
+    "btn_complete": "Oznacz aktywność tak, jak zrobiono →",
+    "saving": "Zapisuję...",
+    "completed_badge": "Zakończona działalność",
+    "error_save": "Nie mogliśmy teraz zapisać zakończenia twojej aktywności. Twój postęp jest zapisany lokalnie."
+  }
+}

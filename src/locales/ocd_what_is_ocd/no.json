@@ -1,0 +1,83 @@
+{
+  "header_back": "Tilbake",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Hva er OCD?",
+    "subtitle": "Forstå hva OCD er, hvordan det kan vise seg, og hvorfor det kan føles så overbevisende."
+  },
+  "video": {
+    "eyebrow": "START HER",
+    "title": "Se denne korte introduksjonen til OCD."
+  },
+  "basics": {
+    "eyebrow": "DET GRUNNLEGGENDE",
+    "headline": "OCD er mer enn uønskede tanker.",
+    "obsession_title": "BESETTELSER",
+    "obsession_desc": "Uønskede tanker, bilder, tvil eller impulser som kan føles vanskelige å avvise.",
+    "compulsion_title": "TVANGSTANKER",
+    "compulsion_desc": "Handlinger eller mentale reaksjoner du føler deg drevet til å gjenta for å redusere ubehag eller føle deg sikker."
+  },
+  "themes": {
+    "eyebrow": "FELLES TEMAER",
+    "headline": "OCD kan ta mange former.",
+    "subtext": "Dette er vanlige temaer, ikke separate diagnoser. Én person kan oppleve mer enn én.",
+    "disclaimer": "Dette er bare noen eksempler.",
+    "items": {
+      "contamination": {
+        "name": "Forurensning",
+        "desc": "Frykt for bakterier, sykdom, skitt eller forurensning."
+      },
+      "harm": {
+        "name": "Harm",
+        "desc": "Uønsket frykt for å forårsake eller være ansvarlig for skade."
+      },
+      "checking": {
+        "name": "Sjekker",
+        "desc": "Sjekker gjentatte ganger sikkerhet, feil, dører, apparater eller andre bekymringer."
+      },
+      "symmetry": {
+        "name": "Symmetri & \"Akkurat riktig\"",
+        "desc": "Følelsen av at ting må være balanserte, presise eller akkurat riktige."
+      },
+      "taboo": {
+        "name": "Påtrengende / tabubelagte tanker",
+        "desc": "Uønskede tanker som involverer seksuelle, religiøse, aggressive eller andre tabubelagte temaer."
+      },
+      "responsibility": {
+        "name": "Ansvar og tvil",
+        "desc": "Vedvarende tvil om feil, ansvar, eller om noe virkelig er sikkert."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "DU KJENNER KANSKJE IGJEN DETTE",
+    "headline": "OCD kan gjøre usikkerhet umulig å forlate alene.",
+    "example_1": {
+      "thought": "\"Låste jeg døren?\"",
+      "action": "Du sjekker. Du føler deg lettet.",
+      "loop": "Så: «Men sjekket jeg virkelig?»"
+    },
+    "example_2": {
+      "thought": "\"Hva om jeg gjorde en fryktelig feil?\"",
+      "action": "Du spiller av det som skjedde om og om igjen.",
+      "loop": "Du søker trygghet."
+    }
+  },
+  "takeaway": {
+    "quote": "Alle får uønskede tanker. \n\nOCD kan få disse tankene til å føles som noe du må løse.",
+    "sub": "Å forstå dette mønsteret er et viktig første steg."
+  },
+  "next_step": {
+    "eyebrow": "NESTE I REISEN DIN",
+    "headline": "La oss nå se på hvordan OCD-syklusen kan fortsette å gjenta seg.",
+    "btn_explore": "Utforsk OCD-syklusen →"
+  },
+  "completion": {
+    "eyebrow": "Ferdig med utforskingen?",
+    "btn_complete": "Marker aktiviteten som utført →",
+    "saving": "Redde...",
+    "completed_badge": "Aktivitet fullført",
+    "error_save": "Vi kunne ikke lagre fullført aktiviteten din akkurat nå. Fremdriften din lagres lokalt."
+  }
+}

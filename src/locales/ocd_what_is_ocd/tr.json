@@ -1,0 +1,83 @@
+{
+  "header_back": "Geri",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "OKB nedir?",
+    "subtitle": "OKB'nin ne olduğunu, nasıl ortaya çıkabileceğini ve neden bu kadar ikna edici hissettirebileceğini anlayın."
+  },
+  "video": {
+    "eyebrow": "BURADAN BAŞLA",
+    "title": "OKB'ye dair bu kısa girişi izleyin."
+  },
+  "basics": {
+    "eyebrow": "TEMELLER",
+    "headline": "OKB, istenmeyen düşüncelerden daha fazlasıdır.",
+    "obsession_title": "TAKINTILAR",
+    "obsession_desc": "İstenmeyen düşünceler, imgeler, şüpheler veya göz ardı edilmesi zor gelen dürtüler.",
+    "compulsion_title": "ZORLAMALAR",
+    "compulsion_desc": "Rahatsızlığı azaltmak veya kesin hissetmek için tekrar etmeye zorlandığınız eylemler veya zihinsel tepkiler."
+  },
+  "themes": {
+    "eyebrow": "ORTAK TEMALAR",
+    "headline": "OKB birçok biçimde olabilir.",
+    "subtext": "Bunlar ortak temalardır, ayrı teşhisler değildir. Bir kişi birden fazla tanı yaşayabilir.",
+    "disclaimer": "Bunlar sadece birkaç örnek.",
+    "items": {
+      "contamination": {
+        "name": "Kirlenme",
+        "desc": "Mikroplar, hastalıklar, kir veya kontaminasyon korkuları."
+      },
+      "harm": {
+        "name": "Zarar",
+        "desc": "Zarara neden olma veya sorumlu olma korkuları."
+      },
+      "checking": {
+        "name": "Kontrol",
+        "desc": "Güvenliği, hataları, kapıları, cihazları veya diğer endişeleri tekrar tekrar kontrol etmek."
+      },
+      "symmetry": {
+        "name": "Simetri & \"Just Right\"",
+        "desc": "Her şeyin dengeli, kesin veya tam doğru olması gerektiği hissi."
+      },
+      "taboo": {
+        "name": "Müdahaleci / Tabu Düşünceler",
+        "desc": "Cinsel, dini, saldırgan veya diğer tabu temalarla ilgili istenmeyen düşünceler."
+      },
+      "responsibility": {
+        "name": "Sorumluluk ve Şüphe",
+        "desc": "Hatalar, sorumluluk veya bir şeyin gerçekten kesin olup olmadığı konusunda sürekli şüphe."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "BUNU TANIYABILIRSIN",
+    "headline": "OKB, belirsizliği bırakmayı imkansız hale getirebilir.",
+    "example_1": {
+      "thought": "\"Kapıyı kilitledim mi?\"",
+      "action": "Sen kontrol ediyorsun. Rahatlamış hissediyorsun.",
+      "loop": "Sonra: \"Ama gerçekten kontrol ettim mi?\""
+    },
+    "example_2": {
+      "thought": "\"Ya korkunç bir hata yaptıysam?\"",
+      "action": "Olanları tekrar tekrar yaşarsınız.",
+      "loop": "Güvence arıyorsun."
+    }
+  },
+  "takeaway": {
+    "quote": "Herkes istenmeyen düşünceler alır. \n\nOKB, bu düşünceleri çözmen gereken bir şey gibi hissettirebilir.",
+    "sub": "Bu kalıbı anlamak önemli bir ilk adımdır."
+  },
+  "next_step": {
+    "eyebrow": "YOLCULUĞUNUZDA SONRAKI",
+    "headline": "Şimdi OKB döngüsünün nasıl tekrar edebildiğine bakalım.",
+    "btn_explore": "OKB Döngüsünü Keşfedin→"
+  },
+  "completion": {
+    "eyebrow": "Keşfi bitirdin mi?",
+    "btn_complete": "Faaliyeti Tamamlanmış Olarak Işaretle →",
+    "saving": "Kurtarmak...",
+    "completed_badge": "Etkinlik Tamamlandı",
+    "error_save": "Şu anda etkinliğinizi kaydedemedik. İlerlemeniz yerel olarak kaydedildi."
+  }
+}

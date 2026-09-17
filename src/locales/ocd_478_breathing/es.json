@@ -1,0 +1,55 @@
+{
+  "header_back": "Atrás",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "RESPIRACIÓN",
+    "subtitle": "Un ritmo sencillo para guiar tu respiración.",
+    "rhythm_badge": "Inhala durante 4 · Mantén durante 7 · exhala durante 8",
+    "label_how_long": "¿CUÁNTO TIEMPO?",
+    "btn_begin": "Comienzo"
+  },
+  "time_options": {
+    "opt_30s": "30 segundos",
+    "opt_30s_hint": "2 ciclos · ≈ 38 seg",
+    "opt_1m": "1 min",
+    "opt_1m_hint": "3 ciclos · ≈ 1 min",
+    "opt_2m": "2 min",
+    "opt_2m_hint": "6 ciclos · ≈ 2 min",
+    "opt_3m": "3 min",
+    "opt_3m_hint": "10 ciclos · ≈ 3 min",
+    "opt_5m": "5 min",
+    "opt_5m_hint": "16 ciclos · ≈ 5 min"
+  },
+  "settling": {
+    "title": "Instalaos",
+    "subcopy": "Tómate un momento."
+  },
+  "phases": {
+    "inhale_title": "Inhala",
+    "inhale_sub": "Respira despacio",
+    "hold_title": "Espera",
+    "hold_sub": "Quédate aquí",
+    "exhale_title": "Exhala",
+    "exhale_sub": "Exhala despacio"
+  },
+  "reflection": {
+    "title": "Bien hecho.",
+    "subtitle": "Tómate un momento antes de seguir adelante. Fíjate en cómo te sientes ahora mismo.",
+    "question": "¿Qué notas tú?",
+    "choices": {
+      "settled": "Más asentado",
+      "present": "Más presente",
+      "same": "Igual"
+    },
+    "btn_continue": "Continúa"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "INHALA 4",
+    "step_hold": "SUJETA 7",
+    "step_exhale": "EXHALA 8",
+    "subtitle": "Vuelve a esta práctica siempre que quieras un momento de tranquilidad para reiniciar tu atención.",
+    "btn_continue": "Continúa"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "header_back": "Kembali",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSIKOEDUKASI",
+    "title": "CARA KERJA ERP",
+    "subtitle": "ERP membantu orang dengan OCD berlatih menghadapi apa yang memicu mereka sambil mengubah apa yang mereka lakukan selanjutnya.",
+    "quote": "\"Kamu tidak berlatih menjadi tak kenal takut. Kamu berlatih merespons dengan cara berbeda.\"",
+    "btn_explore": "Jelajahi"
+  },
+  "screen2": {
+    "badge": "SKENARIO 1",
+    "title": "Kamu baru saja keluar rumah.",
+    "thought": "\"Apakah aku mengunci pintunya?\"",
+    "urge_tag": "Kamu merasa ingin kembali",
+    "subtitle": "Momen keraguan yang umum datang. Mari kita lihat apa yang terjadi ketika dorongan itu diikuti.",
+    "btn_see_happens": "Lihat apa yang terjadi"
+  },
+  "screen3": {
+    "badge": "JALUR A",
+    "title": "Ikuti dorongan",
+    "btn_check": "Periksa Kunci",
+    "checking_status": "Memeriksa gagangnya... memutar kunci...",
+    "relief_thought": "\"Oke, terkunci. Lega.\"",
+    "doubt_thought": "\"Tunggu... apa aku benar-benar menguncinya dengan benar?\"",
+    "subtitle": "Rasa lega itu menenangkan perasaan itu sejenak, tapi keraguan kembali setelahnya.",
+    "btn_continue": "Lanjutkan"
+  },
+  "screen4": {
+    "badge": "REFLEKSI",
+    "title": "Apa yang diberikan cek itu kepada Anda?",
+    "point1": "Lega saat itu juga.",
+    "point2": "Alasan lebih untuk memeriksa lagi saat keraguan kembali.",
+    "subtitle": "Memeriksa dapat mengurangi stres saat itu, tetapi kelegaan jangka pendek itu memperkuat dorongan otak untuk memeriksa lagi.",
+    "btn_rewind": "Putar Kembali Momen"
+  },
+  "screen5": {
+    "badge": "MEMUNDUR",
+    "title": "Mari kita coba momen yang sama dengan cara berbeda.",
+    "thought": "\"Apakah aku mengunci pintunya?\"",
+    "urge_tag": "Dorongan muncul: \"Kembali dan periksa\"",
+    "subtitle": "Kali ini, alih-alih secara otomatis mengikuti dorongan, kami mengeksplorasi pendekatan ERP.",
+    "btn_step1": "Langkah 1: Eksposur"
+  },
+  "screen6": {
+    "badge": "LANGKAH 1",
+    "title": "1. Paparan",
+    "subtitle1": "ERP dimulai dengan mendekati pemicu daripada menghindarinya atau membuatnya hilang.",
+    "thought": "\"Keraguannya ada di sini: Apakah aku mengunci pintunya?\"",
+    "subtitle2": "Dalam ERP, paparan berarti membiarkan pemicu atau ketidakpastian hadir tanpa langsung mencoba mengusirnya dari pikiran.",
+    "btn_step2": "Langkah 2: Pencegahan Respons"
+  },
+  "screen7": {
+    "badge": "LANGKAH 2",
+    "title": "2. Pencegahan Respons",
+    "subtitle1": "Kemudian datang bagian kedua: menolak atau menunda respons kompulsif.",
+    "thought": "Dorongan: \"Kembali dan periksa sekarang juga.\"",
+    "btn_dont_check": "Jangan Periksa Sekarang",
+    "subtitle2": "Latihan simulasi: Memilih untuk tidak melakukan ritual memberi otak kesempatan untuk belajar sesuatu yang baru."
+  },
+  "screen8": {
+    "badge": "PERBANDINGAN",
+    "title": "Dua Jalur",
+    "col_urge_title": "Ikuti dorongan",
+    "col_urge_step1": "Pemicu",
+    "col_urge_step2": "Cek",
+    "col_urge_step3": "Relief",
+    "col_urge_step4": "Keraguan kembali",
+    "col_erp_title": "Jalur ERP",
+    "col_erp_step1": "Pemicu",
+    "col_erp_step2": "dorongan",
+    "col_erp_step3": "Pencegahan Respons",
+    "col_erp_step4": "Pembelajaran baru",
+    "btn_learning": "Apa yang sedang Anda pelajari?"
+  },
+  "screen9": {
+    "badge": "WAWASAN INTI",
+    "title": "Tujuannya bukan untuk merasakan apa-apa.",
+    "subtitle": "ERP bukan tentang membuat stres hilang seketika. ERP mengajarkan:",
+    "insight1": "\"Aku bisa merasakan ketidakpastian dan mentolerirnya.\"",
+    "insight2": "\"Aku bisa punya dorongan tanpa langsung bertindak atasnya.\"",
+    "insight3": "\"Aku tidak butuh ritual untuk menjawab setiap keraguan.\"",
+    "btn_scenario2": "Coba Skenario Kedua"
+  },
+  "screen10": {
+    "badge": "SKENARIO 2",
+    "title": "Kamu mengirim pesan penting.",
+    "thought": "Berpikir: \"Apakah aku mengatakan sesuatu yang salah?\"",
+    "urge_tag": "Dorongan: Baca lagi",
+    "question": "Seperti apa pencegahan respons itu?",
+    "opt_read": "Baca pesan tersebut lagi untuk memastikan",
+    "opt_ask": "Tanyakan pada seseorang apakah terdengar aman",
+    "opt_leave": "Biarkan saja seperti sekarang tanpa membaca ulang",
+    "feedback_correct": "✓ Itu contoh menolak respons pemeriksaan atau reassurance.",
+    "feedback_incorrect": "Itu akan menjadi cara untuk merespons ketidakpastian. Dalam ERP, pencegahan respons berarti berlatih untuk tidak menggunakan perilaku memeriksa atau meyakinkan.",
+    "btn_final_model": "Model Akhir",
+    "btn_try_again": "coba lagi"
+  },
+  "screen11": {
+    "badge": "RINGKASAN",
+    "title": "ERP mengubah apa yang Anda lakukan selanjutnya.",
+    "node_trigger": "Pemicu",
+    "node_trigger_sub": "Keraguan datang",
+    "node_urge": "dorongan",
+    "node_urge_sub": "Keinginan untuk melakukan ritual",
+    "node_erp": "Paparan + Pencegahan Respons",
+    "node_erp_sub": "Tahan paksaan",
+    "node_learning": "Pembelajaran Baru",
+    "node_learning_sub": "Ketidakpastian dapat ditoleransi",
+    "subtitle": "Tujuannya bukan untuk menghilangkan setiap pikiran atau perasaan yang mengganggu. Tujuannya adalah membangun respons yang berbeda terhadapnya.",
+    "btn_complete": "Menyelesaikan Aktivitas"
+  }
+}

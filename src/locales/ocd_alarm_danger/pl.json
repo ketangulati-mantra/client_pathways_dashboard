@@ -1,0 +1,86 @@
+{
+  "header_back": "Z powrotem",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "AKTYWNOŚĆ 3",
+    "title": "SPÓJRZ W GÓRĘ.",
+    "subtitle": "ALARM NIE JEST ZAGROŻENIEM.",
+    "detail": "Uczucie może być głośne, nie mówiąc całej historii.",
+    "btn_enter": "NA SCENĘ →"
+  },
+  "screen2": {
+    "title_line1": "CZASAMI,",
+    "title_line2": "NIEPEWNOŚĆ WYSTARCZY.",
+    "subtitle": "Stuknij w frazę, aby obserwować, jak reaguje detektor.",
+    "example1": "\"A co jeśli popełniłem błąd?\"",
+    "example2": "\"A co jeśli coś nie jest wystarczająco czyste?\"",
+    "example3": "\"A co jeśli nie mogę być całkowicie pewna?\"",
+    "btn_activates": "SYGNAŁ AKTYWUJE →"
+  },
+  "screen3": {
+    "ambient_heart": "SERCE BIJE JAK SZALONE",
+    "ambient_tension": "NAPIĘCIE",
+    "ambient_attention": "UWAGA",
+    "ambient_urge": "IMPULS",
+    "title": "TO UCZUCIE MOŻE BYĆ GŁOŚNE.",
+    "subtitle": "To uczucie jest prawdziwe. Przesłanie, które zdaje się nieść, nie jest automatycznie całą historią.",
+    "btn_look_closer": "PRZYJRZYJ SIĘ BLIŻEJ →"
+  },
+  "screen4": {
+    "tag_left": "[ SYGNAŁ // CZUŁOŚĆ ]",
+    "tag_right": "[ ODPOWIEDŹ // INTERPRETACJA ]",
+    "title": "PRZYJRZYJ SIĘ BLIŻEJ.",
+    "subtitle": "Przeciągnij gdziekolwiek, aby obejrzeć detektor z dowolnego kąta.",
+    "detail": "Możesz zauważyć sygnał bez pochopnego wyciągania wniosków.",
+    "btn_continue": "KONTYNUUJ →"
+  },
+  "screen5": {
+    "title": "WERDYKT ≠ SYGNAŁU",
+    "subtitle": "Silne uczucie może być prawdziwe, nie udowadniając automatycznie tego, co wydaje się mówić.",
+    "col_feel_title": "CO CZUJĘ",
+    "feel_anxious": "Niespokojny.",
+    "feel_uncertain": "Niepewne.",
+    "feel_tense": "Napięcie.",
+    "feel_pulled": "Zatrzymałem się, żeby sprawdzić.",
+    "col_conclude_title": "TO, CO WYCIĄGAM",
+    "conclude_wrong": "\"Coś musi być nie tak.\"",
+    "conclude_make_sure": "\"Muszę się upewnić.\"",
+    "conclude_certainty": "\"Potrzebuję pewności.\"",
+    "btn_next": "CO BĘDZIE DALEJ? →"
+  },
+  "screen6": {
+    "title": "CZASEM ODPOWIEDŹ MOŻE NA CHWILĘ UCISZYĆ SYGNAŁ.",
+    "subtitle": "Stuknij, aby zobaczyć, jak reakcje oddziałują na sygnał.",
+    "item_check_title": "SPRAWDŹ",
+    "item_check_quote": "\"Jeszcze raz się upewnię.\"",
+    "item_ask_title": "ZAPYTAJ",
+    "item_ask_quote": "\"Zapytam kogoś, co o tym myśli.\"",
+    "item_replay_title": "POWTÓRKA",
+    "item_replay_quote": "\"Przejdę to jeszcze raz w myślach.\"",
+    "item_avoid_title": "UNIKAJ",
+    "item_avoid_quote": "\"Będę trzymał się z daleka od wszystkiego, co wydaje się niepewne.\"",
+    "btn_let_signal": "NIECH SYGNAŁ BĘDZIE TAM →"
+  },
+  "screen7": {
+    "title": "NIECH SYGNAŁ BĘDZIE OBECNY.",
+    "subtitle": "Zauważ, co się dzieje, gdy nie spieszysz się z interpretacją.",
+    "btn_watch": "UWAŻAJ NA SYGNAŁ",
+    "observing_format": "Sygnał obserwacyjny... ({{seconds}}s)",
+    "done_title": "SYGNAŁ SIĘ ZMIENIŁ.",
+    "done_sub": "Nie musiałeś tego rozwiązywać.",
+    "btn_continue": "KONTYNUUJ →"
+  },
+  "screen8": {
+    "title_line1": "ALARM TO SYGNAŁ.",
+    "title_line2": "TO NIE JEST WERDYKT.",
+    "subtitle": "Zauważ to uczucie. Zauważ historię, którą twój umysł do tego dodaje.",
+    "question": "NASTĘPNYM RAZEM, GDY ALARM SIĘ ZACZNIE GŁOŚNY, CO MOŻESZ ZAUWAŻYĆ JAKO PIERWSZE?",
+    "opt_feeling": "TO UCZUCIE",
+    "opt_thought": "MYŚL",
+    "opt_urge": "CHĘĆ ODPOWIEDZI",
+    "feedback": "Ciągle zauważam różnicę.",
+    "btn_saving": "RATUJĘ...",
+    "btn_continue": "KONTYNUUJ →"
+  }
+}

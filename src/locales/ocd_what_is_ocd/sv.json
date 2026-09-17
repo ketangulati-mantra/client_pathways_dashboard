@@ -1,0 +1,83 @@
+{
+  "header_back": "Tillbaka",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Vad är OCD?",
+    "subtitle": "Förstå vad OCD är, hur det kan visa sig och varför det kan kännas så övertygande."
+  },
+  "video": {
+    "eyebrow": "BÖRJA HÄR",
+    "title": "Titta på denna korta introduktion till OCD."
+  },
+  "basics": {
+    "eyebrow": "GRUNDERNA",
+    "headline": "OCD är mer än oönskade tankar.",
+    "obsession_title": "BESATTHETER",
+    "obsession_desc": "Oönskade tankar, bilder, tvivel eller impulser som kan kännas svåra att avfärda.",
+    "compulsion_title": "TVÅNG",
+    "compulsion_desc": "Handlingar eller mentala reaktioner du känner dig driven att upprepa för att minska obehag eller känna dig säker."
+  },
+  "themes": {
+    "eyebrow": "VANLIGA TEMAN",
+    "headline": "OCD kan ta många former.",
+    "subtext": "Detta är vanliga teman, inte separata diagnoser. En person kan uppleva mer än en.",
+    "disclaimer": "Detta är bara några exempel.",
+    "items": {
+      "contamination": {
+        "name": "Kontaminering",
+        "desc": "Rädsla för bakterier, sjukdomar, smuts eller kontaminering."
+      },
+      "harm": {
+        "name": "Harm",
+        "desc": "Oönskade rädslor för att orsaka eller vara ansvarig för skada."
+      },
+      "checking": {
+        "name": "Kontroll",
+        "desc": "Upprepade gånger kontrollerar säkerhet, misstag, dörrar, apparater eller andra bekymmer."
+      },
+      "symmetry": {
+        "name": "Symmetri & \"Precis rätt\"",
+        "desc": "Känslan av att saker måste vara balanserade, exakta eller precis rätt."
+      },
+      "taboo": {
+        "name": "Påträngande / tabubelagda tankar",
+        "desc": "Oönskade tankar som involverar sexuella, religiösa, aggressiva eller andra tabubelagda teman."
+      },
+      "responsibility": {
+        "name": "Ansvar och tvivel",
+        "desc": "Ihållande tvivel om misstag, ansvar eller om något verkligen är säkert."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "DU KANSKE KÄNNER IGEN DET HÄR",
+    "headline": "OCD kan göra osäkerhet omöjlig att lämna ifred.",
+    "example_1": {
+      "thought": "\"Låste jag dörren?\"",
+      "action": "Du kollar. Du känner dig lättad.",
+      "loop": "Sedan: \"Men kollade jag verkligen?\""
+    },
+    "example_2": {
+      "thought": "\"Tänk om jag gjorde ett fruktansvärt misstag?\"",
+      "action": "Du spelar upp vad som hände igen.",
+      "loop": "Du söker bekräftelse."
+    }
+  },
+  "takeaway": {
+    "quote": "Alla får oönskade tankar. \n\nOCD kan få de tankarna att kännas som något du måste lösa.",
+    "sub": "Att förstå det mönstret är ett viktigt första steg."
+  },
+  "next_step": {
+    "eyebrow": "NÄSTA STEG I DIN RESA",
+    "headline": "Nu ska vi titta på hur OCD-cykeln kan fortsätta upprepas.",
+    "btn_explore": "Utforska OCD-cykeln →"
+  },
+  "completion": {
+    "eyebrow": "Färdig med utforskandet?",
+    "btn_complete": "Markera aktiviteten som utförd →",
+    "saving": "Rädda...",
+    "completed_badge": "Aktivitet avslutad",
+    "error_save": "Vi kunde inte spara din aktivitetsslutföring just nu. Din framsteg sparas lokalt."
+  }
+}

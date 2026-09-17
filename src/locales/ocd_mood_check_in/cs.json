@@ -1,0 +1,100 @@
+{
+  "header_back": "Zpět",
+  "header_history": "Historie",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "KONTROLA NÁLADY NA OCD",
+    "title": "Jak se teď cítíš?",
+    "subtitle": "Rychle si to vyfotte. Neexistuje správná odpověď.",
+    "levels": {
+      "l1_title": "1 — Velmi nízké",
+      "l1_sub": "Pocit tíhy, zahlcení nebo vyčerpanosti",
+      "l2_title": "2 — Low",
+      "l2_sub": "Neklidný, napjatý nebo nízkoenergetický",
+      "l3_title": "3 — Stabilní / Neutrální",
+      "l3_sub": "Vyvážené, dobře, nebo brát věci tak, jak přicházejí",
+      "l4_title": "4 — Dobře",
+      "l4_sub": "Jasný, zapojený nebo většinou v klidu",
+      "l5_title": "5 — Velmi dobře",
+      "l5_sub": "Uzemnění, plní energie nebo klid"
+    },
+    "btn_continue": "Pokračovat"
+  },
+  "screen2": {
+    "badge": "KROK 2 Ze 4",
+    "title": "Kolik vás dnes OCD trápilo hlavou?",
+    "subtitle": "Zamyslete se nad tím, kolik pozornosti, úzkosti nebo narušení dnes občas OCD zabralo.",
+    "impact_l1": "Ne moc — Ticho",
+    "impact_l2": "Mírné — zvládnutelné",
+    "impact_l3": "Střední — Znatelné",
+    "impact_l4": "Významné — Rušivé",
+    "impact_l5": "Hodně — Vysoká přítomnost",
+    "scale_min": "1 = Moc ne",
+    "scale_max": "5 = Hodně",
+    "btn_back": "Zpět",
+    "btn_continue": "Pokračovat"
+  },
+  "screen3": {
+    "badge": "KROK 3 Ze 4",
+    "title": "Co dnes vyčnívalo?",
+    "subtitle": "Vyberte si cokoli, co bylo součástí vaší zkušenosti.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Vtíravé myšlenky / pochybnosti",
+      "CHECKING": "Nutkání to zkontrolovat nebo zopakovat",
+      "MENTAL_REVIEW": "Mentální přehrávání / analýza",
+      "REASSURANCE": "Hledání jistoty / ujištění",
+      "AVOIDANCE": "Vyhýbání se spouštěčům nebo situacím",
+      "HIGH_ANXIETY": "Vysoká úzkost nebo stres",
+      "PAUSED_URGE": "Pozastaveno nebo odloženo rituál",
+      "FOCUSED_WELL": "Zapojení do každodenních úkolů",
+      "NONE": "Dnes nic z toho"
+    },
+    "btn_back": "Zpět",
+    "btn_continue": "Pokračovat"
+  },
+  "screen4": {
+    "badge": "KROK 4 Z 4",
+    "title": "Je něco, co bys chtěl vzpomenout?",
+    "subtitle": "Volitelné. Stačí pár slov.",
+    "placeholder": "Napiš vzkaz...",
+    "btn_back": "Zpět",
+    "btn_save": "Uložit check-in",
+    "saving": "Ukládám..."
+  },
+  "screen5": {
+    "badge": "✓ ZACHRÁNĚNO",
+    "title": "Dnešní chvíle.",
+    "subtitle": "Vaše přihlášení bylo zaznamenáno do vaší soukromé osy.",
+    "impact_label": "Dopad OCD {{impact}} / 5",
+    "btn_view_moments": "Sledujte své okamžiky",
+    "btn_done": "Hotovo"
+  },
+  "history": {
+    "tab_moments": "Momenty",
+    "tab_trends": "Trendy",
+    "today_title": "Dnešní kontrola",
+    "no_log_today": "Dnes zatím nebylo zaznamenáno žádné hlášení.",
+    "btn_check_in_now": "Zaznamenejte dnešní check-in",
+    "btn_view_past": "Zobrazit minulé check-iny ({{count}})",
+    "btn_hide_past": "Schovej se za kontrolami",
+    "past_title": "Minulé kontroly",
+    "no_logs_title": "Zatím žádné kontroly",
+    "no_logs_desc": "Vaše soukromé záznamy a emoční časová osa se zde objeví.",
+    "today_tag": "DNES",
+    "yesterday_tag": "VČERA",
+    "modal_title": "Detailní kontrola",
+    "modal_mood_label": "Úroveň nálady",
+    "modal_impact_label": "Dopad OCD",
+    "modal_experiences_label": "Zkušenosti",
+    "modal_note_label": "Osobní poznámka",
+    "btn_edit": "Poznámka k úpravě",
+    "btn_delete": "Smazat záznam",
+    "btn_close": "Zavřít",
+    "trends_14d": "14 dní",
+    "trends_30d": "30 dní",
+    "trends_90d": "90 dní",
+    "trends_avg_mood": "Průměrná nálada",
+    "trends_avg_impact": "Průměrný dopad OCD",
+    "trends_total_entries": "Celkový počet přihlášených"
+  }
+}

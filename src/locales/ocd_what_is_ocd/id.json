@@ -1,0 +1,83 @@
+{
+  "header_back": "Kembali",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Apa itu OCD?",
+    "subtitle": "Pahami apa itu OCD, bagaimana itu bisa muncul, dan mengapa bisa terasa begitu meyakinkan."
+  },
+  "video": {
+    "eyebrow": "MULAI DARI SINI",
+    "title": "Tonton pengantar singkat tentang OCD ini."
+  },
+  "basics": {
+    "eyebrow": "DASAR-DASARNYA",
+    "headline": "OCD lebih dari sekadar pikiran yang tidak diinginkan.",
+    "obsession_title": "OBSESI",
+    "obsession_desc": "Pikiran, gambar, keraguan, atau dorongan yang tidak diinginkan yang sulit untuk diabaikan.",
+    "compulsion_title": "PAKSAAN",
+    "compulsion_desc": "Tindakan atau respons mental yang Anda rasa terdorong untuk mengulanginya demi mengurangi ketidaknyamanan atau merasa yakin."
+  },
+  "themes": {
+    "eyebrow": "TEMA UMUM",
+    "headline": "OCD bisa mengambil berbagai bentuk.",
+    "subtext": "Ini adalah tema umum, bukan diagnosis terpisah. Satu orang bisa mengalami lebih dari satu.",
+    "disclaimer": "Ini hanyalah beberapa contoh.",
+    "items": {
+      "contamination": {
+        "name": "Kontaminasi",
+        "desc": "Ketakutan tentang kuman, penyakit, kotoran, atau kontaminasi."
+      },
+      "harm": {
+        "name": "Kerugian",
+        "desc": "Ketakutan yang tidak diinginkan tentang menyebabkan atau bertanggung jawab atas bahaya."
+      },
+      "checking": {
+        "name": "Memeriksa",
+        "desc": "Memeriksa keselamatan, kesalahan, pintu, peralatan, atau masalah lain secara berulang."
+      },
+      "symmetry": {
+        "name": "Simetri & \"Tepat Sekali\"",
+        "desc": "Merasa bahwa segala sesuatu harus seimbang, tepat, atau pas."
+      },
+      "taboo": {
+        "name": "Pikiran Mengganggu / Tabu",
+        "desc": "Pikiran yang tidak diinginkan yang melibatkan tema seksual, agama, agresif, atau tabu lainnya."
+      },
+      "responsibility": {
+        "name": "Tanggung Jawab & Keraguan",
+        "desc": "Keraguan yang terus-menerus tentang kesalahan, tanggung jawab, atau apakah sesuatu benar-benar pasti."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "ANDA MUNGKIN MENGENALI INI",
+    "headline": "OCD bisa membuat ketidakpastian terasa mustahil untuk dibiarkan sendiri.",
+    "example_1": {
+      "thought": "\"Apakah aku mengunci pintunya?\"",
+      "action": "Kamu cek. Kamu merasa lega.",
+      "loop": "Lalu: \"Tapi apakah aku benar-benar sudah cek?\""
+    },
+    "example_2": {
+      "thought": "\"Bagaimana jika aku membuat kesalahan besar?\"",
+      "action": "Kamu memutar ulang apa yang terjadi.",
+      "loop": "Kamu mencari kepastian."
+    }
+  },
+  "takeaway": {
+    "quote": "Semua orang mendapat pikiran yang tidak diinginkan. \n\nOCD bisa membuat pikiran-pikiran itu terasa seperti sesuatu yang harus kamu selesaikan.",
+    "sub": "Memahami pola itu adalah langkah awal yang penting."
+  },
+  "next_step": {
+    "eyebrow": "SELANJUTNYA DALAM PERJALANANMU",
+    "headline": "Sekarang mari kita lihat bagaimana siklus OCD bisa terus berulang.",
+    "btn_explore": "Jelajahi Siklus OCD →"
+  },
+  "completion": {
+    "eyebrow": "Sudah selesai menjelajah?",
+    "btn_complete": "Tandai aktivitas sebagai selesai →",
+    "saving": "Menyimpan...",
+    "completed_badge": "Aktivitas Selesai",
+    "error_save": "Kami tidak dapat menyimpan penyelesaian aktivitas Anda saat ini. Kemajuan Anda disimpan secara lokal."
+  }
+}

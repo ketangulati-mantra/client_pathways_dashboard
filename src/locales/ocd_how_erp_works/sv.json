@@ -1,0 +1,113 @@
+{
+  "header_back": "Tillbaka",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSYKOEDUKATION",
+    "title": "HUR ERP FUNGERAR",
+    "subtitle": "ERP hjälper personer med OCD att öva på att möta det som triggar dem samtidigt som de ändrar vad de gör härnäst.",
+    "quote": "\"Du övar inte på att vara orädd. Du övar på att svara annorlunda.\"",
+    "btn_explore": "Utforska"
+  },
+  "screen2": {
+    "badge": "SCENARIO 1",
+    "title": "Du har precis lämnat huset.",
+    "thought": "\"Låste jag dörren?\"",
+    "urge_tag": "Du känner lusten att gå tillbaka",
+    "subtitle": "Ett vanligt ögonblick av tvivel kommer. Låt oss se vad som händer när lusten följs.",
+    "btn_see_happens": "Se vad som händer"
+  },
+  "screen3": {
+    "badge": "VÄG A",
+    "title": "Följ impulsen",
+    "btn_check": "Kontrollera låset",
+    "checking_status": "Kollar handtaget... vrider om nyckeln...",
+    "relief_thought": "\"Okej, den är låst. Lättnad.\"",
+    "doubt_thought": "\"Vänta... låste jag verkligen ordentligt?\"",
+    "subtitle": "Lättnaden lugnade känslan för en sekund, men tvivlet kom tillbaka direkt efteråt.",
+    "btn_continue": "Fortsätt"
+  },
+  "screen4": {
+    "badge": "REFLEKTION",
+    "title": "Vad gav checken dig?",
+    "point1": "Lättnad just i stunden.",
+    "point2": "Ytterligare en anledning att kolla igen när tvivlet återvänder.",
+    "subtitle": "Att kontrollera kan minska stress i stunden, men den kortsiktiga lättnaden förstärker hjärnans behov av att kontrollera igen.",
+    "btn_rewind": "Spola tillbaka ögonblicket"
+  },
+  "screen5": {
+    "badge": "SPOLA TILLBAKA",
+    "title": "Låt oss prova samma ögonblick på ett annat sätt.",
+    "thought": "\"Låste jag dörren?\"",
+    "urge_tag": "Impulsen dyker upp: \"Gå tillbaka och kolla\"",
+    "subtitle": "Den här gången, istället för att automatiskt följa impulsen, utforskar vi ERP-metoden.",
+    "btn_step1": "Steg 1: Exponering"
+  },
+  "screen6": {
+    "badge": "STEG 1",
+    "title": "1. Exponering",
+    "subtitle1": "ERP börjar med att närma sig en trigger istället för att undvika den eller få den att försvinna.",
+    "thought": "\"Tvivlet är här: Låste jag dörren?\"",
+    "subtitle2": "I ERP innebär exponering att tillåta att utlösaren eller osäkerheten finns där utan att omedelbart försöka tränga bort det.",
+    "btn_step2": "Steg 2: Förebyggande av respons"
+  },
+  "screen7": {
+    "badge": "STEG 2",
+    "title": "2. Förebyggande av respons",
+    "subtitle1": "Sedan kommer den andra delen: att motstå eller skjuta upp den tvångsmässiga responsen.",
+    "thought": "Impuls: \"Gå tillbaka och kolla genast.\"",
+    "btn_dont_check": "Kolla inte just nu",
+    "subtitle2": "Simulerad praktik: Att välja att inte utföra ritualen ger hjärnan en chans att lära sig något nytt."
+  },
+  "screen8": {
+    "badge": "JÄMFÖRELSE",
+    "title": "De två vägarna",
+    "col_urge_title": "Följ impulsen",
+    "col_urge_step1": "Trigger",
+    "col_urge_step2": "Check",
+    "col_urge_step3": "Relief",
+    "col_urge_step4": "Tvivlet återvänder",
+    "col_erp_title": "ERP-vägen",
+    "col_erp_step1": "Trigger",
+    "col_erp_step2": "Urge",
+    "col_erp_step3": "Förebyggande av respons",
+    "col_erp_step4": "Ny lärdom",
+    "btn_learning": "Vad lär du dig?"
+  },
+  "screen9": {
+    "badge": "KÄRNINSIKT",
+    "title": "Poängen är inte att känna ingenting.",
+    "subtitle": "ERP handlar inte om att få oro att försvinna omedelbart. Det lär ut:",
+    "insight1": "\"Jag kan uppleva osäkerhet och tolerera den.\"",
+    "insight2": "\"Jag kan ha en impuls utan att automatiskt agera på den.\"",
+    "insight3": "\"Jag behöver ingen ritual för att svara på varje tvivel.\"",
+    "btn_scenario2": "Prova ett andra scenario"
+  },
+  "screen10": {
+    "badge": "SCENARIO 2",
+    "title": "Du skickade ett viktigt meddelande.",
+    "thought": "Tänkte: \"Sa jag något fel?\"",
+    "urge_tag": "Impuls: Läs om",
+    "question": "Hur skulle responsprevention se ut?",
+    "opt_read": "Läs meddelandet igen för att vara säker",
+    "opt_ask": "Fråga någon om det låter okej",
+    "opt_leave": "Låt det vara som det är för tillfället utan att läsa om",
+    "feedback_correct": "✓ Det är ett exempel på att motstå kontroll- eller försäkran.",
+    "feedback_incorrect": "Det skulle vara ett sätt att svara på osäkerheten. I ERP innebär responsprevention att man inte använder kontroll- eller bekräftelsebeteendet.",
+    "btn_final_model": "Slutmodellen",
+    "btn_try_again": "Försök igen"
+  },
+  "screen11": {
+    "badge": "SAMMANFATTNING",
+    "title": "ERP förändrar vad du gör härnäst.",
+    "node_trigger": "Trigger",
+    "node_trigger_sub": "Tvivel uppstår",
+    "node_urge": "Urge",
+    "node_urge_sub": "Önskan att ritualisera",
+    "node_erp": "Exponering + Responsförebyggande",
+    "node_erp_sub": "Motstånd mot tvång",
+    "node_learning": "Ny inlärning",
+    "node_learning_sub": "Osäkerhet kan tolereras",
+    "subtitle": "Målet är inte att eliminera varje påträngande tanke eller känsla. Det är att bygga upp ett annorlunda svar på dem.",
+    "btn_complete": "Fullständig aktivitet"
+  }
+}

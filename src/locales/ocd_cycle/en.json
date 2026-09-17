@@ -1,0 +1,155 @@
+{
+  "header_back": "Back",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Inside an OCD Loop",
+    "subtitle": "See how a thought can turn into a cycle."
+  },
+  "stages": {
+    "step_experience": "01 Experience",
+    "step_recognize": "02 Recognize",
+    "step_explore": "03 Explore",
+    "step_practice": "04 Notice",
+    "step_takeaway": "05 Takeaway"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Thought",
+      "uncertainty": "Uncertainty",
+      "response": "Response",
+      "relief": "Relief"
+    },
+    "cycle_1": {
+      "thought": "“What if I didn't lock the door?”",
+      "uncertainty": "“Did I really lock it?”",
+      "response": "“Check again.”",
+      "relief": "“Okay. I feel better.”"
+    },
+    "cycle_2": {
+      "thought": "“Wait... but did I really check properly?”",
+      "uncertainty": "“I need to be certain.”",
+      "response": "“Check one more time.”",
+      "relief": "“Temporary relief...”"
+    },
+    "notice_prompt": "Did you notice it?",
+    "notice_detail": "The relief was real, but the doubt came back.",
+    "action_prompt": "See what changed →"
+  },
+  "scenarios": {
+    "heading": "Now make it yours.",
+    "subheading": "Select a recognizable scenario to watch it move through the loop.",
+    "checking": {
+      "name": "Checking",
+      "phrase": "“What if I didn't lock the door?”",
+      "thought": "“What if I didn't lock the door?”",
+      "uncertainty": "“Did I really lock it?”",
+      "response": "“Check the lock again.”",
+      "relief": "“Okay, it feels safe for now.”",
+      "return": "“Wait... did I check properly?”",
+      "takeaway_quote": "I noticed that checking brings quick relief, but the doubt returns.",
+      "takeaway_action": "Next time the doubt appears, pause and notice the urge before automatically checking."
+    },
+    "responsibility": {
+      "name": "Responsibility",
+      "phrase": "“What if I made a serious mistake?”",
+      "thought": "“What if I made a serious mistake?”",
+      "uncertainty": "“I have to know for sure.”",
+      "response": "“Replay every detail in my head.”",
+      "relief": "“It seems fine for a moment.”",
+      "return": "“What if I missed a detail?”",
+      "takeaway_quote": "I noticed that mental replaying tries to create certainty, but prolongs the doubt.",
+      "takeaway_action": "Next time the urge to replay arises, acknowledge the doubt without analyzing it."
+    },
+    "contamination": {
+      "name": "Contamination",
+      "phrase": "“What if I touched something contaminated?”",
+      "thought": "“What if that surface wasn't clean?”",
+      "uncertainty": "“I feel uncomfortable and contaminated.”",
+      "response": "“Wash thoroughly.”",
+      "relief": "“I feel clean for now.”",
+      "return": "“Did I wash well enough?”",
+      "takeaway_quote": "I noticed that washing relieves the initial discomfort, but sets up the next doubt.",
+      "takeaway_action": "Next time the urge to wash hits, give yourself a moment to notice the feeling first."
+    },
+    "symmetry": {
+      "name": "Just Right",
+      "phrase": "“What if I don't do this exactly right?”",
+      "thought": "“This doesn't feel balanced.”",
+      "uncertainty": "“Something bad might happen or feel wrong.”",
+      "response": "“Redo it until it clicks.”",
+      "relief": "“Feels right for now.”",
+      "return": "“Did I do it right the last time?”",
+      "takeaway_quote": "I noticed that repeating an action for a 'just right' feeling keeps the urge alive.",
+      "takeaway_action": "Next time something feels incomplete, notice the urge to redo without immediately repeating."
+    },
+    "doubt_return_label": "The doubt returns:"
+  },
+  "snapshot": {
+    "title": "Your Loop Snapshot",
+    "thought_label": "Thought",
+    "uncertainty_label": "Uncertainty",
+    "response_label": "Response",
+    "effect_label": "Short-term effect",
+    "next_label": "What happens next",
+    "replay_btn": "Replay scenario"
+  },
+  "response_point": {
+    "heading": "Here is where the pattern gets interesting.",
+    "subheading": "You may not control the thought or the uncertainty. But you can notice what happens next.",
+    "choice_check": "Check again",
+    "choice_notice": "Notice the urge",
+    "check_result_title": "The automatic response",
+    "check_result_body": "The checking brought relief. The doubt returned.",
+    "notice_result_title": "The pause",
+    "notice_result_body": "The uncertainty may still feel uncomfortable. Noticing the urge gives you a moment before automatically responding.",
+    "try_again": "Want to see the difference again?"
+  },
+  "compulsions": {
+    "statement": "Compulsions aren't always something you do.",
+    "tab_outward": "Outward",
+    "tab_inward": "Inward",
+    "outward_items": [
+      "Checking",
+      "Washing",
+      "Repeating"
+    ],
+    "inward_items": [
+      "Replaying",
+      "Reviewing",
+      "Analyzing",
+      "Seeking certainty"
+    ]
+  },
+  "recognition": {
+    "heading": "You might notice the pattern as…",
+    "pattern_1": {
+      "step1": "Check",
+      "step2": "Relief",
+      "step3": "Doubt"
+    },
+    "pattern_2": {
+      "step1": "Replay",
+      "step2": "Certainty",
+      "step3": "Doubt"
+    },
+    "pattern_3": {
+      "step1": "Avoid",
+      "step2": "Relief",
+      "step3": "Fear returns"
+    }
+  },
+  "takeaway": {
+    "tag": "Your Takeaway",
+    "main_headline": "The thought isn't the loop.",
+    "sub_headline": "Notice what happens next.",
+    "closing": "Understanding the pattern is the first step toward recognizing it in real life."
+  },
+  "next_step": {
+    "prompt_title": "Ready for what's next?",
+    "prompt_desc": "Mark this activity as completed to save your progress and continue your pathway.",
+    "btn_complete": "Mark Activity as Done",
+    "saving": "Saving...",
+    "completed_badge": "Activity Completed",
+    "error_save": "We couldn't save your activity completion right now. Your progress is saved locally."
+  }
+}

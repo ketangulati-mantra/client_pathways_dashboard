@@ -490,7 +490,7 @@ export default function FirstTherapySessionActivity({ onBack }) {
           }}>
             <span>Get <strong>50% OFF</strong> your first session.</span>
             <a
-              href="https://web.mantracare.com/plans/therapy"
+              href="https://web.mantracare.com/plans/all"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -756,7 +756,7 @@ export default function FirstTherapySessionActivity({ onBack }) {
 
           <div style={{ marginTop: '2px' }}>
             <a
-              href="https://web.mantracare.com/plans/therapy"
+              href="https://web.mantracare.com/plans/all"
               target="_blank"
               rel="noopener noreferrer"
               style={{

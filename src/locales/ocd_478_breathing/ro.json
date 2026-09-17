@@ -1,0 +1,55 @@
+{
+  "header_back": "Înapoi",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "RESPIRAȚIE",
+    "subtitle": "Un ritm simplu care să-ți ghideze respirația.",
+    "rhythm_badge": "Inspiră 4 · Ține piept 7 · expiră 8",
+    "label_how_long": "CÂT TIMP?",
+    "btn_begin": "Începe"
+  },
+  "time_options": {
+    "opt_30s": "30 de secunde",
+    "opt_30s_hint": "2 cicluri · ≈ 38 secunde",
+    "opt_1m": "1 min",
+    "opt_1m_hint": "3 cicluri · ≈ 1 min",
+    "opt_2m": "2 min",
+    "opt_2m_hint": "6 cicluri · ≈ 2 min",
+    "opt_3m": "3 min",
+    "opt_3m_hint": "10 cicluri · ≈ 3 minute",
+    "opt_5m": "5 minute",
+    "opt_5m_hint": "16 cicluri · ≈ 5 min"
+  },
+  "settling": {
+    "title": "Instalează-te",
+    "subcopy": "Ia-ți un moment."
+  },
+  "phases": {
+    "inhale_title": "Inspiră",
+    "inhale_sub": "Inspiră încet",
+    "hold_title": "Stai",
+    "hold_sub": "Rămâi aici",
+    "exhale_title": "Expiră",
+    "exhale_sub": "Expiră încet"
+  },
+  "reflection": {
+    "title": "Bravo.",
+    "subtitle": "Ia-ți un moment înainte să mergi mai departe. Observă cum te simți acum.",
+    "question": "Ce observi?",
+    "choices": {
+      "settled": "Mai stabil",
+      "present": "Mai prezent",
+      "same": "Exact la fel"
+    },
+    "btn_continue": "Continuă"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "INHALEAZĂ 4",
+    "step_hold": "HOLD 7",
+    "step_exhale": "EXPIRĂ 8",
+    "subtitle": "Revino la această practică ori de câte ori dorești un moment liniștit pentru a-ți reseta atenția.",
+    "btn_continue": "Continuă"
+  }
+}

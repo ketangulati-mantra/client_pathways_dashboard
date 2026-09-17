@@ -1,0 +1,86 @@
+{
+  "header_back": "Kembali",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{semasa}} / 5",
+  "screen1": {
+    "badge": "AKTIVITI 3",
+    "title": "PANDANG ATAS.",
+    "subtitle": "PENGGERA BUKANLAH BAHAYA.",
+    "detail": "Satu perasaan boleh menjadi kuat tanpa menceritakan keseluruhan kisah.",
+    "btn_enter": "MASUKKAN →"
+  },
+  "screen2": {
+    "title_line1": "KADANG-KADANG,",
+    "title_line2": "KETIDAKPASTIAN SUDAH CUKUP.",
+    "subtitle": "Ketik satu frasa untuk memerhati bagaimana pengesan bertindak balas.",
+    "example1": "\"Bagaimana jika saya melakukan kesilapan?\"",
+    "example2": "\"Bagaimana jika sesuatu tidak cukup bersih?\"",
+    "example3": "\"Bagaimana jika saya tidak boleh benar-benar pasti?\"",
+    "btn_activates": "ISYARAT MENGAKTIFKAN →"
+  },
+  "screen3": {
+    "ambient_heart": "JANTUNG BERDEGUP LAJU",
+    "ambient_tension": "KETEGANGAN",
+    "ambient_attention": "PERHATIAN",
+    "ambient_urge": "DORONGAN",
+    "title": "PERASAAN ITU BOLEH JADI KUAT.",
+    "subtitle": "Perasaan itu nyata. Mesej yang nampaknya dibawa bukanlah keseluruhan cerita secara automatik.",
+    "btn_look_closer": "LIHAT LEBIH DEKAT →"
+  },
+  "screen4": {
+    "tag_left": "[ ISYARAT // SENSITIVITI ]",
+    "tag_right": "[ RESPONS // TAFSIRAN ]",
+    "title": "LIHAT DENGAN LEBIH DEKAT.",
+    "subtitle": "Seret ke mana-mana untuk memeriksa pengesan dari mana-mana sudut.",
+    "detail": "Anda boleh mengesan isyarat itu tanpa perlu terburu-buru membuat kesimpulan.",
+    "btn_continue": "TERUSKAN →"
+  },
+  "screen5": {
+    "title": "ISYARAT ≠ KEPUTUSAN",
+    "subtitle": "Perasaan yang kuat boleh menjadi nyata tanpa secara automatik membuktikan apa yang ia nampak sampaikan.",
+    "col_feel_title": "APA YANG SAYA RASA",
+    "feel_anxious": "Gelisah.",
+    "feel_uncertain": "Tidak pasti.",
+    "feel_tense": "Tegang.",
+    "feel_pulled": "Ditarik untuk memeriksa.",
+    "col_conclude_title": "APA YANG SAYA SIMPULKAN",
+    "conclude_wrong": "\"Mesti ada sesuatu yang tidak kena.\"",
+    "conclude_make_sure": "\"Saya perlu pastikan.\"",
+    "conclude_certainty": "\"Saya perlukan kepastian.\"",
+    "btn_next": "APA YANG AKAN BERLAKU SETERUSNYA? →"
+  },
+  "screen6": {
+    "title": "KADANG-KADANG TINDAK BALAS BOLEH MEREDAM ISYARAT SEKETIKA.",
+    "subtitle": "Ketik untuk melihat bagaimana respons berinteraksi dengan isyarat.",
+    "item_check_title": "SEMAK",
+    "item_check_quote": "\"Saya akan pastikan sekali lagi.\"",
+    "item_ask_title": "TANYA",
+    "item_ask_quote": "\"Saya akan tanya seseorang apa pendapat mereka.\"",
+    "item_replay_title": "ULANGAN",
+    "item_replay_quote": "\"Saya akan ulang semula dalam kepala saya.\"",
+    "item_avoid_title": "ELAKKAN",
+    "item_avoid_quote": "\"Saya akan jauhi apa sahaja yang terasa tidak pasti.\"",
+    "btn_let_signal": "BIARKAN ISYARAT ITU ADA →"
+  },
+  "screen7": {
+    "title": "BIARKAN ISYARAT ITU ADA.",
+    "subtitle": "Perhatikan apa yang berlaku apabila anda tidak segera tergesa-gesa untuk mentafsirnya.",
+    "btn_watch": "PERHATIKAN ISYARAT",
+    "observing_format": "Isyarat memerhati... ({{saat}}s)",
+    "done_title": "ISYARAT BERUBAH.",
+    "done_sub": "Anda tidak perlu menyelesaikannya.",
+    "btn_continue": "TERUSKAN →"
+  },
+  "screen8": {
+    "title_line1": "PENGGERA ADALAH ISYARAT.",
+    "title_line2": "BUKAN KEPUTUSAN.",
+    "subtitle": "Perhatikan perasaan itu. Perhatikan cerita yang minda anda tambah kepadanya.",
+    "question": "LAIN KALI LOCENG BERBUNYI KUAT, APA YANG MUNGKIN ANDA PERASAN DAHULU?",
+    "opt_feeling": "PERASAAN",
+    "opt_thought": "PEMIKIRAN",
+    "opt_urge": "DORONGAN UNTUK BERTINDAK BALAS",
+    "feedback": "Terus perhatikan perbezaannya.",
+    "btn_saving": "MENYELAMATKAN...",
+    "btn_continue": "TERUSKAN →"
+  }
+}

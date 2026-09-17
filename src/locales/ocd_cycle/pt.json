@@ -1,0 +1,155 @@
+{
+  "header_back": "Voltar",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Dentro de um Loop de TOC",
+    "subtitle": "Veja como um pensamento pode se transformar em um ciclo."
+  },
+  "stages": {
+    "step_experience": "01 Experiência",
+    "step_recognize": "02 Reconhecer",
+    "step_explore": "03 Explorar",
+    "step_practice": "04 Aviso",
+    "step_takeaway": "05 Takeaway"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Pensamento",
+      "uncertainty": "Incerteza",
+      "response": "Resposta",
+      "relief": "Relevo"
+    },
+    "cycle_1": {
+      "thought": "\"E se eu não tranquei a porta?\"",
+      "uncertainty": "\"Eu realmente tranquei?\"",
+      "response": "\"Verifique de novo.\"",
+      "relief": "\"Ok. Estou melhor.\""
+    },
+    "cycle_2": {
+      "thought": "\"Espera... mas eu realmente conferi direito?\"",
+      "uncertainty": "\"Preciso ter certeza.\"",
+      "response": "\"Confere mais uma vez.\"",
+      "relief": "\"Alívio temporário...\""
+    },
+    "notice_prompt": "Você percebeu?",
+    "notice_detail": "O alívio foi real, mas a dúvida voltou.",
+    "action_prompt": "Veja o que mudou →"
+  },
+  "scenarios": {
+    "heading": "Agora faça com que seja seu.",
+    "subheading": "Selecione um cenário reconhecível para observá-lo se mover pelo loop.",
+    "checking": {
+      "name": "Verificação",
+      "phrase": "\"E se eu não tranquei a porta?\"",
+      "thought": "\"E se eu não tranquei a porta?\"",
+      "uncertainty": "\"Eu realmente tranquei?\"",
+      "response": "\"Verifique a fechadura de novo.\"",
+      "relief": "\"Ok, por enquanto parece seguro.\"",
+      "return": "\"Espera... eu conferi direito?\"",
+      "takeaway_quote": "Percebi que checar traz alívio rápido, mas a dúvida volta.",
+      "takeaway_action": "Da próxima vez que a dúvida aparecer, pare e perceba o impulso antes de checar automaticamente."
+    },
+    "responsibility": {
+      "name": "Responsabilidade",
+      "phrase": "\"E se eu cometi um erro sério?\"",
+      "thought": "\"E se eu cometi um erro sério?\"",
+      "uncertainty": "\"Eu preciso ter certeza.\"",
+      "response": "\"Repasse cada detalhe na minha cabeça.\"",
+      "relief": "\"Parece que está tudo bem por um momento.\"",
+      "return": "\"E se eu deixei passar algum detalhe?\"",
+      "takeaway_quote": "Percebi que a repetição mental tenta criar certezas, mas prolonga a dúvida.",
+      "takeaway_action": "Da próxima vez que sentir vontade de repetir, reconheça a dúvida sem analisá-la."
+    },
+    "contamination": {
+      "name": "Contaminação",
+      "phrase": "\"E se eu tocar em algo contaminado?\"",
+      "thought": "\"E se aquela superfície não estivesse limpa?\"",
+      "uncertainty": "\"Me sinto desconfortável e contaminada.\"",
+      "response": "\"Lave bem.\"",
+      "relief": "\"Me sinto limpo por enquanto.\"",
+      "return": "\"Eu lavei bem o suficiente?\"",
+      "takeaway_quote": "Percebi que lavar alivia o desconforto inicial, mas cria a próxima dúvida.",
+      "takeaway_action": "Da próxima vez que sentir vontade de lavar, dê a si mesmo um momento para perceber a sensação primeiro."
+    },
+    "symmetry": {
+      "name": "Perfeito",
+      "phrase": "\"E se eu não fizer isso exatamente direito?\"",
+      "thought": "\"Isso não parece equilibrado.\"",
+      "uncertainty": "\"Algo ruim pode acontecer ou parecer errado.\"",
+      "response": "\"Refaça até fazer sentido.\"",
+      "relief": "\"Por enquanto parece certo.\"",
+      "return": "\"Eu fiz certo da última vez?\"",
+      "takeaway_quote": "Percebi que repetir uma ação para uma sensação 'perfeita' mantém o impulso vivo.",
+      "takeaway_action": "Da próxima vez que algo parecer incompleto, perceba a vontade de refazer sem repetir imediatamente."
+    },
+    "doubt_return_label": "A dúvida retorna:"
+  },
+  "snapshot": {
+    "title": "Seu Instantâneo de Loop",
+    "thought_label": "Pensamento",
+    "uncertainty_label": "Incerteza",
+    "response_label": "Resposta",
+    "effect_label": "Efeito de curto prazo",
+    "next_label": "O que acontece a seguir",
+    "replay_btn": "Cenário de repetição"
+  },
+  "response_point": {
+    "heading": "É aqui que o padrão fica interessante.",
+    "subheading": "Você pode não controlar o pensamento ou a incerteza. Mas você pode perceber o que acontece a seguir.",
+    "choice_check": "Verifique novamente",
+    "choice_notice": "Perceba o impulso",
+    "check_result_title": "A resposta automática",
+    "check_result_body": "A verificação trouxe alívio. A dúvida voltou.",
+    "notice_result_title": "A pausa",
+    "notice_result_body": "A incerteza ainda pode ser desconfortável. Perceber o impulso te dá um momento antes de responder automaticamente.",
+    "try_again": "Quer ver a diferença de novo?"
+  },
+  "compulsions": {
+    "statement": "Compulsões nem sempre são algo que você faz.",
+    "tab_outward": "Rumo para fora",
+    "tab_inward": "Interior",
+    "outward_items": {
+      "0": "Verificação",
+      "1": "Lavagem",
+      "2": "Repetindo"
+    },
+    "inward_items": {
+      "0": "Reprisa",
+      "1": "Análise",
+      "2": "Análise",
+      "3": "Buscando certeza"
+    }
+  },
+  "recognition": {
+    "heading": "Você pode notar o padrão como...",
+    "pattern_1": {
+      "step1": "Confere",
+      "step2": "Relevo",
+      "step3": "Dúvida"
+    },
+    "pattern_2": {
+      "step1": "Replay",
+      "step2": "Certeza",
+      "step3": "Dúvida"
+    },
+    "pattern_3": {
+      "step1": "Evite",
+      "step2": "Relevo",
+      "step3": "O medo retorna"
+    }
+  },
+  "takeaway": {
+    "tag": "Sua lição",
+    "main_headline": "O pensamento não é o ciclo.",
+    "sub_headline": "Perceba o que acontece a seguir.",
+    "closing": "Compreender o padrão é o primeiro passo para reconhecê-lo na vida real."
+  },
+  "next_step": {
+    "prompt_title": "Pronto para o que vem a seguir?",
+    "prompt_desc": "Marque esta atividade como concluída para salvar seu progresso e continuar seu caminho.",
+    "btn_complete": "Marque a Atividade como Concluída",
+    "saving": "Salvando...",
+    "completed_badge": "Atividades concluídas",
+    "error_save": "Não conseguimos salvar sua atividade completada agora. Seu progresso está salvo localmente."
+  }
+}

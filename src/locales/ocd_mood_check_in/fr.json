@@ -1,0 +1,100 @@
+{
+  "header_back": "Retour",
+  "header_history": "Histoire",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "BILAN DE L’HUMEUR OBSESIVO-COMPULSIF",
+    "title": "Comment te sens-tu en ce moment ?",
+    "subtitle": "Prenez une photo rapide. Il n’y a pas de bonne réponse.",
+    "levels": {
+      "l1_title": "1 — Très bas",
+      "l1_sub": "Se sentir lourd, dépassé ou épuisé",
+      "l2_title": "2 — Faible",
+      "l2_sub": "Instable, tendu ou à faible énergie",
+      "l3_title": "3 — Stable / Neutre",
+      "l3_sub": "Équilibré, d’accord, ou prendre les choses comme elles viennent",
+      "l4_title": "4 — Bon",
+      "l4_sub": "Claire, engagée, ou plutôt à l’aise",
+      "l5_title": "5 — Très bien",
+      "l5_sub": "Ancré, énergisé ou paisible"
+    },
+    "btn_continue": "Continuez"
+  },
+  "screen2": {
+    "badge": "ÉTAPE 2 SUR 4",
+    "title": "Combien de choses vous hantent-elles aujourd’hui ?",
+    "subtitle": "Pensez à la quantité d’attention, de détresse ou de perturbation que le TOC a apportée aujourd’hui.",
+    "impact_l1": "Pas grand-chose — Silencieux",
+    "impact_l2": "Léger — Gérable",
+    "impact_l3": "Modéré — Perceptible",
+    "impact_l4": "Significatif — Perturbateur",
+    "impact_l5": "Beaucoup — Forte présence",
+    "scale_min": "1 = Pas grand-chose",
+    "scale_max": "5 = Beaucoup",
+    "btn_back": "Retour",
+    "btn_continue": "Continuez"
+  },
+  "screen3": {
+    "badge": "ÉTAPE 3 SUR 4",
+    "title": "Qu’est-ce qui m’a marqué aujourd’hui ?",
+    "subtitle": "Choisissez tout ce qui a fait partie de votre expérience.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Pensées intrusives / doutes",
+      "CHECKING": "Envie de vérifier ou de répéter",
+      "MENTAL_REVIEW": "Relecture / analyse mentale",
+      "REASSURANCE": "Recherche de certitude / de réassurance",
+      "AVOIDANCE": "Éviter les déclencheurs ou situations",
+      "HIGH_ANXIETY": "Grande détresse ou anxiété",
+      "PAUSED_URGE": "Un rituel mis en pause ou retardé",
+      "FOCUSED_WELL": "Engagé dans les tâches quotidiennes",
+      "NONE": "Aucun de ceux-ci aujourd’hui"
+    },
+    "btn_back": "Retour",
+    "btn_continue": "Continuez"
+  },
+  "screen4": {
+    "badge": "ÉTAPE 4 SUR 4",
+    "title": "Y a-t-il quelque chose dont tu veux te souvenir ?",
+    "subtitle": "Optionnel. Quelques mots suffisent.",
+    "placeholder": "Écris un mot...",
+    "btn_back": "Retour",
+    "btn_save": "Enregistrement enregistré",
+    "saving": "Sauver..."
+  },
+  "screen5": {
+    "badge": "✓ SAUVÉ",
+    "title": "Le moment d’aujourd’hui.",
+    "subtitle": "Votre enregistrement a été enregistré dans votre chronologie privée.",
+    "impact_label": "Impact du TOC {{impact}} / 5",
+    "btn_view_moments": "Regarde tes moments",
+    "btn_done": "Marché conclu"
+  },
+  "history": {
+    "tab_moments": "Moments",
+    "tab_trends": "Tendances",
+    "today_title": "Enregistrement d’aujourd’hui",
+    "no_log_today": "Aucun enregistrement enregistré pour aujourd’hui.",
+    "btn_check_in_now": "Enregistrement du check-in d’aujourd’hui",
+    "btn_view_past": "Voir les enregistrements passés ({{count}})",
+    "btn_hide_past": "Cacher les enregistrements passés",
+    "past_title": "Enregistrements précédents",
+    "no_logs_title": "Pas encore de check-ins",
+    "no_logs_desc": "Vos journaux privés et votre chronologie émotionnelle apparaîtront ici.",
+    "today_tag": "AUJOURD’HUI",
+    "yesterday_tag": "HIER",
+    "modal_title": "Détails de l’enregistrement",
+    "modal_mood_label": "Niveau d’humeur",
+    "modal_impact_label": "Impact du TOC",
+    "modal_experiences_label": "Expériences",
+    "modal_note_label": "Note personnelle",
+    "btn_edit": "Note d’édition",
+    "btn_delete": "Supprimer l’entrée",
+    "btn_close": "Fermer",
+    "trends_14d": "14 jours",
+    "trends_30d": "30 Jours",
+    "trends_90d": "90 Jours",
+    "trends_avg_mood": "Humeur moyenne",
+    "trends_avg_impact": "Impact moyen du TOC",
+    "trends_total_entries": "Total des participations"
+  }
+}

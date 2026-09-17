@@ -1,0 +1,113 @@
+{
+  "header_back": "Geri",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSIKOEĞITIM",
+    "title": "ERP NASIL ÇALIŞIR",
+    "subtitle": "ERP, OKB hastalarının pratiği yapan şeylerle karşılaşmasına yardımcı olur ve sonraki yaptıklarını değiştirir.",
+    "quote": "\"Korkusuz olmayı pratiği yapmıyorsun. Farklı tepki vermeyi pratik yapıyorsun.\"",
+    "btn_explore": "Keşfet"
+  },
+  "screen2": {
+    "badge": "SENARYO 1",
+    "title": "Az önce evden çıktın.",
+    "thought": "\"Kapıyı kilitledim mi?\"",
+    "urge_tag": "Geri dönme isteği hissediyorsun",
+    "subtitle": "Ortak bir şüphe anı gelir. Dürtü takip edildiğinde ne olacağını görelim.",
+    "btn_see_happens": "Ne Olacağını Gör"
+  },
+  "screen3": {
+    "badge": "YOL A",
+    "title": "Dürtüye Peş Düş",
+    "btn_check": "Kilidi Kontrol Et",
+    "checking_status": "Kolu kontrol ediyorum... Anahtarı çeviriyorum...",
+    "relief_thought": "\"Tamam, kilitli. Rahatlama.\"",
+    "doubt_thought": "\"Bekle... gerçekten düzgün kilitledim mi?\"",
+    "subtitle": "Rahatlama hissi bir an yatıştırdı ama hemen ardından şüphe geri döndü.",
+    "btn_continue": "Devam et"
+  },
+  "screen4": {
+    "badge": "YANSIMA",
+    "title": "Çek size ne verdi?",
+    "point1": "Tam o anda bir rahatlama.",
+    "point2": "Şüphe geri döndüğünde tekrar kontrol etmek için bir sebep daha.",
+    "subtitle": "Kontrol etmek anlık sıkıntıyı azaltabilir, ancak bu kısa vadeli rahatlama beynin tekrar kontrol etme isteğini güçlendirir.",
+    "btn_rewind": "Anı Geri Sar"
+  },
+  "screen5": {
+    "badge": "GERİ SARMA",
+    "title": "Aynı anı farklı şekilde deneyelim.",
+    "thought": "\"Kapıyı kilitledim mi?\"",
+    "urge_tag": "Bir dürtü ortaya çıkar: \"Geri dön ve kontrol et\"",
+    "subtitle": "Bu sefer, otomatik olarak bu dürtü takip etmek yerine, ERP yaklaşımını inceliyoruz.",
+    "btn_step1": "Adım 1: Maruz Kalma"
+  },
+  "screen6": {
+    "badge": "ADIM 1",
+    "title": "1. Maruz kalma",
+    "subtitle1": "ERP, tetikleyiciye yaklaşarak başlar, ondan kaçınmak ya da ortadan kaldırmak yerine.",
+    "thought": "\"Şüphe burada: Kapıyı kilitledim mi?\"",
+    "subtitle2": "ERP'de maruziyet, tetikleyici veya belirsizliğin hemen aklından çıkmadan var olmasına izin vermek demektir.",
+    "btn_step2": "Adım 2: Yanıt Önleme"
+  },
+  "screen7": {
+    "badge": "ADIM 2",
+    "title": "2. Yanıt Önleme",
+    "subtitle1": "Sonra ikinci kısım gelir: kompulsif tepkiye direnmek veya geciktirmek.",
+    "thought": "Dürt: \"Hemen geri dön ve kontrol et.\"",
+    "btn_dont_check": "Şu Anda Kontrol Etme",
+    "subtitle2": "Simüle edilmiş uygulama: Ritüeli yapmamayı seçmek, beyne yeni bir şey öğrenme şansı verir."
+  },
+  "screen8": {
+    "badge": "KARŞILAŞTIRMA",
+    "title": "İki Yol",
+    "col_urge_title": "Dürtüye Peş Düş",
+    "col_urge_step1": "Tetikleyici",
+    "col_urge_step2": "Kontrol",
+    "col_urge_step3": "Rölyef",
+    "col_urge_step4": "Şüphe geri döner",
+    "col_erp_title": "ERP Yolu",
+    "col_erp_step1": "Tetikleyici",
+    "col_erp_step2": "Dürtü",
+    "col_erp_step3": "Yanıt Önleme",
+    "col_erp_step4": "Yeni öğrenme",
+    "btn_learning": "Ne öğreniyorsunuz?"
+  },
+  "screen9": {
+    "badge": "TEMEL İÇGÖRÜ",
+    "title": "Amaç hiçbir şey hissetmek değil.",
+    "subtitle": "ERP, sıkıntıyı anında ortadan kaldırmakla ilgili değildir. Öğretir:",
+    "insight1": "\"Belirsizliği yaşayabilir ve tolere edebilirim.\"",
+    "insight2": "\"Bir dürtü hissedebilirim, otomatik olarak ona göre hareket etmeden.\"",
+    "insight3": "\"Her şüpheye cevap vermek için bir ritüele ihtiyacım yok.\"",
+    "btn_scenario2": "İkinci bir senaryoyu deneyin"
+  },
+  "screen10": {
+    "badge": "SENARYO 2",
+    "title": "Önemli bir mesaj gönderdin.",
+    "thought": "Düşünce: \"Yanlış bir şey mi söyledim?\"",
+    "urge_tag": "Dürtü: Tekrar okuyun",
+    "question": "Yanıt önleme nasıl olurdu?",
+    "opt_read": "Emin olmak için mesajı tekrar okuyun",
+    "opt_ask": "Birine sorun olur mu",
+    "opt_leave": "Şimdilik tekrar okumadan olduğu gibi bırakın",
+    "feedback_correct": "✓ Bu, kontrol veya güvence cevabına direnmenin bir örneği.",
+    "feedback_incorrect": "Bu, belirsizliğe yanıt vermenin bir yolu olurdu. ERP'de yanıt önleme, kontrol veya güvence davranışını kullanmamayı pratik yapmak anlamına gelir.",
+    "btn_final_model": "Son Model",
+    "btn_try_again": "Tekrar Deneyin"
+  },
+  "screen11": {
+    "badge": "ÖZET",
+    "title": "ERP, sonraki yapacaklarınızı değiştirir.",
+    "node_trigger": "Tetikleyici",
+    "node_trigger_sub": "Şüphe geliyor",
+    "node_urge": "Dürtü",
+    "node_urge_sub": "Ritüel Etme Arzusu",
+    "node_erp": "Maruziyet + Yanıt Önleme",
+    "node_erp_sub": "Zorlamaya karşı direnç",
+    "node_learning": "Yeni Öğrenme",
+    "node_learning_sub": "Belirsizlik tolere edilebilir",
+    "subtitle": "Amaç, her müdahaleci düşünce veya duyguyu ortadan kaldırmak değil. Onlara farklı bir tepki oluşturmak için.",
+    "btn_complete": "Tam Etkinlik"
+  }
+}

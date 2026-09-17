@@ -1,0 +1,55 @@
+{
+  "header_back": "Kembali",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "NAPAS",
+    "subtitle": "Ritme sederhana untuk mengarahkan pernapasan Anda.",
+    "rhythm_badge": "Tarik napas selama 4 · tahan selama 7 · hembuskan selama 8",
+    "label_how_long": "BERAPA LAMA?",
+    "btn_begin": "Mulai"
+  },
+  "time_options": {
+    "opt_30s": "30 detik",
+    "opt_30s_hint": "2 siklus · ≈ 38 detik",
+    "opt_1m": "1 menit",
+    "opt_1m_hint": "3 siklus · ≈ 1 menit",
+    "opt_2m": "2 menit",
+    "opt_2m_hint": "6 siklus · ≈ 2 menit",
+    "opt_3m": "3 menit",
+    "opt_3m_hint": "10 siklus · ≈ 3 menit",
+    "opt_5m": "5 menit",
+    "opt_5m_hint": "16 siklus · ≈ 5 menit"
+  },
+  "settling": {
+    "title": "Siap-siap",
+    "subcopy": "Luangkan waktu sejenak."
+  },
+  "phases": {
+    "inhale_title": "Tarik napas",
+    "inhale_sub": "Tarik napas perlahan",
+    "hold_title": "Tunggu",
+    "hold_sub": "Tetap di sini",
+    "exhale_title": "hembuskan napas",
+    "exhale_sub": "Hembuskan perlahan"
+  },
+  "reflection": {
+    "title": "Kerja bagus.",
+    "subtitle": "Luangkan waktu sebelum kamu melanjutkan. Perhatikan bagaimana perasaanmu sekarang.",
+    "question": "Apa yang kamu perhatikan?",
+    "choices": {
+      "settled": "Lebih memantap",
+      "present": "Lebih hadir",
+      "same": "Tetap saja"
+    },
+    "btn_continue": "Lanjutkan"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "HEMBUS 4",
+    "step_hold": "TAHAN 7",
+    "step_exhale": "HEMBUSKAN NAPAS 8",
+    "subtitle": "Kembali ke praktik ini kapan pun Anda ingin momen tenang untuk mengatur ulang perhatian Anda.",
+    "btn_continue": "Lanjutkan"
+  }
+}

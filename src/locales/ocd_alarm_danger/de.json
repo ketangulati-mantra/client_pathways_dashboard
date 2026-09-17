@@ -1,0 +1,86 @@
+{
+  "header_back": "Zurück",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "AKTIVITÄT 3",
+    "title": "SCHAU NACH OBEN.",
+    "subtitle": "DER ALARM IST NICHT DIE GEFAHR.",
+    "detail": "Ein Gefühl kann laut sein, ohne dir die ganze Geschichte zu erzählen.",
+    "btn_enter": "HIER KOMMT →"
+  },
+  "screen2": {
+    "title_line1": "MANCHMAL,",
+    "title_line2": "UNSICHERHEIT REICHT AUS.",
+    "subtitle": "Tippen Sie eine Phrase, um zu beobachten, wie der Detektor reagiert.",
+    "example1": "\"Was, wenn ich einen Fehler gemacht habe?\"",
+    "example2": "\"Was, wenn etwas nicht sauber genug ist?\"",
+    "example3": "\"Was, wenn ich mir nicht ganz sicher sein kann?\"",
+    "btn_activates": "DAS SIGNAL AKTIVIERT →"
+  },
+  "screen3": {
+    "ambient_heart": "HERZ RASCHT",
+    "ambient_tension": "SPANNUNG",
+    "ambient_attention": "ACHTUNG",
+    "ambient_urge": "DRANG",
+    "title": "DIESES GEFÜHL KANN LAUT SEIN.",
+    "subtitle": "Das Gefühl ist echt. Die Botschaft, die es zu tragen scheint, ist nicht automatisch die ganze Geschichte.",
+    "btn_look_closer": "SCHAU GENAUER →"
+  },
+  "screen4": {
+    "tag_left": "[ SIGNAL // EMPFINDLICHKEIT ]",
+    "tag_right": "[ ANTWORT // INTERPRETATION ]",
+    "title": "SCHAU GENAUER HIN.",
+    "subtitle": "Ziehen Sie irgendwohin, um den Detektor aus jedem Winkel zu inspizieren.",
+    "detail": "Man kann das Signal wahrnehmen, ohne sofort zu einer Schlussfolgerung zu kommen.",
+    "btn_continue": "WEITER →"
+  },
+  "screen5": {
+    "title": "SIGNAL ≠ URTEIL",
+    "subtitle": "Ein starkes Gefühl kann real sein, ohne automatisch zu beweisen, was es zu sagen scheint.",
+    "col_feel_title": "WAS ICH FÜHLE",
+    "feel_anxious": "Ängstlich.",
+    "feel_uncertain": "Unsicher.",
+    "feel_tense": "Angespannt.",
+    "feel_pulled": "Gezogen, um nachzusehen.",
+    "col_conclude_title": "WAS ICH SCHLIESSEN",
+    "conclude_wrong": "\"Irgendetwas muss nicht stimmen.\"",
+    "conclude_make_sure": "\"Ich muss sichergehen.\"",
+    "conclude_certainty": "\"Ich brauche Gewissheit.\"",
+    "btn_next": "WAS PASSIERT ALS NÄCHSTES? →"
+  },
+  "screen6": {
+    "title": "MANCHMAL KANN EINE ANTWORT DAS SIGNAL FÜR EINEN MOMENT BERUHIGEN.",
+    "subtitle": "Tippen Sie, um zu sehen, wie die Antworten mit dem Signal interagieren.",
+    "item_check_title": "CHECK",
+    "item_check_quote": "\"Ich werde es noch einmal überprüfen.\"",
+    "item_ask_title": "FRAG",
+    "item_ask_quote": "\"Ich frage jemanden, was er denkt.\"",
+    "item_replay_title": "WIEDERHOLUNG",
+    "item_replay_quote": "\"Ich gehe es mir noch einmal im Kopf durch.\"",
+    "item_avoid_title": "VERMEIDEN",
+    "item_avoid_quote": "\"Ich halte mich von allem fern, was sich unsicher anfühlt.\"",
+    "btn_let_signal": "LASS DAS SIGNAL DA SEIN→"
+  },
+  "screen7": {
+    "title": "LASS DAS SIGNAL DA SEIN.",
+    "subtitle": "Achte darauf, was passiert, wenn du nicht sofort überstürzt und es interpretierst.",
+    "btn_watch": "ACHTE AUF DAS SIGNAL",
+    "observing_format": "Beobachtungssignal... ({{seconds}}s)",
+    "done_title": "DAS SIGNAL ÄNDERTE SICH.",
+    "done_sub": "Du hättest es nicht lösen müssen.",
+    "btn_continue": "WEITER →"
+  },
+  "screen8": {
+    "title_line1": "EIN ALARM IST EIN SIGNAL.",
+    "title_line2": "KEIN URTEIL.",
+    "subtitle": "Achte auf das Gefühl. Beachte die Geschichte, die dein Verstand dazu bringt.",
+    "question": "WENN DER WECKER DAS NÄCHSTE MAL LAUT WIRD, WAS FÄLLT DIR VIELLEICHT ZUERST AUF?",
+    "opt_feeling": "DAS GEFÜHL",
+    "opt_thought": "DER GEDANKE",
+    "opt_urge": "DER DRANG ZU ANTWORTEN",
+    "feedback": "Bemerken Sie weiterhin den Unterschied.",
+    "btn_saving": "RETTEN...",
+    "btn_continue": "WEITER →"
+  }
+}

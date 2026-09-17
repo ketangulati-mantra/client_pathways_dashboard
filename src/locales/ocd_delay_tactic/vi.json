@@ -1,0 +1,107 @@
+{
+  "header_back": "Quay lại",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "Khoảng Dừng 60 Giây",
+    "subtitle": "Đôi khi một thôi thúc có thể khiến bạn cảm thấy cần phải hành động ngay lập tức. Hãy luyện tập tạo ra một khoảng cách nhỏ trước khi bạn phản hồi.",
+    "btn_begin": "Bắt đầu"
+  },
+  "step2": {
+    "eyebrow": "KỊCH BẢN 1",
+    "title": "Hãy thử một kịch bản",
+    "subtitle": "Hãy tưởng tượng bạn vừa rời khỏi nhà.",
+    "visual_line1": "Bạn khóa cửa trước và đi về phía xe của mình.",
+    "visual_thought": "\"Tôi đã khóa đúng chưa?\"",
+    "visual_line2": "Bạn nhận thấy lực kéo để quay lại kiểm tra.",
+    "btn_continue": "Tiếp tục"
+  },
+  "step3": {
+    "eyebrow": "CƠN THÈM",
+    "banner": "\"Kiểm tra lại một lần nữa.\"",
+    "subtitle": "Bạn nhận thấy một thôi thúc muốn quay lại kiểm tra.",
+    "question": "Bình thường bạn sẽ cảm thấy bị cuốn hút để làm gì?",
+    "responses": {
+      "check": "Kiểm tra lại",
+      "ask": "Hãy hỏi ai đó để được trấn an",
+      "goback": "Quay lại kiểm tra lại",
+      "wait": "Dừng lại và chờ đợi"
+    },
+    "btn_next": "Tiếp theo"
+  },
+  "step4": {
+    "title": "Bạn chưa cần phải trả lời ngay đâu.",
+    "subtitle": "Trong 60 giây tới, chúng ta sẽ luyện tập tạo khoảng cách nhỏ giữa cảm giác thôi thúc và phản ứng của bạn.",
+    "cadence_pause": "TẠM DỪNG",
+    "cadence_notice": "THÔNG BÁO",
+    "cadence_choose": "CHỌN",
+    "detail": "Mục tiêu không phải là làm suy nghĩ biến mất. Mà là nhận ra thôi thúc mà không đáp lại ngay lập tức.",
+    "btn_start": "Bắt đầu tạm dừng 60 giây"
+  },
+  "step5": {
+    "badge": "CẢM GIÁC THÔI THÚC ĐÃ ĐẾN RỒI",
+    "prompts": {
+      "0": "Hãy chú ý đến cảm giác thôi thúc như nó xuất hiện.",
+      "1": "Bạn có thể cảm nhận được sức hút mà không cần trả lời.",
+      "2": "Hít một hơi thật sâu và quan sát.",
+      "3": "Cảm giác thèm muốn chỉ là một cảm giác lúc này.",
+      "4": "Bạn không cần phải giải quyết sự không chắc chắn ngay lập tức.",
+      "5": "Hãy chú ý nơi bạn cảm thấy căng thẳng trong cơ thể.",
+      "6": "Suy nghĩ đến rồi đi như những gợn sóng trên mặt nước.",
+      "7": "Tạo khoảng cách giữa suy nghĩ và hành động.",
+      "8": "Bạn đang quan sát thôi thúc, chứ không phải tuân theo nó.",
+      "9": "Sự không chắc chắn có thể gây khó chịu, và điều đó không sao cả.",
+      "10": "Hãy để suy nghĩ đó tồn tại mà không gây tranh cãi.",
+      "11": "Hãy chú ý đến sự thôi thúc muốn sửa chữa hoặc kiểm tra.",
+      "12": "Hãy tiếp tục tò mò về cảm giác đó.",
+      "13": "Bạn kiểm soát được phản ứng của mình.",
+      "14": "Không cần phải giải quyết gì ngay lúc này.",
+      "15": "Bạn đã tạo không gian hơn 45 giây.",
+      "16": "Chỉ cần nhận ra thôi thúc mà không vội hành động.",
+      "17": "Gần đến nơi — nghỉ ngơi trong khoảng lặng.",
+      "18": "Hãy sống hiện tại với hơi thở cuối cùng này.",
+      "19": "Bạn đã hoàn thành khoảng dừng."
+    }
+  },
+  "step6": {
+    "title": "Bạn đã tạo ra khoảng trống.",
+    "subtitle": "Mục tiêu không phải là làm cho cơn thôi thúc biến mất. Mà là cho bản thân một chút thời gian trước khi đáp lại.",
+    "question": "Bạn nhận thấy điều gì?",
+    "reflections": {
+      "thought_there": "Ý nghĩ đó vẫn còn đó",
+      "felt_urge": "Tôi cảm thấy thôi thúc phải trả lời",
+      "uncomfortable": "Sự bất định khiến tôi cảm thấy khó chịu",
+      "could_wait": "Tôi có thể chờ mà không trả lời ngay lập tức"
+    },
+    "btn_continue": "Tiếp tục"
+  },
+  "step7": {
+    "eyebrow": "CHU KỲ OCD",
+    "title": "Nơi Tạm Dừng Phù Hợp",
+    "subtitle": "OCD tạo ra một lực kéo mạnh mẽ để phản ứng ngay lập tức với sự nghi ngờ.",
+    "node_doubt": "Nghi ngờ / Suy nghĩ xâm nhập",
+    "node_urge": "thôi thúc phản hồi",
+    "space_tag": "KHOẢNG DỪNG 60 GIÂY",
+    "space_title": "Đây là không gian bạn vừa luyện tập.",
+    "node_compulsion": "phản ứng cưỡng chế",
+    "node_relief": "Cứu trợ tạm thời → Nghi ngờ trở lại",
+    "detail": "Bạn sẽ dừng lại một lúc trước khi tự động làm theo lượt kéo đó.",
+    "btn_try_another": "Thử Kịch Bản Khác"
+  },
+  "step8": {
+    "eyebrow": "KỊCH BẢN 2",
+    "title": "Chuyển giao thực hành",
+    "subtitle": "Hãy tưởng tượng bạn vừa gửi một thông điệp quan trọng.",
+    "visual_line1": "Bạn nhấn gửi và đóng cuộc trò chuyện.",
+    "visual_thought": "\"Tôi nói gì sai à? Có lẽ tôi nên đọc lại nó.\"",
+    "visual_line2": "Cùng một mẫu: Suy nghĩ → Thôi thúc → Dừng lại → lựa chọn.",
+    "btn_practice": "Luyện tập tạm dừng (thập niên 60)"
+  },
+  "step9": {
+    "title": "Một cơn thôi thúc không phải là một mệnh lệnh.",
+    "subtitle": "Bạn không cần phải đáp lại mọi thôi thúc ngay lập tức. Một chút không gian có thể tạo ra một điểm khởi đầu khác.",
+    "cadence_pause": "TẠM DỪNG",
+    "cadence_notice": "THÔNG BÁO",
+    "cadence_choose": "CHỌN",
+    "btn_continue": "Tiếp tục"
+  }
+}

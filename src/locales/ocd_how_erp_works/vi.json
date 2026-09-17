@@ -1,0 +1,113 @@
+{
+  "header_back": "Quay lại",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "GIÁO DỤC TÂM LÝ",
+    "title": "ERP HOẠT ĐỘNG NHƯ THẾ NÀO",
+    "subtitle": "ERP giúp những người mắc OCD thực hành đối mặt với những gì kích hoạt họ trong khi thay đổi những gì họ làm tiếp theo.",
+    "quote": "\"Bạn không luyện tập sự không sợ hãi. Bạn luyện cách phản ứng khác đi.\"",
+    "btn_explore": "Khám phá"
+  },
+  "screen2": {
+    "badge": "KỊCH BẢN 1",
+    "title": "Bạn vừa mới rời khỏi nhà.",
+    "thought": "\"Tôi có khóa cửa không?\"",
+    "urge_tag": "Bạn cảm thấy thôi thúc muốn quay lại",
+    "subtitle": "Một khoảnh khắc nghi ngờ thường xuất hiện. Hãy xem điều gì xảy ra khi thôi thúc được theo đuổi.",
+    "btn_see_happens": "Xem chuyện gì xảy ra"
+  },
+  "screen3": {
+    "badge": "ĐƯỜNG A",
+    "title": "theo ý muốn",
+    "btn_check": "Kiểm tra ổ khóa",
+    "checking_status": "Kiểm tra tay nắm... Xoay chìa khóa...",
+    "relief_thought": "\"Được rồi, khóa rồi. Nhẹ nhõm.\"",
+    "doubt_thought": "\"Khoan đã... tớ có thật sự khóa đúng không?\"",
+    "subtitle": "Cảm giác nhẹ nhõm làm dịu đi trong giây lát, nhưng nghi ngờ lại trở về ngay sau đó.",
+    "btn_continue": "Tiếp tục"
+  },
+  "screen4": {
+    "badge": "PHẢN CHIẾU",
+    "title": "Tấm séc cho bạn bao nhiêu?",
+    "point1": "Nhẹ nhõm ngay lúc đó.",
+    "point2": "Thêm lý do để kiểm tra lại khi nghi ngờ xuất hiện.",
+    "subtitle": "Kiểm tra có thể giảm căng thẳng ngay lúc đó, nhưng sự giảm đau ngắn hạn đó lại củng cố ý muốn kiểm tra lại của não bộ.",
+    "btn_rewind": "tua lại khoảnh khắc"
+  },
+  "screen5": {
+    "badge": "TUA LẠI",
+    "title": "Hãy thử cùng một khoảnh khắc theo cách khác.",
+    "thought": "\"Tôi có khóa cửa không?\"",
+    "urge_tag": "Cảm giác thôi thúc xuất hiện: \"Quay lại kiểm tra đi\"",
+    "subtitle": "Lần này, thay vì tự động theo thôi thúc, chúng tôi khám phá phương pháp ERP.",
+    "btn_step1": "Bước 1: Tiếp xúc"
+  },
+  "screen6": {
+    "badge": "BƯỚC 1",
+    "title": "1. Phơi bày",
+    "subtitle1": "ERP bắt đầu bằng cách tiếp cận một tác nhân kích hoạt thay vì tránh né hoặc làm nó biến mất.",
+    "thought": "\"Nghi ngờ ở đây: Tôi có khóa cửa không?\"",
+    "subtitle2": "Trong ERP, tiếp xúc có nghĩa là cho phép yếu tố kích hoạt hoặc sự bất định hiện diện mà không ngay lập tức cố gắng gạt nó ra khỏi tâm trí.",
+    "btn_step2": "Bước 2: Phòng ngừa phản ứng"
+  },
+  "screen7": {
+    "badge": "BƯỚC 2",
+    "title": "2. Phòng ngừa ứng phó",
+    "subtitle1": "Tiếp theo là phần thứ hai: chống lại hoặc trì hoãn phản ứng cưỡng chế.",
+    "thought": "Thôi thúc: \"Quay lại kiểm tra ngay bây giờ.\"",
+    "btn_dont_check": "Đừng kiểm tra ngay bây giờ",
+    "subtitle2": "Thực hành mô phỏng: Việc chọn không thực hiện nghi lễ sẽ cho não bộ cơ hội học điều mới."
+  },
+  "screen8": {
+    "badge": "SO SÁNH",
+    "title": "Hai Con Đường",
+    "col_urge_title": "theo ý muốn",
+    "col_urge_step1": "Kích hoạt",
+    "col_urge_step2": "Kiểm tra",
+    "col_urge_step3": "Relief",
+    "col_urge_step4": "Nghi ngờ trở lại",
+    "col_erp_title": "Lộ trình ERP",
+    "col_erp_step1": "Kích hoạt",
+    "col_erp_step2": "thôi thúc",
+    "col_erp_step3": "Phòng ngừa ứng phó",
+    "col_erp_step4": "Học tập mới",
+    "btn_learning": "Bạn đang học được gì?"
+  },
+  "screen9": {
+    "badge": "HIỂU BIẾT CỐT LÕI",
+    "title": "Mục đích không phải là để cảm thấy vô cảm.",
+    "subtitle": "ERP không phải là làm cho căng thẳng biến mất ngay lập tức. Nó dạy:",
+    "insight1": "\"Tôi có thể trải nghiệm sự bất định và chịu đựng nó.\"",
+    "insight2": "\"Tôi có thể có ham muốn mà không cần tự động hành động.\"",
+    "insight3": "\"Tôi không cần nghi lễ để đáp lại mọi nghi ngờ.\"",
+    "btn_scenario2": "Thử một kịch bản thứ hai"
+  },
+  "screen10": {
+    "badge": "KỊCH BẢN 2",
+    "title": "Bạn đã gửi một thông điệp quan trọng.",
+    "thought": "Suy nghĩ: \"Tôi có nói gì sai không?\"",
+    "urge_tag": "Thôi thúc: Đọc lại",
+    "question": "Phòng ngừa phản ứng sẽ như thế nào?",
+    "opt_read": "Đọc lại tin nhắn để chắc chắn",
+    "opt_ask": "Hỏi ai đó xem có ổn không",
+    "opt_leave": "Tạm thời đừng đọc lại",
+    "feedback_correct": "✓ Đó là ví dụ về việc chống lại phản hồi kiểm tra hoặc trấn an.",
+    "feedback_incorrect": "Đó sẽ là cách để phản ứng với sự không chắc chắn. Trong ERP, phòng ngừa phản ứng có nghĩa là luyện tập không sử dụng hành vi kiểm tra hoặc trấn an.",
+    "btn_final_model": "Mẫu cuối cùng",
+    "btn_try_again": "Thử lại"
+  },
+  "screen11": {
+    "badge": "TÓM TẮT",
+    "title": "ERP thay đổi những gì bạn làm tiếp theo.",
+    "node_trigger": "Kích hoạt",
+    "node_trigger_sub": "Sự nghi ngờ xuất hiện",
+    "node_urge": "thôi thúc",
+    "node_urge_sub": "Mong muốn nghi lễ hóa",
+    "node_erp": "Tiếp xúc + Phòng ngừa phản ứng",
+    "node_erp_sub": "Chống lại sự cưỡng chế",
+    "node_learning": "Học tập mới",
+    "node_learning_sub": "Sự không chắc chắn có thể được chấp nhận",
+    "subtitle": "Mục tiêu không phải là loại bỏ mọi suy nghĩ hay cảm xúc xâm nhập. Mà là xây dựng một phản ứng khác với chúng.",
+    "btn_complete": "Hoàn thành Hoạt động"
+  }
+}

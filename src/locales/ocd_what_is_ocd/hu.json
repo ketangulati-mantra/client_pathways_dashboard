@@ -1,0 +1,83 @@
+{
+  "header_back": "Hátra",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Mi az OCD?",
+    "subtitle": "Értsd meg, mi az OCD, hogyan mutatkozik meg, és miért lehet olyan meggyőzőnek."
+  },
+  "video": {
+    "eyebrow": "KEZDJÜK ITT",
+    "title": "Nézd meg ezt a rövid bevezetőt az OCD-hez."
+  },
+  "basics": {
+    "eyebrow": "AZ ALAPOK",
+    "headline": "Az OCD több, mint nem kívánt gondolatok.",
+    "obsession_title": "MEGSZÁLLOTTSÁGOK",
+    "obsession_desc": "Nem kívánt gondolatok, képek, kételyek vagy késztetések, amelyeket nehéz lehet elhessegetni.",
+    "compulsion_title": "KÉNYSZEREK",
+    "compulsion_desc": "Olyan cselekedeteket vagy mentális válaszokat, amelyeket kényszerülsz ismételni, hogy csökkentsd a kényelmetlenséget vagy bizonyosságot érezzél."
+  },
+  "themes": {
+    "eyebrow": "KÖZÖS TÉMÁK",
+    "headline": "Az OCD-nek sokféle formája lehet.",
+    "subtext": "Ezek közös témák, nem különálló diagnózisok. Egy ember több diagnózist is átélhet.",
+    "disclaimer": "Ezek csak néhány példa.",
+    "items": {
+      "contamination": {
+        "name": "Szennyeződés",
+        "desc": "Félelmek a baktériumoktól, betegségektől, szennyeződéstől vagy szennyeződéstől."
+      },
+      "harm": {
+        "name": "Kár",
+        "desc": "Nem kívánt félelmek a kár okozásáról vagy felelősségéről való felelősségvállalásról."
+      },
+      "checking": {
+        "name": "Ellenőrzés",
+        "desc": "Ismételten ellenőrizve a biztonságot, hibákat, ajtókat, háztartási gépeket vagy egyéb problémákat."
+      },
+      "symmetry": {
+        "name": "Szimmetria és \"Pont Jó\"",
+        "desc": "Az érzés, hogy a dolgoknak egyensúlyban, pontosnak vagy pont megfelelő kell lenniük."
+      },
+      "taboo": {
+        "name": "Tolakodó / Tabu gondolatok",
+        "desc": "Nem kívánt gondolatok, amelyek szexuális, vallási, agresszív vagy más tabutémákkal kapcsolatosak."
+      },
+      "responsibility": {
+        "name": "Felelősség és kétely",
+        "desc": "Állandó kételyek a hibákban, a felelősségben vagy abban, hogy valami valóban biztos-e."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "TALÁN FELISMERED EZT",
+    "headline": "Az OCD miatt a bizonytalanság lehetetlenné válhat, hogy békén hagyják.",
+    "example_1": {
+      "thought": "\"Bezártam az ajtót?\"",
+      "action": "Te ellenőrizd. Megkönnyebbülsz.",
+      "loop": "Aztán: \"De tényleg ellenőriztem?\""
+    },
+    "example_2": {
+      "thought": "\"Mi van, ha szörnyű hibát követnék el?\"",
+      "action": "Újra lejátszod, ami történt.",
+      "loop": "Megnyugtatást keresel."
+    }
+  },
+  "takeaway": {
+    "quote": "Mindenkinek nem kívánt gondolatai vannak. \n\nAz OCD miatt ezek a gondolatok olyanoknak, mintha olyanokat kellene oldani meg.",
+    "sub": "Ennek a mintának a megértése fontos első lépés."
+  },
+  "next_step": {
+    "eyebrow": "KÖVETKEZŐ AZ UTAD SORÁN",
+    "headline": "Most nézzük meg, hogyan ismétlődhet az OCD ciklus.",
+    "btn_explore": "Fedezd fel az OCD ciklust →"
+  },
+  "completion": {
+    "eyebrow": "Befejezted a felfedezést?",
+    "btn_complete": "Jelöld meg az aktivitást →",
+    "saving": "Megmentem...",
+    "completed_badge": "Tevékenység befejezve",
+    "error_save": "Most nem tudtuk megmenteni az aktivitás teljesítését. A haladásod helyben mentve van."
+  }
+}

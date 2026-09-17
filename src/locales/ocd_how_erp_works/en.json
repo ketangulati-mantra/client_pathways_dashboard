@@ -1,0 +1,113 @@
+{
+  "header_back": "Back",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSYCHOEDUCATION",
+    "title": "HOW ERP WORKS",
+    "subtitle": "ERP helps people with OCD practice facing what triggers them while changing what they do next.",
+    "quote": "“You don't practice being fearless. You practice responding differently.”",
+    "btn_explore": "Explore"
+  },
+  "screen2": {
+    "badge": "SCENARIO 1",
+    "title": "You've Just Left the House.",
+    "thought": "“Did I lock the door?”",
+    "urge_tag": "You feel the urge to go back",
+    "subtitle": "A common moment of doubt arrives. Let's see what happens when the urge is followed.",
+    "btn_see_happens": "See What Happens"
+  },
+  "screen3": {
+    "badge": "PATH A",
+    "title": "Follow the Urge",
+    "btn_check": "Check the Lock",
+    "checking_status": "Checking the handle... turning the key...",
+    "relief_thought": "“Okay, it's locked. Relief.”",
+    "doubt_thought": "“Wait... did I really lock it properly?”",
+    "subtitle": "The relief settled the feeling for a second, but doubt returned right after.",
+    "btn_continue": "Continue"
+  },
+  "screen4": {
+    "badge": "REFLECTION",
+    "title": "What Did the Check Give You?",
+    "point1": "Relief right in the moment.",
+    "point2": "More reason to check again when doubt returns.",
+    "subtitle": "Checking can reduce distress in the moment, but that short-term relief reinforces the brain's urge to check again.",
+    "btn_rewind": "Rewind the Moment"
+  },
+  "screen5": {
+    "badge": "REWIND",
+    "title": "Let's Try the Same Moment Differently.",
+    "thought": "“Did I lock the door?”",
+    "urge_tag": "The urge appears: “Go back and check”",
+    "subtitle": "This time, instead of automatically following the urge, we explore the ERP approach.",
+    "btn_step1": "Step 1: Exposure"
+  },
+  "screen6": {
+    "badge": "STEP 1",
+    "title": "1. Exposure",
+    "subtitle1": "ERP starts by approaching a trigger rather than avoiding it or making it go away.",
+    "thought": "“The doubt is here: Did I lock the door?”",
+    "subtitle2": "In ERP, exposure means allowing the trigger or uncertainty to be present without immediately trying to push it out of mind.",
+    "btn_step2": "Step 2: Response Prevention"
+  },
+  "screen7": {
+    "badge": "STEP 2",
+    "title": "2. Response Prevention",
+    "subtitle1": "Then comes the second part: resisting or delaying the compulsive response.",
+    "thought": "Urge: “Go back and check right now.”",
+    "btn_dont_check": "Don't Check Right Now",
+    "subtitle2": "Simulated practice: Choosing not to perform the ritual gives the brain a chance to learn something new."
+  },
+  "screen8": {
+    "badge": "COMPARISON",
+    "title": "The Two Pathways",
+    "col_urge_title": "Follow the Urge",
+    "col_urge_step1": "Trigger",
+    "col_urge_step2": "Check",
+    "col_urge_step3": "Relief",
+    "col_urge_step4": "Doubt returns",
+    "col_erp_title": "ERP Pathway",
+    "col_erp_step1": "Trigger",
+    "col_erp_step2": "Urge",
+    "col_erp_step3": "Response Prevention",
+    "col_erp_step4": "New learning",
+    "btn_learning": "What Are You Learning?"
+  },
+  "screen9": {
+    "badge": "CORE INSIGHT",
+    "title": "The Point Isn't to Feel Nothing.",
+    "subtitle": "ERP is not about making distress disappear instantly. It teaches:",
+    "insight1": "“I can experience uncertainty and tolerate it.”",
+    "insight2": "“I can have an urge without automatically acting on it.”",
+    "insight3": "“I don't need a ritual to respond to every doubt.”",
+    "btn_scenario2": "Try a Second Scenario"
+  },
+  "screen10": {
+    "badge": "SCENARIO 2",
+    "title": "You Sent an Important Message.",
+    "thought": "Thought: “Did I say something wrong?”",
+    "urge_tag": "Urge: Read it again",
+    "question": "What would response prevention look like?",
+    "opt_read": "Read the message again to be sure",
+    "opt_ask": "Ask someone if it sounds okay",
+    "opt_leave": "Leave it as it is for now without re-reading",
+    "feedback_correct": "✓ That's an example of resisting the checking or reassurance response.",
+    "feedback_incorrect": "That would be a way of responding to the uncertainty. In ERP, response prevention means practicing not using the checking or reassurance behavior.",
+    "btn_final_model": "Final Model",
+    "btn_try_again": "Try Again"
+  },
+  "screen11": {
+    "badge": "SUMMARY",
+    "title": "ERP Changes What You Do Next.",
+    "node_trigger": "Trigger",
+    "node_trigger_sub": "Doubt arrives",
+    "node_urge": "Urge",
+    "node_urge_sub": "Desire to ritualize",
+    "node_erp": "Exposure + Response Prevention",
+    "node_erp_sub": "Resist compulsion",
+    "node_learning": "New Learning",
+    "node_learning_sub": "Uncertainty can be tolerated",
+    "subtitle": "The goal isn't to eliminate every intrusive thought or feeling. It's to build a different response to them.",
+    "btn_complete": "Complete Activity"
+  }
+}

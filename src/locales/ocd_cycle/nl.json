@@ -1,0 +1,155 @@
+{
+  "header_back": "Achteruit",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Binnen een OCD-lus",
+    "subtitle": "Zie hoe een gedachte kan veranderen in een cyclus."
+  },
+  "stages": {
+    "step_experience": "01 Ervaring",
+    "step_recognize": "02 Erkennen",
+    "step_explore": "03 Verkennen",
+    "step_practice": "04 Kennisgeving",
+    "step_takeaway": "05 Afhaalpunt"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Gedachte",
+      "uncertainty": "Onzekerheid",
+      "response": "Reactie",
+      "relief": "Reliëf"
+    },
+    "cycle_1": {
+      "thought": "\"Wat als ik de deur niet op slot doe?\"",
+      "uncertainty": "\"Heb ik hem echt op slot gedaan?\"",
+      "response": "\"Controleer nog eens.\"",
+      "relief": "\"Oké. Ik voel me beter.\""
+    },
+    "cycle_2": {
+      "thought": "\"Wacht... maar heb ik echt goed gecontroleerd?\"",
+      "uncertainty": "\"Ik moet zeker zijn.\"",
+      "response": "\"Controleer nog één keer.\"",
+      "relief": "\"Tijdelijke verlichting...\""
+    },
+    "notice_prompt": "Heb je het gemerkt?",
+    "notice_detail": "De opluchting was echt, maar de twijfel kwam terug.",
+    "action_prompt": "Kijk wat er veranderd →"
+  },
+  "scenarios": {
+    "heading": "Maak het nu van jou.",
+    "subheading": "Selecteer een herkenbaar scenario om te zien hoe het door de lus beweegt.",
+    "checking": {
+      "name": "Controleren",
+      "phrase": "\"Wat als ik de deur niet op slot doe?\"",
+      "thought": "\"Wat als ik de deur niet op slot doe?\"",
+      "uncertainty": "\"Heb ik hem echt op slot gedaan?\"",
+      "response": "\"Controleer het slot nog eens.\"",
+      "relief": "\"Oké, het voelt voorlopig veilig.\"",
+      "return": "\"Wacht... heb ik het goed gecontroleerd?\"",
+      "takeaway_quote": "Ik merkte dat controleren snel verlichting brengt, maar de twijfel keert terug.",
+      "takeaway_action": "De volgende keer dat de twijfel opduikt, pauzeer dan en merk de drang op voordat je automatisch controleert."
+    },
+    "responsibility": {
+      "name": "Verantwoordelijkheid",
+      "phrase": "\"Wat als ik een ernstige fout heb gemaakt?\"",
+      "thought": "\"Wat als ik een ernstige fout heb gemaakt?\"",
+      "uncertainty": "\"Ik moet het zeker weten.\"",
+      "response": "\"Speel elk detail opnieuw af in mijn hoofd.\"",
+      "relief": "\"Het lijkt even prima.\"",
+      "return": "\"Wat als ik een detail gemist heb?\"",
+      "takeaway_quote": "Ik merkte dat mentale herhaling probeert zekerheid te creëren, maar de twijfel verlengt.",
+      "takeaway_action": "De volgende keer dat de drang om opnieuw te spelen opkomt, erken dan de twijfel zonder deze te analyseren."
+    },
+    "contamination": {
+      "name": "Verontreiniging",
+      "phrase": "\"Wat als ik iets besmet aanraak?\"",
+      "thought": "\"Wat als dat oppervlak niet schoon was?\"",
+      "uncertainty": "\"Ik voel me ongemakkelijk en besmet.\"",
+      "response": "\"Was je grondig.\"",
+      "relief": "\"Ik voel me nu schoon.\"",
+      "return": "\"Heb ik me goed genoeg gewassen?\"",
+      "takeaway_quote": "Ik merkte dat wassen het eerste ongemak verlicht, maar de volgende twijfel oproept.",
+      "takeaway_action": "De volgende keer dat de drang om je te wassen toeslaat, geef jezelf dan even de tijd om het gevoel eerst op te merken."
+    },
+    "symmetry": {
+      "name": "Precies goed",
+      "phrase": "\"Wat als ik dit niet precies goed doe?\"",
+      "thought": "\"Dit voelt niet in balans.\"",
+      "uncertainty": "\"Er kan iets slechts gebeuren of niet goed aanvoelen.\"",
+      "response": "\"Doe het opnieuw tot het klikt.\"",
+      "relief": "\"Voelt voorlopig goed.\"",
+      "return": "\"Heb ik het de vorige keer goed gedaan?\"",
+      "takeaway_quote": "Ik merkte dat het herhalen van een handeling voor een 'precies goed' gevoel de drang levend houdt.",
+      "takeaway_action": "De volgende keer dat iets onvolledig voelt, merk dan de drang om het opnieuw te doen zonder het meteen te herhalen."
+    },
+    "doubt_return_label": "De twijfel keert terug:"
+  },
+  "snapshot": {
+    "title": "Jouw Loop Snapshot",
+    "thought_label": "Gedachte",
+    "uncertainty_label": "Onzekerheid",
+    "response_label": "Reactie",
+    "effect_label": "Kortetermijneffect",
+    "next_label": "Wat gebeurt er daarna",
+    "replay_btn": "Herhalingsscenario"
+  },
+  "response_point": {
+    "heading": "Hier wordt het patroon interessant.",
+    "subheading": "Je hebt misschien geen controle over de gedachte of de onzekerheid. Maar je kunt wel merken wat er daarna gebeurt.",
+    "choice_check": "Controleer nog eens",
+    "choice_notice": "Let op de drang",
+    "check_result_title": "De automatische respons",
+    "check_result_body": "De controle bracht opluchting. De twijfel keerde terug.",
+    "notice_result_title": "De pauze",
+    "notice_result_body": "De onzekerheid kan nog steeds ongemakkelijk aanvoelen. Het opmerken van de drang geeft je een moment voordat je automatisch reageert.",
+    "try_again": "Wil je het verschil nog eens zien?"
+  },
+  "compulsions": {
+    "statement": "Dwanghandelingen zijn niet altijd iets wat je doet.",
+    "tab_outward": "Naar buiten",
+    "tab_inward": "Naar binnen",
+    "outward_items": {
+      "0": "Controleren",
+      "1": "Wassen",
+      "2": "Herhalend"
+    },
+    "inward_items": {
+      "0": "Herhaling",
+      "1": "Recensie",
+      "2": "Analyseren",
+      "3": "Op zoek naar zekerheid"
+    }
+  },
+  "recognition": {
+    "heading": "Je zou het patroon kunnen opmerken als...",
+    "pattern_1": {
+      "step1": "Check",
+      "step2": "Reliëf",
+      "step3": "Twijfel"
+    },
+    "pattern_2": {
+      "step1": "Herhaling",
+      "step2": "Zekerheid",
+      "step3": "Twijfel"
+    },
+    "pattern_3": {
+      "step1": "Vermijd",
+      "step2": "Reliëf",
+      "step3": "Angst keert terug"
+    }
+  },
+  "takeaway": {
+    "tag": "Jouw conclusie",
+    "main_headline": "De gedachte is niet de lus.",
+    "sub_headline": "Let op wat er daarna gebeurt.",
+    "closing": "Het begrijpen van het patroon is de eerste stap om het in het echte leven te herkennen."
+  },
+  "next_step": {
+    "prompt_title": "Klaar voor wat er nu komt?",
+    "prompt_desc": "Markeer deze activiteit als voltooid om je voortgang op te slaan en je pad voort te zetten.",
+    "btn_complete": "Markeer activiteit als voltooid",
+    "saving": "Redden...",
+    "completed_badge": "Voltooide activiteit",
+    "error_save": "We konden je activiteit nu niet opslaan. Je voortgang wordt lokaal opgeslagen."
+  }
+}

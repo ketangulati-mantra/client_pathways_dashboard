@@ -1,0 +1,155 @@
+{
+  "header_back": "Kembali",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Di Dalam Gelung OCD",
+    "subtitle": "Lihat bagaimana sesuatu pemikiran boleh berubah menjadi kitaran."
+  },
+  "stages": {
+    "step_experience": "01 Pengalaman",
+    "step_recognize": "02 Kenali",
+    "step_explore": "03 Terokai",
+    "step_practice": "04 Notis",
+    "step_takeaway": "05 Perkara Penting"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Fikiran",
+      "uncertainty": "ketidakpastian",
+      "response": "Respons",
+      "relief": "Pelepasan"
+    },
+    "cycle_1": {
+      "thought": "\"Bagaimana kalau saya tak kunci pintu?\"",
+      "uncertainty": "\"Betul ke aku kunci?\"",
+      "response": "\"Periksa sekali lagi.\"",
+      "relief": "\"Baiklah. Saya rasa lebih baik.\""
+    },
+    "cycle_2": {
+      "thought": "\"Tunggu... tapi betul ke saya periksa betul-betul?\"",
+      "uncertainty": "\"Saya perlu pasti.\"",
+      "response": "\"Periksa sekali lagi.\"",
+      "relief": "\"Kelegaan sementara...\""
+    },
+    "notice_prompt": "Kamu perasan tak?",
+    "notice_detail": "Kelegaan itu nyata, tetapi keraguan kembali.",
+    "action_prompt": "Lihat apa yang mengubah →"
+  },
+  "scenarios": {
+    "heading": "Sekarang jadikan ia milik kamu.",
+    "subheading": "Pilih senario yang dikenali untuk melihatnya bergerak melalui gelung.",
+    "checking": {
+      "name": "Memeriksa",
+      "phrase": "\"Bagaimana kalau saya tak kunci pintu?\"",
+      "thought": "\"Bagaimana kalau saya tak kunci pintu?\"",
+      "uncertainty": "\"Betul ke aku kunci?\"",
+      "response": "\"Periksa kunci sekali lagi.\"",
+      "relief": "\"Baiklah, buat masa ini rasa selamat.\"",
+      "return": "\"Tunggu... adakah saya periksa betul-betul?\"",
+      "takeaway_quote": "Saya perasan pemeriksaan membawa kelegaan cepat, tetapi keraguan itu kembali.",
+      "takeaway_action": "Lain kali keraguan muncul, berhenti sejenak dan perhatikan keinginan itu sebelum memeriksa secara automatik."
+    },
+    "responsibility": {
+      "name": "Tanggungjawab",
+      "phrase": "\"Bagaimana jika saya membuat kesilapan serius?\"",
+      "thought": "\"Bagaimana jika saya membuat kesilapan serius?\"",
+      "uncertainty": "\"Saya mesti pasti.\"",
+      "response": "\"Ulang semula setiap butiran dalam kepala saya.\"",
+      "relief": "\"Nampaknya okay seketika.\"",
+      "return": "\"Bagaimana jika saya terlepas satu butiran?\"",
+      "takeaway_quote": "Saya perasan bahawa pengulangan mental cuba mencipta kepastian, tetapi memanjangkan keraguan.",
+      "takeaway_action": "Lain kali keinginan untuk main semula, akui keraguan itu tanpa menganalisisnya."
+    },
+    "contamination": {
+      "name": "Pencemaran",
+      "phrase": "\"Bagaimana jika saya menyentuh sesuatu yang tercemar?\"",
+      "thought": "\"Bagaimana jika permukaan itu tidak bersih?\"",
+      "uncertainty": "\"Saya rasa tidak selesa dan tercemar.\"",
+      "response": "\"Basuh betul-betul.\"",
+      "relief": "\"Saya rasa bersih buat masa ini.\"",
+      "return": "\"Adakah saya cukup mandi?\"",
+      "takeaway_quote": "Saya perasan mencuci dapat melegakan ketidakselesaan awal, tetapi menimbulkan keraguan seterusnya.",
+      "takeaway_action": "Lain kali apabila keinginan untuk mencuci tangan, beri diri anda masa untuk merasai perasaan itu terlebih dahulu."
+    },
+    "symmetry": {
+      "name": "Tepat",
+      "phrase": "\"Bagaimana kalau saya tak buat dengan betul?\"",
+      "thought": "\"Ini tidak terasa seimbang.\"",
+      "uncertainty": "\"Sesuatu yang buruk mungkin berlaku atau rasa salah.\"",
+      "response": "\"Buat semula sehingga ia faham.\"",
+      "relief": "\"Rasa betul buat masa ini.\"",
+      "return": "\"Adakah saya buat betul kali terakhir?\"",
+      "takeaway_quote": "Saya perasan bahawa mengulangi sesuatu tindakan untuk rasa 'betul-betul' mengekalkan dorongan itu hidup.",
+      "takeaway_action": "Lain kali jika sesuatu terasa tidak lengkap, perhatikan keinginan untuk mengulang tanpa mengulanginya serta-merta."
+    },
+    "doubt_return_label": "Keraguan kembali:"
+  },
+  "snapshot": {
+    "title": "Snapshot Gelung Anda",
+    "thought_label": "Fikiran",
+    "uncertainty_label": "ketidakpastian",
+    "response_label": "Respons",
+    "effect_label": "Kesan jangka pendek",
+    "next_label": "Apa yang berlaku seterusnya",
+    "replay_btn": "Senario Main semula"
+  },
+  "response_point": {
+    "heading": "Di sinilah corak menjadi menarik.",
+    "subheading": "Anda mungkin tidak mengawal fikiran atau ketidakpastian. Tetapi anda boleh perasan apa yang berlaku seterusnya.",
+    "choice_check": "Semak sekali lagi",
+    "choice_notice": "Perhatikan dorongan itu",
+    "check_result_title": "Tindak balas automatik",
+    "check_result_body": "Pemeriksaan itu membawa kelegaan. Keraguan kembali.",
+    "notice_result_title": "Jeda",
+    "notice_result_body": "Ketidakpastian itu mungkin masih terasa tidak selesa. Menyedari dorongan itu memberi anda masa sebelum bertindak balas secara automatik.",
+    "try_again": "Mahu lihat perbezaannya sekali lagi?"
+  },
+  "compulsions": {
+    "statement": "Kompulsi bukan sesuatu yang anda selalu lakukan.",
+    "tab_outward": "ke luar",
+    "tab_inward": "ke dalam",
+    "outward_items": {
+      "0": "Memeriksa",
+      "1": "Mencuci",
+      "2": "Mengulangi"
+    },
+    "inward_items": {
+      "0": "Main semula",
+      "1": "Ulasan",
+      "2": "Menganalisis",
+      "3": "Mencari kepastian"
+    }
+  },
+  "recognition": {
+    "heading": "Anda mungkin perasan corak itu sebagai...",
+    "pattern_1": {
+      "step1": "Semak",
+      "step2": "Pelepasan",
+      "step3": "Keraguan"
+    },
+    "pattern_2": {
+      "step1": "Ulangan",
+      "step2": "Kepastian",
+      "step3": "Keraguan"
+    },
+    "pattern_3": {
+      "step1": "Elakkan",
+      "step2": "Pelepasan",
+      "step3": "Ketakutan kembali"
+    }
+  },
+  "takeaway": {
+    "tag": "Kesimpulan Anda",
+    "main_headline": "Fikirannya bukan tentang kitaran itu.",
+    "sub_headline": "Perhatikan apa yang berlaku seterusnya.",
+    "closing": "Memahami corak ini adalah langkah pertama untuk mengenalinya dalam kehidupan sebenar."
+  },
+  "next_step": {
+    "prompt_title": "Sedia untuk apa yang seterusnya?",
+    "prompt_desc": "Tandakan aktiviti ini sebagai selesai untuk menyimpan kemajuan anda dan meneruskan laluan anda.",
+    "btn_complete": "Tandakan Aktiviti sebagai Selesai",
+    "saving": "Menyimpan...",
+    "completed_badge": "Aktiviti Selesai",
+    "error_save": "Kami tidak dapat menyimpan penyelesaian aktiviti anda sekarang. Kemajuan anda disimpan secara tempatan."
+  }
+}

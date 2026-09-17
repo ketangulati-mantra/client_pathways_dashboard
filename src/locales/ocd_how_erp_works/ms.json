@@ -1,0 +1,113 @@
+{
+  "header_back": "Kembali",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSIKOEDUKASI",
+    "title": "BAGAIMANA ERP BERFUNGSI",
+    "subtitle": "ERP membantu orang dengan OCD berlatih menghadapi apa yang mencetuskan mereka sambil mengubah apa yang mereka lakukan seterusnya.",
+    "quote": "\"Kamu tidak berlatih menjadi berani. Kamu berlatih bertindak balas dengan cara yang berbeza.\"",
+    "btn_explore": "Terokai"
+  },
+  "screen2": {
+    "badge": "SENARIO 1",
+    "title": "Kamu baru keluar rumah.",
+    "thought": "\"Adakah saya mengunci pintu?\"",
+    "urge_tag": "Anda rasa ingin kembali",
+    "subtitle": "Satu saat keraguan yang biasa tiba. Mari kita lihat apa yang berlaku apabila dorongan itu diikuti.",
+    "btn_see_happens": "Lihat Apa Yang Berlaku"
+  },
+  "screen3": {
+    "badge": "LALUAN A",
+    "title": "Ikuti Dorongan",
+    "btn_check": "Periksa Kunci",
+    "checking_status": "Periksa pemegang... Putar kunci...",
+    "relief_thought": "\"Baiklah, ia terkunci. Lega.\"",
+    "doubt_thought": "\"Tunggu... betul ke saya kunci betul-betul?\"",
+    "subtitle": "Kelegaan itu menenangkan perasaan itu seketika, tetapi keraguan kembali selepas itu.",
+    "btn_continue": "Teruskan"
+  },
+  "screen4": {
+    "badge": "PANTULAN",
+    "title": "Apa yang cek itu berikan kepada anda?",
+    "point1": "Kelegaan pada saat itu.",
+    "point2": "Lebih banyak sebab untuk periksa lagi apabila keraguan kembali.",
+    "subtitle": "Memeriksa boleh mengurangkan tekanan pada masa itu, tetapi kelegaan jangka pendek itu menguatkan dorongan otak untuk memeriksa sekali lagi.",
+    "btn_rewind": "Undur Detik"
+  },
+  "screen5": {
+    "badge": "PUTAR BALIK",
+    "title": "Mari cuba saat yang sama dengan cara berbeza.",
+    "thought": "\"Adakah saya mengunci pintu?\"",
+    "urge_tag": "Keinginan muncul: \"Kembali dan periksa\"",
+    "subtitle": "Kali ini, daripada secara automatik mengikuti dorongan, kami meneroka pendekatan ERP.",
+    "btn_step1": "Langkah 1: Pendedahan"
+  },
+  "screen6": {
+    "badge": "LANGKAH 1",
+    "title": "1. Pendedahan",
+    "subtitle1": "ERP bermula dengan mendekati pencetus dan bukannya mengelak atau membuatnya hilang.",
+    "thought": "\"Keraguannya ada di sini: Adakah saya mengunci pintu?\"",
+    "subtitle2": "Dalam ERP, pendedahan bermaksud membenarkan pencetus atau ketidakpastian hadir tanpa terus cuba menolaknya keluar dari fikiran.",
+    "btn_step2": "Langkah 2: Pencegahan Tindak Balas"
+  },
+  "screen7": {
+    "badge": "LANGKAH 2",
+    "title": "2. Pencegahan Tindak Balas",
+    "subtitle1": "Kemudian datang bahagian kedua: menahan atau menangguhkan tindak balas kompulsif.",
+    "thought": "Dorongan: \"Kembali dan periksa sekarang juga.\"",
+    "btn_dont_check": "Jangan periksa sekarang",
+    "subtitle2": "Amalan simulasi: Memilih untuk tidak melakukan ritual memberi peluang kepada otak untuk mempelajari sesuatu yang baru."
+  },
+  "screen8": {
+    "badge": "PERBANDINGAN",
+    "title": "Dua Laluan",
+    "col_urge_title": "Ikuti Dorongan",
+    "col_urge_step1": "Pencetus",
+    "col_urge_step2": "Semak",
+    "col_urge_step3": "Pelepasan",
+    "col_urge_step4": "Keraguan kembali",
+    "col_erp_title": "Laluan ERP",
+    "col_erp_step1": "Pencetus",
+    "col_erp_step2": "Dorongan",
+    "col_erp_step3": "Pencegahan Tindak Balas",
+    "col_erp_step4": "Pembelajaran baru",
+    "btn_learning": "Apa yang anda pelajari?"
+  },
+  "screen9": {
+    "badge": "PANDANGAN TERAS",
+    "title": "Tujuannya bukan untuk rasa apa-apa.",
+    "subtitle": "ERP bukan tentang menghilangkan kesusahan serta-merta. Ia mengajar:",
+    "insight1": "\"Saya boleh mengalami ketidakpastian dan bertolak ansur.\"",
+    "insight2": "\"Saya boleh ada dorongan tanpa bertindak secara automatik.\"",
+    "insight3": "\"Saya tidak perlukan ritual untuk menjawab setiap keraguan.\"",
+    "btn_scenario2": "Cuba senario kedua"
+  },
+  "screen10": {
+    "badge": "SENARIO 2",
+    "title": "Kamu hantar mesej penting.",
+    "thought": "Berfikir: \"Adakah saya berkata sesuatu yang salah?\"",
+    "urge_tag": "Dorongan: Baca semula",
+    "question": "Bagaimana rupa pencegahan tindak balas?",
+    "opt_read": "Baca mesej itu sekali lagi untuk memastikan",
+    "opt_ask": "Tanya seseorang jika ia kedengaran okay",
+    "opt_leave": "Biarkan sahaja buat masa ini tanpa membaca semula",
+    "feedback_correct": "✓ Itu contoh menolak tindak balas pemeriksaan atau jaminan.",
+    "feedback_incorrect": "Itu adalah cara untuk bertindak balas terhadap ketidakpastian. Dalam ERP, pencegahan tindak balas bermaksud berlatih untuk tidak menggunakan tingkah laku memeriksa atau memberi jaminan.",
+    "btn_final_model": "Model Akhir",
+    "btn_try_again": "Cuba lagi"
+  },
+  "screen11": {
+    "badge": "RINGKASAN",
+    "title": "ERP mengubah apa yang anda lakukan seterusnya.",
+    "node_trigger": "Pencetus",
+    "node_trigger_sub": "Keraguan tiba",
+    "node_urge": "Dorongan",
+    "node_urge_sub": "Keinginan untuk melakukan ritual",
+    "node_erp": "Pendedahan + Pencegahan Tindak Balas",
+    "node_erp_sub": "Tahan paksaan",
+    "node_learning": "Pembelajaran Baru",
+    "node_learning_sub": "Ketidakpastian boleh diterima",
+    "subtitle": "Matlamatnya bukan untuk menghapuskan setiap fikiran atau perasaan yang mengganggu. Ia adalah untuk membina tindak balas yang berbeza terhadapnya.",
+    "btn_complete": "Lengkapkan Aktiviti"
+  }
+}

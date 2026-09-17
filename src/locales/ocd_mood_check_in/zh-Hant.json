@@ -1,0 +1,100 @@
+{
+  "header_back": "返回",
+  "header_history": "歷史",
+  "brand": "強迫咒語",
+  "screen1": {
+    "badge": "強迫症情緒檢查",
+    "title": "你現在感覺如何？",
+    "subtitle": "快速拍張快照。沒有正確答案。",
+    "levels": {
+      "l1_title": "1 — 非常低",
+      "l1_sub": "感到沉重、不堪負荷或精疲力竭",
+      "l2_title": "2 — 低",
+      "l2_sub": "不安、緊繃或低能量",
+      "l3_title": "3 — 穩定 / 中性",
+      "l3_sub": "平衡、還可以，或者順其自然",
+      "l4_title": "4 — 良好",
+      "l4_sub": "清晰、投入，或大致自在",
+      "l5_title": "5 — 非常好",
+      "l5_sub": "是腳踏實地、充滿活力，還是平靜"
+    },
+    "btn_continue": "繼續"
+  },
+  "screen2": {
+    "badge": "步驟 2，共 4 步",
+    "title": "你今天有多少強迫症在你腦海裡？",
+    "subtitle": "想想強迫症今天佔據了多少注意力、痛苦或干擾。",
+    "impact_l1": "沒什麼——安靜",
+    "impact_l2": "輕度 — 可控",
+    "impact_l3": "中度 — 明顯",
+    "impact_l4": "重要性 — 顛覆性",
+    "impact_l5": "很多 — 高存在感",
+    "scale_min": "1 = 不多",
+    "scale_max": "5 = 非常多",
+    "btn_back": "返回",
+    "btn_continue": "繼續"
+  },
+  "screen3": {
+    "badge": "步驟三，共四步",
+    "title": "今天有什麼特別突出？",
+    "subtitle": "選擇任何與你經驗相關的內容。",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "侵入性思維/疑慮",
+      "CHECKING": "想檢查或重複的衝動",
+      "MENTAL_REVIEW": "腦中重播/分析",
+      "REASSURANCE": "尋求確定性/安心感",
+      "AVOIDANCE": "避免觸發因素或情境",
+      "HIGH_ANXIETY": "高度焦慮或焦慮",
+      "PAUSED_URGE": "暫停或延遲儀式",
+      "FOCUSED_WELL": "積極參與日常任務",
+      "NONE": "這些現在都沒有"
+    },
+    "btn_back": "返回",
+    "btn_continue": "繼續"
+  },
+  "screen4": {
+    "badge": "步驟 4 / 4",
+    "title": "有什麼想記住的嗎？",
+    "subtitle": "可選的。幾句話就夠了。",
+    "placeholder": "寫張紙條......",
+    "btn_back": "返回",
+    "btn_save": "儲存檢查",
+    "saving": "拯救......"
+  },
+  "screen5": {
+    "badge": "✓ 已儲存",
+    "title": "今天的時刻。",
+    "subtitle": "你的報到已被記錄在你的私人時間軸上。",
+    "impact_label": "強迫症影響 {{impact}} / 5",
+    "btn_view_moments": "查看你的時刻",
+    "btn_done": "完成"
+  },
+  "history": {
+    "tab_moments": "時刻",
+    "tab_trends": "趨勢",
+    "today_title": "今日報到時間",
+    "no_log_today": "今天還沒記錄到報到。",
+    "btn_check_in_now": "記錄今天的報到紀錄",
+    "btn_view_past": "查看過去的簽到紀錄 （{{count}}）",
+    "btn_hide_past": "隱藏過去的報到紀錄",
+    "past_title": "過去的報到紀錄",
+    "no_logs_title": "還沒有人來報到。",
+    "no_logs_desc": "您的私人日誌和情感時間線將顯示在此。",
+    "today_tag": "現況",
+    "yesterday_tag": "昨天",
+    "modal_title": "報到詳情",
+    "modal_mood_label": "情緒等級",
+    "modal_impact_label": "強迫症的影響",
+    "modal_experiences_label": "經歷",
+    "modal_note_label": "個人筆記",
+    "btn_edit": "編輯說明",
+    "btn_delete": "刪除條目",
+    "btn_close": "結束",
+    "trends_14d": "14天",
+    "trends_30d": "30天",
+    "trends_90d": "90天",
+    "trends_avg_mood": "普通心情",
+    "trends_avg_impact": "平均強迫症影響",
+    "trends_total_entries": "參賽總數"
+  }
+}

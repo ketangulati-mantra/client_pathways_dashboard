@@ -1,0 +1,83 @@
+{
+  "header_back": "Zpět",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Co je to OCD?",
+    "subtitle": "Pochopte, co je OCD, jak se může projevit a proč může být tak přesvědčivá."
+  },
+  "video": {
+    "eyebrow": "ZAČNĚTE TADY",
+    "title": "Podívejte se na tento krátký úvod do OCD."
+  },
+  "basics": {
+    "eyebrow": "ZÁKLADY",
+    "headline": "OCD je víc než nechtěné myšlenky.",
+    "obsession_title": "POSEDLOSTI",
+    "obsession_desc": "Nechtěné myšlenky, obrazy, pochybnosti nebo nutkání, které je těžké odmítnout.",
+    "compulsion_title": "NUTKÁNÍ",
+    "compulsion_desc": "Činy nebo mentální reakce, které cítíte nutkání opakovat, abyste snížili nepohodlí nebo si byli jisti."
+  },
+  "themes": {
+    "eyebrow": "BĚŽNÁ TÉMATA",
+    "headline": "OCD může mít mnoho podob.",
+    "subtext": "To jsou běžná témata, ne samostatné diagnózy. Jeden člověk může zažít více než jednu.",
+    "disclaimer": "To jsou jen některé příklady.",
+    "items": {
+      "contamination": {
+        "name": "Kontaminace",
+        "desc": "Obavy z bakterií, nemocí, špíny nebo kontaminace."
+      },
+      "harm": {
+        "name": "Škoda",
+        "desc": "Nechtěné obavy z toho, že způsobí nebo je za to zodpovědný."
+      },
+      "checking": {
+        "name": "Kontrola",
+        "desc": "Opakovaně kontrolují bezpečnost, chyby, dveře, spotřebiče nebo jiné problémy."
+      },
+      "symmetry": {
+        "name": "Symetrie a \"Přesně tak\"",
+        "desc": "Pocit, že věci musí být vyvážené, přesné nebo prostě správné."
+      },
+      "taboo": {
+        "name": "Vtíravé / tabu myšlenky",
+        "desc": "Nechtěné myšlenky týkající se sexuálních, náboženských, agresivních nebo jiných tabu témat."
+      },
+      "responsibility": {
+        "name": "Odpovědnost a pochybnosti",
+        "desc": "Trvalé pochybnosti o chybách, odpovědnosti nebo o tom, zda je něco skutečně jisté."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "MOŽNÁ TO POZNÁVÁTE",
+    "headline": "OCD může způsobit, že nejistota je nemožná k odpuštění.",
+    "example_1": {
+      "thought": "\"Zamkl jsem dveře?\"",
+      "action": "Zkontroluješ to. Cítíš úlevu.",
+      "loop": "Pak: \"Ale opravdu jsem to kontroloval?\""
+    },
+    "example_2": {
+      "thought": "\"Co když jsem udělal hroznou chybu?\"",
+      "action": "Znovu si přehráváš, co se stalo.",
+      "loop": "Hledáš ujištění."
+    }
+  },
+  "takeaway": {
+    "quote": "Každý má nechtěné myšlenky. \n\nOCD může způsobit, že tyto myšlenky působí jako něco, co musíte vyřešit.",
+    "sub": "Pochopení tohoto vzoru je důležitý první krok."
+  },
+  "next_step": {
+    "eyebrow": "DALŠÍ NA TVÉ CESTĚ",
+    "headline": "Teď se podívejme, jak se cyklus OCD může stále opakovat.",
+    "btn_explore": "Prozkoumejte cyklus OCD →"
+  },
+  "completion": {
+    "eyebrow": "Už jste skončili s průzkumem?",
+    "btn_complete": "Označte aktivitu za →",
+    "saving": "Ukládám...",
+    "completed_badge": "Dokončení činnosti",
+    "error_save": "Teď jsme nemohli uložit dokončení vaší aktivity. Váš postup se ukládá lokálně."
+  }
+}

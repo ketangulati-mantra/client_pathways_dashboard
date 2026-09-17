@@ -1,0 +1,100 @@
+{
+  "header_back": "Bumalik",
+  "header_history": "Kasaysayan",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PAG-CHECK SA MOOD NG OCD",
+    "title": "Kumusta ang pakiramdam mo ngayon?",
+    "subtitle": "Kumuha ng mabilis na larawan. Walang tamang sagot.",
+    "levels": {
+      "l1_title": "1 — Napakababa",
+      "l1_sub": "Pakiramdam na mabigat, nalulunod, o nauubos",
+      "l2_title": "2 — Mababa",
+      "l2_sub": "Hindi mapakali, napipilitan, o mababa ang enerhiya",
+      "l3_title": "3 — Matatag / Neutral",
+      "l3_sub": "Balanse, okay, o tinatanggap ang mga bagay ayon sa pagdating",
+      "l4_title": "4 — Mabuti",
+      "l4_sub": "Malinaw, aktibo, o halos komportable",
+      "l5_title": "5 — Napakaganda",
+      "l5_sub": "Grounded, energized, o payapa"
+    },
+    "btn_continue": "Magpatuloy"
+  },
+  "screen2": {
+    "badge": "HAKBANG 2 SA 4",
+    "title": "Gaano kalaki ang iniisip mo tungkol sa OCD ngayon?",
+    "subtitle": "Isipin mo ang dami ng atensyon, pagkabalisa, o pagkaabala na kinahain ng OCD ngayon.",
+    "impact_l1": "Kaunti lang — Tahimik",
+    "impact_l2": "Banayad — Madaling pamahalaan",
+    "impact_l3": "Katamtaman — Kapansin-pansin",
+    "impact_l4": "Makabuluhan — Nakakagambala",
+    "impact_l5": "Marami — Mataas ang presensya",
+    "scale_min": "1 = Kaunti lang",
+    "scale_max": "5 = Marami",
+    "btn_back": "Bumalik",
+    "btn_continue": "Magpatuloy"
+  },
+  "screen3": {
+    "badge": "HAKBANG 3 SA 4",
+    "title": "Ano ang tumatak ngayon?",
+    "subtitle": "Pumili ng kahit ano na bahagi ng iyong karanasan.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Mga nakakaintrusong kaisipan / pagdududa",
+      "CHECKING": "Pagnanais na suriin o ulitin",
+      "MENTAL_REVIEW": "Mental na pag-uulit / pagsusuri",
+      "REASSURANCE": "Paghahanap ng katiyakan / katiyakan",
+      "AVOIDANCE": "Pag-iwas sa mga trigger o sitwasyon",
+      "HIGH_ANXIETY": "Matinding pagkabalisa o pagkabalisa",
+      "PAUSED_URGE": "Pinahinto o ipinagpaliban ang isang ritwal",
+      "FOCUSED_WELL": "Abala sa pang-araw-araw na gawain",
+      "NONE": "Wala sa mga ito ngayon"
+    },
+    "btn_back": "Bumalik",
+    "btn_continue": "Magpatuloy"
+  },
+  "screen4": {
+    "badge": "HAKBANG 4 SA 4",
+    "title": "May gusto ka bang tandaan?",
+    "subtitle": "Opsyonal. Sapat na ang ilang salita.",
+    "placeholder": "Sumulat ka ng sulat...",
+    "btn_back": "Bumalik",
+    "btn_save": "I-save ang check-in",
+    "saving": "Pag-iipon..."
+  },
+  "screen5": {
+    "badge": "✓ NASAVE",
+    "title": "Ang sandali ngayon.",
+    "subtitle": "Ang iyong check-in ay naitala sa iyong pribadong timeline.",
+    "impact_label": "Epekto ng OCD {{impact}} / 5",
+    "btn_view_moments": "Tingnan ang iyong mga sandali",
+    "btn_done": "Tapos na"
+  },
+  "history": {
+    "tab_moments": "Mga Sandali",
+    "tab_trends": "Mga Uso",
+    "today_title": "Check-in Ngayon",
+    "no_log_today": "Wala pang naitalang check-in ngayong araw.",
+    "btn_check_in_now": "I-record ang check-in ngayong araw",
+    "btn_view_past": "Tingnan ang mga nakaraang check-in ({{count}})",
+    "btn_hide_past": "Itago ang mga nakaraang check-in",
+    "past_title": "Mga Nakaraang Check-in",
+    "no_logs_title": "Wala pang check-in",
+    "no_logs_desc": "Ang iyong mga pribadong tala at emosyonal na timeline ay lalabas dito.",
+    "today_tag": "NGAYONG ARAW",
+    "yesterday_tag": "KAHAPON",
+    "modal_title": "Detalye ng Check-In",
+    "modal_mood_label": "antas ng mood",
+    "modal_impact_label": "Epekto ng OCD",
+    "modal_experiences_label": "Mga Karanasan",
+    "modal_note_label": "Personal na Tala",
+    "btn_edit": "Tala sa I-edit",
+    "btn_delete": "Tanggalin ang Entry",
+    "btn_close": "Isara",
+    "trends_14d": "14 na Araw",
+    "trends_30d": "30 Araw",
+    "trends_90d": "90 Araw",
+    "trends_avg_mood": "karaniwang mood",
+    "trends_avg_impact": "Karaniwang Epekto ng OCD",
+    "trends_total_entries": "Kabuuang Mga Entry"
+  }
+}

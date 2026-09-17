@@ -1,0 +1,113 @@
+{
+  "header_back": "Z powrotem",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "PSYCHOEDUKACJA",
+    "title": "JAK DZIAŁA ERP",
+    "subtitle": "ERP pomaga osobom z OCD zmierzyć się z tym, co je wyzwala, jednocześnie zmieniając to, co robią dalej.",
+    "quote": "\"Nie ćwiczysz bycia nieustraszonym. Ćwiczysz reagowanie inaczej.\"",
+    "btn_explore": "Odkrywaj"
+  },
+  "screen2": {
+    "badge": "SCENARIUSZ 1",
+    "title": "Właśnie wyszedłeś z domu.",
+    "thought": "\"Czy zamknąłem drzwi?\"",
+    "urge_tag": "Czujesz potrzebę powrotu",
+    "subtitle": "Często pojawia się moment wątpliwości. Zobaczmy, co się stanie, gdy impuls zostanie spełniony.",
+    "btn_see_happens": "Zobacz, co się stanie"
+  },
+  "screen3": {
+    "badge": "ŚCIEŻKA A",
+    "title": "Podążaj za impulsem",
+    "btn_check": "Sprawdź zamek",
+    "checking_status": "Sprawdzanie klamki... przekręcanie kluczyka...",
+    "relief_thought": "\"Dobrze, jest zamknięte. Ulga.\"",
+    "doubt_thought": "\"Czekaj... czy naprawdę dobrze je zamknąłem?\"",
+    "subtitle": "Ulga na chwilę uspokoiła uczucie, ale zaraz potem wróciły wątpliwości.",
+    "btn_continue": "Kontynuuj"
+  },
+  "screen4": {
+    "badge": "REFLEKSJA",
+    "title": "Co dał ci czek?",
+    "point1": "Ulga w tej chwili.",
+    "point2": "Kolejny powód, by sprawdzić ponownie, gdy wątpliwość powróci.",
+    "subtitle": "Sprawdzanie może zmniejszyć stres w danym momencie, ale ta krótkotrwała ulga wzmacnia w mózgu chęć ponownego sprawdzenia.",
+    "btn_rewind": "Cofnij chwilę"
+  },
+  "screen5": {
+    "badge": "COFNIJ",
+    "title": "Spróbujmy tego samego momentu inaczej.",
+    "thought": "\"Czy zamknąłem drzwi?\"",
+    "urge_tag": "Pojawia się impuls: \"Wróć i sprawdź\"",
+    "subtitle": "Tym razem, zamiast automatycznie podążać za impulsem, eksplorujemy podejście ERP.",
+    "btn_step1": "Krok 1: Naświetlanie"
+  },
+  "screen6": {
+    "badge": "KROK 1",
+    "title": "1. Ekspozycja",
+    "subtitle1": "ERP zaczyna się od podejścia do wyzwalacza, zamiast go unikać lub sprawić, by zniknął.",
+    "thought": "\"Wątpliwości tu są: czy zamknąłem drzwi na klucz?\"",
+    "subtitle2": "W ERP ekspozycja oznacza pozwolenie, by wyzwalacz lub niepewność były obecne, bez natychmiastowego wypychania go z myśli.",
+    "btn_step2": "Krok 2: Zapobieganie reakcji"
+  },
+  "screen7": {
+    "badge": "KROK 2",
+    "title": "2. Zapobieganie reakcjom",
+    "subtitle1": "Potem pojawia się druga część: opieranie się lub opóźnianie kompulsywnej reakcji.",
+    "thought": "Impuls: \"Wróć i sprawdź teraz.\"",
+    "btn_dont_check": "Nie sprawdzaj teraz",
+    "subtitle2": "Praktyka symulowana: Decyzja o nieprzeprowadzeniu rytuału daje mózgowi szansę na naukę czegoś nowego."
+  },
+  "screen8": {
+    "badge": "PORÓWNANIE",
+    "title": "Dwie ścieżki",
+    "col_urge_title": "Podążaj za impulsem",
+    "col_urge_step1": "Trigger",
+    "col_urge_step2": "Sprawdzone",
+    "col_urge_step3": "Relief",
+    "col_urge_step4": "Wątpliwość powraca",
+    "col_erp_title": "Ścieżka ERP",
+    "col_erp_step1": "Trigger",
+    "col_erp_step2": "Impuls",
+    "col_erp_step3": "Zapobieganie reakcji",
+    "col_erp_step4": "Nowe uczenie się",
+    "btn_learning": "Czego się uczysz?"
+  },
+  "screen9": {
+    "badge": "KLUCZOWE WNIOSKI",
+    "title": "Nie chodzi o to, by nic nie czuć.",
+    "subtitle": "ERP nie polega na natychmiastowym zniknięciu niepokoju. Uczy:",
+    "insight1": "\"Mogę doświadczać niepewności i ją tolerować.\"",
+    "insight2": "\"Mogę mieć impuls, nie działając automatycznie pod jego wpływem.\"",
+    "insight3": "\"Nie potrzebuję rytuału, by odpowiedzieć na każdą wątpliwość.\"",
+    "btn_scenario2": "Spróbuj drugiego scenariusza"
+  },
+  "screen10": {
+    "badge": "SCENARIUSZ 2",
+    "title": "Wysłałeś ważną wiadomość.",
+    "thought": "Myśl: \"Czy powiedziałem coś nie tak?\"",
+    "urge_tag": "Impuls: Przeczytaj to jeszcze raz",
+    "question": "Jak wyglądałaby zapobieganie reakcjom?",
+    "opt_read": "Przeczytaj wiadomość jeszcze raz, żeby się upewnić",
+    "opt_ask": "Zapytaj kogoś, czy brzmi to dobrze",
+    "opt_leave": "Na razie zostaw to tak, jak jest, bez ponownego czytania",
+    "feedback_correct": "✓ To przykład oporu wobec reakcji sprawdzającej lub zapewniającej.",
+    "feedback_incorrect": "To byłby sposób reagowania na niepewność. W ERP zapobieganie reakcji oznacza praktykowanie nieużywania zachowań kontrolujących lub zapewniających.",
+    "btn_final_model": "Ostateczny model",
+    "btn_try_again": "Spróbuj ponownie"
+  },
+  "screen11": {
+    "badge": "PODSUMOWANIE",
+    "title": "ERP zmienia to, co robisz dalej.",
+    "node_trigger": "Trigger",
+    "node_trigger_sub": "Pojawia się wątpliwość",
+    "node_urge": "Impuls",
+    "node_urge_sub": "Pragnienie rytualizacji",
+    "node_erp": "Ekspozycja + Zapobieganie reakcji",
+    "node_erp_sub": "Opieraj się przymusowi",
+    "node_learning": "Nowe Uczenie się",
+    "node_learning_sub": "Niepewność można tolerować",
+    "subtitle": "Celem nie jest wyeliminowanie każdej natrętnej myśli czy uczucia. Chodzi o zbudowanie innej reakcji na nie.",
+    "btn_complete": "Pełna aktywność"
+  }
+}

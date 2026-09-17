@@ -1,0 +1,86 @@
+{
+  "header_back": "Tillbaka",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "AKTIVITET 3",
+    "title": "TITTA UPP.",
+    "subtitle": "LARMET ÄR INTE FARAN.",
+    "detail": "En känsla kan vara högljudd utan att berätta hela historien.",
+    "btn_enter": "IN KOMMER →"
+  },
+  "screen2": {
+    "title_line1": "IBLAND,",
+    "title_line2": "OSÄKERHET RÄCKER.",
+    "subtitle": "Tryck på en fras för att se hur detektorn reagerar.",
+    "example1": "\"Tänk om jag gjorde ett misstag?\"",
+    "example2": "\"Tänk om något inte är tillräckligt rent?\"",
+    "example3": "\"Tänk om jag inte kan vara helt säker?\"",
+    "btn_activates": "SIGNALEN AKTIVERAR →"
+  },
+  "screen3": {
+    "ambient_heart": "HJÄRTAT RUSAR",
+    "ambient_tension": "SPÄNNING",
+    "ambient_attention": "UPPMÄRKSAMHET",
+    "ambient_urge": "URGE",
+    "title": "DEN KÄNSLAN KAN VARA HÖGLJUDD.",
+    "subtitle": "Känslan är verklig. Budskapet den verkar bära är inte automatiskt hela sanningen.",
+    "btn_look_closer": "TITTA NÄRMARE →"
+  },
+  "screen4": {
+    "tag_left": "[ SIGNAL // KÄNSLIGHET ]",
+    "tag_right": "[ SVAR // TOLKNING ]",
+    "title": "TITTA NÄRMARE.",
+    "subtitle": "Dra var som helst för att inspektera detektorn från vilken vinkel som helst.",
+    "detail": "Du kan märka signalen utan att omedelbart dra en slutsats.",
+    "btn_continue": "FORTSÄTT →"
+  },
+  "screen5": {
+    "title": "SIGNAL ≠ DOM",
+    "subtitle": "En stark känsla kan vara verklig utan att automatiskt bevisa vad den verkar säga.",
+    "col_feel_title": "VAD JAG KÄNNER",
+    "feel_anxious": "Orolig.",
+    "feel_uncertain": "Osäker.",
+    "feel_tense": "Spänd.",
+    "feel_pulled": "Dragit för att kontrollera.",
+    "col_conclude_title": "VAD JAG DRAR SLUTSATSEN",
+    "conclude_wrong": "\"Något måste vara fel.\"",
+    "conclude_make_sure": "\"Jag måste vara säker.\"",
+    "conclude_certainty": "\"Jag behöver säkerhet.\"",
+    "btn_next": "VAD HÄNDER SEDAN? →"
+  },
+  "screen6": {
+    "title": "IBLAND KAN ETT SVAR TYSTA SIGNALEN FÖR ETT ÖGONBLICK.",
+    "subtitle": "Tryck för att se hur svaren interagerar med signalen.",
+    "item_check_title": "CHECK",
+    "item_check_quote": "\"Jag ska se till en gång till.\"",
+    "item_ask_title": "FRÅGA",
+    "item_ask_quote": "\"Jag ska fråga någon vad de tycker.\"",
+    "item_replay_title": "OMSPEL",
+    "item_replay_quote": "\"Jag går igenom det igen i huvudet.\"",
+    "item_avoid_title": "UNDVIK",
+    "item_avoid_quote": "\"Jag håller mig borta från vad som än känns osäkert.\"",
+    "btn_let_signal": "LÅT SIGNALEN FINNAS DÄR →"
+  },
+  "screen7": {
+    "title": "LÅT SIGNALEN FINNAS DÄR.",
+    "subtitle": "Lägg märke till vad som händer när du inte genast skyndar dig att tolka det.",
+    "btn_watch": "HÅLL KOLL PÅ SIGNALEN",
+    "observing_format": "Observerar signal... ({{seconds}}s)",
+    "done_title": "SIGNALEN ÄNDRADES.",
+    "done_sub": "Du behövde inte lösa det.",
+    "btn_continue": "FORTSÄTT →"
+  },
+  "screen8": {
+    "title_line1": "ETT LARM ÄR EN SIGNAL.",
+    "title_line2": "INGEN DOM.",
+    "subtitle": "Lägg märke till känslan. Lägg märke till berättelsen ditt sinne lägger till den.",
+    "question": "NÄSTA GÅNG LARMET BLIR HÖGT, VAD KANSKE DU MÄRKER FÖRST?",
+    "opt_feeling": "KÄNSLAN",
+    "opt_thought": "TANKEN",
+    "opt_urge": "LUSTEN ATT SVARA",
+    "feedback": "Fortsätter att märka skillnaden.",
+    "btn_saving": "RÄDDA...",
+    "btn_continue": "FORTSÄTT →"
+  }
+}

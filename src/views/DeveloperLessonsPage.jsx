@@ -22,6 +22,11 @@ export const THERAPY_PROBLEMS = [
   { id: 'eating_disorder', label: 'Eating Disorder' }
 ];
 
+export const OCD_PROBLEMS = [
+  { id: 'all', label: 'All OCD' },
+  { id: 'foundational', label: 'Foundational' }
+];
+
 export default function DeveloperLessonsPage({ onNavigate }) {
   const launchPathway = (act) => {
     if (!act) return;
@@ -157,10 +162,16 @@ export default function DeveloperLessonsPage({ onNavigate }) {
     }
   };
 
-  const serviceOptions = ['all', ...(SUPPORTED_SERVICES || ['therapy', 'listener', 'yoga', 'diet', 'physiotherapy', 'coaching', 'women_wellness'])];
+  const rawServiceList = SUPPORTED_SERVICES || ['therapy', 'listener', 'yoga', 'diet', 'physiotherapy', 'coaching', 'women_wellness'];
+  const uniqueServices = Array.from(new Set(rawServiceList.map(s => (s === 'collection' || s === 'collections' ? 'therapy' : s))));
+  const serviceOptions = ['all', ...uniqueServices];
 
   const normSelected = normalizeService(selectedService);
   const isTherapyActive = normSelected === 'therapy' || normSelected === 'all';
+  const isOcdActive = normSelected === 'ocd';
+  const hasConditionSidebar = isTherapyActive || isOcdActive;
+  const currentProblems = isOcdActive ? OCD_PROBLEMS : THERAPY_PROBLEMS;
+  const sidebarHeading = isOcdActive ? 'OCD Conditions' : 'Therapy Conditions';
 
   const filteredActivities = (mantraActivities || []).filter(act => {
     if (!act) return false;
@@ -173,7 +184,7 @@ export default function DeveloperLessonsPage({ onNavigate }) {
       actServices.some(s => normalizeService(s) === normSelected) ||
       (act.service && normalizeService(act.service) === normSelected);
 
-    // Filter by specific Problem/Condition tab (when inside therapy)
+    // Filter by specific Problem/Condition tab (when inside therapy or ocd)
     const isFoundational =
       act.problem === 'foundational' ||
       (act.problems && act.problems.includes('foundational')) ||
@@ -183,8 +194,9 @@ export default function DeveloperLessonsPage({ onNavigate }) {
 
     const matchesProblem =
       selectedProblem === 'all' ||
-      !isTherapyActive ||
+      !hasConditionSidebar ||
       (selectedProblem === 'foundational' && isFoundational) ||
+      (selectedProblem === 'ocd' && (act.services?.includes('ocd') || act.problems?.includes('ocd'))) ||
       (act.problems && act.problems.includes(selectedProblem)) ||
       (act.problem && act.problem === selectedProblem) ||
       (act.tags && act.tags.includes(selectedProblem)) ||
@@ -473,7 +485,7 @@ export default function DeveloperLessonsPage({ onNavigate }) {
                         transition: 'all 0.15s ease'
                       }}
                     >
-                      {svc === 'all' ? 'All Services' : svc.replace('_', ' ')}
+                      {svc === 'all' ? 'All Services' : (svc === 'collection' || svc === 'collections' ? 'Therapy' : svc.replace('_', ' '))}
                     </button>
                   );
                 })}
@@ -483,8 +495,8 @@ export default function DeveloperLessonsPage({ onNavigate }) {
             {/* 2-COLUMN LAYOUT: Problem Tabs (Left) + Pathways Grid (Right) */}
             <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
 
-              {/* LEFT PROBLEM TABS (Visible under Therapy / All Services) */}
-              {isTherapyActive && (
+              {/* LEFT PROBLEM TABS (Visible under Therapy / OCD / All Services) */}
+              {hasConditionSidebar && (
                 <aside style={{
                   width: '240px',
                   minWidth: '220px',
@@ -501,10 +513,10 @@ export default function DeveloperLessonsPage({ onNavigate }) {
                   top: '80px'
                 }}>
                   <div style={{ padding: '0 8px 6px', fontSize: '0.76rem', fontWeight: 800, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                    Therapy Conditions
+                    {sidebarHeading}
                   </div>
 
-                  {THERAPY_PROBLEMS.map(problem => {
+                  {currentProblems.map(problem => {
                     const isSelected = selectedProblem === problem.id;
                     return (
                       <button

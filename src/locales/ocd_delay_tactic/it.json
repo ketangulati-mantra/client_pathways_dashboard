@@ -1,0 +1,107 @@
+{
+  "header_back": "Indietro",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "La pausa di 60 secondi",
+    "subtitle": "A volte un impulso può sembrare qualcosa su cui devi agire subito. Esercitiamoci a creare un po' di spazio prima di rispondere.",
+    "btn_begin": "Inizio"
+  },
+  "step2": {
+    "eyebrow": "SCENARIO 1",
+    "title": "Proviamo uno scenario",
+    "subtitle": "Immagina di essere appena uscito di casa.",
+    "visual_line1": "Chiudi a chiave la porta d'ingresso e ti dirigi verso la tua auto.",
+    "visual_thought": "\"L'ho chiuso bene?\"",
+    "visual_line2": "Noti il richiamo di girarti e controllare.",
+    "btn_continue": "Continua"
+  },
+  "step3": {
+    "eyebrow": "L'IMPULSO",
+    "banner": "\"Controlla ancora una volta.\"",
+    "subtitle": "Noti l'impulso di girarti e controllare.",
+    "question": "Cosa ti sentiresti normalmente attratto?",
+    "responses": {
+      "check": "Controlla di nuovo",
+      "ask": "Chiedi rassicurazioni a qualcuno",
+      "goback": "Torna indietro e assicurati",
+      "wait": "Fermati e aspetta"
+    },
+    "btn_next": "Prossimo"
+  },
+  "step4": {
+    "title": "Non devi ancora rispondere.",
+    "subtitle": "Per i prossimi 60 secondi, ci eserciteremo a creare un piccolo spazio tra l'impulso e la tua risposta.",
+    "cadence_pause": "PAUSA",
+    "cadence_notice": "AVVISO",
+    "cadence_choose": "SCEGLI",
+    "detail": "L'obiettivo non è far sparire il pensiero. È notare l'impulso senza rispondergli immediatamente.",
+    "btn_start": "Pausa di 60 secondi"
+  },
+  "step5": {
+    "badge": "L'IMPULSO È ARRIVATO",
+    "prompts": {
+      "0": "Nota l'impulso mentre appare.",
+      "1": "Si percepisce il richiamo senza rispondere.",
+      "2": "Fai un respiro leggero e osserva.",
+      "3": "L'impulso è solo una sensazione in questo momento.",
+      "4": "Non devi risolvere subito l'incertezza.",
+      "5": "Nota dove senti la tensione nel corpo.",
+      "6": "I pensieri vanno e vengono come onde sull'acqua.",
+      "7": "Creare spazio tra pensiero e azione.",
+      "8": "Stai osservando l'impulso, non obbediendolo.",
+      "9": "L'incertezza può essere scomoda, e va bene così.",
+      "10": "Lascia che il pensiero sia lì senza coinvolgerti.",
+      "11": "Nota l'impulso di sistemare o controllare.",
+      "12": "Rimanete curiosi riguardo alla sensazione.",
+      "13": "Sei tu a controllare la tua risposta.",
+      "14": "Non c'è bisogno di risolvere nulla proprio in questo istante.",
+      "15": "Hai creato spazio per oltre 45 secondi.",
+      "16": "Basta notare l'impulso senza affrettarsi ad agire.",
+      "17": "Quasi arrivata — riposando nella pausa.",
+      "18": "Rimani presente con questo ultimo respiro.",
+      "19": "Hai completato la pausa."
+    }
+  },
+  "step6": {
+    "title": "Hai creato spazio.",
+    "subtitle": "L'obiettivo non era far sparire l'impulso. Era concedersi un momento prima di rispondere.",
+    "question": "Cosa hai notato?",
+    "reflections": {
+      "thought_there": "Il pensiero era ancora lì",
+      "felt_urge": "Ho sentito l'impulso di rispondere",
+      "uncomfortable": "L'incertezza era scomoda",
+      "could_wait": "Potrei aspettare senza rispondere subito"
+    },
+    "btn_continue": "Continua"
+  },
+  "step7": {
+    "eyebrow": "CICLO DISTURBO",
+    "title": "Dove si adatta la pausa",
+    "subtitle": "Il DOC crea un forte richiamo a rispondere immediatamente al dubbio.",
+    "node_doubt": "Dubbio / Pensiero intrusivo",
+    "node_urge": "Impulso a rispondere",
+    "space_tag": "LA PAUSA DI 60 SECONDI",
+    "space_title": "Questo è lo spazio che hai appena praticato.",
+    "node_compulsion": "Risposta compulsiva",
+    "node_relief": "Il sollievo temporaneo → il ritorno del dubbio",
+    "detail": "Una pausa ti dà un attimo prima di seguire automaticamente quella pull.",
+    "btn_try_another": "Prova un altro scenario"
+  },
+  "step8": {
+    "eyebrow": "SCENARIO 2",
+    "title": "Trasferimento di allenamento",
+    "subtitle": "Immagina di aver appena inviato un messaggio importante.",
+    "visual_line1": "Premi invia e chiudi la conversazione.",
+    "visual_thought": "\"Ho detto qualcosa di sbagliato? Forse dovrei rileggerlo.\"",
+    "visual_line2": "Stesso schema: Pensiero → Impulso → Pausa → Scelta.",
+    "btn_practice": "Pausa di allenamento (anni '60)"
+  },
+  "step9": {
+    "title": "Un impulso non è un'istruzione.",
+    "subtitle": "Non devi rispondere subito a ogni impulso. Un po' di spazio può creare un punto di partenza diverso.",
+    "cadence_pause": "PAUSA",
+    "cadence_notice": "AVVISO",
+    "cadence_choose": "SCEGLI",
+    "btn_continue": "Continua"
+  }
+}

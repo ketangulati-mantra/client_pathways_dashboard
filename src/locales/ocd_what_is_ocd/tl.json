@@ -1,0 +1,83 @@
+{
+  "header_back": "Bumalik",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "label": "OCDMANTRA",
+    "title": "Ano ang OCD?",
+    "subtitle": "Unawain kung ano ang OCD, paano ito lumalabas, at bakit ito maaaring maging napaka-kapani-paniwala."
+  },
+  "video": {
+    "eyebrow": "MAGSIMULA DITO",
+    "title": "Panoorin ang maikling introduksyon na ito tungkol sa OCD."
+  },
+  "basics": {
+    "eyebrow": "ANG MGA PANGUNAHING KAALAMAN",
+    "headline": "Ang OCD ay higit pa sa mga hindi kanais-nais na iniisip.",
+    "obsession_title": "MGA OBSESYON",
+    "obsession_desc": "Mga hindi kanais-nais na iniisip, larawan, pagdududa, o pagnanasa na mahirap balewalain.",
+    "compulsion_title": "MGA PAMIMILIT",
+    "compulsion_desc": "Mga kilos o mental na tugon na nararamdaman mong inuulit upang mabawasan ang hindi komportableng pakiramdam o maging sigurado."
+  },
+  "themes": {
+    "eyebrow": "KARANIWANG TEMA",
+    "headline": "Maraming anyo ang maaaring gawin ng OCD.",
+    "subtext": "Ito ay mga karaniwang tema, hindi magkahiwalay na diagnosis. Isang tao lang ang maaaring makaranas ng higit sa isa.",
+    "disclaimer": "Ilan lamang ito sa mga halimbawa.",
+    "items": {
+      "contamination": {
+        "name": "Kontaminasyon",
+        "desc": "Takot sa mikrobyo, sakit, dumi, o kontaminasyon."
+      },
+      "harm": {
+        "name": "Pinsala",
+        "desc": "Hindi kanais-nais na takot tungkol sa pagdudulot o pagiging responsable sa pinsala."
+      },
+      "checking": {
+        "name": "Pagsusuri",
+        "desc": "Paulit-ulit na pag-check ng kaligtasan, pagkakamali, pinto, appliances, o iba pang alalahanin."
+      },
+      "symmetry": {
+        "name": "Simetriya at \"Tama Lang\"",
+        "desc": "Pakiramdam na kailangang balanse, eksakto, o tama lang ang mga bagay."
+      },
+      "taboo": {
+        "name": "Mga Intrusive / Taboo na Kaisipan",
+        "desc": "Mga hindi kanais-nais na kaisipan na may kinalaman sa sekswal, relihiyoso, agresibo, o iba pang taboo na tema."
+      },
+      "responsibility": {
+        "name": "Responsibilidad at Pagdududa",
+        "desc": "Patuloy na pagdududa tungkol sa mga pagkakamali, responsibilidad, o kung ang isang bagay ay tunay na tiyak."
+      }
+    }
+  },
+  "relatable": {
+    "eyebrow": "MAAARING MAKILALA MO ITO",
+    "headline": "Maaaring gawing imposible ang pag-iwas sa kawalang-katiyakan dahil sa OCD.",
+    "example_1": {
+      "thought": "\"Na-lock ko ba ang pinto?\"",
+      "action": "Tingnan mo. Naramdaman mong nakahinga ka ng maluwag.",
+      "loop": "Pagkatapos: \"Pero sinuri ko ba talaga?\""
+    },
+    "example_2": {
+      "thought": "\"Paano kung nagkamali ako nang malaki?\"",
+      "action": "Ulitin mo ang nangyari.",
+      "loop": "Naghahanap ka ng katiyakan."
+    }
+  },
+  "takeaway": {
+    "quote": "Lahat ay may mga hindi kanais-nais na iniisip. \n\nAng OCD ay maaaring magdulot ng pakiramdam na kailangan mong lutasin ang mga ganitong kaisipan.",
+    "sub": "Ang pag-unawa sa pattern na iyon ay mahalagang unang hakbang."
+  },
+  "next_step": {
+    "eyebrow": "SUSUNOD SA IYONG PAGLALAKBAY",
+    "headline": "Ngayon, tingnan natin kung paano patuloy na nauulit ang siklo ng OCD.",
+    "btn_explore": "Tuklasin ang OCD Cycle →"
+  },
+  "completion": {
+    "eyebrow": "Tapos ka na ba sa pag-explore?",
+    "btn_complete": "Markahan ang aktibidad bilang tapos na →",
+    "saving": "Pag-iipon...",
+    "completed_badge": "Natapos na ang Aktibidad",
+    "error_save": "Hindi namin na-save ang pagkumpleto ng iyong aktibidad ngayon. Ang progreso mo ay naka-save lokal."
+  }
+}

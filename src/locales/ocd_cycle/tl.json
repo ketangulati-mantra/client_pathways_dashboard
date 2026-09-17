@@ -1,0 +1,155 @@
+{
+  "header_back": "Bumalik",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Sa loob ng isang OCD Loop",
+    "subtitle": "Tingnan kung paano nagiging siklo ang isang kaisipan."
+  },
+  "stages": {
+    "step_experience": "01 Karanasan",
+    "step_recognize": "02 Kilalanin",
+    "step_explore": "03 Tuklasin",
+    "step_practice": "04 Paunawa",
+    "step_takeaway": "05 Aral"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Kaisipan",
+      "uncertainty": "kawalang-katiyakan",
+      "response": "Tugon",
+      "relief": "Relief"
+    },
+    "cycle_1": {
+      "thought": "\"Paano kung hindi ko nilock ang pinto?\"",
+      "uncertainty": "\"Talaga bang nilock ko ito?\"",
+      "response": "\"Suriin ulit.\"",
+      "relief": "\"Sige. Mas magaan ang pakiramdam ko.\""
+    },
+    "cycle_2": {
+      "thought": "\"Sandali... pero sinuri ko ba nang maayos?\"",
+      "uncertainty": "\"Kailangan kong makasiguro.\"",
+      "response": "\"Suriin pa ulit.\"",
+      "relief": "\"Pansamantalang ginhawa...\""
+    },
+    "notice_prompt": "Napansin mo ba?",
+    "notice_detail": "Totoo ang ginhawa, pero bumalik ang pagdududa.",
+    "action_prompt": "Tingnan kung ano ang nagbago →"
+  },
+  "scenarios": {
+    "heading": "Ngayon, gawin mo na sa'yo.",
+    "subheading": "Pumili ng isang kilalang senaryo upang panoorin itong gumalaw sa loop.",
+    "checking": {
+      "name": "Pagsusuri",
+      "phrase": "\"Paano kung hindi ko nilock ang pinto?\"",
+      "thought": "\"Paano kung hindi ko nilock ang pinto?\"",
+      "uncertainty": "\"Talaga bang nilock ko ito?\"",
+      "response": "\"Suriin muli ang kandado.\"",
+      "relief": "\"Sige, pakiramdam ko ligtas muna.\"",
+      "return": "\"Sandali... na-check ko ba nang maayos?\"",
+      "takeaway_quote": "Napansin ko na mabilis ang ginhawa ng pag-check, pero bumabalik ang pagdududa.",
+      "takeaway_action": "Sa susunod na lumitaw ang pagdududa, huminto muna at pansinin ang pagnanais bago awtomatikong suriin."
+    },
+    "responsibility": {
+      "name": "Responsibilidad",
+      "phrase": "\"Paano kung nagkamali ako nang malaki?\"",
+      "thought": "\"Paano kung nagkamali ako nang malaki?\"",
+      "uncertainty": "\"Kailangan kong malaman nang sigurado.\"",
+      "response": "\"Ulitin ang bawat detalye sa isip ko.\"",
+      "relief": "\"Mukhang ayos lang sandali.\"",
+      "return": "\"Paano kung may namiss akong detalye?\"",
+      "takeaway_quote": "Napansin ko na ang mental na pag-uulit ay sinusubukang lumikha ng katiyakan, pero pinapalawig ang pagdududa.",
+      "takeaway_action": "Sa susunod na lumitaw ang pagnanais na ulitin, kilalanin ang pagdududa nang hindi ito sinusuri."
+    },
+    "contamination": {
+      "name": "Kontaminasyon",
+      "phrase": "\"Paano kung may nahawakan akong kontaminado?\"",
+      "thought": "\"Paano kung hindi malinis ang ibabaw na iyon?\"",
+      "uncertainty": "\"Hindi ako komportable at kontaminado.\"",
+      "response": "\"Maghugas nang mabuti.\"",
+      "relief": "\"Pakiramdam ko ay malinis muna ako.\"",
+      "return": "\"Naligo ba ako nang maayos?\"",
+      "takeaway_quote": "Napansin ko na ang paghuhugas ay nakakatulong para maibsan ang unang discomfort, pero nagdudulot ito ng susunod na pagdududa.",
+      "takeaway_action": "Sa susunod na dumating ang pagnanais na maghugas, bigyan mo ang sarili mo ng sandali para mapansin muna ang pakiramdam."
+    },
+    "symmetry": {
+      "name": "sakto lang",
+      "phrase": "\"Paano kung hindi ko ito magawa nang tama?\"",
+      "thought": "\"Hindi ito balanse ang pakiramdam.\"",
+      "uncertainty": "\"Maaaring may masamang mangyari o may mali.\"",
+      "response": "\"Ulitin mo hanggang ma-click mo.\"",
+      "relief": "\"Tama ang pakiramdam mo sa ngayon.\"",
+      "return": "\"Tama ba ang ginawa ko noong nakaraan?\"",
+      "takeaway_quote": "Napansin ko na ang pag-uulit ng isang kilos para sa pakiramdam na 'tama lang' ay nagpapanatili ng pagnanasa.",
+      "takeaway_action": "Sa susunod na pakiramdam ay hindi kumpleto ang isang bagay, pansinin ang pagnanais na ulitin nang hindi agad inuulit."
+    },
+    "doubt_return_label": "Bumalik ang pagdududa:"
+  },
+  "snapshot": {
+    "title": "Ang Iyong Loop Snapshot",
+    "thought_label": "Kaisipan",
+    "uncertainty_label": "kawalang-katiyakan",
+    "response_label": "Tugon",
+    "effect_label": "Panandaliang epekto",
+    "next_label": "Ano ang susunod na mangyayari",
+    "replay_btn": "Senaryo ng pag-replay"
+  },
+  "response_point": {
+    "heading": "Dito nagiging interesante ang pattern.",
+    "subheading": "Maaaring hindi mo kontrolin ang iniisip o ang kawalang-katiyakan. Ngunit mapapansin mo kung ano ang susunod na mangyayari.",
+    "choice_check": "Suriin muli",
+    "choice_notice": "Pansinin ang pagnanasa",
+    "check_result_title": "Ang awtomatikong tugon",
+    "check_result_body": "Nagdulot ng ginhawa ang pagsusuri. Bumalik ang pagdududa.",
+    "notice_result_title": "Ang paghinto",
+    "notice_result_body": "Maaaring hindi pa rin komportable ang pag-aalinlangan. Kapag napansin mo ang pagnanasa, nagkaroon ka ng sandali bago ka awtomatikong sumagot.",
+    "try_again": "Gusto mo bang makita ulit ang pagkakaiba?"
+  },
+  "compulsions": {
+    "statement": "Hindi palaging ginagawa ang compulsions.",
+    "tab_outward": "palabas",
+    "tab_inward": "papasok",
+    "outward_items": {
+      "0": "Pagsusuri",
+      "1": "Paghuhugas",
+      "2": "inuulit"
+    },
+    "inward_items": {
+      "0": "Muling Paglalaro",
+      "1": "Pagsusuri",
+      "2": "Pagsusuri",
+      "3": "Paghahanap ng katiyakan"
+    }
+  },
+  "recognition": {
+    "heading": "Mapapansin mo ang pattern bilang...",
+    "pattern_1": {
+      "step1": "Suriin",
+      "step2": "Relief",
+      "step3": "pagdududa"
+    },
+    "pattern_2": {
+      "step1": "Replay",
+      "step2": "katiyakan",
+      "step3": "pagdududa"
+    },
+    "pattern_3": {
+      "step1": "Iwasan",
+      "step2": "Relief",
+      "step3": "Bumalik ang takot"
+    }
+  },
+  "takeaway": {
+    "tag": "Ang Iyong Natutunan",
+    "main_headline": "Ang iniisip ay hindi ang loop.",
+    "sub_headline": "Pansinin kung ano ang susunod na mangyayari.",
+    "closing": "Ang pag-unawa sa pattern ang unang hakbang para makilala ito sa totoong buhay."
+  },
+  "next_step": {
+    "prompt_title": "Handa ka na ba sa susunod?",
+    "prompt_desc": "Markahan ang aktibidad na ito bilang natapos upang i-save ang iyong progreso at ipagpatuloy ang iyong pathway.",
+    "btn_complete": "Markahan ang Aktibidad bilang Tapos na",
+    "saving": "Pag-iipon...",
+    "completed_badge": "Natapos na ang Aktibidad",
+    "error_save": "Hindi namin na-save ang pagkumpleto ng iyong aktibidad ngayon. Ang progreso mo ay naka-save lokal."
+  }
+}

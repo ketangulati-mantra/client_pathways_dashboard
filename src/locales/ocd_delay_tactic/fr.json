@@ -1,0 +1,107 @@
+{
+  "header_back": "Retour",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "La pause de 60 secondes",
+    "subtitle": "Parfois, une envie peut donner l’impression d’agir immédiatement. Entraînons-nous à créer un peu d’espace avant de répondre.",
+    "btn_begin": "Début"
+  },
+  "step2": {
+    "eyebrow": "SCÉNARIO 1",
+    "title": "Essayons un scénario",
+    "subtitle": "Imaginez que vous venez de quitter votre maison.",
+    "visual_line1": "Tu fermes la porte d’entrée à clé et marches vers ta voiture.",
+    "visual_thought": "« Est-ce que je l’ai bien verrouillé ? »",
+    "visual_line2": "Tu remarques l’appel pour te retourner et vérifier.",
+    "btn_continue": "Continuez"
+  },
+  "step3": {
+    "eyebrow": "L’ENVIE",
+    "banner": "« Vérifie encore une fois. »",
+    "subtitle": "Tu ressens l’envie de te retourner pour vérifier.",
+    "question": "Qu’est-ce que vous ressentiriez normalement attiré par la poussée ?",
+    "responses": {
+      "check": "Vérifie encore",
+      "ask": "Demandez à quelqu’un de vous rassurer",
+      "goback": "Retourne vérifier",
+      "wait": "Pause et attends"
+    },
+    "btn_next": "Suivant"
+  },
+  "step4": {
+    "title": "Vous n’êtes pas obligé d’y répondre tout de suite.",
+    "subtitle": "Pendant les 60 prochaines secondes, nous allons nous entraîner à créer un petit espace entre l’envie et votre réponse.",
+    "cadence_pause": "PAUSE",
+    "cadence_notice": "AVIS",
+    "cadence_choose": "CHOISISSEZ",
+    "detail": "Le but n’est pas de faire disparaître cette pensée. C’est de remarquer l’envie sans y répondre immédiatement.",
+    "btn_start": "Pause de 60 secondes"
+  },
+  "step5": {
+    "badge": "L’ENVIE EST LÀ",
+    "prompts": {
+      "0": "Remarquez l’envie au fur et à mesure qu’elle apparaît.",
+      "1": "On peut sentir l’appel sans y répondre.",
+      "2": "Prenez une douce inspiration et observez.",
+      "3": "L’envie n’est qu’une sensation en ce moment.",
+      "4": "Vous n’êtes pas obligé de résoudre l’incertitude tout de suite.",
+      "5": "Remarquez où vous ressentez la tension dans votre corps.",
+      "6": "Les pensées vont et viennent comme des ondulations sur l’eau.",
+      "7": "Créer un espace entre la pensée et l’action.",
+      "8": "Tu observes l’envie, tu ne lui obéis pas.",
+      "9": "L’incertitude peut être inconfortable, et c’est normal.",
+      "10": "Laissez la pensée là sans intervenir.",
+      "11": "Remarquez l’impulsion de réparer ou de vérifier.",
+      "12": "Restez curieux de la sensation.",
+      "13": "Vous contrôlez votre réponse.",
+      "14": "Rien n’a besoin d’être réglé à cet instant précis.",
+      "15": "Tu as créé de l’espace pendant plus de 45 secondes.",
+      "16": "Il suffit de remarquer l’envie sans se précipiter pour agir.",
+      "17": "Presque là — reposant dans la pause.",
+      "18": "Restez présent avec ce dernier souffle.",
+      "19": "Tu as terminé la pause."
+    }
+  },
+  "step6": {
+    "title": "Tu as fait de la place.",
+    "subtitle": "Le but n’était pas de faire disparaître l’envie. C’était de s’accorder un moment avant de répondre.",
+    "question": "Qu’as-tu remarqué ?",
+    "reflections": {
+      "thought_there": "La pensée était toujours là",
+      "felt_urge": "J’ai ressenti l’envie de répondre",
+      "uncomfortable": "L’incertitude était inconfortable",
+      "could_wait": "Je pouvais attendre sans répondre tout de suite"
+    },
+    "btn_continue": "Continuez"
+  },
+  "step7": {
+    "eyebrow": "CYCLE DU TOC",
+    "title": "Là où la pause s’inscrit",
+    "subtitle": "Le TOC crée une forte attirance à répondre immédiatement au doute.",
+    "node_doubt": "Doute / Pensée intrusive",
+    "node_urge": "Envie de répondre",
+    "space_tag": "LA PAUSE DE 60 SECONDES",
+    "space_title": "C’est l’espace que tu viens de t’entraîner.",
+    "node_compulsion": "Réponse compulsive",
+    "node_relief": "Le soulagement temporaire → le doute revient",
+    "detail": "Une pause vous donne un instant avant de suivre automatiquement cette tire.",
+    "btn_try_another": "Essayez un autre scénario"
+  },
+  "step8": {
+    "eyebrow": "SCÉNARIO 2",
+    "title": "Transfert d’entraînement",
+    "subtitle": "Imaginez que vous venez d’envoyer un message important.",
+    "visual_line1": "Tu appuies sur envoyer et tu fermes la conversation.",
+    "visual_thought": "« Ai-je dit quelque chose de mal ? Peut-être devrais-je le relire. »",
+    "visual_line2": "Même schéma : Pensée → Envie → Pause → Choix.",
+    "btn_practice": "Pause d’entraînement (années 60)"
+  },
+  "step9": {
+    "title": "Une impulsion n’est pas une instruction.",
+    "subtitle": "Vous n’êtes pas obligé de répondre immédiatement à chaque envie. Un peu d’espace peut créer un point de départ différent.",
+    "cadence_pause": "PAUSE",
+    "cadence_notice": "AVIS",
+    "cadence_choose": "CHOISISSEZ",
+    "btn_continue": "Continuez"
+  }
+}

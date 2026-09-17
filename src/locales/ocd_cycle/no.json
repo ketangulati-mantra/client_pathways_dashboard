@@ -1,0 +1,155 @@
+{
+  "header_back": "Tilbake",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title": "Inne i en OCD-løkke",
+    "subtitle": "Se hvordan en tanke kan bli til en syklus."
+  },
+  "stages": {
+    "step_experience": "01-opplevelsen",
+    "step_recognize": "02 Gjenkjenn",
+    "step_explore": "03 Utforsk",
+    "step_practice": "04 Varsel",
+    "step_takeaway": "05 Takeaway"
+  },
+  "loop": {
+    "stages": {
+      "thought": "Tanker",
+      "uncertainty": "Usikkerhet",
+      "response": "Respons",
+      "relief": "Relief"
+    },
+    "cycle_1": {
+      "thought": "\"Hva om jeg ikke låste døren?\"",
+      "uncertainty": "\"Låste jeg den virkelig?\"",
+      "response": "\"Sjekk igjen.\"",
+      "relief": "\"Ok. Jeg føler meg bedre.\""
+    },
+    "cycle_2": {
+      "thought": "\"Vent... men sjekket jeg virkelig ordentlig?\"",
+      "uncertainty": "\"Jeg må være sikker.\"",
+      "response": "\"Sjekk en gang til.\"",
+      "relief": "\"Midlertidig lindring...\""
+    },
+    "notice_prompt": "La du merke til det?",
+    "notice_detail": "Lettelsen var ekte, men tvilen kom tilbake.",
+    "action_prompt": "Se hva som endret seg →"
+  },
+  "scenarios": {
+    "heading": "Nå gjør den til din.",
+    "subheading": "Velg et gjenkjennelig scenario for å se den bevege seg gjennom løkken.",
+    "checking": {
+      "name": "Sjekker",
+      "phrase": "\"Hva om jeg ikke låste døren?\"",
+      "thought": "\"Hva om jeg ikke låste døren?\"",
+      "uncertainty": "\"Låste jeg den virkelig?\"",
+      "response": "\"Sjekk låsen igjen.\"",
+      "relief": "\"Ok, det føles trygt for nå.\"",
+      "return": "\"Vent... sjekket jeg ordentlig?\"",
+      "takeaway_quote": "Jeg la merke til at sjekk gir rask lindring, men tvilen kommer tilbake.",
+      "takeaway_action": "Neste gang tvilen dukker opp, stopp opp og merk trangen før du automatisk sjekker."
+    },
+    "responsibility": {
+      "name": "Ansvar",
+      "phrase": "\"Hva om jeg gjorde en alvorlig feil?\"",
+      "thought": "\"Hva om jeg gjorde en alvorlig feil?\"",
+      "uncertainty": "\"Jeg må vite det sikkert.\"",
+      "response": "\"Spill av hver detalj i hodet mitt.\"",
+      "relief": "\"Det virker fint et øyeblikk.\"",
+      "return": "\"Hva om jeg overså en detalj?\"",
+      "takeaway_quote": "Jeg la merke til at mental gjenspilling prøver å skape sikkerhet, men forlenger tvilen.",
+      "takeaway_action": "Neste gang trangen til å spille om igjen, erkjenn tvilen uten å analysere den."
+    },
+    "contamination": {
+      "name": "Forurensning",
+      "phrase": "\"Hva om jeg tok på noe forurenset?\"",
+      "thought": "\"Hva om den overflaten ikke var ren?\"",
+      "uncertainty": "\"Jeg føler meg ukomfortabel og forurenset.\"",
+      "response": "\"Vask deg grundig.\"",
+      "relief": "\"Jeg føler meg ren for nå.\"",
+      "return": "\"Vasket jeg meg godt nok?\"",
+      "takeaway_quote": "Jeg la merke til at vask lindrer det første ubehaget, men setter opp neste tvil.",
+      "takeaway_action": "Neste gang trangen til å vaske seg kommer, gi deg selv et øyeblikk til å merke følelsen først."
+    },
+    "symmetry": {
+      "name": "Akkurat passe",
+      "phrase": "\"Hva om jeg ikke gjør dette helt riktig?\"",
+      "thought": "\"Dette føles ikke balansert.\"",
+      "uncertainty": "\"Noe dårlig kan skje eller føles galt.\"",
+      "response": "\"Gjør det om igjen til det klikker.\"",
+      "relief": "\"Føles riktig for nå.\"",
+      "return": "\"Gjorde jeg det riktig sist?\"",
+      "takeaway_quote": "Jeg la merke til at det å gjenta en handling for en 'akkurat passe' følelse holder trangen i live.",
+      "takeaway_action": "Neste gang noe føles ufullstendig, legg merke til trangen til å gjøre om igjen uten å gjenta med en gang."
+    },
+    "doubt_return_label": "Tvilen kommer tilbake:"
+  },
+  "snapshot": {
+    "title": "Ditt Loop-øyeblikksbilde",
+    "thought_label": "Tanker",
+    "uncertainty_label": "Usikkerhet",
+    "response_label": "Respons",
+    "effect_label": "Kortsiktig effekt",
+    "next_label": "Hva skjer videre",
+    "replay_btn": "Replay-scenario"
+  },
+  "response_point": {
+    "heading": "Her blir mønsteret interessant.",
+    "subheading": "Du kontrollerer kanskje ikke tanken eller usikkerheten. Men du kan merke hva som skjer videre.",
+    "choice_check": "Sjekk igjen",
+    "choice_notice": "Legg merke til trangen",
+    "check_result_title": "Den automatiske responsen",
+    "check_result_body": "Sjekken ga lettelse. Tvilen kom tilbake.",
+    "notice_result_title": "Pausen",
+    "notice_result_body": "Usikkerheten kan fortsatt føles ubehagelig. Å merke trangen gir deg et øyeblikk før du automatisk svarer.",
+    "try_again": "Vil du se forskjellen igjen?"
+  },
+  "compulsions": {
+    "statement": "Tvangshandlinger er ikke alltid noe du gjør.",
+    "tab_outward": "Utover",
+    "tab_inward": "Innover",
+    "outward_items": {
+      "0": "Sjekker",
+      "1": "Vask",
+      "2": "Gjenta"
+    },
+    "inward_items": {
+      "0": "Gjenopptakelse",
+      "1": "Anmeldelse",
+      "2": "Analyse",
+      "3": "Søker sikkerhet"
+    }
+  },
+  "recognition": {
+    "heading": "Du legger kanskje merke til mønsteret som...",
+    "pattern_1": {
+      "step1": "Sjekk",
+      "step2": "Relief",
+      "step3": "Tvil"
+    },
+    "pattern_2": {
+      "step1": "Omkamp",
+      "step2": "Sikkerhet",
+      "step3": "Tvil"
+    },
+    "pattern_3": {
+      "step1": "Unngå",
+      "step2": "Relief",
+      "step3": "Frykten kommer tilbake"
+    }
+  },
+  "takeaway": {
+    "tag": "Din konklusjon",
+    "main_headline": "Tanken er ikke loopen.",
+    "sub_headline": "Legg merke til hva som skjer videre.",
+    "closing": "Å forstå mønsteret er det første steget mot å gjenkjenne det i virkeligheten."
+  },
+  "next_step": {
+    "prompt_title": "Klar for hva som kommer?",
+    "prompt_desc": "Merk denne aktiviteten som fullført for å lagre fremgangen din og fortsette din vei.",
+    "btn_complete": "Marker aktivitet som utført",
+    "saving": "Redde...",
+    "completed_badge": "Aktivitet fullført",
+    "error_save": "Vi kunne ikke lagre fullført aktiviteten din akkurat nå. Fremdriften din lagres lokalt."
+  }
+}

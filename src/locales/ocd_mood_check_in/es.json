@@ -1,0 +1,100 @@
+{
+  "header_back": "Atrás",
+  "header_history": "Historia",
+  "brand": "OCDMANTRA",
+  "screen1": {
+    "badge": "REVISIÓN DEL ESTADO DE ÁNIMO DEL TOC",
+    "title": "¿Cómo te sientes ahora mismo?",
+    "subtitle": "Haz una foto rápida. No hay una respuesta correcta.",
+    "levels": {
+      "l1_title": "1 — Muy bajo",
+      "l1_sub": "Sentirse pesado, abrumado o agotado",
+      "l2_title": "2 — Bajo",
+      "l2_sub": "Inquieto, tenso o con poca energía",
+      "l3_title": "3 — Estable / Neutro",
+      "l3_sub": "Equilibrado, vale, o tomando las cosas como vienen",
+      "l4_title": "4 — Bueno",
+      "l4_sub": "Claro, comprometido o mayormente relajado",
+      "l5_title": "5 — Muy bien",
+      "l5_sub": "Con los pies en la tierra, con energía o en paz"
+    },
+    "btn_continue": "Continúa"
+  },
+  "screen2": {
+    "badge": "PASO 2 DE 4",
+    "title": "¿Cuánto ha estado preocupado hoy en día el TOC?",
+    "subtitle": "Piensa en la cantidad de atención, angustia o interrupción que el TOC ha absorbido hoy en día.",
+    "impact_l1": "No mucho — Silencioso",
+    "impact_l2": "Leve — Manejable",
+    "impact_l3": "Moderado — Notable",
+    "impact_l4": "Significativo — Disruptivo",
+    "impact_l5": "Mucho — Alta presencia",
+    "scale_min": "1 = No mucho",
+    "scale_max": "5 = Mucho",
+    "btn_back": "Atrás",
+    "btn_continue": "Continúa"
+  },
+  "screen3": {
+    "badge": "PASO 3 DE 4",
+    "title": "¿Qué me llamó la atención hoy?",
+    "subtitle": "Elige cualquier cosa que haya formado parte de tu experiencia.",
+    "experiences": {
+      "INTRUSIVE_THOUGHTS": "Pensamientos intrusivos / dudas",
+      "CHECKING": "Impulso de comprobar o repetir",
+      "MENTAL_REVIEW": "Reproducción / análisis mental",
+      "REASSURANCE": "Buscando certeza / tranquilidad",
+      "AVOIDANCE": "Evitar desencadenantes o situaciones",
+      "HIGH_ANXIETY": "Alta angustia o ansiedad",
+      "PAUSED_URGE": "Pausa o retrasa un ritual",
+      "FOCUSED_WELL": "Participaba en tareas diarias",
+      "NONE": "Ninguna de estas hoy en día"
+    },
+    "btn_back": "Atrás",
+    "btn_continue": "Continúa"
+  },
+  "screen4": {
+    "badge": "PASO 4 DE 4",
+    "title": "¿Hay algo que quieras recordar?",
+    "subtitle": "Opcional. Unas pocas palabras son suficientes.",
+    "placeholder": "Escribe una nota...",
+    "btn_back": "Atrás",
+    "btn_save": "Guardar el check-in",
+    "saving": "Guardando..."
+  },
+  "screen5": {
+    "badge": "✓ GUARDADO",
+    "title": "El momento de hoy.",
+    "subtitle": "Tu registro ha quedado registrado en tu línea de tiempo privada.",
+    "impact_label": "Impacto del TOC {{impact}} / 5",
+    "btn_view_moments": "Contempla tus momentos",
+    "btn_done": "Hecho"
+  },
+  "history": {
+    "tab_moments": "Momentos",
+    "tab_trends": "Tendencias",
+    "today_title": "El registro de hoy",
+    "no_log_today": "Aún no se ha registrado ningún registro para hoy.",
+    "btn_check_in_now": "Registra el registro de hoy",
+    "btn_view_past": "Ver revisiones anteriores ({{count}})",
+    "btn_hide_past": "Ocultar revisiones anteriores",
+    "past_title": "Revisiones anteriores",
+    "no_logs_title": "Todavía no hay revisiones",
+    "no_logs_desc": "Tus registros privados y la línea temporal emocional aparecerán aquí.",
+    "today_tag": "HOY",
+    "yesterday_tag": "AYER",
+    "modal_title": "Detalle de registro",
+    "modal_mood_label": "Nivel de estado de ánimo",
+    "modal_impact_label": "Impacto del TOC",
+    "modal_experiences_label": "Experiencias",
+    "modal_note_label": "Nota personal",
+    "btn_edit": "Nota de edición",
+    "btn_delete": "Eliminar entrada",
+    "btn_close": "Cierre",
+    "trends_14d": "14 días",
+    "trends_30d": "30 días",
+    "trends_90d": "90 Días",
+    "trends_avg_mood": "Estado de ánimo medio",
+    "trends_avg_impact": "Impacto medio del TOC",
+    "trends_total_entries": "Total de inscripciones"
+  }
+}

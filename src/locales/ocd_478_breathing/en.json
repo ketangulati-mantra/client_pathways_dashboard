@@ -1,0 +1,55 @@
+{
+  "header_back": "Back",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "BREATHING",
+    "subtitle": "A simple rhythm to guide your breathing.",
+    "rhythm_badge": "Inhale for 4 · hold for 7 · exhale for 8",
+    "label_how_long": "HOW LONG?",
+    "btn_begin": "Begin"
+  },
+  "time_options": {
+    "opt_30s": "30 sec",
+    "opt_30s_hint": "2 cycles · ≈ 38 sec",
+    "opt_1m": "1 min",
+    "opt_1m_hint": "3 cycles · ≈ 1 min",
+    "opt_2m": "2 min",
+    "opt_2m_hint": "6 cycles · ≈ 2 min",
+    "opt_3m": "3 min",
+    "opt_3m_hint": "10 cycles · ≈ 3 min",
+    "opt_5m": "5 min",
+    "opt_5m_hint": "16 cycles · ≈ 5 min"
+  },
+  "settling": {
+    "title": "Get settled",
+    "subcopy": "Take a moment."
+  },
+  "phases": {
+    "inhale_title": "Inhale",
+    "inhale_sub": "Slowly breathe in",
+    "hold_title": "Hold",
+    "hold_sub": "Stay here",
+    "exhale_title": "Exhale",
+    "exhale_sub": "Slowly breathe out"
+  },
+  "reflection": {
+    "title": "Well done.",
+    "subtitle": "Take a moment before you move on. Notice how you feel right now.",
+    "question": "What do you notice?",
+    "choices": {
+      "settled": "More settled",
+      "present": "More present",
+      "same": "Just the same"
+    },
+    "btn_continue": "Continue"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "INHALE 4",
+    "step_hold": "HOLD 7",
+    "step_exhale": "EXHALE 8",
+    "subtitle": "Return to this practice whenever you want a quiet moment to reset your attention.",
+    "btn_continue": "Continue"
+  }
+}

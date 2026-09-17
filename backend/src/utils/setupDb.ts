@@ -282,6 +282,23 @@ export async function setupDb() {
     await sql`CREATE INDEX IF NOT EXISTS idx_story_chapters_user_day ON story_chapters(user_id, story_day_date DESC);`;
     await sql`CREATE INDEX IF NOT EXISTS idx_story_chapters_created_at ON story_chapters(created_at DESC);`;
 
+    // Table: ocd_mood_logs (OCD Mood Check-In logs)
+    await sql`
+      CREATE TABLE IF NOT EXISTS ocd_mood_logs (
+        id BIGSERIAL PRIMARY KEY,
+        user_id VARCHAR(255) NOT NULL,
+        mood INT NOT NULL CHECK (mood BETWEEN 1 AND 5),
+        ocd_impact INT NOT NULL CHECK (ocd_impact BETWEEN 1 AND 5),
+        experiences JSONB NOT NULL DEFAULT '["NONE"]'::jsonb,
+        note TEXT DEFAULT '',
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+      );
+    `;
+
+    await sql`CREATE INDEX IF NOT EXISTS idx_ocd_mood_logs_user_id ON ocd_mood_logs(user_id);`;
+    await sql`CREATE INDEX IF NOT EXISTS idx_ocd_mood_logs_created_at ON ocd_mood_logs(created_at DESC);`;
+
     // 3. Run safe migration backfill for existing historical records
     await streakService.backfillStreaksFromHistory().catch((err) => {
       console.warn('⚠️ Non-critical warning in streak backfill:', err);

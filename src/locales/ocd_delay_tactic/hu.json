@@ -1,0 +1,107 @@
+{
+  "header_back": "Hátra",
+  "brand": "OCDMANTRA",
+  "step1": {
+    "title": "A 60 másodperces szünet",
+    "subtitle": "Néha egy késztetés olyan érzés lehet, hogy azonnal cselekedni kell. Gyakoroljuk, hogy egy kis teret teremtsünk, mielőtt válaszolnál.",
+    "btn_begin": "Kezdjük"
+  },
+  "step2": {
+    "eyebrow": "1. FORGATÓKÖNYV",
+    "title": "Próbáljunk ki egy forgatókönyvet",
+    "subtitle": "Képzeld el, hogy most hagytad el a házadat.",
+    "visual_line1": "Bezárod a bejárati ajtót, és az autód felé sétálsz.",
+    "visual_thought": "\"Rendesen bezártam?\"",
+    "visual_line2": "Észreveszed, hogy megfordulsz és ellenőrizd.",
+    "btn_continue": "Folytatás"
+  },
+  "step3": {
+    "eyebrow": "A KÉSZTETÉS",
+    "banner": "\"Nézd meg még egyszer.\"",
+    "subtitle": "Érzed, hogy megfordulsz és megnézed.",
+    "question": "Általában mire vonzódnál?",
+    "responses": {
+      "check": "Nézd meg újra",
+      "ask": "Kérj valakit megerősítésért",
+      "goback": "Menj vissza, és győződj meg róla",
+      "wait": "Állj meg és várj"
+    },
+    "btn_next": "Következő"
+  },
+  "step4": {
+    "title": "Még nem kell válaszolnod.",
+    "subtitle": "A következő 60 másodpercben gyakoroljuk, hogy egy kis távolságot tartsunk a késztetés és a válasz között.",
+    "cadence_pause": "SZÜNET",
+    "cadence_notice": "ÉRTESÍTÉS",
+    "cadence_choose": "VÁLASSZ",
+    "detail": "A cél nem az, hogy eltűnjön a gondolat. Hanem az, hogy észrevegyük a késztetést anélkül, hogy azonnal válaszolnánk.",
+    "btn_start": "60 másodperces szünet induljon"
+  },
+  "step5": {
+    "badge": "ITT VAN",
+    "prompts": {
+      "0": "Figyeld fel a késztetést, ahogy megjelenik.",
+      "1": "Érzed a vonzást anélkül, hogy válaszolnál.",
+      "2": "Vegyél egy gyengéd levegőt, és figyelj meg.",
+      "3": "Ez az ösztönzés most csak egy érzés.",
+      "4": "Nem kell azonnal megoldani a bizonytalanságot.",
+      "5": "Figyeld meg, hol érzed a feszültséget a testedben.",
+      "6": "A gondolatok úgy jönnek-mennek, mint a vízen lévő hullámok.",
+      "7": "Teret teremt a gondolat és a cselekvés között.",
+      "8": "Figyeled a késztetést, nem engedelmeskedsz neki.",
+      "9": "A bizonytalanság lehet kényelmetlen, és ez rendben van.",
+      "10": "Hagyd, hogy a gondolat ott legyen, anélkül, hogy belevágnál.",
+      "11": "Figyeld fel az impulzust, hogy javítsd vagy ellenőrizd.",
+      "12": "Maradj kíváncsi az érzésre.",
+      "13": "Te irányítod a válaszodat.",
+      "14": "Semmit sem kell most rendezni.",
+      "15": "Több mint 45 másodpercre teret teremtettél.",
+      "16": "Csak vedd észre a késztetést anélkül, hogy sietnél cselekedni.",
+      "17": "Majdnem ott — pihenni a szünetben.",
+      "18": "Maradj jelen ezzel az utolsó lélegzettel.",
+      "19": "Befejezted a szünetet."
+    }
+  },
+  "step6": {
+    "title": "Teret csináltál.",
+    "subtitle": "A cél nem az volt, hogy eltűnjön a késztetés. Az volt, hogy adj magadnak egy pillanatot, mielőtt válaszolnál.",
+    "question": "Mit vettél észre?",
+    "reflections": {
+      "thought_there": "A gondolat még mindig ott volt",
+      "felt_urge": "Késztetést éreztem, hogy válaszoljak",
+      "uncomfortable": "A bizonytalanság kényelmetlennek tűnt",
+      "could_wait": "Várhatnék anélkül, hogy azonnal válaszolnék"
+    },
+    "btn_continue": "Folytatás"
+  },
+  "step7": {
+    "eyebrow": "OCD CIKLUS",
+    "title": "Ahol a szünet illeszkedik",
+    "subtitle": "Az OCD erős vonzást kelt, hogy azonnal reagáljon a kételyre.",
+    "node_doubt": "Kétely / Tolakodó gondolat",
+    "node_urge": "Válaszadási késztetés",
+    "space_tag": "A 60 MÁSODPERCES SZÜNET",
+    "space_title": "Ez az a terület, amit most gyakoroltál.",
+    "node_compulsion": "Kényszerreakció",
+    "node_relief": "Ideiglenes megkönnyebbülés → a kétely visszatér",
+    "detail": "Egy szünet egy pillanatot ad, mielőtt automatikusan követné ezt a húzást.",
+    "btn_try_another": "Próbálj ki egy másik forgatókönyvet"
+  },
+  "step8": {
+    "eyebrow": "2. FORGATÓKÖNYV",
+    "title": "Gyakorlati áthelyezés",
+    "subtitle": "Képzeld el, hogy most küldtél egy fontos üzenetet.",
+    "visual_line1": "Megnyomod a küldést, és lezárod a beszélgetést.",
+    "visual_thought": "\"Valami rosszat mondtam? Talán újra el kéne olvasnom.\"",
+    "visual_line2": "Ugyanaz a minta: Gondolat → késztetés → megállás → választás.",
+    "btn_practice": "Gyakorlási szünet (60-as évek)"
+  },
+  "step9": {
+    "title": "Az ösztönzés nem utasítás.",
+    "subtitle": "Nem kell azonnal minden késztetésre válaszolnod. Egy kis tér más kiindulópontot teremthet.",
+    "cadence_pause": "SZÜNET",
+    "cadence_notice": "ÉRTESÍTÉS",
+    "cadence_choose": "VÁLASSZ",
+    "btn_continue": "Folytatás"
+  }
+}

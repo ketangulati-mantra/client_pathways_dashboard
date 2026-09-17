@@ -1,0 +1,86 @@
+{
+  "header_back": "Zpět",
+  "brand": "OCDMANTRA",
+  "progress_format": "{{current}} / 5",
+  "screen1": {
+    "badge": "AKTIVITA 3",
+    "title": "PODÍVEJ SE NAHORU.",
+    "subtitle": "ALARM NENÍ NEBEZPEČÍM.",
+    "detail": "Pocit může být hlasitý, aniž by vám řekl celý příběh.",
+    "btn_enter": "PŘICHÁZÍ →"
+  },
+  "screen2": {
+    "title_line1": "NĚKDY,",
+    "title_line2": "NEJISTOTA STAČÍ.",
+    "subtitle": "Klepněte na frázi, abyste sledovali, jak detektor reaguje.",
+    "example1": "\"Co když jsem udělal chybu?\"",
+    "example2": "\"Co když něco nebude dost čisté?\"",
+    "example3": "\"Co když si nemohu být úplně jistý?\"",
+    "btn_activates": "SIGNÁL AKTIVUJE →"
+  },
+  "screen3": {
+    "ambient_heart": "BUŠÍCÍ SRDCE",
+    "ambient_tension": "NAPĚTÍ",
+    "ambient_attention": "POZOR",
+    "ambient_urge": "NUTKÁNÍ",
+    "title": "TEN POCIT MŮŽE BÝT HLASITÝ.",
+    "subtitle": "Ten pocit je skutečný. Poselství, které se zdá, že nese, není automaticky celý příběh.",
+    "btn_look_closer": "PODÍVEJTE SE BLÍŽE →"
+  },
+  "screen4": {
+    "tag_left": "[ CITLIVOST SIGNÁLU ]",
+    "tag_right": "[ ODPOVĚĎ // INTERPRETACE ]",
+    "title": "PODÍVEJ SE BLÍŽ.",
+    "subtitle": "Táhněte kamkoliv, abyste detektor prohlédli z jakéhokoliv úhlu.",
+    "detail": "Signál si můžete všimnout, aniž byste hned spěchali k závěru.",
+    "btn_continue": "POKRAČUJTE →"
+  },
+  "screen5": {
+    "title": "VERDIKT ≠ SIGNÁLU",
+    "subtitle": "Silný pocit může být skutečný, aniž by automaticky dokazoval to, co se zdá, že říká.",
+    "col_feel_title": "CO CÍTÍM",
+    "feel_anxious": "Úzkostný.",
+    "feel_uncertain": "Nejisté.",
+    "feel_tense": "Napjaté.",
+    "feel_pulled": "Zastavil jsem se, abych to zkontroloval.",
+    "col_conclude_title": "K ČEMU DOSPĚJU",
+    "conclude_wrong": "\"Něco musí být špatně.\"",
+    "conclude_make_sure": "\"Musím si být jistý.\"",
+    "conclude_certainty": "\"Potřebuji jistotu.\"",
+    "btn_next": "CO SE STANE DÁL? →"
+  },
+  "screen6": {
+    "title": "NĚKDY MŮŽE ODPOVĚĎ NA CHVÍLI SIGNÁL UTIŠIT.",
+    "subtitle": "Klepněte a podívejte se, jak reakce reagují se signálem.",
+    "item_check_title": "KONTROLA",
+    "item_check_quote": "\"Ještě jednou to zvládnu.\"",
+    "item_ask_title": "ZEPTEJ SE.",
+    "item_ask_quote": "\"Zeptám se někoho, co si myslí.\"",
+    "item_replay_title": "OPAKOVÁNÍ",
+    "item_replay_quote": "\"Projdu si to znovu v hlavě.\"",
+    "item_avoid_title": "VYHNĚTE SE",
+    "item_avoid_quote": "\"Budu se držet dál od všeho, co bude nejisté.\"",
+    "btn_let_signal": "AŤ JE SIGNÁL TAM →"
+  },
+  "screen7": {
+    "title": "AŤ TAM SIGNÁL JE.",
+    "subtitle": "Všimněte si, co se stane, když se hned nevrhnete na interpretaci.",
+    "btn_watch": "SLEDUJTE SIGNÁL",
+    "observing_format": "Pozorovací signál... ({{seconds}}s)",
+    "done_title": "SIGNÁL SE ZMĚNIL.",
+    "done_sub": "Nemusel jsi to řešit.",
+    "btn_continue": "POKRAČUJTE →"
+  },
+  "screen8": {
+    "title_line1": "ALARM JE SIGNÁL.",
+    "title_line2": "TO NENÍ VERDIKT.",
+    "subtitle": "Všímejte si toho pocitu. Všímejte si příběhu, který k němu přidává vaše mysl.",
+    "question": "PŘÍŠTĚ, AŽ BUDE BUDÍK HLASITÝ, CO SI VŠIMNETE JAKO PRVNÍ?",
+    "opt_feeling": "TEN POCIT",
+    "opt_thought": "TA MYŠLENKA",
+    "opt_urge": "NUTKÁNÍ ODPOVĚDĚT",
+    "feedback": "Stále si všímej rozdílu.",
+    "btn_saving": "ZACHRAŇOVÁNÍ...",
+    "btn_continue": "POKRAČUJTE →"
+  }
+}

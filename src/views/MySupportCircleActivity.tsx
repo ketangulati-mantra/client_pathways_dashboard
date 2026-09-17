@@ -431,56 +431,56 @@ export const MySupportCircleActivity: React.FC<MySupportCircleActivityProps> = (
         </button>
 
         {/* STEP PROGRESS INDICATOR (EXACTLY 01/04 TO 04/04) */}
-        {currentScreen >= 1 && currentScreen <= 4 ? (
-          <div
-            style={{
-              fontSize: '0.84rem',
-              fontWeight: 800,
-              letterSpacing: '0.04em',
-              color: '#0284C7'
-            }}
-          >
-            0{currentScreen} / 04
-          </div>
-        ) : (
-          <div style={{ width: '48px' }} />
-        )}
+        <div style={{ minWidth: '48px', textAlign: 'right' }}>
+          {currentScreen >= 1 && currentScreen <= 4 ? (
+            <span
+              style={{
+                fontSize: '0.84rem',
+                fontWeight: 800,
+                letterSpacing: '0.04em',
+                color: '#0284C7'
+              }}
+            >
+              0{currentScreen} / 04
+            </span>
+          ) : null}
+        </div>
       </header>
 
       {/* TOP PROGRESS LINE */}
-      {currentScreen >= 1 && currentScreen <= 4 && (
+      <div
+        style={{
+          width: '100%',
+          maxWidth: '740px',
+          padding: '0 20px',
+          boxSizing: 'border-box',
+          marginBottom: '16px',
+          zIndex: 20,
+          opacity: currentScreen >= 1 && currentScreen <= 4 ? 1 : 0,
+          pointerEvents: currentScreen >= 1 && currentScreen <= 4 ? 'auto' : 'none',
+          transition: 'opacity 0.2s ease'
+        }}
+      >
         <div
           style={{
             width: '100%',
-            maxWidth: '740px',
-            padding: '0 20px',
-            boxSizing: 'border-box',
-            marginBottom: '16px',
-            zIndex: 20
+            height: '3px',
+            backgroundColor: 'rgba(226, 232, 240, 0.8)',
+            borderRadius: '999px',
+            overflow: 'hidden'
           }}
         >
           <div
             style={{
-              width: '100%',
-              height: '3px',
-              backgroundColor: 'rgba(226, 232, 240, 0.8)',
+              height: '100%',
+              backgroundColor: '#0284C7',
               borderRadius: '999px',
-              overflow: 'hidden'
+              width: `${(Math.min(4, Math.max(1, currentScreen)) / 4) * 100}%`,
+              transition: 'width 0.35s ease'
             }}
-          >
-            <motion.div
-              initial={{ width: `${((currentScreen - 1) / 4) * 100}%` }}
-              animate={{ width: `${(currentScreen / 4) * 100}%` }}
-              transition={{ duration: 0.35, ease: 'easeOut' }}
-              style={{
-                height: '100%',
-                backgroundColor: '#0284C7',
-                borderRadius: '999px'
-              }}
-            />
-          </div>
+          />
         </div>
-      )}
+      </div>
 
       {/* MAIN CONTENT CANVAS */}
       <main

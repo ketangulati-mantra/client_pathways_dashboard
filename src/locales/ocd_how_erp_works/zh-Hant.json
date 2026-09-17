@@ -1,0 +1,113 @@
+{
+  "header_back": "返回",
+  "brand": "強迫咒語",
+  "screen1": {
+    "badge": "心理教育",
+    "title": "ERP 運作原理",
+    "subtitle": "ERP 幫助強迫症患者練習面對觸發他們的因素，同時改變下一步行動。",
+    "quote": "「你不是在練習無畏。你是在練習以不同的方式回應。」",
+    "btn_explore": "探索"
+  },
+  "screen2": {
+    "badge": "情境一",
+    "title": "你剛離開家。",
+    "thought": "「我有鎖門嗎？」",
+    "urge_tag": "你感到想回去的衝動",
+    "subtitle": "一個常見的懷疑時刻來臨。讓我們看看當衝動被追隨時會發生什麼。",
+    "btn_see_happens": "看看會發生什麼"
+  },
+  "screen3": {
+    "badge": "A 路線",
+    "title": "跟隨衝動",
+    "btn_check": "檢查鎖",
+    "checking_status": "檢查把手......轉動鑰匙......",
+    "relief_thought": "「好了，鎖著。鬆了一口氣。」",
+    "doubt_thought": "「等等......我真的鎖好了嗎？」",
+    "subtitle": "這份如釋重負暫時平息了那種感覺，但疑慮隨即又回來了。",
+    "btn_continue": "繼續"
+  },
+  "screen4": {
+    "badge": "反思",
+    "title": "支票給了你什麼？",
+    "point1": "當下感受到的解脫。",
+    "point2": "當懷疑回來時，更值得再檢查一次。",
+    "subtitle": "檢查可以減輕當下的痛苦，但這種短暫的緩解反而會強化大腦再次檢查的衝動。",
+    "btn_rewind": "倒帶當下"
+  },
+  "screen5": {
+    "badge": "倒帶",
+    "title": "我們試著用不同的方式來呈現同一個時刻。",
+    "thought": "「我有鎖門嗎？」",
+    "urge_tag": "衝動出現了：「回去檢查看看。」",
+    "subtitle": "這次，我們不再自動跟隨衝動，而是探索ERP方法。",
+    "btn_step1": "步驟一：曝光"
+  },
+  "screen6": {
+    "badge": "步驟一",
+    "title": "1. 暴露",
+    "subtitle1": "ERP一開始是主動接近觸發點，而不是逃避或讓它消失。",
+    "thought": "「問題來了：我有鎖門嗎？」",
+    "subtitle2": "在ERP中，暴露是指讓觸發因素或不確定性存在，但不會立刻試圖將其拋諸腦後。",
+    "btn_step2": "步驟二：應對預防"
+  },
+  "screen7": {
+    "badge": "步驟二",
+    "title": "2. 應變預防",
+    "subtitle1": "接著是第二部分：抵抗或延遲強迫反應。",
+    "thought": "Urge：「現在就回去檢查。」",
+    "btn_dont_check": "現在別查",
+    "subtitle2": "模擬練習：選擇不執行儀式，讓大腦有機會學習新事物。"
+  },
+  "screen8": {
+    "badge": "比較",
+    "title": "兩條路徑",
+    "col_urge_title": "跟隨衝動",
+    "col_urge_step1": "觸發",
+    "col_urge_step2": "檢查",
+    "col_urge_step3": "地形",
+    "col_urge_step4": "疑慮再次出現",
+    "col_erp_title": "ERP 路徑",
+    "col_erp_step1": "觸發",
+    "col_erp_step2": "衝動",
+    "col_erp_step3": "反應預防",
+    "col_erp_step4": "新學習",
+    "btn_learning": "你在學什麼？"
+  },
+  "screen9": {
+    "badge": "核心洞見",
+    "title": "重點不是要什麼都感覺不到。",
+    "subtitle": "ERP 不是要讓痛苦瞬間消失。它教導：",
+    "insight1": "「我可以體驗不確定性並容忍它。」",
+    "insight2": "「我可以有衝動，卻不會自動付諸行動。」",
+    "insight3": "「我不需要儀式來回應每一個疑問。」",
+    "btn_scenario2": "試試第二種情境"
+  },
+  "screen10": {
+    "badge": "情境二",
+    "title": "你傳達了一個重要的訊息。",
+    "thought": "心想：「我說錯什麼了嗎？」",
+    "urge_tag": "衝動：再讀一次",
+    "question": "反應預防會是什麼樣子？",
+    "opt_read": "再讀一次訊息以確認",
+    "opt_ask": "問問別人聽起來是否合適",
+    "opt_leave": "暫時保持原樣，不要重讀",
+    "feedback_correct": "✓ 這是抵抗檢查或安慰反應的例子。",
+    "feedback_incorrect": "這會是對不確定性的一種回應方式。在ERP中，反應預防是指練習不使用檢查或安慰行為。",
+    "btn_final_model": "最終型號",
+    "btn_try_again": "再試一次"
+  },
+  "screen11": {
+    "badge": "摘要",
+    "title": "ERP 改變了你接下來的行動。",
+    "node_trigger": "觸發",
+    "node_trigger_sub": "疑慮降臨",
+    "node_urge": "衝動",
+    "node_urge_sub": "儀式化的渴望",
+    "node_erp": "暴露 + 反應預防",
+    "node_erp_sub": "抗拒強迫",
+    "node_learning": "新學習",
+    "node_learning_sub": "不確定性是可以被容忍的",
+    "subtitle": "目標不是消除所有侵入性想法或感受。而是建立不同的反應。",
+    "btn_complete": "完整活動"
+  }
+}

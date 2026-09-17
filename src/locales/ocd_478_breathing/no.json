@@ -1,0 +1,55 @@
+{
+  "header_back": "Tilbake",
+  "brand": "OCDMANTRA",
+  "hero": {
+    "title_num": "4–7–8",
+    "title_text": "PUSTER",
+    "subtitle": "En enkel rytme for å styre pusten din.",
+    "rhythm_badge": "Pust inn i 4 · hold i 7 · pust ut i 8",
+    "label_how_long": "HVOR LENGE?",
+    "btn_begin": "Begynn"
+  },
+  "time_options": {
+    "opt_30s": "30 sek",
+    "opt_30s_hint": "2 sykluser · ≈ 38 sek",
+    "opt_1m": "1 min",
+    "opt_1m_hint": "3 sykluser · ≈ 1 min",
+    "opt_2m": "2 min",
+    "opt_2m_hint": "6 sykluser · ≈ 2 min",
+    "opt_3m": "3 min",
+    "opt_3m_hint": "10 sykluser · ≈ 3 min",
+    "opt_5m": "5 min",
+    "opt_5m_hint": "16 sykluser · ≈ 5 min"
+  },
+  "settling": {
+    "title": "Gjør deg klar",
+    "subcopy": "Ta et øyeblikk."
+  },
+  "phases": {
+    "inhale_title": "Pust inn",
+    "inhale_sub": "Pust sakte inn",
+    "hold_title": "Hold",
+    "hold_sub": "Bli her",
+    "exhale_title": "Pust ut",
+    "exhale_sub": "Pust sakte ut"
+  },
+  "reflection": {
+    "title": "Bra jobbet.",
+    "subtitle": "Ta et øyeblikk før du går videre. Legg merke til hvordan du føler deg akkurat nå.",
+    "question": "Hva legger du merke til?",
+    "choices": {
+      "settled": "Mer rolig",
+      "present": "Mer tilstedeværende",
+      "same": "Akkurat som"
+    },
+    "btn_continue": "Fortsett"
+  },
+  "takeaway": {
+    "title": "4–7–8",
+    "step_inhale": "INHALER 4",
+    "step_hold": "HOLD 7",
+    "step_exhale": "PUST 8",
+    "subtitle": "Gå tilbake til denne praksisen når du ønsker et rolig øyeblikk for å nullstille oppmerksomheten din.",
+    "btn_continue": "Fortsett"
+  }
+}

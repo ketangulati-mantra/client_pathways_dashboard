@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, BookOpen, Menu, Clock, ArrowRight, Filter, X, ChevronRight, ChevronDown, LogOut, ShieldCheck, CheckCircle2, UserCheck, Crown, User, Check, Calendar, Compass } from 'lucide-react';
 import UserAdminManagement from '../components/admin/UserAdminManagement';
-import { activities as mantraActivities, getCurrentService, setServiceContext, preserveQueryParams, SUPPORTED_SERVICES, normalizeService, goToLesson } from '../mantra';
+import { activities as mantraActivities, getCurrentService, setServiceContext, preserveQueryParams, SUPPORTED_SERVICES, normalizeService, goToLesson, getDeploymentSubpath } from '../mantra';
 import { useAuth } from '../auth/AuthContext';
 
 const MANTRA_LOGO_URL = 'https://res.cloudinary.com/hxbamdqf/image/upload/v1784698269/Mantra_logo_yptwwe.svg';
@@ -32,7 +32,9 @@ export default function DeveloperLessonsPage({ onNavigate }) {
     if (!act) return;
     const targetRoute = act.route || `/task/${act.lessonId}`;
     const cleanRoute = targetRoute.startsWith('/') ? targetRoute : '/' + targetRoute;
-    const fullUrl = preserveQueryParams(`${window.location.origin}${cleanRoute}`);
+    const subpath = getDeploymentSubpath();
+    const fullPath = `${subpath}${cleanRoute}`.replace(/\/+/g, '/');
+    const fullUrl = preserveQueryParams(`${window.location.origin}${fullPath}`);
     window.open(fullUrl, '_blank');
   };
 

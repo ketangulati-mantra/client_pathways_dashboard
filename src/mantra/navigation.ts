@@ -123,23 +123,42 @@ export const goToDashboard = () => {
 };
 
 /**
+ * Detects the active deployment subpath prefix (e.g. '/client_tasks', '/app/content', etc.)
+ */
+export const getDeploymentSubpath = (): string => {
+  if (typeof window === 'undefined') return '';
+  const pathname = window.location.pathname;
+  const knownPrefixes = [
+    '/client_tasks',
+    '/client-tasks',
+    '/app/content/provider_pathways',
+    '/app/content',
+  ];
+  for (const prefix of knownPrefixes) {
+    if (pathname.startsWith(prefix)) {
+      return prefix;
+    }
+  }
+  const match = pathname.match(/^(\/[^\/]+)/);
+  if (match && match[1] && !match[1].startsWith('/task') && !match[1].startsWith('/admin') && !match[1].startsWith('/dev')) {
+    return match[1];
+  }
+  return '';
+};
+
+/**
  * Navigates popstate router to the selected task route pathway within the app,
- * preserving query parameters.
+ * preserving query parameters and deployment subpath prefix.
  */
 export const goToLesson = (route: string) => {
   if (typeof window === 'undefined') return;
 
-  const currentPathname = window.location.pathname;
-  const subpathMatch = currentPathname.match(/^(\/[^\/]+)/);
-  const currentSubpath =
-    subpathMatch && subpathMatch[1] && !subpathMatch[1].startsWith('/task')
-      ? subpathMatch[1]
-      : '';
-
+  const currentSubpath = getDeploymentSubpath();
+  const cleanRoute = route.startsWith('/') ? route : `/${route}`;
   const fullPath =
-    route === '/'
+    cleanRoute === '/'
       ? currentSubpath || '/'
-      : (currentSubpath + route).replace('//', '/');
+      : `${currentSubpath}${cleanRoute}`.replace(/\/+/g, '/');
   const targetUrl = preserveQueryParams(fullPath);
 
   window.history.replaceState(null, '', targetUrl);

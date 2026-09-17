@@ -12,6 +12,7 @@ import { ChallengeDashboardPayload } from '../../services/challengeService';
 import { getActiveUserName, getActiveUserId } from '../../services/authService';
 import { getMantra21DayActivity } from '../../data/mantra21DayDefinitions';
 import Mantra21InviteModal from '../Mantra21InviteModal';
+import { goToLesson } from '../../mantra/navigation';
 
 const THERAPY_MANTRA_LOGO = 'https://res.cloudinary.com/hxbamdqf/image/upload/v1785828110/therapymantraIcon_kie5d3.png';
 
@@ -97,7 +98,7 @@ export default function EnrolledChallengeView({
     if (onNavigatePathwayTask) {
       onNavigatePathwayTask(cleanRoute);
     } else {
-      window.location.hash = cleanRoute.startsWith('/') ? cleanRoute : `/${cleanRoute}`;
+      goToLesson(cleanRoute.startsWith('/') ? cleanRoute : `/${cleanRoute}`);
     }
   };
 
@@ -106,7 +107,7 @@ export default function EnrolledChallengeView({
       onNavigatePathwayTask(route);
     } else {
       const clean = route.replace(/^#/, '');
-      window.location.hash = clean.startsWith('/') ? clean : `/${clean}`;
+      goToLesson(clean.startsWith('/') ? clean : `/${clean}`);
     }
   };
 

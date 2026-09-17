@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Compass } from 'lucide-react';
 import { SPECIFIC_EMOTIONS } from './taxonomy';
+import { goToLesson } from '../../mantra/navigation';
 
 // Sizing tokens for the 3-tier constellation hierarchy
 const TIER_SIZES = {
@@ -383,7 +384,7 @@ export default function SpecificEmotionScreen({
             type="button"
             onClick={() => {
               if (typeof window !== 'undefined') {
-                window.location.hash = '#/task/emotion-wheel';
+                goToLesson('/task/emotion-wheel');
               }
             }}
             style={{

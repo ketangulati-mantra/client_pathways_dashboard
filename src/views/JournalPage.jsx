@@ -13,6 +13,7 @@ import JournalPatternsScreen from '../components/journal/JournalPatternsScreen';
 import JournalStoryScreen from '../components/journal/JournalStoryScreen';
 import { useCheckInState } from '../hooks/useCheckInState';
 import { getActiveUserId, getActiveUserName } from '../services/authService';
+import { goToLesson } from '../mantra/navigation';
 
 export default function JournalPage({ onBack }) {
   const userId = getActiveUserId();
@@ -164,7 +165,7 @@ export default function JournalPage({ onBack }) {
 
   const handleNavigateToCheckIn = () => {
     if (typeof window !== 'undefined') {
-      window.location.hash = '#/task/daily-check-in';
+      goToLesson('/task/daily-check-in');
     }
   };
 

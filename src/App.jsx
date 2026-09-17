@@ -97,12 +97,14 @@ function App() {
       }
     }
 
-    // Default root path opens Daily Check-In for standard users
-    if (!p || p === '/' || p === '') {
-      return '/task/daily-check-in';
+    // Direct clean pathname routing (e.g. /task/fear-ladder, /admin/pathways, /task/emotional-wellbeing-assessment)
+    if (p && p !== '/' && p !== '') {
+      const cleanP = p.startsWith('/') ? p : `/${p}`;
+      return cleanP;
     }
 
-    return p;
+    // Default root path opens Daily Check-In for standard users
+    return '/task/daily-check-in';
   };
 
   const [currentPath, setCurrentPath] = useState(getPath());

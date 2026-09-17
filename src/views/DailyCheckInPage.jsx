@@ -16,6 +16,7 @@ import { generatePersonalizedNextStep } from '../components/dailyCheckIn/recomme
 import { logDailyCheckInToDB, getUserActivityHistory } from '../services/activityLogger';
 import { invalidateCheckInState } from '../services/dailyCheckInService';
 import { getActiveUserId } from '../services/authService';
+import { handleExit, goToLesson } from '../mantra/navigation';
 
 /**
  * Factory function creating a pristine, isolated check-in session.
@@ -115,7 +116,7 @@ export default function DailyCheckInPage({ onBack: propOnBack } = {}) {
     if (propOnBack) {
       propOnBack();
     } else if (typeof window !== 'undefined') {
-      window.location.hash = '#/';
+      handleExit();
     }
   }, [propOnBack]);
 
@@ -279,14 +280,15 @@ export default function DailyCheckInPage({ onBack: propOnBack } = {}) {
   // Step 5: Navigate to Personalized Focus Assessment (Route C)
   const handleNavigateToAssessment = useCallback(() => {
     if (typeof window !== 'undefined') {
-      window.location.hash = '#/task/personalized-focus-assessment';
+      goToLesson('/task/personalized-focus-assessment');
     }
   }, []);
 
   // Step 5: Start recommended activity
   const handleStartRecommendation = useCallback((rec) => {
     if (rec?.route && typeof window !== 'undefined') {
-      window.location.hash = '#' + rec.route;
+      const cleanRoute = rec.route.replace(/^#/, '');
+      goToLesson(cleanRoute.startsWith('/') ? cleanRoute : `/${cleanRoute}`);
     } else {
       setCurrentStepIndex(6);
     }

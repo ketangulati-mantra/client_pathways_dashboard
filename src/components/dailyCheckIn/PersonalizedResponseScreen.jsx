@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { goToLesson } from '../../mantra/navigation';
 
 export default function PersonalizedResponseScreen({
   response,
@@ -21,7 +22,7 @@ export default function PersonalizedResponseScreen({
       if (onNavigateToAssessment) {
         onNavigateToAssessment();
       } else if (typeof window !== 'undefined') {
-        window.location.hash = '#/task/personalized-focus-assessment';
+        goToLesson('/task/personalized-focus-assessment');
       }
     } else {
       onDoneForNow();

@@ -17,7 +17,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import CustomVideoPlayer from '../components/video/CustomVideoPlayer';
 import { useLessonCompletion } from '../hooks/useLessonCompletion';
-import { handleExit } from '../mantra/navigation';
+import { handleExit, goToLesson } from '../mantra/navigation';
 import { completeLesson } from '../mantra/api';
 import { getActiveUserId } from '../services/authService';
 
@@ -120,7 +120,7 @@ export default function WhatIsOcdActivity({ onBack, onNavigate }) {
     if (onNavigate) {
       onNavigate('/task/ocd-cycle');
     } else {
-      window.location.hash = '#/task/ocd-cycle';
+      goToLesson('/task/ocd-cycle');
     }
   };
 

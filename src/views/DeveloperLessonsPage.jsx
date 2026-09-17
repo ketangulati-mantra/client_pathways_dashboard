@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, BookOpen, Menu, Clock, ArrowRight, Filter, X, ChevronRight, ChevronDown, LogOut, ShieldCheck, CheckCircle2, UserCheck, Crown, User, Check, Calendar, Compass } from 'lucide-react';
 import UserAdminManagement from '../components/admin/UserAdminManagement';
-import { activities as mantraActivities, getCurrentService, setServiceContext, preserveQueryParams, SUPPORTED_SERVICES, normalizeService } from '../mantra';
+import { activities as mantraActivities, getCurrentService, setServiceContext, preserveQueryParams, SUPPORTED_SERVICES, normalizeService, goToLesson } from '../mantra';
 import { useAuth } from '../auth/AuthContext';
 
 const MANTRA_LOGO_URL = 'https://res.cloudinary.com/hxbamdqf/image/upload/v1784698269/Mantra_logo_yptwwe.svg';
@@ -32,7 +32,7 @@ export default function DeveloperLessonsPage({ onNavigate }) {
     if (!act) return;
     const targetRoute = act.route || `/task/${act.lessonId}`;
     const cleanRoute = targetRoute.startsWith('/') ? targetRoute : '/' + targetRoute;
-    const fullUrl = `${window.location.origin}${window.location.pathname}#${cleanRoute}`;
+    const fullUrl = preserveQueryParams(`${window.location.origin}${cleanRoute}`);
     window.open(fullUrl, '_blank');
   };
 
@@ -81,11 +81,13 @@ export default function DeveloperLessonsPage({ onNavigate }) {
 
   const getInitialTab = () => {
     if (typeof window !== 'undefined') {
+      const path = (window.location.pathname || '').toLowerCase();
       const hash = (window.location.hash || '').toLowerCase();
-      if (hash.includes('users') || hash.includes('management') || hash.includes('admin/users')) return 'users';
-      if (hash.includes('lessons') || hash.includes('pathways') || hash.includes('admin/pathways') || hash === '#/' || hash === '' || hash === '#/admin' || hash === '#/admin/dashboard') return 'lessons';
+      const current = path + ' ' + hash;
+      if (current.includes('users') || current.includes('management') || current.includes('admin/users')) return 'users';
+      if (current.includes('lessons') || current.includes('pathways') || current.includes('admin/pathways') || current.includes('admin/dashboard') || current.includes('/admin')) return 'lessons';
       const savedTab = sessionStorage.getItem('mantra_active_tab');
-      if (savedTab && !hash.includes('pathways') && !hash.includes('admin')) return savedTab;
+      if (savedTab && !current.includes('pathways') && !current.includes('admin')) return savedTab;
     }
     return 'lessons';
   };
@@ -98,22 +100,28 @@ export default function DeveloperLessonsPage({ onNavigate }) {
     setActiveTab(tabName);
     if (typeof window !== 'undefined') {
       sessionStorage.setItem('mantra_active_tab', tabName);
-      if (tabName === 'users') window.location.hash = '#/admin/users';
-      else if (tabName === 'lessons') window.location.hash = '#/admin/pathways';
+      const targetRoute = tabName === 'users' ? '/admin/users' : '/admin/pathways';
+      goToLesson(targetRoute);
     }
   };
 
   useEffect(() => {
-    const handleHashChange = () => {
+    const handleUrlChange = () => {
+      const path = (window.location.pathname || '').toLowerCase();
       const hash = (window.location.hash || '').toLowerCase();
-      if (hash.includes('users') || hash.includes('management') || hash.includes('admin/users')) {
+      const current = path + ' ' + hash;
+      if (current.includes('users') || current.includes('management') || current.includes('admin/users')) {
         setActiveTab('users');
       } else {
         setActiveTab('lessons');
       }
     };
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleUrlChange);
+    window.addEventListener('hashchange', handleUrlChange);
+    return () => {
+      window.removeEventListener('popstate', handleUrlChange);
+      window.removeEventListener('hashchange', handleUrlChange);
+    };
   }, []);
 
   useEffect(() => {

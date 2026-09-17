@@ -76,8 +76,8 @@ export function handleExit() {
 
   // Localhost dev environment fallback
   if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    window.location.hash = '#/admin/pathways';
-    window.dispatchEvent(new HashChangeEvent('hashchange'));
+    window.history.pushState({}, '', '/admin/pathways');
+    window.dispatchEvent(new Event('popstate'));
     return;
   }
 

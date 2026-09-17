@@ -24,6 +24,7 @@ import {
   getUserLessonProgress,
   recordUserPersonalizationSignal
 } from '../services/activityLogger';
+import { goToLesson } from '../mantra/navigation';
 import { completeLesson } from '../mantra/api';
 import { getActiveUserId } from '../services/authService';
 
@@ -988,7 +989,7 @@ export const Mantra21DailyActivityView: React.FC<Mantra21DailyActivityViewProps>
                   } else if (onBack) {
                     onBack();
                   } else {
-                    window.location.hash = '/challenges';
+                    goToLesson('/challenges');
                   }
                 }}
                 style={{

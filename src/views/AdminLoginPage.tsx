@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { User, AlertCircle, Loader2, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../auth/AuthContext';
+import { goToLesson } from '../mantra/navigation';
 
 const MANTRA_CARE_LOGO_URL = 'https://res.cloudinary.com/hxbamdqf/image/upload/v1786010770/MantraCareLogo_jjuy1c.png';
 
-export default function AdminLoginPage() {
+interface AdminLoginPageProps {
+  onNavigate?: (route: string) => void;
+}
+
+export default function AdminLoginPage({ onNavigate }: AdminLoginPageProps = {}) {
   const { login, isAuthenticated, isLoading } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,9 +20,13 @@ export default function AdminLoginPage() {
   // If already authenticated, redirect to /admin/pathways
   React.useEffect(() => {
     if (!isLoading && isAuthenticated) {
-      window.location.hash = '#/admin/pathways';
+      if (onNavigate) {
+        onNavigate('/admin/pathways');
+      } else {
+        goToLesson('/admin/pathways');
+      }
     }
-  }, [isAuthenticated, isLoading]);
+  }, [isAuthenticated, isLoading, onNavigate]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,7 +48,11 @@ export default function AdminLoginPage() {
         name: email.split('@')[0],
         role: email.includes('admin') || email.includes('ketan') ? 'super_admin' : 'user'
       }));
-      window.location.hash = '#/admin/pathways';
+      if (onNavigate) {
+        onNavigate('/admin/pathways');
+      } else {
+        goToLesson('/admin/pathways');
+      }
       window.location.reload();
     } else {
       setErrorMessage(result.error || 'Invalid email or password.');

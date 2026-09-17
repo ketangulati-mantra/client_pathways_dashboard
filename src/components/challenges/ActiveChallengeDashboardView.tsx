@@ -5,6 +5,7 @@ import {
   ChallengeEnrollment
 } from '../../services/challengeService';
 import Mantra21InviteModal from '../Mantra21InviteModal';
+import { goToLesson } from '../../mantra/navigation';
 
 interface ActiveChallengeDashboardViewProps {
   dashboard: ChallengeDashboardPayload;
@@ -32,7 +33,8 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
     if (onNavigatePathwayTask) {
       onNavigatePathwayTask(route);
     } else {
-      window.location.hash = route.startsWith('/') ? route : `/${route}`;
+      const cleanRoute = route.replace(/^#/, '');
+      goToLesson(cleanRoute.startsWith('/') ? cleanRoute : `/${cleanRoute}`);
     }
   };
 
@@ -41,7 +43,8 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
     if (onNavigatePathwayTask) {
       onNavigatePathwayTask(route);
     } else {
-      window.location.hash = route.startsWith('/') ? route : `/${route}`;
+      const cleanRoute = route.replace(/^#/, '');
+      goToLesson(cleanRoute.startsWith('/') ? cleanRoute : `/${cleanRoute}`);
     }
   };
 
@@ -238,7 +241,8 @@ export const ActiveChallengeDashboardView: React.FC<ActiveChallengeDashboardView
                         if (onNavigatePathwayTask) {
                           onNavigatePathwayTask(sug.actionRoute);
                         } else {
-                          window.location.hash = sug.actionRoute.startsWith('#') ? sug.actionRoute : `#${sug.actionRoute}`;
+                          const cleanRoute = sug.actionRoute.replace(/^#/, '');
+                          goToLesson(cleanRoute.startsWith('/') ? cleanRoute : `/${cleanRoute}`);
                         }
                       }}
                       className="text-xs font-medium text-sky-300 hover:text-sky-200 flex items-center gap-1 self-start group"

@@ -7,6 +7,7 @@ import { getUserJournalEntries } from '../../services/journalService';
 import { getActiveUserId } from '../../services/authService';
 import StoryFeaturedCard from './story/StoryFeaturedCard.jsx';
 import { extractEntryDisplay } from '../../services/journalFormatting';
+import { handleExit, goToLesson } from '../../mantra/navigation';
 
 export default function JournalHomeScreen({
   onBack,
@@ -102,7 +103,7 @@ export default function JournalHomeScreen({
     if (onBack) {
       onBack();
     } else if (typeof window !== 'undefined') {
-      window.location.hash = '#/';
+      handleExit();
     }
   };
 
@@ -110,7 +111,7 @@ export default function JournalHomeScreen({
     if (onNavigateToCheckIn) {
       onNavigateToCheckIn();
     } else if (typeof window !== 'undefined') {
-      window.location.hash = '#/task/daily-check-in';
+      goToLesson('/task/daily-check-in');
     }
   };
 

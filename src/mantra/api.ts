@@ -104,16 +104,13 @@ export const completeLesson = async (lessonId: string): Promise<boolean> => {
 
   const numericUpaId = isNaN(Number(upaId)) ? upaId : Number(upaId);
 
-  const payload: Record<string, any> = {
-    intent: MANTRA_CONFIG.defaultWebhookIntent || 'complete_activity',
+  const payload = {
     upa_id: numericUpaId,
+    uid: uid || undefined,
     lesson_id: targetLessonId,
-    activity_id: activity?.activityId || targetLessonId,
-    service: service || undefined,
+    service: service || 'therapy',
     reward_points: targetRewardPoints
   };
-
-  if (uid) payload.uid = uid;
 
   if (MANTRA_CONFIG.devMode) {
     console.log('[Mantra API] Completing activity via webhook', {
@@ -191,46 +188,30 @@ export const submitAssessmentResults = async (
     return { success: false, error: 'Missing upa_id in URL context.' };
   }
 
+  const targetLessonId = payload.lesson_id || payload.activity_id || 'emotional-wellbeing-assessment';
   const activity = activities.find(
-    a => a.lessonId === payload.lesson_id || a.activityId === payload.activity_id || a.lessonId === payload.activity_id
+    a => a.lessonId === targetLessonId || a.activityId === targetLessonId
   );
 
+  const cleanPayload = {
+    upa_id: targetUpaId,
+    uid: payload.uid || uid || undefined,
+    lesson_id: activity?.lessonId || targetLessonId,
+    service: service || 'therapy',
+    reward_points: payload.reward_points || activity?.rewardPoints || 100
+  };
+
+  if (MANTRA_CONFIG.devMode) {
+    console.log('[Mantra API] Submitting assessment completion payload:', cleanPayload);
+  }
+
   try {
-    // Construct clean payload without raw placeholder strings or invalid keys
-    const finalPayload: Record<string, any> = {
-      intent: payload.intent || 'complete_activity',
-      upa_id: targetUpaId,
-      lesson_id: payload.lesson_id || activity?.lessonId || payload.activity_id || 'emotional-wellbeing-assessment',
-      activity_id: payload.activity_id || activity?.activityId || payload.lesson_id || 'emotional-wellbeing-assessment',
-      reward_points: payload.reward_points || activity?.rewardPoints || 100
-    };
-
-    if (payload.uid || uid) {
-      finalPayload.uid = payload.uid || uid;
-    }
-    if (service) {
-      finalPayload.service = service;
-    }
-    if (payload.parameter && Array.isArray(payload.parameter) && payload.parameter.length > 0) {
-      finalPayload.parameter = payload.parameter;
-    }
-    if (payload.entry_id && !String(payload.entry_id).includes('{')) {
-      finalPayload.entry_id = payload.entry_id;
-    }
-    if (payload.form_id && !String(payload.form_id).includes('{')) {
-      finalPayload.form_id = payload.form_id;
-    }
-
-    if (MANTRA_CONFIG.devMode) {
-      console.log('[Mantra API] Submitting assessment results payload:', finalPayload);
-    }
-
     const response = await fetch(MANTRA_CONFIG.webhookUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(finalPayload)
+      body: JSON.stringify(cleanPayload)
     });
 
     const result = await response.json().catch(() => null);

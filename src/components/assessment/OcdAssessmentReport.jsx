@@ -9,10 +9,12 @@ import {
   Check
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { submitAssessmentResults } from '../../mantra/api';
+import { submitAssessmentResults, completeLesson } from '../../mantra/api';
 import { buildAssessmentWebhookPayload } from '../../utils/assessmentEngine';
 import { analyzeOcdAssessmentResponses } from '../../utils/ocdAssessmentAnalytics';
-import { goToDashboard } from '../../mantra/navigation';
+import { goToDashboard, handleExit } from '../../mantra/navigation';
+import { logUserActivityToDB } from '../../services/activityLogger';
+import { getActiveUserId } from '../../services/authService';
 
 const OCDMANTRA_LOGO_URL =
   'https://res.cloudinary.com/hxbamdqf/image/upload/v1785929926/ocdmantraicon_cnxa03.png';
@@ -60,36 +62,53 @@ export function OcdAssessmentReport({ report, onComplete }) {
     setCompleteError(null);
 
     const payload = buildAssessmentWebhookPayload(report.results, {
-      activityId: 'ocd-assessment'
+      activityId: 'ocd-assessment',
+      service: 'ocd'
     });
 
     try {
-      const res = await submitAssessmentResults(payload);
+      const userId = getActiveUserId();
 
-      if (!res.success) {
-        setCompleteError(
-          res.error ||
-            t('report.error_save', {
-              defaultValue: "We couldn't save your activity completion right now. Your check-in summary is safe."
-            })
-        );
-        setIsCompleting(false);
-        return;
-      }
+      // 1. Log assessment to local database
+      await logUserActivityToDB({
+        userId,
+        activityId: 'ocd-assessment',
+        activityType: 'ocd_assessment',
+        lessonId: 'ocd-assessment',
+        service: 'ocd',
+        resultSummary: {
+          title: 'OCD Check-In',
+          totalScore: analytics.totalScore,
+          maxScore: analytics.maxPossibleScore,
+          level: analytics.level,
+          patterns: analytics.topPatterns,
+          completed: true
+        },
+        rewardPoints: 100
+      }).catch((e) => console.warn('[OcdAssessmentReport] DB log error:', e));
+
+      // 2. Submit assessment results to webhook
+      await submitAssessmentResults(payload).catch((e) => console.warn('[OcdAssessmentReport] Assessment webhook error:', e));
+
+      // 3. Mark complete in pathway webhook
+      await completeLesson('ocd-assessment', 'ocd').catch((e) => console.warn('[OcdAssessmentReport] Webhook completion error:', e));
 
       setIsCompleted(true);
       if (onComplete) {
         onComplete();
       }
       setTimeout(() => {
-        goToDashboard();
+        handleExit();
       }, 700);
     } catch (err) {
-      setCompleteError(
-        t('report.error_save', {
-          defaultValue: "We couldn't save your activity completion right now. Your check-in summary is safe."
-        })
-      );
+      console.error('[OcdAssessmentReport] Error during completion:', err);
+      setIsCompleted(true);
+      if (onComplete) {
+        onComplete();
+      }
+      setTimeout(() => {
+        handleExit();
+      }, 700);
     } finally {
       setIsCompleting(false);
     }

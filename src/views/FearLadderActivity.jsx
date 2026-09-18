@@ -58,19 +58,42 @@ export default function FearLadderActivity({ onBack, onNavigate }) {
       const userId = getActiveUserId();
       const history = await getUserActivityHistory(ACTIVITY_ID, userId);
       if (Array.isArray(history)) {
-        // Filter valid fear ladder entries
+        // Filter and normalize valid fear ladder entries
         const validLadders = history
-          .filter(
-            (item) =>
-              item.metadata?.situations &&
-              Array.isArray(item.metadata.situations) &&
-              item.metadata.situations.length > 0
-          )
-          .map((item) => ({
-            id: item.id || `ladder_${item.created_at}`,
-            createdAt: item.created_at,
-            situations: item.metadata.situations
-          }));
+          .map((item) => {
+            let meta = item.metadata;
+            if (typeof meta === 'string') {
+              try {
+                meta = JSON.parse(meta);
+              } catch (e) {
+                meta = {};
+              }
+            }
+            let resSum = item.result_summary;
+            if (typeof resSum === 'string') {
+              try {
+                resSum = JSON.parse(resSum);
+              } catch (e) {
+                resSum = {};
+              }
+            }
+
+            const sitList =
+              (meta && Array.isArray(meta.situations) && meta.situations) ||
+              (resSum && Array.isArray(resSum.situations) && resSum.situations) ||
+              [];
+
+            if (sitList.length > 0) {
+              return {
+                id: item.id || `ladder_${item.created_at}`,
+                createdAt: item.created_at,
+                situations: sitList
+              };
+            }
+            return null;
+          })
+          .filter(Boolean);
+
         setPastLadders(validLadders);
       } else {
         setPastLadders([]);
@@ -164,6 +187,8 @@ export default function FearLadderActivity({ onBack, onNavigate }) {
       try {
         localStorage.removeItem(STORAGE_KEY);
       } catch (e) {}
+      // Refresh past ladders history immediately
+      fetchPastLadders();
     } catch (e) {
       console.error('Completion & persistence error:', e);
     } finally {

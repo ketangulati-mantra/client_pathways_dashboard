@@ -239,7 +239,7 @@ export const submitAssessmentResults = async (
     intent: payload.intent || 'complete_activity',
     activity_id: payload.activity_id || activity?.activityId || targetLessonId,
     lesson_id: activity?.lessonId || targetLessonId,
-    service: payload.service || service || 'therapy',
+    service: payload.service || activity?.services?.[0] || service || 'therapy',
     reward_points: payload.reward_points || activity?.rewardPoints || 100
   };
 

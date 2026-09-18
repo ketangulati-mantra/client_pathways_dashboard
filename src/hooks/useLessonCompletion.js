@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { completeLesson, goToDashboard } from '../mantra';
+import { logUserActivityToDB } from '../services/activityLogger';
+import { getActiveUserId } from '../services/authService';
 import { useToast } from '../components';
 
 /**
@@ -42,8 +44,6 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
     };
   });
 
-
-
   useEffect(() => {
     try {
       localStorage.setItem(storageKey, JSON.stringify(completedSteps));
@@ -85,12 +85,26 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
 
     if (percentage === 100 && totalSteps > 0 && !completedSteps.celebrationShown) {
       setCompletedSteps((prev) => ({ ...prev, celebrationShown: true }));
+      const userId = getActiveUserId();
+      logUserActivityToDB({
+        userId,
+        activityId: lessonId,
+        activityType: 'lesson_activity',
+        lessonId,
+        service: 'therapy',
+        resultSummary: { completed: true },
+        rewardPoints: 25
+      }).catch(() => {});
       completeLesson(lessonId).catch((e) => console.warn('[useLessonCompletion] completeLesson error:', e));
       setTimeout(() => {
-        goToDashboard();
+        if (onBack) {
+          onBack();
+        } else {
+          goToDashboard();
+        }
       }, 500);
     }
-  }, [completedSteps, hasVideo, hasChecklist, hasScenario, hasQuiz, hasAction, lessonId]);
+  }, [completedSteps, hasVideo, hasChecklist, hasScenario, hasQuiz, hasAction, lessonId, onBack]);
 
   const handleVideoComplete = () => {
     setCompletedSteps((prev) => ({ ...prev, videoWatched: true }));
@@ -109,13 +123,27 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
   };
 
   const handleActionComplete = async () => {
-    setCompletedSteps((prev) => ({ ...prev, actionDone: true, celebrationShown: true }));
+    setCompletedSteps((prev) => ({ ...prev, videoWatched: true, actionDone: true, celebrationShown: true }));
     try {
+      const userId = getActiveUserId();
+      await logUserActivityToDB({
+        userId,
+        activityId: lessonId,
+        activityType: 'lesson_activity',
+        lessonId,
+        service: 'therapy',
+        resultSummary: { completed: true },
+        rewardPoints: 25
+      }).catch(() => {});
       await completeLesson(lessonId);
     } catch (e) {
       console.warn('[useLessonCompletion] completeLesson error:', e);
     }
-    goToDashboard();
+    if (onBack) {
+      onBack();
+    } else {
+      goToDashboard();
+    }
   };
 
   const handleCloseCelebration = async () => {
@@ -126,10 +154,24 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
     }));
 
     try {
+      const userId = getActiveUserId();
+      await logUserActivityToDB({
+        userId,
+        activityId: lessonId,
+        activityType: 'lesson_activity',
+        lessonId,
+        service: 'therapy',
+        resultSummary: { completed: true },
+        rewardPoints: 25
+      }).catch(() => {});
       await completeLesson(lessonId);
     } catch (e) {}
 
-    goToDashboard();
+    if (onBack) {
+      onBack();
+    } else {
+      goToDashboard();
+    }
   };
 
   return {

@@ -66,7 +66,25 @@ export default function BookJoinSessionLessonPage({ onBack }) {
         {/* Completion Section */}
         <section>
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-            <Button variant="primary" disabled={!videoWatched} onClick={handleActionComplete} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', fontSize: '1rem', cursor: 'pointer', borderRadius: '8px', border: 'none', background: videoWatched ? 'var(--color-primary)' : '#cbd5e1', color: 'white' }}>
+            <Button
+              variant="primary"
+              onClick={handleActionComplete}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '14px 28px',
+                fontSize: '1rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+                borderRadius: '10px',
+                border: 'none',
+                background: 'var(--color-primary, #2563eb)',
+                color: 'white',
+                boxShadow: '0 4px 14px rgba(37, 99, 235, 0.25)',
+                transition: 'all 0.2s ease'
+              }}
+            >
               <CheckCircle2 size={18} />
               <span>Mark as Completed</span>
             </Button>

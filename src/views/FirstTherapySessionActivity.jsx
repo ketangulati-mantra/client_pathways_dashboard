@@ -14,8 +14,10 @@ import {
   Loader2,
   Check
 } from 'lucide-react';
-import { triggerCompletionWebhook } from '../mantra/api';
-import { handleExit } from '../mantra/navigation';
+import { triggerCompletionWebhook, completeLesson } from '../mantra/api';
+import { handleExit, goToDashboard } from '../mantra/navigation';
+import { logUserActivityToDB } from '../services/activityLogger';
+import { getActiveUserId } from '../services/authService';
 import CustomVideoPlayer from '../components/video/CustomVideoPlayer';
 
 const LESSON_ID = 'first-therapy-session';
@@ -126,11 +128,40 @@ export default function FirstTherapySessionActivity({ onBack }) {
     setCompletionError(null);
 
     try {
-      await triggerCompletionWebhook(LESSON_ID, ACTIVITY_TITLE, REWARD_POINTS);
-      handleExit();
+      const userId = getActiveUserId();
+
+      // 1. Log activity to DB
+      await logUserActivityToDB({
+        userId,
+        activityId: LESSON_ID,
+        activityType: 'therapy_session_guide',
+        lessonId: LESSON_ID,
+        service: 'therapy',
+        reflection: 'Explored how to book, match, and join therapy sessions',
+        resultSummary: {
+          title: ACTIVITY_TITLE,
+          completed: true,
+          plan: selectedPlan,
+          topics: selectedChips
+        },
+        rewardPoints: REWARD_POINTS
+      }).catch((e) => console.warn('[FirstTherapySession] DB log error:', e));
+
+      // 2. Mark complete in pathway webhook
+      await completeLesson(LESSON_ID, 'therapy').catch((e) => console.warn('[FirstTherapySession] Webhook error:', e));
+
+      if (onBack) {
+        onBack();
+      } else {
+        handleExit();
+      }
     } catch (e) {
       console.error('Failed to complete activity', e);
-      handleExit();
+      if (onBack) {
+        onBack();
+      } else {
+        handleExit();
+      }
     } finally {
       setIsSubmitting(false);
     }

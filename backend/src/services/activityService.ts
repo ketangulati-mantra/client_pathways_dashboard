@@ -154,7 +154,8 @@ export const activityService = {
     if (filter?.activityId) {
       return await sql`
         SELECT * FROM user_activities 
-        WHERE user_id = ${userId} AND activity_id = ${filter.activityId}
+        WHERE user_id = ${userId} 
+          AND (activity_id = ${filter.activityId} OR activity_type = ${filter.activityId} OR lesson_id = ${filter.activityId})
         ORDER BY created_at DESC;
       `;
     }
@@ -162,7 +163,8 @@ export const activityService = {
     if (filter?.activityType) {
       return await sql`
         SELECT * FROM user_activities 
-        WHERE user_id = ${userId} AND activity_type = ${filter.activityType}
+        WHERE user_id = ${userId} 
+          AND (activity_type = ${filter.activityType} OR activity_id = ${filter.activityType} OR lesson_id = ${filter.activityType})
         ORDER BY created_at DESC;
       `;
     }

@@ -18,11 +18,13 @@ import {
   ShieldCheck,
   Plus
 } from 'lucide-react';
-import { useLessonCompletion } from '../hooks/useLessonCompletion';
-import { handleExit } from '../mantra/navigation';
-import { triggerCompletionWebhook } from '../mantra/api';
+import { goToDashboard } from '../mantra/navigation';
+import { completeLesson } from '../mantra/api';
+import { logUserActivityToDB } from '../services/activityLogger';
+import { getActiveUserId } from '../services/authService';
 
 const LESSON_ID = 'earn-while-you-improve-your-wellbeing';
+const REWARD_POINTS = 25;
 
 const DESTINATIONS = [
   {
@@ -90,17 +92,11 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
   const [demoPoints, setDemoPoints] = useState(150);
   const [hasSimulatedEarn, setHasSimulatedEarn] = useState(false);
 
-  const { handleActionComplete } = useLessonCompletion(LESSON_ID, onBack, {
-    hasVideo: false,
-    hasAction: true,
-    hasQuiz: false
-  });
-
   const handleBackClick = () => {
     if (onBack) {
       onBack();
     } else {
-      handleExit();
+      goToDashboard();
     }
   };
 
@@ -109,13 +105,31 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
 
     setIsSubmitting(true);
     try {
-      if (handleActionComplete) {
-        await handleActionComplete();
-      } else {
-        await triggerCompletionWebhook(LESSON_ID);
-      }
+      const userId = getActiveUserId();
+
+      // 1. Log activity to local database
+      await logUserActivityToDB({
+        userId,
+        activityId: LESSON_ID,
+        activityType: 'rewards_activity',
+        lessonId: LESSON_ID,
+        service: 'therapy',
+        emotionZone: 'energy',
+        primaryEmotion: 'motivation',
+        reflection: 'Explored rewards, points redemption and wellbeing paths',
+        resultSummary: {
+          title: 'Earn While You Improve Your Wellbeing',
+          completed: true
+        },
+        rewardPoints: REWARD_POINTS
+      }).catch((e) => console.warn('[EarnWhileYouImprove] DB log error:', e));
+
+      // 2. Trigger webhook
+      await completeLesson(LESSON_ID);
+
       setIsCompleted(true);
     } catch (err) {
+      console.error('[EarnWhileYouImprove] Completion error:', err);
       setIsCompleted(true);
     } finally {
       setIsSubmitting(false);

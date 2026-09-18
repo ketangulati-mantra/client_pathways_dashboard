@@ -16,7 +16,8 @@ import { generatePersonalizedNextStep } from '../components/dailyCheckIn/recomme
 import { logDailyCheckInToDB, getUserActivityHistory } from '../services/activityLogger';
 import { invalidateCheckInState } from '../services/dailyCheckInService';
 import { getActiveUserId } from '../services/authService';
-import { handleExit, goToLesson } from '../mantra/navigation';
+import { handleExit, goToLesson, goToDashboard } from '../mantra/navigation';
+import { completeLesson } from '../mantra/api';
 
 /**
  * Factory function creating a pristine, isolated check-in session.
@@ -89,15 +90,13 @@ export default function DailyCheckInPage({ onBack: propOnBack } = {}) {
     setIsHome(true);
   }, []);
 
-  const handleReturnHome = useCallback(() => {
-    setSession(createFreshCheckInSession());
-    setPersonalizedResponse(null);
-    setPendingMilestone(null);
-    setShowMilestoneModal(false);
-    setShowShareModal(false);
-    setCurrentStepIndex(0);
-    setHomeKey((k) => k + 1);
-    setIsHome(true);
+  const handleReturnHome = useCallback(async () => {
+    try {
+      await completeLesson('daily-check-in');
+    } catch (e) {
+      console.warn('[DailyCheckIn] Completion webhook error:', e);
+    }
+    goToDashboard();
   }, []);
 
   const handleBack = useCallback(() => {

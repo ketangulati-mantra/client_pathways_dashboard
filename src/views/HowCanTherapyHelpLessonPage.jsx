@@ -7,11 +7,14 @@ import {
   RefreshCw
 } from 'lucide-react';
 import { useLessonCompletion } from '../hooks/useLessonCompletion';
-import { handleExit } from '../mantra/navigation';
-import { triggerCompletionWebhook } from '../mantra/api';
+import { goToDashboard } from '../mantra/navigation';
+import { completeLesson } from '../mantra/api';
+import { logUserActivityToDB } from '../services/activityLogger';
+import { getActiveUserId } from '../services/authService';
 
 const LESSON_ID = 'how-can-therapy-help';
-const LESSON_TITLE = 'How Therapy Helps';
+const LESSON_TITLE = 'How Can Therapy Help?';
+const REWARD_POINTS = 25;
 
 const TOPICS = [
   {
@@ -138,7 +141,7 @@ export default function HowCanTherapyHelpLessonPage({ onBack }) {
     if (onBack) {
       onBack();
     } else {
-      handleExit();
+      goToDashboard();
     }
   };
 
@@ -181,13 +184,31 @@ export default function HowCanTherapyHelpLessonPage({ onBack }) {
     setCompleteError(null);
 
     try {
-      if (handleActionComplete) {
-        await handleActionComplete();
-      } else {
-        await triggerCompletionWebhook(LESSON_ID);
-      }
+      const userId = getActiveUserId();
+
+      // 1. Log activity to local database
+      await logUserActivityToDB({
+        userId,
+        activityId: LESSON_ID,
+        activityType: 'psychoeducation_activity',
+        lessonId: LESSON_ID,
+        service: 'therapy',
+        emotionZone: 'mind',
+        primaryEmotion: 'understanding',
+        reflection: 'Explored how therapy helps across key life and emotional areas',
+        resultSummary: {
+          title: LESSON_TITLE,
+          completed: true
+        },
+        rewardPoints: REWARD_POINTS
+      }).catch((e) => console.warn('[HowCanTherapyHelp] DB log error:', e));
+
+      // 2. Mark complete in pathway webhook
+      await completeLesson(LESSON_ID);
+
       setIsCompleted(true);
     } catch (err) {
+      console.error('[HowCanTherapyHelp] Completion error:', err);
       setIsCompleted(true);
     } finally {
       setIsSubmitting(false);

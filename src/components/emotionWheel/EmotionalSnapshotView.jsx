@@ -19,6 +19,9 @@ import {
 import { evaluateEmotionWheelNextStep, EMOTION_SUPPORT_TIERS } from '../../utils/emotionWheelRouter';
 import ShareableEmotionalSnapshotModal from './ShareableEmotionalSnapshotModal';
 import { trackEmotionWheelEvent } from '../../utils/emotionAnalytics';
+import { completeLesson } from '../../mantra/api';
+import { logUserActivityToDB, PLATFORM_ACTIVITIES } from '../../services/activityLogger';
+import { getActiveUserId } from '../../services/authService';
 
 // Helper to map long context phrases into short, scannable concept pills with clean icons
 function getConceptBadge(text) {
@@ -172,6 +175,36 @@ export default function EmotionalSnapshotView({
     return selectedNeeds.slice(0, 3).map(getNeedBadge);
   }, [selectedNeeds]);
 
+  const handleShareClick = () => {
+    setIsShareModalOpen(true);
+    try {
+      const userId = getActiveUserId();
+      const explorationData = {
+        userId,
+        activityId: PLATFORM_ACTIVITIES.EMOTION_WHEEL || 'emotion-wheel',
+        activityType: 'emotion_wheel',
+        lessonId: 'emotion-wheel',
+        service: 'mental_wellness',
+        emotionZone: family?.id || null,
+        primaryEmotion: emotion?.name || null,
+        intensity,
+        contexts: selectedContexts,
+        reflection: freeText,
+        resultSummary: {
+          family: family?.name,
+          emotion: emotion?.name,
+          intensity,
+          needs: selectedNeeds
+        },
+        rewardPoints: 25
+      };
+      logUserActivityToDB(explorationData).catch(() => {});
+      completeLesson('emotion-wheel').catch(() => {});
+    } catch (e) {
+      console.warn('[EmotionWheel] Share completion trigger warning:', e);
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -222,71 +255,57 @@ export default function EmotionalSnapshotView({
         {emotionName}
       </motion.h1>
 
-      {/* 3. PARENT & INTENSITY RATING */}
-      <div
+      {/* 3. PARENT FAMILY + INTENSITY BADGE */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.12, duration: 0.4 }}
         style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '10px',
-          marginBottom: '14px'
-        }}
-      >
-        <span style={{ fontSize: '14px', fontWeight: '700', color: 'rgba(255, 255, 255, 0.75)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-          {parentFamilyName}
-        </span>
-        <span style={{ color: 'rgba(255, 255, 255, 0.3)', fontSize: '12px' }}>·</span>
-        <span style={{ fontSize: '14px', fontWeight: '700', color: '#ffffff' }}>
-          {intensity}/5
-        </span>
-      </div>
-
-      {/* 4. VISUAL INTENSITY DOTS (● ● ● ○ ○) */}
-      <div
-        style={{
-          display: 'flex',
           gap: '8px',
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginBottom: '24px'
+          marginBottom: '18px'
         }}
       >
-        {[1, 2, 3, 4, 5].map((dot) => {
-          const isActive = dot <= intensity;
-          return (
-            <div
-              key={dot}
-              style={{
-                width: '9px',
-                height: '9px',
-                borderRadius: '50%',
-                background: isActive ? themeColor : 'rgba(255, 255, 255, 0.15)',
-                boxShadow: isActive ? `0 0 10px ${themeColor}90` : 'none',
-                transition: 'all 0.3s ease'
-              }}
-            />
-          );
-        })}
-      </div>
+        <span
+          style={{
+            fontSize: '13px',
+            color: 'rgba(255, 255, 255, 0.65)',
+            fontWeight: '600'
+          }}
+        >
+          {parentFamilyName} Family
+        </span>
+        <span style={{ color: 'rgba(255, 255, 255, 0.3)' }}>•</span>
+        <span
+          style={{
+            fontSize: '13px',
+            fontWeight: '700',
+            color: themeColor
+          }}
+        >
+          Level {intensity} / 5
+        </span>
+      </motion.div>
 
-      {/* 5. CONCISE ONE-LINE INSIGHT (<20 words, no verbose AI paragraph) */}
+      {/* 4. CONCISE PERSONALIZED ONE-LINE SYNTHESIS */}
       <motion.p
-        initial={{ opacity: 0, y: 6 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.14, duration: 0.4 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.16, duration: 0.4 }}
         style={{
-          margin: '0 0 32px 0',
-          fontSize: '16.5px',
-          color: 'rgba(255, 255, 255, 0.95)',
+          fontSize: '14.5px',
           lineHeight: 1.5,
+          color: 'rgba(255, 255, 255, 0.78)',
           textAlign: 'center',
-          maxWidth: '420px',
-          fontWeight: '450'
+          maxWidth: '380px',
+          margin: '0 0 24px 0'
         }}
       >
-        "{oneLineInsight}"
+        {oneLineInsight}
       </motion.p>
 
-      {/* 6. WHAT SEEMED TO MATTER (Clean icons + short concept pills) */}
+      {/* 5. VISUAL CONCEPT BADGES (Where this is showing up) */}
       {contextBadges.length > 0 && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -297,12 +316,12 @@ export default function EmotionalSnapshotView({
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            marginBottom: '26px'
+            marginBottom: '20px'
           }}
         >
           <span
             style={{
-              fontSize: '11.5px',
+              fontSize: '11px',
               fontWeight: '700',
               color: 'rgba(255, 255, 255, 0.45)',
               textTransform: 'uppercase',
@@ -310,7 +329,7 @@ export default function EmotionalSnapshotView({
               marginBottom: '10px'
             }}
           >
-            What Seemed Connected
+            Where it's showing up
           </span>
           <div
             style={{
@@ -332,11 +351,11 @@ export default function EmotionalSnapshotView({
                     gap: '7px',
                     padding: '8px 14px',
                     borderRadius: '20px',
-                    background: 'rgba(255, 255, 255, 0.04)',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    color: '#ffffff',
+                    background: 'rgba(255, 255, 255, 0.06)',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    color: 'rgba(255, 255, 255, 0.92)',
                     fontSize: '13.5px',
-                    fontWeight: '500'
+                    fontWeight: '600'
                   }}
                 >
                   <Icon size={14} color={themeColor} />
@@ -348,31 +367,62 @@ export default function EmotionalSnapshotView({
         </motion.div>
       )}
 
-      {/* 7. WHAT MIGHT HELP (Clean icons + short action concepts) */}
+      {/* 6. USER REFLECTION SNIPPET */}
+      {freeText && freeText.trim() && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.24, duration: 0.4 }}
+          style={{
+            width: '100%',
+            maxWidth: '380px',
+            padding: '12px 16px',
+            borderRadius: '16px',
+            background: 'rgba(255, 255, 255, 0.04)',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
+            marginBottom: '20px',
+            textAlign: 'center'
+          }}
+        >
+          <p
+            style={{
+              margin: 0,
+              fontSize: '13.5px',
+              color: 'rgba(255, 255, 255, 0.72)',
+              fontStyle: 'italic',
+              lineHeight: 1.45
+            }}
+          >
+            "{freeText}"
+          </p>
+        </motion.div>
+      )}
+
+      {/* 7. WHAT MIGHT HELP (NEEDS BADGES) */}
       {needBadges.length > 0 && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.26, duration: 0.4 }}
+          transition={{ delay: 0.28, duration: 0.4 }}
           style={{
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            marginBottom: '32px'
+            marginBottom: '24px'
           }}
         >
           <span
             style={{
-              fontSize: '11.5px',
+              fontSize: '11px',
               fontWeight: '700',
-              color: themeColor,
+              color: 'rgba(255, 255, 255, 0.45)',
               textTransform: 'uppercase',
               letterSpacing: '0.12em',
               marginBottom: '10px'
             }}
           >
-            What Might Help Right Now
+            What might help
           </span>
           <div
             style={{
@@ -410,46 +460,6 @@ export default function EmotionalSnapshotView({
         </motion.div>
       )}
 
-      {/* 8. A THOUGHT TO CARRY (Generous whitespace, unboxed) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.32, duration: 0.4 }}
-        style={{
-          textAlign: 'center',
-          borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-          paddingTop: '20px',
-          marginBottom: '28px',
-          width: '100%'
-        }}
-      >
-        <span
-          style={{
-            fontSize: '11.5px',
-            fontWeight: '700',
-            color: 'rgba(255, 255, 255, 0.45)',
-            textTransform: 'uppercase',
-            letterSpacing: '0.12em',
-            display: 'block',
-            marginBottom: '6px'
-          }}
-        >
-          A Thought to Carry
-        </span>
-        <p
-          style={{
-            margin: 0,
-            fontSize: '15px',
-            fontWeight: '500',
-            color: 'rgba(255, 255, 255, 0.88)',
-            fontStyle: 'italic',
-            lineHeight: 1.45
-          }}
-        >
-          "{nextStepPlan.takeawayThought || config?.takeawayThought || 'You do not have to solve everything right now. Just this present breath.'}"
-        </p>
-      </motion.div>
-
       {/* 9. VIRAL SHAREABLE SNAPSHOT TRIGGER (Clean, Sleek, Radiant Button) */}
       <motion.div
         initial={{ opacity: 0, scale: 0.96 }}
@@ -460,7 +470,7 @@ export default function EmotionalSnapshotView({
         <motion.button
           whileHover={{ scale: 1.02, y: -1 }}
           whileTap={{ scale: 0.97 }}
-          onClick={() => setIsShareModalOpen(true)}
+          onClick={handleShareClick}
           style={{
             background: 'linear-gradient(135deg, #0284c7 0%, #2563eb 60%, #4f46e5 100%)',
             border: '1px solid rgba(255, 255, 255, 0.3)',
@@ -484,90 +494,45 @@ export default function EmotionalSnapshotView({
         </motion.button>
       </motion.div>
 
-      {/* 10. COMPASSIONATE SUPPORT TRANSITION */}
+      {/* 10. PRIMARY CTA: CONTINUE MY JOURNEY */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.4 }}
         style={{
           width: '100%',
-          textAlign: 'center',
+          display: 'flex',
+          justifyContent: 'center',
           marginBottom: '24px'
         }}
       >
-        {nextStepPlan.tier === EMOTION_SUPPORT_TIERS.STRONGER_SUPPORT ? (
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '6px' }}>
-              <HeartHandshake size={17} color="#f87171" />
-              <span style={{ fontSize: '13px', fontWeight: '700', color: '#f87171' }}>
-                You don’t have to work through this alone
-              </span>
-            </div>
-            <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.75)', lineHeight: 1.45, margin: '0 0 16px 0' }}>
-              Talking with someone can give you space to understand what is underneath.
-            </p>
-            <motion.button
-              whileTap={{ scale: 0.98 }}
-              onClick={() => handleActionClick(nextStepPlan.primaryAction.route, nextStepPlan.primaryAction.type)}
-              style={{
-                width: '100%',
-                maxWidth: '340px',
-                background: 'linear-gradient(135deg, #f87171 0%, #ef4444 100%)',
-                color: '#ffffff',
-                border: 'none',
-                borderRadius: '16px',
-                padding: '14px 24px',
-                fontSize: '15px',
-                fontWeight: '700',
-                cursor: 'pointer',
-                boxShadow: '0 8px 24px rgba(239, 68, 68, 0.35)',
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '8px'
-              }}
-            >
-              <span>{nextStepPlan.primaryAction.cta || nextStepPlan.primaryAction.ctaLabel?.replace(' →', '') || 'Explore therapy support'}</span>
-              <ArrowRight size={17} />
-            </motion.button>
-          </div>
-        ) : (
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '6px' }}>
-              <Compass size={16} color={themeColor} />
-              <span style={{ fontSize: '13px', color: themeColor, fontWeight: '700' }}>
-                {nextStepPlan.primaryAction.title}
-              </span>
-            </div>
-            <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.75)', lineHeight: 1.45, margin: '0 0 16px 0' }}>
-              {nextStepPlan.primaryAction.subtitle}
-            </p>
-            <motion.button
-              whileTap={{ scale: 0.98 }}
-              onClick={() => handleActionClick(nextStepPlan.primaryAction.route, nextStepPlan.primaryAction.type)}
-              style={{
-                width: '100%',
-                maxWidth: '340px',
-                background: `linear-gradient(135deg, ${themeColor} 0%, #2563eb 100%)`,
-                color: '#ffffff',
-                border: 'none',
-                borderRadius: '16px',
-                padding: '14px 24px',
-                fontSize: '15px',
-                fontWeight: '700',
-                cursor: 'pointer',
-                boxShadow: `0 8px 24px ${themeColor}35`,
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '8px'
-              }}
-            >
-              <span>{nextStepPlan.primaryAction.cta || nextStepPlan.primaryAction.ctaLabel?.replace(' →', '') || 'Continue'}</span>
-              <ArrowRight size={17} />
-            </motion.button>
-          </div>
-        )}
+        <motion.button
+          whileHover={{ scale: 1.02, y: -1 }}
+          whileTap={{ scale: 0.98 }}
+          onClick={() => {
+            if (onFinish) onFinish();
+          }}
+          style={{
+            width: '100%',
+            maxWidth: '340px',
+            background: `linear-gradient(135deg, ${themeColor} 0%, #2563eb 100%)`,
+            color: '#ffffff',
+            border: 'none',
+            borderRadius: '16px',
+            padding: '14px 24px',
+            fontSize: '15px',
+            fontWeight: '700',
+            cursor: 'pointer',
+            boxShadow: `0 8px 24px ${themeColor}35`,
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '8px'
+          }}
+        >
+          <span>Continue my journey</span>
+          <ArrowRight size={17} />
+        </motion.button>
       </motion.div>
 
       {/* 11. RE-EXPLORE LINK */}

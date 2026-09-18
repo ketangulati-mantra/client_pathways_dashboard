@@ -31,10 +31,10 @@ export default function ReflectionScreen({
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.98 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.96 }}
-      transition={{ duration: 0.28 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.25 }}
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -93,9 +93,7 @@ export default function ReflectionScreen({
       </div>
 
       {/* 2. Compact, Auto-Expanding Journaling Glass Card */}
-      <motion.div
-        layout
-        transition={{ type: 'spring', stiffness: 450, damping: 30 }}
+      <div
         style={{
           width: '100%',
           maxWidth: '520px',
@@ -168,7 +166,7 @@ export default function ReflectionScreen({
             {text.length} characters
           </span>
         </div>
-      </motion.div>
+      </div>
 
       {/* 3. Refined Sticky Action Dock with Ambient Blur Fade */}
       <div

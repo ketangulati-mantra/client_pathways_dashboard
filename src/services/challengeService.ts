@@ -101,8 +101,31 @@ function getApiUrl(endpoint: string): string {
       window.location.hostname === 'localhost' ||
       window.location.hostname === '127.0.0.1';
 
-    if (isLocalhost && window.location.port === '5173') {
+    if (isLocalhost && (window.location.port === '5173' || window.location.port === '3000')) {
       return `http://localhost:5001${endpoint}`;
+    }
+
+    // In production or custom subpath deployments (e.g. /client_tasks, /app/content/provider_pathways)
+    const pathname = window.location.pathname;
+    const knownPrefixes = [
+      '/client_tasks',
+      '/client-tasks',
+      '/app/content/provider_pathways',
+      '/provider_activity/app/content',
+      '/app/content',
+      '/provider_pathways_dashboard_v3',
+      '/provider_pathways_dashboard_v2',
+      '/provider_dashboard_v1',
+      '/provider_pathways_dashboard_v1',
+      '/provider_pathways_v2_testing',
+      '/provider_pathways',
+      '/provider_pathway',
+      '/provider_activity'
+    ];
+    for (const prefix of knownPrefixes) {
+      if (pathname.startsWith(prefix)) {
+        return `${prefix}${endpoint}`;
+      }
     }
   }
   return endpoint;

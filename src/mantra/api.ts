@@ -8,10 +8,48 @@ export const LOCALHOST_DEV_UID = 'e68792e6ec42acc875be58cbc1bd936c:0c0137f3fd9e9
 /**
  * Returns URL parameters required by the pathway webhook.
  */
-const getWebhookContext = () => {
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
-  const upaId = params.get('upa_id') || (typeof window !== 'undefined' ? sessionStorage.getItem('upa_id') : null);
-  const uid = params.get('uid') || (typeof window !== 'undefined' ? (sessionStorage.getItem('uid') || sessionStorage.getItem('user_id')) : null);
+/**
+ * Returns URL parameters required by the pathway webhook.
+ */
+export const getWebhookContext = () => {
+  if (typeof window === 'undefined') {
+    return { upaId: null, uid: null, service: getCurrentService() };
+  }
+
+  const searchParams = new URLSearchParams(window.location.search || '');
+  const rawHash = window.location.hash || '';
+  const hashQueryStr = rawHash.includes('?') ? rawHash.substring(rawHash.indexOf('?') + 1) : '';
+  const hashParams = new URLSearchParams(hashQueryStr);
+
+  const upaId = (
+    searchParams.get('upa_id') ||
+    searchParams.get('upaId') ||
+    hashParams.get('upa_id') ||
+    hashParams.get('upaId') ||
+    sessionStorage.getItem('upa_id') ||
+    sessionStorage.getItem('upaId') ||
+    null
+  );
+
+  const uid = (
+    searchParams.get('uid') ||
+    searchParams.get('user_id') ||
+    searchParams.get('userId') ||
+    hashParams.get('uid') ||
+    hashParams.get('user_id') ||
+    hashParams.get('userId') ||
+    sessionStorage.getItem('uid') ||
+    sessionStorage.getItem('user_id') ||
+    null
+  );
+
+  // Persist if found in URL
+  if (upaId) {
+    try { sessionStorage.setItem('upa_id', upaId); } catch (e) {}
+  }
+  if (uid) {
+    try { sessionStorage.setItem('uid', uid); } catch (e) {}
+  }
 
   return {
     upaId,
@@ -88,31 +126,30 @@ export const getCurrentUserId = (): string => {
 /**
  * Marks a lesson/activity as completed in Laravel webhook.
  */
-export const completeLesson = async (lessonId: string): Promise<boolean> => {
+export const completeLesson = async (lessonId: string, customService?: string): Promise<boolean> => {
   const activity = activities.find(a => a.lessonId === lessonId || a.activityId === lessonId);
 
   const targetLessonId = activity?.lessonId || lessonId;
   const targetRewardPoints = activity?.rewardPoints || 25;
 
   const { upaId, uid, service } = getWebhookContext();
+  const activeUid = uid || getCurrentUserId() || (MANTRA_CONFIG.devMode ? LOCALHOST_DEV_UID : undefined);
+  const targetUpaId = upaId ? (isNaN(Number(upaId)) ? upaId : Number(upaId)) : undefined;
 
-  if (!upaId) {
-    if (MANTRA_CONFIG.devMode) {
-      console.log(`[Mantra API] Dev Mode: completed activity ${lessonId} locally.`);
-      return true;
-    }
-    return false;
-  }
-
-  const numericUpaId = isNaN(Number(upaId)) ? upaId : Number(upaId);
-
-  const payload = {
-    upa_id: numericUpaId,
-    uid: uid || undefined,
+  const payload: Record<string, any> = {
+    intent: 'complete_activity',
     lesson_id: targetLessonId,
-    service: service || 'therapy',
+    activity_id: activity?.activityId || targetLessonId,
+    service: customService || service || 'therapy',
     reward_points: targetRewardPoints
   };
+
+  if (targetUpaId !== undefined) {
+    payload.upa_id = targetUpaId;
+  }
+  if (activeUid) {
+    payload.uid = activeUid;
+  }
 
   if (MANTRA_CONFIG.devMode) {
     console.log('[Mantra API] Completing activity via webhook', {
@@ -131,13 +168,24 @@ export const completeLesson = async (lessonId: string): Promise<boolean> => {
     });
 
     if (!response.ok) {
-      console.error(`[Mantra API] Webhook failed with status ${response.status}`);
+      console.warn(`[Mantra API] Webhook response not OK with status ${response.status}`);
+      if (MANTRA_CONFIG.devMode) {
+        return true;
+      }
       return false;
     }
 
+    const result = await response.json().catch(() => null);
+    if (MANTRA_CONFIG.devMode) {
+      console.log('[Mantra API] Webhook success result:', result);
+    }
     return true;
   } catch (error) {
     console.error('[Mantra API] Error triggering completion webhook:', error);
+    if (MANTRA_CONFIG.devMode) {
+      console.log(`[Mantra API] Dev Mode fallback: completed activity ${lessonId} locally.`);
+      return true;
+    }
     return false;
   }
 };
@@ -176,35 +224,46 @@ export const saveProgress = async (lessonId: string, progress: number): Promise<
  */
 export const submitAssessmentResults = async (
   payload: AssessmentWebhookPayload
-): Promise<{ success: boolean; error?: string }> => {
+): Promise<{ success: boolean; data?: any; error?: string }> => {
   const { upaId, uid, service } = getWebhookContext();
   const rawUpaId = payload.upa_id || upaId;
   const targetUpaId = rawUpaId ? (isNaN(Number(rawUpaId)) ? rawUpaId : Number(rawUpaId)) : undefined;
-
-  if (!targetUpaId) {
-    if (MANTRA_CONFIG.devMode) {
-      console.log('[Mantra API Dev] Localhost dev bypass for missing upa_id:', payload);
-      return { success: true };
-    }
-    console.warn('[Mantra API] Missing upa_id in assessment submission.');
-    return { success: false, error: 'Missing upa_id in URL context.' };
-  }
+  const activeUid = payload.uid || uid || getCurrentUserId() || (MANTRA_CONFIG.devMode ? LOCALHOST_DEV_UID : undefined);
 
   const targetLessonId = payload.lesson_id || payload.activity_id || 'emotional-wellbeing-assessment';
   const activity = activities.find(
     a => a.lessonId === targetLessonId || a.activityId === targetLessonId
   );
 
-  const cleanPayload = {
-    upa_id: targetUpaId,
-    uid: payload.uid || uid || undefined,
+  const cleanPayload: Record<string, any> = {
+    intent: payload.intent || 'complete_activity',
+    activity_id: payload.activity_id || activity?.activityId || targetLessonId,
     lesson_id: activity?.lessonId || targetLessonId,
-    service: service || 'therapy',
+    service: payload.service || service || 'therapy',
     reward_points: payload.reward_points || activity?.rewardPoints || 100
   };
 
+  if (targetUpaId !== undefined) {
+    cleanPayload.upa_id = targetUpaId;
+  }
+  if (activeUid) {
+    cleanPayload.uid = activeUid;
+  }
+  if (payload.parameter && Array.isArray(payload.parameter)) {
+    cleanPayload.parameter = payload.parameter;
+  }
+  if (payload.entry_id) {
+    cleanPayload.entry_id = payload.entry_id;
+  }
+  if (payload.form_id) {
+    cleanPayload.form_id = payload.form_id;
+  }
+
   if (MANTRA_CONFIG.devMode) {
-    console.log('[Mantra API] Submitting assessment completion payload:', cleanPayload);
+    console.log('[Mantra API] Submitting assessment completion payload to webhook:', {
+      endpoint: MANTRA_CONFIG.webhookUrl,
+      payload: cleanPayload
+    });
   }
 
   try {
@@ -219,17 +278,25 @@ export const submitAssessmentResults = async (
     const result = await response.json().catch(() => null);
 
     if (!response.ok || (result && result.success === false)) {
-      console.error('[Mantra API] Assessment webhook failed:', result);
-      return { success: false, error: result?.message || 'Server returned an error.' };
+      console.warn('[Mantra API] Assessment webhook response error:', result || response.status);
+      if (MANTRA_CONFIG.devMode) {
+        console.log('[Mantra API Dev Mode] Tolerating response error in development mode.');
+        return { success: true, data: result };
+      }
+      return { success: false, error: result?.message || result?.error || 'Server returned an error.' };
     }
 
     if (MANTRA_CONFIG.devMode) {
       console.log('[Mantra API] Assessment submitted successfully:', result);
     }
 
-    return { success: true };
+    return { success: true, data: result };
   } catch (error: any) {
     console.error('[Mantra API] Network error during assessment webhook:', error);
+    if (MANTRA_CONFIG.devMode) {
+      console.warn('[Mantra API Dev Mode] Tolerating network error on localhost/dev.');
+      return { success: true };
+    }
     return { success: false, error: error?.message || 'Network connection failed.' };
   }
 };

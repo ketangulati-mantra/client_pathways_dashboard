@@ -10,10 +10,12 @@ export const LOCALHOST_DEV_UID = 'e68792e6ec42acc875be58cbc1bd936c:0c0137f3fd9e9
  */
 const getWebhookContext = () => {
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
+  const upaId = params.get('upa_id') || (typeof window !== 'undefined' ? sessionStorage.getItem('upa_id') : null);
+  const uid = params.get('uid') || (typeof window !== 'undefined' ? (sessionStorage.getItem('uid') || sessionStorage.getItem('user_id')) : null);
 
   return {
-    upaId: params.get('upa_id'),
-    uid: params.get('uid'),
+    upaId,
+    uid,
     service: getCurrentService()
   };
 };

@@ -339,17 +339,17 @@ export default function DepressionOneTinyStepActivity({ onBack, onNavigate, serv
 
     // 4. Complete lesson via webhook
     try {
-      await completeLesson(ACTIVITY_3_ID);
+      await completeLesson(ACTIVITY_3_ID, service || 'therapy').catch((e) => console.warn('[OneTinyStep] Completion webhook error:', e));
+      await completeLesson('depression_one_tiny_step', service || 'therapy').catch(() => {});
+      await completeLesson('depression_one_tiny_win', service || 'therapy').catch(() => {});
     } catch (e) {
       console.warn('[OneTinyStep] Completion webhook error:', e);
     }
 
     setIsSubmitting(false);
 
-    // Navigate to Day 1 Mantra 21 Invitation transition
-    if (onNavigate) {
-      onNavigate('/task/depression-mantra21-invitation');
-    } else if (onBack) {
+    // Return to dashboard
+    if (onBack) {
       onBack();
     } else {
       goToDashboard();
@@ -1694,7 +1694,8 @@ export default function DepressionOneTinyStepActivity({ onBack, onNavigate, serv
 
                 <div style={{ marginTop: 'auto', paddingTop: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <button
-                    onClick={() => setCurrentStep(7)}
+                    onClick={handleCompleteActivity}
+                    disabled={isSubmitting}
                     style={{
                       width: '100%',
                       backgroundColor: '#EA580C',
@@ -1704,7 +1705,7 @@ export default function DepressionOneTinyStepActivity({ onBack, onNavigate, serv
                       padding: '16px 20px',
                       fontSize: '16px',
                       fontWeight: 600,
-                      cursor: 'pointer',
+                      cursor: isSubmitting ? 'wait' : 'pointer',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -1712,7 +1713,7 @@ export default function DepressionOneTinyStepActivity({ onBack, onNavigate, serv
                       boxShadow: '0 4px 14px rgba(234, 88, 12, 0.25)'
                     }}
                   >
-                    <span>Keep this win →</span>
+                    <span>{isSubmitting ? 'Saving...' : 'Keep this win →'}</span>
                   </button>
 
                   <button

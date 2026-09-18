@@ -93,13 +93,11 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
     if (percentage === 100 && totalSteps > 0 && !completedSteps.celebrationShown) {
       setCompletedSteps((prev) => ({ ...prev, celebrationShown: true }));
       completeLesson(lessonId).catch((e) => console.warn('[useLessonCompletion] completeLesson error:', e));
-      if (onBack) {
-        setTimeout(() => {
-          goToDashboard();
-        }, 600);
-      }
+      setTimeout(() => {
+        goToDashboard();
+      }, 500);
     }
-  }, [completedSteps, hasVideo, hasChecklist, hasScenario, hasQuiz, hasAction, lessonId, onBack]);
+  }, [completedSteps, hasVideo, hasChecklist, hasScenario, hasQuiz, hasAction, lessonId]);
 
   const handleVideoComplete = () => {
     setCompletedSteps((prev) => ({ ...prev, videoWatched: true }));

@@ -204,12 +204,22 @@ export default function HowCanTherapyHelpLessonPage({ onBack }) {
       }).catch((e) => console.warn('[HowCanTherapyHelp] DB log error:', e));
 
       // 2. Mark complete in pathway webhook
-      await completeLesson(LESSON_ID);
+      await completeLesson(LESSON_ID, 'therapy').catch((e) => console.warn('[HowCanTherapyHelp] Completion webhook error:', e));
 
       setIsCompleted(true);
+      
+      if (onBack) {
+        onBack();
+      } else {
+        goToDashboard();
+      }
     } catch (err) {
       console.error('[HowCanTherapyHelp] Completion error:', err);
-      setIsCompleted(true);
+      if (onBack) {
+        onBack();
+      } else {
+        goToDashboard();
+      }
     } finally {
       setIsSubmitting(false);
     }

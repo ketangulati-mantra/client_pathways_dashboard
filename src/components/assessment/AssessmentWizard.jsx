@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { AlertCircle } from 'lucide-react';
 import { AssessmentQuestionCard } from './AssessmentQuestionCard';
@@ -7,6 +7,7 @@ import { calculateAssessmentResults } from '../../utils/assessmentEngine';
 
 export function AssessmentWizard({ schema, onComplete }) {
   const [currentStep, setCurrentStep] = useState(0);
+  const responsesRef = useRef({});
   const [responses, setResponses] = useState({}); // Record<string, AssessmentResponse>
   const [report, setReport] = useState(null);
   const [validationError, setValidationError] = useState(null);
@@ -14,25 +15,48 @@ export function AssessmentWizard({ schema, onComplete }) {
   const totalQuestions = schema.questions.length; // exactly 9
   const isReportStep = currentStep === totalQuestions;
 
-  const handleSelectOption = (option) => {
-    const currentQ = schema.questions[currentStep];
+  const handleSelectOption = (option, questionOverride = null) => {
+    const currentQ = questionOverride || schema.questions[currentStep];
+    if (!currentQ) return;
+    const newResponse = {
+      questionId: currentQ.id,
+      response: option.label,
+      score: option.score,
+      categoryId: currentQ.categoryId
+    };
+    responsesRef.current = {
+      ...responsesRef.current,
+      [currentQ.id]: newResponse
+    };
     setResponses((prev) => ({
       ...prev,
-      [currentQ.id]: {
-        questionId: currentQ.id,
-        response: option.label,
-        score: option.score,
-        categoryId: currentQ.categoryId
-      }
+      [currentQ.id]: newResponse
     }));
     if (validationError) setValidationError(null);
   };
 
-  const handleNext = () => {
+  const handleNext = (optionFromStep = null) => {
+    let updatedResponses = responsesRef.current;
+    if (optionFromStep && currentStep >= 0 && currentStep < totalQuestions) {
+      const currentQ = schema.questions[currentStep];
+      const newResp = {
+        questionId: currentQ.id,
+        response: optionFromStep.label,
+        score: optionFromStep.score,
+        categoryId: currentQ.categoryId
+      };
+      updatedResponses = {
+        ...updatedResponses,
+        [currentQ.id]: newResp
+      };
+      responsesRef.current = updatedResponses;
+      setResponses(updatedResponses);
+    }
+
     if (currentStep < totalQuestions - 1) {
       setCurrentStep((prev) => prev + 1);
     } else if (currentStep === totalQuestions - 1) {
-      handleViewResults();
+      handleViewResults(updatedResponses);
     }
   };
 
@@ -43,9 +67,9 @@ export function AssessmentWizard({ schema, onComplete }) {
     }
   };
 
-  const handleViewResults = () => {
-    // 1. Calculate and validate all 9 questions
-    const calculatedReport = calculateAssessmentResults(responses, schema);
+  const handleViewResults = (latestResponses = responsesRef.current) => {
+    // 1. Calculate and validate all 9 questions using the freshest responsesRef
+    const calculatedReport = calculateAssessmentResults(latestResponses, schema);
 
     if (!calculatedReport.isComplete) {
       // Find the first unanswered question and jump to it
@@ -63,7 +87,8 @@ export function AssessmentWizard({ schema, onComplete }) {
     setCurrentStep(totalQuestions);
   };
 
-  if (isReportStep && report) {
+  if (isReportStep) {
+    const activeReport = report || calculateAssessmentResults(responsesRef.current, schema);
     return (
       <div style={{
         overflowY: 'auto',
@@ -72,7 +97,7 @@ export function AssessmentWizard({ schema, onComplete }) {
         width: '100%',
         boxSizing: 'border-box'
       }}>
-        <AssessmentReport report={report} responses={responses} schema={schema} onComplete={onComplete} />
+        <AssessmentReport report={activeReport} responses={responsesRef.current} schema={schema} onComplete={onComplete} />
       </div>
     );
   }
@@ -114,7 +139,7 @@ export function AssessmentWizard({ schema, onComplete }) {
 
       <AssessmentQuestionCard
         question={currentQ}
-        selectedResponse={responses[currentQ.id]}
+        selectedResponse={responsesRef.current[currentQ.id] || responses[currentQ.id]}
         onSelectOption={handleSelectOption}
         onNext={handleNext}
         onPrev={handlePrev}

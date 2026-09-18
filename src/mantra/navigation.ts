@@ -29,6 +29,20 @@ export const preserveQueryParams = (targetPath: string): string => {
     currentParams.delete('source');
   }
 
+  // Fallback to cached upa_id and uid if missing from current search
+  if (!currentParams.has('upa_id')) {
+    try {
+      const cachedUpa = sessionStorage.getItem('upa_id');
+      if (cachedUpa) currentParams.set('upa_id', cachedUpa);
+    } catch (e) {}
+  }
+  if (!currentParams.has('uid') && !currentParams.has('user_id')) {
+    try {
+      const cachedUid = sessionStorage.getItem('uid') || sessionStorage.getItem('user_id');
+      if (cachedUid) currentParams.set('uid', cachedUid);
+    } catch (e) {}
+  }
+
   if (targetQuery) {
     const targetParams = new URLSearchParams(targetQuery);
     targetParams.forEach((value, key) => {

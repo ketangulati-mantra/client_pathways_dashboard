@@ -101,14 +101,13 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
   };
 
   const handleMarkAsDone = async () => {
-    if (isCompleted || isSubmitting) return;
+    if (isSubmitting) return;
 
     setIsSubmitting(true);
     try {
       const userId = getActiveUserId();
 
-      // 1. Log activity to local database
-      await logUserActivityToDB({
+      const activityData = {
         userId,
         activityId: LESSON_ID,
         activityType: 'rewards_activity',
@@ -122,17 +121,39 @@ export default function EarnWhileYouImproveLessonPage({ onBack }) {
           completed: true
         },
         rewardPoints: REWARD_POINTS
-      }).catch((e) => console.warn('[EarnWhileYouImprove] DB log error:', e));
+      };
 
-      // 2. Trigger webhook
-      await completeLesson(LESSON_ID);
+      // 1. Save local completion state
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.setItem(`mantra_completed_${LESSON_ID}_${userId}`, JSON.stringify({
+            ...activityData,
+            timestamp: new Date().toISOString()
+          }));
+          localStorage.setItem(`lesson_progress_${LESSON_ID}`, JSON.stringify({
+            actionDone: true,
+            celebrationShown: true
+          }));
+        } catch (e) {
+          console.warn('[EarnWhileYouImprove] LocalStorage save error:', e);
+        }
+      }
 
-      setIsCompleted(true);
+      // 2. Log activity to local database
+      await logUserActivityToDB(activityData).catch((e) => console.warn('[EarnWhileYouImprove] DB log error:', e));
+
+      // 3. Trigger webhook with service
+      await completeLesson(LESSON_ID, 'therapy').catch((err) => console.warn('[EarnWhileYouImprove] Webhook error:', err));
+      await completeLesson('earn-while-you-improve', 'therapy').catch(() => {});
     } catch (err) {
       console.error('[EarnWhileYouImprove] Completion error:', err);
-      setIsCompleted(true);
     } finally {
       setIsSubmitting(false);
+      if (onBack) {
+        onBack();
+      } else {
+        goToDashboard();
+      }
     }
   };
 

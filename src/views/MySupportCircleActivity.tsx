@@ -874,31 +874,33 @@ export const MySupportCircleActivity: React.FC<MySupportCircleActivityProps> = (
               {/* CONTINUE CTA */}
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={selectedRelationships.length > 0 ? { scale: 1.02 } : {}}
+                  whileTap={selectedRelationships.length > 0 ? { scale: 0.98 } : {}}
                   onClick={() => {
+                    if (selectedRelationships.length === 0) return;
                     setCurrentScreen(2);
                     saveProgressState(2, selectedRelationships, selectedSupportTypes, selectedReachOut);
                   }}
+                  disabled={selectedRelationships.length === 0}
                   style={{
                     width: '100%',
                     maxWidth: '300px',
                     height: '52px',
-                    backgroundColor: '#0284C7',
+                    backgroundColor: selectedRelationships.length > 0 ? '#0284C7' : '#CBD5E1',
                     color: '#FFFFFF',
                     border: 'none',
                     borderRadius: '14px',
                     fontSize: '0.98rem',
                     fontWeight: 800,
                     letterSpacing: '0.04em',
-                    cursor: 'pointer',
+                    cursor: selectedRelationships.length > 0 ? 'pointer' : 'not-allowed',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '8px',
                     margin: '0 auto',
-                    boxShadow: '0 8px 24px rgba(2, 132, 199, 0.25)',
-                    transition: 'background 0.2s'
+                    boxShadow: selectedRelationships.length > 0 ? '0 8px 24px rgba(2, 132, 199, 0.25)' : 'none',
+                    transition: 'all 0.2s ease'
                   }}
                 >
                   <span>{t('btn_continue')}</span>
@@ -1018,31 +1020,33 @@ export const MySupportCircleActivity: React.FC<MySupportCircleActivityProps> = (
               {/* CONTINUE CTA */}
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={selectedSupportTypes.length > 0 ? { scale: 1.02 } : {}}
+                  whileTap={selectedSupportTypes.length > 0 ? { scale: 0.98 } : {}}
                   onClick={() => {
+                    if (selectedSupportTypes.length === 0) return;
                     setCurrentScreen(3);
                     saveProgressState(3, selectedRelationships, selectedSupportTypes, selectedReachOut);
                   }}
+                  disabled={selectedSupportTypes.length === 0}
                   style={{
                     width: '100%',
                     maxWidth: '300px',
                     height: '52px',
-                    backgroundColor: '#0284C7',
+                    backgroundColor: selectedSupportTypes.length > 0 ? '#0284C7' : '#CBD5E1',
                     color: '#FFFFFF',
                     border: 'none',
                     borderRadius: '14px',
                     fontSize: '0.98rem',
                     fontWeight: 800,
                     letterSpacing: '0.04em',
-                    cursor: 'pointer',
+                    cursor: selectedSupportTypes.length > 0 ? 'pointer' : 'not-allowed',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '8px',
                     margin: '0 auto',
-                    boxShadow: '0 8px 24px rgba(2, 132, 199, 0.25)',
-                    transition: 'background 0.2s'
+                    boxShadow: selectedSupportTypes.length > 0 ? '0 8px 24px rgba(2, 132, 199, 0.25)' : 'none',
+                    transition: 'all 0.2s ease'
                   }}
                 >
                   <span>{t('btn_view_circle')}</span>

@@ -416,21 +416,7 @@ export default function DepressionOneTinyStepActivity({ onBack, onNavigate, serv
             <span>{currentStep === 0 ? 'Back' : 'Previous'}</span>
           </button>
 
-          <div
-            style={{
-              fontSize: '12px',
-              fontWeight: 700,
-              color: '#EA580C',
-              letterSpacing: '0.04em',
-              textTransform: 'uppercase',
-              background: '#FFF7ED',
-              border: '1px solid #FFEDD5',
-              padding: '4px 12px',
-              borderRadius: '999px'
-            }}
-          >
-            Day 1 • Mission
-          </div>
+          <div />
         </div>
 
         {/* Progress Journey Track */}

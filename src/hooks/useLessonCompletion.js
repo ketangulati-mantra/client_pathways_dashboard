@@ -91,27 +91,21 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
     setLessonProgress(percentage);
 
     if (percentage === 100 && totalSteps > 0 && !completedSteps.celebrationShown) {
-      const timer = setTimeout(() => {
-        setShowCelebrate(true);
-      }, 800);
-      return () => clearTimeout(timer);
+      setCompletedSteps((prev) => ({ ...prev, celebrationShown: true }));
+      completeLesson(lessonId).catch((e) => console.warn('[useLessonCompletion] completeLesson error:', e));
+      if (onBack) {
+        setTimeout(() => {
+          goToDashboard();
+        }, 600);
+      }
     }
-  }, [completedSteps, hasVideo, hasChecklist, hasScenario, hasQuiz, hasAction]);
+  }, [completedSteps, hasVideo, hasChecklist, hasScenario, hasQuiz, hasAction, lessonId, onBack]);
 
   const handleVideoComplete = () => {
     setCompletedSteps((prev) => ({ ...prev, videoWatched: true }));
   };
 
   const handleQuizComplete = () => {
-    if (completedSteps.celebrationShown) {
-      showToast("You've already completed this activity.", "success", 3000);
-      if (onBack) {
-        setTimeout(() => {
-          goToDashboard();
-        }, 1800);
-      }
-      return;
-    }
     setCompletedSteps((prev) => ({ ...prev, quizDone: true }));
   };
 
@@ -123,49 +117,28 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
     setCompletedSteps((prev) => ({ ...prev, scenarioAttempted: true }));
   };
 
-  const handleActionComplete = () => {
-    if (completedSteps.celebrationShown) {
-      showToast("You've already completed this activity.", "success", 3000);
-      if (onBack) {
-        setTimeout(() => {
-          goToDashboard();
-        }, 1800);
-      }
-      return;
+  const handleActionComplete = async () => {
+    setCompletedSteps((prev) => ({ ...prev, actionDone: true, celebrationShown: true }));
+    try {
+      await completeLesson(lessonId);
+    } catch (e) {
+      console.warn('[useLessonCompletion] completeLesson error:', e);
     }
-    setCompletedSteps((prev) => ({ ...prev, actionDone: true }));
+    goToDashboard();
   };
 
-  /*  const handleCloseCelebration = async () => {
-    console.log("HANDLE CLOSE CELEBRATION FIRED");
-  
-    setShowCelebrate(false);
-    setCompletedSteps(prev => ({
-      ...prev,
-      celebrationShown: true
-    }));
-  
-    await completeLesson(lessonId);
-  
-    if (onBack) {
-      goToDashboard();
-    }
-  }; */
-
   const handleCloseCelebration = async () => {
-
     setShowCelebrate(false);
-
     setCompletedSteps((prev) => ({
       ...prev,
       celebrationShown: true
     }));
 
-    await completeLesson(lessonId);
+    try {
+      await completeLesson(lessonId);
+    } catch (e) {}
 
-    if (onBack) {
-      goToDashboard();
-    }
+    goToDashboard();
   };
 
   return {

@@ -53,19 +53,6 @@ export default function DailyCheckInPage({ onBack: propOnBack } = {}) {
   const [showShareModal, setShowShareModal] = useState(false);
   const [homeKey, setHomeKey] = useState(0);
 
-  // Trigger celebration modal with a natural 750ms pause after completion screen renders
-  useEffect(() => {
-    let timer = null;
-    if (currentStepIndex === 6 && pendingMilestone && !showMilestoneModal && !showShareModal) {
-      timer = setTimeout(() => {
-        setShowMilestoneModal(true);
-      }, 750);
-    }
-    return () => {
-      if (timer) clearTimeout(timer);
-    };
-  }, [currentStepIndex, pendingMilestone, showMilestoneModal, showShareModal]);
-
   // =========================================================================
   // Navigation & Session Reset Handlers
   // =========================================================================

@@ -31,6 +31,7 @@ import {
   recordUserPersonalizationSignal
 } from '../services/activityLogger';
 import { completeLesson } from '../mantra/api';
+import { goToDashboard } from '../mantra/navigation';
 import { getActiveUserId } from '../services/authService';
 
 /**
@@ -233,10 +234,12 @@ export default function Mantra21Day1TransitionView({ onBack, onNavigate, service
 
     await Promise.allSettled(signalPromises);
 
-    // 3. Mark Lesson Complete
+    // 3. Mark Lesson Complete via webhook
     try {
-      await completeLesson(MANTRA_21_INVITATION_ACTIVITY_ID, service || 'therapy');
-    } catch (e) {}
+      await completeLesson(MANTRA_21_INVITATION_ACTIVITY_ID);
+    } catch (e) {
+      console.warn('[Mantra21Invitation] Completion webhook error:', e);
+    }
 
     setIsSubmitting(false);
     // Advance to Screen 7 (After Joining confirmation)
@@ -245,11 +248,7 @@ export default function Mantra21Day1TransitionView({ onBack, onNavigate, service
 
   // Final exit from Screen 7
   const handleFinalExit = () => {
-    if (onNavigate) {
-      onNavigate('/');
-    } else if (onBack) {
-      onBack();
-    }
+    goToDashboard();
   };
 
   // Animation variants

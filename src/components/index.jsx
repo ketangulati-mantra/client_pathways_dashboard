@@ -757,91 +757,18 @@ export const QuizCard = ({
    12. ACHIEVEMENT / COMPLETION SCREEN
    ========================================================================== */
 export const CompletionScreen = ({
-  points,
-  rewardPoints,
-  title,
-  subtitle,
   onClose
 }) => {
-  const { t } = useTranslation('shared');
-  const actualPoints = rewardPoints !== undefined ? rewardPoints : (points !== undefined ? points : 10);
-
-  const displayTitle = title || t('completion.title') || 'Task Complete!';
-  const displaySubtitle = subtitle || t('completion.subtitle') || 'You have successfully finished this task.';
-
-  // Generate random confetti pieces positions
-  const confettiCount = 30;
-  const confettiArray = Array.from({ length: confettiCount });
-
-  // Freeze scroll on mount, restore on unmount
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, []);
+    if (onClose) {
+      onClose();
+    } else {
+      navigateToNativeScreen('Home');
+      handleExit();
+    }
+  }, [onClose]);
 
-  return createPortal(
-    <div className="academy-completion-overlay">
-      {/* Confetti Animation */}
-      {confettiArray.map((_, idx) => {
-        const left = Math.random() * 100;
-        const delay = Math.random() * 3;
-        const color = ['#ff9e00', '#009fe3', '#7f22d0', '#10b981', '#ef4444'][Math.floor(Math.random() * 5)];
-        const size = Math.random() * 8 + 4;
-
-        return (
-          <div
-            key={idx}
-            className="confetti-piece"
-            style={{
-              left: `${left}%`,
-              animationDelay: `${delay}s`,
-              backgroundColor: color,
-              width: `${size}px`,
-              height: `${size}px`,
-              borderRadius: Math.random() > 0.5 ? '50%' : '0'
-            }}
-          />
-        );
-      })}
-
-      <div className="academy-completion-card">
-        <div className="completion-icon-wrapper">
-          <Trophy size={28} />
-        </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <h2 className="completion-title">{displayTitle}</h2>
-          <p className="completion-desc">{displaySubtitle}</p>
-        </div>
-
-        <div className="completion-points-badge animate-scale-in">
-          <Sparkles size={16} fill="currentColor" />
-          <span>+{actualPoints} POINTS</span>
-        </div>
-
-
-
-        <Button
-          variant="primary"
-          onClick={() => {
-            if (onClose) {
-              onClose();
-            } else {
-              navigateToNativeScreen('Home');
-              handleExit();
-            }
-          }}
-          style={{ width: '100%', marginTop: '8px' }}
-        >
-          Take to portal
-        </Button>
-
-      </div>
-    </div>,
-    document.body
-  );
+  return null;
 };
 
 /* ==========================================================================

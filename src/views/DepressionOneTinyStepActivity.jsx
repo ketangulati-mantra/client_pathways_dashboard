@@ -35,6 +35,7 @@ import {
   recordUserPersonalizationSignal
 } from '../services/activityLogger';
 import { completeLesson } from '../mantra/api';
+import { goToDashboard } from '../mantra/navigation';
 import { getActiveUserId } from '../services/authService';
 
 /**
@@ -336,10 +337,12 @@ export default function DepressionOneTinyStepActivity({ onBack, onNavigate, serv
 
     await Promise.allSettled(signalPromises);
 
-    // 4. Complete lesson
+    // 4. Complete lesson via webhook
     try {
-      await completeLesson(ACTIVITY_3_ID, service || 'therapy');
-    } catch (e) {}
+      await completeLesson(ACTIVITY_3_ID);
+    } catch (e) {
+      console.warn('[OneTinyStep] Completion webhook error:', e);
+    }
 
     setIsSubmitting(false);
 
@@ -348,6 +351,8 @@ export default function DepressionOneTinyStepActivity({ onBack, onNavigate, serv
       onNavigate('/task/depression-mantra21-invitation');
     } else if (onBack) {
       onBack();
+    } else {
+      goToDashboard();
     }
   };
 

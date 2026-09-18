@@ -38,7 +38,7 @@ export function AssessmentWizard({ schema, onComplete }) {
   const handleNext = (optionFromStep = null, questionOverride = null) => {
     let updatedResponses = responsesRef.current;
     const currentQ = questionOverride || schema.questions[currentStep];
-    if (optionFromStep && currentQ) {
+    if (optionFromStep && typeof optionFromStep?.score === 'number' && currentQ) {
       const newResp = {
         questionId: currentQ.id,
         response: optionFromStep.label,

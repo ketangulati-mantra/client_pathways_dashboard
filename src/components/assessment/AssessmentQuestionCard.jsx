@@ -27,7 +27,7 @@ export function AssessmentQuestionCard({
       clearTimeout(advancingTimerRef.current);
       advancingTimerRef.current = null;
     }
-  }, [question.id, selectedResponse?.score]);
+  }, [question.id]);
 
   useEffect(() => {
     return () => {
@@ -296,7 +296,10 @@ export function AssessmentQuestionCard({
         {isLast && selectedScore !== undefined && (
           <button
             type="button"
-            onClick={onNext}
+            onClick={() => {
+              const matchedOpt = question.options.find((o) => o.score === selectedScore);
+              onNext(matchedOpt, question);
+            }}
             disabled={isSubmitting}
             style={{
               display: 'inline-flex',

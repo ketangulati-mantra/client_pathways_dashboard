@@ -47,7 +47,7 @@ export function OcdAssessmentWizard({ schema, onComplete }) {
       setCurrentStep(1);
     } else {
       let updatedResponses = responsesRef.current;
-      if (optionFromStep && activeQuestionIndex >= 0 && activeQuestionIndex < totalQuestions) {
+      if (optionFromStep && typeof optionFromStep?.score === 'number' && activeQuestionIndex >= 0 && activeQuestionIndex < totalQuestions) {
         const currentQ = schema.questions[activeQuestionIndex];
         const newResp = {
           questionId: currentQ.id,

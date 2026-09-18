@@ -24,10 +24,15 @@ export const getWebhookContext = () => {
   const upaId = (
     searchParams.get('upa_id') ||
     searchParams.get('upaId') ||
+    searchParams.get('upaid') ||
     hashParams.get('upa_id') ||
     hashParams.get('upaId') ||
+    hashParams.get('upaid') ||
     sessionStorage.getItem('upa_id') ||
     sessionStorage.getItem('upaId') ||
+    sessionStorage.getItem('upaid') ||
+    localStorage.getItem('upa_id') ||
+    localStorage.getItem('upaId') ||
     null
   );
 
@@ -40,15 +45,23 @@ export const getWebhookContext = () => {
     hashParams.get('userId') ||
     sessionStorage.getItem('uid') ||
     sessionStorage.getItem('user_id') ||
+    localStorage.getItem('uid') ||
+    localStorage.getItem('user_id') ||
     null
   );
 
   // Persist if found in URL
   if (upaId) {
-    try { sessionStorage.setItem('upa_id', upaId); } catch (e) {}
+    try {
+      sessionStorage.setItem('upa_id', upaId);
+      localStorage.setItem('upa_id', upaId);
+    } catch (e) {}
   }
   if (uid) {
-    try { sessionStorage.setItem('uid', uid); } catch (e) {}
+    try {
+      sessionStorage.setItem('uid', uid);
+      localStorage.setItem('uid', uid);
+    } catch (e) {}
   }
 
   return {
@@ -139,10 +152,15 @@ export const completeLesson = async (lessonId: string, customService?: string): 
   const payload: Record<string, any> = {
     intent: 'complete_activity',
     lesson_id: targetLessonId,
-    activity_id: activity?.activityId || targetLessonId,
-    service: customService || service || 'therapy',
+    service: customService || activity?.services?.[0] || service || 'therapy',
     reward_points: targetRewardPoints
   };
+
+  // The webhook requires activity_id to be numeric (if present). Do not pass non-numeric activity_id strings.
+  const rawActivityId = activity?.activityId;
+  if (rawActivityId && !isNaN(Number(rawActivityId))) {
+    payload.activity_id = Number(rawActivityId);
+  }
 
   if (targetUpaId !== undefined) {
     payload.upa_id = targetUpaId;
@@ -167,15 +185,16 @@ export const completeLesson = async (lessonId: string, customService?: string): 
       body: JSON.stringify(payload)
     });
 
-    if (!response.ok) {
-      console.warn(`[Mantra API] Webhook response not OK with status ${response.status}`);
+    const result = await response.json().catch(() => null);
+
+    if (!response.ok || (result && result.success === false)) {
+      console.warn(`[Mantra API] Webhook response not OK with status ${response.status}`, result);
       if (MANTRA_CONFIG.devMode) {
         return true;
       }
       return false;
     }
 
-    const result = await response.json().catch(() => null);
     if (MANTRA_CONFIG.devMode) {
       console.log('[Mantra API] Webhook success result:', result);
     }
@@ -237,11 +256,16 @@ export const submitAssessmentResults = async (
 
   const cleanPayload: Record<string, any> = {
     intent: payload.intent || 'complete_activity',
-    activity_id: payload.activity_id || activity?.activityId || targetLessonId,
-    lesson_id: activity?.lessonId || targetLessonId,
+    lesson_id: targetLessonId,
     service: payload.service || activity?.services?.[0] || service || 'therapy',
     reward_points: payload.reward_points || activity?.rewardPoints || 100
   };
+
+  // The webhook requires activity_id to be numeric (if present). Do not pass non-numeric activity_id strings.
+  const rawActId = payload.activity_id || activity?.activityId;
+  if (rawActId && !isNaN(Number(rawActId))) {
+    cleanPayload.activity_id = Number(rawActId);
+  }
 
   if (targetUpaId !== undefined) {
     cleanPayload.upa_id = targetUpaId;

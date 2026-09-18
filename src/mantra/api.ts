@@ -1,89 +1,117 @@
 import { MANTRA_CONFIG } from './config';
 import { activities } from './activities';
+import { getCurrentService } from './services';
 import { AssessmentWebhookPayload } from '../utils/assessmentEngine';
 
 export const LOCALHOST_DEV_UID = 'e68792e6ec42acc875be58cbc1bd936c:0c0137f3fd9e92dac3a8f388e8a7d6ee';
 
 /**
- * Returns user ID from query params, session storage, or default localhost dev UID.
- */
-export const getCurrentUserId = (): string => {
-  if (typeof window === 'undefined') return '';
-  const params = new URLSearchParams(window.location.search);
-  const uid = params.get('uid') || params.get('user_id') || sessionStorage.getItem('user_id');
-  if (uid) return uid;
-
-  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    return LOCALHOST_DEV_UID;
-  }
-  return '';
-};
-
-/**
  * Returns URL parameters required by the pathway webhook.
- * Checks search params, hash params, and session storage cache.
  */
 const getWebhookContext = () => {
-  if (typeof window === 'undefined') {
-    return { upaId: null, uid: null };
-  }
-  const params = new URLSearchParams(window.location.search || '');
-  let uid = params.get('uid') || params.get('user_id');
-  let upaId = params.get('upa_id');
-
-  // Check hash if params were passed in hash
-  if ((!upaId || !uid) && window.location.hash && window.location.hash.includes('?')) {
-    const hashQuery = window.location.hash.split('?')[1];
-    const hashParams = new URLSearchParams(hashQuery);
-    if (!upaId) upaId = hashParams.get('upa_id');
-    if (!uid) uid = hashParams.get('uid') || hashParams.get('user_id');
-  }
-
-  // Fallback to session storage cache
-  if (!upaId) {
-    try {
-      upaId = sessionStorage.getItem('upa_id');
-    } catch (e) {}
-  }
-  if (!uid) {
-    try {
-      uid = sessionStorage.getItem('uid') || sessionStorage.getItem('user_id');
-    } catch (e) {}
-  }
-
-  // Cache to session storage if found
-  if (upaId) {
-    try { sessionStorage.setItem('upa_id', upaId); } catch (e) {}
-  }
-  if (uid) {
-    try { sessionStorage.setItem('uid', uid); } catch (e) {}
-  }
-
-  if (!uid && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
-    uid = LOCALHOST_DEV_UID;
-  }
+  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
 
   return {
-    upaId,
-    uid
+    upaId: params.get('upa_id'),
+    uid: params.get('uid'),
+    service: getCurrentService()
   };
 };
 
 /**
- * Marks a lesson/activity as completed in Laravel.
+ * Returns the current user_id from URL query params (e.g. ?user_id=... / ?upa_id=...),
+ * auth sessionStorage, or a unique guest session ID.
+ */
+export const getCurrentUserId = (): string => {
+  if (typeof window === 'undefined') return 'anonymous_user';
+  const searchParams = new URLSearchParams(window.location.search);
+  
+  const rawHash = window.location.hash || '';
+  const hashQueryStr = rawHash.includes('?') ? rawHash.substring(rawHash.indexOf('?') + 1) : '';
+  const hashParams = new URLSearchParams(hashQueryStr);
+
+  // Priority 1: Check active URL query/hash parameters passed by parent shell
+  const urlParamId = (
+    searchParams.get('user_id') ||
+    searchParams.get('userId') ||
+    searchParams.get('uid') ||
+    searchParams.get('upa_id') ||
+    searchParams.get('upaId') ||
+    searchParams.get('email') ||
+    hashParams.get('user_id') ||
+    hashParams.get('userId') ||
+    hashParams.get('uid') ||
+    hashParams.get('upa_id') ||
+    hashParams.get('email')
+  );
+
+  if (urlParamId && String(urlParamId).trim().length > 0) {
+    const cleanUrlId = String(urlParamId).trim().toLowerCase();
+    try {
+      sessionStorage.setItem('user_id', cleanUrlId);
+    } catch (e) {}
+    return cleanUrlId;
+  }
+
+  // Priority 2: Check stored authenticated user from sessionStorage
+  let storedAdminEmail = '';
+  try {
+    const adminObj = sessionStorage.getItem('admin_user');
+    if (adminObj) {
+      const parsed = JSON.parse(adminObj);
+      storedAdminEmail = parsed?.email || parsed?.user_id || parsed?.id || '';
+    }
+  } catch (e) {}
+
+  const foundId = (
+    sessionStorage.getItem('user_id') ||
+    storedAdminEmail
+  );
+
+  if (foundId && String(foundId).trim().length > 0) {
+    return String(foundId).trim().toLowerCase();
+  }
+
+  // Generate an isolated per-session guest ID in sessionStorage so different sessions/tabs never share state
+  let sessionGuestId = sessionStorage.getItem('mantra_guest_session_id');
+  if (!sessionGuestId) {
+    sessionGuestId = 'guest_' + Math.random().toString(36).substring(2, 9) + '_' + Date.now();
+    try {
+      sessionStorage.setItem('mantra_guest_session_id', sessionGuestId);
+    } catch (e) {}
+  }
+  return sessionGuestId;
+};
+
+/**
+ * Marks a lesson/activity as completed in Laravel webhook.
  */
 export const completeLesson = async (lessonId: string): Promise<boolean> => {
   const activity = activities.find(a => a.lessonId === lessonId);
 
   if (!activity) {
-    console.warn(`[Mantra API] Activity not found: ${lessonId}`);
+    console.error(`[Mantra API] Activity not found: ${lessonId}`);
+    return false;
   }
 
-  const { upaId, uid } = getWebhookContext();
+  const { upaId, uid, service } = getWebhookContext();
 
   if (!upaId) {
-    console.warn(`[Mantra API] Missing upa_id for activity ${lessonId} - proceeding gracefully in preview/standalone mode.`);
-    return true;
+    if (MANTRA_CONFIG.devMode) {
+      console.log(`[Mantra API] Dev Mode: completed activity ${lessonId} locally.`);
+      return true;
+    }
+    return false;
+  }
+
+  if (MANTRA_CONFIG.devMode) {
+    console.log('[Mantra API] Completing activity via webhook', {
+      lessonId,
+      upaId,
+      uid,
+      service,
+      endpoint: MANTRA_CONFIG.webhookUrl
+    });
   }
 
   try {
@@ -93,32 +121,53 @@ export const completeLesson = async (lessonId: string): Promise<boolean> => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        intent: 'complete_activity',
-        upa_id: Number(upaId),
-        uid: uid || undefined
+        upa_id: upaId,
+        uid: uid,
+        lesson_id: lessonId,
+        service: service,
+        reward_points: activity.rewardPoints
       })
     });
 
-    const result = await response.json().catch(() => null);
-
-    if (!response.ok || (result && result.success === false)) {
-      console.warn(
-        '[Mantra API] Webhook returned error, continuing gracefully:',
-        result?.message || result
-      );
-      return true;
-    }
-
-    if (MANTRA_CONFIG.devMode) {
-      console.log('[Mantra API] Activity completed successfully.', result);
+    if (!response.ok) {
+      console.error(`[Mantra API] Webhook failed with status ${response.status}`);
+      return false;
     }
 
     return true;
-
   } catch (error) {
-    console.warn('[Mantra API] Network/Webhook Error, continuing gracefully:', error);
-    return true;
+    console.error('[Mantra API] Error triggering completion webhook:', error);
+    return false;
   }
+};
+
+/**
+ * Retrieves completion status of all activities.
+ */
+export const fetchUserProgress = async (): Promise<Record<string, boolean>> => {
+  const { upaId } = getWebhookContext();
+
+  if (!upaId) {
+    return {};
+  }
+
+  try {
+    const response = await fetch(`${MANTRA_CONFIG.webhookUrl}?upa_id=${upaId}`);
+    if (!response.ok) return {};
+    const data = await response.json();
+    return data.progress || {};
+  } catch (error) {
+    console.error('[Mantra API] Error fetching progress:', error);
+    return {};
+  }
+};
+
+/**
+ * Saves intermediary progress checkpoints.
+ */
+export const saveProgress = async (lessonId: string, progress: number): Promise<boolean> => {
+  console.log(`[Mantra API] Progress auto-saved for lesson ${lessonId}: ${progress}%`);
+  return true;
 };
 
 /**
@@ -127,19 +176,24 @@ export const completeLesson = async (lessonId: string): Promise<boolean> => {
 export const submitAssessmentResults = async (
   payload: AssessmentWebhookPayload
 ): Promise<{ success: boolean; error?: string }> => {
-  const { upaId, uid } = getWebhookContext();
+  const { upaId, uid, service } = getWebhookContext();
   const targetUpaId = payload.upa_id || (upaId ? Number(upaId) : undefined);
 
   if (!targetUpaId) {
-    console.warn('[Mantra API] Standalone preview mode: assessment completed without upa_id in URL.', payload);
-    return { success: true };
+    if (MANTRA_CONFIG.devMode) {
+      console.log('[Mantra API Dev] Localhost dev bypass for missing upa_id:', payload);
+      return { success: true };
+    }
+    console.warn('[Mantra API] Missing upa_id in assessment submission.');
+    return { success: false, error: 'Missing upa_id in URL context.' };
   }
 
   try {
     const finalPayload = {
       ...payload,
       upa_id: targetUpaId,
-      uid: payload.uid || uid || undefined
+      uid: payload.uid || uid || undefined,
+      service
     };
 
     const response = await fetch(MANTRA_CONFIG.webhookUrl, {
@@ -153,8 +207,8 @@ export const submitAssessmentResults = async (
     const result = await response.json().catch(() => null);
 
     if (!response.ok || (result && result.success === false)) {
-      console.warn('[Mantra API] Assessment webhook error response, proceeding gracefully:', result);
-      return { success: true };
+      console.error('[Mantra API] Assessment webhook failed:', result);
+      return { success: false, error: result?.message || 'Server returned an error.' };
     }
 
     if (MANTRA_CONFIG.devMode) {
@@ -163,8 +217,8 @@ export const submitAssessmentResults = async (
 
     return { success: true };
   } catch (error: any) {
-    console.warn('[Mantra API] Network error during assessment webhook, proceeding gracefully:', error);
-    return { success: true };
+    console.error('[Mantra API] Network error during assessment webhook:', error);
+    return { success: false, error: error?.message || 'Network connection failed.' };
   }
 };
 

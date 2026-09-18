@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 export function AssessmentQuestionCard({
   question,
   selectedResponse, // structured AssessmentResponse | undefined
-  onSelectOption, // (option: AssessmentOption) => void
+  onSelectOption, // (option: AssessmentOption, question: any) => void
   onNext,
   onPrev,
   isFirst,
@@ -18,23 +18,46 @@ export function AssessmentQuestionCard({
   const { t } = useTranslation('emotional_assessment');
   const [selectedScore, setSelectedScore] = useState(selectedResponse?.score);
   const [isAdvancing, setIsAdvancing] = useState(false);
+  const advancingTimerRef = useRef(null);
 
   useEffect(() => {
     setSelectedScore(selectedResponse?.score);
     setIsAdvancing(false);
-  }, [question.id, selectedResponse]);
+    if (advancingTimerRef.current) {
+      clearTimeout(advancingTimerRef.current);
+      advancingTimerRef.current = null;
+    }
+  }, [question.id, selectedResponse?.score]);
+
+  useEffect(() => {
+    return () => {
+      if (advancingTimerRef.current) {
+        clearTimeout(advancingTimerRef.current);
+      }
+    };
+  }, []);
 
   const handleOptionClick = (option) => {
-    if (isAdvancing || isSubmitting) return;
+    if (isSubmitting) return;
+
+    if (advancingTimerRef.current) {
+      clearTimeout(advancingTimerRef.current);
+      advancingTimerRef.current = null;
+    }
 
     setSelectedScore(option.score);
-    onSelectOption(option);
+    if (onSelectOption) {
+      onSelectOption(option, question);
+    }
 
     if (!isLast) {
       setIsAdvancing(true);
-      setTimeout(() => {
-        onNext();
-      }, 320);
+      advancingTimerRef.current = setTimeout(() => {
+        setIsAdvancing(false);
+        if (onNext) {
+          onNext(option, question);
+        }
+      }, 250);
     }
   };
 

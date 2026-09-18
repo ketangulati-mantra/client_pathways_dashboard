@@ -35,10 +35,10 @@ export function AssessmentWizard({ schema, onComplete }) {
     if (validationError) setValidationError(null);
   };
 
-  const handleNext = (optionFromStep = null) => {
+  const handleNext = (optionFromStep = null, questionOverride = null) => {
     let updatedResponses = responsesRef.current;
-    if (optionFromStep && currentStep >= 0 && currentStep < totalQuestions) {
-      const currentQ = schema.questions[currentStep];
+    const currentQ = questionOverride || schema.questions[currentStep];
+    if (optionFromStep && currentQ) {
       const newResp = {
         questionId: currentQ.id,
         response: optionFromStep.label,

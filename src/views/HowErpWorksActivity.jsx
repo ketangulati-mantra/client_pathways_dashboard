@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import ErpHeader from '../components/erp/ErpHeader';
 import { HouseDoorScene, MessageSentScene } from '../components/erp/ErpScenes';
 import { completeLesson } from '../mantra/api';
+import { goToDashboard } from '../mantra/navigation';
 import '../components/erp/HowErpWorks.css';
 
 const LESSON_ID = 'ocd_how_erp_works';
@@ -28,12 +29,8 @@ export default function HowErpWorksActivity({ onBack, onNavigate }) {
     } catch (e) {
       console.warn('Completion warning:', e);
     }
-    if (onBack) {
-      onBack();
-    } else {
-      handleExit();
-    }
-  }, [onBack]);
+    goToDashboard();
+  }, []);
 
   return (
     <div className="erp-activity">

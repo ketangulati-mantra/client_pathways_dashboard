@@ -26,6 +26,7 @@ import { getActiveUserId } from '../services/authService';
 import { logUserActivityToDB, recordUserPersonalizationSignal } from '../services/activityLogger';
 import { enrollInChallenge } from '../services/challengeService';
 import { completeLesson } from '../mantra/api';
+import { goToDashboard } from '../mantra/navigation';
 import Mantra21InviteModal from '../components/Mantra21InviteModal';
 
 /**
@@ -164,11 +165,7 @@ export default function Mantra21RevealExperience({ onBack, onNavigate, service }
 
       setTimeout(() => {
         setIsEnrolling(false);
-        if (onNavigate) {
-          onNavigate('/');
-        } else if (onBack) {
-          onBack();
-        }
+        goToDashboard();
       }, 700);
 
     } catch (err) {

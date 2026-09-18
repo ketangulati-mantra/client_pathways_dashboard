@@ -24,7 +24,7 @@ import {
   getUserLessonProgress,
   recordUserPersonalizationSignal
 } from '../services/activityLogger';
-import { goToLesson } from '../mantra/navigation';
+import { goToLesson, goToDashboard } from '../mantra/navigation';
 import { completeLesson } from '../mantra/api';
 import { getActiveUserId } from '../services/authService';
 
@@ -984,13 +984,7 @@ export const Mantra21DailyActivityView: React.FC<Mantra21DailyActivityViewProps>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <button
                 onClick={() => {
-                  if (onNavigate) {
-                    onNavigate('/challenges');
-                  } else if (onBack) {
-                    onBack();
-                  } else {
-                    goToLesson('/challenges');
-                  }
+                  goToDashboard();
                 }}
                 style={{
                   width: '100%',

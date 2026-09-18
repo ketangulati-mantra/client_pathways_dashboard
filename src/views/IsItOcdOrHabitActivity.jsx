@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, ChevronRight, RotateCcw } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useLessonCompletion } from '../hooks/useLessonCompletion';
-import { handleExit, goToLesson } from '../mantra/navigation';
+import { handleExit, goToLesson, goToDashboard } from '../mantra/navigation';
 import { completeLesson } from '../mantra/api';
 import { getActiveUserId } from '../services/authService';
 
@@ -150,8 +150,7 @@ export default function IsItOcdOrHabitActivity({ onBack, onNavigate }) {
         handleActionComplete();
         trackEvent('activity_completed');
         setTimeout(() => {
-          if (onBack) onBack();
-          else handleExit();
+          goToDashboard();
         }, 600);
       } else {
         setCompletionError(

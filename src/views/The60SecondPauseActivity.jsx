@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import CircularTimeField from '../components/delayPause/CircularTimeField';
 import PauseHeader from '../components/delayPause/PauseHeader';
 import { completeLesson } from '../mantra/api';
+import { goToDashboard } from '../mantra/navigation';
 import '../components/delayPause/The60SecondPause.css';
 
 const LESSON_ID = 'ocd_delay_tactic';
@@ -121,12 +122,8 @@ export default function The60SecondPauseActivity({ onBack, onNavigate }) {
     } catch (e) {
       console.warn('Completion callback warning:', e);
     }
-    if (onBack) {
-      onBack();
-    } else {
-      handleExit();
-    }
-  }, [onBack]);
+    goToDashboard();
+  }, []);
 
   return (
     <div className="sixty-second-pause">

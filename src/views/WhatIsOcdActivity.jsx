@@ -17,7 +17,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import CustomVideoPlayer from '../components/video/CustomVideoPlayer';
 import { useLessonCompletion } from '../hooks/useLessonCompletion';
-import { handleExit, goToLesson } from '../mantra/navigation';
+import { handleExit, goToLesson, goToDashboard } from '../mantra/navigation';
 import { completeLesson } from '../mantra/api';
 import { getActiveUserId } from '../services/authService';
 
@@ -136,8 +136,7 @@ export default function WhatIsOcdActivity({ onBack, onNavigate }) {
         handleActionComplete();
         trackEvent('activity_completed');
         setTimeout(() => {
-          if (onBack) onBack();
-          else handleExit();
+          goToDashboard();
         }, 600);
       } else {
         setCompletionError(

@@ -26,7 +26,7 @@ import {
   recordUserPersonalizationSignal
 } from '../services/activityLogger';
 import { completeLesson } from '../mantra/api';
-import { handleExit } from '../mantra/navigation';
+import { handleExit, goToDashboard } from '../mantra/navigation';
 import { getActiveUserId } from '../services/authService';
 
 // ==========================================
@@ -340,23 +340,11 @@ export const MySupportCircleActivity: React.FC<MySupportCircleActivityProps> = (
       }
 
       setTimeout(() => {
-        if (onNavigate) {
-          onNavigate('/challenges');
-        } else if (onBack) {
-          onBack();
-        } else {
-          handleExit();
-        }
+        goToDashboard();
       }, 600);
     } catch (err) {
       console.error('[SupportCircle] Completion error:', err);
-      if (onNavigate) {
-        onNavigate('/challenges');
-      } else if (onBack) {
-        onBack();
-      } else {
-        handleExit();
-      }
+      goToDashboard();
     } finally {
       setIsSubmitting(false);
     }

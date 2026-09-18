@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import QuietRoomCanvas from '../components/alarmDanger/QuietRoomCanvas';
 import { completeLesson } from '../mantra/api';
-import { handleExit } from '../mantra/navigation';
+import { handleExit, goToDashboard } from '../mantra/navigation';
 
 const LESSON_ID = 'ocd_alarm_danger';
 const OCDMANTRA_LOGO_URL =
@@ -138,7 +138,7 @@ export default function TheAlarmIsNotTheDangerActivity({ onBack, onNavigate }) {
     } catch (e) {
       console.warn('Completion error:', e);
     } finally {
-      handleExit(onBack, onNavigate);
+      goToDashboard();
     }
   };
 

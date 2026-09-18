@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { submitAssessmentResults } from '../../mantra/api';
 import { buildAssessmentWebhookPayload } from '../../utils/assessmentEngine';
-import { handleExit } from '../../mantra/navigation';
+import { handleExit, goToDashboard } from '../../mantra/navigation';
 
 const CATEGORY_META = {
   anxiety: {
@@ -403,6 +403,9 @@ export function AssessmentReport({ report, onComplete }) {
       if (onComplete) {
         onComplete();
       }
+      setTimeout(() => {
+        goToDashboard();
+      }, 700);
     } catch (err) {
       setCompleteError("We couldn't save your activity completion right now. Your assessment results are safe.");
     } finally {

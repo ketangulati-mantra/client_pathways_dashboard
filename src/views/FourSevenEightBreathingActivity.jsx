@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import OrganicParticleBreathingSphere from '../components/breathing/OrganicParticleBreathingSphere';
 import BreathingHeader from '../components/breathing/BreathingHeader';
 import { completeLesson } from '../mantra/api';
+import { goToDashboard } from '../mantra/navigation';
 import '../components/breathing/FourSevenEightBreathing.css';
 
 const LESSON_ID = 'ocd_478_breathing';
@@ -108,12 +109,8 @@ export default function FourSevenEightBreathingActivity({ onBack, onNavigate }) 
     } catch (e) {
       console.warn('Completion warning:', e);
     }
-    if (onBack) {
-      onBack();
-    } else {
-      handleExit();
-    }
-  }, [onBack]);
+    goToDashboard();
+  }, []);
 
   return (
     <div className="breathing-activity">

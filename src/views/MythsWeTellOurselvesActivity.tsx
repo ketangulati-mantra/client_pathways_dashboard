@@ -17,7 +17,7 @@ import {
   recordUserPersonalizationSignal
 } from '../services/activityLogger';
 import { completeLesson } from '../mantra/api';
-import { handleExit } from '../mantra/navigation';
+import { handleExit, goToDashboard } from '../mantra/navigation';
 import { getActiveUserId } from '../services/authService';
 
 export interface MythItem {
@@ -243,25 +243,13 @@ export const MythsWeTellOurselvesActivity: React.FC<MythsWeTellOurselvesActivity
 
       setCompleted(true);
 
-      // Return user to previous flow / dashboard
+      // Return user to dashboard
       setTimeout(() => {
-        if (onNavigate) {
-          onNavigate('/challenges');
-        } else if (onBack) {
-          onBack();
-        } else {
-          handleExit();
-        }
+        goToDashboard();
       }, 700);
     } catch (err) {
       console.error('[MythsActivity] Error completing activity:', err);
-      if (onNavigate) {
-        onNavigate('/challenges');
-      } else if (onBack) {
-        onBack();
-      } else {
-        handleExit();
-      }
+      goToDashboard();
     } finally {
       setIsSubmitting(false);
     }

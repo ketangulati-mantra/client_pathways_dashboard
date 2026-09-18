@@ -12,6 +12,7 @@ import EmotionContextStep from '../components/emotionWheel/EmotionContextStep';
 import EmotionNeedStep from '../components/emotionWheel/EmotionNeedStep';
 import EmotionalSnapshotView from '../components/emotionWheel/EmotionalSnapshotView';
 import { completeLesson } from '../mantra/api';
+import { goToDashboard } from '../mantra/navigation';
 import { logUserActivityToDB, PLATFORM_ACTIVITIES } from '../services/activityLogger';
 import { getActiveUserId } from '../services/authService';
 import { trackEmotionWheelEvent } from '../utils/emotionAnalytics';
@@ -293,11 +294,7 @@ export default function EmotionWheelPage({ onBack, onNavigate, service }) {
       console.error('[EmotionWheel] Finish error:', err);
     }
 
-    if (onBack) {
-      onBack();
-    } else {
-      handleResetFlow();
-    }
+    goToDashboard();
   };
 
   const activeThemeColor = selectedFamily?.color || '#38bdf8';

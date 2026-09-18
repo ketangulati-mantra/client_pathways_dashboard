@@ -12,7 +12,7 @@ import {
   Calendar,
   Clock
 } from 'lucide-react';
-import { handleExit } from '../mantra/navigation';
+import { handleExit, goToDashboard } from '../mantra/navigation';
 import { completeLesson } from '../mantra/api';
 import { getActiveUserId } from '../services/authService';
 import {
@@ -1538,7 +1538,7 @@ export default function FearLadderActivity({ onBack, onNavigate }) {
 
                     <button
                       type="button"
-                      onClick={() => handleExit(onBack, onNavigate)}
+                      onClick={() => goToDashboard()}
                       style={{
                         width: '100%',
                         minWidth: '240px',

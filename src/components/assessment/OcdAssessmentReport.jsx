@@ -12,6 +12,7 @@ import { useTranslation } from 'react-i18next';
 import { submitAssessmentResults } from '../../mantra/api';
 import { buildAssessmentWebhookPayload } from '../../utils/assessmentEngine';
 import { analyzeOcdAssessmentResponses } from '../../utils/ocdAssessmentAnalytics';
+import { goToDashboard } from '../../mantra/navigation';
 
 const OCDMANTRA_LOGO_URL =
   'https://res.cloudinary.com/hxbamdqf/image/upload/v1785929926/ocdmantraicon_cnxa03.png';
@@ -80,6 +81,9 @@ export function OcdAssessmentReport({ report, onComplete }) {
       if (onComplete) {
         onComplete();
       }
+      setTimeout(() => {
+        goToDashboard();
+      }, 700);
     } catch (err) {
       setCompleteError(
         t('report.error_save', {

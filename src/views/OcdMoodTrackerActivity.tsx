@@ -16,7 +16,7 @@ import {
   deleteOcdMoodLog
 } from '../services/ocdMoodService';
 import { completeLesson } from '../mantra/api';
-import { handleExit } from '../mantra/navigation';
+import { handleExit, goToDashboard } from '../mantra/navigation';
 import '../components/ocdMood/OcdMood.css';
 
 const LESSON_ID = 'ocd_mood_check_in';
@@ -520,9 +520,7 @@ export default function OcdMoodTrackerActivity({
                   <button
                     type="button"
                     onClick={() => {
-                      if (onBack) onBack();
-                      else if (onNavigate) onNavigate('/dashboard');
-                      else handleExit();
+                      goToDashboard();
                     }}
                     className="ocd-mood-btn secondary"
                     style={{ width: '100%' }}

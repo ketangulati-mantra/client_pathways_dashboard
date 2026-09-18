@@ -66,13 +66,16 @@ export interface WebhookContext {
 }
 
 export interface AssessmentWebhookPayload {
-  intent: string;
-  entry_id: string;
-  activity_id: string;
-  parameter: Array<{ id: number; value: string }>;
-  upa_id?: number;
-  form_id: string;
+  intent?: string;
+  entry_id?: string;
+  activity_id?: string;
+  lesson_id?: string;
+  parameter?: Array<{ id: number; value: string }>;
+  upa_id?: number | string;
+  form_id?: string;
   uid?: string;
+  service?: string;
+  reward_points?: number;
 }
 
 /**
@@ -98,29 +101,33 @@ export function calculateAssessmentResults(
     const categoryQuestions = schema.questions.filter(q => q.categoryId === category.id);
 
     let catScore = 0;
-    let minPossibleScore = 0;
-    let maxPossibleScore = 0;
+    let minPossible = 0;
+    let maxPossible = 0;
 
     for (const q of categoryQuestions) {
       const resp = responses[q.id];
-      if (resp && typeof resp.score === 'number') {
+      if (resp) {
         catScore += resp.score;
       }
-
-      const scores = q.options.map(o => o.score);
-      minPossibleScore += Math.min(...scores);
-      maxPossibleScore += Math.max(...scores);
+      if (q.options && q.options.length > 0) {
+        const scores = q.options.map(o => o.score);
+        minPossible += Math.min(...scores);
+        maxPossible += Math.max(...scores);
+      }
     }
 
     totalScore += catScore;
 
-    // Find severity threshold
     const catThresholds = schema.thresholds[category.id] || [];
-    let appliedThreshold = catThresholds[catThresholds.length - 1]; // default to highest
+    let severityLabel = 'Normal';
+    let color = '#10B981';
+    let message = 'Your scores are within the expected healthy range.';
 
-    for (const t of catThresholds) {
-      if (catScore <= t.maxScore) {
-        appliedThreshold = t;
+    for (const threshold of catThresholds) {
+      if (catScore <= threshold.maxScore) {
+        severityLabel = threshold.label;
+        color = threshold.color;
+        message = threshold.message;
         break;
       }
     }
@@ -129,11 +136,11 @@ export function calculateAssessmentResults(
       categoryId: category.id,
       categoryName: category.name,
       score: catScore,
-      minPossibleScore,
-      maxPossibleScore,
-      severityLabel: appliedThreshold ? appliedThreshold.label : 'Mild',
-      color: appliedThreshold ? appliedThreshold.color : '#34d399',
-      message: appliedThreshold ? appliedThreshold.message : ''
+      minPossibleScore: minPossible,
+      maxPossibleScore: maxPossible,
+      severityLabel,
+      color,
+      message
     });
   }
 
@@ -160,19 +167,30 @@ export function buildAssessmentWebhookPayload(
   const urlParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const upaId = context.upaId || urlParams.get('upa_id');
   const uid = context.uid || urlParams.get('uid');
-  const entryId = context.entryId || urlParams.get('entry_id') || '{entry_id}';
-  const formId = context.formId || urlParams.get('form_id') || '{form_id}';
-  const activityId = context.activityId || 'emotional-wellbeing-assessment';
+  
+  // Clean placeholder strings like "{entry_id}" / "{form_id}"
+  const rawEntryId = context.entryId || urlParams.get('entry_id') || '';
+  const rawFormId = context.formId || urlParams.get('form_id') || '';
+  
+  const entryId = rawEntryId && !rawEntryId.includes('{') && !rawEntryId.includes('}') ? rawEntryId : undefined;
+  const formId = rawFormId && !rawFormId.includes('{') && !rawFormId.includes('}') ? rawFormId : undefined;
+  
+  const targetId = context.activityId || 'emotional-wellbeing-assessment';
+  const numericUpaId = upaId ? (isNaN(Number(upaId)) ? upaId : Number(upaId)) : undefined;
 
-  return {
+  const payload: AssessmentWebhookPayload = {
     intent: 'complete_activity',
-    entry_id: String(entryId),
-    activity_id: String(activityId),
+    activity_id: String(targetId),
+    lesson_id: String(targetId),
     parameter,
-    upa_id: upaId ? Number(upaId) : undefined,
-    form_id: String(formId),
+    upa_id: numericUpaId,
     uid: uid ? String(uid) : undefined
   };
+
+  if (entryId) payload.entry_id = String(entryId);
+  if (formId) payload.form_id = String(formId);
+
+  return payload;
 }
 
 // Backward compatibility alias

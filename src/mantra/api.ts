@@ -87,12 +87,10 @@ export const getCurrentUserId = (): string => {
  * Marks a lesson/activity as completed in Laravel webhook.
  */
 export const completeLesson = async (lessonId: string): Promise<boolean> => {
-  const activity = activities.find(a => a.lessonId === lessonId);
+  const activity = activities.find(a => a.lessonId === lessonId || a.activityId === lessonId);
 
-  if (!activity) {
-    console.error(`[Mantra API] Activity not found: ${lessonId}`);
-    return false;
-  }
+  const targetLessonId = activity?.lessonId || lessonId;
+  const targetRewardPoints = activity?.rewardPoints || 25;
 
   const { upaId, uid, service } = getWebhookContext();
 
@@ -104,12 +102,22 @@ export const completeLesson = async (lessonId: string): Promise<boolean> => {
     return false;
   }
 
+  const numericUpaId = isNaN(Number(upaId)) ? upaId : Number(upaId);
+
+  const payload: Record<string, any> = {
+    intent: MANTRA_CONFIG.defaultWebhookIntent || 'complete_activity',
+    upa_id: numericUpaId,
+    lesson_id: targetLessonId,
+    activity_id: activity?.activityId || targetLessonId,
+    service: service || undefined,
+    reward_points: targetRewardPoints
+  };
+
+  if (uid) payload.uid = uid;
+
   if (MANTRA_CONFIG.devMode) {
     console.log('[Mantra API] Completing activity via webhook', {
-      lessonId,
-      upaId,
-      uid,
-      service,
+      payload,
       endpoint: MANTRA_CONFIG.webhookUrl
     });
   }
@@ -120,13 +128,7 @@ export const completeLesson = async (lessonId: string): Promise<boolean> => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        upa_id: upaId,
-        uid: uid,
-        lesson_id: lessonId,
-        service: service,
-        reward_points: activity.rewardPoints
-      })
+      body: JSON.stringify(payload)
     });
 
     if (!response.ok) {
@@ -177,7 +179,8 @@ export const submitAssessmentResults = async (
   payload: AssessmentWebhookPayload
 ): Promise<{ success: boolean; error?: string }> => {
   const { upaId, uid, service } = getWebhookContext();
-  const targetUpaId = payload.upa_id || (upaId ? Number(upaId) : undefined);
+  const rawUpaId = payload.upa_id || upaId;
+  const targetUpaId = rawUpaId ? (isNaN(Number(rawUpaId)) ? rawUpaId : Number(rawUpaId)) : undefined;
 
   if (!targetUpaId) {
     if (MANTRA_CONFIG.devMode) {
@@ -188,13 +191,39 @@ export const submitAssessmentResults = async (
     return { success: false, error: 'Missing upa_id in URL context.' };
   }
 
+  const activity = activities.find(
+    a => a.lessonId === payload.lesson_id || a.activityId === payload.activity_id || a.lessonId === payload.activity_id
+  );
+
   try {
-    const finalPayload = {
-      ...payload,
+    // Construct clean payload without raw placeholder strings or invalid keys
+    const finalPayload: Record<string, any> = {
+      intent: payload.intent || 'complete_activity',
       upa_id: targetUpaId,
-      uid: payload.uid || uid || undefined,
-      service
+      lesson_id: payload.lesson_id || activity?.lessonId || payload.activity_id || 'emotional-wellbeing-assessment',
+      activity_id: payload.activity_id || activity?.activityId || payload.lesson_id || 'emotional-wellbeing-assessment',
+      reward_points: payload.reward_points || activity?.rewardPoints || 100
     };
+
+    if (payload.uid || uid) {
+      finalPayload.uid = payload.uid || uid;
+    }
+    if (service) {
+      finalPayload.service = service;
+    }
+    if (payload.parameter && Array.isArray(payload.parameter) && payload.parameter.length > 0) {
+      finalPayload.parameter = payload.parameter;
+    }
+    if (payload.entry_id && !String(payload.entry_id).includes('{')) {
+      finalPayload.entry_id = payload.entry_id;
+    }
+    if (payload.form_id && !String(payload.form_id).includes('{')) {
+      finalPayload.form_id = payload.form_id;
+    }
+
+    if (MANTRA_CONFIG.devMode) {
+      console.log('[Mantra API] Submitting assessment results payload:', finalPayload);
+    }
 
     const response = await fetch(MANTRA_CONFIG.webhookUrl, {
       method: 'POST',
